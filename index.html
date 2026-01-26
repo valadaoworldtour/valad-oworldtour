@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valadão World Tour | Explore o Extraordinário</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="ambient-bg"></div>
+    <div class="particles"></div>
+
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="logo-icon"><i class="ri-earth-fill"></i></div>
+                <div class="brand-text">
+                    <span>VALADÃO</span>
+                    <strong>WORLD TOUR</strong>
+                </div>
+            </div>
+
+            <div class="consultancy-box">
+                <a href="https://wa.me/5500000000000" target="_blank" class="consultancy-btn">
+                    <i class="ri-vip-crown-fill"></i>
+                    <div>
+                        <strong>Roteiro Exclusivo</strong>
+                        <span>Solicite sua consultoria</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="nav-label">RADAR GLOBAL</div>
+            <nav class="nav-groups" id="sidebarMenu"></nav>
+            
+            <div class="sidebar-footer">
+                <p>VIAJAR É VIVER</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="header-content">
+                    <h1 id="pageTitle">Centro de Comando</h1>
+                    <p id="pageSubtitle">Selecione um país no radar para visualizar os destinos.</p>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <div id="mainDisplay" class="cities-grid">
+                    <div class="empty-state">
+                        <i class="ri-compass-Discover-line"></i>
+                        <h2>Aguardando Coordenadas</h2>
+                        <p>Escolha um continente e país no menu lateral para iniciar.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="cityModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()"><i class="ri-close-line"></i></button>
+            
+            <div class="modal-header-img" id="modalImg">
+                <div class="modal-gradient"></div>
+                <div class="modal-title-overlay">
+                    <div class="badges-container" id="modalBadges"></div>
+                    <h2 id="modalTitle">Nome da Cidade</h2>
+                    <span id="modalSubtitle">Subtítulo do Clima</span>
+                </div>
+            </div>
+
+            <div class="modal-body" id="modalBody">
+                </div>
+
+            <div class="modal-footer">
+                <a href="#" id="modalMapLink" target="_blank" class="action-btn">
+                    <i class="ri-map-pin-user-fill"></i> VER NO GOOGLE MAPS
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

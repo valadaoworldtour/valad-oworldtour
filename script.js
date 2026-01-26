@@ -2,7 +2,7 @@
 const countryFlags = { "Brasil": "br", "Portugal": "pt", "Marrocos": "ma", "Japão": "jp", "Austrália": "au" };
 const defaultImage = "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop";
 
-/* BANCO DE DADOS - COM LINKS DE AFILIADOS */
+/* BANCO DE DADOS - COM SEUS LINKS DE AFILIADO */
 const worldData = {
     "América do Sul": {
         "Brasil": [
@@ -21,10 +21,9 @@ const worldData = {
                 eventos: "Carnaval, Réveillon, Rock in Rio",
                 antes_de_ir: "Evite ostentar joias na rua. Use Uber ou Metrô.",
                 
-                // --- PARCERIAS (LINKS DE AFILIADO) ---
-                // Preencha aqui com seus links reais do Booking, Civitatis, etc.
+                // SEUS LINKS DE DINHEIRO (JÁ COM O ID 304142)
                 links: {
-                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-666610", 
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-666610&aid=304142", 
                     passeio: "https://www.civitatis.com/br/rio-de-janeiro/", 
                     seguro: "https://www.segurospromo.com.br" 
                 }
@@ -44,7 +43,7 @@ const worldData = {
                 eventos: "Virada Cultural, Fórmula 1",
                 antes_de_ir: "O trânsito é intenso, prefira o Metrô.",
                 links: {
-                    hotel: "https://www.booking.com/city/br/sao-paulo.pt-br.html",
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-671824&aid=304142",
                     passeio: "https://www.civitatis.com/br/sao-paulo/"
                 }
             },
@@ -61,7 +60,11 @@ const worldData = {
                 gastronomia: ["Acarajé", "Moqueca", "Vatapá"],
                 religiao: "Sincretismo",
                 eventos: "Carnaval, Lavagem do Bonfim",
-                antes_de_ir: "Sorria, você está na Bahia. Ritmo mais leve."
+                antes_de_ir: "Sorria, você está na Bahia. Ritmo mais leve.",
+                links: {
+                    // Exemplo genérico se não tiver o ID da cidade, manda pra busca geral com seu ID
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?aid=304142" 
+                }
             }
         ]
     },
@@ -83,7 +86,7 @@ const worldData = {
                 eventos: "Santo Antônio",
                 antes_de_ir: "Muitas ladeiras, use tênis.",
                 links: {
-                    hotel: "https://www.booking.com/city/pt/lisbon.pt-br.html",
+                    hotel: "https://www.booking.com/city/pt/lisbon.pt-br.html?aid=304142",
                     passeio: "https://www.civitatis.com/br/lisboa/"
                 }
             },
@@ -100,7 +103,10 @@ const worldData = {
                 gastronomia: ["Francesinha", "Tripas"],
                 religiao: "Católica",
                 eventos: "São João",
-                antes_de_ir: "Faça o passeio de barco no Douro."
+                antes_de_ir: "Faça o passeio de barco no Douro.",
+                links: {
+                    hotel: "https://www.booking.com/city/pt/porto.pt-br.html?aid=304142"
+                }
             }
         ]
     },
@@ -296,7 +302,7 @@ function openModal(cidade, imagemUrl) {
                     <i class="ri-hotel-bed-fill"></i>
                     <div class="affiliate-content">
                         <strong>Reservar Hotel</strong>
-                        <span>Booking.com</span>
+                        <span>Melhores Preços</span>
                     </div>
                 </a>`;
         }
@@ -307,7 +313,7 @@ function openModal(cidade, imagemUrl) {
                     <i class="ri-ticket-2-fill"></i>
                     <div class="affiliate-content">
                         <strong>Comprar Passeios</strong>
-                        <span>Civitatis</span>
+                        <span>Evite Filas</span>
                     </div>
                 </a>`;
         }

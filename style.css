@@ -4,7 +4,7 @@
     --glass: rgba(15, 23, 42, 0.7);
     --neon-blue: #00f3ff;
     --neon-orange: #ff5e3a;
-    --neon-green: #00ff9d; /* COR DE DINHEIRO (AFILIADOS) */
+    --neon-green: #00ff9d; /* COR DO DINHEIRO */
     --neon-gold: #ffd700;   /* COR DA CONSULTORIA */
     --text-main: #ffffff;
     --text-muted: #94a3b8;
@@ -63,7 +63,7 @@ body {
 .brand-text strong { font-family: var(--font-head); font-size: 1.2rem; display: block; letter-spacing: 1px; }
 .brand-text span { color: var(--neon-orange); font-size: 0.8rem; letter-spacing: 2px; }
 
-/* BOTÃO DE CONSULTORIA (SIDEBAR) */
+/* ESTILO DO BOTÃO DE CONSULTORIA (Dourado) */
 .consultancy-box { margin-bottom: 30px; }
 .consultancy-btn {
     display: flex; align-items: center; gap: 15px;
@@ -197,11 +197,12 @@ body {
 .info-box p, .info-box li { color: #ddd; font-size: 0.95rem; line-height: 1.6; margin-bottom: 6px; list-style: none; }
 .info-box ul li::before { content: "•"; color: var(--neon-blue); margin-right: 8px; }
 
-/* SEÇÃO DE LINKS DE AFILIADOS (ESTILO NOVO) */
+/* ESTILO DOS BOTÕES DE AFILIADO (Verde Neon) */
 .affiliate-section {
-    grid-column: 1 / -1; /* Ocupa a largura total */
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-    gap: 20px; margin-bottom: 10px;
+    grid-column: 1 / -1; /* Ocupa largura total */
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 20px; margin-bottom: 15px;
     padding-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
@@ -219,9 +220,9 @@ body {
 .affiliate-btn:hover i { color: #000; }
 
 .affiliate-content { display: flex; flex-direction: column; }
-.affiliate-content strong { font-family: var(--font-head); font-size: 0.9rem; color: var(--neon-green); text-transform: uppercase; }
+.affiliate-content strong { font-family: var(--font-head); font-size: 0.95rem; color: var(--neon-green); text-transform: uppercase; }
 .affiliate-btn:hover strong { color: #000; }
-.affiliate-content span { font-size: 0.7rem; color: #ccc; }
+.affiliate-content span { font-size: 0.75rem; color: #ccc; }
 .affiliate-btn:hover span { color: #333; }
 
 .modal-footer { padding: 20px 30px; border-top: var(--border-light); display: flex; justify-content: flex-end; }
@@ -237,4 +238,5 @@ body {
     .sidebar { width: 100%; height: auto; }
     .cities-grid { grid-template-columns: 1fr; }
     .modal-body { grid-template-columns: 1fr; }
+    .affiliate-section { grid-template-columns: 1fr; }
 }

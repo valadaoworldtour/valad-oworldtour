@@ -579,3 +579,45 @@ function searchSystem() {
         `;
     }
 }
+// --- FUNÇÃO PARA O MENU MOBILE ---
+function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.querySelector('.sidebar-overlay');
+    
+    sidebar.classList.toggle('active');
+    overlay.classList.toggle('active');
+}
+
+// ATUALIZE A FUNÇÃO loadCities PARA FECHAR O MENU AUTOMATICAMENTE
+function loadCities(nomePais, listaCidades) {
+    // ... (código anterior igual) ...
+    document.getElementById('pageTitle').innerText = nomePais;
+    document.getElementById('pageSubtitle').innerHTML = `${listaCidades.length} Destinos encontrados`;
+    const grid = document.getElementById('mainDisplay');
+    grid.innerHTML = '';
+
+    // FECHA O MENU SE ESTIVER NO CELULAR
+    if(window.innerWidth <= 768) {
+        toggleSidebar(); 
+    }
+
+    listaCidades.forEach(cidade => {
+        // ... (código de criar card igual) ...
+        const card = document.createElement('div');
+        card.className = 'city-card';
+        // ... resto do código do card ...
+        const bgImage = cidade.imagem || defaultImage;
+        let tagsHTML = '';
+        if(cidade.tags) { cidade.tags.forEach(tag => tagsHTML += `<span class="badge azul">${tag}</span>`); }
+
+        card.innerHTML = `
+            <div class="card-img-wrapper"><img src="${bgImage}" class="card-img"><div class="card-badges">${tagsHTML}</div></div>
+            <div class="card-content">
+                <div><h3>${cidade.name}</h3><p>${cidade.curiosidades ? (typeof cidade.curiosidades === 'string' ? cidade.curiosidades.substring(0, 60) : cidade.curiosidades[0].substring(0,60)) : ""}...</p></div>
+                <span class="view-btn">Explorar <i class="ri-arrow-right-line"></i></span>
+            </div>
+        `;
+        card.onclick = () => openModal(cidade, bgImage);
+        grid.appendChild(card);
+    });
+}

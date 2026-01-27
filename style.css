@@ -15,7 +15,7 @@
     --text-muted: #3a5a6e;  /* Azul Petróleo (Descrições) */
     
     /* Materiais */
-    --glass-bg: rgba(255, 255, 255, 0.85); /* Vidro Branco */
+    --glass-bg: rgba(255, 255, 255, 0.95); /* Vidro Branco Quase Opaco */
     --border-vibrant: 2px solid rgba(0, 196, 230, 0.2);
     
     /* Fontes */
@@ -30,7 +30,7 @@ body {
     font-family: var(--font-body);
     color: var(--text-main);
     height: 100vh;
-    overflow: hidden;
+    overflow: hidden; /* O scroll fica dentro dos containers */
 }
 
 /* --- FUNDO VIVO --- */
@@ -58,7 +58,7 @@ body {
 ::-webkit-scrollbar-track { background: #e6f7ff; }
 ::-webkit-scrollbar-thumb { background: var(--neon-cyan); border-radius: 10px; }
 
-/* --- SIDEBAR (VIDRO BRANCO) --- */
+/* --- SIDEBAR (BARRA LATERAL) --- */
 .app-shell { display: flex; height: 100vh; }
 
 .sidebar {
@@ -90,7 +90,7 @@ body {
 .consultancy-btn span { font-size: 0.7rem; color: var(--text-muted); }
 .consultancy-btn:hover span { color: #222; font-weight: 700; }
 
-/* --- BARRA DE BUSCA (ESTILO NEON) --- */
+/* --- BARRA DE BUSCA --- */
 .search-wrapper { position: relative; margin-bottom: 25px; }
 .search-wrapper input {
     width: 100%; padding: 12px 15px 12px 45px;
@@ -122,7 +122,7 @@ body {
 .flag-icon { width: 22px; border-radius: 3px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
 .sidebar-footer { text-align: center; font-size: 0.7rem; color: var(--text-muted); padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.05); letter-spacing: 3px; }
 
-/* --- MAIN CONTENT --- */
+/* --- MAIN CONTENT (Conteúdo Principal) --- */
 .main-content { flex: 1; padding: 40px; overflow-y: auto; position: relative; }
 
 .header-content h1 { 
@@ -187,11 +187,9 @@ body {
 .close-modal:hover { background: var(--neon-coral); color: #fff; transform: rotate(90deg); }
 
 .modal-header-img { height: 45vh; background-size: cover; background-position: center; position: relative; }
-/* Degradê suave para branco */
 .modal-gradient { position: absolute; width: 100%; height: 100%; background: linear-gradient(to bottom, transparent 0%, var(--bg-deep) 98%); }
 .modal-title-overlay { position: absolute; bottom: 20px; left: 5%; right: 5%; max-width: 1400px; margin: auto; }
 
-/* TÍTULO DO MODAL (ESCURO COM CONTORNO BRANCO) */
 .modal-title-overlay h2 { 
     font-size: 4rem; margin-bottom: 5px; color: var(--text-main); 
     text-shadow: 2px 2px 0px #fff, -2px -2px 0px #fff; font-weight: 900;
@@ -201,7 +199,6 @@ body {
     background: rgba(255,255,255,0.9); padding: 5px 15px; border-radius: 30px; 
     box-shadow: 0 5px 15px rgba(0,0,0,0.1); display: inline-block; margin-top: 10px;
 }
-/* Badges internas do modal */
 #modalBadges .badge { color: #000; background: var(--neon-cyan); box-shadow: none; border: 1px solid #fff; }
 
 .modal-body { padding: 40px 5%; max-width: 1400px; margin: 0 auto; width: 100%; min-height: 60vh; }
@@ -212,7 +209,7 @@ body {
 }
 .action-btn:hover { background: var(--neon-blue); color: #fff; transform: scale(1.05); }
 
-/* --- MENU INTERNO --- */
+/* --- MENU DO MODAL --- */
 .menu-view { width: 100%; animation: zoomIn 0.4s ease; }
 .affiliate-section { 
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; 
@@ -267,18 +264,54 @@ body {
 @keyframes zoomIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
 @keyframes slideIn { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
 
-/* Responsividade */
+/* --- RESPONSIVIDADE (MOBILE & TABLET) --- */
 @media (max-width: 1024px) { 
     .cities-grid, .category-grid { grid-template-columns: repeat(2, 1fr); } 
     .affiliate-section { grid-template-columns: 1fr; }
     .detail-text-area { columns: 1; }
 }
+
 @media (max-width: 768px) {
-    .app-shell { flex-direction: column; } .sidebar { width: 100%; height: auto; }
+    .app-shell { flex-direction: column; } 
+    
+    /* BOTÃO HAMBÚRGUER */
+    .mobile-toggle {
+        display: flex; position: fixed; top: 15px; left: 15px; z-index: 110;
+        background: #fff; color: var(--text-main); border: none;
+        width: 45px; height: 45px; border-radius: 12px;
+        align-items: center; justify-content: center; font-size: 1.5rem;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1); cursor: pointer; transition: 0.3s;
+    }
+    .mobile-toggle:hover { background: var(--neon-cyan); color: #fff; }
+
+    /* SIDEBAR (GAVETA) */
+    .sidebar { 
+        position: fixed; top: 0; left: -100%; width: 85%; height: 100vh; 
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 5px 0 30px rgba(0,0,0,0.2); z-index: 120;
+    }
+    .sidebar.active { left: 0; }
+
+    /* OVERLAY ESCURO */
+    .sidebar-overlay {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0, 30, 54, 0.8); z-index: 105;
+        opacity: 0; visibility: hidden; transition: 0.3s;
+        backdrop-filter: blur(5px);
+    }
+    .sidebar-overlay.active { opacity: 1; visibility: visible; }
+
+    .main-content { padding: 80px 20px 20px 20px; }
     .cities-grid { grid-template-columns: 1fr; gap: 20px;}
     .modal-header-img { height: 35vh; }
     .modal-title-overlay h2 { font-size: 2.5rem; }
     .category-grid { grid-template-columns: 1fr 1fr; gap: 15px; }
     .affiliate-btn { height: auto; padding: 25px; }
     .modal-body { padding: 30px 20px; }
+    
+    .mobile-toggle { display: flex; }
+}
+
+@media (min-width: 769px) {
+    .mobile-toggle, .sidebar-overlay { display: none; }
 }

@@ -26,7 +26,7 @@
             </div>
 
             <div class="consultancy-box">
-                <a href="https://wa.me/5500000000000?text=Olá,%20vi%20o%20site%20e%20quero%20um%20roteiro%20personalizado!" target="_blank" class="consultancy-btn">
+                <a href="https://wa.me/5500000000000" target="_blank" class="consultancy-btn">
                     <i class="ri-vip-crown-fill"></i>
                     <div>
                         <strong>Roteiro Exclusivo</strong>
@@ -37,10 +37,7 @@
 
             <div class="nav-label">RADAR GLOBAL</div>
             <nav class="nav-groups" id="sidebarMenu"></nav>
-            
-            <div class="sidebar-footer">
-                <p>VIAJAR É VIVER</p>
-            </div>
+            <div class="sidebar-footer"><p>VIAJAR É VIVER</p></div>
         </aside>
 
         <main class="main-content">
@@ -71,13 +68,25 @@
                 <div class="modal-gradient"></div>
                 <div class="modal-title-overlay">
                     <div class="badges-container" id="modalBadges"></div>
-                    <h2 id="modalTitle">Nome da Cidade</h2>
-                    <span id="modalSubtitle">Subtítulo do Clima</span>
+                    <h2 id="modalTitle">Cidade</h2>
+                    <span id="modalSubtitle">Clima</span>
                 </div>
             </div>
 
-            <div class="modal-body" id="modalBody">
+            <div class="modal-body">
+                <div id="modalMenu" class="menu-view">
+                    <div id="affiliateContainer" class="affiliate-section"></div>
+                    <div class="category-grid" id="categoryGrid"></div>
                 </div>
+
+                <div id="modalDetails" class="detail-view hidden">
+                    <button class="back-btn" onclick="backToMenu()">
+                        <i class="ri-arrow-left-line"></i> VOLTAR AO MENU
+                    </button>
+                    <h3 id="detailTitle" class="detail-title">Titulo</h3>
+                    <div id="detailContent" class="detail-text-area"></div>
+                </div>
+            </div>
 
             <div class="modal-footer">
                 <a href="#" id="modalMapLink" target="_blank" class="action-btn">

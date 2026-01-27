@@ -6,10 +6,12 @@
     <title>Valadão World Tour | Explore o Extraordinário</title>
     
     <link rel="stylesheet" href="style.css">
+    
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="ambient-bg"></div>
@@ -35,25 +37,34 @@
                 </a>
             </div>
 
+            <div class="search-wrapper">
+                <i class="ri-search-2-line search-icon"></i>
+                <input type="text" id="globalSearch" placeholder="Buscar cidade ou país..." onkeyup="searchSystem()">
+            </div>
+
             <div class="nav-label">RADAR GLOBAL</div>
+            
             <nav class="nav-groups" id="sidebarMenu"></nav>
-            <div class="sidebar-footer"><p>VIAJAR É VIVER</p></div>
+            
+            <div class="sidebar-footer">
+                <p>VIAJAR É VIVER</p>
+            </div>
         </aside>
 
         <main class="main-content">
             <header class="top-bar">
                 <div class="header-content">
                     <h1 id="pageTitle">Centro de Comando</h1>
-                    <p id="pageSubtitle">Selecione um país no radar para visualizar os destinos.</p>
+                    <p id="pageSubtitle">Selecione um país no radar ou use a busca para iniciar.</p>
                 </div>
             </header>
 
             <div class="content-wrapper">
                 <div id="mainDisplay" class="cities-grid">
                     <div class="empty-state">
-                        <i class="ri-compass-Discover-line"></i>
+                        <i class="ri-compass-discover-line"></i>
                         <h2>Aguardando Coordenadas</h2>
-                        <p>Escolha um continente e país no menu lateral para iniciar.</p>
+                        <p>Escolha um continente no menu lateral ou digite na busca.</p>
                     </div>
                 </div>
             </div>
@@ -68,14 +79,15 @@
                 <div class="modal-gradient"></div>
                 <div class="modal-title-overlay">
                     <div class="badges-container" id="modalBadges"></div>
-                    <h2 id="modalTitle">Cidade</h2>
-                    <span id="modalSubtitle">Clima</span>
+                    <h2 id="modalTitle">Nome da Cidade</h2>
+                    <span id="modalSubtitle">Subtítulo do Clima</span>
                 </div>
             </div>
 
             <div class="modal-body">
                 <div id="modalMenu" class="menu-view">
                     <div id="affiliateContainer" class="affiliate-section"></div>
+                    
                     <div class="category-grid" id="categoryGrid"></div>
                 </div>
 

@@ -68,12 +68,101 @@ body {
     backdrop-filter: blur(20px); box-shadow: 5px 0 20px rgba(0,0,0,0.05);
 }
 
-.sidebar-brand { display: flex; align-items: center; gap: 15px; margin-bottom: 30px; }
-.logo-icon { font-size: 2rem; color: var(--neon-cyan); animation: heartbeat 3s infinite; filter: drop-shadow(0 0 5px rgba(0,196,230,0.5)); }
-@keyframes heartbeat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+/* --- BRANDING FUTURISTA OCEÂNICO (NOVO) --- */
+.sidebar-brand { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    margin-bottom: 35px; 
+    position: relative;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 196, 230, 0.1);
+}
 
-.brand-text strong { display: block; font-family: var(--font-head); letter-spacing: 1px; color: var(--text-main); font-weight: 800; }
-.brand-text span { color: var(--neon-blue); font-size: 0.8rem; letter-spacing: 2px; font-weight: 700; }
+/* O Ícone do Planeta (Holograma) */
+.logo-icon { 
+    font-size: 2.8rem; 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Gradiente Oceânico no Ícone */
+    background: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Brilho Intenso (Glow) */
+    filter: drop-shadow(0 0 15px rgba(0, 196, 230, 0.6));
+    animation: oceanPulse 4s ease-in-out infinite;
+    z-index: 2;
+}
+
+@keyframes oceanPulse { 
+    0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(0, 196, 230, 0.5)); } 
+    50% { transform: scale(1.05); filter: drop-shadow(0 0 25px rgba(0, 196, 230, 0.9)); } 
+}
+
+/* O Anel de Órbita Dourada (Futurista) */
+.logo-icon::before {
+    content: '';
+    position: absolute;
+    width: 140%;
+    height: 140%;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-top-color: var(--neon-gold);
+    border-bottom-color: rgba(255, 187, 0, 0.3);
+    top: -20%;
+    left: -20%;
+    transform: rotateX(60deg) rotateY(10deg);
+    box-shadow: 0 0 15px rgba(255, 187, 0, 0.4);
+    animation: orbitSpin 6s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes orbitSpin {
+    from { transform: rotateX(65deg) rotateY(10deg) rotateZ(0deg); }
+    to { transform: rotateX(65deg) rotateY(10deg) rotateZ(360deg); }
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* "VALADÃO" - Estilo Cromado Azul */
+.brand-text span { 
+    font-family: var(--font-head);
+    font-size: 0.9rem; 
+    letter-spacing: 3px; 
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, var(--text-main), var(--neon-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* "WORLD TOUR" - Estilo Dourado Tecnológico */
+.brand-text strong { 
+    display: block; 
+    font-family: var(--font-head); 
+    letter-spacing: 1px; 
+    font-weight: 900;
+    font-size: 1.1rem;
+    background: linear-gradient(90deg, #b38600, var(--neon-gold), #b38600);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shineText 5s linear infinite;
+}
+
+@keyframes shineText {
+    to { background-position: 200% center; }
+}
+
+/* --- FIM DO BRANDING NOVO --- */
 
 .consultancy-box { margin-bottom: 20px; }
 .consultancy-btn {
@@ -314,4 +403,119 @@ body {
 
 @media (min-width: 769px) {
     .mobile-toggle, .sidebar-overlay { display: none; }
+}
+/* --- ROTEIRO AUTOMÁTICO (ESTILO FUTURISTA OCEÂNICO) --- */
+.roteiro-box {
+    margin: 30px 0;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+
+    /* Fundo Oceânico Profundo */
+    background: linear-gradient(135deg, #001e36 0%, #004e92 100%);
+    
+    /* Borda Holográfica Brilhante */
+    border: 2px solid transparent;
+    background-clip: padding-box; /* Necessário para a borda gradiente */
+    box-shadow: 
+        0 0 20px rgba(0, 196, 230, 0.3), /* Glow Azul Externo */
+        inset 0 0 30px rgba(0, 196, 230, 0.2); /* Glow Azul Interno */
+
+    /* Efeito de Ondas Digitais (Bioluminescência) */
+    background-image: 
+        linear-gradient(135deg, rgba(0, 30, 54, 0.9) 0%, rgba(0, 78, 146, 0.9) 100%),
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 10px,
+            rgba(0, 196, 230, 0.05) 10px,
+            rgba(0, 196, 230, 0.05) 20px
+        );
+    animation: oceanPulseBox 5s ease-in-out infinite;
+}
+
+/* Animação Pulsante do Box */
+@keyframes oceanPulseBox {
+    0%, 100% { box-shadow: 0 0 20px rgba(0, 196, 230, 0.3), inset 0 0 30px rgba(0, 196, 230, 0.2); }
+    50% { box-shadow: 0 0 35px rgba(0, 196, 230, 0.5), inset 0 0 50px rgba(0, 196, 230, 0.3); border-color: var(--neon-cyan); }
+}
+
+/* Título da Seção */
+.roteiro-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: var(--font-head);
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    /* Texto Metálico Brilhante */
+    background: linear-gradient(90deg, #fff, var(--neon-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 5px rgba(0, 196, 230, 0.8));
+}
+
+.roteiro-label i {
+    font-size: 1.4rem;
+    color: var(--neon-gold);
+    animation: iconSpin 4s linear infinite; /* Ícone girando devagar */
+}
+
+@keyframes iconSpin { from {transform: rotateY(0deg);} to {transform: rotateY(360deg);} }
+
+.roteiro-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Botões de "Cristal" Futuristas */
+.time-btn {
+    font-family: var(--font-head);
+    font-weight: 700;
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    
+    /* Fundo de Vidro */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Efeito de Brilho ao Passar o Mouse (Hover) */
+.time-btn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 187, 0, 0.6), transparent);
+    transition: 0.5s;
+}
+
+.time-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    /* Vira Dourado ao Hover */
+    border-color: var(--neon-gold);
+    color: var(--neon-gold);
+    box-shadow: 0 10px 25px rgba(255, 187, 0, 0.4), 0 0 15px rgba(255, 187, 0, 0.2) inset;
+}
+
+.time-btn:hover::before {
+    left: 100%; /* Passa o brilho da esquerda para a direita */
 }

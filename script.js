@@ -1,5 +1,5 @@
 // --- CONFIGURAÇÃO GLOBAL ---
-const countryFlags = { "Brasil": "br", "Portugal": "pt", "Marrocos": "ma", "Japão": "jp", "Austrália": "au", "Estados Unidos": "us", "Argentina": "ar", "Espanha": "es", "França": "fr", "Chile": "cl" };
+const countryFlags = { "Brasil": "br", "Portugal": "pt", "Marrocos": "ma", "Japão": "jp", "Austrália": "au", "Estados Unidos": "us", "Argentina": "ar", "Espanha": "es", "França": "fr", "Chile": "cl", "Inglaterra": "gb", "Itália": "it" };
 const defaultImage = "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop";
 /* BANCO DE DADOS COMPLETO */
 const worldData = {
@@ -130,12 +130,42 @@ const worldData = {
                     "9. Pedintes Agressivos: Na Lapa, alguns vendedores de balas podem ser agressivos se você negar. Seja firme, mas educado e siga andando.",
                     "10. Maré Alta: Respeite a bandeira vermelha. O mar do Rio tem correntes de retorno que puxam até nadadores experientes."
                 ],
+                // COLE ISSO AQUI:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Clássico): Comece cedo no Cristo Redentor (trem). Almoce em Copacabana. Final de tarde no Pão de Açúcar para o pôr do sol.",
+                            "Dia 1 (Noite): Jantar e drinks em Ipanema (Rua Garcia d'Ávila).",
+                            "Dia 2 (Vibe Carioca): Manhã no Forte de Copacabana (Confeitaria Colombo). Tarde na praia (Posto 9 ou 10). Fim de tarde no Arpoador."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dia 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (História e Boemia): Centro Histórico (Museu do Amanhã + Mural Kobra). Almoço na Confeitaria Colombo (Centro). Tarde em Santa Teresa (Bondinho) e noite na Lapa (Rio Scenarium).",
+                            "Dia 4 (Natureza): Jardim Botânico + Parque Lage (café da manhã). Tarde na Lagoa Rodrigo de Freitas (pedalinho ou bike).",
+                            "Dia 5 (Lado B): Prainha e Grumari (praias selvagens na zona oeste) se estiver de carro. Ou trilha da Pedra Bonita (fácil e vista incrível)."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Serra ou Mar): Bate-volta para Arraial do Cabo (Caribe Brasileiro) ou Petrópolis (Imperial). Escolha um!",
+                            "Dia 7 (Esporte e Visual): Trilha da Pedra da Gávea (para fortes) ou Voo de Asa Delta em São Conrado.",
+                            "Dia 8 (Despedida): Compras no Barra Shopping ou dia relax na praia do Leblon."
+                        ]
+                    }
+                },
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?city=-666610&aid=304142", 
                     passeio: "https://www.civitatis.com/br/rio-de-janeiro/", 
                     seguro: "https://www.segurospromo.com.br" 
                 }
             },
+            
             {
                 name: "São Paulo",
                imagem: "https://images.unsplash.com/photo-1543059080-f9b1272213d5?q=80&w=2069&auto=format&fit=crop",
@@ -266,7 +296,35 @@ const worldData = {
                     "9. Vila Madalena à Noite: Bairro boêmio seguro, mas na saída das baladas, fique atento ao esperar Uber na calçada escura.",
                     "10. Trânsito na Chuva: SP para quando chove. Não marque voos ou compromissos com horário justo em dias de tempestade, você vai perder."
                 ],
-                
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (O Clássico): Comece na Av. Paulista (MASP, Sesc, Japan House). Almoce por lá. Tarde no Parque Ibirapuera. Jantar: Uma pizza paulistana tradicional.",
+                            "Dia 2 (Centro Histórico): Farol Santander (vista), Pátio do Colégio e o famoso sanduíche de mortadela no Mercadão Municipal.",
+                            "Dica Extra: Se sobrar tempo, dê um pulo no Beco do Batman (Vila Madalena) para fotos incríveis."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Cultura e Luz): Estação da Luz, Museu da Língua Portuguesa e Pinacoteca (almoce no café da Pina). Tarde no Bairro da Liberdade (compras e comida asiática).",
+                            "Dia 4 (Lado B e Boemia): Manhã no Museu do Futebol (Pacaembu). Tarde de compras na Oscar Freire ou 25 de Março (opostos!). Noite na Vila Madalena (bares).",
+                            "Dia 5 (Gastronomia): Almoço no Eataly ou em uma cantina do Bixiga. Tarde no MIS (Museu da Imagem e do Som) ou Instituto Moreira Salles."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Bate-volta Vinho): Roteiro do Vinho em São Roque (1h de SP). Almoço italiano e degustação em vinícolas.",
+                            "Dia 7 (Bate-volta Arte ou Praia): Visite Embu das Artes (domingo é melhor) para artesanato OU desça a serra para Santos (Museu do Café e orla).",
+                            "Dia 8 (Descanso Urbano): Brunch em uma padaria artesanal (Padoca do Maní ou similar) e tarde tranquila no Parque Villa-Lobos."
+                        ]
+                    }
+                },
                 // SEUS LINKS DE AFILIADO (ID 304142)
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?city=-671824&aid=304142", 
@@ -404,6 +462,35 @@ const worldData = {
                     "9. Chocolate 'Pega Turista': Existem dezenas de marcas. Prove antes de comprar caixas grandes. Algumas têm mais gordura hidrogenada que cacau.",
                     "10. Uber na Chuva: Quando chove ou acaba um show do Natal Luz, conseguir um Uber pode demorar muito. Tenha o telefone de um Rádio Táxi salvo."
                 ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (O Charme do Centro): Comece na Av. Borges de Medeiros, Rua Coberta e Igreja São Pedro. Tarde no Lago Negro (pedalinho). Jantar: Sequência de Fondue obrigatória.",
+                            "Dia 2 (Clássicos): Manhã no Mini Mundo. Tarde: Visite uma Fábrica de Chocolate (Florybal ou Prawer) e tire foto no Pórtico de entrada.",
+                            "Dica Extra: Se der tempo, uma passada rápida na Catedral de Pedra em Canela (7km ao lado)."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Aventura na Neve): Dia dedicado ao Snowland (roupa térmica inclusa) ou Acquamotion (águas termais), dependendo do seu estilo.",
+                            "Dia 4 (Explorando Canela): Bondinhos Aéreos (Cascata do Caracol) e Skyglass (plataforma de vidro). Almoço em Canela. Fim de tarde no Castelinho Caracol.",
+                            "Dia 5 (Vistas Incríveis): Olivas de Gramado (pôr do sol com piquenique e música) ou Le Jardin (Parque de Lavanda)."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Uva e Vinho): Bate-volta para Bento Gonçalves. Passeio de Maria Fumaça e visita às vinícolas do Vale dos Vinhedos (Miolo ou Casa Valduga).",
+                            "Dia 7 (Raízes): Nova Petrópolis (Labirinto Verde e Praça das Flores). Almoço alemão tradicional.",
+                            "Dia 8 (Gula Final): Manhã de compras na Rua Coberta e despedida com um Café Colonial farto (Bela Vista ou Coelho)."
+                        ]
+                    }
+                },
                 // SEUS LINKS DE AFILIADO (ID 304142)
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?city=-644910&aid=304142", 
@@ -541,7 +628,34 @@ const worldData = {
                     "9. Câmbio no Aeroporto: A cotação dentro do aeroporto é péssima. Troque o mínimo possível e deixe para trocar o resto nas casas de câmbio da cidade.",
                     "10. Macuco Safari: Se tiver problemas de coluna ou estiver grávida, evite. O barco bate muito na água e a aventura é radical de verdade."
                 ],
-                
+                // --- NOVO: ROTEIRO AUTOMÁTICO (FOZ DO IGUAÇU) ---
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Obrigatório): Manhã nas Cataratas Brasileiras (trilha + almoço no Porto Canoas). Tarde no Parque das Aves (logo na frente). Noite: Marco das 3 Fronteiras (show e pôr do sol).",
+                            "Dia 2 (Compras e Energia): Manhã de compras no Paraguai (vá cedo, volte 13h). Tarde na Usina de Itaipu (Panorâmica). Noite: Jantar árabe ou Churrascaria Rafain."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Lado Argentino): Dedique o dia todo às Cataratas Argentinas. É muita caminhada. Jante em Puerto Iguazú (Bife de Chorizo).",
+                            "Dia 4 (Aventura): Macuco Safari (barco nas cataratas) pela manhã. Tarde livre para piscina do hotel ou Museu de Cera (se tiver crianças).",
+                            "Dia 5 (Cultura): Templo Budista e Mesquita pela manhã. Almoço no Rafaian (costelão). Tarde relax no Blue Park ou compras no Duty Free (AR)."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Exploração): Kattamaram (passeio de barco no lago de Itaipu ao pôr do sol) ou Refúgio Biológico Bela Vista.",
+                            "Dia 7 (Compras VIP): Dia focado em compras de luxo no Duty Free Puerto Iguazú e vinhos nas vinotecas argentinas.",
+                            "Dia 8 (Natureza Secreta): Aguaray Eco Esportes (canoagem e trilha) ou Cachoeiras Secretas de Foz."
+                        ]
+                    }
+                },
             
                 // SEUS LINKS DE AFILIADO (ID 304142)
                 links: {
@@ -681,6 +795,34 @@ const worldData = {
                     "9. Uber Cancelando: Com o trânsito parado, motoristas cancelam muito. Em dias de chuva ou horários de pico, é difícil conseguir carro.",
                     "10. Tainha 'Falsa': Na época da tainha, alguns restaurantes vendem tainha congelada do ano passado como fresca. Pergunte se é 'pesca do dia'."
                 ],
+                // --- NOVO: ROTEIRO AUTOMÁTICO (FLORIPA) ---
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Cartões-Postais): Manhã no Centro (Mercado Público + Praça XV). Tarde na Lagoa da Conceição (mirante) e Joaquina (dunas). Pôr do sol na Ponte Hercílio Luz.",
+                            "Dia 2 (Norte ou Sul): Escolha um lado para não perder tempo no trânsito. Norte: Jurerê Internacional e Forte São José. OU Sul: Ilha do Campeche (reserve antes) e Ribeirão da Ilha."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (História e Gastronomia): Santo Antônio de Lisboa (caminhada e almoço). Tarde em Sambaqui (pôr do sol mais bonito).",
+                            "Dia 4 (Natureza): Trilha da Lagoinha do Leste (se tiver fôlego) ou Praia do Matadeiro + Armação.",
+                            "Dia 5 (Família/Relax): Projeto Tamar na Barra da Lagoa. Almoço na Costa da Lagoa (vá de barquinho, é lindo)."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Bate-volta): Guarda do Embaú (rio encontrando o mar) ou Bombinhas (mergulho).",
+                            "Dia 7 (Aventura): Mergulho na Ilha do Arvoredo ou Sandboard nas dunas da Joaquina.",
+                            "Dia 8 (Despedida): Café da manhã colonial e compras de artesanato no centro."
+                        ]
+                    }
+                },
                 // SEUS LINKS DE AFILIADO (ID 304142)
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?city=-643260&aid=304142", 
@@ -819,6 +961,36 @@ const worldData = {
                     "9. Mar Aberto: Algumas praias (como Jaguaribe ou trechos de Stella Maris) têm ondas fortes e buracos. Se beber, não entre no mar.",
                     "10. Elevador Lacerda à Noite: A região da Cidade Baixa (Comércio) fica muito deserta e perigosa após o horário comercial. Evite andar a pé por ali à noite."
                 ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (História Viva): Pelourinho (Fundação Casa de Jorge Amado e Igreja de São Francisco). Desça o Elevador Lacerda. Mercado Modelo. Pôr do sol no Farol da Barra.",
+                            "Dia 2 (Fé e Praia): Igreja do Bonfim (amarre a fitinha). Almoço na Pedra Furada. Tarde na praia do Porto da Barra (água calma).",
+                            "Dica: Coma um Acarajé da Cira ou da Dinha no Rio Vermelho à noite."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Cultura Afro): Museu Afro-Brasileiro e Casa do Carnaval. Almoço no Santo Antônio Além do Carmo (vista linda da baía).",
+                            "Dia 4 (Praias do Norte): Dia de praia em Stella Maris ou Flamengo (barracas com estrutura, como a do Lôro).",
+                            "Dia 5 (Boemia Literária): Casa do Rio Vermelho (memorial Jorge Amado). Noite no Largo da Mariquita (Rio Vermelho) para comer e beber."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Bate-volta Tartarugas): Vá até a Praia do Forte (Litoral Norte). Visite o Projeto Tamar e o Castelo Garcia D'Ávila.",
+                            "Dia 7 (Navegar): Passeio de escuna pela Baía de Todos os Santos (Ilha dos Frades e Itaparica).",
+                            "Dia 8 (Relax): Sorveteria da Ribeira e Ponta do Humaitá para o último pôr do sol."
+                        ]
+                    }
+                },
+                
                 // SEUS LINKS DE AFILIADO
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?city=-667953&aid=304142", 
@@ -957,6 +1129,34 @@ const worldData = {
                     "9. Manifestações na Esplanada: Em dias de protesto político, a Esplanada dos Ministérios é fechada e o trânsito para. Fique de olho no noticiário se for visitar o Congresso.",
                     "10. Amplitude Térmica: No inverno, faz muito calor de dia e 10ºC à noite. Se sair de manhã para voltar só à noite, leve casaco ou vai passar frio."
                 ],
+                // --- NOVO: ROTEIRO AUTOMÁTICO (BRASÍLIA) ---
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Cívico): Manhã na Catedral e Esplanada. Visita guiada ao Congresso. Almoço no Pontão do Lago Sul. Pôr do sol na Ermida Dom Bosco.",
+                            "Dia 2 (Juscelino): Memorial JK pela manhã. Subida na Torre de TV (vista). Tarde: Igrejinha da 308 Sul e Quadra Modelo (para entender como vivem os locais)."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Arquitetura e Arte): Palácio do Itamaraty (agende!) e CCBB. Almoço na Asa Sul (gastronomia).",
+                            "Dia 4 (Natureza e Místico): Templo da LBV e Parque da Cidade. Tarde relax no Calçadão da Asa Norte (alugue um caiaque).",
+                            "Dia 5 (Lado B): Santuário Dom Bosco (o azul) e Feira da Torre de TV para comprar pastel e artesanato."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Cachoeira): Bate-volta para Pirenópolis-GO (cidade colonial linda com cachoeiras) ou Salto do Itiquira (uma queda d'água gigante perto de Formosa).",
+                            "Dia 7 (Chapada): Se tiver disposição, estique até a Chapada dos Veadeiros (Alto Paraíso) e fique uma noite lá.",
+                            "Dia 8 (Despedida): Café da manhã na Torre de TV Digital (Flor do Cerrado) e últimas compras."
+                        ]
+                    }
+                },
                 // SEUS LINKS DE AFILIADO
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?city=-631243&aid=304142", 
@@ -1096,6 +1296,34 @@ const worldData = {
                     "9. Sol de 'Rachar': O índice UV em Pernambuco é extremo. Protetor solar não é cosmético, é item de sobrevivência, ou você terá insolação no primeiro dia.",
                     "10. Flanelinhas Agressivos: Em dias de festa ou no centro, guardadores de carro podem cobrar adiantado e caro. Tente estacionar em locais privados ou ruas movimentadas."
                 ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Recife Antigo): Marco Zero, Rua do Bom Jesus (Sinagoga) e Paço do Frevo. Almoço nos Armazéns do Porto. Fim de tarde: Passeio de Catamarã pelo rio (imperdível).",
+                            "Dia 2 (Olinda): Vá para a cidade vizinha. Suba o Alto da Sé (Tapioca com vista), Mosteiro de São Bento e caminhe pelas ladeiras coloridas."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Os Brennand): Manhã no Instituto Ricardo Brennand (Castelo de armas incrível). Tarde na Oficina Francisco Brennand (esculturas misteriosas). Vá de Uber.",
+                            "Dia 4 (Praia Urbana): Manhã na Praia de Boa Viagem (fique nas piscinas naturais protegidas, nada de fundo!). Tarde no Shopping RioMar (vista do terraço).",
+                            "Dia 5 (Litoral Norte): Bate-volta para a Ilha de Itamaracá. Visite o Forte Orange e atravesse de barquinho para a Coroa do Avião."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Litoral Sul): Bate-volta para o Cabo de Santo Agostinho (Praia de Calhetas e Banho de Argila).",
+                            "Dia 7 (Paraíso Vizinho): Bate-volta para a Praia dos Carneiros (Igrejinha verde).",
+                            "Dia 8 (Raiz): Mercado de São José (artesanato barato) e Casa da Cultura (antiga prisão que virou centro comercial)."
+                        ]
+                    }
+                },
                 // SEUS LINKS DE AFILIADO
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?city=-665565&aid=304142", 
@@ -1235,6 +1463,33 @@ const worldData = {
                     "9. Pardais (Radares): A fiscalização eletrônica é rigorosa (geralmente 60km/h). Cuidado nas Avenidas Ipiranga e Beira-Rio, a multa chega mesmo.",
                     "10. 'Friagem' e Rinite: A mudança de temperatura é brutal (pode variar 15ºC no mesmo dia). Quem tem rinite ou asma sofre muito. Traga sempre um casaco e remédios de alergia."
                 ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Centro e Orla): Manhã no Centro Histórico (Mercado Público, Santander Cultural e MARGS). Almoço no Mercado. Fim de tarde: Pôr do sol na Orla do Guaíba (Usina do Gasômetro).",
+                            "Dia 2 (Cultura): Manhã no Parque da Redenção (se for domingo, tem o Brique). Tarde: Casa de Cultura Mario Quintana (tome um café no jardim do terraço)."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Arte e Rio): Fundação Iberê Camargo (arquitetura incrível). Tarde: Passeio de barco (Cisne Branco ou Noiva do Caí) pelas ilhas do Guaíba.",
+                            "Dia 4 (Sofisticação): Bairro Moinhos de Vento. Caminhada no Parcão e almoço na Rua Padre Chagas. Noite: Churrascaria tradicional (Barranco ou Giovanaz).",
+                            "Dia 5 (Paixão Nacional): Tour no estádio da Arena do Grêmio ou Beira-Rio (Inter). Tarde na orla de Ipanema (Zona Sul) para um clima de praia de rio."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Ciência ou Fé): Museu da PUCRS (interativo e incrível para crianças) OU Bate-volta ao Templo Budista de Três Coroas.",
+                            "Dia 7 (Raiz): Almoço em um CTG (Centro de Tradições Gaúchas) e noite boêmia na Cidade Baixa (bares alternativos). Despedida com um Xis Gaúcho."
+                        ]
+                    }
+                },
                 // SEUS LINKS DE AFILIADO (ID 304142)
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?city=-663673&aid=304142", 
@@ -1375,6 +1630,34 @@ const worldData = {
                     "9. Horário de Ônibus: O sistema é bom, mas domingo os ônibus demoram muito. Use o app 'Curitiba 156' para ver o horário real e não ficar 40 min no tubo.",
                     "10. Ciclovias: Cuidado ao caminhar nas calçadas compartilhadas (vermelhas). Ciclistas passam rápido. Pedestre na calçada, bicicleta na ciclovia."
                 ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Cartões-Postais): Comece no Jardim Botânico (Estufa de vidro). Almoço em Santa Felicidade (Madalosso). Tarde na Ópera de Arame e pôr do sol no Parque Tanguá.",
+                            "Dia 2 (Cultura e Vista): Manhã no Museu Oscar Niemeyer (Museu do Olho). Suba na Torre Panorâmica. Fim de tarde no Largo da Ordem (Centro Histórico)."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Serra do Mar): O passeio mais famoso. Desça de Trem para Morretes pela Serra Verde Express (paisagem linda). Coma Barreado lá e volte de van/ônibus pela Estrada da Graciosa.",
+                            "Dia 4 (Parques): Pegue a Linha Turismo (ônibus de 2 andares) e pare no Parque Barigui (capivaras!) e Bosque do Papa.",
+                            "Dia 5 (Lado B): Mercado Municipal (café da manhã). Tarde no Unilivre (Universidade Livre do Meio Ambiente) - arquitetura incrível na mata."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Arenitos): Bate-volta para o Parque Estadual de Vila Velha (Ponta Grossa). Veja as formações rochosas milenares.",
+                            "Dia 7 (Praia e Trem): Se for verão, estique até a Ilha do Mel (pegue o trem até Paranaguá e depois o barco).",
+                            "Dia 8 (Relax): Brunch no Batel (bairro chique) e compras no Shopping Pátio Batel ou Feirinha do Largo (se for domingo)."
+                        ]
+                    }
+                },
 
                 // SEUS LINKS DE AFILIADO
                 links: {
@@ -1516,11 +1799,377 @@ const worldData = {
                     "9. Flanelinhas: Em locais de show ou praias lotadas, guardadores cobram caro adiantado. Tente parar em estacionamento fechado ou oficial.",
                     "10. Guia Credenciado: Em passeios de buggy (Cumbuco/Canoa), exija bugueiro credenciado ('com emoção ou sem emoção'). Bugueiros piratas causam acidentes."
                 ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Clássico): Manhã no Mercado Central (artesanato). Almoço na Praia do Futuro (barracas gigantes como Crocobeach). Fim de tarde na Feirinha da Beira-Mar.",
+                            "Dia 2 (Cultura e História): Centro Dragão do Mar. Caminhada no Espigão do Náutico para ver o pôr do sol. Noite: Show de Humor (tradição local)."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Adrenalina): Dia inteiro no Beach Park (Aquiraz). É caro, mas é o melhor parque aquático da América Latina.",
+                            "Dia 4 (Falésias): Bate-volta para Morro Branco e Praia das Fontes. O Labirinto das Falésias (areias coloridas) é cenário de novela.",
+                            "Dia 5 (Dunas): Bate-volta para Cumbuco. Passeio de Buggy 'com emoção' e esquibunda nas dunas. Almoço na beira da lagoa."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Litoral Leste): Canoa Quebrada. Veja o símbolo da Lua e Estrela nas falésias e almoce na rua Broadway.",
+                            "Dia 7 (Litoral Oeste): Lagoinha. Uma das praias mais bonitas do estado, formato de meia-lua e coqueiros a perder de vista.",
+                            "Dia 8 (Despedida): Compras na Av. Monsenhor Tabosa e última caranguejada à noite."
+                        ]
+                    }
+                },
 
                 // SEUS LINKS DE AFILIADO
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?city=-643662&aid=304142", 
                     passeio: "https://www.civitatis.com/br/fortaleza/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+            {
+                name: "Campos do Jordão",
+                // FOTO: Vila Capivari (Wikimedia)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Rua_Djalma_Forjaz%2C_Campos_do_Jord%C3%A3o%2C_SP.jpg/960px-Rua_Djalma_Forjaz%2C_Campos_do_Jord%C3%A3o%2C_SP.jpg",
+                tags: ["Inverno", "Romance", "Montanha"],
+                mapa: "https://goo.gl/maps/camposdojordao",
+                clima: "Tropical de Altitude. É a cidade mais alta do Brasil. Inverno gela (pode chegar a -2ºC) e verão é fresco.",
+                
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Vila Capivari: O centrinho turístico. Arquitetura europeia, restaurantes, lojas de grife e a famosa Cervejaria Baden Baden.",
+                    "2. Parque Amantikir: Jardins que falam. Um paisagismo incrível com labirintos de arbustos e flores do mundo todo.",
+                    "3. Horto Florestal: Natureza pura. Trilhas, lagos, tirolesa e muito ar puro longe do agito da cidade.",
+                    "4. Morro do Elefante: Suba de teleférico (o antigo de cadeirinha ou o novo fechado) para ver a vista clássica da cidade.",
+                    "5. Palácio Boa Vista: A residência de inverno do governador. Tem um acervo de arte incrível (Tarsila do Amaral) e visita guiada.",
+                    "6. Museu Felícia Leirner: Esculturas gigantes de bronze a céu aberto num jardim lindo. O pôr do sol aqui é emocionante.",
+                    "7. Pico do Itapeva: Fica tecnicamente em Pindamonhangaba, mas o acesso é por Campos. Dá para ver 15 cidades do Vale do Paraíba lá de cima.",
+                    "8. Ducha de Prata: Uma canalização de cachoeiras artificiais com decks de madeira. Clássico para fotos (e compras de malhas).",
+                    "9. Tarundu: Centro de lazer com patinação no gelo, hipismo e atividades radicais. Ótimo para crianças.",
+                    "10. Portal da Cidade: A entrada clássica estilo 'Alpes Suíços'. Parada obrigatória para a foto de chegada."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Fondue: O rei da cidade. Queijo, Carne e Chocolate. No Capivari tem rodízios (sequência) em cada esquina.",
+                    "2. Truta: O peixe da região. Servida grelhada com molho de alcaparras ou amêndoas. Fresquíssima.",
+                    "3. Pinhão: Símbolo da cidade. Come-se cozido, em farofas, em pratos sofisticados ou até em sorvete.",
+                    "4. Chocolate Artesanal: Existem dezenas de fábricas (Araucária, Spinassi). O chocolate quente cremoso é lei.",
+                    "5. Cerveja Baden Baden: A cervejaria nasceu aqui. Visite a fábrica ou tome um chopp no bar oficial do Capivari.",
+                    "6. Comida Alemã: Joelho de porco (Eisbein) e salsichões (Wurst) são muito comuns nos restaurantes.",
+                    "7. Pastelão do Maluf: Um pastel gigante (quase uma refeição) muito famoso no centro turístico.",
+                    "8. Café Colonial: Mesas fartas à tarde com pães, geleias, bolos e frios.",
+                    "9. Fondue de Coxinha: Invenção recente que virou febre. Um balde de queijo derretido para mergulhar coxinhas.",
+                    "10. Raclette: Queijo derretido na hora sobre batatas e frios. Prato suíço muito servido no inverno."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Cidade Mais Alta: É o núcleo urbano mais alto do Brasil, a 1.628 metros de altitude.",
+                    "2. Suíça Brasileira: Ganhou o apelido pelo clima e arquitetura (embora o estilo enxaimel seja muitas vezes 'fake' decorativo).",
+                    "3. Cura da Tuberculose: Antes do turismo, a cidade era um sanatório gigante devido ao ar puro que ajudava na cura.",
+                    "4. Festival de Inverno: É o maior evento de música erudita da América Latina (acontece em julho).",
+                    "5. Plátanos: As árvores que perdem as folhas no outono (ficam laranjas) são plátanos importados para dar ar europeu.",
+                    "6. Trânsito de SP: Em feriados, o trânsito no Capivari é tão intenso que parece a Av. Paulista na hora do rush.",
+                    "7. Bondinho: Existe um trem turístico que cruza a cidade (e vai até Santo Antônio do Pinhal).",
+                    "8. Araucárias: A árvore símbolo está ameaçada, mas Campos ainda preserva grandes matas dela.",
+                    "9. Preços: É considerada uma das cidades mais caras do Brasil para turismo na alta temporada.",
+                    "10. Estrada de Ferro: A ferrovia foi construída para subir os doentes de tuberculose, não para turistas."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Mosteiro de São João: Lar das monjas beneditinas. Elas cantam Canto Gregoriano todos os dias às 17h45 (lindo demais).",
+                    "2. Igreja de São Benedito: A igreja do Capivari. Pequena, charmosa e disputadíssima para casamentos.",
+                    "3. Auditório Cláudio Santoro: A casa do Festival de Inverno. Acústica perfeita no meio da mata.",
+                    "4. Casa da Xilogravura: O único museu do Brasil dedicado apenas a essa arte (gravura em madeira).",
+                    "5. Palácio Boa Vista: Além de sede do governo, é um museu de arte sacra e modernista (tem quadros valiosos).",
+                    "6. Capela de São Pedro Apóstolo: Fica dentro do Palácio, projetada por Paulo Mendes da Rocha.",
+                    "7. Comunidade Espiritual: A cidade atrai muitos retiros de yoga e meditação devido à altitude e silêncio.",
+                    "8. Lendas da Mantiqueira: Histórias de luzes misteriosas e povos antigos da serra.",
+                    "9. Artesanato em Lã: As malharias são parte da cultura local (e da economia).",
+                    "10. Festa da Cerejeira: A colônia japonesa celebra a florada das Sakuras (julho/agosto) com muita cultura nipônica."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Festival de Inverno (Julho): A cidade lota. Concertos gratuitos na praça e pagos no auditório. Preços triplicam.",
+                    "2. Festa da Cerejeira (Jul/Ago): No Parque das Cerejeiras. Comida japonesa e árvores rosas floridas.",
+                    "3. Natal dos Sonhos (Dez): A decoração de Natal de Campos é famosa, com desfiles e Papai Noel. A cidade fica mágica.",
+                    "4. Outono (Abr-Jun): Para muitos, a melhor época. Frio, folhas caindo, céu azul e preços médios.",
+                    "5. Temporada do Pinhão (Maio): Os restaurantes criam pratos especiais com pinhão.",
+                    "6. Verão (Dez-Mar): Chove bastante à tarde, mas é quando as hortênsias estão floridas e lindas.",
+                    "7. Feriados Prolongados: A cidade sempre enche. Se quiser paz, evite Corpus Christi e Carnaval.",
+                    "8. Primavera (Set-Nov): O Parque Amantikir fica no auge das flores.",
+                    "9. Temporada de Malhas (Maio-Jul): As feiras de malha ficam lotadas de gente comprando roupa de frio.",
+                    "10. Reveillon: Tranquilo, focado em ceias em família e hotéis. Não tem grandes festas de rua como na praia."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Voltagem: 127V (110V). Diferente de outras cidades de serra que podem ser 220V. Confira sempre.",
+                    "2. DDD: 12.",
+                    "3. Acesso: Pela Rodovia Floriano Rodrigues Pinheiro (SP-123). Estrada sinuosa, mas excelente e linda.",
+                    "4. Pedágio: Tem pedágio na subida da serra e é caro.",
+                    "5. Uber: Funciona bem, mas em alta temporada o preço dispara (dinâmico) e o trânsito trava.",
+                    "6. Estacionamento: No Capivari, estacionar na rua é Zona Azul digital (caro) e estacionamentos privados custam uma fortuna.",
+                    "7. Clima: À noite sempre esfria, mesmo no verão. Traga casaco leve sempre.",
+                    "8. Moeda: Real (BRL). Cartão aceito em 100% dos lugares.",
+                    "9. Hospedagem: Ficar no Capivari é prático (faz tudo a pé) mas caro. Ficar longe é barato, mas depende de carro.",
+                    "10. Neblina: Comum na serra ao cair da tarde. Redobre a atenção dirigindo."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Mala de Frio: Traga botas, cachecol e casaco pesado se vier entre maio e agosto. O frio dói.",
+                    "2. Reserve Restaurantes: No jantar de sexta e sábado, filas de espera passam de 2 horas no Capivari. Reserve.",
+                    "3. Não suba a serra sexta à noite: O trânsito na SP-123 para. Tente subir sexta de manhã ou sábado de madrugada.",
+                    "4. Economize na Comida: Restaurantes no Capivari são caros. Em Abernéssia (bairro comercial) come-se bem pela metade do preço.",
+                    "5. Amantikir Cedo: Vá assim que abrir (9h). Depois das 11h, vira fila para tirar foto.",
+                    "6. Malhas: Compre malhas no bairro 'Abernéssia' ou na entrada da cidade. No Capivari é preço de grife.",
+                    "7. Lareira: Se o hotel tem lareira, pergunte se a lenha é cobrada à parte (geralmente é).",
+                    "8. Hidratação: A altitude e o frio ressecam a pele e lábios. Leve manteiga de cacau.",
+                    "9. Chocolate Quente: O do 'Montanhês' é o mais famoso (e denso). Vale a caloria.",
+                    "10. Pôr do Sol: O Museu Felícia Leirner tem o pôr do sol mais bonito, com música clássica de fundo às vezes."
+                ],
+
+                // --- NOVO: NÚMEROS IMPORTANTES (CAMPOS DO JORDÃO) ---
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergência e segurança.",
+                    "2. 193 (Bombeiros): Resgate em trilhas, acidentes e incêndios (comum em mata seca no inverno).",
+                    "3. 192 (SAMU): Urgência médica e ambulância.",
+                    "4. (12) 3662-1904 (Hospital Municipal): O Complexo Municipal de Saúde é o atendimento público.",
+                    "5. (12) 3664-3524 (Rodoviária): Informações sobre ônibus (Pássaro Marron) para SP e Vale.",
+                    "6. 153 (Guarda Civil): Apoio ao turista e trânsito municipal.",
+                    "7. (12) 3663-1235 (Portal de Entrada): Centro de Informações Turísticas.",
+                    "8. 199 (Defesa Civil): Para deslizamentos em época de chuva de verão.",
+                    "9. (12) 3662-5400 (Delegacia de Polícia): Para registrar furtos ou perda de documentos.",
+                    "10. 0800 055 5510 (DER): Emergência nas rodovias estaduais de acesso (SP-123)."
+                ],
+
+                // --- NOVO: RISCOS E ERROS (CAMPOS DO JORDÃO) ---
+                riscos: [
+                    "1. Preços 'Suíços': Em Julho, tudo custa o triplo. Um fondue para dois pode passar de R$ 400. Pesquise o cardápio na porta antes de entrar.",
+                    "2. Trânsito no Capivari: Entrar de carro no centrinho sábado à noite é pedir para ficar preso 1h em 500 metros. Estacione longe e vá a pé.",
+                    "3. Neblina na Serra: A neblina desce rápido e a visibilidade zera na rodovia. Não pare no acostamento (é perigoso). Reduza e siga as faixas.",
+                    "4. 'Couvert' Artístico: Quase todo restaurante tem música ao vivo e cobra caro por pessoa. Pergunte se é obrigatório ou se tem área sem música.",
+                    "5. Golpe do Aluguel: Casas de temporada falsas ou muito diferentes da foto são comuns no inverno. Use plataformas confiáveis (Airbnb/Booking) e desconfie de PIX direto.",
+                    "6. Calçadas Escorregadias: No inverno, o orvalho congela ou cria limo. Cuidado ao andar nas calçadas de pedra, escorrega muito.",
+                    "7. Quatis no Horto: Eles são fofos, mas roubam comida e mordem. Não tente alimentar nem fazer carinho.",
+                    "8. Frio na Sombra: Ao sol é agradável, na sombra é gelado. O erro é sair sem casaco porque viu sol. Você vai passar frio.",
+                    "9. Compras por Impulso: O chocolate e a malha no centro turístico são muito mais caros. Pesquise no bairro Abernéssia ou Portal.",
+                    "10. Hospedagem sem Aquecedor: Erro fatal. Verifique se o hotel tem aquecedor ou lençol térmico. O isolamento das casas no Brasil é ruim e faz muito frio dentro do quarto."
+                ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (O Clássico): Manhã no Parque Amantikir (chegue cedo). Almoço no Capivari (Baden Baden). Tarde: Teleférico e Morro do Elefante. Noite: Fondue.",
+                            "Dia 2 (Vista e Chocolate): Pico do Itapeva (vista do vale). Visita a uma fábrica de chocolate (Araucária ou Spinassi). Tarde: Ducha de Prata e fotos no Portal."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Natureza e Arte): Manhã no Horto Florestal (trilhas leves). Almoço no restaurante do parque. Fim de tarde: Museu Felícia Leirner (esculturas e o pôr do sol mais bonito).",
+                            "Dia 4 (Cultura): Palácio Boa Vista (residência de inverno). Café no Sans Souci. Noite: Pizza ou truta no bairro Jaguaribe (mais barato que Capivari).",
+                            "Dia 5 (Diversão): Dia no Tarundu (patinação, tirolesa) se tiver crianças, ou Parque das Cerejeiras (se for época) + Cervejaria local."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Bate-volta Vizinho): Santo Antônio do Pinhal. Visite o Pico Agudo e a estação de trem Eugênio Lefèvre. Almoço rural.",
+                            "Dia 7 (Compras e Malhas): Dia de compras no bairro Abernéssia (muito mais barato que o centro turístico) e Galeria das Malhas.",
+                            "Dia 8 (Slow Travel): Café colonial demorado pela manhã e tarde livre para curtir a lareira do hotel ou o Bondinho Urbano."
+                        ]
+                    }
+                },
+
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-634788&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/campos-do-jordao/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+            {
+                name: "Porto de Galinhas",
+                // FOTO: Piscinas Naturais e Jangadas (Wikimedia)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Piscinas_Naturais.tif/lossy-page1-1800px-Piscinas_Naturais.tif.jpg",
+                tags: ["Piscinas Naturais", "Mergulho", "Romance"],
+                mapa: "https://goo.gl/maps/portodegalinhas",
+                clima: "Tropical. Sol o ano todo. Chuvas concentradas entre maio e julho. A água é sempre morna (28ºC).",
+                
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Piscinas Naturais: O cartão-postal. Vá de jangada na maré baixa para nadar com os peixinhos coloridos.",
+                    "2. Pontal de Maracaípe: O encontro do rio com o mar. O pôr do sol aqui é o mais famoso da região.",
+                    "3. Praia de Muro Alto: Um 'piscinão' gigante protegido por uma barreira de corais. Águas paradas, perfeitas para crianças e caiaque.",
+                    "4. Passeio de Buggy (Ponta a Ponta): Percorre todas as praias, de Muro Alto até Maracaípe. Obrigatório para entender a geografia.",
+                    "5. Projeto Hippocampus: Um centro de preservação de cavalos-marinhos. Você vê eles de pertinho nos aquários.",
+                    "6. Vila de Porto: O centrinho cheio de lojas de artesanato, as famosas estátuas de galinhas e restaurantes.",
+                    "7. Praia de Maracaípe: O point do surf. Ondas fortes e campeonatos mundiais. Ótimo para sentar num bar e ver o mar.",
+                    "8. Praia de Calhetas: Fica no município vizinho (Cabo), mas é passeio clássico. Praia pequena em formato de coração com tirolesa.",
+                    "9. Ilha de Santo Aleixo: Passeio de barco imperdível. Uma ilha vulcânica paradisíaca que parece cenário de filme.",
+                    "10. Voo de Paramotor: Sobrevoar as piscinas naturais dá uma dimensão real da beleza dos recifes de corais."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Beijupirá: O restaurante mais famoso (e caro) da vila. Peixes com molhos de frutas locais. Experiência gastronômica.",
+                    "2. Peixe na Telha: Filé de peixe com molho servido borbulhando dentro de uma telha de barro.",
+                    "3. Bolo de Rolo: Patrimônio de Pernambuco. Camadas finíssimas de massa e goiabada derretida. Leve de lembrança.",
+                    "4. Cartola: Banana frita, queijo manteiga (ou coalho), açúcar e canela. A sobremesa oficial.",
+                    "5. Camarão no Abacaxi: Clássico servido nos restaurantes à beira-mar (como o Barcaxeira).",
+                    "6. Agulhinha Frita: Peixinho pequeno frito inteiro, crocante como batata frita. Petisco perfeito na praia.",
+                    "7. Tapioca da Vila: Nas ruas do centro, as tapioqueiras fazem na hora com muito coco fresco.",
+                    "8. Caldinho de Feijão/Peixe: Na areia da praia, os vendedores passam com garrafas térmicas. É viciante.",
+                    "9. Lagosta: Por ser vila de pescadores, é possível comer lagosta fresca por preços melhores que nas capitais.",
+                    "10. Arrumadinho: Carne de sol, feijão verde, farofa e vinagrete. Almoço forte para dar sustância."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Nome Sombrio: O nome 'Porto de Galinhas' era um código do tráfico de escravos. 'Tem galinha nova no porto' significava que chegaram escravos ilegalmente.",
+                    "2. Galinhas Esculpidas: As galinhas espalhadas pela cidade são obra do artista Gilberto Carcará. Elas usam óculos, biquíni e fantasias.",
+                    "3. Piscinas Temporárias: As piscinas naturais só existem na maré baixa. Na maré alta, elas somem e o mar bate nas pedras.",
+                    "4. Muro Alto: Tem esse nome por causa do paredão de areia e coqueiros de 3 metros que cerca a praia.",
+                    "5. Cavalos-Marinhos: O manguezal de Maracaípe é um berçário natural. O passeio de jangada lá leva para vê-los no habitat (sem tocar!).",
+                    "6. Maracaípe: Significa 'Rio dos Maracás' (chocalhos indígenas) em Tupi.",
+                    "7. Destino de Mel: É um dos destinos mais procurados por casais em lua de mel no Brasil.",
+                    "8. Proibido Alimentar: É estritamente proibido dar comida aos peixes nas piscinas (eles adoecem).",
+                    "9. Ipojuca: Porto de Galinhas não é cidade, é um distrito do município de Ipojuca.",
+                    "10. Coqueirais: A região já foi dominada por engenhos de açúcar, mas hoje os coqueiros reinam na paisagem."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Convento de Santo Cristo: Fica no centro de Ipojuca (cidade). Uma relíquia histórica com uma imagem sagrada que veio de Portugal.",
+                    "2. Artesanato de Galinhas: As galinhas de cabaça ou cerâmica são a identidade cultural local.",
+                    "3. Gilberto Carcará: O ateliê do artista que criou a identidade visual da vila é visitável.",
+                    "4. Capela de São Benedito: A igrejinha famosa na Praia dos Carneiros (vizinha) é cartão postal religioso da região.",
+                    "5. Forró Pé de Serra: A cultura nordestina é forte. À noite, bares no centro tocam forró autêntico.",
+                    "6. Xilogravura: A arte de J. Borges (famoso xilogravurista pernambucano) é vendida nas lojas de souvenirs.",
+                    "7. Pesca Artesanal: A cultura da jangada é passada de pai para filho e sustenta muitas famílias.",
+                    "8. Maracatu: Grupos locais se apresentam na vila em épocas festivas.",
+                    "9. Festa de Nossa Senhora do Desterro: Padroeira da região, com procissões tradicionais.",
+                    "10. Renda Renascença: Trabalho manual delicadíssimo típico de Pernambuco, encontrado nas lojas chiques."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Verão (Dez-Mar): A vila ferve. Sol forte, água clara, preços altos e filas para a jangada.",
+                    "2. Inverno (Maio-Jul): Chove. E quando chove, a água das piscinas turva e perde a beleza. Evite se possível.",
+                    "3. Festival Gastronômico (Novembro): Os restaurantes criam pratos exclusivos com desconto (Porto Gastrô).",
+                    "4. Festa da Galinha (Outubro/Novembro): Shows populares e trio elétrico em Ipojuca.",
+                    "5. Ano Novo: A vila fica intransitável de tanta gente. As festas nos hotéis são luxuosas.",
+                    "6. Maré Baixa (Lua Cheia/Nova): As melhores épocas do mês. Nas luas Crescente/Minguante a maré não baixa tanto (maré morta).",
+                    "7. Nordeste Surf (Varia): Campeonatos de surf em Maracaípe atraem gente bonita e festas na praia.",
+                    "8. Jazz Porto (Setembro): Festival de Jazz e Blues que traz música de qualidade para a vila.",
+                    "9. Tartarugas (Set-Mar): Época de desova. Às vezes o projeto Ecoassociados libera filhotes ao mar (lindo de ver).",
+                    "10. Baixa Temporada (Abril/Agosto): Preços despencam. Se pegar dias de sol, é o melhor custo-benefício."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Voltagem: 220V. Cuidado com eletrônicos de 110V.",
+                    "2. DDD: 81.",
+                    "3. Aeroporto: O mais próximo é Recife (REC), a 60km (cerca de 1h a 1h30 de carro).",
+                    "4. Transfer: É a melhor forma de chegar. Uber pode sair caro ou cancelar. Ônibus (Vera Cruz) é barato mas demora.",
+                    "5. Tábua de Marés: É a Bíblia de Porto de Galinhas. Baixe o app ou consulte o Google. Passeios só na maré baixa (0.0 a 0.5).",
+                    "6. Pulseira: Para descer nas piscinas naturais, precisa pegar uma pulseira gratuita na praça (controle de fluxo).",
+                    "7. Moeda: Real (BRL). Leve dinheiro vivo para jangadeiros e vendedores de praia.",
+                    "8. Caminhar: No centro (Vila), carro é proibido. Faz-se tudo a pé.",
+                    "9. Segurança: Tranquilo para turistas, mas evite ruas escuras fora da vila tarde da noite.",
+                    "10. Internet: 4G funciona bem na vila, mas falha em praias mais afastadas como Muro Alto."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Chinelo nas Pedras: NUNCA ande nos arrecifes descalço. Os ouriços do mar estão escondidos e pisar neles acaba com a viagem.",
+                    "2. Consulte a Maré: Se a maré baixa for às 9h da manhã, chegue às 8h. A piscina natural só dura umas 2 horas.",
+                    "3. Lua Cheia ou Nova: São as semanas de 'Maré Viva', quando a água seca mais e as piscinas ficam mais bonitas.",
+                    "4. Buggy Ponta a Ponta: Faça no primeiro dia para conhecer tudo e escolher sua praia favorita para voltar depois.",
+                    "5. Muro Alto com Criança: É a melhor praia para quem tem filhos. Sem ondas, parece uma lagoa.",
+                    "6. Pôr do Sol no Pontal: Vá ver o pôr do sol em Maracaípe, mas leve repelente. O mangue tem maruim.",
+                    "7. Não compre coral: É crime ambiental e incentiva a destruição dos recifes.",
+                    "8. Fotos Subaquáticas: Os jangadeiros oferecem fotos com peixes (pagas à parte). Negocie o preço antes.",
+                    "9. Carneiros: Vale o bate-volta (1h de viagem). É uma das praias mais lindas do Brasil.",
+                    "10. Evite Finais de Semana: O pessoal de Recife desce em peso. As praias ficam lotadas. Dia de semana é o paraíso."
+                ],
+
+                // --- NOVO: NÚMEROS IMPORTANTES (PORTO DE GALINHAS) ---
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergência e segurança na vila.",
+                    "2. (81) 3552-1480 (Delegacia de Ipojuca): Para ocorrências policiais.",
+                    "3. (81) 3561-1937 (UPA Ipojuca): Unidade de Pronto Atendimento 24h mais próxima.",
+                    "4. 193 (Bombeiros/Salva-Vidas): Afogamentos (atenção às correntes) e resgates.",
+                    "5. (81) 3552-1476 (Posto de Saúde de Porto): Para atendimentos simples na própria vila.",
+                    "6. (81) 3322-4188 (Aeroporto Recife): Informações de voos.",
+                    "7. (81) 3552-1262 (Associação dos Jangadeiros): Informações oficiais sobre os passeios de jangada.",
+                    "8. 192 (SAMU): Ambulância de emergência.",
+                    "9. (81) 3552-2274 (Centro de Informações Turísticas): Apoio ao visitante na entrada da vila.",
+                    "10. (81) 3452-9800 (Rodoviária de Recife): Para quem vai de ônibus de linha."
+                ],
+
+                // --- NOVO: RISCOS E ERROS (PORTO DE GALINHAS) ---
+                riscos: [
+                    "1. Maré Errada: O ERRO Nº 1. Ir às piscinas na maré alta (acima de 0.6) é jogar dinheiro fora. A água fica turva e as piscinas somem. Consulte a Tábua de Marés.",
+                    "2. Pisar em Ouriços: Os arrecifes estão cheios de ouriços pretos nos buracos. Se pisar, o espinho entra, infecciona e dói muito. Use chinelo ou sapatilha de neoprene (aquashoes).",
+                    "3. Guias Falsos na Estrada: Na rodovia chegando em Porto, homens de bicicleta pulam na frente do carro oferecendo 'atalho' ou 'estacionamento'. IGNORE. Eles te levam para lugares caros e longe.",
+                    "4. Consumação em Muro Alto: As barracas em Muro Alto cobram consumação mínima alta ou aluguel de mesa caro. Pergunte o preço antes de sentar.",
+                    "5. Jangada Pirata: Compre o ingresso da jangada no guichê oficial da Associação (na praça). Não pague direto a estranhos na areia.",
+                    "6. Correntes de Retorno: Em praias de tombo (como Cupe ou Maracaípe), a corrente puxa forte. Se não sabe nadar, não passe da cintura.",
+                    "7. Protetor Solar na Piscina: Passar protetor e entrar na água logo em seguida solta óleo e mata os corais. Passe 30 min antes ou use roupas UV.",
+                    "8. Bugueiro Credenciado: Só faça passeios com bugueiros credenciados (placa vermelha/cadastro). Buggy pirata não tem seguro em caso de acidente.",
+                    "9. Trânsito de Retorno: Voltar para Recife no domingo à tarde pode levar 3 horas engarrafado. Saia cedo ou bem tarde.",
+                    "10. Vendedores Insistentes: Na praia principal, o assédio de vendedores é intenso. Um 'não, obrigado' firme resolve, mas eles cansam."
+                ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (O Básico Perfeito): Manhã nas Piscinas Naturais (consulte a maré!). Tarde: Passeio de Buggy 'Ponta a Ponta' (conhece Muro Alto, Cupe e Maracaípe). Pôr do sol no Pontal de Maracaípe.",
+                            "Dia 2 (Relax): Manhã na Praia de Muro Alto (o piscinão sem ondas). Tarde: Caminhada na Vila, compras de artesanato (galinhas) e jantar no Beijupirá ou Barcaxeira."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Carneiros): Bate-volta para a Praia dos Carneiros (é perto). Faça o passeio de catamarã, banho de argila e veja a igrejinha verde.",
+                            "Dia 4 (Natureza): Passeio de Jangada no Manguezal (ver cavalos-marinhos) e tarde na praia do Cupe (no bar do Pontal do Cupe que é tranquilo).",
+                            "Dia 5 (Aventura): Mergulho de cilindro nas piscinas (batismo) ou passeio para a Ilha de Santo Aleixo (cenário de filme)."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (História): Bate-volta para Recife e Olinda (Recife Antigo + Ladeiras de Olinda). É cansativo, mas vale a pena.",
+                            "Dia 7 (Litoral Sul): Calhetas e Cabo de Santo Agostinho. A praia de Calhetas é pequena e linda, com tirolesa.",
+                            "Dia 8 (Despedida): Dia livre para repetir sua praia favorita (provavelmente Muro Alto ou a piscininha da Vila) e últimas compras."
+                        ]
+                    }
+                },
+
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-662973&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/porto-de-galinhas/", 
                     seguro: "https://www.segurospromo.com.br" 
                 }
             }
@@ -1657,6 +2306,34 @@ const worldData = {
                     "9. Cartão SUBE: Não dá para pagar ônibus com dinheiro. Você precisa comprar e carregar o cartão SUBE em 'kioskos' (bancas), e às vezes é difícil achar cartão virgem para vender.",
                     "10. Protestos (Piquetes): O centro (perto do Obelisco e Casa Rosada) é palco frequente de manifestações que fecham o trânsito. Se tiver voo, saia com muita antecedência."
                 ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (O Ícone): Comece no Obelisco e Teatro Colón. Desça a Av. de Mayo até a Casa Rosada. Almoço no Café Tortoni (com fila) ou perto. Tarde: Puerto Madero (Ponte da Mulher).",
+                            "Dia 2 (Contrastes): Manhã no Caminito (La Boca) - vá de táxi/Uber. Tarde: Cemitério da Recoleta e Floralis Genérica. Noite: Jantar com show de Tango."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Palermo): Dia de caminhar. Rosedal, Jardim Japonês e Planetário. Almoço e compras em Palermo Soho. Noite nos bares de Palermo Hollywood.",
+                            "Dia 4 (Arte e Livros): Malba (Museu) pela manhã. Tarde na livraria El Ateneo Grand Splendid (a mais bonita do mundo). Fim de tarde nas Galerias Pacífico.",
+                            "Dia 5 (San Telmo): Se for domingo, Feira de San Telmo (imperdível). Se não, visite o Mercado de San Telmo e a estátua da Mafalda."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Delta do Tigre): Pegue o trem na estação Retiro até Tigre. Faça o passeio de barco pelo Delta. É uma Veneza selvagem.",
+                            "Dia 7 (Uruguai): Pegue o Buquebus cedo e atravesse o rio para Colonia del Sacramento (Uruguai). Passe o dia na cidade histórica e volte à noite.",
+                            "Dia 8 (Despedida): Brunch chique em Puerto Madero e últimas compras de Alfajor e Vinho no supermercado."
+                        ]
+                    }
+                },
                 // SEUS LINKS DE AFILIADO
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?ss=Buenos+Aires&aid=304142", 
@@ -1800,7 +2477,34 @@ const worldData = {
                     "9. 'Lanzazos': Roubo por surpresa. Alguém passa correndo e puxa o celular ou correntinha. Comum no centro (Ahumada) e perto do Mercado Central.",
                     "10. Comprar Eletrônicos na Rua: Se te oferecerem iPhone barato na rua, é tijolo na caixa ou produto roubado bloqueado. Não caia na tentação."
                 ],
-                
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Centro Histórico): Plaza de Armas, La Moneda (troca da guarda) e Cerro Santa Lucía. Almoço no Mercado Central (Centolla). Fim de tarde: Cerro San Cristóbal (funicular) para ver a cidade de cima.",
+                            "Dia 2 (Modernidade): Sky Costanera (o prédio mais alto da América do Sul). Passeio pelo Parque Bicentenário. Jantar no Pátio Bellavista."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Vinho): Tour em vinícola. A Concha y Toro é a clássica (turística), mas a Undurraga ou Santa Rita são excelentes e menos lotadas. Tarde livre.",
+                            "Dia 4 (Neve ou Montanha): Bate-volta para Cajón del Maipo (Embalse el Yeso) para ver a paisagem de filme. Imperdível.",
+                            "Dia 5 (Litoral): Bate-volta para Valparaíso (arte de rua e casas coloridas) e Viña del Mar (Relógio de Flores e praia)."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Cordilheira): Valle Nevado e Farellones. No inverno, para esquiar. No verão, apenas para ver a vista e o pôr do sol nos Andes.",
+                            "Dia 7 (Lagoa Mística): Bate-volta para Portillo (Laguna del Inca). É longe, mas a lagoa no meio da neve é surreal.",
+                            "Dia 8 (Compras e Relax): Compras no Parque Arauco (shopping aberto) e jantar de despedida no bairro Lastarria."
+                        ]
+                    }
+                },
                 // SEUS LINKS DE AFILIADO
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?ss=Santiago&aid=304142", 
@@ -1946,6 +2650,36 @@ const worldData = {
                     "9. Furacões: Entre agosto e outubro é temporada de furacões. É raro fechar parque, mas chuvas torrenciais são diárias. Compre capas de chuva no Walmart (US$ 2) antes de entrar no parque (lá dentro custa US$ 15).",
                     "10. Jantar no Magic Kingdom: A comida dentro do Magic Kingdom é cara e 'ok'. Se quiser comer bem, saia e vá para Disney Springs ou hotéis próximos, ou leve lanches na mochila (é permitido)."
                 ],
+                // --- NOVO: ROTEIRO AUTOMÁTICO (ORLANDO) ---
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (A Magia): Magic Kingdom. Chegue no Rope Drop (abertura). Foque nas clássicas (Piratas, Mansão Assombrada) e montanhas-russas (Tron, Seven Dwarfs). Fique para os fogos.",
+                            "Dia 2 (Aventura): Islands of Adventure (Universal). É onde está Harry Potter (Hogsmeade) e Jurassic Park. Imperdível para jovens e adultos."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dia 1: Magic Kingdom (Disney).",
+                            "Dia 2: Hollywood Studios (Star Wars e Toy Story) + Disney Springs à noite.",
+                            "Dia 3: Islands of Adventure (Universal).",
+                            "Dia 4: Universal Studios (Beco Diagonal). Jante no CityWalk.",
+                            "Dia 5: Compras (Outlet Premium) pela manhã e Epcot à tarde/noite (para jantar nos países e ver o show noturno)."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Natureza): Animal Kingdom. Chegue cedo para o safari e Avatar (Flight of Passage).",
+                            "Dia 7 (Descanso ou Água): Volcano Bay (Parque Aquático) ou dia livre para Walmart/Target/Ross.",
+                            "Dia 8 (SeaWorld ou NASA): Escolha entre montanhas-russas no SeaWorld ou visita ao Kennedy Space Center (foguetes).",
+                            "Dia 9 (Despedida): Café da manhã com personagens e últimas compras no Florida Mall (tem Apple e loja da M&Ms)."
+                        ]
+                    }
+                },
                 // SEUS LINKS DE AFILIADO
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?ss=Orlando&aid=304142", 
@@ -2084,6 +2818,34 @@ const worldData = {
                     "9. Furacões (Agosto-Outubro): É a alta temporada de tempestades. Fique atento aos alertas do 'National Hurricane Center'. Se houver ordem de evacuação, obedeça imediatamente.",
                     "10. Seguro de Carro: A Flórida tem um dos maiores índices de acidentes dos EUA. Não economize no seguro do carro alugado (CDW/LDW e Terceiros). Bater sem seguro é falência decretada."
                 ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (South Beach): Manhã na praia (Lummus Park). Almoço na Ocean Drive (Art Deco). Tarde: Lincoln Road (compras a céu aberto). Pôr do sol no South Pointe Park.",
+                            "Dia 2 (Arte e Luxo): Manhã em Wynwood Walls (grafites). Almoço no Design District (arquitetura). Noite: Bayside Marketplace (vista do porto)."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Compras Pesadas): Dia dedicado ao Sawgrass Mills (maior outlet) ou Aventura Mall. Prepare as malas e a paciência.",
+                            "Dia 4 (Cultura e Charme): Manhã no Vizcaya Museum (mansão europeia). Tarde em Little Havana (Calle Ocho) para café cubano e charutos.",
+                            "Dia 5 (Lado Moderno): Brickell City Centre. Almoço no Casa Tua ou Komodo. Caminhada pelo Riverwalk."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Caribe Americano): Bate-volta (longo) até Key West. A estrada sobre o mar é a mais bonita dos EUA. Pôr do sol na Mallory Square.",
+                            "Dia 7 (Natureza Selvagem): Everglades. Passeio de Airboat para ver jacarés no pântano.",
+                            "Dia 8 (Relax Total): Dia de praia em Key Biscayne (Bill Baggs Park) ou Haulover Beach (se quiser uma vibe mais livre)."
+                        ]
+                    }
+                },
                 // SEUS LINKS DE AFILIADO
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?ss=Miami&aid=304142", 
@@ -2224,6 +2986,34 @@ const worldData = {
                     "9. Área Financeira à Noite: Wall Street fica deserta após as 19h. Não é perigoso como no Brasil, mas é vazio e sem nada aberto.",
                     "10. Ratatouille Real: O metrô tem ratos. Não se assuste, eles ignoram humanos. Apenas não deixe comida cair no chão e não sente no banco se estiver muito sujo."
                 ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Ícones de Manhattan): Manhã no Central Park (Strawberry Fields). Desça a 5ª Avenida. Top of the Rock (pôr do sol). Noite: Times Square (luzes).",
+                            "Dia 2 (Liberdade e Finanças): Pegue o ferry grátis de Staten Island para ver a Estátua. Touro de Wall Street e Memorial do 11 de Setembro (Oculus). Noite: Pizza de US$ 1."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Brooklyn e Vistas): Atravesse a Brooklyn Bridge a pé (cedo). Fotos no DUMBO. Tarde: Summit One Vanderbilt (o prédio de vidro espelhado).",
+                            "Dia 4 (Arte e Urbano): High Line Park caminhando até o Chelsea Market (almoço). Tarde: Museu (MoMA ou MET). Noite: Show da Broadway (compre na TKTS).",
+                            "Dia 5 (Vibe Local): SoHo e Little Italy para compras e comida. Grand Central Terminal (o relógio famoso)."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Compras): Bate-volta no Jersey Gardens (Outlet coberto em NJ, sem imposto em roupas).",
+                            "Dia 7 (Natureza e Ciência): Museu de História Natural (dinossauros) e piquenique no Sheep Meadow (Central Park).",
+                            "Dia 8 (Lado B): Williamsburg (Brooklyn) para brechós e cafés hipsters ou The Edge (plataforma de vidro)."
+                        ]
+                    }
+                },
                 
                 // SEUS LINKS DE AFILIADO
                 links: {
@@ -2367,6 +3157,34 @@ const worldData = {
                     "9. Táxis no Aeroporto: Alguns taxistas tentam cobrar preço fixo abusivo ou dão voltas maiores. Prefira usar Uber/Bolt ou vá para a fila oficial e exija o taxímetro (a tarifa começa por volta de 3,25€).",
                     "10. Comprar Água Garrafada: A água da torneira em Lisboa é excelente e potável. Nos restaurantes, peça 'um copo de água' ou leve sua garrafinha para encher. Não gaste euros com isso."
                 ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Belém e Baixa): Manhã em Belém (Torre, Padrão dos Descobrimentos e Pastéis de Belém). Tarde: Praça do Comércio e suba o Elevador de Santa Justa. Jantar no Time Out Market.",
+                            "Dia 2 (Alfama e Castelo): Pegue o Elétrico 28 cedo. Suba ao Castelo de São Jorge (vista). Tarde: Perca-se nas ruelas de Alfama. Noite: Jantar com Fado Vadio."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Sintra - Obrigatório): Pegue o trem no Rossio. Visite o Palácio da Pena (o colorido) e a Quinta da Regaleira (poço iniciático). Volte exausto, mas feliz.",
+                            "Dia 4 (Lisboa Moderna): Oceanário de Lisboa (Parque das Nações). Teleférico. Tarde de compras no Chiado ou Av. da Liberdade.",
+                            "Dia 5 (Cascais): Trem do Cais do Sodré para Cascais (viagem linda na beira do mar). Almoço na marina e Boca do Inferno."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Fé e Ondas): Bate-volta para Fátima (Santuário) e Nazaré (ondas gigantes e peixe seco) ou Óbidos (vila medieval).",
+                            "Dia 7 (Lado Cool): LX Factory (lojas de design e livraria Ler Devagar) debaixo da ponte. Pôr do sol no MAAT.",
+                            "Dia 8 (Outra Margem): Atravesse a ponte para ver o Cristo Rei e as praias da Costa da Caparica (se for verão) ou Setúbal/Arrábida."
+                        ]
+                    }
+                },
                 // SEUS LINKS DE AFILIADO
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?ss=Lisbon&aid=304142", 
@@ -2508,6 +3326,34 @@ const worldData = {
                     "9. Fila do Prado 'Grátis': O Museu do Prado tem entrada grátis nas últimas 2 horas. A fila é tão grande que você perde 1h esperando e só vê o museu correndo por 40 min. Pague o ingresso para ver com calma.",
                     "10. Gorjeta Excessiva: Não precisa deixar 10% ou 15% como nos EUA ou Brasil. Arredondar a conta ou deixar algumas moedas é suficiente. O serviço já está incluído no salário."
                 ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Coração da Espanha): Puerta del Sol (Marco Zero), Plaza Mayor e Mercado de San Miguel (tapas). Tarde: Palácio Real e Catedral de Almudena. Fim de tarde: Churros na San Ginés.",
+                            "Dia 2 (Arte e Parque): Manhã no Museu do Prado (clássicos) ou Reina Sofía (Guernica). Tarde: Caminhada no Parque del Retiro e Puerta de Alcalá."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Moderno e Vistas): Estádio Santiago Bernabéu (Tour do Real Madrid). Tarde de compras na Gran Vía. Pôr do sol no Templo de Debod (egípcio).",
+                            "Dia 4 (Bate-volta Imperial): Pegue o trem-bala (AVE) para Toledo. A cidade medieval é incrível. Perca-se nas ruas e visite a Catedral.",
+                            "Dia 5 (Vibe Local): Domingo? Vá ao El Rastro (mercado de rua). Se não, bairro La Latina para rota de tapas (Cava Baja) e Malasaña à noite."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Aqueduto Romano): Bate-volta para Segóvia. Veja o Aqueduto gigante, o Alcázar (castelo da Disney) e coma o famoso leitão (Cochinillo).",
+                            "Dia 7 (Compras e Luxo): Bairro de Salamanca (milha de ouro) e Plaza de Colón. Jantar chique na Calle Serrano.",
+                            "Dia 8 (Despedida): Café da manhã lento em uma terraza e visita ao Jardim Botânico ou Matadero (centro cultural)."
+                        ]
+                    }
+                },
                 // SEUS LINKS DE AFILIADO
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?ss=Madrid&aid=304142", 
@@ -2650,6 +3496,34 @@ const worldData = {
                     "9. RER B à Noite: O trem que vem do aeroporto (RER B) passa por áreas perigosas (Saint-Denis). Evite usar tarde da noite com muitas malas. O RoissyBus ou Táxi são mais seguros nesse horário.",
                     "10. Museu do Louvre na Terça: O Louvre fecha às terças-feiras. Muita gente esquece disso e perde a viagem. O Palácio de Versalhes fecha às segundas. Confira os dias de folga!"
                 ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Ícones): Comece no Trocadéro (melhor vista da Torre Eiffel). Desça e faça o Cruzeiro no Sena. Tarde: Arco do Triunfo e desça a Champs-Élysées a pé.",
+                            "Dia 2 (Arte e Charme): Museu do Louvre (Mona Lisa - compre ingresso meses antes!). Tarde em Montmartre: Basílica de Sacré-Cœur, Muro do 'Eu Te Amo' e jantar num bistrô."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Histórico e Hipster): Le Marais. Visite a Place des Vosges, coma falafel na Rue des Rosiers e veja o Centre Pompidou.",
+                            "Dia 4 (Margem Esquerda): Musée d'Orsay (Impressionistas). Almoço em Saint-Germain-des-Prés (Café de Flore) e relax no Jardim de Luxemburgo.",
+                            "Dia 5 (Realeza): Bate-volta OBRIGATÓRIO para o Palácio de Versalhes (Salão dos Espelhos e Jardins). Reserve o dia todo."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Compras e Vistas): Ópera Garnier (Fantasma da Ópera) e Galeries Lafayette (suba no terraço, a vista é grátis).",
+                            "Dia 7 (Magia ou Monet): Disney Paris (são 2 parques) OU Jardins de Monet em Giverny (se for Primavera/Verão).",
+                            "Dia 8 (Lado B): Canal Saint-Martin (vibe local jovem) ou Catacumbas de Paris (se tiver coragem)."
+                        ]
+                    }
+                },
                 // SEUS LINKS DE AFILIADO
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?ss=Paris&aid=304142", 
@@ -2657,7 +3531,352 @@ const worldData = {
                     seguro: "https://www.segurospromo.com.br" 
                 }
             }
+        ],
+        "Inglaterra": [
+            {
+                name: "Londres",
+                // FOTO: Big Ben e Westminster Bridge (Wikimedia - Link Estável)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg/1024px-Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall.jpg",
+                tags: ["Realeza", "História", "Pubs"],
+                mapa: "https://goo.gl/maps/londres",
+                clima: "Oceânico Temperado. Cinza e úmido, mas chove menos do que dizem. Inverno frio (4ºC) e Verão agradável (22ºC).",
+                
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Big Ben e Parlamento: O ícone mundial. A torre do relógio (Elizabeth Tower) brilha dourada após a reforma.",
+                    "2. London Eye: A roda-gigante mais famosa. A vista do Parlamento e do Rio Tâmisa lá de cima é clássica.",
+                    "3. Tower Bridge: A ponte que abre. Não confunda com a London Bridge (que é sem graça). Suba na passarela de vidro.",
+                    "4. Museu Britânico: Onde está a história do mundo (Pedra de Roseta, Múmias). A entrada é GRÁTIS.",
+                    "5. Palácio de Buckingham: A casa do Rei. A Troca da Guarda (11h) é lotada, chegue cedo ou veja de longe.",
+                    "6. Torre de Londres: O castelo medieval onde ficam as Joias da Coroa e os famosos corvos.",
+                    "7. Camden Town: O bairro alternativo, berço do punk e da Amy Winehouse. Mercados de rua incríveis.",
+                    "8. Hyde Park: O maior parque real. Alimente esquilos, veja o lago Serpentine e o memorial da Diana.",
+                    "9. Catedral de St. Paul: A cúpula gigante onde Charles e Diana casaram. A acústica da galeria dos sussurros é mágica.",
+                    "10. Harry Potter (Plataforma 9 ¾): Em King's Cross. A fila para tirar foto no carrinho é grande, mas fãs amam."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Fish and Chips: Peixe frito com batata frita e purê de ervilhas. Coma num pub tradicional, não em restaurante chique.",
+                    "2. English Breakfast: O café da manhã de campeão: ovos, bacon, linguiça, feijão doce, cogumelos e tomate.",
+                    "3. Sunday Roast: O almoço de domingo sagrado. Carne assada, batatas, vegetais, molho gravy e Yorkshire Pudding.",
+                    "4. Afternoon Tea: O chá da tarde com sanduichinhos, scones (pãezinhos) com geleia e creme. Experiência real.",
+                    "5. Chicken Tikka Masala: Dizem que é o verdadeiro prato nacional. A comida indiana em Londres é a melhor do mundo fora da Índia.",
+                    "6. Beef Wellington: Filé mignon envolto em patê e massa folhada. Prato de luxo (o do Gordon Ramsay é famoso).",
+                    "7. Pies (Tortas): Tortas de massa podre com recheio de carne e cerveja (Steak and Ale) servidas com purê.",
+                    "8. Borough Market: O mercado de comida mais antigo e delicioso. Prove o sanduíche de queijo quente ou donuts.",
+                    "9. Scotch Egg: Um ovo cozido envolto em carne de linguiça e empanado. Lanche típico de piquenique.",
+                    "10. Gin & Tonic: A bebida favorita dos londrinos. Existem bares especializados só em Gin."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Mão Inglesa: Os carros dirigem na esquerda. OLHE PARA A DIREITA antes de atravessar a rua (está escrito no chão 'LOOK RIGHT').",
+                    "2. Floresta?: Londres tem tantas árvores (mais de 8 milhões) que é tecnicamente classificada pela ONU como uma floresta.",
+                    "3. Corvos da Torre: Diz a lenda que se os corvos saírem da Torre de Londres, o reino cairá. Por isso, eles têm as asas aparadas.",
+                    "4. Metrô Mais Antigo: O 'Tube' é o sistema de metrô mais antigo do mundo (1863). É fundo, quente e não tem ar condicionado em muitas linhas.",
+                    "5. Big Ben é o Sino: O nome da torre é Elizabeth Tower. Big Ben é o apelido do sino gigante de 13 toneladas lá dentro.",
+                    "6. Black Cabs: Para ser taxista de Black Cab, é preciso passar numa prova lendária ('The Knowledge') e decorar 25.000 ruas de cabeça.",
+                    "7. Museus Grátis: A maioria dos grandes museus (British, Natural History, Science, Tate) tem entrada gratuita permanente.",
+                    "8. Cidade de Raposas: Existem milhares de raposas urbanas vivendo em Londres. Você verá muitas à noite revirando lixo.",
+                    "9. Ônibus Vermelho: A cor vermelha foi escolhida apenas para eles se destacarem no meio do nevoeiro cinza de Londres.",
+                    "10. A Rainha/Rei em Casa: Se a bandeira do estandarte real estiver hasteada em Buckingham, o monarca está em casa."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Abadia de Westminster: Onde reis são coroados e enterrados (e onde William e Kate casaram). É o coração da Igreja Anglicana.",
+                    "2. Catedral de St. Paul: A obra-prima de Christopher Wren, reconstruída após o Grande Incêndio de 1666.",
+                    "3. Diversidade: Londres é uma das cidades mais multiculturais do mundo. Mais de 300 línguas são faladas.",
+                    "4. Templo Hindu de Neasden: O primeiro templo hindu tradicional de pedra da Europa. É deslumbrante.",
+                    "5. Mesquita Central de Londres: Fica na beira do Regent's Park, com uma cúpula dourada visível de longe.",
+                    "6. West End (Teatro): A 'Broadway' de Londres. Assistir a um musical (O Fantasma da Ópera, Les Misérables) é ritual cultural.",
+                    "7. Pubs Históricos: O pub é a sala de estar do britânico. Alguns existem desde o século 17 e sobreviveram a bombardeios.",
+                    "8. Notting Hill: O bairro caribenho que hospeda o maior carnaval de rua da Europa (em agosto).",
+                    "9. Shakespeare's Globe: Uma réplica fiel do teatro original de Shakespeare a céu aberto.",
+                    "10. Banksy e Street Art: Shoreditch e Brick Lane são galerias a céu aberto com os melhores grafites do mundo."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Natal (Dezembro): As luzes da Regent Street e Oxford Street são as mais bonitas da Europa. O Hyde Park vira o 'Winter Wonderland'.",
+                    "2. Troca da Guarda: Acontece o ano todo (11h), mas verifique os dias (nem sempre é diária).",
+                    "3. Wimbledon (Julho): O torneio de tênis mais antigo do mundo. A cidade respira tênis e come morangos com creme.",
+                    "4. Primavera (Mar-Mai): Os parques ficam cheios de narcisos amarelos (daffodils) e cerejeiras.",
+                    "5. Chelsea Flower Show (Maio): A exposição de flores favorita da Realeza.",
+                    "6. Notting Hill Carnival (Agosto): Um carnaval caribenho gigante, colorido e barulhento nas ruas.",
+                    "7. Ano Novo: Os fogos na London Eye são disputadíssimos (precisa comprar ingresso meses antes).",
+                    "8. Outono (Set-Nov): Os parques reais ficam dourados e o clima é aconchegante para pubs.",
+                    "9. Maratona de Londres (Abril): Uma das maiores do mundo, passa pelos pontos turísticos.",
+                    "10. Verão (Jun-Ago): Os dias são longos (escurece às 22h). Os pubs ficam cheios de gente bebendo na calçada."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Moeda: Libra Esterlina (£ - GBP). É mais cara que o Euro e o Dólar.",
+                    "2. Visto: Brasileiros não precisam de visto para turismo (até 6 meses), mas a ETA (autorização eletrônica) será implementada em breve. Confira antes de ir.",
+                    "3. Tomada: TIPO G (três pinos retangulares enormes). É exclusiva do Reino Unido. SEU ADAPTADOR EUROPEU NÃO SERVE. Compre um específico.",
+                    "4. Transporte: Use o cartão de crédito/débito por aproximação (Contactless) direto na catraca. É o mesmo preço do Oyster Card.",
+                    "5. Metrô (Tube): É dividido em zonas (1 a 6). Quanto mais longe do centro, mais caro. Turistas ficam na Zona 1-2.",
+                    "6. Gorjeta: 10% a 12.5% geralmente vem na conta ('Service Charge'). Se não vier, é educado deixar.",
+                    "7. Água: Da torneira é potável. Em restaurantes, peça 'Tap Water' (é grátis).",
+                    "8. Aeroportos: Heathrow (LHR - Principal/Metrô), Gatwick (LGW - Trem), Stansted e Luton (Low cost/Longe).",
+                    "9. Tax Free: O Reino Unido SAIU da União Europeia (Brexit). Não existe mais Tax Free (reembolso de imposto) para turistas em lojas.",
+                    "10. Escale à Direita: Na escada rolante do metrô, FIQUE À DIREITA. Se ficar na esquerda parado, vai levar bronca."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Compre Adaptador G: Sério, compre no Brasil ou no aeroporto. Suas tomadas não vão entrar de jeito nenhum.",
+                    "2. Sky Garden Grátis: A melhor vista de Londres é de graça (Sky Garden ou Horizon 22), mas precisa reservar no site semanas antes.",
+                    "3. Não compre bilhete de papel: No metrô, o bilhete de papel custa o dobro. Use seu cartão Contactless (Wise/Nomad) ou Oyster.",
+                    "4. Museus: Reserve horário no site dos museus gratuitos. Mesmo sendo grátis, alguns exigem hora marcada para não lotar.",
+                    "5. Harry Potter Studios: Fica longe da cidade (Watford). Os ingressos esgotam 3 meses antes. Compre com muita antecedência.",
+                    "6. Citymapper: Baixe esse app. Ele é melhor que o Google Maps para o transporte de Londres (diz até o vagão do metrô mais vazio).",
+                    "7. Pubs Fecham Cedo: A maioria dos pubs toca o sino às 23h ('Last Orders'). A noite em Londres acaba cedo se não for balada.",
+                    "8. Stansted Express: Se voar Ryanair, compre o trem antecipado. Na hora é caríssimo.",
+                    "9. Teatro: Compre ingressos de última hora na cabine TKTS na Leicester Square para descontos.",
+                    "10. Chuva: Não leve guarda-chuva (o vento quebra). Leve capa de chuva ou casaco impermeável com capuz."
+                ],
+
+                // --- NOVO: NÚMEROS IMPORTANTES (LONDRES) ---
+                numeros: [
+                    "1. 999 (Emergência): Polícia, Bombeiros e Ambulância (só para risco de vida).",
+                    "2. 101 (Polícia Não-Emergencial): Para reportar furtos de celular ou crimes que já aconteceram.",
+                    "3. 111 (NHS - Saúde): Para aconselhamento médico urgente que não seja risco de vida.",
+                    "4. (+44) 20 7659 1550 (Consulado do Brasil): Fica na 3 Vere Street. Para perda de passaporte.",
+                    "5. (+44) 344 335 1801 (Transport for London - TfL): Achados e perdidos no metrô e ônibus.",
+                    "6. (+44) 20 7222 1234 (Táxi Black Cab): Central de táxis oficiais (ou use o app Gett).",
+                    "7. (+44) 20 7379 7395 (London Tourist Centre): Informações turísticas na Leicester Square.",
+                    "8. (+44) 844 335 1801 (Aeroporto Heathrow): Informações de voos.",
+                    "9. (+44) 345 909 0909 (National Rail): Informações sobre trens para outras cidades.",
+                    "10. 112: Funciona como o 999 (padrão europeu, também aceito)."
+                ],
+
+                // --- NOVO: RISCOS E ERROS (LONDRES) ---
+                riscos: [
+                    "1. Olhar para o Lado Errado: O ERRO FATAL. Os carros vêm da direita. Muitos turistas são atropelados por olhar para a esquerda. Procure a frase 'LOOK RIGHT' pintada no chão antes de atravessar.",
+                    "2. Ladrões de Moto (Phone Snatching): É uma epidemia em Londres. Homens em motos elétricas sobem na calçada e arrancam o celular da sua mão enquanto você usa o GPS. Segure o celular com as duas mãos e fique longe da borda da rua.",
+                    "3. Lojas de Doces da Oxford Street: As 'American Candy Stores' gigantes na Oxford Street muitas vezes são esquemas de lavagem de dinheiro/golpes. Vendem doces vencidos a preços astronômicos. Evite.",
+                    "4. Rickshaws (Bicicletas-Táxi): No Soho e West End, eles cobram preços abusivos (tipo £50 por 5 minutos) e intimidam turistas para pagar. Não pegue.",
+                    "5. Golpe do Jogo de Copos: Na ponte de Westminster, grupos fazem jogos de adivinhação. É golpe de quadrilha para bater carteira de quem para para olhar. Não pare.",
+                    "6. Metrô Sem Ar: No verão, a linha Central (vermelha) e a Bakerloo (marrom) viram fornos de 40ºC. Leve água e evite em horários de pico se passar mal com calor.",
+                    "7. Aeroportos Distantes: Cuidado ao comprar voo barato para Stansted, Luton ou Southend. O trem para chegar lá custa caro (£20-£30) e demora, anulando a economia da passagem.",
+                    "8. Taxa de Congestionamento: Se alugar carro (não faça isso), entrar no centro custa £15 por dia (Congestion Charge) + £12.50 (ULEZ). A multa chega pelo correio.",
+                    "9. Ratos nos Parques: Ao anoitecer, os parques de Londres têm muitos ratos e raposas. Não deixe restos de piquenique no chão.",
+                    "10. Batedores no Troca da Guarda: A multidão em frente ao Palácio de Buckingham é o lugar favorito dos 'pickpockets'. Mochila para frente sempre."
+                ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Westminster Real): Troca da Guarda no Palácio de Buckingham (11h). Caminhe pelo St. James Park até o Big Ben e Abadia de Westminster. London Eye ao pôr do sol.",
+                            "Dia 2 (A City e a Torre): Torre de Londres (Joias da Coroa). Atravesse a Tower Bridge. Almoço no Borough Market. Tarde: Tate Modern e St. Paul's Cathedral."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Cultura e Compras): British Museum (Pedra de Roseta - grátis). Tarde: Oxford Street e Regent Street (compras). Noite: Covent Garden ou um Musical no West End.",
+                            "Dia 4 (Alternativo): Camden Town (mercado punk/alternativo) pela manhã. Tarde: Passeio de barco até Greenwich (Meridiano Zero) ou Hyde Park.",
+                            "Dia 5 (Museus e Charme): South Kensington (Museu de História Natural e V&A). Tarde: Notting Hill (Feira de Portobello Road) e Kensington Palace."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Magia ou História): Bate-volta OBRIGATÓRIO: Estúdios Harry Potter (Warner Bros - compre meses antes!) OU Castelo de Windsor (onde o Rei mora).",
+                            "Dia 7 (Universidades ou Pedras): Bate-volta para Oxford/Cambridge (cidades universitárias) OU Stonehenge e Bath.",
+                            "Dia 8 (Vistas): Sky Garden (grátis, mas reserve) ou The Shard. Últimas compras na Harrods."
+                        ]
+                    }
+                },
+
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?ss=London&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/londres/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            }
+        ],
+        "Itália": [
+            {
+                name: "Roma",
+                // FOTO: Coliseu (Wikimedia - Link Estável)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/1280px-Colosseo_2020.jpg",
+                tags: ["História", "Arte", "Gastronomia"],
+                mapa: "https://goo.gl/maps/roma",
+                clima: "Mediterrâneo. Verões quentes e secos (Agosto é sufocante). Invernos amenos e úmidos.",
+                
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Coliseu: O maior anfiteatro do mundo. Compre ingresso 'fura-fila' com acesso à Arena ou Subterrâneo.",
+                    "2. Basílica de São Pedro (Vaticano): A maior igreja do cristianismo. A entrada é grátis, mas a fila é longa. Chegue às 7h.",
+                    "3. Museus do Vaticano (Capela Sistina): Onde fica a obra de Michelangelo. Ingresso antecipado é OBRIGATÓRIO.",
+                    "4. Fontana di Trevi: Jogue uma moeda para voltar a Roma. Vá ao nascer do sol ou de madrugada para ver sem multidão.",
+                    "5. Panteão: O templo de todos os deuses, com a maior cúpula de concreto não armado do mundo. Agora a entrada é paga.",
+                    "6. Fórum Romano e Palatino: O centro da vida na Roma Antiga. As ruínas são impressionantes (ingresso integrado com Coliseu).",
+                    "7. Piazza Navona: A praça barroca mais bonita, com fontes de Bernini e artistas de rua.",
+                    "8. Castelo de Sant'Angelo: Foi mausoléu, fortaleza e refúgio dos Papas. A vista do terraço para o Vaticano é linda.",
+                    "9. Villa Borghese: Um parque em formato de coração. A Galeria Borghese tem obras de Bernini que parecem vivas (reserve antes).",
+                    "10. Trastevere: O bairro boêmio com ruas de paralelepípedo, hera nas paredes e os melhores restaurantes."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Carbonara: O rei de Roma. Feito APENAS com ovo, queijo pecorino, guanciale (bochecha de porco) e pimenta. Nada de creme de leite!",
+                    "2. Cacio e Pepe: Massa com queijo Pecorino Romano e pimenta preta. Simples, cremoso e intenso.",
+                    "3. Pizza Romana: Diferente da napolitana, a massa é fininha e crocante (scrocchiarella).",
+                    "4. Pizza al Taglio: Pizza quadrada vendida por peso (a fatia). Lanche rápido e barato perfeito.",
+                    "5. Carciofi alla Giudia: Alcachofra frita inteira, típica do Gueto Judeu. Fica crocante como batata frita.",
+                    "6. Suplì: Bolinho de arroz frito com recheio de mussarela (parece arancini, mas é romano).",
+                    "7. Trippa alla Romana: Dobradinha com molho de tomate, hortelã e queijo pecorino.",
+                    "8. Maritozzo: Um pão doce macio cortado ao meio e recheado com muito chantilly fresco. Café da manhã clássico.",
+                    "9. Saltimbocca alla Romana: Filé de vitela com presunto cru e sálvia, cozido no vinho branco.",
+                    "10. Gelato: Procure gelaterias 'Artigianale'. Fuja das que têm montanhas de sorvete colorido artificialmente."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Estado no Estado: O Vaticano é o menor país do mundo e fica dentro de Roma.",
+                    "2. Gatos Livres: Os gatos de rua são protegidos por lei como 'patrimônio biocultural'. O Largo di Torre Argentina é um santuário de gatos.",
+                    "3. SPQR: Você verá essa sigla em todo lugar (bueiros, prédios). Significa 'Senatus Populusque Romanus' (O Senado e o Povo Romano).",
+                    "4. Água Potável: Existem mais de 2.500 fontes (Nasoni) com água potável e gelada grátis. Leve sua garrafinha.",
+                    "5. A Boca da Verdade: A tampa de bueiro antiga que 'morde' a mão dos mentirosos (famosa no filme A Princesa e o Plebeu).",
+                    "6. Estádio Moderno: O Coliseu tinha teto retrátil e elevadores para subir leões há 2.000 anos.",
+                    "7. Capuccino: Italiano só toma capuccino no café da manhã. Pedir depois das 11h é considerado estranho (mas eles servem).",
+                    "8. Domo Aberto: O buraco no teto do Panteão (Oculus) é aberto. Quando chove, a água cai lá dentro e escoa por furos no chão.",
+                    "9. Moedas da Fontana: Cerca de 3.000 euros são jogados na Fontana di Trevi por dia (doados para a Caritas).",
+                    "10. Sete Colinas: A cidade foi fundada sobre 7 colinas (Aventino, Palatino, Capitólio, etc.)."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Audiência Papal: Às quartas-feiras, o Papa abençoa a multidão na Praça (precisa de convite grátis, mas antecedência).",
+                    "2. Angelus: Aos domingos, o Papa aparece na janela ao meio-dia para rezar (não precisa de convite).",
+                    "3. Basílica de São João de Latrão: É a verdadeira catedral de Roma (não é a de São Pedro!).",
+                    "4. Scala Santa: A escada que Jesus teria subido no julgamento. Os fiéis só sobem de joelhos.",
+                    "5. Catacumbas: Túneis subterrâneos onde os primeiros cristãos enterravam seus mortos e se escondiam.",
+                    "6. São Paulo Fora dos Muros: Onde está o túmulo do apóstolo Paulo. Imponente e menos lotada.",
+                    "7. Santa Maria Maior: Diz a lenda que nevou no local em pleno verão (agosto) indicando onde construir.",
+                    "8. Moisés de Michelangelo: Fica na igreja San Pietro in Vincoli. Uma obra-prima acessível e pouco visitada.",
+                    "9. Gueto Judeu: Uma área histórica vibrante com sinagoga e restaurantes de culinária judaico-romana (Kosher).",
+                    "10. Vestimenta: Ombros e joelhos devem estar cobertos para entrar nas igrejas. Leve um lenço na bolsa no verão."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Páscoa (Semana Santa): A Via Crucis no Coliseu com o Papa é emocionante.",
+                    "2. Natal: A missa do Galo e a benção 'Urbi et Orbi' atraem o mundo todo.",
+                    "3. Aniversário de Roma (21 de Abril): Desfiles de gladiadores e recriações históricas no Circo Máximo.",
+                    "4. Verão (Jun-Ago): Muito quente (40ºC). O cinema ao ar livre na Ilha Tiberina é tradição.",
+                    "5. Lungotevere (Verão): As margens do rio Tibre enchem de barracas, bares e restaurantes temporários.",
+                    "6. Maratona de Roma (Março): Correr passando pelo Coliseu e Vaticano é único.",
+                    "7. Outono (Set-Nov): A luz dourada de Roma no outono é famosa ('Ottobrata Romana'). Melhor época.",
+                    "8. Primo Maggio (1º de Maio): Show gratuito gigante na praça San Giovanni.",
+                    "9. Temporada de Ópera (Verão): As óperas acontecem nas Termas de Caracalla, ao ar livre.",
+                    "10. Alcachofra (Fev-Abr): A temporada da alcachofra romana é celebrada nos restaurantes."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Moeda: Euro (€).",
+                    "2. Visto: Schengen (não precisa até 90 dias).",
+                    "3. Taxa de Turismo: É a mais alta da Europa. Cobrada por pessoa/noite no hotel (em dinheiro).",
+                    "4. Coperto: Restaurantes cobram taxa de serviço fixa por pessoa ('Coperto') pelo pão e talheres. É normal.",
+                    "5. Água: Peça 'Acqua del rubinetto' (torneira) se quiser grátis, mas é raro servirem em restaurante. Na rua, as fontes são ótimas.",
+                    "6. Metrô: Só tem 3 linhas (A, B, C) e não cobre o centro histórico todo (porque acham ruínas ao cavar). Vai-se a pé ou ônibus.",
+                    "7. Paralelepípedos (Sampietrini): O chão é irregular. Malas de rodinha sofrem e saltos altos quebram.",
+                    "8. Banheiros: Difíceis de achar. Entre num bar, compre um café (1€) e use o banheiro.",
+                    "9. Ingressos: Compre TUDO online meses antes. Coliseu e Vaticano esgotam rápido.",
+                    "10. Fumar: Italianos fumam muito, inclusive em áreas externas de restaurantes."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Café no Balcão: Tome o café em pé no balcão ('al banco'). Sentar na mesa custa o dobro ou triplo.",
+                    "2. Não peça Carbonara no Jantar Turístico: Evite restaurantes com fotos de comida na porta e garçons chamando. São 'Tourist Traps'.",
+                    "3. Valide o Bilhete: No ônibus/tram, você deve validar o bilhete na máquina amarela assim que entrar. A multa é alta.",
+                    "4. Ônibus 64: Liga a estação Termini ao Vaticano. É famoso por ser a linha favorita dos batedores de carteira.",
+                    "5. Madrugada na Fontana: Quer a Fontana di Trevi vazia? Vá entre 6h e 7h da manhã.",
+                    "6. Domingo Grátis: No primeiro domingo do mês, o Coliseu é grátis (mas a fila é desumana). Evite se quiser conforto.",
+                    "7. Uber é caro: Em Roma, só existe Uber Black. Táxi comum é mais barato (use o app FreeNow).",
+                    "8. Peça o Vinho da Casa: 'Vino della casa' geralmente é bom e barato (vem em jarra).",
+                    "9. Não coma na escadaria: Comer sentado na Escadaria Espanhola (Piazza di Spagna) dá multa.",
+                    "10. Roma Pass: Avalie se vale a pena. Inclui transporte e entradas, mas precisa usar muito para compensar."
+                ],
+
+                // --- NOVO: NÚMEROS IMPORTANTES (ROMA) ---
+                numeros: [
+                    "1. 112 (Número Único Europeu): Emergências gerais (Polícia, Ambulância, Bombeiros).",
+                    "2. 113 (Polícia do Estado): Ocorrências criminais.",
+                    "3. 118 (Emergência Médica): Ambulância direta.",
+                    "4. (+39) 06 688 9661 (Consulado do Brasil): Fica na Piazza Navona (Palazzo Pamphilj).",
+                    "5. 060608 (Turismo Roma): Central de informações turísticas e culturais da prefeitura.",
+                    "6. (+39) 06 65951 (Aeroporto Fiumicino): Informações de voos internacionais.",
+                    "7. (+39) 06 3570 (Rádio Táxi): A maior cooperativa de táxis de Roma.",
+                    "8. 06 57003 (Polícia Municipal): Para multas, trânsito e objetos perdidos.",
+                    "9. (+39) 06 68351 (Hospital Santo Spirito): O hospital mais antigo da Europa, perto do Vaticano (para emergências).",
+                    "10. 800 118 800 (Atac): Informações sobre transporte público (ônibus e metrô)."
+                ],
+
+                // --- NOVO: RISCOS E ERROS (ROMA) ---
+                riscos: [
+                    "1. Carteiristas no Ônibus 64: A linha Termini-Vaticano é lendária pelos furtos. Mochila para frente e mão no bolso sempre.",
+                    "2. Gladiadores do Coliseu: Homens vestidos de gladiadores oferecem fotos. Se você tirar, eles cobram 20 ou 50 euros de forma agressiva. Combine preço ANTES ou ignore.",
+                    "3. Restaurantes com Menu em 10 línguas: Se o cardápio tem fotos e bandeirinhas de países, a comida é congelada e cara. Fuja.",
+                    "4. Golpe do 'Presente': Em praças, vendedores africanos colocam pulseiras ou rosários na sua mão/ombro dizendo 'é presente'. Depois exigem pagamento.",
+                    "5. Taxistas em Fiumicino: Pegue a fila oficial. Motoristas que abordam no saguão ('Táxi, Sir?') são ilegais e cobram o dobro. A tarifa para o centro (Muralhas Aurelianas) é FIXA (aprox. 50€).",
+                    "6. Vestimenta no Vaticano: Regata, shorts curtos e saias acima do joelho são barrados na Basílica e Museus. Você vai perder o ingresso. Leve um lenço para se cobrir.",
+                    "7. Atravessar a Rua: As faixas de pedestre são 'sugestões'. O romano dirige rápido. Faça contato visual com o motorista e vá com decisão, mas cuidado.",
+                    "8. Água Cara em Trailer: Os trailers de lanche perto do Coliseu vendem água a 4€ ou 5€. Compre no mercado ou encha nas fontes grátis.",
+                    "9. Validar Ticket de Trem: Se for pegar trem regional (para o aeroporto ou outra cidade), valide o bilhete nas máquinas verdes na plataforma ANTES de embarcar.",
+                    "10. Agendamento Coliseu: Não adianta ter o Roma Pass se você não agendar o horário no site oficial. Muita gente é barrada por isso."
+                ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Roma Antiga): Comece cedo no Coliseu, Fórum Romano e Palatino (Compre ingresso antecipado!). Tarde: Caminhada pelo Panteão e Fontana di Trevi (jogue a moeda).",
+                            "Dia 2 (Vaticano e Boemia): Manhã nos Museus do Vaticano (Capela Sistina) e Basílica de São Pedro. Noite: Jantar no bairro de Trastevere (a alma romana)."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (La Dolce Vita): Piazza Navona, Campo de' Fiori e Piazza di Spagna (escadaria). Tarde: Pôr do sol na Villa Borghese (parque) ou Terraço do Pincio.",
+                            "Dia 4 (Fé e História): Basílica de Santa Maria Maggiore e Castel Sant'Angelo (vista incrível do Vaticano).",
+                            "Dia 5 (Subterrâneo): Catacumbas de São Calisto na Via Ápia Antiga (Roma cristã primitiva). É impressionante."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Bate-volta Imperial): Vá a Tivoli visitar a Villa d'Este (jardins com centenas de fontes renascentistas).",
+                            "Dia 7 (Bate-volta Histórico): Pegue o trem rápido para Nápoles/Pompeia (puxado, mas possível) ou Florença (1h30 de trem).",
+                            "Dia 8 (Relax): Compras na Via del Corso e o 'Buraco da Fechadura' (Buco della Serratura) no monte Aventino."
+                        ]
+                    }
+                },
+
+
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?ss=Rome&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/roma/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            }
         ]
+    
+    
     }
 };
 
@@ -2758,7 +3977,27 @@ function openModal(cidade, imagemUrl) {
         if(cidade.links.seguro) affHTML += makeAffiliateBtn("ri-shield-check-fill", "Seguro Viagem", "Viaje Protegido", cidade.links.seguro);
     }
     affContainer.innerHTML = affHTML;
+      // 2. NOVO: ROTEIRO AUTOMÁTICO (INSERIDO AQUI)
+    // Se a cidade tiver roteiros cadastrados, mostra a caixa. Se não, esconde.
+    const roteiroDiv = document.getElementById('roteiroArea') || document.createElement('div');
+    roteiroDiv.id = 'roteiroArea';
+    roteiroDiv.className = 'roteiro-box';
+    
+    // Removemos se já existir para recriar limpo
+    if(document.getElementById('roteiroArea')) document.getElementById('roteiroArea').remove();
 
+    if(cidade.roteiros) {
+        roteiroDiv.innerHTML = `
+            <span class="roteiro-label"><i class="ri-calendar-check-line"></i> QUANTOS DIAS VOCÊ TEM?</span>
+            <div class="roteiro-options">
+                <button class="time-btn" onclick="showRoteiro('curto')">1 a 2 Dias</button>
+                <button class="time-btn" onclick="showRoteiro('medio')">3 a 5 Dias</button>
+                <button class="time-btn" onclick="showRoteiro('longo')">+7 Dias</button>
+            </div>
+        `;
+        // Insere DEPOIS dos afiliados e ANTES dos ícones
+        affContainer.parentNode.insertBefore(roteiroDiv, document.getElementById('categoryGrid'));
+    }
     // MENU DE CATEGORIAS (ICONES)
     const catGrid = document.getElementById('categoryGrid');
     catGrid.innerHTML = `
@@ -2782,7 +4021,25 @@ function openModal(cidade, imagemUrl) {
 function makeAffiliateBtn(icon, title, sub, link) {
     return `<a href="${link}" target="_blank" class="affiliate-btn"><i class="${icon}"></i><div class="affiliate-content"><strong>${title}</strong><span>${sub}</span></div></a>`;
 }
-
+// NOVA FUNÇÃO PARA EXIBIR O ROTEIRO
+function showRoteiro(tipo) {
+    if(!currentCity || !currentCity.roteiros || !currentCity.roteiros[tipo]) return;
+    
+    const roteiro = currentCity.roteiros[tipo];
+    
+    detailTitle.innerText = roteiro.titulo;
+    // Formata a lista de dias
+    let htmlContent = `<ul style="list-style:none; padding:0;">`;
+    roteiro.texto.forEach(dia => {
+        htmlContent += `<li style="margin-bottom:15px; color:var(--text-muted);"><i class="ri-map-pin-time-line" style="color:var(--neon-gold); margin-right:10px;"></i> ${dia}</li>`;
+    });
+    htmlContent += `</ul>`;
+    
+    detailContent.innerHTML = htmlContent;
+    
+    modalMenu.classList.add('hidden');
+    modalDetails.classList.remove('hidden');
+}
 function showCategory(type) {
     if(!currentCity) return;
     let title = "", content = "";

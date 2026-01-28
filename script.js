@@ -2172,7 +2172,348 @@ const worldData = {
                     passeio: "https://www.civitatis.com/br/porto-de-galinhas/", 
                     seguro: "https://www.segurospromo.com.br" 
                 }
+            },
+            {
+                name: "Porto Seguro",
+                // FOTO: Centro Histórico ou Praia (Wikimedia)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Porto_Seguro.1.jpg/960px-Porto_Seguro.1.jpg",
+                tags: ["Praias", "História", "Festas"],
+                mapa: "https://goo.gl/maps/portoseguro",
+                clima: "Tropical quente. Sol o ano todo. Chuvas rápidas podem ocorrer, mas o 'verão eterno' é real.",
+                
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Centro Histórico (Cidade Alta): Onde o Brasil começou. Visite o Marco do Descobrimento, a Igreja N.S. da Pena e o Farol. Vista linda do mar.",
+                    "2. Praia de Taperapuã: O agito. Onde ficam as mega barracas (Axé Moi, Toa Toa) com shows de dança e lambaeróbica o dia todo.",
+                    "3. Passarela do Descobrimento (Álcool): À noite, é o point. Barracas de drinks ('Capeta'), artesanato e restaurantes. Jantar e comprinhas.",
+                    "4. Arraial d'Ajuda: Atravesse a balsa. O centrinho (Rua do Mucugê) é charmoso e as praias (Pitinga, Parracho) são lindas.",
+                    "5. Trancoso: A vila chique e rústica. O 'Quadrado' (gramado com a igrejinha e casinhas coloridas) é cartão-postal mundial.",
+                    "6. Praia do Espelho (Curuipe): Eleita uma das mais bonitas do Brasil. Falésias, corais e piscinas naturais. Vá na maré baixa.",
+                    "7. Coroa Vermelha: Onde foi rezada a primeira missa. Mar calmo (sem ondas), ideal para crianças e idosos. Tem uma feira indígena grande.",
+                    "8. Recife de Fora: Parque Marinho em alto mar. Vai de escuna na maré baixa para mergulhar com peixes nos corais.",
+                    "9. Caraíva: Vila de pescadores onde não entra carro (chão de areia) e o rio encontra o mar. Um paraíso isolado (bate-volta cansativo, melhor dormir lá).",
+                    "10. Eco Parque Arraial d'Ajuda: Parque aquático integrado à natureza em Arraial. Ótimo para família."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Moqueca Baiana: Com dendê, leite de coco e coentro. Acompanha pirão e farofa. Obrigatória.",
+                    "2. Capeta: O drink símbolo da Passarela. Leva vodka, guaraná em pó, leite condensado e frutas. Cuidado, é doce mas derruba!",
+                    "3. Acarajé: Bolinho de feijão frito no dendê. Tem em toda esquina. Peça 'frio' (sem pimenta) se não for acostumado.",
+                    "4. Tapioca da Passarela: Recheios generosos doces e salgados. Jantar barato e clássico.",
+                    "5. Peixe na Telha: Peixe assado servido na telha de barro, mantém o calor e o sabor.",
+                    "6. Bobó de Camarão: Creme de mandioca com camarão e dendê. Cremoso e forte.",
+                    "7. Lambreta: Um molusco (parece marisco) servido cozido no caldo. Dizem que cura ressaca.",
+                    "8. Cocada: As baianas vendem no tabuleiro. Branca, queimada, com maracujá... todas boas.",
+                    "9. Chocolate de Origem: A região produz muito cacau. Prove os chocolates artesanais locais.",
+                    "10. Sorvete de Coquinho: Feito da fruta local, muito refrescante no calor."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. 1500: Cabral chegou aqui, mas a primeira missa foi em Coroa Vermelha (cidade vizinha Santa Cruz Cabrália), embora tudo seja 'Porto Seguro' para o turista.",
+                    "2. Lambada: O ritmo explodiu aqui nos anos 80/90 antes de ganhar o mundo. A dança ainda é forte nas barracas.",
+                    "3. Tombado: O Centro Histórico é Patrimônio Histórico Nacional desde 1968. Não pode mudar as fachadas.",
+                    "4. Monte Pascoal: É possível ver o monte (que os portugueses avistaram) em dias claros a partir de alguns pontos da costa.",
+                    "5. Pataxós: A presença indígena é forte. Muitos vendem artesanato e têm reservas que podem ser visitadas (Reserva da Jaqueira).",
+                    "6. Pau-Brasil: Ainda existem árvores de Pau-Brasil preservadas na Estação Veracel.",
+                    "7. Trancoso 'Hipster': Era uma vila de pescadores desconhecida até os anos 70, descoberta pelos 'biribandos' (hippies). Hoje recebe celebridades internacionais.",
+                    "8. Buraco da Veia: Apelido carinhoso de uma praia em Arraial d'Ajuda, protegida por arrecifes.",
+                    "9. Axé Music: Porto Seguro foi o berço que popularizou o Axé para o resto do Brasil nos anos 90.",
+                    "10. Balsa: A balsa Porto-Arraial funciona 24h e cruza o Rio Buranhém. A vista do pôr do sol nela é linda."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Igreja Nossa Senhora da Pena: Padroeira da cidade (pena de caneta/escrita, e não de dó). Fica no Centro Histórico (1535).",
+                    "2. Igreja do Quadrado (Trancoso): São João Batista. Pequena, branca, de costas para o mar. Cenário de casamentos famosos.",
+                    "3. Primeira Missa: A cruz simbólica em Coroa Vermelha marca o local da celebração de 1500.",
+                    "4. Sincretismo: O Candomblé é forte. Respeite as oferendas que vir nas praias ou encruzilhadas.",
+                    "5. Igreja Nossa Senhora d'Ajuda: Em Arraial. Tem uma fonte de 'água milagrosa' nos fundos e a sala dos milagres.",
+                    "6. Festas Juninas: O São João elétrico em Porto Seguro é gigante.",
+                    "7. Festa de Iemanjá (2 de Fev): Procissão marítima linda em Arraial e Trancoso.",
+                    "8. Capela de São Benedito: Ao lado das ruínas da primeira escola jesuíta do Brasil.",
+                    "9. Rituais Pataxós: Na Reserva da Jaqueira, é possível participar de rituais de purificação e danças sagradas.",
+                    "10. Cemitério Bizantino: No pé da ladeira do Centro Histórico, tem túmulos antigos e curiosos."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Verão (Dez-Mar): Cidade lotada, trânsito na balsa, festas todo dia. Preços altos.",
+                    "2. Carnaval: Um dos maiores do Brasil. Trios elétricos na Passarela.",
+                    "3. Carnaporto: Começa na Quarta-feira de Cinzas (quando o resto do Brasil para). A festa continua na Arena Axé Moi.",
+                    "4. Julho (Férias): Lota de famílias e grupos de formatura de colégio. Clima bom, chove pouco.",
+                    "5. Baleias Jubarte (Jul-Out): Elas vêm para o mar da Bahia procriar. Tem passeio de barco para avistamento.",
+                    "6. Baixa Temporada (Mai-Jun/Ago-Nov): Preços ótimos, cidade tranquila, mas risco de chuvas passageiras.",
+                    "7. São João (Junho): Festa junina com forró pé de serra e elétrico.",
+                    "8. Réveillon: Festas pagas caríssimas (principalmente em Trancoso) e festa popular na Passarela.",
+                    "9. Semana do Saco Cheio (Out): Outubro lota de estudantes universitários.",
+                    "10. Maré Baixa (Lua Cheia/Nova): As melhores semanas para visitar, pois formam as piscinas naturais."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Aeroporto: BPS (Porto Seguro). Fica perto do centro (5 min de Uber).",
+                    "2. Balsa: Para ir a Arraial/Trancoso. Pedestres pagam barato, carros pagam mais e pegam fila. De madrugada é mais caro.",
+                    "3. Voltagem: 220V. Cuidado com secadores e chapinhas.",
+                    "4. Transporte: Uber funciona bem em Porto e Arraial. Em Trancoso é mais difícil. Em Caraíva, só carroça ou a pé.",
+                    "5. Tábua de Marés: O guia da sua viagem. Maré 0.0 a 0.5 = Piscinas Naturais. Maré acima de 0.8 = Praia normal.",
+                    "6. Estradas: Para Trancoso/Caraíva tem trechos de terra. Se chover, atola carro comum. Vá de transfer ou 4x4.",
+                    "7. Segurança: Zonas turísticas são policiadas. Evite ruas escuras fora do centro à noite.",
+                    "8. Dinheiro: Leve espécie para Trancoso, Caraíva e feirinhas. O sinal de máquina de cartão falha nas praias afastadas.",
+                    "9. Água: Muito calor = desidratação. Água de coco é barata e tem em todo lugar.",
+                    "10. Consumação: Barracas de praia famosas não cobram entrada, mas exigem consumação mínima ou cobram aluguel de cadeira."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Golpes de Rua: Não aceite 'presentes' na rua (fitinhas, degustação). É isca para te venderem time-sharing (cotas de resort) ou cobrar caro depois.",
+                    "2. Hospedagem: Se quer agito, fique em Taperapuã. Se quer charme, Arraial. Se quer luxo rústico, Trancoso. Se quer economia e história, Centro.",
+                    "3. Protetor Solar: O sol da Bahia queima diferente. O vento fresco engana.",
+                    "4. Transfer x Carro: Se for ficar só em Porto/Arraial, Uber resolve. Se for para Trancoso/Espelho, melhor alugar carro ou fechar passeio.",
+                    "5. Maré: Baixe um app de 'Tábua de Marés' e programe os passeios de piscina natural (Recife de Fora/Espelho) no horário mais baixo do dia.",
+                    "6. Balsa a pé: Se estiver hospedado em Porto e quiser jantar em Arraial, atravesse a balsa a pé e pegue uma van do outro lado. Economiza tempo e dinheiro.",
+                    "7. Repelente: Tem mosquito, principalmente nas praias com muito verde (Espelho/Caraíva).",
+                    "8. Cuidado com o Coco: Em praias desertas, não fique debaixo de coqueiros carregados. Um coco na cabeça é acidente grave.",
+                    "9. Lixo: Muitas praias são áreas de preservação. Traga seu lixo de volta.",
+                    "10. Ritmo Baiano: O serviço pode ser mais lento que no Sul/Sudeste. Relaxe, você está na Bahia. Não tenha pressa."
+                ],
+
+                // --- NOVO: NÚMEROS IMPORTANTES (PORTO SEGURO) ---
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergência.",
+                    "2. 192 (SAMU): Ambulância.",
+                    "3. 193 (Bombeiros): Resgate.",
+                    "4. (73) 3288-1880 (Aeroporto): Informações de voos.",
+                    "5. (73) 3288-3907 (Delegacia do Turista - DELTUR): Apoio ao visitante.",
+                    "6. (73) 3288-2516 (Balsa): Informações sobre travessia.",
+                    "7. (73) 3288-4665 (Rodoviária): Ônibus intermunicipais.",
+                    "8. (73) 3288-5183 (Hospital Luís Eduardo Magalhães): Hospital público de referência.",
+                    "9. 199 (Defesa Civil): Chuvas fortes.",
+                    "10. (73) 3012-4217 (UPA): Unidade de Pronto Atendimento."
+                ],
+
+                // --- NOVO: RISCOS E ERROS (PORTO SEGURO) ---
+                riscos: [
+                    "1. O Golpe da 'Fitinha Grátis': O ERRO Nº 1. Vendedores colocam a fitinha no seu braço ou dão uma 'amostra grátis' de algo e depois exigem dinheiro ou te seguram por 1 hora tentando vender cota de hotel. Diga NÃO firme e não pare.",
+                    "2. Maré Alta no Espelho: Ir para a Praia do Espelho na maré alta é jogar dinheiro fora. As piscinas somem e a praia fica comum. Consulte a tábua!",
+                    "3. Bebida Batizada: Na balada ou passarela, cuidado com copos abertos. O 'Boa Noite Cinderela' existe.",
+                    "4. Beber e Nadar: O mar de Taperapuã é fundo logo no começo (praia de tombo em alguns pontos). Álcool e mar não combinam.",
+                    "5. Estrada de Trancoso: Tentar ir de carro baixo (Gol/Onix) para Trancoso em dia de chuva. Você VAI atolar. Vá pelo asfalto (volta maior) ou use transfer 4x4.",
+                    "6. Preços em Trancoso: Comer no Quadrado custa preço de restaurante de luxo em SP. Olhe o cardápio antes de sentar.",
+                    "7. Ouriço do Mar: Nos recifes (piscinas naturais), cuidado onde pisa. Espinho de ouriço dói muito e infecciona. Use sapatilha aquática (Crocs/Papete).",
+                    "8. Balsa na Volta: Domingo à tarde, a fila da balsa para voltar de Arraial para Porto pode levar 2 horas.",
+                    "9. Sol da Ressaca: Dormir na praia depois de beber. A insolação é garantida e severa.",
+                    "10. Van Clandestina: Use as vans oficiais que saem da balsa. Cuidado com transporte pirata."
+                ],
+
+                // --- NOVO: ROTEIRO AUTOMÁTICO (PORTO SEGURO) ---
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Agito e Clássico): Manhã na Praia de Taperapuã (Barracas Axé Moi ou Toa Toa). Tarde: Centro Histórico (Cidade Alta) para ver o Marco do Descobrimento e o farol. Noite: Passarela do Álcool.",
+                            "Dia 2 (Relax): Coroa Vermelha (onde foi a 1ª missa). Águas calmas e feirinha indígena. Almoço por lá (barraca do Macuco)."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Arraial d'Ajuda): Pegue a balsa. Vá para a Praia do Mucugê ou Pitinga. Fim de tarde na Rua do Mucugê (a rua mais charmosa do Brasil).",
+                            "Dia 4 (Natureza): Recife de Fora (piscinas naturais). Consulte a tábua de marés! Tarde livre em Taperapuã.",
+                            "Dia 5 (Trancoso): Bate-volta OBRIGATÓRIO. Conheça o Quadrado de Trancoso (igrejinha) e desça para a Praia dos Nativos ou Coqueiros."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (A Praia Perfeita): Bate-volta para a Praia do Espelho (Curuipe). É eleita frequentemente uma das mais bonitas do Brasil. Vá na maré baixa.",
+                            "Dia 7 (Raiz): Caraíva. É longe (estrada de terra), mas o encontro do rio com o mar e as ruas de areia são mágicos.",
+                            "Dia 8 (Diversão): Arraial d'Ajuda Eco Parque (toboáguas) ou Parque Marinho da Coroa Alta."
+                        ]
+                    }
+                },
+
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-663243&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/porto-seguro/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+            {
+                name: "Búzios",
+                // FOTO: Orla Bardot ou Rua das Pedras (Wikimedia)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Buzios_11_2006_03.JPG/960px-Buzios_11_2006_03.JPG",
+                tags: ["Praias", "Luxo", "Gastronomia"],
+                mapa: "https://goo.gl/maps/buzios",
+                clima: "Tropical Seco. Chove menos que no Rio de Janeiro. Venta bastante. A água do mar é fria o ano todo.",
+                
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Rua das Pedras: O coração da cidade. Lojas de grife, restaurantes e bares badalados. O charme acontece à noite.",
+                    "2. Orla Bardot: A continuação da Rua das Pedras na beira do mar. Tem a estátua da Brigitte Bardot e os barcos de pesca.",
+                    "3. Praia de Geribá: A praia dos jovens e do surf. Extensa, areia branca e muita gente bonita. O Fishbone é o point do fim de tarde.",
+                    "4. Praia da Ferradura: Formato de 'U', mar sem ondas, parece uma lagoa. Perfeita para famílias, caiaque e stand-up paddle.",
+                    "5. Azeda e Azedinha: Acesso por uma escadaria de madeira ou táxi-boat. Pequenas, charmosas e com água cristalina.",
+                    "6. Praia de João Fernandes: A preferida dos argentinos. Água transparente, peixinhos visíveis e muitos hotéis/restaurantes na encosta.",
+                    "7. Praia Brava: Mar agitado e visual selvagem. É onde ficam os Beach Clubs mais luxuosos (Silk, Rocka).",
+                    "8. Porto da Barra (Manguinhos): O melhor lugar para ver o pôr do sol. Um complexo gastronômico na beira do cais com restaurantes incríveis.",
+                    "9. Praia da Tartaruga: Água mais quente (ou menos fria) e verde. Ótima para mergulho livre e ver tartarugas.",
+                    "10. Mirante do Forno: Uma vista panorâmica espetacular da região. Pouca gente vai, mas rende a melhor foto."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Crepe do Chez Michou: Um clássico da Rua das Pedras há décadas. O ambiente é barulhento e divertido.",
+                    "2. Gastronomia do Porto da Barra: Jantar no cais de Manguinhos vendo o pôr do sol é obrigatório. Restaurantes de frutos do mar e italianos.",
+                    "3. Rocka Beach Lounge: Na Praia Brava. Comida sofisticada com pé na areia e colchões para deitar.",
+                    "4. Pizza Quadrada: Vários locais vendem pizza por metro ou quadrada, típica da região.",
+                    "5. Peixe com Banana: Prato caiçara muito comum nos restaurantes locais.",
+                    "6. O Barco: Restaurante tradicional na Orla Bardot, especializado em moquecas e peixes frescos.",
+                    "7. Sorvete na Rua das Pedras: Caminhar tomando um gelato italiano (Sorvete Mil Frutas ou Itália) é tradição.",
+                    "8. Empanadas Argentinas: Devido à enorme comunidade argentina em Búzios, as empanadas são autênticas.",
+                    "9. Frutos do Mar na Telha: Servido em muitos quiosques de João Fernandes.",
+                    "10. Caipirinha de Frutas Tropicais: Kiwi, Maracujá e Frutas Vermelhas são as mais pedidas nos quiosques."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Brigitte Bardot: A atriz francesa 'descobriu' Búzios nos anos 60 quando era só uma vila de pescadores. Ela colocou a cidade no mapa mundial.",
+                    "2. 23 Praias: A península é pequena, mas tem 23 praias com características totalmente diferentes (umas com onda, outras piscinas).",
+                    "3. Vento Constante: Búzios venta muito, o que atrai praticantes de Kitesurf e Windsurf (principalmente na Rasa e Manguinhos).",
+                    "4. Invasão Argentina: É chamada de 'Búzios Aires'. Muitos argentinos moram e têm negócios lá. O espanhol é a segunda língua.",
+                    "5. Ressurgência: Fenômeno oceanográfico que faz as águas profundas e geladas da Antártida subirem aqui. Por isso a água é trincando de fria.",
+                    "6. Sem Prédios: Uma lei proíbe construções altas. Isso mantém o charme de vila com telhados coloniais.",
+                    "7. Rua das Pedras: As pedras 'pés-de-moleque' são originais e irregulares. Salto alto aqui é impossível (e perigoso).",
+                    "8. Três Castelos: A formação rochosa da Ponta da Lagoinha parece ruínas de castelos e tem piscinas naturais secretas.",
+                    "9. Nudismo: A praia Olho de Boi é naturista. O acesso é por trilha saindo da Praia Brava.",
+                    "10. Mick Jagger: O vocalista dos Stones também passou por lá nos anos 70 e tem uma música supostamente inspirada na cidade."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Igreja de Sant'Ana: Padroeira da cidade. A igrejinha fica num morro entre a Armação e os Ossos. Vista linda.",
+                    "2. Capela de Santa Rita de Cássia: No cais de Manguinhos. Pequena e histórica.",
+                    "3. Festa de Sant'Ana (Julho): Procissão marítima onde os barcos dos pescadores são decorados.",
+                    "4. Quilombo da Rasa: Uma comunidade remanescente de quilombo que preserva a cultura afro-brasileira na entrada da cidade.",
+                    "5. Arte na Rua: A Orla Bardot é cheia de esculturas de bronze (Brigitte, Os Pescadores, Juscelino Kubitschek).",
+                    "6. Cine Bardot: Um cinema pequeno e charmoso que exibe filmes cult e sedia o Festival de Cinema de Búzios.",
+                    "7. Artesanato Local: Na Praça Santos Dumont tem uma feirinha de artesanato diária à noite.",
+                    "8. Galerias de Arte: A Rua das Pedras tem várias galerias com obras de artistas plásticos renomados.",
+                    "9. Pesca Artesanal: Ainda é possível ver os pescadores chegando com as redes na Praia da Armação pela manhã.",
+                    "10. Festival de Jazz e Blues: Evento anual que espalha palcos pela cidade com música de graça."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Verão (Dez-Mar): Cidade lotada, trânsito parado, vida noturna intensa. Água fria refresca o calor.",
+                    "2. Inverno (Jun-Set): Melhor época gastronômica (Festival Gastronômico). Água muito gelada, mas dias de céu azul.",
+                    "3. Reveillon: Um dos mais caros do Brasil. Festas privadas custam R$ 3.000+ o ingresso.",
+                    "4. Búzios Jazz Festival (Julho): Shows de jazz nas ruas e praças.",
+                    "5. Degusta Búzios (Agosto/Out): Festival onde os restaurantes montam barracas na rua com pratos pequenos a preços populares.",
+                    "6. Feriadões: A entrada da cidade trava. O trajeto de 10km pode levar 2 horas.",
+                    "7. Vento Sudoeste: Quando entra esse vento, o mar fica mexido e a temperatura cai. Atenção à previsão.",
+                    "8. Março/Abril: O 'segredo'. Água mais clara, cidade vazia e preços de baixa temporada.",
+                    "9. XC Búzios: Prova de maratona aquática e corrida que movimenta a cidade.",
+                    "10. Pride Búzios: Parada LGBTQIA+ que acontece geralmente em setembro/outubro."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Transporte: Carro é útil para ir de uma praia a outra, mas estacionar é caro e difícil (Zona Azul 'Búzios Digital'). Uber funciona bem.",
+                    "2. Trolley: Um caminhão aberto turístico que percorre 12 praias. Ótimo para o primeiro dia para conhecer tudo.",
+                    "3. Táxi-Boat: O meio mais divertido de se locomover. Barquinhos que levam de uma praia a outra (ex: Ossos -> Azeda).",
+                    "4. Preços: Búzios é caro. Comida e bebida têm preços de Rio de Janeiro ou mais altos.",
+                    "5. Água Fria: Esteja avisado. A água varia de 18ºC a 21ºC. É revigorante, mas choca na primeira entrada.",
+                    "6. Voltagem: 110V. A maioria dos hotéis oferece secador.",
+                    "7. Pôr do Sol: O espetáculo diário. O sol se põe no mar na Orla Bardot e Porto da Barra.",
+                    "8. Caminhada: As distâncias enganam. De Geribá até a Rua das Pedras são 4km (longe para ir a pé).",
+                    "9. Segurança: Considerada segura para caminhar à noite no centro e orlas. Cuidado com pertences na areia.",
+                    "10. Aeroporto: O de Búzios (BZC) recebe poucos voos privados. O turista comum chega pelo Galeão (Rio) e pega transfer (2h30 de viagem)."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Calçado: Leve rasteirinha ou tênis. Esqueça salto alto para a Rua das Pedras ou vai torcer o pé.",
+                    "2. Trânsito na Chegada: Se for feriado, saia do Rio de madrugada. Se sair às 10h da manhã, vai pegar 5 horas de engarrafamento.",
+                    "3. Zona Azul: Baixe o app 'Búzios Digital' para pagar estacionamento na rua. Os fiscais multam rápido.",
+                    "4. Vento: Leve um casaco corta-vento ou pashmina. À noite venta frio, mesmo no verão.",
+                    "5. Praias com Sombra: Azeda e João Fernandes têm pouca areia e enchem rápido. Chegue cedo.",
+                    "6. Cadeira de Praia: Em Geribá e João Fernandes, se sentar na cadeira da barraca, prepare-se para consumação mínima ou aluguel caro.",
+                    "7. Arraial do Cabo: Reserve um dia para ir a Arraial. Fica a 40min e a água é azul caribe (mas ainda mais gelada).",
+                    "8. Tartaruga no Fim de Tarde: O pôr do sol na Praia da Tartaruga é lindo e a água é a menos fria da cidade.",
+                    "9. Dinheiro: Leve um pouco de espécie para os táxi-boats e vendedores de mate/milho.",
+                    "10. Mergulho: Se gosta, faça o 'Batismo' em João Fernandes. A vida marinha é rica."
+                ],
+
+                // --- NOVO: NÚMEROS IMPORTANTES (BÚZIOS) ---
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergência.",
+                    "2. 199 (Guarda Municipal): Muito atuante no trânsito e centro.",
+                    "3. 193 (Bombeiros): Resgate no mar.",
+                    "4. (22) 2623-1000 (Hospital Municipal Rodolpho Perissé): Principal emergência pública.",
+                    "5. (22) 2623-2093 (Delegacia de Turismo): Atendimento especializado.",
+                    "6. (22) 2620-8080 (Rodoviária de Búzios): Ônibus 1001 para o Rio.",
+                    "7. 192 (SAMU): Ambulância.",
+                    "8. (22) 2623-6447 (Informações Turísticas): Pórtico de entrada.",
+                    "9. (22) 2623-1300 (Prefeitura): Geral.",
+                    "10. Táxi Boat (Associação): Geralmente ficam nos píeres dos Ossos e Centro."
+                ],
+
+                // --- NOVO: RISCOS E ERROS (BÚZIOS) ---
+                riscos: [
+                    "1. O Choque Térmico: O ERRO Nº 1. Achar que a água é 'quentinha' como no Nordeste. É gelada! Entre devagar para não ter cãibra.",
+                    "2. Salto Alto nas Pedras: Você vai ver turistas tropeçando na Rua das Pedras. Não seja essa pessoa. Use rasteirinha.",
+                    "3. Trânsito da Estrada da Usina: Em feriados, o trecho entre a entrada da cidade e o centro para totalmente. Tenha paciência ou alugue bicicleta.",
+                    "4. Consumação Mínima Abusiva: Algumas barracas (principalmente em João Fernandes) exigem consumação altíssima para sentar. Pergunte ANTES.",
+                    "5. Ouriços: Nas pedras laterais das praias (Ferradura/Tartaruga) têm muitos ouriços. Cuidado ao pisar.",
+                    "6. Bebida e Direção: A Lei Seca na saída de Búzios é frequente e rigorosa. Se beber, vá de Uber.",
+                    "7. Preço do Uber Dinâmico: Na saída de festas (Privilège/Silk), o Uber pode custar R$ 100 por trechos curtos. Combine táxi antes se possível.",
+                    "8. Insolação com Vento: O vento constante mascara o calor do sol. Você queima sem sentir. O índice UV é alto.",
+                    "9. Água Viva: Às vezes aparecem correntes de água viva (mães d'água). Se ver bandeira roxa ou avisos, não entre.",
+                    "10. Furtos na Areia: Em Geribá lotada, não deixe celular na canga e vá para o mar. Ocorrem furtos de oportunidade."
+                ],
+
+                // --- NOVO: ROTEIRO AUTOMÁTICO (BÚZIOS) ---
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (O Clássico): Manhã nas praias Azeda e Azedinha (vá de táxi-boat saindo do centro). Almoço na Orla Bardot. Fim de tarde: Estátua da Brigitte Bardot e Rua das Pedras à noite.",
+                            "Dia 2 (Escolha seu Vibe): Se quer agito/surf: Praia de Geribá. Se quer calmaria/família: Praia da Ferradura. Pôr do sol no Porto da Barra (Manguinhos)."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Águas Cristalinas): Praia de João Fernandes e João Fernandinho. Ótimo para snorkel. Almoço nos restaurantes com vista para o mar ali mesmo.",
+                            "Dia 4 (Passeio Geral): Passeio de Trolley (caminhão aberto) que passa por 12 praias e mirantes ou passeio de Escuna/Catamarã.",
+                            "Dia 5 (Chic & Wild): Praia Brava. É mais selvagem, mas tem os Beach Clubs mais chiques (Silk, Rocka). Se sobrar tempo, Olho de Boi (nudismo) fica ali perto."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Caribe Vizinho): Bate-volta OBRIGATÓRIO para Arraial do Cabo (40 min de carro). As praias lá são ainda mais azuis (Pontal do Atalaia).",
+                            "Dia 7 (Natureza): Praia da Tartaruga (água quente e verde). Alugue um caiaque.",
+                            "Dia 8 (Despedida): Café da manhã no Chez Michou (crepe) e últimas compras nas butiques da Rua das Pedras."
+                        ]
+                    }
+                },
+
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-626938&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/buzios/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
             }
+
         ],
         "Argentina": [
             {
@@ -3871,6 +4212,176 @@ const worldData = {
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?ss=Rome&aid=304142", 
                     passeio: "https://www.civitatis.com/br/roma/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+            {
+                name: "Milão",
+                // FOTO: Duomo di Milano (Wikimedia/Unsplash)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Facade_-_Duomo_-_Milan_2014_%289%29.JPG/500px-Facade_-_Duomo_-_Milan_2014_%289%29.JPG",
+                tags: ["História", "Moda", "Gastronomia"],
+                mapa: "https://goo.gl/maps/milao",
+                clima: "Continental. Verão muito quente e úmido. Inverno frio e cinzento (neblina é comum). Primavera/Outono são ideais.",
+                
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Duomo de Milão: A catedral gótica mais famosa. Subir aos terraços (de elevador ou escada) é obrigatório para ver a cidade e os Alpes.",
+                    "2. Galleria Vittorio Emanuele II: O 'salão de visitas' de Milão. Teto de vidro, chão de mosaico e lojas de luxo (Prada, Gucci).",
+                    "3. A Última Ceia (Cenacolo): A pintura de Da Vinci. Fica na igreja Santa Maria delle Grazie. Precisa reservar com 3 meses de antecedência.",
+                    "4. Castello Sforzesco: Uma fortaleza medieval gigante no centro. Abriga museus e tem um parque lindo atrás (Parco Sempione).",
+                    "5. Navigli: O bairro dos canais (projetados por Da Vinci). É o coração da vida noturna e do famoso 'Aperitivo'.",
+                    "6. Teatro alla Scala: A casa de ópera mais famosa do mundo. O interior é de ouro e veludo vermelho.",
+                    "7. Pinacoteca de Brera: No bairro boêmio de Brera. Um dos museus mais importantes da Itália (tem obras de Rafael e Caravaggio).",
+                    "8. Quadrilátero da Moda: Via Montenapoleone e Via della Spiga. Onde estão as vitrines mais caras e elegantes do planeta.",
+                    "9. Estádio San Siro: O templo do futebol (Milan e Inter). O museu e o tour são incríveis para fãs de esporte.",
+                    "10. Piazza Gae Aulenti: A face moderna de Milão. Arranha-céus espelhados e o Bosco Verticale (prédio floresta)."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Risotto alla Milanese: Arroz amarelo (açafrão), cremoso. Muitas vezes servido com Ossobuco.",
+                    "2. Cotoletta alla Milanese: Bife de vitela empanado e frito na manteiga (parece nosso bife à milanesa, mas com osso e mais grosso).",
+                    "3. Aperitivo: Não é um prato, é uma instituição. Entre 18h e 21h, você paga o drink (10-15 euros) e come à vontade no buffet do bar.",
+                    "4. Panzerotto do Luini: Um pastel frito recheado (tomate e mussarela) clássico, perto do Duomo. Tem fila, mas anda rápido.",
+                    "5. Panettone: Nasceu aqui. Em Milão, come-se o ano todo (na confeitaria Marchesi é divino), não só no Natal.",
+                    "6. Ossobuco: A carne da canela do boi, cozida lentamente até desmanchar.",
+                    "7. Polenta: Prato básico do norte da Itália. Com queijo, cogumelos ou carne.",
+                    "8. Gorgonzola: O queijo azul famoso vem da cidade vizinha de Gorgonzola. É muito usado em molhos.",
+                    "9. Negroni Sbagliato: Um drink inventado em Milão (Bar Basso). É um Negroni que 'deu errado' (usa espumante em vez de gin).",
+                    "10. Michetta: O pãozinho típico de Milão, oco por dentro e crocante."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. O Touro da Sorte: Na Galleria, tem um mosaico de touro no chão. Dizem que pisar nas 'partes íntimas' dele e girar 3 vezes traz sorte. Tem um buraco no chão de tanta gente girar.",
+                    "2. Da Vinci Viveu Aqui: Leonardo viveu anos em Milão (patrocinado pelos Sforza), não só em Florença. Por isso os canais e a Santa Ceia estão aqui.",
+                    "3. Mediolanum: O nome antigo (romano) significava 'no meio da terra' (planície).",
+                    "4. Capital da Moda: A Fashion Week de Milão é uma das 'Big Four' do mundo, junto com Paris, Londres e NY.",
+                    "5. Metrô M4: A nova linha azul liga o aeroporto de Linate ao centro em 15 minutos (inaugurou recentemente).",
+                    "6. Cidade dos Elétricos: Os bondes amarelos (Tram) antigos ainda circulam e são um charme da cidade.",
+                    "7. O Dedo do Meio: Na frente da Bolsa de Valores (Piazza Affari), tem uma estátua gigante de um dedo médio levantado (obra de Maurizio Cattelan).",
+                    "8. Madonnina: A estátua dourada de Maria no topo do Duomo. Por lei antiga, nenhum prédio podia ser mais alto que ela (o arranha-céu Pirelli teve que colocar uma réplica dela no topo para 'obedecer').",
+                    "9. Starbucks: A Itália resistiu muito, mas a Starbucks Reserve Roastery em Milão é considerada a mais bonita do mundo (num prédio histórico dos correios).",
+                    "10. Happy Hour Real: O Aperitivo milanês é tão farto que substitui o jantar para muitos turistas (chamam de 'Apericena')."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Duomo (Catedral): Levou quase 600 anos para ser concluído. Tem mais de 3.400 estátuas na fachada.",
+                    "2. Basílica de Santo Ambrósio: Padroeiro de Milão. Uma das igrejas mais antigas, exemplo perfeito do estilo românico.",
+                    "3. San Maurizio al Monastero Maggiore: Chamada de 'Capela Sistina de Milão'. A fachada é simples, mas por dentro é inteira coberta de afrescos maravilhosos.",
+                    "4. Ossário de San Bernardino: Uma capela decorada inteiramente com crânios e ossos humanos. Macabro e fascinante.",
+                    "5. Rito Ambrosiano: A missa em Milão segue um rito litúrgico ligeiramente diferente do resto da Igreja Católica (o Carnaval aqui acaba um pouco depois).",
+                    "6. Santa Maria delle Grazie: Patrimônio da UNESCO, onde fica a Última Ceia no refeitório.",
+                    "7. Cemitério Monumental: Um museu a céu aberto. Os túmulos são esculturas artísticas grandiosas.",
+                    "8. Comunidade Internacional: Milão é a cidade mais internacional da Itália, com templos de várias religiões.",
+                    "9. Scala de Milão: A abertura da temporada de ópera (7 de dezembro, dia de Santo Ambrósio) é o evento social mais importante do ano na Itália.",
+                    "10. Design Week: Em abril (Salone del Mobile), a cidade vira uma galeria de arte. Cultura pura nas ruas."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Semana de Moda (Fev e Set): A cidade lota de modelos, fotógrafos e celebridades. Preços de hotel triplicam.",
+                    "2. Salone del Mobile (Abril): A maior feira de design do mundo. Festas e exposições (Fuorisalone) por toda a cidade.",
+                    "3. Grande Prêmio de Monza (Set): A Fórmula 1 acontece no autódromo vizinho (parque de Monza). A cidade veste vermelho Ferrari.",
+                    "4. Natal: O mercado de Natal na praça do Duomo e a árvore de Swarovski na Galleria são lindos.",
+                    "5. Agosto (Ferragosto): A cidade ESVAZIA. Os milaneses vão para a praia. Muitas lojas e restaurantes fecham por 2 semanas.",
+                    "6. Liquidações (Saldi): Janeiro e Julho. Descontos reais nas grifes. Filas nas portas das lojas.",
+                    "7. Oh Bej! Oh Bej! (Dez): Feira tradicional de Natal perto do Castelo Sforzesco.",
+                    "8. Verão (Jun-Ago): Muito quente e úmido. Os mosquitos atacam (leve repelente).",
+                    "9. Inverno (Dez-Fev): Frio úmido, mas raramente neva forte. Ótimo para museus e chocolate quente.",
+                    "10. Carnaval Ambrosiano: Acontece alguns dias depois do carnaval oficial (a quaresma começa mais tarde aqui)."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Aeroportos: Tem 3. Malpensa (MXP - longe, voos internacionais), Linate (LIN - dentro da cidade, voos curtos) e Bergamo/Orio (BGY - low cost/Ryanair).",
+                    "2. Transporte: O sistema ATM (Metrô, Bonde, Ônibus) é excelente. Use o cartão contactless direto na catraca.",
+                    "3. Coperto: Restaurantes cobram taxa de serviço fixa por pessoa (2 a 5 euros) só por sentar ('pane e coperto'). É normal.",
+                    "4. Água: Tem fontes de água potável (Draghi Verdi - dragões verdes) pela cidade. Pode encher a garrafa.",
+                    "5. Café: No balcão é barato (1.50 euro). Sentado na mesa é mais caro. Na Itália, Cappuccino é só de manhã.",
+                    "6. Tomada: Tipo L (três pinos em linha) ou tipo C (dois pinos). Leve adaptador universal.",
+                    "7. Gorjeta: Não é obrigatória como nos EUA. Arredondar a conta é gentileza.",
+                    "8. Tickets de Trem: Se for viajar de trem regional, VALIDE o bilhete nas máquinas verdes antes de embarcar ou leva multa.",
+                    "9. Segurança: Segura, mas cuidado com batedores de carteira no Metrô e Estação Central.",
+                    "10. Horários: O jantar é cedo para padrões latinos (19h30-20h30). Cozinhas fecham às 22h ou 23h."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Reserve a Última Ceia: Os ingressos abrem com 3 meses de antecedência e esgotam em MINUTOS. Se não conseguir, tente tours guiados (mais caros).",
+                    "2. Dress Code no Duomo: Ombros e joelhos cobertos. Eles barram mesmo no calor. Leve um lenço na bolsa.",
+                    "3. Malpensa Express: O trem que liga o aeroporto Malpensa ao centro (Cadorna ou Centrale) é a melhor opção. Táxi é caríssimo (100 euros fixo).",
+                    "4. Bate-voltas: Milão é a melhor base para explorar o norte. Veneza, Verona, Lago de Como, Suíça... tudo perto de trem.",
+                    "5. Segunda-feira: Muitos museus fecham. Verifique antes de ir.",
+                    "6. Uber: Existe, mas é caro (Uber Black). O app 'FreeNow' ou táxis oficiais são mais comuns.",
+                    "7. Aperitivo em Navigli: Chegue cedo (18h30) para pegar mesa na beira do canal. É a experiência mais milanesa possível.",
+                    "8. Terraço da Rinascente: A loja de departamentos ao lado do Duomo tem um bar no último andar com vista para as gárgulas da igreja. Entrada grátis (paga o que consumir).",
+                    "9. Cuidado com Pombos e Milho: Na praça do Duomo, homens vão colocar milho na sua mão para os pombos virem e tirarem foto. Depois cobram dinheiro agressivamente. Diga NÃO.",
+                    "10. Golpes de 'Presente': Pulseirinhas da amizade ou anéis perto do Castelo. Não deixe colocarem nada em você."
+                ],
+
+                // --- NOVO: NÚMEROS IMPORTANTES (MILÃO) ---
+                numeros: [
+                    "1. 112: Número Único de Emergência Europeu (Polícia, Bombeiros, Ambulância).",
+                    "2. (+39) 02 7771: Polícia Local (vigilância urbana).",
+                    "3. (+39) 02 7730 681 (Consulado do Brasil): Fica na Corso Europa, 13.",
+                    "4. (+39) 02 232323 (Aeroporto Malpensa): Informações.",
+                    "5. (+39) 02 4040: Rádio Táxi (um dos principais).",
+                    "6. (+39) 02 8585: Outra companhia de táxi grande.",
+                    "7. ATM Infoline: (+39) 02 48607607 (Transporte público).",
+                    "8. Ospedale Niguarda: Grande hospital de referência.",
+                    "9. Guardia Medica Turistica: Assistência médica para turistas (via Canova).",
+                    "10. Lost & Found (Município): Via Friuli 30, para achados e perdidos."
+                ],
+
+                // --- NOVO: RISCOS E ERROS (MILÃO) ---
+                riscos: [
+                    "1. O Golpe da Pulseirinha: O ERRO Nº 1. Em frente ao Castello Sforzesco, homens tentam amarrar uma 'fita da amizade' no seu pulso à força. Se amarrarem, exigem dinheiro. Cruzes os braços e continue andando.",
+                    "2. Batedores de Carteira no Metrô: Principalmente na Linha Amarela (M3) e na Estação Centrale. Mochila sempre na frente.",
+                    "3. Comer na Praça do Duomo: Restaurantes com vista direta para o Duomo são 'Pega-Turista'. Comida medíocre e preços abusivos. Ande 2 quarteirões para dentro.",
+                    "4. Achar que Lago de Como é longe: É um erro não ir. Fica a 40 min de trem. É um dos lugares mais lindos do mundo.",
+                    "5. Entrar na ZTL de carro: Se alugar carro, CUIDADO. O centro é Zona de Tráfego Limitado (Area C). Entrar sem pagar a taxa gera multa automática por câmera.",
+                    "6. Não validar ticket de trem: Em trens regionais (Trenord), se não carimbar o bilhete na máquina na plataforma antes de entrar, a multa é de 50 euros na hora.",
+                    "7. Agosto Fantasma: Viajar em meados de agosto achando que vai fazer compras. Muitas lojas familiares fecham para férias.",
+                    "8. Café 'al banco' vs 'al tavolo': Pedir café na mesa custa o dobro ou triplo. Faça como os locais: beba em pé no balcão.",
+                    "9. Fumar em local proibido: Milão tem leis rígidas proibindo fumar em parques, pontos de ônibus e perto de pessoas. Multas altas.",
+                    "10. Selfie Stick no Museu: A maioria dos museus proíbe paus de selfie. Guarde para não levar bronca."
+                ],
+
+                // --- NOVO: ROTEIRO AUTOMÁTICO (MILÃO) ---
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (O Ícone): Manhã no Duomo de Milão (suba nos terraços de elevador, a vista é única). Atravesse a Galleria Vittorio Emanuele II (pise no touro). Almoço: Panzerotto no Luini (clássico rápido). Tarde: Castelo Sforzesco.",
+                            "Dia 2 (Arte e Canais): Veja 'A Última Ceia' de Da Vinci (Reserve 3 meses antes!). Fim de tarde: Navigli. Sente num bar na beira do canal e peça um 'Aperitivo' (paga o drink, come à vontade no buffet)."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Luxo e Charme): Bairro de Brera (Pinacoteca e ruas charmosas). Tarde: Quadrilátero da Moda (Via Montenapoleone) para ver as vitrines mais chiques do mundo.",
+                            "Dia 4 (Lago de Como): Bate-volta OBRIGATÓRIO. Pegue o trem para Varenna ou Como. É o cenário de Star Wars e 007. Pegue o barco pelo lago.",
+                            "Dia 5 (Futebol ou Modernidade): Visite o estádio San Siro (Milan/Inter) OU a Piazza Gae Aulenti (Milão futurista e Bosco Verticale)."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Cidade Alta): Bate-volta para Bergamo. Suba o funicular para a 'Città Alta'. É uma cidade medieval muralhada linda.",
+                            "Dia 7 (Verona): Bate-volta para Verona (cidade de Romeu e Julieta). Fica a 1h15 de trem. Veja a Arena (coliseu) de lá.",
+                            "Dia 8 (Compras ou Café): Outlet Serravalle (se quiser compras de grife com desconto) ou dia lento na Starbucks Reserve Roastery (a mais bonita do mundo)."
+                        ]
+                    }
+                },
+
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-121726&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/milao/", 
                     seguro: "https://www.segurospromo.com.br" 
                 }
             }

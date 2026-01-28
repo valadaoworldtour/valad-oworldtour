@@ -11,13 +11,6 @@ const worldData = {
                 tags: ["Praia", "Cartão Postal", "Agito"],
                 mapa: "https://goo.gl/maps/rio",
                 clima: "Tropical Atlântico. Verão 40ºC e Inverno ameno.",
-                name: "Rio de Janeiro",
-                estimativa_custos: {
-                    alimentacao: "R$ 120",
-                    hospedagem: "R$ 280",
-                    transporte: "R$ 45",
-                    atracoes: "R$ 90"
-                },
                 
                 pontos_turisticos: [
                     "1. Cristo Redentor: Uma das 7 Maravilhas. Compre ingresso antecipado do trem.",
@@ -167,7 +160,6 @@ const worldData = {
                         
                     },
                 },
-                
                 
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?city=-666610&aid=304142", 
@@ -5425,58 +5417,4 @@ function loadCities(nomePais, listaCidades) {
         card.onclick = () => openModal(cidade, bgImage);
         grid.appendChild(card);
     });
-}
-// FUNÇÃO PARA ABRIR O MODAL DA CIDADE
-function openCity(cityName) {
-    let cidade = null;
-    for (const cont in worldData) {
-        for (const pais in worldData[cont]) {
-            cidade = worldData[cont][pais].find(c => c.name === cityName);
-            if (cidade) break;
-        }
-        if (cidade) break;
-    }
-
-    if (!cidade) return;
-
-    document.getElementById('modalTitle').innerText = cidade.name;
-    document.getElementById('modalImg').style.backgroundImage = `url(${cidade.imagem})`;
-    document.getElementById('modalSubtitle').innerText = cidade.clima;
-    
-    // Mostra/Esconde Custos
-    const costSection = document.getElementById('costSection');
-    if (cidade.estimativa_custos) {
-        costSection.classList.remove('hidden');
-        document.getElementById('costFood').innerText = cidade.estimativa_custos.alimentacao;
-        document.getElementById('costHotel').innerText = cidade.estimativa_custos.hospedagem;
-        document.getElementById('costTransport').innerText = cidade.estimativa_custos.transporte;
-        document.getElementById('costTickets').innerText = cidade.estimativa_custos.atracoes;
-    } else {
-        costSection.classList.add('hidden');
-    }
-
-    // Google Maps
-    const mapLink = document.getElementById('modalMapLink');
-    if (cidade.mapa) {
-        mapLink.href = cidade.mapa;
-        mapLink.classList.remove('hidden');
-    } else {
-        mapLink.classList.add('hidden');
-    }
-
-    renderModalMenu(cidade);
-    document.getElementById('cityModal').classList.add('active');
-}
-
-// FUNÇÃO PARA FECHAR O MODAL
-function closeModal() {
-    document.getElementById('cityModal').classList.remove('active');
-    // Volta para o menu principal do modal ao fechar
-    backToMenu();
-}
-
-// FUNÇÃO PARA VOLTAR AO MENU DE CATEGORIAS DENTRO DO MODAL
-function backToMenu() {
-    document.getElementById('modalMenu').classList.remove('hidden');
-    document.getElementById('modalDetails').classList.add('hidden');
 }

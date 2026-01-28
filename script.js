@@ -1,6 +1,216 @@
 // --- CONFIGURAÇÃO GLOBAL ---
 const countryFlags = { "Brasil": "br", "Portugal": "pt", "Marrocos": "ma", "Japão": "jp", "Austrália": "au", "Estados Unidos": "us", "Argentina": "ar", "Espanha": "es", "França": "fr", "Chile": "cl", "Inglaterra": "gb", "Itália": "it", "República Dominicana": "do", "México": "mx", "Colômbia": "co" };
 const defaultImage = "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop";
+
+// ========== DADOS DE CUSTO REAL DA VIAGEM ==========
+// ========== DADOS DE CUSTO REAL DA VIAGEM (ESTIMATIVA DIÁRIA POR PESSOA) ==========
+const realCostData = {
+    "Rio de Janeiro": {
+        comida: "R$ 80 – R$ 120",
+        hospedagem: "R$ 150 – R$ 250",
+        transporte: "R$ 30 – R$ 50", 
+        atracoes: "R$ 40 – R$ 80"
+    },
+    "São Paulo": {
+        comida: "R$ 90 – R$ 160",
+        hospedagem: "R$ 200 – R$ 450",
+        transporte: "R$ 40 – R$ 90",
+        atracoes: "R$ 30 – R$ 100"
+    },
+    "Gramado": {
+        comida: "R$ 120 – R$ 250",
+        hospedagem: "R$ 300 – R$ 800",
+        transporte: "R$ 50 – R$ 150",
+        atracoes: "R$ 100 – R$ 350"
+    },
+    "Foz do Iguaçu": {
+        comida: "R$ 80 – R$ 150",
+        hospedagem: "R$ 150 – R$ 400",
+        transporte: "R$ 40 – R$ 100",
+        atracoes: "R$ 120 – R$ 300"
+    },
+    "Florianópolis": {
+        comida: "R$ 90 – R$ 180",
+        hospedagem: "R$ 180 – R$ 500",
+        transporte: "R$ 40 – R$ 90",
+        atracoes: "R$ 40 – R$ 150"
+    },
+    "Salvador": {
+        comida: "R$ 70 – R$ 140",
+        hospedagem: "R$ 130 – R$ 350",
+        transporte: "R$ 30 – R$ 70",
+        atracoes: "R$ 30 – R$ 100"
+    },
+    "Brasília": {
+        comida: "R$ 90 – R$ 170",
+        hospedagem: "R$ 200 – R$ 450",
+        transporte: "R$ 30 – R$ 80",
+        atracoes: "R$ 10 – R$ 60"
+    },
+    "Recife": {
+        comida: "R$ 75 – R$ 150",
+        hospedagem: "R$ 140 – R$ 400",
+        transporte: "R$ 35 – R$ 80",
+        atracoes: "R$ 20 – R$ 120"
+    },
+    "Porto Alegre": {
+        comida: "R$ 85 – R$ 160",
+        hospedagem: "R$ 170 – R$ 400",
+        transporte: "R$ 35 – R$ 70",
+        atracoes: "R$ 20 – R$ 80"
+    },
+    "Curitiba": {
+        comida: "R$ 80 – R$ 150",
+        hospedagem: "R$ 160 – R$ 380",
+        transporte: "R$ 30 – R$ 70",
+        atracoes: "R$ 25 – R$ 90"
+    },
+    "Fortaleza": {
+        comida: "R$ 75 – R$ 150",
+        hospedagem: "R$ 150 – R$ 400",
+        transporte: "R$ 35 – R$ 80",
+        atracoes: "R$ 30 – R$ 180"
+    },
+    "Campos do Jordão": {
+        comida: "R$ 130 – R$ 320",
+        hospedagem: "R$ 400 – R$ 1000",
+        transporte: "R$ 50 – R$ 120",
+        atracoes: "R$ 70 – R$ 250"
+    },
+    "Porto de Galinhas": {
+        comida: "R$ 110 – R$ 220",
+        hospedagem: "R$ 280 – R$ 700",
+        transporte: "R$ 60 – R$ 150",
+        atracoes: "R$ 90 – R$ 250"
+    },
+    "Porto Seguro": {
+        comida: "R$ 75 – R$ 160",
+        hospedagem: "R$ 130 – R$ 450",
+        transporte: "R$ 35 – R$ 90",
+        atracoes: "R$ 45 – R$ 180"
+    },
+    "Búzios": {
+        comida: "R$ 125 – R$ 280",
+        hospedagem: "R$ 280 – R$ 700",
+        transporte: "R$ 45 – R$ 120",
+        atracoes: "R$ 55 – R$ 200"
+    },
+    "Natal": {
+        comida: "R$ 85 – R$ 160",
+        hospedagem: "R$ 150 – R$ 400",
+        transporte: "R$ 35 – R$ 90",
+        atracoes: "R$ 50 – R$ 200"
+    },
+    "Maceió": {
+        comida: "R$ 85 – R$ 160",
+        hospedagem: "R$ 160 – R$ 450",
+        transporte: "R$ 35 – R$ 90",
+        atracoes: "R$ 45 – R$ 180"
+    },
+    "Belo Horizonte": {
+        comida: "R$ 70 – R$ 130",
+        hospedagem: "R$ 140 – R$ 350",
+        transporte: "R$ 30 – R$ 70", 
+        atracoes: "R$ 20 – R$ 100"
+    },
+    "Manaus": {
+    comida: "R$ 60 – R$ 120",
+    hospedagem: "R$ 130 – R$ 350",
+    transporte: "R$ 30 – R$ 70", 
+    atracoes: "R$ 50 – R$ 200"
+},
+    "Buenos Aires": {
+        comida: "R$ 90 – R$ 180",
+        hospedagem: "R$ 180 – R$ 450",
+        transporte: "R$ 25 – R$ 60",
+        atracoes: "R$ 50 – R$ 150"
+    },
+    "Santiago": {
+        comida: "R$ 110 – R$ 220",
+        hospedagem: "R$ 220 – R$ 550",
+        transporte: "R$ 35 – R$ 80",
+        atracoes: "R$ 60 – R$ 180"
+    },
+    "Cartagena": {
+    comida: "R$ 70 – R$ 140",
+    hospedagem: "R$ 200 – R$ 550",
+    transporte: "R$ 30 – R$ 70", 
+    atracoes: "R$ 50 – R$ 180"
+},
+    "Punta Cana": {
+        comida: "R$ 180 – R$ 350",
+        hospedagem: "R$ 450 – R$ 1300",
+        transporte: "R$ 60 – R$ 180",
+        atracoes: "R$ 180 – R$ 500"
+    },
+    "Cancun": {
+    comida: "R$ 150 – R$ 300",
+    hospedagem: "R$ 350 – R$ 1200",
+    transporte: "R$ 40 – R$ 120",
+    atracoes: "R$ 200 – R$ 600"
+},
+    "Orlando": {
+        comida: "R$ 250 – R$ 450",
+        hospedagem: "R$ 450 – R$ 1200",
+        transporte: "R$ 120 – R$ 300",
+        atracoes: "R$ 650 – R$ 1400"
+    },
+    "Miami": {
+        comida: "R$ 300 – R$ 550",
+        hospedagem: "R$ 550 – R$ 1600",
+        transporte: "R$ 90 – R$ 250",
+        atracoes: "R$ 120 – R$ 400"
+    },
+    "Nova York": {
+        comida: "R$ 350 – R$ 700",
+        hospedagem: "R$ 900 – R$ 2200",
+        transporte: "R$ 45 – R$ 120",
+        atracoes: "R$ 180 – R$ 600"
+    },
+    "Tóquio": {
+        comida: "R$ 180 – R$ 400",
+        hospedagem: "R$ 400 – R$ 1100",
+        transporte: "R$ 60 – R$ 180",
+        atracoes: "R$ 60 – R$ 250"
+    },
+    "Lisboa": {
+        comida: "R$ 140 – R$ 280",
+        hospedagem: "R$ 350 – R$ 800",
+        transporte: "R$ 35 – R$ 90",
+        atracoes: "R$ 60 – R$ 180"
+    },
+    "Madrid": {
+        comida: "R$ 160 – R$ 320",
+        hospedagem: "R$ 400 – R$ 900",
+        transporte: "R$ 35 – R$ 90",
+        atracoes: "R$ 70 – R$ 220"
+    },
+    "Paris": {
+        comida: "R$ 220 – R$ 500",
+        hospedagem: "R$ 550 – R$ 1400",
+        transporte: "R$ 45 – R$ 120",
+        atracoes: "R$ 120 – R$ 350"
+    },
+    "Londres": {
+        comida: "R$ 280 – R$ 550",
+        hospedagem: "R$ 650 – R$ 1700",
+        transporte: "R$ 70 – R$ 180",
+        atracoes: "R$ 180 – R$ 450"
+    },
+    "Roma": {
+        comida: "R$ 200 – R$ 400",
+        hospedagem: "R$ 450 – R$ 1100",
+        transporte: "R$ 35 – R$ 90",
+        atracoes: "R$ 90 – R$ 300"
+    },
+    "Milão": {
+        comida: "R$ 220 – R$ 450",
+        hospedagem: "R$ 550 – R$ 1400",
+        transporte: "R$ 45 – R$ 120",
+        atracoes: "R$ 90 – R$ 300"
+    }
+};
+
 /* BANCO DE DADOS COMPLETO */
 const worldData = {
     "América do Sul": {
@@ -37,7 +247,7 @@ const worldData = {
                     "9. Joelho: Salgado de queijo e presunto (conhecido como italiano em SP).",
                     "10. Sopa Leão Veloso: Caldo de frutos do mar histórico."
                 ],
-// TOP 10 CULTURA & RELIGIÃO
+
                 religiao: [
                     "1. Cristo Redentor: O maior símbolo do Cristianismo no Brasil, de braços abertos sobre a Guanabara.",
                     "2. São Jorge (O Santo Guerreiro): É imensamente popular no Rio. Dia 23 de abril é feriado estadual e tem festas gigantes.",
@@ -50,6 +260,7 @@ const worldData = {
                     "9. O Samba como Religião: As quadras das Escolas de Samba são chamadas de 'Terreiros' e tratadas com respeito sagrado pela comunidade.",
                     "10. Templo da Humanidade: O Rio abriga o único templo Positivista do mundo que segue preservado (Religião da Humanidade)."
                 ],
+
                 curiosidades: [
                     "1. Céu Mais Azul: O Rio tem o céu considerado o mais azul do mundo por cientistas.",
                     "2. Capital Europeia: Foi a única capital europeia fora da Europa (1808).",
@@ -63,7 +274,6 @@ const worldData = {
                     "10. Bossa Nova: Nasceu nos apartamentos de Copacabana e Ipanema."
                 ],
 
-                // NOVA LISTA: 10 ITENS DE EVENTOS E ESTAÇÕES
                 eventos_estacoes: [
                     "1. Verão (Dez-Mar): Calor de 40ºC, praias lotadas e vida noturna intensa.",
                     "2. Inverno (Jun-Set): Ameno (20ºC), pouca chuva, ideal para passear.",
@@ -77,7 +287,6 @@ const worldData = {
                     "10. Temporada de Baleias: No inverno, é possível avistar baleias na costa."
                 ],
 
-                // NOVA LISTA: 10 ITENS DE INFO GERAIS
                 info_gerais: [
                     "1. Moeda: Real Brasileiro (BRL).",
                     "2. Voltagem: 110v / 127v (Atenção! Diferente da maioria do Brasil).",
@@ -91,7 +300,6 @@ const worldData = {
                     "10. Gorjeta: 10% é o padrão em restaurantes (opcional)."
                 ],
 
-                // TOP 10 DICAS ANTES DE IR (RIO DE JANEIRO)
                 antes_de_ir: [
                     "1. Segurança no Centro: Evite andar com correntes de ouro, relógios caros ou celular na mão em áreas movimentadas do Centro e Lapa.",
                     "2. Ingressos Antecipados: Compre o trem do Corcovado e o Bondinho do Pão de Açúcar online. As filas na hora são imensas.",
@@ -104,7 +312,7 @@ const worldData = {
                     "9. Praia à Noite: Evite ficar na areia da praia em trechos escuros ou desertos durante a madrugada.",
                     "10. Natureza: Se for fazer trilhas, leve água, vá em grupo e respeite os animais (não alimente os micos, por mais fofos que sejam)."
                 ],
-                // --- NOVO: NÚMEROS IMPORTANTES ---
+
                 numeros: [
                     "1. 190 (Polícia Militar): Emergências imediatas, assaltos ou perigo iminente.",
                     "2. (21) 2332-2924 (DEAT): Delegacia Especial de Apoio ao Turismo. Fica no Leblon, atendimento bilíngue.",
@@ -117,7 +325,7 @@ const worldData = {
                     "9. 151 (Procon): Para denunciar preços abusivos ou problemas graves com estabelecimentos.",
                     "10. 191 (Polícia Rodoviária): Emergências se você estiver nas estradas federais chegando ou saindo do Rio."
                 ],
-                // --- NOVO: RISCOS E ERROS (RIO DE JANEIRO) ---
+
                 riscos: [
                     "1. Gangue da Bicicleta: No Centro e Copacabana, evite usar o celular na borda da calçada. Eles passam de bike e puxam.",
                     "2. Praias à Noite: Não fique na areia de Copacabana ou Ipanema de madrugada. É escuro e alvo fácil para assaltos.",
@@ -130,7 +338,7 @@ const worldData = {
                     "9. Pedintes Agressivos: Na Lapa, alguns vendedores de balas podem ser agressivos se você negar. Seja firme, mas educado e siga andando.",
                     "10. Maré Alta: Respeite a bandeira vermelha. O mar do Rio tem correntes de retorno que puxam até nadadores experientes."
                 ],
-                // COLE ISSO AQUI:
+
                 roteiros: {
                     "curto": {
                         titulo: "Roteiro Express (1 a 2 Dias)",
@@ -168,8 +376,7 @@ const worldData = {
                 },
                 
             },
-            
-            {
+             {
                 name: "São Paulo",
                imagem: "https://images.unsplash.com/photo-1543059080-f9b1272213d5?q=80&w=2069&auto=format&fit=crop",
                 tags: ["Urbano", "Gastronomia", "Cultura"],
@@ -2856,6 +3063,320 @@ const worldData = {
                     seguro: "https://www.segurospromo.com.br" 
                 }
             },
+            {
+    name: "Belo Horizonte",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Panorama_Mineir%C3%A3o_Pampulha_%28cropped%29.jpg/1280px-Panorama_Mineir%C3%A3o_Pampulha_%28cropped%29.jpg",
+    tags: ["Gastronomia", "Cultura", "Arquitetura"],
+    mapa: "https://goo.gl/maps/bhz",
+    clima: "Tropical de Altitude. Clima ameno e agradável na maior parte do ano.",
+    
+    pontos_turisticos: [
+        "1. Praça da Liberdade: O coração cultural, cercada por museus em prédios históricos e arquitetura neoclássica e moderna.",
+        "2. Conjunto Moderno da Pampulha: Patrimônio da UNESCO. Inclui a Igreja de São Francisco de Assis (Niemeyer) e a Casa do Baile.",
+        "3. Mercado Central: Eleito um dos melhores do mundo. Ótimo para provar queijos, doces e o famoso fígado com jiló.",
+        "4. Estádio Mineirão: O Gigante da Pampulha. Visite o Museu Brasileiro do Futebol e faça o tour pelos bastidores.",
+        "5. Mirante das Mangabeiras: Uma das vistas mais completas da cidade, no pé da Serra do Curral.",
+        "6. Parque Municipal Américo Renné Giannetti: Um oásis verde no hipercentro, com lagos e muita sombra.",
+        "7. Centro de Arte Contemporânea Inhotim: Embora fique em Brumadinho (60km), é parada obrigatória para quem visita BH.",
+        "8. Savassi: Bairro famoso pelos bares, livrarias e vida noturna agitada.",
+        "9. Museu de Artes e Ofícios: Localizado na Praça da Estação, conta a história do trabalho no Brasil.",
+        "10. Memorial Minas Gerais Vale: Um museu interativo na Praça da Liberdade que revive a história mineira."
+    ],
+
+    gastronomia: [
+        "1. Pão de Queijo: O melhor do mundo está aqui. Prove recheado ou tradicional.",
+        "2. Feijão Tropeiro: O prato clássico, especialmente o servido no Mineirão.",
+        "3. Frango com Quiabo: Um ícone da comida mineira caseira.",
+        "4. Fígado com Jiló: O petisco mais famoso do Mercado Central.",
+        "5. Doce de Leite e Queijo Minas: A dupla perfeita ('Romeu e Julieta' mineiro).",
+        "6. Cervejas Artesanais: BH é um dos maiores polos produtores do Brasil (bairro Jardim Canadá).",
+        "7. Leitão à Pururuca: Carne de porco suculenta e pele crocante.",
+        "8. Vaca Atolada: Costela bovina cozida com mandioca até derreter.",
+        "9. Ora-pro-nóbis: Planta nutritiva muito usada em refogados e pratos regionais.",
+        "10. Café Mineiro: Cafeterias de especialidade dominam a região com grãos do Sul de Minas."
+    ],
+
+    religiao: [
+        "1. Igreja de São Francisco de Assis (Pampulha): Obra de Niemeyer com painéis de Portinari, ícone da arquitetura moderna.",
+        "2. Catedral Nossa Senhora da Boa Viagem: Padroeira da cidade, em estilo neogótico.",
+        "3. Santuário Estadual da Piedade: Localizado em Caeté (perto de BH), no topo da serra, com vista deslumbrante.",
+        "4. Basílica de Lourdes: Uma das igrejas mais imponentes e tradicionais do bairro de Lourdes.",
+        "5. Sincretismo Cultural: As festas de congado e as guardas de Moçambique são expressões fortes da fé afro-mineira.",
+        "6. Igreja de São José: No centro da cidade, com belíssimos murais interiores.",
+        "7. Mosteiro de Macaúbas: Mosteiro histórico de clausura feminina localizado em Santa Luzia.",
+        "8. Centro Espírita: Minas Gerais tem uma tradição espírita muito forte (berço de Chico Xavier).",
+        "9. Comunidade Evangélica: Grande presença de igrejas históricas e contemporâneas em toda a capital.",
+        "10. Caminho religioso da Estrada Real: BH integra diversas rotas de peregrinação histórica."
+    ],
+
+    curiosidades: [
+        "1. Capital dos Botecos: BH tem a maior quantidade de bares por habitante no Brasil.",
+        "2. Cidade Planejada: Foi a primeira cidade brasileira moderna planejada (inaugurada em 1897).",
+        "3. Horizonte Sem Mar: A Serra do Curral é o 'mar' dos mineiros e o símbolo da cidade.",
+        "4. Sotaque Mineiro: Conhecido por 'comer' sílabas e usar o 'uai' e 'trem' para quase tudo.",
+        "5. Niemeyer: Antes de Brasília, Oscar Niemeyer deixou sua marca na Pampulha, a convite de JK.",
+        "6. Sem Semáforos no Centro?: O traçado original visava fluidez, mas o crescimento superou o plano.",
+        "7. Mercado Global: O Mercado Central é frequentemente listado entre os melhores mercados do planeta.",
+        "8. Clima: BH está a 852m de altitude, o que garante noites frescas mesmo no verão.",
+        "9. Berço do Rock/Metal: Bandas como Sepultura e Skank nasceram no cenário musical de BH.",
+        "10. Uai: A origem da expressão é incerta, mas é o DNA da comunicação mineira."
+    ],
+
+    eventos_estacoes: [
+        "1. Carnaval de BH: Cresceu meteoricamente e hoje é um dos melhores carnavais de rua do país.",
+        "2. Comida di Buteco: Festival gastronômico que elege os melhores petiscos da cidade (Abril/Maio).",
+        "3. Inverno (Jun-Ago): Época seca e fria, ideal para caldos e festivais de jazz na serra.",
+        "4. Natal: A Praça da Liberdade ganha iluminação espetacular e apresentações de corais.",
+        "5. Festival Internacional de Teatro (FIT): Bienal que traz grupos do mundo todo para a capital.",
+        "6. Arraial de Belo Horizonte (Junho): Uma das maiores festas juninas da capital.",
+        "7. Festival Sarará: Grande evento de música brasileira que acontece na Esplanada do Mineirão.",
+        "8. Primavera: A cidade fica colorida com os ipês amarelos e roxos espalhados pelas avenidas.",
+        "9. BH Stock Car: Evento de corrida que utiliza as vias ao redor do Mineirão.",
+        "10. Verão (Dez-Mar): Estação chuvosa com calor moderado."
+    ],
+
+    info_gerais: [
+        "1. Moeda: Real Brasileiro (BRL).",
+        "2. Voltagem: 127v (110v).",
+        "3. Tomada: Tipo N (3 pinos).",
+        "4. DDD: 31.",
+        "5. População: Aprox. 2.3 milhões (cidade) e 6 milhões (região metropolitana).",
+        "6. Gentílico: Belo-horizontino.",
+        "7. Aeroportos: Confins (CNF - Internacional) e Pampulha (PLU - Regional).",
+        "8. Água: Beba mineral. A água da torneira não é recomendada para consumo direto.",
+        "9. Uber/99: Funcionam perfeitamente e são a melhor forma de se deslocar.",
+        "10. Gorjeta: 10% a 13% inclusos na conta (opcional)."
+    ],
+
+    antes_de_ir: [
+        "1. Ladeiras: BH é muito morrada. Use calçados confortáveis se pretender caminhar.",
+        "2. Aeroporto de Confins: Fica a 40km do centro. Calcule pelo menos 1h de trajeto.",
+        "3. Inhotim: Reserve pelo menos um dia inteiro. Compre o ingresso online.",
+        "4. Mercado Central no Domingo: Fecha cedo (13h). Vá de manhã para aproveitar.",
+        "5. Segurança no Hipercentro: Atenção redobrada com pertences perto da Rodoviária.",
+        "6. Transporte Público: O metrô é limitado. O sistema de ônibus MOVE é eficiente.",
+        "7. Roupas: Traga um agasalho mesmo no verão, as noites podem ser frescas.",
+        "8. Reservas: Restaurantes famosos na Savassi costumam ter fila no fim de semana.",
+        "9. Estacionamento: Usa o sistema digital Faixa Azul.",
+        "10. Hospitalidade: O mineiro é gentil. Peça dicas de botecos aos locais."
+    ],
+
+    numeros: [
+        "1. 190 (Polícia Militar): Emergências e segurança.",
+        "2. (31) 3270-4500 (Delegacia do Turista): Próxima à Rodoviária.",
+        "3. 192 (SAMU): Emergência médica.",
+        "4. 193 (Bombeiros): Incêndios e resgates.",
+        "5. (31) 3277-4102 (Rodoviária de BH): Informações sobre ônibus.",
+        "6. (31) 3689-2000 (Aeroporto de Confins): Informações sobre voos.",
+        "7. 156 (Prefeitura de BH): Serviços municipais.",
+        "8. (31) 3224-4633 (Hospital João XXIII): Referência em urgência.",
+        "9. 118 (BHTrans): Trânsito e ônibus.",
+        "10. (31) 3236-7400 (Belotur): Informações turísticas oficiais."
+    ],
+
+    riscos: [
+        "1. Alagamentos: No verão, algumas avenidas (como Vilarinho) sofrem com enchentes rápidas. Evite em temporais.",
+        "2. Celular no Centro: Furtos por descuido ocorrem no centro comercial.",
+        "3. GPS em Vias Rápidas: Atenção ao entrar em bairros desconhecidos.",
+        "4. Balada na Savassi: Fique atento ao esperar transporte de madrugada na calçada.",
+        "5. Golpes de Taxi: Use aplicativos ou táxis oficiais identificados.",
+        "6. Pão de Queijo Frio: Procure locais com fornadas constantes.",
+        "7. Inhotim na Segunda: O museu não abre às segundas (exceto feriados).",
+        "8. Anel Rodoviário: Via perigosa com tráfego intenso de caminhões.",
+        "9. Moradores de Rua: Presença marcante no hipercentro; mantenha a atenção.",
+        "10. Bebida no Sol: O sol de BH queima muito. Hidrate-se bem."
+    ],
+
+    roteiros: {
+        "curto": {
+            titulo: "Roteiro Express (1 a 2 Dias)",
+            texto: [
+                "Dia 1 (Cultura e Centro): Mercado Central, Circuito Praça da Liberdade e jantar na Savassi.",
+                "Dia 2 (Pampulha): Igrejinha, Museu de Arte e pôr do sol no Mirante das Mangabeiras."
+            ]
+        },
+        "medio": {
+            titulo: "Roteiro Essencial (3 a 5 Dias)",
+            texto: [
+                "Dias 1 e 2: Siga o Roteiro Express acima.",
+                "Dia 3 (Inhotim): Dia inteiro no maior museu a céu aberto do mundo em Brumadinho.",
+                "Dia 4 (História): Praça da Estação, Museu de Artes e Ofícios e Parque Municipal.",
+                "Dia 5 (Boemia): Estádio Mineirão e happy hour no Bairro Santa Tereza."
+            ]
+        },
+        "longo": {
+            titulo: "Roteiro Completo (7+ Dias)",
+            texto: [
+                "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                "Dia 6 (Cidades Históricas): Bate-volta para Ouro Preto e Mariana.",
+                "Dia 7 (Natureza): Cachoeiras na Serra do Cipó.",
+                "Dia 8 (Despedida): Compras finais no Mercado Central."
+            ]
+        }
+    },
+
+    links: {
+        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-629471&aid=304142",
+        passeio: "https://www.civitatis.com/br/belo-horizonte/",
+        seguro: "https://www.segurospromo.com.br"
+    }
+},
+{
+    name: "Manaus",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Praia_da_Ponta_Negra_%28Manaus%29.jpg/960px-Praia_da_Ponta_Negra_%28Manaus%29.jpg",
+    tags: ["Natureza", "Gastronomia", "Aventura"],
+    mapa: "https://goo.gl/maps/manaus",
+    clima: "Equatorial. Quente e úmido o ano todo, com chuvas frequentes.",
+    
+    pontos_turisticos: [
+        "1. Teatro Amazonas: Ícone do Ciclo da Borracha, com sua cúpula colorida e interior luxuoso.",
+        "2. Encontro das Águas: Onde o Rio Negro e o Rio Solimões correm lado a lado sem se misturar.",
+        "3. Mercado Municipal Adolpho Lisboa: Inspirado no Les Halles de Paris, ótimo para artesanato e peixes.",
+        "4. MUSA (Museu da Amazônia): Inclui uma torre de observação de 42m acima da copa das árvores.",
+        "5. Praia da Ponta Negra: Principal orla da cidade, com calçadão, anfiteatro e pôr do sol no Rio Negro.",
+        "6. INPA (Bosque da Ciência): Pesquisa científica onde é possível ver peixes-boi e ariranhas.",
+        "7. Palacete Provincial: Conjunto de museus que contam a história militar e artística do Amazonas.",
+        "8. Porto de Manaus: Movimentado e vital, mostra a dinâmica da vida ribeirinha amazônica.",
+        "9. Arquipélago de Anavilhanas: Um dos maiores arquipélagos fluviais do mundo (acesso via Novo Airão).",
+        "10. Centro Cultural Palácio Rio Negro: Antiga sede do governo com arquitetura imponente e jardins."
+    ],
+
+    gastronomia: [
+        "1. Tambaqui Assado: O peixe mais famoso, geralmente servido com farinha de Uarini.",
+        "2. Tacacá: Caldo quente feito com tucupi, jambu (que treme a boca) e camarão.",
+        "3. X-Caboquinho: Sanduíche tradicional com tucumã, queijo coalho e banana frita.",
+        "4. Pirarucu de Casaca: Peixe desfiado com farinha, banana, passas e temperos.",
+        "5. Caldeirada de Peixe: Sopa rica de peixes da região como o Tucunaré.",
+        "6. Frutas Exóticas: Prove o Cupuaçu, Buriti, Bacuri e o verdadeiro Açaí amazônico.",
+        "7. Brigadeiro de Cupuaçu: Uma variação regional deliciosa do doce brasileiro.",
+        "8. Farinha de Uarini: Conhecida como 'farinha ovada', é crocante e única.",
+        "9. Matrinxã na Brasa: Peixe muito saboroso e gorduroso, clássico dos almoços locais.",
+        "10. Suco de Guaraná: O guaraná natural batido com amendoim e castanha."
+    ],
+
+    religiao: [
+        "1. Catedral Metropolitana de Manaus: Localizada no alto de uma colina no centro histórico.",
+        "2. Igreja de São Sebastião: Situada em frente ao Teatro Amazonas, com pinturas italianas.",
+        "3. Igreja de Nossa Senhora da Conceição: Padroeira da cidade, centro das festividades de dezembro.",
+        "4. Sinagoga Beit Yaacov: Importante marco da forte imigração judaica marroquina na região.",
+        "5. Celebrações Ribeirinhas: Procissões fluviais que levam santos padroeiros pelos rios.",
+        "6. Centros de Umbanda e Candomblé: Muito presentes, com forte influência das águas.",
+        "7. Igrejas Evangélicas: Grande presença em bairros periféricos e no centro.",
+        "8. Mesquita de Manaus: Ponto de encontro da comunidade islâmica local.",
+        "9. Festa de Iemanjá: Tradicionalmente celebrada nas margens da Ponta Negra.",
+        "10. Influência Indígena: Espiritualidade ancestral que permeia a cultura local."
+    ],
+
+    curiosidades: [
+        "1. Paris dos Trópicos: Apelido dado durante a riqueza do Ciclo da Borracha.",
+        "2. Rio Negro: É o maior rio de água negra do mundo.",
+        "3. Teatro em Peças: O Teatro Amazonas foi construído com materiais vindos quase todos da Europa.",
+        "4. Fuso Horário: Manaus está 1 hora atrás do horário de Brasília (GMT-4).",
+        "5. Zona Franca: É um importante polo industrial, isento de muitos impostos.",
+        "6. Cidade Flutuante: Existem comunidades inteiras que vivem em casas sobre balsas nos arredores.",
+        "7. Porto Flutuante: O Roadway é projetado para subir e descer conforme o nível do rio.",
+        "8. Biodiversidade Urbana: Não é raro ver preguiças e iguanas em parques no meio da cidade.",
+        "9. Boi-Bumbá: Embora o festival seja em Parintins, Manaus respira a cultura dos Bois Garantido e Caprichoso.",
+        "10. Águas que não se misturam: Fenômeno causado pela diferença de densidade, temperatura e velocidade."
+    ],
+
+    eventos_estacoes: [
+        "1. Festival Amazonas de Ópera (Abril/Maio): Espetáculos mundiais no Teatro Amazonas.",
+        "2. Manaus Passo a Paço (Setembro): Grande festival de artes, música e gastronomia no Centro.",
+        "3. Festival de Parintins (Junho): Embora a 360km, Manaus é a principal porta de saída de barcos.",
+        "4. Festival de Ciranda de Manacapuru (Agosto): Outra festa folclórica vibrante na região metropolitana.",
+        "5. Boi Manaus (Outubro): Celebra o aniversário da cidade com ritmos de toadas.",
+        "6. Réveillon na Ponta Negra: Queima de fogos e shows na beira do Rio Negro.",
+        "7. Época da Cheia (Maio-Julho): Melhor época para ver os igapós (florestas inundadas).",
+        "8. Época da Seca (Setembro-Novembro): Quando surgem as praias de rio de areia branca.",
+        "9. Festival de Cinema do Amazonas: Evento que atrai produtores e diretores para a capital.",
+        "10. Carnaval de Manaus: Famoso pelos desfiles de escolas de samba e blocos de rua."
+    ],
+
+    info_gerais: [
+        "1. Moeda: Real Brasileiro (BRL).",
+        "2. Voltagem: 127v.",
+        "3. Tomada: Tipo N (3 pinos).",
+        "4. DDD: 92.",
+        "5. População: Aprox. 2.1 milhões de habitantes.",
+        "6. Gentílico: Manauara.",
+        "7. Aeroporto: Eduardo Gomes (MAO).",
+        "8. Vacina: Recomendada vacina contra Febre Amarela e uso de repelente.",
+        "9. Transporte: Aplicativos funcionam bem; barcos são o transporte 'rodoviário' da região.",
+        "10. Sol: Use protetor solar fator alto, o sol amazônico é muito forte."
+    ],
+
+    antes_de_ir: [
+        "1. Repelente: Item obrigatório, especialmente para passeios de selva.",
+        "2. Hidratação: O calor é úmido e constante, beba muita água mineral.",
+        "3. Logística: O aeroporto é longe do centro; use Uber ou táxis credenciados.",
+        "4. Passeios de Rio: Sempre verifique se a agência de turismo é credenciada pela EMBRATUR.",
+        "5. Dinheiro em espécie: Leve algum para passeios em comunidades ribeirinhas.",
+        "6. Roupas: Tecidos leves e claros; calça e manga comprida para trilhas na mata.",
+        "7. Ingressos Teatro: Verifique horários de visitação guiada, costumam fechar cedo.",
+        "8. Cheia vs Seca: A paisagem muda drasticamente entre as estações. Escolha o que quer ver.",
+        "9. Malária: Em áreas urbanas o risco é baixo, mas informe-se se for para áreas remotas.",
+        "10. Hospitalidade: O manauara é acolhedor, mas o ritmo da cidade é mais tranquilo que o do Sudeste."
+    ],
+
+    numeros: [
+        "1. 190 (Polícia Militar): Emergências.",
+        "2. (92) 3652-1210 (Aeroporto de Manaus): Informações.",
+        "3. 192 (SAMU): Emergência médica.",
+        "4. 193 (Bombeiros): Resgates.",
+        "5. (92) 3231-1500 (Amazonastur): Informações turísticas.",
+        "6. (92) 2123-5000 (Hospital 28 de Agosto): Urgência e emergência.",
+        "7. (92) 3215-2800 (Delegacia do Turista): Próxima ao Teatro Amazonas.",
+        "8. 118 (IMMU): Trânsito e transporte urbano.",
+        "9. (92) 3622-1330 (Rodoviária de Manaus): Informações de ônibus.",
+        "10. (92) 3232-1768 (Porto de Manaus): Viagens de barco."
+    ],
+
+    riscos: [
+        "1. Insolação: O calor excessivo pode causar mal-estar rápido; use chapéu.",
+        "2. Animais Silvestres: Nunca tente alimentar macacos ou jacarés em passeios.",
+        "3. Segurança no Centro: Evite andar com objetos de valor à mostra em ruas desertas à noite.",
+        "4. Correntes Fluviais: Os rios são profundos e têm correntes fortes; nade apenas em áreas permitidas.",
+        "5. Insetos: Use repelente constantemente para evitar picadas incômodas.",
+        "6. Comida de Rua: Cuidado com a higiene de barracas informais para evitar piriri.",
+        "7. GPS: No rio o sinal falha; sempre tenha um guia ou mapas offline.",
+        "8. Voo de Conexão: O aeroporto de Manaus costuma ter neblina matinal que pode atrasar voos.",
+        "9. Pirataria: Em rotas de barco muito longas e isoladas, há relatos raros; prefira empresas grandes.",
+        "10. Chuvas Súbitas: As 'pancadas' de chuva são fortes e podem alagar vias rapidamente."
+    ],
+
+    roteiros: {
+        "curto": {
+            titulo: "Roteiro Manaus City (2 Dias)",
+            texto: [
+                "Dia 1: Teatro Amazonas, Mercado Adolpho Lisboa e pôr do sol na Ponta Negra.",
+                "Dia 2: Passeio de barco para o Encontro das Águas, Vila de Janauari (Vitória-Régia) e almoço flutuante."
+            ]
+        },
+        "medio": {
+            titulo: "Selva e Cultura (4 Dias)",
+            texto: [
+                "Dias 1 e 2: Siga o roteiro de 2 dias.",
+                "Dia 3: Visita ao MUSA (torre de observação) e INPA (peixes-boi).",
+                "Dia 4: Experiência em uma aldeia indígena e interação (responsável) com botos cor-de-rosa."
+            ]
+        },
+        "longo": {
+            titulo: "Imersão Amazônica (7+ Dias)",
+            texto: [
+                "Dias 1 a 4: Siga o roteiro de 4 dias.",
+                "Dias 5 a 7: Hospedagem em um Jungle Lodge (hotel de selva) para focagem noturna, trilhas e pesca de piranha.",
+                "Bônus: Se for época, estenda a Novo Airão para o Parque Nacional de Anavilhanas."
+            ]
+        }
+    },
+
+    links: {
+        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-634547&aid=304142",
+        passeio: "https://www.civitatis.com/br/manaus/",
+        seguro: "https://www.segurospromo.com.br"
+    }
+},
 
         ],
         "Argentina": [
@@ -3196,7 +3717,166 @@ const worldData = {
                     seguro: "https://www.segurospromo.com.br" 
                 }
             }
-        ]
+        ],
+        "Colômbia": [
+    {
+        name: "Cartagena",
+        imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/View_of_Cartagena_from_Convento_de_Santa_Cruz_de_la_Popa_01.jpg/960px-View_of_Cartagena_from_Convento_de_Santa_Cruz_de_la_Popa_01.jpg",
+        tags: ["Histórica", "Praias", "Romântica"],
+        mapa: "https://goo.gl/maps/cartagena",
+        clima: "Tropical. Quente e úmido o ano todo, com brisa do mar constante.",
+        
+        pontos_turisticos: [
+            "1. Cidade Amuralhada: O coração histórico com ruas coloridas, sacadas floridas e igrejas coloniais.",
+            "2. Castillo de San Felipe de Barajas: A maior fortaleza construída pelos espanhóis nas Américas.",
+            "3. Bairro Getsemaní: Reduto da arte urbana, grafites vibrantes e vida noturna autêntica.",
+            "4. Torre do Relógio: O portão principal de entrada para a cidade amuralhada.",
+            "5. Islas del Rosario: Arquipélago de águas cristalinas ideal para passeios de barco e mergulho.",
+            "6. Convento de la Popa: Localizado no ponto mais alto da cidade, oferece a melhor vista panorâmica.",
+            "7. Playa Blanca (Isla Barú): A praia de areia branca mais famosa da região.",
+            "8. Palácio da Inquisição: Museu que conta a história sombria da época colonial em um prédio magnífico.",
+            "9. Las Bóvedas: Antigas celas que hoje abrigam as melhores lojas de artesanato e souvenires.",
+            "10. Praça Santo Domingo: Famosa pela escultura 'Gertrudis' de Fernando Botero."
+        ],
+
+        gastronomia: [
+            "1. Arroz com Coco: O acompanhamento clássico, doce e salgado ao mesmo tempo.",
+            "2. Arepa de Huevo: Tortilha de milho frita recheada com ovo, um ícone da rua.",
+            "3. Ceviche Cartagenero: Geralmente servido com molho de tomate e bolachas de soda.",
+            "4. Peixe Frito com Patacones: Peixe inteiro acompanhado de bananas verdes fritas e prensadas.",
+            "5. Cazuela de Mariscos: Um ensopado rico em frutos do mar e leite de coco.",
+            "6. Limonada de Coco: Bebida refrescante e cremosa, indispensável no calor da cidade.",
+            "7. Postre de Natas: Doce tradicional à base de leite e açúcar.",
+            "8. Frutas Tropicais das Palenqueras: Prove manga, mamão e lulo vendidos pelas mulheres com trajes típicos.",
+            "9. Carimañolas: Bolinhos de mandioca fritos recheados com carne ou queijo.",
+            "10. Café Colombiano: Visite cafeterias de especialidade como a San Alberto."
+        ],
+
+        religiao: [
+            "1. Santuário de São Pedro Claver: Onde repousam os restos do defensor dos escravos.",
+            "2. Catedral de Santa Catalina de Alejandría: Com sua cúpula icônica que domina o horizonte.",
+            "3. Igreja de Santo Domingo: A igreja mais antiga da cidade.",
+            "4. Procissões de Semana Santa: Eventos solenes e tradicionais que atraem milhares de fiéis.",
+            "5. Virgem do Carmo: Padroeira dos marinheiros, muito celebrada em julho.",
+            "6. Festas de Novembro: Celebrações da independência com forte componente cultural e religioso.",
+            "7. Ermida del Cabrero: Uma capela charmosa localizada fora das muralhas.",
+            "8. Sincretismo Cultural: Influências africanas e espanholas moldam as crenças locais.",
+            "9. Convento de Santa Cruz de la Popa: Ponto de peregrinação histórica.",
+            "10. Igreja de Getsemaní: Local de reuniões comunitárias e festas religiosas populares."
+        ],
+
+        curiosidades: [
+            "1. Muralhas Intactas: Cartagena possui 11km de muralhas que levaram 200 anos para serem concluídas.",
+            "2. Gabriel García Márquez: O autor de 'Cem Anos de Solidão' viveu aqui e a cidade inspirou seus livros.",
+            "3. Patrimônio da UNESCO: Declarada Patrimônio da Humanidade em 1984.",
+            "4. Palenqueras: As mulheres de vestidos coloridos são descendentes da primeira cidade livre de escravos (San Basilio de Palenque).",
+            "5. Cidade Heroica: Apelido dado por sua resistência a cercos e ataques de piratas.",
+            "6. Canhões Originais: Muitos canhões antigos ainda estão posicionados sobre as muralhas.",
+            "7. Túneis do Castillo: O Castelo de San Felipe tem um sistema complexo de túneis para defesa.",
+            "8. Noites de Chiva: Ônibus coloridos com música ao vivo que fazem tours festivos pela cidade.",
+            "9. Esmeraldas Colombiana: A cidade é um dos principais centros de comércio de esmeraldas do mundo.",
+            "10. Clima de Festa: A vida noturna começa cedo e as praças são ocupadas por dançarinos de Mapalé."
+        ],
+
+        eventos_estacoes: [
+            "1. Hay Festival (Janeiro): Um dos maiores festivais literários do mundo.",
+            "2. Festival Internacional de Música (Janeiro): Concertos de música clássica em locais históricos.",
+            "3. Festival de Cinema de Cartagena (Março): O festival de cinema mais antigo da América Latina.",
+            "4. Independência de Cartagena (Novembro): A maior festa da cidade, com desfiles e fantasias.",
+            "5. Verão (Dez-Abril): Estação seca, céu sempre azul e muito vento (Brisa).",
+            "6. Temporada de Chuvas (Out-Nov): Chuvas fortes e rápidas, geralmente à tarde.",
+            "7. Festival del Frito (Fevereiro): Celebração da culinária típica frita da região.",
+            "8. Natal nas Muralhas: Iluminação especial e concertos ao ar livre.",
+            "9. Dia de la Virgen del Carmen (Julho): Procissões de barcos no mar.",
+            "10. Regatas de Vela: Competições frequentes na baía de Cartagena."
+        ],
+
+        info_gerais: [
+            "1. Moeda: Peso Colombiano (COP).",
+            "2. Voltagem: 110v.",
+            "3. Tomada: Tipo A e B (padrão americano).",
+            "4. DDD: +57.",
+            "5. População: Aprox. 1 milhão de habitantes.",
+            "6. Gentílico: Cartagenero.",
+            "7. Aeroporto: Rafael Núñez (CTG).",
+            "8. Transporte: Taxis não têm taxímetro, combine o valor antes; Uber é usado, mas informal.",
+            "9. Gorjeta: 10% (Propina Voluntaria) geralmente incluída na conta.",
+            "10. Segurança: Dentro da cidade amuralhada e Getsemaní é muito seguro."
+        ],
+
+        antes_de_ir: [
+            "1. Vendedores de Rua: São muito persistentes. Um 'No, gracias' firme é necessário.",
+            "2. Câmbio: Troque dinheiro em casas de câmbio oficiais no centro.",
+            "3. Sol: Use muito protetor solar, o sol da linha do equador não perdoa.",
+            "4. Hidratação: Beba muita água engarrafada.",
+            "5. Roupas: Tecidos de linho e algodão são seus melhores amigos.",
+            "6. Passeios de Barco: Reserve com agências sérias para evitar taxas ocultas no porto.",
+            "7. Checkout de Hotéis: Fique atento ao 'Impuesto de consumo' e IVA (estrangeiros são isentos de IVA em pacotes).",
+            "8. Adaptador: Traga adaptador se seus aparelhos forem brasileiros (3 pinos).",
+            "9. Internet: Compre um chip (SIM Card) local como Claro ou Tigo.",
+            "10. Calçados: As ruas são de pedra; prefira sandálias confortáveis ou tênis leves."
+        ],
+
+        numeros: [
+            "1. 123: Emergência geral (Polícia/Ambulância).",
+            "2. +57 (605) 651 7220 (Aeroporto): Informações.",
+            "3. +57 (605) 664 4430 (Polícia de Turismo): Localizada no Centro.",
+            "4. 132 (Cruz Vermelha): Emergências médicas.",
+            "5. +57 (601) 744 3200 (Embaixada do Brasil em Bogotá).",
+            "6. +57 (605) 660 4154 (Hospital de Bocagrande): Referência particular.",
+            "7. 119 (Bombeiros).",
+            "8. 144 (Defesa Civil).",
+            "9. +57 (605) 663 0339 (Terminal de Transportes): Ônibus para outras cidades.",
+            "10. +57 (605) 660 1583 (Imigração Colômbia)."
+        ],
+
+        riscos: [
+            "1. Insolação: O calor úmido pode causar fadiga extrema.",
+            "2. 'No Hay Cobro': Cuidado com massagistas na praia que dizem que é 'grátis' e depois cobram caro.",
+            "3. Preços Abusivos em Barú: Sempre pergunte o preço exato de TUDO antes de consumir na praia.",
+            "4. Água da Torneira: Não beba de forma alguma.",
+            "5. Trânsito: Motos e taxis podem ser caóticos fora da zona turística.",
+            "6. Correntes no Mar: Algumas praias têm correntezas fortes; observe as sinalizações.",
+            "7. 'Vingança de Moctezuma': Versão local de mal estar estomacal por comida temperada.",
+            "8. Furtos: Comum em praias lotadas se deixar pertences sozinhos.",
+            "9. Gelo: Em locais informais, o gelo pode não ser de água filtrada.",
+            "10. Passeios Ilegais: Evite barcos que não partem do Muelle de la Bodeguita (Porto oficial)."
+        ],
+
+        roteiros: {
+            "curto": {
+                titulo: "Cartagena Express (2 Dias)",
+                texto: [
+                    "Dia 1: Caminhada pela Cidade Amuralhada, pôr do sol no Café del Mar e jantar em Getsemaní.",
+                    "Dia 2: Castillo de San Felipe pela manhã e passeio rápido até a Isla Tierra Bomba."
+                ]
+            },
+            "medio": {
+                titulo: "Magia Colonial (4 Dias)",
+                texto: [
+                    "Dias 1 e 2: Siga o roteiro de 2 dias.",
+                    "Dia 3: Dia inteiro nas Islas del Rosario (Passeio de Lancha).",
+                    "Dia 4: Convento de la Popa, compras nas Bóvedas e Museu da Esmeralda."
+                ]
+            },
+            "longo": {
+                titulo: "Experiência Caribenha (7+ Dias)",
+                texto: [
+                    "Dias 1 a 4: Siga o roteiro de 4 dias.",
+                    "Dia 5: Bate-volta ao vulcão de lama Totumo.",
+                    "Dia 6: Dia de relax em um Beach Club em Barú (Playa Blanca).",
+                    "Dia 7: Aula de Salsa e tour gastronômico focado em comida de rua."
+                ]
+            }
+        },
+
+        links: {
+            hotel: "https://www.booking.com/searchresults.pt-br.html?city=-579344&aid=304142",
+            passeio: "https://www.civitatis.com/br/cartagena-de-indias/",
+            seguro: "https://www.segurospromo.com.br"
+        }
+    }
+]
         
         
         
@@ -3373,7 +4053,168 @@ const worldData = {
                     seguro: "https://www.segurospromo.com.br" 
                 }
             }
-        ]
+        ],
+        "México": [
+    {
+        name: "Cancun",
+        imagem: "https://images.unsplash.com/photo-1510097467424-192d713fd8b2?q=80&w=2070&auto=format&fit=crop",
+        tags: ["Praias", "Resorts", "Vida Noturna"],
+        mapa: "https://goo.gl/maps/cancun",
+        clima: "Tropical. Calor o ano todo, com brisa caribenha e chuvas ocasionais (principalmente de agosto a outubro).",
+        
+        pontos_turisticos: [
+            "1. Zona Hoteleira: A famosa faixa de areia em formato de '7' onde ficam os grandes resorts e praias de tirar o fôlego.",
+            "2. Playa Delfines: Uma das poucas praias públicas com vista livre para o mar e o famoso letreiro de 'CANCÚN'.",
+            "3. Coco Bongo: Mais que uma boate, é um show acrobático e performático mundialmente famoso.",
+            "4. Isla Mujeres: Uma ilha vizinha paradisíaca; alugue um carrinho de golfe e visite a Playa Norte.",
+            "5. Chichén Itzá: Antiga capital maia e uma das 7 Maravilhas do Mundo Moderno (localizada a 2h30 de Cancun).",
+            "6. Tulum: Única cidade maia construída à beira-mar, com ruínas sobre falésias de frente para o azul turquesa.",
+            "7. Parque Xcaret: Gigantesco parque eco-arqueológico com rios subterrâneos e shows de cultura mexicana.",
+            "8. Cenotes: Piscinas naturais sagradas dos maias. Visite o Cenote Ik Kil ou o Dos Ojos.",
+            "9. MUSA (Museu Subaquático): Centenas de esculturas submersas que podem ser vistas em snorkel ou mergulho.",
+            "10. La Isla Shopping Village: O shopping mais charmoso de Cancun, aberto e às margens da Lagoa Nichupté."
+        ],
+
+        gastronomia: [
+            "1. Tacos ao Pastor: Tortilha de milho recheada com porco marinado e abacaxi.",
+            "2. Cochinita Pibil: Carne de porco marinada em urucum e cítricos, cozida em folhas de bananeira.",
+            "3. Guacamole com Totopos: Abacate temperado servido com tortilhas de milho crocantes.",
+            "4. Ceviche de Camarão: Frutos do mar frescos marinados em limão, cebola roxa e coentro.",
+            "5. Quesadillas: Dobradas e recheadas com queijo derretido e carnes variadas.",
+            "6. Sopa de Lima: Sopa tradicional da região de Yucatán com frango e tiras de tortilha.",
+            "7. Marquesitas: Crepes crocantes enrolados, recheados com queijo bola e chocolate (comum nas ruas).",
+            "8. Aguachile: Camarões crus marinados em molho de pimenta, limão e pepino.",
+            "9. Tequila e Mezcal: As bebidas espirituosas icônicas do México para degustar ou em coquetéis.",
+            "10. Margarita: O drink refrescante de limão e tequila, perfeito para o clima de praia."
+        ],
+
+        religiao: [
+            "1. Virgen de Guadalupe: Padroeira do México; você verá altares dedicados a ela em quase todos os lugares.",
+            "2. Espiritualidade Maia: Muitos tours incluem ritos de purificação como o Temazcal (sauna sagrada).",
+            "3. Paróquia de Cristo Ressuscitado: Localizada na Zona Hoteleira, com arquitetura aberta e missas bilíngues.",
+            "4. Dia dos Mortos (Día de Muertos): Celebração religiosa-cultural profunda em novembro para honrar os ancestrais.",
+            "5. Capilla de Nuestra Señora de Guadalupe: Pequena e charmosa capela com vista para o mar em Isla Mujeres.",
+            "6. Ofrendas: Altares coloridos com flores e fotos encontrados em casas e espaços públicos.",
+            "7. Catedral de Cancun: Localizada no centro (Downtown), ponto central da fé católica local.",
+            "8. Sincretismo: A mistura única de ritos indígenas maias com a liturgia católica espanhola.",
+            "9. Festas Patronais: Procissões e festas nas ruas do centro em homenagem aos santos locais.",
+            "10. Igrejas Históricas de Yucatán: Muitas igrejas da era colonial podem ser visitadas em cidades próximas como Valladolid."
+        ],
+
+        curiosidades: [
+            "1. Cidade Planejada: Cancun não existia até 1970; foi criada do zero pelo governo para ser um polo turístico.",
+            "2. Nome Maia: 'Cancun' significa 'Ninho de Serpentes' na língua maia antiga.",
+            "3. Areia Térmica: A areia branca de coral triturado não esquenta, permitindo caminhar descalço mesmo sob sol forte.",
+            "4. Mar de 7 Cores: A tonalidade da água muda conforme a profundidade e o tipo de coral no fundo.",
+            "5. Segundo Maior Recife: Fica de frente para o Grande Arrecife Maia, a segunda maior barreira de corais do mundo.",
+            "6. Spring Break: Entre março e abril, a cidade recebe milhares de estudantes americanos em festas intensas.",
+            "7. Tartarugas: Entre maio e outubro, várias espécies de tartarugas marinhas usam as praias para desovar.",
+            "8. Zona Hoteleira vs Centro: São quase duas cidades diferentes; o centro é onde os locais vivem e os preços são menores.",
+            "9. Lagoa vs Mar: De um lado da zona hoteleira está o Mar do Caribe; do outro, a enorme Lagoa Nichupté.",
+            "10. Formato de 7: A zona hoteleira vista de cima tem o formato exato do número sete."
+        ],
+
+        eventos_estacoes: [
+            "1. Festival de Jazz de Cancun (Novembro): Evento de classe mundial que reúne grandes nomes na praia.",
+            "2. Solstício de Verão: Momento em que o sol ilumina as pirâmides de forma especial em Chichén Itzá.",
+            "3. Temporada de Tubarão-Baleia (Junho-Setembro): Época em que é permitido nadar com esses gigantes dóceis.",
+            "4. Grito da Independência (15 de Setembro): Grandes festas patrióticas com fogos e comidas típicas.",
+            "5. Carnaval de Cancun: Desfiles de carros alegóricos e danças tradicionais no centro da cidade.",
+            "6. Torneios de Pesca Esportiva: Eventos anuais que atraem competidores de todo o mundo.",
+            "7. Réveillon: Festas luxuosas nos resorts com queima de fogos sobre o mar.",
+            "8. Temporada de Furacões: Vai de junho a novembro, exigindo atenção às previsões meteorológicas.",
+            "9. Inverno Seco (Dezembro-Abril): Melhor clima para visitar, com céu azul constante e baixa umidade.",
+            "10. Festival de Cinema de Riviera Maya: Exibições de filmes internacionais em cenários paradisíacos."
+        ],
+
+        info_gerais: [
+            "1. Moeda: Peso Mexicano (MXN). Dólares são aceitos, mas o troco costuma ser em pesos e com taxa ruim.",
+            "2. Voltagem: 127v (Padrão americano de pinos chatos).",
+            "3. Idioma: Espanhol, mas o Inglês é falado fluentemente em toda a zona turística.",
+            "4. DDD: +52.",
+            "5. Visto: Brasileiros precisam de visto para entrar no México (consulte as regras atuais).",
+            "6. Aeroporto: Aeroporto Internacional de Cancun (CUN) - muito moderno e movimentado.",
+            "7. Taxa de Saneamento: Hotéis cobram uma pequena taxa diária por quarto no check-out.",
+            "8. Água: Nunca beba água da torneira; use apenas água engarrafada, mesmo para escovar os dentes.",
+            "9. Gorjetas (Propina): É cultural deixar entre 10% e 15% em restaurantes.",
+            "10. Visitax: Imposto turístico que deve ser pago online por todos os visitantes estrangeiros."
+        ],
+
+        antes_de_ir: [
+            "1. Protetor Solar Biodegradável: Obrigatório para entrar em cenotes e parques para proteger o ecossistema.",
+            "2. Seguro Viagem: Altamente recomendado, pois hospitais particulares em Cancun são extremamente caros.",
+            "3. Câmbio: Evite trocar dinheiro no aeroporto; casas de câmbio no centro oferecem taxas melhores.",
+            "4. Transporte: Ônibus de linha (R1 e R2) na zona hoteleira são baratos, seguros e funcionam 24h.",
+            "5. Sargasso: Verifique sites de monitoramento de algas (sargasso) para escolher a praia mais limpa no dia.",
+            "6. Reserve Chichén Itzá: Vá o mais cedo possível para evitar as multidões e o calor extremo do meio-dia.",
+            "7. Aluguel de Carro: Vale a pena para explorar a Riviera Maya, mas atenção aos limites de velocidade.",
+            "8. Adaptador de Tomada: Se seus aparelhos forem do padrão brasileiro novo (3 pinos redondos), você precisará de adaptador.",
+            "9. App de Câmbio: Tenha um conversor de moedas no celular para não se confundir entre Peso e Real.",
+            "10. Compras: O Mercado 28 no centro é o melhor lugar para lembrancinhas baratas e autênticas."
+        ],
+
+        numeros: [
+            "1. 911: Número de emergência geral (Polícia, Ambulância e Bombeiros).",
+            "2. +52 998 884 8073: Polícia Turística de Cancun.",
+            "3. +52 998 884 1616: Cruz Vermelha (Ambulância).",
+            "4. +52 998 881 2700: Informações do Aeroporto.",
+            "5. +52 998 884 1050: Rodoviária (ADO) - principal empresa de ônibus.",
+            "6. +52 55 5202 3366: Embaixada do Brasil no México (Cidade do México).",
+            "7. +52 998 887 4333: Consulado Honorário do Brasil em Cancun.",
+            "8. 078: 'Ángeles Verdes' (Assistência mecânica gratuita nas estradas federais).",
+            "9. +52 998 848 3000: Hospital Galenia (Referência em atendimento particular).",
+            "10. +52 998 884 1202: Bombeiros de Cancun."
+        ],
+
+        riscos: [
+            "1. Desidratação: O calor úmido é intenso; beba muito líquido mesmo sem sede.",
+            "2. Insolação: O sol caribenho queima muito rápido; use chapéu e evite exposição direta ao meio-dia.",
+            "3. Correntes Marítimas: Respeite as bandeiras na praia (Vermelha = Proibido entrar).",
+            "4. Extorsão: Algumas viaturas de polícia param turistas dirigindo para pedir dinheiro; peça sempre a multa oficial.",
+            "5. Golpes de Táxi: Combine o valor fixo da corrida ANTES de entrar no veículo.",
+            "6. 'La Vingança de Moctezuma': Nome dado ao piriri causado por água ou comida mal lavada.",
+            "7. Tempo de Viagem: Não subestime as distâncias; Chichén Itzá e Tulum tomam o dia inteiro.",
+            "8. Vendedores Insistentes: No centro e em sítios arqueológicos, seja educado mas firme ao dizer 'No, gracias'.",
+            "9. Vida Noturna: Mantenha sempre seu copo sob vista em boates muito lotadas.",
+            "10. Animais: Não toque em quatis ou iguanas nos resorts; eles podem morder se acuados."
+        ],
+
+        roteiros: {
+            "curto": {
+                titulo: "Cancun Express (3 Dias)",
+                texto: [
+                    "Dia 1: Praia Delfines pela manhã, compras no La Isla e pôr do sol na Lagoa Nichupté.",
+                    "Dia 2: Bate-volta para Isla Mujeres de balsa (ferry) e relaxar na Playa Norte.",
+                    "Dia 3: Manhã de praia na Zona Hoteleira e noite épica no Coco Bongo."
+                ]
+            },
+            "medio": {
+                titulo: "O Coração da Riviera (5 Dias)",
+                texto: [
+                    "Dia 1 a 3: Siga o roteiro de 3 dias.",
+                    "Dia 4: Tour histórico para Chichén Itzá com parada em um Cenote e na cidade de Valladolid.",
+                    "Dia 5: Dia de aventura e natureza no Parque Xcaret (incluindo o show noturno)."
+                ]
+            },
+            "longo": {
+                titulo: "Exploração Maia Total (8+ Dias)",
+                texto: [
+                    "Dia 1 a 5: Siga o roteiro de 5 dias.",
+                    "Dia 6: Ruínas de Tulum pela manhã e nado com tartarugas em Akumal à tarde.",
+                    "Dia 7: Mergulho ou Snorkel em Cozumel (pegue o ferry em Playa del Carmen).",
+                    "Dia 8: Relaxar em Playa del Carmen, caminhando pela 5ª Avenida para compras finais."
+                ]
+            }
+        },
+
+        links: {
+            hotel: "https://www.booking.com/searchresults.pt-br.html?city=-1654636&aid=304142",
+            passeio: "https://www.civitatis.com/br/cancun/",
+            seguro: "https://www.segurospromo.com.br"
+        }
+    }
+]
+        
     },
     "América do Norte": {
         "Estados Unidos": [
@@ -5083,7 +5924,30 @@ const worldData = {
     
     }
 };
-
+        
+// ========== FUNÇÃO PARA ATUALIZAR CUSTO REAL ==========
+function updateRealCost(cityName) {
+    // Verifica se há dados de custo para esta cidade
+    const costData = realCostData[cityName];
+    
+    if (costData) {
+        // Atualiza os valores no modal
+        document.getElementById('realCostFood').textContent = costData.comida;
+        document.getElementById('realCostHotel').textContent = costData.hospedagem;
+        document.getElementById('realCostTransport').textContent = costData.transporte;
+        document.getElementById('realCostTickets').textContent = costData.atracoes;
+        
+        // Garante que a seção esteja visível
+        document.getElementById('realCostSection').classList.remove('hidden');
+    } else {
+        // Se não houver dados para esta cidade, pode esconder a seção
+        // ou mostrar valores padrão. Vou manter visível com valores genéricos.
+        document.getElementById('realCostFood').textContent = "R$ 0 – R$ 0";
+        document.getElementById('realCostHotel').textContent = "R$ 0 – R$ 0";
+        document.getElementById('realCostTransport').textContent = "R$ 0 – R$ 0";
+        document.getElementById('realCostTickets').textContent = "R$ 0 – R$ 0";
+    }
+}
 
 /* LÓGICA DO SISTEMA */
 
@@ -5131,6 +5995,11 @@ function loadCities(nomePais, listaCidades) {
     const grid = document.getElementById('mainDisplay');
     grid.innerHTML = '';
 
+    // FECHA O MENU SE ESTIVER NO CELULAR
+    if(window.innerWidth <= 768) {
+        toggleSidebar(); 
+    }
+
     listaCidades.forEach(cidade => {
         const card = document.createElement('div');
         card.className = 'city-card';
@@ -5163,14 +6032,19 @@ function openModal(cidade, imagemUrl) {
     modalMenu.classList.remove('hidden');
     modalDetails.classList.add('hidden');
 
+    // Atualiza informações básicas
     document.getElementById('modalTitle').innerText = cidade.name;
     document.getElementById('modalSubtitle').innerText = cidade.clima;
     document.getElementById('modalImg').style.backgroundImage = `url('${imagemUrl}')`;
     document.getElementById('modalMapLink').href = cidade.mapa;
     
+    // Atualiza tags
     let tagsHTML = '';
     if(cidade.tags) { cidade.tags.forEach(tag => tagsHTML += `<span class="badge azul">${tag}</span>`); }
     document.getElementById('modalBadges').innerHTML = tagsHTML;
+
+    // ========== ATUALIZA CUSTO REAL DA VIAGEM ==========
+    updateRealCost(cidade.name);
 
     // BOTÕES DE AFILIADO
     const affContainer = document.getElementById('affiliateContainer');
@@ -5181,8 +6055,8 @@ function openModal(cidade, imagemUrl) {
         if(cidade.links.seguro) affHTML += makeAffiliateBtn("ri-shield-check-fill", "Seguro Viagem", "Viaje Protegido", cidade.links.seguro);
     }
     affContainer.innerHTML = affHTML;
-      // 2. NOVO: ROTEIRO AUTOMÁTICO (INSERIDO AQUI)
-    // Se a cidade tiver roteiros cadastrados, mostra a caixa. Se não, esconde.
+    
+    // 2. NOVO: ROTEIRO AUTOMÁTICO (INSERIDO AQUI)
     const roteiroDiv = document.getElementById('roteiroArea') || document.createElement('div');
     roteiroDiv.id = 'roteiroArea';
     roteiroDiv.className = 'roteiro-box';
@@ -5202,6 +6076,7 @@ function openModal(cidade, imagemUrl) {
         // Insere DEPOIS dos afiliados e ANTES dos ícones
         affContainer.parentNode.insertBefore(roteiroDiv, document.getElementById('categoryGrid'));
     }
+    
     // MENU DE CATEGORIAS (ICONES)
     const catGrid = document.getElementById('categoryGrid');
     catGrid.innerHTML = `
@@ -5219,12 +6094,14 @@ function openModal(cidade, imagemUrl) {
             <h4 style="color: var(--neon-coral);">Riscos & Erros</h4>
         </div>
     `;
+    
     modal.classList.add('active');
 }
 
 function makeAffiliateBtn(icon, title, sub, link) {
     return `<a href="${link}" target="_blank" class="affiliate-btn"><i class="${icon}"></i><div class="affiliate-content"><strong>${title}</strong><span>${sub}</span></div></a>`;
 }
+
 // NOVA FUNÇÃO PARA EXIBIR O ROTEIRO
 function showRoteiro(tipo) {
     if(!currentCity || !currentCity.roteiros || !currentCity.roteiros[tipo]) return;
@@ -5232,7 +6109,6 @@ function showRoteiro(tipo) {
     const roteiro = currentCity.roteiros[tipo];
     
     detailTitle.innerText = roteiro.titulo;
-    // Formata a lista de dias
     let htmlContent = `<ul style="list-style:none; padding:0;">`;
     roteiro.texto.forEach(dia => {
         htmlContent += `<li style="margin-bottom:15px; color:var(--text-muted);"><i class="ri-map-pin-time-line" style="color:var(--neon-gold); margin-right:10px;"></i> ${dia}</li>`;
@@ -5244,6 +6120,7 @@ function showRoteiro(tipo) {
     modalMenu.classList.add('hidden');
     modalDetails.classList.remove('hidden');
 }
+
 function showCategory(type) {
     if(!currentCity) return;
     let title = "", content = "";
@@ -5259,34 +6136,29 @@ function showCategory(type) {
             break;
         case 'religiao': 
             title = "Cultura & Religião"; 
-            // Agora usa formatList para garantir a lista
             content = formatList(currentCity.religiao); 
             break;
         case 'curiosidades': 
             title = "Curiosidades"; 
-            // Agora usa formatList para garantir a lista
             content = formatList(currentCity.curiosidades); 
             break;
-       case 'eventos':
+        case 'eventos':
             title = "Calendário & Estações";
-            // Se tiver a lista nova (eventos_estacoes), usa ela. Se não, usa o antigo.
             content = currentCity.eventos_estacoes ? formatList(currentCity.eventos_estacoes) : `<p><strong>Estações:</strong> ${currentCity.estacoes}</p><p><strong>Eventos:</strong> ${currentCity.eventos}</p>`;
             break;
         case 'geral':
             title = "Informações Gerais";
-            // Se tiver a lista nova (info_gerais), usa ela. Se não, usa a antiga moeda.
             content = currentCity.info_gerais ? formatList(currentCity.info_gerais) : `<p><strong>Moeda:</strong> ${currentCity.moeda}</p>`;
             break;
-    case 'antes':
+        case 'antes':
             title = "Antes de Ir (Dicas de Ouro)";
-            // CORRIGIDO: Agora usa o 'format' para garantir que os 10 itens apareçam
-           content = currentCity.antes_de_ir ? formatList(currentCity.antes_de_ir) : `<p><strong>antes:</strong> ${currentCity.antes}</p>`;
+            content = currentCity.antes_de_ir ? formatList(currentCity.antes_de_ir) : `<p><strong>antes:</strong> ${currentCity.antes}</p>`;
             break;
-            case 'numeros':
+        case 'numeros':
             title = "Números Importantes";
             content = currentCity.numeros ? formatList(currentCity.numeros) : "<p>Números não cadastrados para esta cidade.</p>";
             break;
-            case 'riscos':
+        case 'riscos':
             title = "⚠️ Riscos & Erros Comuns";
             content = currentCity.riscos ? formatList(currentCity.riscos) : "<p>Dados de riscos ainda não cadastrados para esta cidade.</p>";
             break;
@@ -5310,37 +6182,32 @@ function formatList(data) {
 
 function closeModal() { modal.classList.remove('active'); }
 modal.onclick = (e) => { if (e.target === modal) closeModal(); };
-init();
+
 // --- SISTEMA DE BUSCA GLOBAL ---
 function searchSystem() {
     const term = document.getElementById('globalSearch').value.toLowerCase();
     const grid = document.getElementById('mainDisplay');
     
-    // Se o campo estiver vazio, não faz nada (ou você pode resetar para uma tela inicial)
     if(term.length === 0) return;
 
-    // Atualiza Títulos
     document.getElementById('pageTitle').innerText = "Resultados da Busca";
     document.getElementById('pageSubtitle').innerText = `Procurando por: "${term}"`;
 
-    grid.innerHTML = ''; // Limpa a tela
+    grid.innerHTML = '';
     let foundCount = 0;
 
-    // Varre o Banco de Dados Inteiro
     Object.keys(worldData).forEach(continente => {
         const paises = worldData[continente];
         Object.keys(paises).forEach(pais => {
             const cidades = paises[pais];
             
             cidades.forEach(cidade => {
-                // Verifica se o termo digitado bate com o Nome da Cidade, País ou Tags
                 if (cidade.name.toLowerCase().includes(term) || 
                     pais.toLowerCase().includes(term) ||
                     (cidade.tags && cidade.tags.some(tag => tag.toLowerCase().includes(term)))) {
                     
                     foundCount++;
                     
-                    // Cria o Card (Reutilizando a lógica visual)
                     const card = document.createElement('div');
                     card.className = 'city-card';
                     const bgImage = cidade.imagem || defaultImage;
@@ -5365,7 +6232,6 @@ function searchSystem() {
         });
     });
 
-    // Se não achar nada
     if (foundCount === 0) {
         grid.innerHTML = `
             <div class="empty-state">
@@ -5376,6 +6242,7 @@ function searchSystem() {
         `;
     }
 }
+
 // --- FUNÇÃO PARA O MENU MOBILE ---
 function toggleSidebar() {
     const sidebar = document.querySelector('.sidebar');
@@ -5385,36 +6252,5 @@ function toggleSidebar() {
     overlay.classList.toggle('active');
 }
 
-// ATUALIZE A FUNÇÃO loadCities PARA FECHAR O MENU AUTOMATICAMENTE
-function loadCities(nomePais, listaCidades) {
-    // ... (código anterior igual) ...
-    document.getElementById('pageTitle').innerText = nomePais;
-    document.getElementById('pageSubtitle').innerHTML = `${listaCidades.length} Destinos encontrados`;
-    const grid = document.getElementById('mainDisplay');
-    grid.innerHTML = '';
-
-    // FECHA O MENU SE ESTIVER NO CELULAR
-    if(window.innerWidth <= 768) {
-        toggleSidebar(); 
-    }
-
-    listaCidades.forEach(cidade => {
-        // ... (código de criar card igual) ...
-        const card = document.createElement('div');
-        card.className = 'city-card';
-        // ... resto do código do card ...
-        const bgImage = cidade.imagem || defaultImage;
-        let tagsHTML = '';
-        if(cidade.tags) { cidade.tags.forEach(tag => tagsHTML += `<span class="badge azul">${tag}</span>`); }
-
-        card.innerHTML = `
-            <div class="card-img-wrapper"><img src="${bgImage}" class="card-img"><div class="card-badges">${tagsHTML}</div></div>
-            <div class="card-content">
-                <div><h3>${cidade.name}</h3><p>${cidade.curiosidades ? (typeof cidade.curiosidades === 'string' ? cidade.curiosidades.substring(0, 60) : cidade.curiosidades[0].substring(0,60)) : ""}...</p></div>
-                <span class="view-btn">Explorar <i class="ri-arrow-right-line"></i></span>
-            </div>
-        `;
-        card.onclick = () => openModal(cidade, bgImage);
-        grid.appendChild(card);
-    });
-}
+// Inicializa o sistema
+init();

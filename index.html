@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <div class="ambient-bg"></div>
     <div class="particles"></div>
 
@@ -49,9 +50,8 @@
             </div>
 
             <div class="nav-label">RADAR GLOBAL</div>
-            
             <nav class="nav-groups" id="sidebarMenu"></nav>
-            
+
             <div class="sidebar-footer">
                 <p>VIAJAR É VIVER</p>
             </div>
@@ -77,10 +77,11 @@
         </main>
     </div>
 
+    <!-- ================= MODAL CIDADE ================= -->
     <div id="cityModal" class="modal-overlay">
-      <div class="modal-content">
+        <div class="modal-content">
             <button class="close-modal" onclick="closeModal()">&times;</button>
-            
+
             <div class="modal-header-img" id="modalImg">
                 <div class="modal-gradient"></div>
                 <div class="modal-title-overlay">
@@ -91,33 +92,45 @@
             </div>
 
             <div class="modal-body">
-                <div id="costSection" class="cost-section hidden">
-                    <h3 style="font-family: 'Orbitron', sans-serif; font-size: 1rem; margin-bottom: 15px; color: #001e36;">
-                        <i class="ri-money-dollar-circle-line"></i> ESTIMATIVA DE CUSTOS (DIÁRIO)
+
+                <!-- ========= CUSTO REAL DA VIAGEM ========= -->
+                <div id="realCostSection" class="real-cost-section">
+                    <h3 class="real-cost-title">
+                        <i class="ri-money-dollar-circle-line"></i>
+                        CUSTO REAL DA VIAGEM
                     </h3>
-                    <div class="cost-grid">
-                        <div class="cost-card">
+
+                    <p class="real-cost-subtitle">
+                        Estimativa média diária por pessoa
+                    </p>
+
+                    <div class="real-cost-grid">
+                        <div class="real-cost-card">
                             <i class="ri-restaurant-line"></i>
-                            <h4>Alimentação</h4>
-                            <p id="costFood">---</p>
+                            <span>Alimentação</span>
+                            <strong id="realCostFood">Carregando...</strong>
                         </div>
-                        <div class="cost-card">
+
+                        <div class="real-cost-card">
                             <i class="ri-hotel-bed-line"></i>
-                            <h4>Hospedagem</h4>
-                            <p id="costHotel">---</p>
+                            <span>Hospedagem</span>
+                            <strong id="realCostHotel">Carregando...</strong>
                         </div>
-                        <div class="cost-card">
+
+                        <div class="real-cost-card">
                             <i class="ri-taxi-line"></i>
-                            <h4>Transporte</h4>
-                            <p id="costTransport">---</p>
+                            <span>Transporte</span>
+                            <strong id="realCostTransport">Carregando...</strong>
                         </div>
-                        <div class="cost-card">
+
+                        <div class="real-cost-card">
                             <i class="ri-ticket-2-line"></i>
-                            <h4>Atrações</h4>
-                            <p id="costTickets">---</p>
+                            <span>Atrações</span>
+                            <strong id="realCostTickets">Carregando...</strong>
                         </div>
                     </div>
                 </div>
+                <!-- ======================================= -->
 
                 <div id="modalMenu" class="menu-view">
                     <div id="affiliateContainer" class="affiliate-section"></div>
@@ -131,22 +144,7 @@
                     <h3 id="detailTitle" class="detail-title">Titulo</h3>
                     <div id="detailContent" class="detail-text-area"></div>
                 </div>
-            </div>
 
-            <div class="modal-footer">
-                <a href="#" id="modalMapLink" target="_blank" class="action-btn">
-                    <i class="ri-map-pin-user-fill"></i> VER NO GOOGLE MAPS
-                </a>
-            </div>
-        </div>
-
-                <div id="modalDetails" class="detail-view hidden">
-                    <button class="back-btn" onclick="backToMenu()">
-                        <i class="ri-arrow-left-line"></i> VOLTAR AO MENU
-                    </button>
-                    <h3 id="detailTitle" class="detail-title">Titulo</h3>
-                    <div id="detailContent" class="detail-text-area"></div>
-                </div>
             </div>
 
             <div class="modal-footer">
@@ -156,7 +154,8 @@
             </div>
         </div>
     </div>
-    
+    <!-- =============================================== -->
+
     <script src="script.js"></script>
 </body>
 </html>

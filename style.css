@@ -590,3 +590,244 @@ body {
     .cost-grid { grid-template-columns: 1fr 1fr; }
 }
 .hidden { display: none !important; }
+/* ========== CUSTO REAL DA VIAGEM ========== */
+.real-cost-section {
+    margin-bottom: 40px;
+    padding: 30px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(240, 248, 255, 0.98) 100%);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 102, 255, 0.08);
+    animation: floatUp 0.6s ease-out;
+}
+
+/* Borda animada com gradiente */
+.real-cost-section::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+        var(--neon-cyan), 
+        var(--neon-blue), 
+        var(--neon-green), 
+        var(--neon-coral)
+    );
+    border-radius: 21px;
+    z-index: -1;
+    opacity: 0.5;
+    animation: borderGlow 4s linear infinite;
+    background-size: 300% 300%;
+}
+
+@keyframes borderGlow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.real-cost-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-head);
+    font-size: 1.4rem;
+    color: var(--text-main);
+    margin-bottom: 8px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.real-cost-title i {
+    font-size: 1.6rem;
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: iconPulse 2s infinite;
+}
+
+@keyframes iconPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.real-cost-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+    font-weight: 600;
+    padding-left: 28px;
+}
+
+.real-cost-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.real-cost-card {
+    background: #fff;
+    padding: 25px 20px;
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 196, 230, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 102, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.real-cost-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 196, 230, 0.3);
+    box-shadow: 0 15px 30px rgba(0, 102, 255, 0.15);
+}
+
+.real-cost-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--neon-cyan), var(--neon-blue));
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.real-cost-card:hover::before {
+    opacity: 1;
+}
+
+.real-cost-card i {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Cores específicas para cada ícone */
+.real-cost-card:nth-child(1) i { 
+    color: var(--neon-green); 
+    background: linear-gradient(135deg, var(--neon-green), #00a844);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.real-cost-card:nth-child(2) i { 
+    color: var(--neon-blue); 
+    background: linear-gradient(135deg, var(--neon-blue), #0052cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.real-cost-card:nth-child(3) i { 
+    color: var(--neon-cyan); 
+    background: linear-gradient(135deg, var(--neon-cyan), #0099cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.real-cost-card:nth-child(4) i { 
+    color: var(--neon-coral); 
+    background: linear-gradient(135deg, var(--neon-coral), #ff0040);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.real-cost-card span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.real-cost-card strong {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+    line-height: 1.2;
+    font-family: var(--font-head);
+    background: linear-gradient(90deg, var(--text-main), var(--neon-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Animações */
+@keyframes floatUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .real-cost-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .real-cost-section {
+        padding: 20px;
+        margin: 30px 0;
+    }
+    
+    .real-cost-title {
+        font-size: 1.2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .real-cost-subtitle {
+        padding-left: 0;
+        font-size: 0.85rem;
+    }
+    
+    .real-cost-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .real-cost-card {
+        padding: 20px 15px;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        gap: 15px;
+    }
+    
+    .real-cost-card i {
+        font-size: 2rem;
+        margin-bottom: 0;
+    }
+    
+    .real-cost-card span {
+        font-size: 0.8rem;
+    }
+    
+    .real-cost-card strong {
+        font-size: 1.3rem;
+        text-align: right;
+        min-width: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .real-cost-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+    
+    .real-cost-card strong {
+        text-align: center;
+        min-width: auto;
+    }
+}

@@ -1,5 +1,25 @@
-// --- CONFIGURAÇÃO GLOBAL ---
-const countryFlags = { "Brasil": "br", "Portugal": "pt", "Marrocos": "ma", "Japão": "jp", "Austrália": "au", "Estados Unidos": "us", "Argentina": "ar", "Espanha": "es", "França": "fr", "Chile": "cl", "Inglaterra": "gb", "Itália": "it", "República Dominicana": "do", "México": "mx", "Colômbia": "co" };
+const countryFlags = { 
+    "Brasil": "br", 
+    "Portugal": "pt", 
+    "Marrocos": "ma", 
+    "Japão": "jp", 
+    "Austrália": "au", 
+    "Estados Unidos": "us", 
+    "Argentina": "ar", 
+    "Espanha": "es", 
+    "França": "fr", 
+    "Chile": "cl", 
+    "Inglaterra": "gb", 
+    "Itália": "it", 
+    "República Dominicana": "do", 
+    "México": "mx", 
+    "Colômbia": "co",
+    "Uruguai": "uy",
+    "Panamá": "pa",
+    "Peru": "pe",
+    "Alemanha": "de"
+};// --- CONFIGURAÇÃO GLOBAL ---
+
 const defaultImage = "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop";
 
 // ========== DADOS DE CUSTO REAL DA VIAGEM ==========
@@ -118,7 +138,19 @@ const realCostData = {
     hospedagem: "R$ 130 – R$ 350",
     transporte: "R$ 30 – R$ 70", 
     atracoes: "R$ 50 – R$ 200"
-},
+   },
+   "João Pessoa": {
+    comida: "R$ 60 – R$ 110",
+    hospedagem: "R$ 130 – R$ 350",
+    transporte: "R$ 25 – R$ 60", 
+    atracoes: "R$ 20 – R$ 100"
+    },
+    "Ubatuba": {
+        comida: "R$ 70 – R$ 110",
+        hospedagem: "R$ 160 – R$ 350",
+        transporte: "R$ 30 – R$ 60", 
+        atracoes: "R$ 40 – R$ 90"
+    },
     "Buenos Aires": {
         comida: "R$ 90 – R$ 180",
         hospedagem: "R$ 180 – R$ 450",
@@ -136,6 +168,18 @@ const realCostData = {
     hospedagem: "R$ 200 – R$ 550",
     transporte: "R$ 30 – R$ 70", 
     atracoes: "R$ 50 – R$ 180"
+    },
+    "Bogotá": {
+    comida: "R$ 60 – R$ 110",
+    hospedagem: "R$ 150 – R$ 400",
+    transporte: "R$ 25 – R$ 60", 
+    atracoes: "R$ 40 – R$ 150"
+    },
+    "Montevideu": {
+    comida: "R$ 110 – R$ 200",
+    hospedagem: "R$ 200 – R$ 500",
+    transporte: "R$ 35 – R$ 90", 
+    atracoes: "R$ 40 – R$ 150"
 },
     "Punta Cana": {
         comida: "R$ 180 – R$ 350",
@@ -148,7 +192,7 @@ const realCostData = {
     hospedagem: "R$ 350 – R$ 1200",
     transporte: "R$ 40 – R$ 120",
     atracoes: "R$ 200 – R$ 600"
-},
+   },
     "Orlando": {
         comida: "R$ 250 – R$ 450",
         hospedagem: "R$ 450 – R$ 1200",
@@ -3377,6 +3421,322 @@ const worldData = {
         seguro: "https://www.segurospromo.com.br"
     }
 },
+{
+    name: "João Pessoa",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Waterfront_panoramic_of_Jo%C3%A3o_Pessoa_%28PB%29.jpg/2560px-Waterfront_panoramic_of_Jo%C3%A3o_Pessoa_%28PB%29.jpg",
+    tags: ["Praias", "Tranquilidade", "História"],
+    mapa: "https://goo.gl/maps/joaopessoa",
+    clima: "Tropical Úmido. Sol constante e brisa agradável, com chuvas entre abril e julho.",
+    
+    pontos_turisticos: [
+        "1. Farol do Cabo Branco: Simboliza o ponto mais oriental das Américas (Ponta do Seixas).",
+        "2. Pôr do Sol na Praia do Jacaré: Onde o Bolero de Ravel é tocado diariamente ao saxofone no rio.",
+        "3. Centro Cultural São Francisco: Um dos mais importantes complexos barrocos do Brasil.",
+        "4. Piscinas Naturais de Picãozinho: Recifes de corais acessíveis por catamarã na maré baixa.",
+        "5. Estação Cabo Branco: Obra de Oscar Niemeyer dedicada à ciência, cultura e artes.",
+        "6. Praia de Tambaú e Cabo Branco: As principais orlas urbanas, excelentes para caminhadas.",
+        "7. Ilha de Areia Vermelha: Banco de areia avermelhada que surge no meio do mar na maré baixa.",
+        "8. Parque Solon de Lucena: Lagoa central cercada por palmeiras imperiais, ícone da cidade.",
+        "9. Mercado de Artesanato Paraibano: Melhor lugar para comprar redes, rendas e arte local.",
+        "10. Praia do Coqueirinho: Localizada no litoral sul, considerada uma das mais bonitas do estado."
+    ],
+
+    gastronomia: [
+        "1. Rubacão: Prato típico com arroz, feijão, queijo coalho e carne de sol cremosa.",
+        "2. Carne de Sol com Nata: Carne macia servida com creme de leite fresco e macaxeira.",
+        "3. Peixe à Belle Meunière: Comum nos restaurantes da orla com frutos do mar frescos.",
+        "4. Buchada de Bode: Iguaria tradicional do sertão muito apreciada na capital.",
+        "5. Arroz de Leite: Acompanhamento clássico para carnes assadas.",
+        "6. Tapioca de Tambaú: Visite as barracas de tapioca com recheios variados.",
+        "7. Bolo de Rolo: Embora de origem vizinha, é muito tradicional e consumido na Paraíba.",
+        "8. Queijo Coalho na Brasa: Petisco indispensável nas praias e feiras.",
+        "9. Cuscuz Nordestino: Base da alimentação local, servido do café à janta.",
+        "10. Frutos do Mar: Lagostas, camarões e caranguejos com preços muito acessíveis."
+    ],
+
+    religiao: [
+        "1. Igreja de Nossa Senhora da Guia: Famosa por sua fachada em pedra calcária trabalhada.",
+        "2. Mosteiro de São Bento: Um dos monumentos mais antigos, com arquitetura sóbria e bela.",
+        "3. Catedral Basílica de Nossa Senhora das Neves: Sede da arquidiocese da Paraíba.",
+        "4. Romaria da Penha: Milhares de fiéis caminham 14km anualmente em devoção à santa.",
+        "5. Igreja da Misericórdia: Local histórico de grande importância para a caridade na colônia.",
+        "6. Capela de Nossa Senhora da Penha: Construção à beira-mar que atrai peregrinos.",
+        "7. Festas Juninas: O caráter religioso de São João é fortíssimo em toda a cidade.",
+        "8. Centros Espíritas: A cidade possui uma comunidade atuante com foco em caridade.",
+        "9. Terreiros de Umbanda e Jurema: A Jurema Sagrada é uma tradição espiritual nativa da região.",
+        "10. Igrejas Evangélicas: Presença marcante com templos históricos e modernos."
+    ],
+
+    curiosidades: [
+        "1. Porta do Sol: É aqui que o sol nasce primeiro em todas as Américas.",
+        "2. Terceira Mais Antiga: João Pessoa foi fundada em 1585.",
+        "3. Cidade Verde: Frequentemente citada como uma das cidades mais arborizadas do mundo.",
+        "4. Sem Prédios Altos: Na orla, leis ambientais proíbem prédios com mais de 3 ou 4 andares.",
+        "5. Nome da Cidade: Homenagem a um político paraibano assassinado em 1930; o nome original era Filipeia.",
+        "6. Rio Sanhauá: Foi às margens deste rio que a cidade nasceu, e não no mar.",
+        "7. Ciclovias: A orla de Cabo Branco é fechada para carros todas as manhãs para lazer.",
+        "8. Maré: A vida na cidade gira em torno da tábua de marés; passeios dependem da maré baixa.",
+        "9. Tranquilidade: É conhecida como a capital mais calma e barata do Nordeste.",
+        "10. Sotaque Paraibano: Marcado pelo uso do 'vixe' e uma musicalidade única."
+    ],
+
+    eventos_estacoes: [
+        "1. São João de João Pessoa (Junho): Grandes shows e quadrilhas na Lagoa.",
+        "2. Extremo Cultural (Janeiro): Shows gratuitos de grandes artistas nacionais na praia.",
+        "3. Folia de Rua (Pré-Carnaval): Blocos tradicionais como o 'Muriçocas do Miramar'.",
+        "4. Aniversário da Cidade (5 de Agosto): Festas religiosas e culturais por toda a capital.",
+        "5. Verão (Dez-Março): Época de águas mais cristalinas e cidade cheia de turistas.",
+        "6. Festival de Música Clássica (Novembro): Concertos gratuitos em igrejas históricas.",
+        "7. Inverno (Maio-Julho): Período de chuvas; a temperatura cai levemente mas continua morna.",
+        "8. Natal na Lagoa: Decoração especial e espetáculos de luzes no centro.",
+        "9. Virada de Ano: Queima de fogos e shows nas areias de Tambaú.",
+        "10. Paixão de Cristo: Encenada no adro do Centro Cultural São Francisco."
+    ],
+
+    info_gerais: [
+        "1. Moeda: Real (BRL).",
+        "2. Voltagem: 220v.",
+        "3. Tomada: Tipo N (3 pinos).",
+        "4. DDD: 83.",
+        "5. População: Aprox. 830 mil habitantes.",
+        "6. Gentílico: Pessoense.",
+        "7. Aeroporto: Castro Pinto (JPA).",
+        "8. Água: Beba mineral; a da torneira é tratada mas não recomendada para consumo direto.",
+        "9. Transporte: Aplicativos (Uber/99) funcionam muito bem; a cidade é compacta.",
+        "10. Segurança: Uma das capitais mais seguras do Nordeste, mas evite o centro à noite."
+    ],
+
+    antes_de_ir: [
+        "1. Tábua de Marés: Verifique SEMPRE antes de agendar passeios como Picãozinho ou Areia Vermelha.",
+        "2. Localização: O aeroporto fica na cidade vizinha (Bayeux), cerca de 25-30 min de Tambaú.",
+        "3. Sol: O sol nasce por volta das 5h da manhã e se põe às 17h. Aproveite o dia cedo.",
+        "4. Litoral Sul: Reserve um dia para alugar um carro ou buggy e conhecer as praias do sul (Conde).",
+        "5. Horários do Centro: O centro histórico é mais movimentado durante o dia; à noite prefira a orla.",
+        "6. Roupas: Leves e frescas o ano todo; traga apenas um casaco fino para locais com ar condicionado.",
+        "7. Arroz de Leite: Não estranhe o arroz 'papa', é uma delícia regional.",
+        "8. Hospedagem: Ficar em Tambaú ou Cabo Branco garante que você faça quase tudo a pé.",
+        "9. Banhos de Mar: Verifique a balneabilidade, mas a maioria das praias urbanas é própria.",
+        "10. Silêncio: A cidade dorme cedo em comparação com Recife ou Natal."
+    ],
+
+    numeros: [
+        "1. 190 (Polícia Militar): Emergências.",
+        "2. (83) 3232-1205 (Aeroporto): Informações.",
+        "3. 192 (SAMU): Emergência médica.",
+        "4. 193 (Bombeiros): Resgates.",
+        "5. (83) 3214-8000 (Hospital de Trauma): Referência em urgência.",
+        "6. (83) 3218-4615 (Delegacia do Turista): Localizada em Tambaú.",
+        "7. 118 (Semob): Trânsito e transporte.",
+        "8. (83) 3218-1105 (Terminal Rodoviário): Ônibus interestaduais.",
+        "9. 156 (Prefeitura): Serviços municipais.",
+        "10. (83) 3214-8300 (PBTur): Órgão oficial de turismo."
+    ],
+
+    riscos: [
+        "1. Correntes de Retorno: Algumas áreas de Cabo Branco têm buracos; nade onde houver salva-vidas.",
+        "2. Sol Forte: O índice UV é altíssimo; reaplique protetor solar a cada 2 horas.",
+        "3. Centro à Noite: Ruas desertas fora da área turística podem ser perigosas para caminhadas.",
+        "4. Caranguejo: Se não tiver costume, peça ajuda para abrir para evitar pequenos cortes.",
+        "5. Maré Alta Súbita: Não se distancie muito da costa em bancos de areia sem monitorar a subida da maré.",
+        "6. Chuvas de Inverno: Podem causar alagamentos pontuais em avenidas principais.",
+        "7. Vendedores de Passeio: Procure empresas credenciadas na orla para garantir segurança.",
+        "8. Ouriços: Comuns em áreas de recifes; use sapatilhas de neoprene se for caminhar nos corais.",
+        "9. Trânsito na Epitácio Pessoa: Principal avenida da cidade, pode ficar lenta nos horários de pico.",
+        "10. Hidratação: O calor constante exige beber muita água mineral."
+    ],
+
+    roteiros: {
+        "curto": {
+            titulo: "Jampa Express (2 Dias)",
+            texto: [
+                "Dia 1: Orla de Tambaú/Cabo Branco, Farol do Cabo Branco e Pôr do Sol no Jacaré.",
+                "Dia 2: Piscinas Naturais de Picãozinho (maré baixa) e Centro Histórico à tarde."
+            ]
+        },
+        "medio": {
+            titulo: "Paraíba Essencial (4 Dias)",
+            texto: [
+                "Dias 1 e 2: Siga o roteiro de 2 dias.",
+                "Dia 3: Litoral Sul (Praia de Coqueirinho e Tambaba - opção de nudismo ou não).",
+                "Dia 4: Ilha de Areia Vermelha e final de tarde na Lagoa Solon de Lucena."
+            ]
+        },
+        "longo": {
+            titulo: "Experiência Paraibana (7+ Dias)",
+            texto: [
+                "Dias 1 a 4: Siga o roteiro de 4 dias.",
+                "Dia 5: Litoral Norte (Cabedelo e Fortaleza de Santa Catarina).",
+                "Dia 6: Bate-volta para Campina Grande ou Lajedo de Pai Mateus (Sertão).",
+                "Dia 7: Compras no Mercado de Artesanato e descanso na Praia do Bessa."
+            ]
+        }
+    },
+
+                 links: {
+                      hotel: "https://www.booking.com/searchresults.pt-br.html?city=-649321&aid=304142",
+                      passeio: "https://www.civitatis.com/br/joao-pessoa/",
+                       seguro: "https://www.segurospromo.com.br"
+                }
+            },
+            {
+    name: "Ubatuba",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/c/ca/Praia_do_Estaleiro_-_Ubatuba.png",
+    tags: ["Surfe", "Natureza", "Praias"],
+    mapa: "https://goo.gl/maps/ubatuba",
+    clima: "Tropical Litorâneo. Quente e úmido, conhecida carinhosamente como 'Ubatuba-chuva' pela frequência das precipitações.",
+    
+    pontos_turisticos: [
+        "1. Ilha das Couves: Águas cristalinas ideais para snorkel; acesso controlado por barcos partindo de Picinguaba.",
+        "2. Projeto TAMAR: Centro de conservação de tartarugas marinhas, parada educativa obrigatória no centro.",
+        "3. Aquário de Ubatuba: Um dos melhores do país, com tanque de toque e pinguinário.",
+        "4. Praia de Itamambuca: Palco de campeonatos internacionais de surfe e natureza preservada.",
+        "5. Trilha das Sete Praias: Caminhada clássica que passa por praias desertas como a do Cedro e Bonete.",
+        "6. Ilha Anchieta: Parque Estadual com ruínas de um antigo presídio e trilhas ecológicas.",
+        "7. Praia do Português: Pequena enseada paradisíaca escondida ao lado da Praia de Felix.",
+        "8. Cachoeira do Prumirim: Quedas d'água que deságuam próximas à praia, formando um cenário único.",
+        "9. Rua Guarani: O centro gastronômico e comercial da cidade, perfeita para caminhar à noite.",
+        "10. Praia da Lagoinha: Mar calmo, ideal para famílias e ponto de partida para a Trilha das Sete Praias."
+    ],
+
+    gastronomia: [
+        "1. Azul Marinho: Peixe cozido com banana verde, prato caiçara mais tradicional da região.",
+        "2. Casquinha de Siri: Entrada clássica servida na maioria dos quiosques e restaurantes.",
+        "3. Frutos do Mar na Brasa: Peixes frescos como tainha e sororoca grelhados na hora.",
+        "4. Arroz com Mariscos: Prato rico em sabores do oceano, comum em restaurantes da orla.",
+        "5. Sorvetes de Frutas Nativas: Procure por sabores como cambuci e cupuaçu.",
+        "6. Peixe na Telha: Preparado lentamente com molho de camarão e temperos locais.",
+        "7. Lula à Dorê: Petisco crocante indispensável para quem curte a praia.",
+        "8. Pastel de Camarão: Famoso nas feirinhas e barracas de rua no centro.",
+        "9. Café Caiçara: Geralmente servido com bolo de milho ou paçoca de pinhão nas comunidades.",
+        "10. Cervejas Artesanais: Ubatuba possui microcervejarias locais com rótulos inspirados no mar."
+    ],
+
+    religiao: [
+        "1. Igreja Exaltação da Santa Cruz: Matriz histórica no centro, marco da fundação da cidade.",
+        "2. Festa de São Pedro Pescador: Grande evento em junho com a tradicional benção das embarcações.",
+        "3. Capela de São Francisco: Localizada na Praia da Almada, cenário de festas comunitárias.",
+        "4. Comunidades Quilombolas e Indígenas: Mantêm ritos ancestrais e sincretismo religioso forte.",
+        "5. Procissões Marítimas: Comuns em datas festivas católicas, com barcos decorados.",
+        "6. Centros Espíritas: Presença de grupos dedicados ao estudo e caridade na região central.",
+        "7. Templos Evangélicos: Diversas denominações espalhadas por todos os bairros da cidade.",
+        "8. Presença de Comunidades de Yoga: Muitas focadas em espiritualidade oriental e meditação na natureza.",
+        "9. Gruta que Chora: Local na Praia da Sununga envolto em lendas religiosas e místicas locais.",
+        "10. Folia de Reis: Tradição folclórica e religiosa mantida por grupos da zona norte."
+    ],
+
+    curiosidades: [
+        "1. Capital do Surfe: Oficialmente reconhecida como a capital do surfe no estado de São Paulo.",
+        "2. Ubatuba-Chuva: Apelido carinhoso devido à alta pluviosidade da Serra do Mar.",
+        "3. Trópico de Capricórnio: A linha imaginária atravessa a cidade, marcada por um monumento na BR-101.",
+        "4. 102 Praias: A cidade se orgulha de ter mais de uma centena de praias catalogadas.",
+        "5. Presídio da Ilha Anchieta: Local de uma das maiores rebeliões prisionais da história do Brasil.",
+        "6. Fauna e Flora: Localizada no coração de uma das áreas mais preservadas de Mata Atlântica.",
+        "7. Canoa Caiçara: Ubatuba ainda preserva a fabricação de canoas de um só tronco (voga).",
+        "8. Proximidade com Paraty: Fica a apenas 70km da cidade histórica fluminense.",
+        "9. Observação de Baleias: Entre junho e agosto, é possível avistar baleias jubarte passando pela costa.",
+        "10. Morro do Corcovado: Um dos picos mais altos da região, com trilha desafiadora e vista 360º."
+    ],
+
+    eventos_estacoes: [
+        "1. Verão (Dez-Mar): Alta temporada, águas quentes e cidade extremamente badalada.",
+        "2. Festival do Camarão (Junho/Julho): Grande evento gastronômico no centro da cidade.",
+        "3. Inverno (Jun-Ago): Época de ondas grandes para o surfe e céu limpo (menos chuva).",
+        "4. Ubatuba Jazz Festival: Evento cultural que atrai músicos de renome no outono.",
+        "5. Provas de Natação em Águas Abertas: Travessias famosas que ocorrem em várias praias.",
+        "6. Primavera: Ideal para trilhas e observação de aves (birdwatching).",
+        "7. Corrida de Canoa Caiçara: Competição tradicional que mantém viva a cultura local.",
+        "8. Natal Iluminado: O centro histórico ganha luzes e apresentações de corais.",
+        "9. Outono: Considerada a melhor época para visitar (menos lotação e clima firme).",
+        "10. Etapas de Campeonatos de Surfe: Ocorrem principalmente em Itamambuca e Praia Grande."
+    ],
+
+    info_gerais: [
+        "1. Moeda: Real (BRL).",
+        "2. Voltagem: 127v (maioria).",
+        "3. Tomada: Tipo N (3 pinos).",
+        "4. DDD: 12.",
+        "5. População: Aprox. 93 mil habitantes (triplica na temporada).",
+        "6. Acesso: Rodovias Oswaldo Cruz ou Tamoios.",
+        "7. Pedágio: Não há pedágios dentro da cidade, apenas nas rodovias de acesso.",
+        "8. Estacionamento: Zona Azul digital obrigatória na maioria das praias.",
+        "9. Saúde: Santa Casa de Ubatuba é a principal unidade de urgência.",
+        "10. Transporte: Ônibus circulares ligam as praias do Norte ao Sul."
+    ],
+
+    antes_de_ir: [
+        "1. Borrachudos: Leve repelente (de preferência à base de citronela ou óleo mineral) para trilhas e praias do norte.",
+        "2. Previsão do Tempo: Sempre confira a chuva; o tempo em Ubatuba muda muito rápido.",
+        "3. Lotação: Em feriados, o trânsito na BR-101 (Rio-Santos) pode ser crítico.",
+        "4. Abastecimento: Postos de gasolina são raros nas extremidades (Norte e Sul); abasteça no centro.",
+        "5. Taxa Ambiental: Verifique se a TPA (Taxa de Preservação Ambiental) está ativa para veículos.",
+        "6. Respeite as Correntes: Algumas praias como a Praia Grande e Tombo são perigosas para banho.",
+        "7. Compras: O centro é o melhor lugar para itens de praia e artesanato.",
+        "8. Ilha das Couves: Reserve com antecedência, pois há limite diário de visitantes.",
+        "9. Calçados: Para as trilhas das 7 praias, use tênis com boa aderência.",
+        "10. Dinheiro: Leve um pouco em espécie; alguns quiosques em praias isoladas podem ter sinal de cartão instável."
+    ],
+
+    numeros: [
+        "1. 190 (Polícia Militar): Emergências.",
+        "2. (12) 3834-1000 (Prefeitura): Informações gerais.",
+        "3. 192 (SAMU): Emergência médica.",
+        "4. 193 (Bombeiros): Resgates e salvamento marítimo.",
+        "5. (12) 3832-1333 (Rodoviária): Informações de passagens.",
+        "6. (12) 3833-2050 (Santa Casa): Hospital.",
+        "7. (12) 3832-1150 (CIT - Centro de Informações Turísticas).",
+        "8. 153 (Guarda Civil Municipal).",
+        "9. (12) 3832-6202 (Delegacia de Polícia).",
+        "10. (12) 3832-7043 (Capitania dos Portos)."
+    ],
+
+    riscos: [
+        "1. Afogamentos: Atenção redobrada em praias de tombo e mar aberto.",
+        "2. Animais Peçonhentos: Em trilhas fechadas, atenção a cobras e aranhas.",
+        "3. Alagamentos: Chuvas intensas podem causar queda de barreiras na Rio-Santos.",
+        "4. Carros na Areia: É proibido e passível de multa pesada.",
+        "5. Correntezas: Não nade em canais de rios que deságuam no mar.",
+        "6. Furto em Veículos: Evite deixar objetos de valor à mostra em carros estacionados perto de trilhas.",
+        "7. Rochas Escorregadias: Muito cuidado ao caminhar em costões rochosos.",
+        "8. Sol: O mormaço de Ubatuba queima tanto quanto o sol forte; use proteção.",
+        "9. Maré: Fique atento à subida da maré ao atravessar rios em trilhas.",
+        "10. Ingestão de Água: Evite engolir água do mar ou rios próximos à zona urbana."
+    ],
+
+    roteiros: {
+        "curto": {
+            titulo: "Ubatuba Express (2 Dias)",
+            texto: [
+                "Dia 1: Projeto TAMAR, Aquário e pôr do sol na Praia do Itaguá.",
+                "Dia 2: Praia do Felix e Praia do Português (Norte) ou Ilha das Couves."
+            ]
+        },
+        "medio": {
+            titulo: "O Melhor de Uba (4 Dias)",
+            texto: [
+                "Dias 1 e 2: Siga o roteiro de 2 dias.",
+                "Dia 3: Trilha das Sete Praias (partindo da Lagoinha) até a Praia da Fortaleza.",
+                "Dia 4: Litoral Sul: Praia do Lázaro e Gruta que Chora na Sununga."
+            ]
+        },
+        "longo": {
+            titulo: "Paraíso Caiçara (7+ Dias)",
+            texto: [
+                "Dias 1 a 4: Siga o roteiro de 4 dias.",
+                "Dia 5: Passeio de escuna para a Ilha Anchieta.",
+                "Dia 6: Cachoeira e Praia do Prumirim.",
+                "Dia 7: Dia de surfe ou relax na Praia de Itamambuca."
+            ]
+        }
+    },
+
+    links: {
+        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-639014&aid=304142",
+        passeio: "https://www.civitatis.com/br/ubatuba/",
+        seguro: "https://www.segurospromo.com.br"
+    }
+},
+            
+            
 
         ],
         "Argentina": [
@@ -3873,6 +4233,322 @@ const worldData = {
         links: {
             hotel: "https://www.booking.com/searchresults.pt-br.html?city=-579344&aid=304142",
             passeio: "https://www.civitatis.com/br/cartagena-de-indias/",
+            seguro: "https://www.segurospromo.com.br"
+        }
+    },{
+    name: "Bogotá",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/56_-_Bogota_-_D%C3%A9cembre_2008.jpg/2560px-56_-_Bogota_-_D%C3%A9cembre_2008.jpg",
+    tags: ["Capital", "Cultura", "Altitude"],
+    mapa: "https://goo.gl/maps/bogota",
+    clima: "Temperado de Montanha. Fresco durante o dia e frio à noite devido à altitude (2.640m).",
+    
+    pontos_turisticos: [
+        "1. Cerro de Monserrate: Suba de teleférico ou funicular para ter a melhor vista panorâmica da cidade.",
+        "2. Museo del Oro: Abriga a maior coleção de ourivesaria pré-hispânica do mundo.",
+        "3. La Candelaria: O bairro histórico com casas coloridas, arte de rua e arquitetura colonial.",
+        "4. Museo Botero: Museu gratuito que exibe as obras volumosas do mestre Fernando Botero.",
+        "5. Plaza de Bolívar: O coração político do país, cercada pelo Capitólio, Palácio da Justiça e Catedral.",
+        "6. Biblioteca Virgilio Barco: Obra-prima do arquiteto Rogelio Salmona com design circular único.",
+        "7. Jardim Botânico de Bogotá: O maior do país, com foco nos ecossistemas dos Andes.",
+        "8. Usaquén: Bairro charmoso famoso pelo seu mercado de pulgas aos domingos e ótimos restaurantes.",
+        "9. Santuário Nuestra Señora del Carmen: Igreja gótica listrada em vermelho e branco muito fotogênica.",
+        "10. Catedral de Sal de Zipaquirá: Localizada a 1h de Bogotá, é uma igreja esculpida dentro de uma mina de sal."
+    ],
+
+    gastronomia: [
+        "1. Ajiaco Santafereño: Sopa tradicional de frango, três tipos de batata e guasca (erva local).",
+        "2. Chocolate Completo: Chocolate quente servido com queijo (para mergulhar!), pão e almojábana.",
+        "3. Bandeja Paisa: Embora seja de Medellín, é muito popular; um prato farto com carnes, feijão e ovo.",
+        "4. Tamal Bogotano: Massa de milho cozida na folha de bananeira com carne e vegetais.",
+        "5. Obleas: Duas bolachas finas e crocantes recheadas com doce de leite (arequipe) e outros doces.",
+        "6. Café Colombiano: Prove os cafés de origem única em cafeterias como a Juan Valdez ou Amor Perfecto.",
+        "7. Chicha: Bebida fermentada de milho, muito tradicional no bairro La Candelaria.",
+        "8. Lulo e Gulupa: Frutas exóticas deliciosas em sucos naturais.",
+        "9. Empanadas Bogotanas: Fritas e crocantes, geralmente acompanhadas de molho ají.",
+        "10. Postre de Natas: Doce típico feito com a nata do leite fervido, canela e passas."
+    ],
+
+    religiao: [
+        "1. Catedral Primada de Colombia: A maior e mais importante igreja do país, na Plaza de Bolívar.",
+        "2. Basílica del Señor de Monserrate: Local de peregrinação no topo do cerro.",
+        "3. Igreja de San Francisco: A igreja mais antiga de Bogotá, famosa por seu altar dourado.",
+        "4. Semana Santa: Celebrações intensas com procissões no centro histórico.",
+        "5. Virgen de Chiquinquirá: Padroeira da Colômbia, com forte devoção na capital.",
+        "6. Missas de Domingo: Tradição forte onde as famílias se reúnem em igrejas de bairro.",
+        "7. Sincretismo: Presença de ritos ancestrais indígenas integrados a celebrações locais.",
+        "8. Comunidades Cristãs: Bogotá possui diversas denominações com templos modernos.",
+        "9. Cemitério Central: Marco histórico com mausoléus de figuras religiosas e políticas.",
+        "10. Igreja da Terceira Ordem: Pequena e rica em detalhes barrocos."
+    ],
+
+    curiosidades: [
+        "1. Atenas Sul-Americana: Apelido recebido por sua vasta quantidade de universidades e museus.",
+        "2. 2.640 metros: Bogotá é uma das capitais mais altas do mundo.",
+        "3. Ciclovia: A cidade tem uma das maiores redes de ciclovias do mundo e fecha ruas aos domingos.",
+        "4. Grafite Legal: A prefeitura incentiva o grafite, tornando a cidade uma galeria a céu aberto.",
+        "5. Água Fria: A água das torneiras vem dos páramos (ecossistemas de alta montanha) e é potável.",
+        "6. Sem Estações: Não há verão ou inverno definidos; o clima depende apenas se está chovendo ou não.",
+        "7. Emeraldas: Bogotá é o maior centro mundial de lapidação e comércio de esmeraldas.",
+        "8. Sotaque Bogotano: Considerado um dos espanhóis mais claros e fáceis de entender do mundo.",
+        "9. TransMilenio: Sistema de ônibus articulados que serviu de modelo para várias cidades no mundo.",
+        "10. Gastronomia Estrelada: A cidade tornou-se um dos principais polos gastronômicos da América Latina."
+    ],
+
+    eventos_estacoes: [
+        "1. Festival Ibero-Americano de Teatro (Março/Abril): Um dos maiores do mundo, a cada dois anos.",
+        "2. Rock al Parque (Novembro): Maior festival gratuito de rock da América Latina.",
+        "3. Feira Internacional do Livro (FILBo - Abril): Evento massivo que atrai autores mundiais.",
+        "4. Festival de Verão (Agosto): Shows, pipas e eventos esportivos no Parque Simón Bolívar.",
+        "5. Natal em Bogotá: A iluminação da Carrera Séptima e dos parques é espetacular.",
+        "6. Jazz al Parque (Setembro): Concertos gratuitos de alta qualidade ao ar livre.",
+        "7. Carnaval de Bogotá (Agosto): Celebração da fundação da cidade.",
+        "8. Época de Chuvas (Out-Nov): Meses com maior pluviosidade, ideal para museus.",
+        "9. Domingo de Ciclovia: Todas as semanas as principais avenidas fecham para carros.",
+        "10. Alimentarte Food Festival (Agosto): Grande evento beneficente de gastronomia no Parque el Virrey."
+    ],
+
+    info_gerais: [
+        "1. Moeda: Peso Colombiano (COP).",
+        "2. Voltagem: 110v.",
+        "3. Tomada: Tipo A e B (padrão americano).",
+        "4. DDD: +57 (601).",
+        "5. População: Aprox. 8 milhões de habitantes.",
+        "6. Gentílico: Rollo ou Bogotano.",
+        "7. Aeroporto: El Dorado (BOG) - um dos melhores da região.",
+        "8. Transporte: Use TransMilenio ou Apps (Uber, Cabify, InDrive).",
+        "9. Altitude: Pode causar cansaço (soroche) nos primeiros dias.",
+        "10. Gorjeta: 10% incluída na conta como sugestão (propina)."
+    ],
+
+    antes_de_ir: [
+        "1. Roupas: Traga sempre um casaco. O clima muda de sol para frio em minutos.",
+        "2. Altitude: Beba muita água e evite álcool no primeiro dia para se aclimatar.",
+        "3. Segurança: Tenha cuidado com celular em áreas muito cheias no centro.",
+        "4. Táxis: Prefira pedir por aplicativo para garantir o preço e a segurança.",
+        "5. Trânsito: O tráfego em Bogotá (o 'trancón') é intenso; planeje seus deslocamentos.",
+        "6. Museus: Muitos fecham às segundas-feiras. O Museu do Ouro fecha às segundas.",
+        "7. Dinheiro: Tenha pesos em espécie para mercados e lojas pequenas.",
+        "8. Registro de Entrada: Verifique o formulário Check-Mig antes de voar para a Colômbia.",
+        "9. Bairros: Hospede-se no Chapinero ou Zona Rosa para mais segurança e opções noturnas.",
+        "10. Guarda-chuva: Item indispensável na mochila."
+    ],
+
+    numeros: [
+        "1. 123: Emergência nacional única.",
+        "2. (601) 266 2000: Aeroporto El Dorado.",
+        "3. 127: Polícia de trânsito.",
+        "4. (601) 337 4413: Polícia de Turismo.",
+        "5. (601) 744 3200: Embaixada do Brasil em Bogotá.",
+        "6. 125: Emergência de saúde.",
+        "7. 119: Bombeiros.",
+        "8. (601) 423 3600: Terminal de Transportes (Rodoviária).",
+        "9. (601) 218 4129: Hospital de Clínicas (Privado).",
+        "10. 195: Informações da prefeitura."
+    ],
+
+    riscos: [
+        "1. Soroche (Mal de Altitude): Dor de cabeça e tontura são comuns no início.",
+        "2. Furtos: Prática comum em locais turísticos; use a mochila na frente em locais cheios.",
+        "3. 'Não dar papaya': Expressão local que significa não ostentar valores ou facilitar para ladrões.",
+        "4. Clima: Mudanças bruscas podem causar resfriados; vista-se em 'camadas'.",
+        "5. Cambistas de rua: Evite trocar dinheiro na rua; use casas de câmbio em shoppings.",
+        "6. Trânsito: Atravessar a rua exige cuidado, os motoristas nem sempre param.",
+        "7. Áreas isoladas: Evite caminhar em partes desertas do centro histórico à noite.",
+        "8. Golpes em Táxis: Sempre confirme se o taxímetro está ligado ou o valor no App.",
+        "9. Poluição: O trânsito pesado pode incomodar pessoas com problemas respiratórios.",
+        "10. GPS: No centro, ruas com prédios altos podem fazer o sinal oscilar."
+    ],
+
+    roteiros: {
+        "curto": {
+            titulo: "Bogotá Express (2 Dias)",
+            texto: [
+                "Dia 1: La Candelaria, Museu Botero, Museu do Ouro e pôr do sol em Monserrate.",
+                "Dia 2: Praça de Bolívar e tarde gastronômica na Zona G (Chapinero)."
+            ]
+        },
+        "medio": {
+            titulo: "Cultura e Arredores (4 Dias)",
+            texto: [
+                "Dias 1 e 2: Siga o roteiro de 2 dias.",
+                "Dia 3: Bate-volta para a Catedral de Sal de Zipaquirá.",
+                "Dia 4: Bairro de Usaquén (especialmente domingo) e Jardim Botânico."
+            ]
+        },
+        "longo": {
+            titulo: "Imersão Andina (7+ Dias)",
+            texto: [
+                "Dias 1 a 4: Siga o roteiro de 4 dias.",
+                "Dia 5: Trekking na Quebrada La Vieja e compras na Zona T.",
+                "Dia 6: Visita à Laguna de Guatavita (Lenda do El Dorado).",
+                "Dia 7: Tour de Grafite e noite no Andrés Carne de Res em Chía."
+            ]
+        }
+    },
+
+    links: {
+        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-378292&aid=304142",
+        passeio: "https://www.civitatis.com/br/bogota/",
+        seguro: "https://www.segurospromo.com.br"
+    }
+},
+    
+],
+"Uruguai": [
+    {
+        name: "Montevideu",
+        imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Piscinas_Trouville.jpg/960px-Piscinas_Trouville.jpg",
+        tags: ["Cultura", "Histórica", "Gastronomia"],
+        mapa: "https://goo.gl/maps/montevideo",
+        clima: "Temperado. Verões quentes e invernos frios e úmidos, com ventos frequentes do Rio da Prata.",
+        
+        pontos_turisticos: [
+            "1. Plaza Independencia: O coração da cidade, onde se encontra o Monumento e Mausoléu ao General Artigas.",
+            "2. Palacio Salvo: Um dos edifícios mais icônicos da América do Sul, com sua torre imponente.",
+            "3. Ciudad Vieja: O centro histórico com ruas de pedra, fachadas coloniais e livrarias charmosas.",
+            "4. Mercado del Puerto: Antigo mercado de ferro que hoje abriga as melhores 'parrilladas' da cidade.",
+            "5. Teatro Solís: O principal palco do país, com arquitetura neoclássica e tours guiados fascinantes.",
+            "6. Rambla de Montevidéu: Uma orla de 22km perfeita para caminhar, andar de bicicleta ou tomar um mate.",
+            "7. Estadio Centenario: Monumento do Futebol Mundial, palco da primeira final de Copa do Mundo em 1930.",
+            "8. Museo Andes 1972: Memorial emocionante sobre a tragédia e o milagre do voo nos Andes.",
+            "9. Parque Rodó: Grande área verde com lagos, museu de artes visuais e uma feira tradicional aos domingos.",
+            "10. Castillo Pittamiglio: Edifício misterioso repleto de símbolos alquímicos e arquitetura inusitada."
+        ],
+
+        gastronomia: [
+            "1. Chivito: O sanduíche nacional, generoso em carne, presunto, queijo, ovo e diversos acompanhamentos.",
+            "2. Asado a la Parrilla: Cortes de carne uruguaia (como o bife de ancho) assados na lenha.",
+            "3. Dulce de Leche: O Uruguai se orgulha de produzir um dos melhores e mais cremosos doces de leite do mundo.",
+            "4. Alfajores: O acompanhamento perfeito para o café, com camadas de doce de leite e chocolate.",
+            "5. Mate: Mais que uma bebida, é um símbolo cultural que os uruguaios carregam para todo lado.",
+            "6. Vinho Tannat: A uva emblemática do Uruguai, produzindo vinhos tintos encorpados e premiados.",
+            "7. Fainá: Uma massa fina à base de farinha de grão-de-bico, tradicionalmente servida sobre a pizza.",
+            "8. Torta Frita: Massa frita simples e deliciosa, consumida especialmente em dias de chuva.",
+            "9. Grappamiel: Bebida alcoólica típica que mistura grappa e mel, ideal para aquecer no inverno.",
+            "10. Milanesa a la Napolitana: Prato popular de carne empanada com queijo, presunto e molho de tomate."
+        ],
+
+        religiao: [
+            "1. Catedral Metropolitana: Localizada na Plaza Constitución, um marco histórico e religioso importante.",
+            "2. Estado Laico: O Uruguai é o país mais laico da América Latina, onde feriados religiosos têm nomes civis.",
+            "3. Igreja do Sagrado Coração (Seminário): Impressionante arquitetura neogótica no bairro Cordón.",
+            "4. Santuário de Iemanjá: Milhares se reúnem nas praias em 2 de fevereiro para homenagear a Rainha do Mar.",
+            "5. Parroquia San Pedro: Localizada no coração da Ciudad Vieja.",
+            "6. Tradições Judaicas: Montevidéu possui uma comunidade judaica histórica e ativa, especialmente no bairro Reus.",
+            "7. Sincretismo: Influências africanas (Candombe) mescladas a manifestações culturais-religiosas.",
+            "8. Igreja de las Carmelitas: Localizada no belo bairro de El Prado, cercada por jardins.",
+            "9. Cemitério Central: Espaço de arte tumular e onde estão enterradas grandes figuras da história uruguaia.",
+            "10. Festas Populares: O Carnaval uruguaio, o mais longo do mundo, possui raízes em tradições afro-religiosas."
+        ],
+
+        curiosidades: [
+            "1. Carnaval mais longo: Dura 40 dias, com o famoso desfile de Llamadas e as Murmúrias.",
+            "2. Mate 24h: É comum ver pessoas com garrafas térmicas debaixo do braço em qualquer lugar da cidade.",
+            "3. Educação: O Uruguai foi um dos primeiros países do mundo a oferecer ensino gratuito em todos os níveis.",
+            "4. Sem Feriados Religiosos: O Natal é oficialmente o 'Dia da Família' e a Semana Santa é a 'Semana do Turismo'.",
+            "5. Candombe: Ritmo de tambores declarado Patrimônio da UNESCO, pulsando nos bairros Sur e Palermo.",
+            "6. Pequeno gigante: O Uruguai tem apenas 3,4 milhões de habitantes, mas uma produção cultural imensa.",
+            "7. Maconha legalizada: O Uruguai foi o primeiro país a regular totalmente o mercado de cannabis.",
+            "8. Estilo de vida: Montevidéu é conhecida pelo ritmo mais lento e qualidade de vida superior às outras capitais.",
+            "9. Prédios Antigos: A cidade preserva muitos elevadores de grade e fachadas do início do século XX.",
+            "10. Rios que parecem mar: O Rio da Prata é tão largo aqui que é impossível ver o outro lado."
+        ],
+
+        eventos_estacoes: [
+            "1. Carnaval de Montevidéu (Jan-Fev): Desfiles de Candombe e apresentações de Murga por toda a cidade.",
+            "2. Semana do Turismo (Abril): Grande movimento de visitantes e eventos de rodeio (Criollas) no Prado.",
+            "3. Inverno (Jun-Ago): Época ideal para desfrutar das parrilladas e vinhos tintos Tannat.",
+            "4. Noite da Nostalgia (24 de Agosto): A maior festa do país, onde todos saem para dançar hits do passado.",
+            "5. Primavera (Set-Nov): Os jardins do bairro El Prado ficam em plena floração.",
+            "6. Dia do Patrimônio (Outubro): Prédios históricos e museus abrem as portas gratuitamente.",
+            "7. Verão (Dez-Mar): A cidade fica vibrante, com praias fluviais lotadas e muitos eventos ao ar livre.",
+            "8. Museus na Noite (Dezembro): Evento cultural com horários estendidos e shows gratuitos.",
+            "9. Feria de Tristán Narvaja: O mercado de pulgas gigante que acontece todos os domingos o ano todo.",
+            "10. Natal e Réveillon: Celebrações familiares e queima de fogos na Rambla."
+        ],
+
+        info_gerais: [
+            "1. Moeda: Peso Uruguaio (UYU). Cartões de crédito são amplamente aceitos.",
+            "2. Voltagem: 220v.",
+            "3. Tomada: Tipo L (três pinos em linha) ou Tipo C (dois pinos redondos).",
+            "4. DDD: +598.",
+            "5. População: Aprox. 1.3 milhão de habitantes.",
+            "6. Gentílico: Montevideano (ou Uruguayo).",
+            "7. Aeroporto: Aeroporto Internacional de Carrasco (MVD), um dos mais bonitos do mundo.",
+            "8. Devolução de IVA: Pagando com cartão estrangeiro em restaurantes, você recebe um desconto de aprox. 18-22%.",
+            "9. Transporte: Ônibus (sistema STM) funcionam bem; Apps como Uber e Cabify são comuns.",
+            "10. Horários: O comércio costuma fechar para o almoço (siesta) em áreas menos centrais."
+        ],
+
+        antes_de_ir: [
+            "1. Documentação: Brasileiros podem entrar apenas com RG original e em bom estado (menos de 10 anos).",
+            "2. Cartão de Crédito: Use para pagar restaurantes para aproveitar o desconto do IVA uruguaio.",
+            "3. Vento: Mesmo no verão, a Rambla pode ventar muito à noite; tenha sempre um casaco leve.",
+            "4. Água: A água da torneira é potável, mas o sabor pode ser diferente; água mineral é barata.",
+            "5. Siesta: Fique atento, pois alguns museus e lojas menores fecham entre 13h e 16h.",
+            "6. Seguro Viagem: Embora não seja obrigatório, é altamente recomendado.",
+            "7. Gorjeta (Propina): Geralmente não está incluída na conta; o padrão é 10%.",
+            "8. Adaptador: Leve um adaptador universal para o padrão de tomada uruguaio.",
+            "9. Chip de Celular: A Antel tem boa cobertura e chips fáceis de comprar.",
+            "10. Domingo: Muitas lojas fecham aos domingos; reserve o dia para a feira Tristán Narvaja."
+        ],
+
+        numeros: [
+            "1. 911: Emergências gerais.",
+            "2. +598 21901 (Aeroporto): Informações de voos.",
+            "3. 105: Emergência médica móvel.",
+            "4. 104: Bombeiros.",
+            "5. +598 2901 0101 (Terminal Tres Cruces): Ônibus para todo o país.",
+            "6. +598 2901 1830 (Polícia Turística).",
+            "7. +598 2708 0045 (Consulado do Brasil em Montevidéu).",
+            "8. 1954 (Táxi Radio): Pedido de táxis por telefone.",
+            "9. 150 (Informações sobre o tempo e hora).",
+            "10. +598 1885 (Hospital de Clínicas): Emergência pública."
+        ],
+
+        riscos: [
+            "1. Inverno Úmido: O frio de Montevidéu parece pior devido à umidade e ao vento forte.",
+            "2. Furtos por descuido: Comuns na Ciudad Vieja à noite; evite ruas muito desertas.",
+            "3. Câmbio no Aeroporto: Taxas costumam ser ruins; prefira trocar dinheiro no centro ou usar cartão.",
+            "4. Preços: O custo de vida no Uruguai é um dos mais altos da América Latina.",
+            "5. 'Trapitos': Flanelinhas que cuidam dos carros; é costume dar uma pequena gorjeta.",
+            "6. Correntes no Rio: A água da Rambla não é recomendada para banho em todos os pontos.",
+            "7. Manifetações: Praça Independência e a Av. 18 de Julio costumam ter protestos pacíficos.",
+            "8. Sol: Mesmo com vento fresco, o sol queima. Use protetor solar.",
+            "9. GPS: Em ruas estreitas da Ciudad Vieja, o sinal pode oscilar levemente.",
+            "10. Comida Tardia: Restaurantes de jantar costumam abrir mais tarde, por volta das 20h."
+        ],
+
+        roteiros: {
+            "curto": {
+                titulo: "Montevidéu Express (2 Dias)",
+                texto: [
+                    "Dia 1: Plaza Independencia, Teatro Solís e almoço no Mercado del Puerto. Pôr do sol na Rambla.",
+                    "Dia 2: Ciudad Vieja pela manhã e Parque Rodó com visita ao Museu Nacional de Artes Visuais à tarde."
+                ]
+            },
+            "medio": {
+                titulo: "História e Vinho (4 Dias)",
+                texto: [
+                    "Dias 1 e 2: Siga o roteiro de 2 dias.",
+                    "Dia 3: Estádio Centenario pela manhã e tour em uma Vinícola (Bodega) nos arredores de Canelones.",
+                    "Dia 4: Bairro El Prado (Jardim Botânico e Rosaleda) e compras na Av. 18 de Julio."
+                ]
+            },
+            "longo": {
+                titulo: "Uruguai Essencial (7+ Dias)",
+                texto: [
+                    "Dias 1 a 4: Siga o roteiro de 4 dias.",
+                    "Dia 5: Bate-volta para a histórica Colonia del Sacramento (2h30 de ônibus).",
+                    "Dia 6: Bate-volta para a badalada Punta del Este (2h de ônibus).",
+                    "Dia 7: Domingo na Feira de Tristán Narvaja e descanso em Pocitos."
+                ]
+            }
+        },
+
+        links: {
+            hotel: "https://www.booking.com/searchresults.pt-br.html?city=-907542&aid=304142",
+            passeio: "https://www.civitatis.com/br/montevideo/",
             seguro: "https://www.segurospromo.com.br"
         }
     }

@@ -1,5 +1,5 @@
 // --- CONFIGURAÇÃO GLOBAL ---
-const countryFlags = { "Brasil": "br", "Portugal": "pt", "Marrocos": "ma", "Japão": "jp", "Austrália": "au", "Estados Unidos": "us", "Argentina": "ar", "Espanha": "es", "França": "fr" };
+const countryFlags = { "Brasil": "br", "Portugal": "pt", "Marrocos": "ma", "Japão": "jp", "Austrália": "au", "Estados Unidos": "us", "Argentina": "ar", "Espanha": "es", "França": "fr", "Chile": "cl" };
 const defaultImage = "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop";
 /* BANCO DE DADOS COMPLETO */
 const worldData = {
@@ -116,6 +116,19 @@ const worldData = {
                     "8. 180 (Central da Mulher): Denúncias e apoio em casos de violência contra a mulher.",
                     "9. 151 (Procon): Para denunciar preços abusivos ou problemas graves com estabelecimentos.",
                     "10. 191 (Polícia Rodoviária): Emergências se você estiver nas estradas federais chegando ou saindo do Rio."
+                ],
+                // --- NOVO: RISCOS E ERROS (RIO DE JANEIRO) ---
+                riscos: [
+                    "1. Gangue da Bicicleta: No Centro e Copacabana, evite usar o celular na borda da calçada. Eles passam de bike e puxam.",
+                    "2. Praias à Noite: Não fique na areia de Copacabana ou Ipanema de madrugada. É escuro e alvo fácil para assaltos.",
+                    "3. Golpe da Caipirinha: Em quiosques, pergunte o preço ANTES. Eles oferecem 'prova grátis' e cobram R$ 50 depois.",
+                    "4. Centro no Domingo: Evite a região da Candelária e Centro Financeiro no fim de semana. Fica deserto e perigoso.",
+                    "5. GPS na Favela: Cuidado ao usar Waze/Google Maps na Linha Vermelha ou Amarela. Não entre em ruas desconhecidas para cortar caminho.",
+                    "6. Táxi sem Taxímetro: Recuse táxis que querem cobrar preço fechado 'no grito'. Exija o taxímetro ou use Uber.",
+                    "7. Trilhas Sozinho: Não faça trilhas desertas (como a do Morro da Urca ou Corcovado) sozinho e com equipamentos caros.",
+                    "8. Cambistas: Nunca compre ingressos de desconhecidos na porta do Maracanã ou Bondinho. São quase sempre falsos.",
+                    "9. Pedintes Agressivos: Na Lapa, alguns vendedores de balas podem ser agressivos se você negar. Seja firme, mas educado e siga andando.",
+                    "10. Maré Alta: Respeite a bandeira vermelha. O mar do Rio tem correntes de retorno que puxam até nadadores experientes."
                 ],
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?city=-666610&aid=304142", 
@@ -239,6 +252,19 @@ const worldData = {
                     "8. (11) 5090-9000 (Aeroporto Congonhas - CGH): Informações do aeroporto central.",
                     "9. 180 (Central da Mulher): Denúncias e apoio em casos de violência.",
                     "10. 0800 770 7722 (Metrô SP): Informações sobre linhas, estações e objetos perdidos."
+                ],
+                // --- NOVO: RISCOS E ERROS (SÃO PAULO) ---
+                riscos: [
+                    "1. Gangue da Bike (Paulista): Na Av. Paulista, NUNCA use o celular na beira da calçada. Eles passam de bicicleta e arrancam da mão em segundos.",
+                    "2. Vidro Aberto no Trânsito: Em engarrafamentos ou semáforos, mantenha os vidros fechados. Assaltantes quebram o vidro para pegar o celular no painel.",
+                    "3. Golpe do Tinder: Cuidado extremo ao marcar encontros por apps. O 'Golpe do Amor' (sequestro relâmpago) aumentou muito em SP.",
+                    "4. Centro Histórico (Sé/República): A região da Praça da Sé e arredores é muito perigosa devido ao alto número de usuários de drogas e furtos. Evite.",
+                    "5. Cracolândia: O fluxo de usuários muda de lugar no centro (Santa Ifigênia/Campos Elíseos). Se ver aglomeração na rua, dê meia volta imediatamente.",
+                    "6. Pix na Rua: Evite andar com o app do banco principal no celular de rua. Tenha um celular 'do ladrão' ou limite de Pix baixo.",
+                    "7. Falso Entregador: Motoqueiros com mochila de iFood abordam pedestres ou carros parados. Fique atento a motos com duas pessoas.",
+                    "8. Golpe da Maquininha (Táxi/Ambulante): Confira sempre o valor no visor antes de aproximar o cartão. Eles digitam um valor maior ou trocam o cartão.",
+                    "9. Vila Madalena à Noite: Bairro boêmio seguro, mas na saída das baladas, fique atento ao esperar Uber na calçada escura.",
+                    "10. Trânsito na Chuva: SP para quando chove. Não marque voos ou compromissos com horário justo em dias de tempestade, você vai perder."
                 ],
                 
                 // SEUS LINKS DE AFILIADO (ID 304142)
@@ -365,6 +391,19 @@ const worldData = {
                     "9. 156 (Fala Cidadão): Prefeitura de Gramado (dúvidas sobre a cidade e trânsito).",
                     "10. (54) 3286-8800 (Rádio Táxi Gramado): Serviço de transporte seguro 24 horas."
                 ],
+                // --- NOVO: RISCOS E ERROS (GRAMADO) ---
+                riscos: [
+                    "1. Subestimar o Frio: A umidade da serra faz a sensação térmica ser muito menor que o termômetro. Leve casaco pesado mesmo se a previsão for 10ºC.",
+                    "2. Filas de Fondue: Em alta temporada (julho), chegar num restaurante famoso sem reserva às 20h significa esperar 2 horas na rua gelada. Reserve!",
+                    "3. Neblina na Estrada: A subida da serra à noite ou de manhã cedo costuma ter neblina (cerração) zero visibilidade. Dirija com muito cuidado.",
+                    "4. Voltagem Errada: Gramado é 220V (diferente de Porto Alegre que é 110V). Cuidado para não queimar secadores e chapinhas.",
+                    "5. Estacionamento no Centro: É caro e difícil de achar. O sistema rotativo tem fiscais rigorosos. Use Uber ou estacione mais longe.",
+                    "6. Fondue Muito Barato: Desconfie de promoções agressivas na rua (ex: R$ 39,90). Geralmente a qualidade do queijo e chocolate é baixa.",
+                    "7. Natal Luz em Cima da Hora: Os ingressos para os grandes shows esgotam meses antes. Não deixe para comprar na bilheteria na hora.",
+                    "8. Achar que Neva Sempre: Neve é um fenômeno raro. Não viaje com a certeza absoluta de ver neve para não se frustrar (mas geada é comum!).",
+                    "9. Chocolate 'Pega Turista': Existem dezenas de marcas. Prove antes de comprar caixas grandes. Algumas têm mais gordura hidrogenada que cacau.",
+                    "10. Uber na Chuva: Quando chove ou acaba um show do Natal Luz, conseguir um Uber pode demorar muito. Tenha o telefone de um Rádio Táxi salvo."
+                ],
                 // SEUS LINKS DE AFILIADO (ID 304142)
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?city=-644910&aid=304142", 
@@ -489,6 +528,21 @@ const worldData = {
                     "9. (45) 3521-1951 (Hospital Municipal): O Padre Germano Lauck é a referência pública de emergência.",
                     "10. (45) 3522-1315 (Aduana/Receita Federal): Informações sobre cotas de compras e impostos na Ponte da Amizade."
                 ],
+                // --- NOVO: RISCOS E ERROS (FOZ DO IGUAÇU) ---
+                riscos: [
+                    "1. 'Guias' de Rua no Paraguai: Ao cruzar a ponte, homens vão te abordar oferecendo ajuda ou estacionamento. IGNORE. Eles ganham comissão para te levar em lojas ruins.",
+                    "2. Quatis nas Cataratas: Eles parecem fofos, mas são agressivos e mordem se sentirem cheiro de comida. Não abra lanches nas trilhas, eles atacam em bando.",
+                    "3. Eletrônicos na Rua: Nunca compre pen drives, perfumes ou celulares de ambulantes na rua em Ciudad del Este. São 100% falsificados ou golpe (caixa vazia).",
+                    "4. Molhar Eletrônicos: Na passarela da Garganta do Diabo, o spray de água é violento. Se seu celular não for à prova d'água, use capinha ou vai perder o aparelho.",
+                    "5. Cota de Compras: A cota é de US$ 500 via terrestre. Se passar disso, declare! A fiscalização na aduana brasileira é frequente e a multa é alta.",
+                    "6. Táxi x Uber na Fronteira: Uber brasileiro não pode cruzar a fronteira (o seguro não cobre). Para ir ao Paraguai/Argentina, use ônibus internacional, táxi ou transfer.",
+                    "7. Documento Vencido: RG com mais de 10 anos ou em mau estado é barrado na imigração da Argentina. Leve Passaporte ou RG novo.",
+                    "8. Lojas sem Garantia: No Paraguai, teste o produto NA LOJA antes de sair. A garantia 'soy yo' não existe. Exija testar na hora.",
+                    "9. Câmbio no Aeroporto: A cotação dentro do aeroporto é péssima. Troque o mínimo possível e deixe para trocar o resto nas casas de câmbio da cidade.",
+                    "10. Macuco Safari: Se tiver problemas de coluna ou estiver grávida, evite. O barco bate muito na água e a aventura é radical de verdade."
+                ],
+                
+            
                 // SEUS LINKS DE AFILIADO (ID 304142)
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?city=-643449&aid=304142", 
@@ -613,6 +667,19 @@ const worldData = {
                     "8. (48) 3251-9000 (Hospital Celso Ramos): Principal hospital de emergência (trauma) no centro da cidade.",
                     "9. (48) 3025-6868 (Consórcio Fênix): Horários e linhas dos ônibus urbanos (TICEN, TIRIO, etc).",
                     "10. 199 (Defesa Civil): Para emergências em dias de chuva forte (deslizamentos ou alagamentos)."
+                ],
+                // --- NOVO: RISCOS E ERROS (FLORIANÓPOLIS) ---
+                riscos: [
+                    "1. Fila de Trânsito: O erro nº 1. No verão, cruzar a ilha (Centro -> Norte ou Lagoa) pode levar 3 horas. Escolha um lado da ilha e fique nele.",
+                    "2. Vento Sul: O 'Vento Sul' estraga a praia (esfria e joga areia). Se ventar sul, fuja para o Norte da ilha ou passeios fechados.",
+                    "3. Água Imprópria (Vírus): No pico da temporada, praias movimentadas (Canasvieiras/Ingleses) podem ficar impróprias. Consulte o site do IMA (Balneabilidade) antes de entrar.",
+                    "4. Choque Térmico: Não espere água quentinha do Nordeste. A água é gelada (corrente das Malvinas). Entre devagar para evitar cãibras.",
+                    "5. Preços de Jurerê: Sentar em um Beach Club sem perguntar o preço antes pode custar uma fortuna. Uma água pode custar R$ 15 e uma porção R$ 200.",
+                    "6. Trilhas de Chinelo: A trilha da Lagoinha do Leste é difícil e íngreme. Turistas de chinelo frequentemente torcem o pé e precisam de resgate.",
+                    "7. Furto em Carros: Ao estacionar nas praias (especialmente Joaquina e Mole), NUNCA deixe mochilas ou eletrônicos visíveis dentro do carro.",
+                    "8. Golpe do Aluguel: Cuidado com casas de temporada incríveis e baratas no OLX/Facebook. O golpe do aluguel falso explode no verão.",
+                    "9. Uber Cancelando: Com o trânsito parado, motoristas cancelam muito. Em dias de chuva ou horários de pico, é difícil conseguir carro.",
+                    "10. Tainha 'Falsa': Na época da tainha, alguns restaurantes vendem tainha congelada do ano passado como fresca. Pergunte se é 'pesca do dia'."
                 ],
                 // SEUS LINKS DE AFILIADO (ID 304142)
                 links: {
@@ -739,6 +806,19 @@ const worldData = {
                     "9. 156 (Fala Salvador): Canal da Prefeitura para reclamar de serviços, limpeza urbana ou barulho.",
                     "10. (71) 3235-0000 (Elevador Lacerda/Transporte): Informações turísticas e de mobilidade na Cidade Alta/Baixa."
                 ],
+                // --- NOVO: RISCOS E ERROS (SALVADOR) ---
+                riscos: [
+                    "1. 'Pintura' no Pelourinho: Cuidado com rapazes que chegam pintando seu braço dizendo ser 'presente'. Eles vão cobrar R$ 50 de forma intimidada depois. Recuse firme.",
+                    "2. Fita do Bonfim 'Amarrada': Nunca deixe ninguém amarrar uma fita no seu braço 'de graça'. É a isca para pedir dinheiro ou vender algo. Pegue a fita na igreja.",
+                    "3. Celular no Carnaval/Festas: Em aglomerações (como no Porto da Barra ou festas de largo), use doleira. Furtos de celular do bolso são extremamente comuns.",
+                    "4. Corrente de Ouro: Evite ostentar joias, relógios caros ou correntes de ouro no Centro Histórico e Cidade Baixa. Chama muita atenção.",
+                    "5. Acarajé 'Quente': Se você não é baiano, NUNCA peça acarajé 'quente' (com muita pimenta). A pimenta baiana é fortíssima e pode estragar seu dia (e estômago).",
+                    "6. Ruas Desertas no Pelourinho: O Pelourinho é seguro nas ruas principais policiadas. Evite entrar em becos laterais vazios, principalmente à noite.",
+                    "7. Tabuleiros sem Higiene: Observe a limpeza da baiana de acarajé. Evite tabuleiros sujos ou em locais duvidosos para não ter infecção alimentar.",
+                    "8. Taxista no Aeroporto: Ao desembarcar, muitos taxistas abordam no saguão cobrando preço fechado caro. Use o metrô (que sai do aeroporto) ou Uber.",
+                    "9. Mar Aberto: Algumas praias (como Jaguaribe ou trechos de Stella Maris) têm ondas fortes e buracos. Se beber, não entre no mar.",
+                    "10. Elevador Lacerda à Noite: A região da Cidade Baixa (Comércio) fica muito deserta e perigosa após o horário comercial. Evite andar a pé por ali à noite."
+                ],
                 // SEUS LINKS DE AFILIADO
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?city=-667953&aid=304142", 
@@ -863,6 +943,19 @@ const worldData = {
                     "8. (61) 3234-2185 (Rodoviária Interestadual): Ônibus para Goiânia e outros estados (fica na saída da cidade).",
                     "9. (61) 3353-7373 (Metrô DF): Informações sobre as linhas Verde e Laranja.",
                     "10. 191 (Polícia Rodoviária Federal): Emergências nas BRs que ligam o DF ao entorno (saídas da cidade)."
+                ],
+                // --- NOVO: RISCOS E ERROS (BRASÍLIA) ---
+                riscos: [
+                    "1. A Seca do Deserto: Entre agosto e setembro, a umidade cai para 10%. O nariz sangra e a pele racha. Tenha sempre soro fisiológico e hidratante na mochila.",
+                    "2. Ilusão da Esplanada: Não tente andar do Congresso até a Torre de TV a pé achando que é perto. São quilômetros de sol na cabeça sem sombra. Use Uber ou ônibus.",
+                    "3. Atravessar o Eixão: NUNCA tente atravessar as pistas largas do Eixão correndo. Os carros passam a 80km/h e não param. Use as passagens subterrâneas (mas com cuidado à noite).",
+                    "4. Setor Comercial Sul à Noite: De dia é movimentado, à noite vira local de tráfico e prostituição. Evite transitar a pé ali ou perto da Rodoviária do Plano Piloto após as 19h.",
+                    "5. As Tesourinhas: Se alugar carro, cuidado. As entradas e saídas (tesourinhas) confundem o GPS e motoristas novatos. Se errar uma, vai andar 5km para voltar.",
+                    "6. Capivaras e Carrapatos: Na orla do Lago Paranoá, não chegue muito perto das capivaras e evite sentar na grama alta devido ao risco de carrapatos (Febre Maculosa).",
+                    "7. Cidade Fantasma no Fim de Semana: Brasília setoriza tudo. Restaurantes em áreas comerciais ou bancárias podem fechar no fim de semana. Cheque o horário antes de ir.",
+                    "8. Norte x Sul: Entenda a lógica (Asa Sul e Asa Norte). Se você confundir SQS (Sul) com SQN (Norte), vai parar a 15km de distância do seu destino.",
+                    "9. Manifestações na Esplanada: Em dias de protesto político, a Esplanada dos Ministérios é fechada e o trânsito para. Fique de olho no noticiário se for visitar o Congresso.",
+                    "10. Amplitude Térmica: No inverno, faz muito calor de dia e 10ºC à noite. Se sair de manhã para voltar só à noite, leve casaco ou vai passar frio."
                 ],
                 // SEUS LINKS DE AFILIADO
                 links: {
@@ -990,7 +1083,19 @@ const worldData = {
                     "9. (81) 3355-0199 (Centro de Atendimento ao Turista): Informações turísticas e mapas.",
                     "10. 190 (CIODS): Centro Integrado de Defesa Social, coordena todas as forças de segurança."
                 ],
-                
+                // --- NOVO: RISCOS E ERROS (RECIFE) ---
+                riscos: [
+                    "1. Tubarões em Boa Viagem: NÃO é lenda urbana. Respeite as placas. Só entre no mar na maré baixa e protegido pelos arrecifes. Nunca nade em mar aberto ali.",
+                    "2. Falsos Guias em Olinda: Ao chegar no Alto da Sé, rapazes vão pular na frente do carro ou te seguir insistindo para serem guias. Seja firme no 'NÃO' e continue andando.",
+                    "3. Maré Alta nas Piscinas: Ir a Porto de Galinhas ou Carneiros na maré alta é jogar dinheiro fora. As piscinas naturais somem. Consulte a Tábua de Marés (tem que estar abaixo de 0.5).",
+                    "4. Recife Antigo Deserto: O bairro é lindo e seguro de quinta a domingo. Segunda e terça à noite costuma ficar deserto e perigoso. Evite ruas escuras.",
+                    "5. Celular no Galo: No Carnaval (Galo da Madrugada) ou em blocos cheios, celular na mão é perda certa. Use doleira por dentro da roupa.",
+                    "6. Ouriços do Mar: Ao andar nos arrecifes (pedras), use chinelo ou sapatilha de neoprene. Pisar em um ouriço dói muito e estraga a viagem.",
+                    "7. Trânsito para Porto de Galinhas: Sair do Recife para Porto de Galinhas sexta à tarde ou sábado de manhã leva horas. Saia de madrugada ou em horários alternativos.",
+                    "8. Metrô: O metrô do Recife não é muito turístico e pode ser perigoso/lotado em horários de pico. Prefira Uber ou Táxi para se deslocar entre as atrações.",
+                    "9. Sol de 'Rachar': O índice UV em Pernambuco é extremo. Protetor solar não é cosmético, é item de sobrevivência, ou você terá insolação no primeiro dia.",
+                    "10. Flanelinhas Agressivos: Em dias de festa ou no centro, guardadores de carro podem cobrar adiantado e caro. Tente estacionar em locais privados ou ruas movimentadas."
+                ],
                 // SEUS LINKS DE AFILIADO
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?city=-665565&aid=304142", 
@@ -1117,7 +1222,19 @@ const worldData = {
                     "9. (51) 3210-0101 (Rodoviária de POA): Informações sobre ônibus para interior e Mercosul.",
                     "10. 199 (Defesa Civil): Em caso de cheias do Guaíba ou temporais severos."
                 ],
-                
+                // --- NOVO: RISCOS E ERROS (PORTO ALEGRE) ---
+                riscos: [
+                    "1. Centro Histórico à Noite: De dia é o coração da cultura, mas após as 19h e aos domingos fica deserto e perigoso. Evite andar a pé sozinho perto do Mercado Público à noite.",
+                    "2. Camisa de Time (Gre-Nal): A rivalidade é séria. Evite usar camisa do Grêmio perto do Beira-Rio ou do Inter perto da Arena em dias de jogo. Na dúvida, não use cores de times.",
+                    "3. Voltagem 110V: Porto Alegre é 110V (127V), mas Gramado e o interior são 220V. Se você levar seu secador de POA para a Serra, vai queimar. Fique atento!",
+                    "4. Banho no Guaíba: A Orla é linda para ver o pôr do sol, mas a água em muitos pontos é imprópria para banho. Não entre, a menos que haja sinalização explícita de balneabilidade.",
+                    "5. Achar que Gramado é Perto: Gramado fica a 2h de carro (com trânsito bom). Não planeje 'jantar em Gramado' e voltar para dormir em POA na mesma noite, é cansativo e perigoso com neblina.",
+                    "6. Parque da Redenção à Noite: O parque é maravilhoso de dia, mas evite atravessá-lo após o pôr do sol. A iluminação é precária em alguns pontos e há risco de assaltos.",
+                    "7. Mosquitos na Orla: No verão, o final da tarde na beira do rio tem muito mosquito. Leve repelente se for assistir ao pôr do sol.",
+                    "8. Lotação x Ônibus: O transporte 'Lotação' (micro-ônibus vermelho) é excelente e tem ar-condicionado, mas custa bem mais que o ônibus comum. Não entre achando que é o mesmo preço.",
+                    "9. Pardais (Radares): A fiscalização eletrônica é rigorosa (geralmente 60km/h). Cuidado nas Avenidas Ipiranga e Beira-Rio, a multa chega mesmo.",
+                    "10. 'Friagem' e Rinite: A mudança de temperatura é brutal (pode variar 15ºC no mesmo dia). Quem tem rinite ou asma sofre muito. Traga sempre um casaco e remédios de alergia."
+                ],
                 // SEUS LINKS DE AFILIADO (ID 304142)
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?city=-663673&aid=304142", 
@@ -1125,6 +1242,288 @@ const worldData = {
                     seguro: "https://www.segurospromo.com.br" 
                 }
             },
+            {
+                name: "Curitiba",
+                // FOTO: Jardim Botânico (Estufa) - Clássica (Wikimedia)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Estufa_principal_do_Jardim_Bot%C3%A2nico_de_Curitiba_02_%28cropped%29.jpg/500px-Estufa_principal_do_Jardim_Bot%C3%A2nico_de_Curitiba_02_%28cropped%29.jpg",
+                tags: ["Parques", "Frio", "Organização"],
+                mapa: "https://goo.gl/maps/curitiba",
+                clima: "Subtropical Úmido. O tempo muda rápido: pode fazer sol, chover e gear no mesmo dia. Traga casaco sempre.",
+                
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Jardim Botânico: O cartão-postal. A estufa de vidro estilo Art Nouveau e os jardins franceses são lindos.",
+                    "2. Ópera de Arame: Um teatro construído em estrutura tubular e vidro sobre um lago. Visual único.",
+                    "3. Parque Tanguá: Antiga pedreira desativada que virou um parque deslumbrante. O pôr do sol no mirante é obrigatório.",
+                    "4. Museu Oscar Niemeyer (MON): Conhecido como 'Museu do Olho'. Arquitetura futurista e grandes exposições de arte.",
+                    "5. Feira do Largo da Ordem: Aos domingos de manhã. Gigantesca, tem artesanato, antiguidades e o famoso pastel de feira.",
+                    "6. Torre Panorâmica: Vista 360º da cidade. Dá para entender o planejamento urbano lá de cima.",
+                    "7. Bosque do Alemão: Tem a trilha de João e Maria e uma vista linda da cidade. Ótimo para crianças.",
+                    "8. Santa Felicidade: O bairro italiano gastronômico. Restaurantes gigantes (como o Madalosso) servem rodízio de massas e frango.",
+                    "9. Parque Barigui: A 'praia' do curitibano. Capivaras vivem livres no lago e as pessoas fazem churrasco nos quiosques.",
+                    "10. Unilivre (Universidade Livre do Meio Ambiente): Uma rampa de madeira em espiral no meio da mata. Lugar de paz e arquitetura sustentável."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Carne de Onça: Patrimônio da cidade. Não é onça! É carne bovina crua super temperada sobre broa preta (tipo um steak tartare rústico).",
+                    "2. Pinhão: No inverno (maio-julho), come-se pinhão cozido em todo lugar. É a semente da araucária.",
+                    "3. Barreado: Prato típico do litoral (Morretes), mas muito consumido na capital. Carne cozida por horas até desmanchar, comida com farinha e banana.",
+                    "4. Pierogi: Pastel cozido de origem polonesa, geralmente recheado de batata e requeijão com molho de nata.",
+                    "5. Frango com Polenta: Clássico de Santa Felicidade. A polenta frita e o frango a passarinho são servidos à vontade.",
+                    "6. Quentão de Vinho: No inverno, é a bebida oficial das feiras. Feito com vinho tinto, gengibre e especiarias (e às vezes marshmallow).",
+                    "7. Submarino: Famoso no 'Bar do Alemão'. Um chopp com uma canequinha de Steinhäger mergulhada dentro. Você pode levar a canequinha de brinde.",
+                    "8. Café Colonial: Herança dos imigrantes. Mesas fartas com tortas, pães, geléias e frios à tarde.",
+                    "9. Chucrute e Eisbein: Joelho de porco com repolho fermentado, influência forte da colonização alemã.",
+                    "10. Pastel de Feira: Na feira do Largo da Ordem, o pastel é gigante e super recheado."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. É Vina, não Salsicha: Se pedir cachorro-quente com 'salsicha', vão te corrigir. Em Curitiba chama-se Vina (do alemão Wiener).",
+                    "2. Penal: Estojo escolar aqui chama-se 'Penal'.",
+                    "3. Capivaras: Elas são as donas dos parques. São fofas, mas são animais selvagens. Não tente fazer carinho!",
+                    "4. Capital Mais Fria: É considerada a capital mais fria do Brasil. Geada é comum no inverno.",
+                    "5. Oil Man: Uma lenda urbana real. Um homem que anda de sunga e coberto de óleo pela cidade, mesmo no frio.",
+                    "6. Tubos de Ônibus: As estações de ônibus parecem tubos futuristas. Você paga antes de entrar para agilizar o embarque.",
+                    "7. Cidade Sorriso?: Curitibano tem fama de fechado. Dizem que não falam com estranhos no elevador, mas são educados se você pedir ajuda.",
+                    "8. Reciclagem: A cultura de separar o lixo ('Lixo que não é Lixo') é muito forte e antiga na cidade.",
+                    "9. Rua 24 Horas: Foi a primeira rua coberta a funcionar 24h no Brasil (hoje não é mais 100% 24h, mas a arquitetura segue linda).",
+                    "10. Palácio Avenida: No Natal, crianças cantam nas janelas desse prédio histórico. É um espetáculo emocionante."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Bosque do Papa: Memorial da imigração polonesa, com casas de madeira originais montadas sem pregos. O Papa João Paulo II visitou.",
+                    "2. Catedral Basílica Menor: Na Praça Tiradentes (marco zero). Estilo neogótico imponente.",
+                    "3. Mesquita Imam Ali: Uma bela mesquita com cúpula e minaretes no centro cívico, aberta à visitação guiada.",
+                    "4. Memorial Ucraniano: Fica no Parque Tingui. Tem uma réplica de uma igreja ortodoxa de madeira com cúpula dourada lindíssima.",
+                    "5. Ordem Rosacruz: O Templo das Musas e o portal egípcio são impressionantes e misteriosos.",
+                    "6. Santuário Nossa Senhora do Perpétuo Socorro: As novenas de quarta-feira reúnem multidões o dia todo.",
+                    "7. Praça do Japão: Homenagem à imigração japonesa, com lago de carpas, cerejeiras e casa de chá.",
+                    "8. Museu do Holocausto: O primeiro do Brasil. Pequeno, mas extremamente tocante e educativo.",
+                    "9. Igrejas Luteranas: Muitas igrejas de estilo gótico alemão espalhadas pela cidade.",
+                    "10. Solar do Rosário: Centro cultural no coração histórico, focado em artes plásticas."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Natal de Curitiba (Dezembro): A cidade vira luz pura. O coral do Palácio Avenida e as decorações nos parques são famosos no país.",
+                    "2. Festival de Teatro (Março): Um dos maiores festivais de teatro da América Latina. A cidade respira arte, com peças na rua e nos palcos.",
+                    "3. Inverno (Jun-Ago): É frio de verdade (pode chegar a 0ºC ou menos). É a época charmosa de comer pinhão e usar casaco de lã.",
+                    "4. Feira de Inverno (Praças): Barraquinhas vendendo artesanato de lã e quentão nas praças Santos Andrade e Osório.",
+                    "5. Oficina de Música (Janeiro): Cursos e shows de música erudita e popular (MPB) pela cidade toda.",
+                    "6. Florada das Cerejeiras (Julho): Na Praça do Japão e Jardim Botânico, as árvores ficam rosas. Dura poucos dias.",
+                    "7. Primavera (Set-Nov): Os parques ficam floridos, mas o tempo é instável (chuva e sol no mesmo dia).",
+                    "8. Carnaval Zombie Walk: No carnaval, o destaque não é o samba, mas a marcha de zumbis que reúne milhares de pessoas.",
+                    "9. Verão (Dez-Mar): Dias quentes, mas noites frescas. Chove bastante no final da tarde.",
+                    "10. Restaurant Week: Acontece duas vezes ao ano, ótimo para comer em restaurantes caros por preço fixo."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Voltagem: 110V (127V). Atenção, pois o litoral e o interior costumam ser 220V, mas Curitiba é 110V.",
+                    "2. DDD: 41.",
+                    "3. Aeroporto: Afonso Pena (CWB). Fica na cidade vizinha (São José dos Pinhais), a 30min do centro.",
+                    "4. Linha Turismo: O ônibus de dois andares que passa em 26 pontos turísticos. Paga-se um valor e pode descer e subir 4 vezes.",
+                    "5. Rodoferroviária: Moderna e organizada. Tem ônibus para todo o Brasil e o trem para Morretes.",
+                    "6. Uber/99: Funciona muito bem e é mais barato que a Linha Turismo se você estiver em 3 ou 4 pessoas.",
+                    "7. Clima: 'Cebola'. Você sai de casaco, tira ao meio-dia, põe de novo à tarde e põe um mais pesado à noite.",
+                    "8. Segurança: O Centro Histórico à noite exige cuidado. Batel e Água Verde são mais tranquilos.",
+                    "9. Trânsito: A 'Faixa Exclusiva' de ônibus é sagrada. Se dirigir, nunca invada a canaleta, a multa é certa.",
+                    "10. Água: Potável e de boa qualidade."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Mala Inteligente: Traga camiseta, casaco leve E casaco pesado. Você vai usar os três no mesmo dia.",
+                    "2. Linha Turismo: Se tiver só 1 dia, é a melhor opção. Sente no andar de cima (lado direito) para as melhores vistas.",
+                    "3. Domingo de Manhã: Reserve para a Feira do Largo da Ordem. Vá cedo (9h) para evitar a multidão das 11h.",
+                    "4. Segunda-Feira: Quase todos os museus e parques (como o Tanguá e o MON) fecham ou abrem mais tarde para manutenção. Confira antes.",
+                    "5. Trem de Morretes: O passeio de trem pela Serra do Mar é lindo. Compre o bilhete com antecedência e sente do lado esquerdo na ida.",
+                    "6. Pôr do Sol: O melhor é no Parque Tanguá ou na Praça das Nações (alto da XV).",
+                    "7. Batel: É o bairro da vida noturna chique e dos restaurantes caros.",
+                    "8. Rua 24h: Boa para uma passada rápida ou almoço, mas não tem mais o agito da madrugada de antigamente.",
+                    "9. Hotel: Ficar no Centro é prático, mas o Batel é mais bonito e seguro à noite.",
+                    "10. Respeite a Fila: O curitibano respeita muito a fila do ônibus. Não tente furar."
+                ],
+
+                // --- NOVO: NÚMEROS IMPORTANTES (CURITIBA) ---
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergência e segurança.",
+                    "2. (41) 3326-3600 (DPTUR): Delegacia de Proteção ao Turista (atendimento especializado).",
+                    "3. 192 (SAMU): Urgências médicas de saúde.",
+                    "4. 193 (Bombeiros/SIATE): Resgate de trauma e acidentes de trânsito.",
+                    "5. 156 (Central da Prefeitura): Informações sobre ônibus, turismo e serviços municipais (funciona muito bem).",
+                    "6. (41) 3381-1515 (Aeroporto Afonso Pena): Informações de voos e achados e perdidos.",
+                    "7. (41) 3320-3000 (Rodoferroviária): Informações sobre ônibus estaduais e interestaduais.",
+                    "8. (41) 3240-1103 (Hospital do Trabalhador): Referência em trauma e emergências.",
+                    "9. 118 (Trânsito): Para reportar acidentes sem vítima ou semáforos estragados.",
+                    "10. 0800 41 1512 (Copel): Emergência de energia elétrica (queda de luz ou fios soltos)."
+                ],
+
+                // --- NOVO: RISCOS E ERROS (CURITIBA) ---
+                riscos: [
+                    "1. As 4 Estações: O maior erro é sair do hotel de manhã só de camiseta porque está sol. Às 16h vai esfriar bruscamente. Leve sempre um agasalho na mochila.",
+                    "2. Centro à Noite: A região da Praça Tiradentes, Rua XV e Paço da Liberdade fica deserta e perigosa após as 20h. Há muitos moradores de rua e risco de assalto. Use Uber.",
+                    "3. Radares de Trânsito: Curitiba tem fiscalização eletrônica rigorosa (50km/h ou 60km/h). Os radares muitas vezes não são visíveis. Respeite o limite ou a multa chega.",
+                    "4. Canaleta de Ônibus: Se estiver dirigindo, NUNCA entre na pista exclusiva dos ônibus expressos (canaleta). É infração gravíssima e risco de acidente fatal.",
+                    "5. Furtos na Feira do Largo: A feira de domingo é lotada. Mochilas para frente e cuidado com o celular no bolso de trás. Batedores de carteira aproveitam o 'empurra-empurra'.",
+                    "6. Capivaras com Carrapatos: Elas são lindas, mas transmitem o carrapato-estrela (Febre Maculosa). Admire de longe e evite sentar na grama onde elas pastam.",
+                    "7. Vento Encanado: O centro da cidade tem 'corredores de vento' entre os prédios que deixam a sensação térmica muito baixa. Cachecol ajuda muito.",
+                    "8. Uber no Aeroporto: O Aeroporto fica em São José dos Pinhais. O Uber para Curitiba é tranquilo, mas em horários de pico pode ficar caro (dinâmico).",
+                    "9. Horário de Ônibus: O sistema é bom, mas domingo os ônibus demoram muito. Use o app 'Curitiba 156' para ver o horário real e não ficar 40 min no tubo.",
+                    "10. Ciclovias: Cuidado ao caminhar nas calçadas compartilhadas (vermelhas). Ciclistas passam rápido. Pedestre na calçada, bicicleta na ciclovia."
+                ],
+
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-639714&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/curitiba/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+            {
+                name: "Fortaleza",
+                // FOTO: Beira Mar e Espigão (Wikimedia)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/7/73/Fortaleza%2C_Brazil_%284%29_%28cropped%29.jpg",
+                tags: ["Sol", "Praias", "Humor"],
+                mapa: "https://goo.gl/maps/fortaleza",
+                clima: "Tropical. Calor o ano todo (28ºC a 32ºC) e vento constante. Chuvas rápidas entre fev-mai.",
+                
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Praia do Futuro: A melhor praia urbana para banho, famosa pelas megabarracas (Crocobeach, Chico do Caranguejo) com piscinas e shows.",
+                    "2. Avenida Beira Mar: O calçadão clássico. Ótimo para caminhar no fim da tarde, ver a Feirinha de Artesanato e o pôr do sol.",
+                    "3. Beach Park: Fica na vizinha Aquiraz (20km). O maior parque aquático da América Latina. O toboágua 'Insano' (41m) é para os corajosos.",
+                    "4. Mercado Central: Um paraíso de 4 andares para comprar redes, bordados, castanhas e cachaça. Pechinche!",
+                    "5. Dragão do Mar: Centro cultural com arquitetura moderna, museus, cinema e o Planetário. A noite ao redor é agitada.",
+                    "6. Theatro José de Alencar: Uma joia da arquitetura Art Nouveau com vitrais coloridos. Faça a visita guiada.",
+                    "7. Ponte dos Ingleses (Metálica): Lugar clássico para ver o pôr do sol e os golfinhos (se der sorte). (Verifique se a reforma acabou).",
+                    "8. Praia de Iracema: Onde fica a Estátua de Iracema. A praia não é boa para banho, mas é o coração boêmio e histórico.",
+                    "9. Museu da Cachaça (iPark): Fica em Maranguape (perto). Passeio histórico pela Ypióca com arvorismo e pedalinho.",
+                    "10. Catedral Metropolitana: Uma igreja imensa em estilo gótico-romano, a terceira maior do Brasil."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Caranguejo (Quinta-feira): É lei. Quinta à noite é dia de comer caranguejo (toc-toc) nas barracas da Praia do Futuro.",
+                    "2. Baião de Dois: Arroz e feijão de corda misturados, com queijo coalho e cheiro verde. Acompanha carne de sol.",
+                    "3. Carne de Sol com Macaxeira: A carne seca ao sol (super macia) servida com mandioca frita ou cozida.",
+                    "4. Peixada Cearense: Cozido de peixe com legumes, ovos cozidos e pirão. Leve e saboroso.",
+                    "5. Tapioca: No Centro das Tapioqueiras (Messejana) tem os melhores recheios (carne de sol com nata é o clássico).",
+                    "6. Panelada: Prato forte (bucho e tripas de boi) consumido tradicionalmente no Mercado São Sebastião para curar ressaca.",
+                    "7. Camarão no Alho e Óleo: Nas praias, os vendedores passam com baldes de camarão frito na hora. (Cuidado com a higiene).",
+                    "8. Castanha de Caju: O Ceará é o maior produtor. Compre no Mercado Central (a torrada com sal é viciante).",
+                    "9. Paçoca de Carne Seca: Carne de sol desfiada e socada no pilão com farinha e cebola roxa.",
+                    "10. Sorvete de Rapadura: Ou de frutas regionais (cajá, graviola, sapoti). A sorveteria 50 Sabores é a mais famosa."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Terra do Humor: O Ceará exporta humoristas (Tom Cavalcante, Renato Aragão). Shows de humor acontecem toda noite nos restaurantes.",
+                    "2. Cabeça Chata?: O cearense brinca com a própria 'cabeça chata'. É um povo extremamente hospitaleiro e resiliente.",
+                    "3. Vento Forte: Fortaleza é um dos melhores lugares do mundo para Kitesurf e Windsurf devido aos ventos alísios constantes.",
+                    "4. Não tem Horário de Verão: O sol nasce às 5h30 e se põe às 17h30 o ano todo. Aproveite o dia cedo!",
+                    "5. 'Aí Dentu': Expressão multiuso cearense. Pode ser negação, xingamento ou brincadeira, dependendo da entonação.",
+                    "6. Rendeiras: A renda de bilro é uma arte passada de mãe para filha. Em Aquiraz, há o Centro das Rendeiras.",
+                    "7. Verde Mares: O mar de Fortaleza é conhecido pelo tom verde esmeralda único.",
+                    "8. Padaria Espiritual: Foi um movimento literário (e não uma padaria) que agitou a cultura da cidade no século XIX.",
+                    "9. O Ceará aboliu a escravidão antes: Foi a primeira província a libertar os escravos (1884), 4 anos antes da Lei Áurea.",
+                    "10. Internet do Brasil: Fortaleza é onde chegam os cabos de fibra óptica submarinos que conectam o Brasil à Europa e África."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Estátua de Padre Cícero: Fica em Juazeiro do Norte (interior), mas a devoção ao 'Padim Ciço' está em todo lugar em Fortaleza.",
+                    "2. Procissão de São Pedro: Em junho, os pescadores saem com seus barcos enfeitados no mar do Mucuripe.",
+                    "3. Maracatu Cearense: Diferente do pernambucano, o ritmo é mais cadenciado e usam o 'negrume' (pintura preta) no rosto.",
+                    "4. Forró Pé de Serra: A cultura do forró é sagrada. Casas como o 'Kukukaya' tocam o ritmo autêntico.",
+                    "5. Artesanato de Barro: As garrafinhas de areia colorida (ciclogravura) são a lembrancinha número 1.",
+                    "6. Catedral Metropolitana: Tem capacidade para 5.000 pessoas e lembra a Catedral de Colônia (Alemanha).",
+                    "7. Iemanjá: A festa de 15 de agosto na Praia do Futuro reúne milhares de fiéis de umbanda e candomblé.",
+                    "8. São José: O padroeiro do Ceará. Diz a lenda que se chover no dia dele (19 de março), a colheita do ano será boa.",
+                    "9. Museu da Cultura Cearense: No Dragão do Mar, explica a vida do vaqueiro e a seca.",
+                    "10. Literatura de Cordel: Folhetos com rimas e xilogravuras vendidos nas feiras e mercados."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Fortal (Julho): O maior carnaval fora de época do Brasil. A cidade para e os hotéis lotam.",
+                    "2. São João (Junho): Festas juninas gigantescas, com quadrilhas profissionais que parecem escolas de samba.",
+                    "3. Réveillon: A festa no Aterro da Praia de Iracema é a segunda maior do Brasil (só perde para Copacabana).",
+                    "4. Alta Temporada (Dez-Jan/Jul): Muito sol, cidade cheia, preços altos e muito vento.",
+                    "5. Estação das Chuvas (Fev-Mai): Chove rápido e forte, depois abre sol. É a época mais barata.",
+                    "6. Temporada dos Ventos (Ago-Nov): O auge para quem pratica Kitesurf e Windsurf.",
+                    "7. Festival de Jazz e Blues (Carnaval): Acontece em Guaramiranga (serra), mas movimenta músicos em Fortaleza também.",
+                    "8. Ceará Music (Varia): Festival de pop rock que costuma atrair grandes bandas nacionais.",
+                    "9. Canoa Quebrada (Bate-volta): Passeio obrigatório para ver as falésias vermelhas (melhor na maré baixa).",
+                    "10. Quinta do Caranguejo (Semanal): Toda quinta-feira o evento é gastronômico e musical nas barracas."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Voltagem: 220V. Cuidado, pois a maioria do Brasil é 110V ou misto, mas lá é tudo 220V.",
+                    "2. DDD: 85.",
+                    "3. Aeroporto: Pinto Martins (FOR). Moderno e ampliado recentemente.",
+                    "4. Uber/99: Funciona muito bem e é barato. Evite táxis na porta de hotéis sem taxímetro.",
+                    "5. Água: Beba apenas água mineral. O calor exige hidratação constante.",
+                    "6. Sol: O índice UV é extremo (perto da linha do Equador). Protetor solar fator 50 é o mínimo.",
+                    "7. Roupas: Leves, de algodão ou linho. Jeans é tortura. À noite venta, mas não faz frio.",
+                    "8. Trânsito: O trânsito no final da tarde na Beira Mar e na saída para as praias pode ser pesado.",
+                    "9. Segurança: Evite andar com correntes de ouro ou celular na mão no calçadão.",
+                    "10. Gorjeta: 10% é padrão. Músicos nos restaurantes cobram 'couvert artístico' (R$ 10 a R$ 20)."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Reserve Beach Park: Compre o ingresso online antecipado, é mais barato que na bilheteria.",
+                    "2. Tábua de Marés: Para visitar piscinas naturais ou Canoa Quebrada, a maré precisa estar BAIXA. Consulte antes de ir.",
+                    "3. Não alugue carro só para ficar na cidade: Uber resolve tudo. Alugue só se for para Jericoacoara ou praias distantes.",
+                    "4. Jericoacoara é Longe: São 4h a 5h de viagem (300km). Não tente fazer bate-volta de 1 dia, é cansativo demais.",
+                    "5. Feirinha da Beira Mar: Começa às 17h. É o melhor lugar para comprar lembrancinhas, mas pesquise preços.",
+                    "6. Barracas da Praia do Futuro: Algumas cobram entrada ou consumação mínima nas áreas VIP (lounges). Pergunte antes.",
+                    "7. Hidratação: Compre água no supermercado (garrafas de 1,5L) para deixar no hotel. No frigobar é caro.",
+                    "8. Show de Humor: Reserve mesa. O 'Lupus Bier' e o 'Beira Mar Grill' são os mais tradicionais.",
+                    "9. Segunda-Feira: O Dragão do Mar e muitos museus fecham. Use a segunda para praia ou compras.",
+                    "10. Vento: O vento levanta saias e vestidos leves. Mulheres preferem shortinhos por baixo."
+                ],
+
+                // --- NOVO: NÚMEROS IMPORTANTES (FORTALEZA) ---
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergência e assaltos.",
+                    "2. (85) 3101-2488 (DEPROTUR): Delegacia de Proteção ao Turista (Fica na Rua Costa Barros).",
+                    "3. 192 (SAMU): Ambulância e emergência médica.",
+                    "4. 193 (Bombeiros): Afogamentos e resgate.",
+                    "5. (85) 3392-1030 (Aeroporto): Informações de voos.",
+                    "6. 191 (Polícia Rodoviária): Para emergências nas estradas (BR-116, acesso às praias).",
+                    "7. (85) 3101-5353 (Hospital Geral - HGF): Grande hospital público de referência.",
+                    "8. (85) 3452-6900 (Rodoviária): Terminal São Tomé.",
+                    "9. 156 (AMC - Trânsito): Para reportar acidentes de trânsito sem vítimas.",
+                    "10. 0800 285 0196 (Enel): Emergência de falta de luz."
+                ],
+
+                // --- NOVO: RISCOS E ERROS (FORTALEZA) ---
+                riscos: [
+                    "1. Praia do Futuro (Correnteza): O mar é violento e tem muitos buracos. Só entre onde houver salva-vidas e bandeira verde/amarela. Afogamentos são comuns.",
+                    "2. Assaltos na Beira Mar: Embora policiada, a orla tem furtos rápidos (bicicleta/corrida) de celulares e correntes. Não dê bobeira tirando selfies na borda da calçada.",
+                    "3. Centro e Iracema à Noite: O Centro histórico e o entorno do Dragão do Mar podem ficar desertos e perigosos de madrugada. Use Uber de porta a porta.",
+                    "4. Golpe do Camarão: Na praia, vendedores oferecem 'prova grátis' e depois cobram o prato inteiro. Pergunte o preço antes de tocar na comida.",
+                    "5. Jeri de Carro Comum: Não tente ir até a vila de Jericoacoara com seu carro alugado (sedan/hatch). Você vai atolar na areia. Precisa de 4x4 ou Jardineira.",
+                    "6. Insolação: O sol do Ceará não perdoa. Turistas desavisados vão parar no hospital com queimaduras de 2º grau no primeiro dia. Reaplique protetor a cada 2h.",
+                    "7. Águas Vivas (Caravelas): Em certas épocas, aparecem caravelas na areia (parecem balões roxos). Não toque, a queimadura é química e grave.",
+                    "8. Trânsito de Quinta: Na quinta-feira do caranguejo, a Av. Santos Dumont e acessos à Praia do Futuro travam. Saia cedo (19h) ou vá de Uber.",
+                    "9. Flanelinhas: Em locais de show ou praias lotadas, guardadores cobram caro adiantado. Tente parar em estacionamento fechado ou oficial.",
+                    "10. Guia Credenciado: Em passeios de buggy (Cumbuco/Canoa), exija bugueiro credenciado ('com emoção ou sem emoção'). Bugueiros piratas causam acidentes."
+                ],
+
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-643662&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/fortaleza/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            }
         ],
         "Argentina": [
             {
@@ -1218,7 +1617,7 @@ const worldData = {
                     "9. Segurança: Zona turística é segura, mas cuidado com 'motos' puxando celular e batedores de carteira no centro.",
                     "10. Água: Potável, mas com gosto forte. A maioria dos turistas prefere mineral."
                 ],
-
+            
                 // TOP 10 DICAS ANTES DE IR
                 antes_de_ir: [
                     "1. Dinheiro Vivo: Leve Reais e envie dinheiro por Western Union para sacar lá em Pesos. O cartão de crédito usa uma cotação pior (dólar MEP).",
@@ -1245,10 +1644,167 @@ const worldData = {
                     "9. (+54 11) 4323-0100 (Hospital Fernández): Um dos principais hospitais públicos de referência em Palermo.",
                     "10. (+54 11) 4310-0700 (Terminal Retiro): Informações sobre a rodoviária principal (ônibus para outras cidades)."
                 ],
+                // --- NOVO: RISCOS E ERROS (BUENOS AIRES) ---
+                riscos: [
+                    "1. Câmbio no Aeroporto: O ERRO Nº 1. Nunca troque reais por pesos no Banco Nación do aeroporto. A cotação é a 'Oficial' e vale metade da 'Blue'. Use Western Union.",
+                    "2. Golpe da Mancha (Mostarda): Se cair algo em você na rua e alguém vier limpar gentilmente, SEGURE sua mala e carteira. É um golpe clássico para te furtar enquanto você se limpa.",
+                    "3. Notas Falsas em Táxis: Taxistas mal-intencionados trocam sua nota verdadeira por uma falsa na hora do pagamento e dizem que você pagou com nota falsa. Prefira Uber ou Cabify.",
+                    "4. Motochorros: Evite usar celular na calçada perto do meio-fio. Ladrões de moto passam e arrancam o aparelho da mão, especialmente no Centro e Palermo.",
+                    "5. Jantar às 19h: Argentino janta tarde (22h). Se chegar às 19h ou 20h, vai encontrar restaurantes fechados ou vazios. Ajuste seu relógio biológico.",
+                    "6. Confundir Aeroportos: EZE (Ezeiza) fica a 1h do centro (caro). AEP (Aeroparque) fica dentro da cidade (barato). Verifique seu voo para não ir pro aeroporto errado.",
+                    "7. Camisa de Time: A rivalidade Boca x River é religião. Evite camisas do River em La Boca e vice-versa. Em dias de clássico, o clima fica tenso perto dos estádios.",
+                    "8. Tomada Diferente: O padrão argentino é de 3 pinos chatos (tipo I), diferente do Brasil. Seus eletrônicos não vão entrar na tomada sem adaptador.",
+                    "9. Cartão SUBE: Não dá para pagar ônibus com dinheiro. Você precisa comprar e carregar o cartão SUBE em 'kioskos' (bancas), e às vezes é difícil achar cartão virgem para vender.",
+                    "10. Protestos (Piquetes): O centro (perto do Obelisco e Casa Rosada) é palco frequente de manifestações que fecham o trânsito. Se tiver voo, saia com muita antecedência."
+                ],
                 // SEUS LINKS DE AFILIADO
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?ss=Buenos+Aires&aid=304142", 
                     passeio: "https://www.civitatis.com/br/buenos-aires/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            }
+        ], // <--- VÍRGULA DEPOIS DO PAÍS ANTERIOR
+
+        "Chile": [
+            {
+                name: "Santiago",
+                // FOTO: Cordilheira dos Andes e Sky Costanera (Wikimedia)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Santiago_en_invierno.jpg/960px-Santiago_en_invierno.jpg",
+                tags: ["Neve", "Vinho", "Montanha"],
+                mapa: "https://goo.gl/maps/santiago",
+                clima: "Mediterrâneo. Verão seco e quente (30ºC). Inverno frio e chuvoso na cidade, com neve nas montanhas vizinhas.",
+                
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Sky Costanera: O prédio mais alto da América do Sul. A vista da Cordilheira dos Andes no pôr do sol é obrigatória.",
+                    "2. Cerro San Cristóbal: Suba de funicular e desça de teleférico. Tem a estátua da Virgem e o melhor mirante natural.",
+                    "3. Cajón del Maipo: Passeio de dia inteiro nas montanhas. O Embalse El Yeso é aquela represa azul turquesa famosa nas fotos.",
+                    "4. Valle Nevado / Farellones: Mesmo se não esquiar, vale subir para brincar na neve (no inverno) ou ver a vista (verão).",
+                    "5. Palácio de La Moneda: A sede do governo. A Troca de Guarda (dias alternados às 10h) é super tradicional.",
+                    "6. Cerro Santa Lucía: Um parque lindo no meio do centro, com fontes e escadarias antigas. Foi onde a cidade foi fundada.",
+                    "7. Vinícola Concha y Toro: A mais famosa (do Casillero del Diablo). É turística, mas o tour é muito bem organizado e bonito.",
+                    "8. Museu da Memória: Conta a história da ditadura de Pinochet. Triste, mas essencial para entender o Chile moderno.",
+                    "9. Bairro Lastarria: O bairro boêmio-chique, cheio de restaurantes, artistas de rua e arquitetura europeia.",
+                    "10. Mercado Central: Famoso pela arquitetura e pelos restaurantes de frutos do mar (centolla). Cuidado, é pega-turista, mas vale a visita."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Centolla: O caranguejo gigante do Pacífico. É caro, mas uma experiência única. A carne é doce e macia.",
+                    "2. Pastel de Choclo: Um 'escondidinho' de milho doce moído com recheio de carne, frango, ovo e azeitona. Agridoce e delicioso.",
+                    "3. Empanada de Pino: A clássica. Massa assada recheada de carne picada, cebola, ovo e azeitona (cuidado com o caroço!).",
+                    "4. Mote con Huesillo: A bebida de rua número 1. Suco de pêssego, com pêssego seco (huesillo) e trigo cozido (mote) no fundo.",
+                    "5. Completo Italiano: O cachorro-quente chileno. Pão, salsicha, muito abacate (palta), tomate e maionese (cores da Itália).",
+                    "6. Ceviche Chileno: Diferente do peruano, o peixe (reineta ou salmão) é servido fresco com muito limão e coentro.",
+                    "7. Lomo a lo Pobre: Bife gigante com ovo frito, batata frita e cebola frita. Para quem tem muita fome.",
+                    "8. Machas a la Parmesana: Moluscos (parecem mariscos) gratinados com muito queijo parmesão e vinho branco.",
+                    "9. Pisco Sour: O drink nacional (há briga com o Peru). O chileno é mais doce e amadeirado.",
+                    "10. Vinho Carménère: A uva que foi extinta na França e redescoberta no Chile. O vinho tinto ícone do país."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. País Mais Longo: O Chile é o país mais 'comprido' do mundo. Tem deserto no norte e geleira no sul.",
+                    "2. Abacate em Tudo: Eles chamam abacate de 'Palta' e colocam em tudo (pão, hot dog, salada, pizza, sushi). E é salgado!",
+                    "3. Café com Pernas: No centro, existem cafeterias onde as atendentes usam vestidos curtos ou biquínis (Café con Piernas). É uma tradição polêmica.",
+                    "4. Cães de Rua: Santiago tem muitos cachorros de rua (quiltros), mas eles são comunitários, gordos e, às vezes, usam roupinhas no inverno.",
+                    "5. Cordilheira Bússola: O santiaguino não usa Norte/Sul. Ele se orienta pela Cordilheira (Leste). Se você vê a montanha, sabe onde está.",
+                    "6. Pão (Marraqueta): O Chile é o segundo maior consumidor de pão do mundo (só perde para a Alemanha).",
+                    "7. Água de Torneira: É potável, mas tem muito minério (dura). Pode soltar o intestino de quem não está acostumado.",
+                    "8. Terremotos: O Chile é o país mais sísmico do mundo. Tremores pequenos são tão comuns que ninguém para de andar na rua.",
+                    "9. Azeitona Traiçoeira: A azeitona na empanada SEMPRE vem com caroço. Cuidado para não quebrar o dente.",
+                    "10. Espanhol Rápido: O espanhol chileno é o mais difícil de entender. Eles 'comem' o final das palavras e usam muitas gírias ('Cachai?')."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Santuário Imaculada Conceição: A estátua no topo do Cerro San Cristóbal é o ícone religioso da cidade.",
+                    "2. Templo Bahá'í: Um templo em forma de flor nas montanhas, aberto a todas as religiões. Arquitetura premiada e paz absoluta.",
+                    "3. Catedral Metropolitana: Na Plaza de Armas. O interior é majestoso e cheio de história colonial.",
+                    "4. Cruz de Maio: Tradição antiga onde se decora uma cruz com flores e velas.",
+                    "5. Fiesta de La Tirana: A maior festa religiosa do país (no norte), mas influencia a cultura nacional com suas diabladas (danças).",
+                    "6. Los Dominicos: Uma antiga igreja e convento que virou um centro de artesanato lindo (Pueblito Los Dominicos).",
+                    "7. Padre Hurtado: O santo chileno mais popular, famoso pelo trabalho social. Suas caminhonetes verdes são ícones.",
+                    "8. Cemitério Geral: Um museu a céu aberto com mausoléus de presidentes e arquitetura incrível.",
+                    "9. Mapuches: A cultura indígena é forte. A bandeira Mapuche é vista em todo lugar junto com a do Chile.",
+                    "10. Animita: Pequenos santuários nas estradas ou ruas onde alguém morreu tragicamente. As pessoas deixam velas e água."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Festas Pátrias (18 de Setembro): O 'Dieciocho'. O país para por uma semana. Churrasco, vinho, cueca (dança) e fondas (festas).",
+                    "2. Temporada de Neve (Jun-Set): Quando os brasileiros invadem. Valle Nevado e Farellones ficam lotados.",
+                    "3. Vindima (Março/Abril): Festas da colheita da uva nas vinícolas ao redor de Santiago. Tem pisada de uva e degustação.",
+                    "4. Lollapalooza Chile (Março): Um dos maiores festivais de música da América do Sul, no Parque Cerrillos.",
+                    "5. Outono (Abr-Mai): As árvores ficam vermelhas e a cidade fica linda. Clima frio, mas sem chuva extrema.",
+                    "6. Primavera (Out-Dez): Clima perfeito. Nem quente, nem frio. Ótimo para caminhar nos parques.",
+                    "7. Dia do Patrimônio (Maio): Prédios históricos fechados abrem as portas de graça. Filas enormes, mas vale a pena.",
+                    "8. Santiago a Mil (Janeiro): Festival de teatro internacional que toma as ruas da cidade no verão.",
+                    "9. Ano Novo na Torre Entel: O show de fogos tradicional no centro da cidade (embora a festa de Valparaíso seja maior).",
+                    "10. Inverno (Jun-Ago): A poluição (smog) pode ficar presa na cidade e encobrir a cordilheira. Traga casaco pesado."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Moeda: Peso Chileno (CLP). Atenção aos zeros! 1.000 pesos é pouco dinheiro (tipo uma gorjeta).",
+                    "2. Visto: Não precisa. RG brasileiro (novo, menos de 10 anos) ou Passaporte.",
+                    "3. Fuso Horário: -1h ou igual a Brasília (varia com horários de verão de ambos). O sol se põe tarde no verão (21h).",
+                    "4. Tomada: Tipo L (três pinos em linha reta). A tomada brasileira de 3 pinos (hexagonal) NÃO ENTRA. Leve adaptador.",
+                    "5. Metrô (Bip!): Moderno e limpo. Precisa comprar o cartão 'Bip!'. O preço muda conforme o horário (pico é mais caro).",
+                    "6. Tax Free: Turistas que pagam hotel em Dólar (ou cartão internacional) ficam isentos do IVA (19%). Exija esse desconto no hotel.",
+                    "7. Gorjeta (Propina): 10% é o padrão ('La propina'). O garçom pergunta: 'Desea agregar la propina?'. Diga 'Si'.",
+                    "8. Uber: Funciona bem, mas ainda tem áreas cinzentas na lei. Sente na frente para parecer amigo do motorista.",
+                    "9. Internet: Compre um chip (SIM Card) da Entel ou Movistar em quiosques. A cobertura é ótima.",
+                    "10. Aeroporto: SCL (Arturo Merino Benítez). Fica longe do centro. Use transfer oficial (Transvip) ou ônibus (Centropuerto)."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Câmbio: Não troque no Brasil (cotação péssima). Leve Reais e troque nas casas de câmbio da Rua Agustinas (Centro).",
+                    "2. Roupas em Camadas: De manhã faz 10ºC, ao meio-dia 28ºC, à noite 12ºC. Vista-se como uma cebola.",
+                    "3. Seguro Viagem: Não é obrigatório, mas saúde no Chile é caríssima (privada). Não arrisque.",
+                    "4. Agende Vinícolas: Concha y Toro e Undurraga lotam. Reserve no site com semanas de antecedência.",
+                    "5. PDI (Papelzinho): Na imigração, você ganha um papel da PDI. NÃO PERCA. Você precisa dele para sair do país e para não pagar imposto no hotel.",
+                    "6. Protetor Labial: O ar é muito seco. Seus lábios vão rachar no primeiro dia se não usar manteiga de cacau.",
+                    "7. Tênis de Trekking: Se for ao Cajón del Maipo ou Embalse, vá de tênis. É terra e pedra.",
+                    "8. Vinho no Supermercado: Os vinhos no supermercado Jumbo ou Lider são ótimos e baratíssimos. Leve plástico bolha para trazer na mala.",
+                    "9. Segunda-Feira: Museus fecham. Use a segunda para ir ao Costanera Center ou vinícolas.",
+                    "10. Feriados Irrenunciáveis: Em datas como 1º de Maio e 18/19 de Setembro, TUDO fecha (até supermercado). Se planeje."
+                ],
+
+                // --- NOVO: NÚMEROS IMPORTANTES (SANTIAGO) ---
+                numeros: [
+                    "1. 133 (Carabineros): A Polícia chilena. São muito respeitados e não aceitam suborno jamais (tentar subornar dá cadeia).",
+                    "2. 131 (Ambulância - SAMU): Emergência médica pública.",
+                    "3. 132 (Bomberos): Incêndios e resgates. No Chile, os bombeiros são todos voluntários.",
+                    "4. (+56) 2 2876 3400 (Consulado do Brasil): Fica na rua Los Militares, Las Condes.",
+                    "5. 134 (PDI): Polícia de Investigações (para crimes civis e problemas de imigração).",
+                    "6. (+56) 2 2690 1757 (Aeroporto SCL): Informações de voos.",
+                    "7. 149 (Fono Familia): Ajuda para violência intrafamiliar e crianças.",
+                    "8. (+56) 2 2247 3600 (Clínica Alemana): Um dos melhores hospitais privados (caro, use seguro).",
+                    "9. 600 600 8686 (Turistiqueros): Informações turísticas oficiais.",
+                    "10. 130 (Conaf): Para incêndios florestais (comum no verão)."
+                ],
+
+                // --- NOVO: RISCOS E ERROS (SANTIAGO) ---
+                riscos: [
+                    "1. Táxi no Aeroporto: O GOLPE Nº 1. Golpistas ficam no saguão fingindo ser oficiais. Eles cobram 10x mais ou trocam notas. Use SOMENTE os guichês oficiais (Transvip/Taxi Oficial) antes da porta de saída.",
+                    "2. Notas Falsas de 10.000 e 20.000: Taxistas desonestos trocam sua nota verdadeira por uma falsa num passe de mágica e devolvem dizendo que você pagou com falsa. Pague com notas pequenas ou Uber.",
+                    "3. Plaza Italia (Baquedano) na Sexta: Toda sexta à tarde costuma ter protestos. A região vira palco de gás lacrimogêneo e polícia. Evite se hospedar ou passar ali na sexta à noite.",
+                    "4. Furto em Restaurante: Nunca pendure a bolsa na cadeira ou deixe o celular na mesa em terraços de Bellavista ou Lastarria. Passam vendendo coisas e levam o celular.",
+                    "5. Câmbio na Rua: Na rua Agustinas, homens gritam 'Cambio, Cambio!'. Não troque com eles na calçada. Entre nas lojas oficiais (com vidro blindado). O risco de nota falsa na rua é alto.",
+                    "6. Mal de Altitude (Puna): No Valle Nevado ou Cajón del Maipo (3.000m), você pode sentir tontura e enjoo. Beba muita água, ande devagar e não coma pesado.",
+                    "7. Metrô em Horário de Pico: Às 18h, a estação Tobalaba é um inferno. Evite entrar com malas grandes nesse horário, você simplesmente não vai conseguir embarcar.",
+                    "8. Terremotos: Se tremer, NÃO CORRA. Fique calmo, afaste-se de vidros. A estrutura do Chile é preparada. O chileno nem levanta da cadeira se for menos de 6.0.",
+                    "9. 'Lanzazos': Roubo por surpresa. Alguém passa correndo e puxa o celular ou correntinha. Comum no centro (Ahumada) e perto do Mercado Central.",
+                    "10. Comprar Eletrônicos na Rua: Se te oferecerem iPhone barato na rua, é tijolo na caixa ou produto roubado bloqueado. Não caia na tentação."
+                ],
+                
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?ss=Santiago&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/santiago-chile/", 
                     seguro: "https://www.segurospromo.com.br" 
                 }
             }
@@ -1377,6 +1933,19 @@ const worldData = {
                     "9. 511 (Florida Traffic): Informações em tempo real sobre acidentes e trânsito nas estradas (I-4, Turnpike).",
                     "10. CVS MinuteClinic: Para coisas simples (dor de garganta, febre), vá às farmácias CVS, é muito mais barato que hospital."
                 ],
+                // --- NOVO: RISCOS E ERROS (ORLANDO) ---
+                riscos: [
+                    "1. A Armadilha do Timeshare: Se alguém te oferecer 'ingressos grátis' ou 'café da manhã VIP' em troca de uma palestra de 90 min, FUJA. É venda agressiva de cota de hotel que dura horas e estraga seu dia.",
+                    "2. Pedágios (SunPass): Não pague pedágio com dinheiro ('Cash') ou fure sem pagar. A multa da locadora é astronômica. Já alugue o carro com o 'SunPass' ou 'Toll Pass' ativado.",
+                    "3. Sapatos Novos: O maior erro do iniciante. Você vai andar 15km por dia. Não estreie tênis novo nos parques, use aquele velho e macio, ou seus pés ficarão em carne viva.",
+                    "4. Hospital Custa uma Fortuna: Uma perna quebrada ou apendicite sem seguro saúde nos EUA pode custar US$ 50.000. Nunca pise nos EUA sem seguro viagem com cobertura alta.",
+                    "5. Gorjeta (Tip) é Obrigatória: Não é opcional como no Brasil. Se você não deixar 18% a 20% no restaurante, o garçom vai te cobrar. É o salário deles.",
+                    "6. Eletrônicos na International Drive: Evite lojinhas genéricas de eletrônicos e perfumes na I-Drive. Muitas vendem produtos recondicionados ou falsificados como novos.",
+                    "7. Transporte do Hotel: Não confie cegamente no 'transporte grátis' do hotel para a Disney. Eles têm horários ruins e se você perder o último, o Uber sai caro. Alugar carro é liberdade.",
+                    "8. Calor e Desidratação: A umidade da Flórida é brutal. Beba água grátis (pede 'Ice Water' nos balcões) o tempo todo. Desmaios por calor são comuns nas filas.",
+                    "9. Furacões: Entre agosto e outubro é temporada de furacões. É raro fechar parque, mas chuvas torrenciais são diárias. Compre capas de chuva no Walmart (US$ 2) antes de entrar no parque (lá dentro custa US$ 15).",
+                    "10. Jantar no Magic Kingdom: A comida dentro do Magic Kingdom é cara e 'ok'. Se quiser comer bem, saia e vá para Disney Springs ou hotéis próximos, ou leve lanches na mochila (é permitido)."
+                ],
                 // SEUS LINKS DE AFILIADO
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?ss=Orlando&aid=304142", 
@@ -1502,10 +2071,164 @@ const worldData = {
                     "9. 1-800-342-3557 (Hurricane Hotline): Linha de emergência estadual para informações sobre furacões.",
                     "10. Urgent Care (CVS/Walgreens): Procure 'Walk-In Clinics' em farmácias para febre ou dor leve (muito mais barato que ER)."
                 ],
+                // --- NOVO: RISCOS E ERROS (MIAMI) ---
+                riscos: [
+                    "1. Gorjeta Já Incluída (Auto-Gratuity): Em South Beach, quase todos os restaurantes já incluem 18% ou 20% na conta ('Service Charge'). Verifique antes de pagar para não dar gorjeta em dobro sem querer.",
+                    "2. Drinks Gigantes na Ocean Drive: Cuidado com as promoções de margaritas gigantes. Eles muitas vezes não mostram o preço no cardápio e a conta vem US$ 50 ou US$ 80 por um drink.",
+                    "3. Estacionamento e Guincho: Estacionar em local proibido em Miami Beach é guincho na hora (Towing). E custa mais de US$ 200 para retirar. Leia as placas com atenção redobrada.",
+                    "4. Resort Fee: Ao reservar hotel, verifique a 'Resort Fee'. É uma taxa extra obrigatória (US$ 30 a US$ 50 por dia) cobrada no check-in que não aparece no preço inicial do Booking/Expedia.",
+                    "5. Bairros Perigosos no GPS: Se o Waze mandar cortar caminho por Overtown ou Liberty City (especialmente à noite), evite. São áreas com índices de criminalidade mais altos.",
+                    "6. Pedágios (SunPass): Assim como Orlando, Miami não aceita dinheiro nos pedágios. Se o carro alugado não tiver o SunPass ativado, a multa administrativa da locadora será cara.",
+                    "7. Trânsito na I-95: O trânsito de Miami é agressivo e engarrafado. Não subestime o tempo para chegar ao aeroporto (MIA). Um trajeto de 20 min pode virar 1h na hora do rush.",
+                    "8. Golpe do Valet: Em áreas badaladas, pergunte o preço do Valet ANTES de entregar a chave. Alguns cobram US$ 40 ou US$ 50 por poucas horas em eventos ou finais de semana.",
+                    "9. Furacões (Agosto-Outubro): É a alta temporada de tempestades. Fique atento aos alertas do 'National Hurricane Center'. Se houver ordem de evacuação, obedeça imediatamente.",
+                    "10. Seguro de Carro: A Flórida tem um dos maiores índices de acidentes dos EUA. Não economize no seguro do carro alugado (CDW/LDW e Terceiros). Bater sem seguro é falência decretada."
+                ],
                 // SEUS LINKS DE AFILIADO
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?ss=Miami&aid=304142", 
                     passeio: "https://www.civitatis.com/br/miami/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+            {
+                name: "Nova York",
+                // FOTO: Estátua da Liberdade e Skyline (Wikimedia)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Liberty02.jpg/500px-Liberty02.jpg",
+                tags: ["Metrópole", "Compras", "Cultura"],
+                mapa: "https://goo.gl/maps/novayork",
+                clima: "Temperado. Verão muito quente e úmido (sauna). Inverno com neve e vento cortante. Outono é perfeito.",
+                
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Estátua da Liberdade: O ícone. Pegue o ferry para a ilha ou o ferry gratuito de Staten Island para ver de longe.",
+                    "2. Central Park: O pulmão da cidade. Visite o Strawberry Fields (John Lennon) e o terraço Bethesda.",
+                    "3. Times Square: O cruzamento do mundo. Luzes, outdoors gigantes e multidão. Vá à noite para o impacto real.",
+                    "4. Empire State Building: O clássico. A vista do 86º andar é inesquecível (King Kong!).",
+                    "5. Ponte do Brooklyn: Atravesse a pé saindo de Manhattan ao pôr do sol. A vista do skyline é mágica.",
+                    "6. Memorial e Museu do 11 de Setembro: Onde ficavam as Torres Gêmeas. É emocionante, silencioso e respeitoso.",
+                    "7. MoMA (Museu de Arte Moderna): Casa de 'A Noite Estrelada' de Van Gogh e obras de Picasso/Warhol.",
+                    "8. Broadway: Assistir a um musical (O Rei Leão, Hamilton, Wicked) é uma experiência de vida.",
+                    "9. Grand Central Terminal: Não é só uma estação de trem, é uma obra de arte. Olhe para o teto pintado com constelações.",
+                    "10. High Line: Um parque suspenso construído sobre uma antiga linha de trem industrial. Ótimo para caminhar."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Pizza de $1: A famosa 'slice' (fatia) de queijo, fina e dobrável. A Joe's Pizza é a mais famosa (mas custa mais de $1 hoje).",
+                    "2. Bagel com Cream Cheese: O café da manhã oficial. O pão é cozido antes de assar, por isso é denso e delicioso.",
+                    "3. Cheesecake: O estilo New York é denso, cremoso e assado. O da Junior's é lendário.",
+                    "4. Hot Dog de Rua: Os carrinhos 'Sabrett' estão em toda esquina. É simples: pão, salsicha e mostarda.",
+                    "5. Pastrami on Rye: Sanduíche gigante de carne curada no Katz's Delicatessen (cenário de filmes).",
+                    "6. Hambúrguer (Shake Shack): Nasceu no Madison Square Park e virou febre. O ShackBurger é obrigatório.",
+                    "7. Cookies do Levain: Famosos por serem gigantes, crocantes por fora e quase crus (gooey) por dentro.",
+                    "8. Brunch de Domingo: Ovos Benedict e Mimosas. É uma instituição social em bairros como West Village.",
+                    "9. Halal Guys: O prato de rua mais famoso (frango e arroz com 'white sauce'). A fila na 53rd com a 6th Ave é enorme.",
+                    "10. Cupcake (Magnolia Bakery): Ficou famoso por Sex and the City. Doce, colorido e fotogênico."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Ouro no Subsolo: O Federal Reserve de NY guarda mais barras de ouro no subsolo do que o Fort Knox.",
+                    "2. Línguas: Mais de 800 línguas são faladas em NY, tornando-a a cidade linguisticamente mais diversa do mundo.",
+                    "3. Pizza e Água: Dizem que a pizza e o bagel são bons por causa da qualidade da água da torneira de NY.",
+                    "4. Olhos de Einstein: Os olhos do cientista Albert Einstein estão guardados num cofre na cidade.",
+                    "5. Central Park Falso?: O parque é totalmente artificial. Cada pedra e árvore foi planejada e colocada lá.",
+                    "6. Empire State Vazio: Quando inaugurou (1931), ficou vazio pela crise e foi apelidado de 'Empty State Building'.",
+                    "7. Táxis Amarelos: São amarelos porque o fundador da empresa leu que amarelo é a cor mais fácil de ver de longe.",
+                    "8. Biblioteca Pública: Os leões de pedra na entrada chamam-se 'Paciência' e 'Fortaleza'.",
+                    "9. Metrô 24h: É um dos poucos sistemas de metrô do mundo que funciona 24 horas por dia, 7 dias por semana.",
+                    "10. Wall Street: Tem esse nome porque havia uma parede (muro) real lá para proteger os colonos holandeses."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Catedral de St. Patrick: Catedral neogótica gigante espremida entre arranha-céus na 5ª Avenida.",
+                    "2. Catedral de St. John the Divine: A maior catedral anglicana do mundo (e ainda inacabada).",
+                    "3. Sinagogas: NY tem a maior população judaica fora de Israel. A cultura judaica moldou a cidade (bagels, humor).",
+                    "4. Harlem e Gospel: Assistir a um culto com coral Gospel no Harlem domingo de manhã é arrepiante.",
+                    "5. Chinatown: Templos budistas escondidos em apartamentos e ruas decoradas.",
+                    "6. Little Italy: A festa de San Gennaro (setembro) fecha as ruas com procissões e comida.",
+                    "7. Natal no Rockefeller: A árvore de Natal gigante e a pista de patinação são o símbolo do feriado cristão/secular.",
+                    "8. Museus de Arte: O Met (Metropolitan) é quase um templo da cultura humana, com arte de 5.000 anos.",
+                    "9. Jazz: Clubes como o Blue Note e Village Vanguard são templos da música americana.",
+                    "10. Moda: A Fashion Week é um evento cultural que para a cidade."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Réveillon na Times Square (Dez): A bola cai à meia-noite. Chegue às 14h e use fralda (não tem banheiro).",
+                    "2. Macy's Thanksgiving Parade (Nov): Desfile de balões gigantes no Dia de Ação de Graças.",
+                    "3. Halloween Parade (Out): No Village. O desfile mais criativo e maluco do mundo.",
+                    "4. Maratona de NY (Nov): A cidade para para aplaudir os corredores. A energia é contagiante.",
+                    "5. Natal (Dez): As vitrines da 5ª Avenida e as Rockettes no Radio City Music Hall.",
+                    "6. Verão (Jul-Ago): Muito quente e úmido. Shows grátis nos parques (SummerStage).",
+                    "7. Outono (Out-Nov): A melhor época. O Central Park fica laranja e o clima é fresco.",
+                    "8. Primavera (Abr-Mai): As tulipas na Park Avenue e cerejeiras no Brooklyn Botanical Garden.",
+                    "9. 4 de Julho: Fogos de artifício no East River (Macy's Fireworks).",
+                    "10. Restaurant Week (Jan/Jul): Almoços e jantares em restaurantes caros por preço fixo acessível."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Visto: Obrigatório (Americano). A imigração no JFK pode ser demorada e rigorosa.",
+                    "2. Moeda: Dólar (US$). Leve notas pequenas ($1, $5) para gorjetas.",
+                    "3. Gorjeta (Tip): OBRIGATÓRIA. 18% a 22%. Se der menos, vão te perguntar o que houve de errado.",
+                    "4. Metrô (MTA): O sistema é velho e sujo, mas leva a todo lugar. Use o OMNY (aproxime o cartão/celular na catraca).",
+                    "5. Caminhar: Nova-iorquino anda rápido. Não pare no meio da calçada para tirar foto ou olhar o mapa. Encoste no canto.",
+                    "6. Taxas: O preço na etiqueta NUNCA é o final. Tem taxa de venda (8.875%) adicionada no caixa.",
+                    "7. Banheiros: Difíceis de achar. Starbucks e lobbies de hotel são a salvação. Em parques, procure os 'Comfort Stations'.",
+                    "8. Tomada: Tipo A/B (dois pinos chatos). Voltagem 110V.",
+                    "9. Água: Pode beber da torneira (tap water). Em restaurantes, é grátis.",
+                    "10. Aeroportos: JFK (internacional longe), Newark (EWR - em Nova Jersey) e LaGuardia (LGA - voos domésticos)."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Passeios Turísticos: Compre o CityPASS ou NY Pass se for em muitas atrações. Economiza 40% e fura filas.",
+                    "2. Estátua da Liberdade: O ingresso 'Coroa' (Crown) esgota 4 meses antes. O 'Pedestal' esgota semanas antes.",
+                    "3. Metrô Local x Express: Atenção! Trens 'Express' não param em todas as estações. Ouça o aviso sonoro.",
+                    "4. Broadway: Compre ingressos no TKTS (cabine vermelha na Times Square) no dia para descontos de 50%.",
+                    "5. Sapatos Confortáveis: Você vai andar 15km a 20km por dia. Esqueça o salto alto ou sapato novo.",
+                    "6. Top of the Rock: É melhor subir nele do que no Empire State, porque dele você VÊ o Empire State.",
+                    "7. Museus Grátis: Muitos museus têm dias 'Pay What You Wish' (pague o quanto quiser) ou horários grátis.",
+                    "8. Ferry de Staten Island: É grátis, passa perto da Estátua da Liberdade e tem vista linda do skyline. Ótimo para economizar.",
+                    "9. Rooftops: Beba um drink num bar no terraço (230 Fifth, Westlight). A vista paga o preço do drink caro.",
+                    "10. Evite Carro: Nunca alugue carro em Manhattan. O estacionamento custa $60/hora e o trânsito é infernal."
+                ],
+
+                // --- NOVO: NÚMEROS IMPORTANTES (NOVA YORK) ---
+                numeros: [
+                    "1. 911 (Emergência): Polícia, Bombeiros e Ambulância (tudo no mesmo número).",
+                    "2. 311 (Serviços da Cidade): Para reclamar de barulho, achados e perdidos em táxi ou informações não urgentes.",
+                    "3. (+1) 917 777-7777 (Consulado do Brasil): Fica na 225 East 41st St. Para perda de passaporte e auxílio.",
+                    "4. 511 (Trânsito e Transporte): Informações sobre o status do metrô e ônibus (MTA).",
+                    "5. (+1) 212 532-3400 (Doctor on Call): Serviços médicos que vão até o hotel (caro, use o seguro).",
+                    "6. (+1) 718 244-4444 (Aeroporto JFK): Informações gerais e achados e perdidos.",
+                    "7. (+1) 973 961-6000 (Aeroporto Newark): Central de informações.",
+                    "8. (+1) 212 360-1311 (Central Park): Informações turísticas e emergências dentro do parque.",
+                    "9. (+1) 800 222-1222 (Poison Control): Centro de controle de intoxicação.",
+                    "10. (+1) 212 695-4400 (Amtrak/Penn Station): Informações sobre trens para outras cidades (DC, Boston)."
+                ],
+
+                // --- NOVO: RISCOS E ERROS (NOVA YORK) ---
+                riscos: [
+                    "1. Vagão Vazio do Metrô: Se o trem está lotado e UM vagão está vazio, NÃO entre. Provavelmente o ar condicionado quebrou ou tem alguém com cheiro insuportável/agressivo dentro.",
+                    "2. Personagens da Times Square: O Mickey ou Homem-Aranha vão te abraçar para foto. Se você tirar, eles vão cercar você e exigir dinheiro ($5, $10) de forma agressiva. Evite contato visual.",
+                    "3. O Monge e o CD: Homens vestidos de monges oferecem pulseiras da paz ou rapazes oferecem CDs 'de graça'. Se pegar, vão exigir doação/pagamento. Não pegue nada na mão de estranhos.",
+                    "4. Golpes de Três Copos: Jogos de azar na calçada (adivinhar onde está a bolinha) são controlados por quadrilhas para roubar turistas. Nunca pare para olhar.",
+                    "5. Hotel 'Facility Fee': Cuidado ao reservar. Muitos hotéis cobram uma 'taxa de resort' obrigatória de $30 a $50 por noite no check-in, além do preço do site.",
+                    "6. Metrô no Fim de Semana: As linhas mudam completamente para manutenção (obras). O trem que é expresso vira local, ou muda de rota. Leia os cartazes na estação.",
+                    "7. Comer em Carrinhos Sujos: Evite carrinhos de comida que pareçam sujos ou sem fila. A intoxicação alimentar ('food poisoning') pode estragar sua viagem.",
+                    "8. Pedicabs (Bicicleta-Táxi): Aqueles carrinhos puxados por bicicleta perto do Central Park cobram por MINUTO. Um passeio curto pode custar $100. Negocie preço fechado antes ou não vá.",
+                    "9. Área Financeira à Noite: Wall Street fica deserta após as 19h. Não é perigoso como no Brasil, mas é vazio e sem nada aberto.",
+                    "10. Ratatouille Real: O metrô tem ratos. Não se assuste, eles ignoram humanos. Apenas não deixe comida cair no chão e não sente no banco se estiver muito sujo."
+                ],
+                
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?ss=New+York&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/nova-york/", 
                     seguro: "https://www.segurospromo.com.br" 
                 }
             }
@@ -1630,6 +2353,19 @@ const worldData = {
                     "8. (+351) 218 111 100 (Rádio Táxis): Central confiável para pedir táxi (útil se o Uber estiver muito caro).",
                     "9. (+351) 210 312 700 (Turismo de Lisboa): Postos de informação oficial (Ask Me Lisboa).",
                     "10. 117 (Incêndios Florestais): Número específico para reportar fumaça ou fogo em matas (comum no verão)."
+                ],
+                // --- NOVO: RISCOS E ERROS (LISBOA) ---
+                riscos: [
+                    "1. Carteiristas no Elétrico 28: O bondinho amarelo é lindo, mas é o 'escritório' oficial dos batedores de carteira. Mochila para frente e mão no bolso o tempo todo.",
+                    "2. O 'Couvert' NÃO é Grátis: Se o garçom puser azeitonas, pão, patê e queijo na mesa sem você pedir, NÃO é cortesia (diferente do Brasil). Se comer, vai pagar (e caro). Se não quiser, peça para retirar na hora.",
+                    "3. Vendedores de 'Haxixe' na Baixa: Na Praça do Comércio e Rossio, homens vão te oferecer drogas insistentemente. É golpe: eles vendem louro prensado, orégano ou caldo Knorr. Apenas ignore e siga andando.",
+                    "4. Calçada Portuguesa Escorregadia: As pedras portuguesas são lindas, mas viram sabão quando chove (e até secas escorregam). Evite salto alto ou solas lisas nas ladeiras para não cair.",
+                    "5. Falar Espanhol: O português entende espanhol, mas muitos não gostam que assumam que eles são espanhóis. Tente falar português (mesmo com sotaque BR) ou inglês. É mais respeitoso.",
+                    "6. Ir a Sintra de Carro: Erro clássico. O trânsito na serra para, não tem onde estacionar e a polícia multa. Vá de trem (comboio) saindo do Rossio e use o ônibus 434 lá dentro.",
+                    "7. Azulejos Roubados: Na Feira da Ladra, evite comprar azulejos antigos 'originais'. Muitos são roubados de fachadas de prédios históricos à noite. Não financie a destruição do patrimônio.",
+                    "8. Fila da Torre de Belém: A fila para entrar na Torre é gigante e o interior é apertado e vazio. A foto bonita é do lado de fora. Para ver a vista, suba no Padrão dos Descobrimentos (que tem elevador).",
+                    "9. Táxis no Aeroporto: Alguns taxistas tentam cobrar preço fixo abusivo ou dão voltas maiores. Prefira usar Uber/Bolt ou vá para a fila oficial e exija o taxímetro (a tarifa começa por volta de 3,25€).",
+                    "10. Comprar Água Garrafada: A água da torneira em Lisboa é excelente e potável. Nos restaurantes, peça 'um copo de água' ou leve sua garrafinha para encher. Não gaste euros com isso."
                 ],
                 // SEUS LINKS DE AFILIADO
                 links: {
@@ -1759,7 +2495,19 @@ const worldData = {
                     "9. (+34) 91 547 82 00 (Rádio Táxi): Para pedir táxi por telefone (ou use o app FreeNow).",
                     "10. 010 (Línea Madrid): Informações gerais sobre a cidade, objetos perdidos nos transportes e serviços."
                 ],
-                
+                // --- NOVO: RISCOS E ERROS (MADRID) ---
+                riscos: [
+                    "1. Carteiristas no Metrô e Sol: Madrid é a capital dos batedores de carteira profissionais. Eles agem em grupos na Puerta del Sol e no Metrô. Mochila sempre para frente.",
+                    "2. Golpe do Alecrim (Romero): Mulheres oferecem um raminho de alecrim 'de graça' perto da Catedral ou Plaza Mayor. Se pegar, elas leem sua mão e cobram agressivamente ou te amaldiçoam.",
+                    "3. Comer na Plaza Mayor: Os restaurantes DENTRO da praça são 'pega-turista': caros e comida ruim. Tire a foto na praça, mas coma nas ruas laterais (como a Cava Baja).",
+                    "4. Horários de Refeição: Espanhol almoça às 14h30 e janta às 21h30. Se tentar jantar às 19h, vai encontrar cozinhas fechadas ou ficar sozinho no restaurante.",
+                    "5. Pedir Sangria: Sangria muitas vezes é 'suco para turista' caro e doce. Faça como os locais e peça 'Tinto de Verano' (vinho com soda limão), que é mais autêntico, barato e refrescante.",
+                    "6. Táxi do Aeroporto: Do Aeroporto (Barajas) para o Centro (dentro da M-30) existe uma TARIFA FIXA de 33€ (valor pode variar, mas é fixo). Se o taxista ligar o taxímetro, reclame. É lei.",
+                    "7. Agosto em Madrid: Evite se puder. A cidade vira um forno (40ºC), muitos comércios locais fecham para férias e só sobram turistas na rua.",
+                    "8. Água Mineral: A água da torneira de Madrid é famosa por ser uma das melhores do mundo (vem da Serra). Não gaste dinheiro comprando garrafinha, encha a sua na pia.",
+                    "9. Fila do Prado 'Grátis': O Museu do Prado tem entrada grátis nas últimas 2 horas. A fila é tão grande que você perde 1h esperando e só vê o museu correndo por 40 min. Pague o ingresso para ver com calma.",
+                    "10. Gorjeta Excessiva: Não precisa deixar 10% ou 15% como nos EUA ou Brasil. Arredondar a conta ou deixar algumas moedas é suficiente. O serviço já está incluído no salário."
+                ],
                 // SEUS LINKS DE AFILIADO
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?ss=Madrid&aid=304142", 
@@ -1889,7 +2637,19 @@ const worldData = {
                     "9. (+33) 1 40 05 48 48 (Centro Antiveneno): Em caso de intoxicação alimentar grave ou produtos químicos.",
                     "10. 34 30 (Farmácias de Plantão): Para descobrir qual farmácia está aberta de madrugada na sua região."
                 ],
-                
+                // --- NOVO: RISCOS E ERROS (PARIS) ---
+                riscos: [
+                    "1. Não Dizer 'Bonjour': O erro nº 1. Entrar numa loja e não cumprimentar o vendedor é considerado uma ofensa grave. Você será ignorado ou maltratado. Diga sempre 'Bonjour, Madame/Monsieur'.",
+                    "2. Golpe do Anel de Ouro: Alguém 'acha' um anel dourado no chão na sua frente e pergunta se é seu. Depois tentam te vender ou pedir dinheiro. É latão. Ignore e continue andando.",
+                    "3. Golpe da Pulseirinha (Sacré-Cœur): Nas escadarias de Montmartre, homens tentam amarrar uma fita no seu dedo/braço à força para fazer uma pulseira e cobrar caro. Mantenha as mãos nos bolsos e suba rápido.",
+                    "4. Jogar o Bilhete do Metrô Fora: Nunca jogue o ticket fora antes de sair da estação. A fiscalização (Contrôleurs) fica nos corredores de saída e a multa é de 50€ na hora, sem conversa.",
+                    "5. Golpe da Prancheta (Surdos): Jovens fingem ser surdos-mudos pedindo assinatura em uma prancheta. Enquanto você assina, o comparsa bate sua carteira. É muito comum perto da Torre Eiffel.",
+                    "6. Táxi Pirata no Aeroporto (CDG): Ao desembarcar, homens vão oferecer táxi no saguão ('Taxi, Sir?'). IGNORE. Vá para a fila oficial externa. O preço é TABELADO (aprox. 55€-62€). Piratas cobram 150€.",
+                    "7. Água Mineral Cara: Em restaurantes, se pedir 'water', trarão garrafa de vidro (Vittel/Evian) que custa 6€. Peça sempre 'Une Carafe d'eau' (jarra d'água). É água da torneira, boa e GRÁTIS por lei.",
+                    "8. Comer na Rue de la Huchette: Perto da Notre-Dame, há ruas cheias de restaurantes com 'Menu a 10€'. É comida congelada, ruim e pega-turista. Afaste-se das atrações principais para comer bem.",
+                    "9. RER B à Noite: O trem que vem do aeroporto (RER B) passa por áreas perigosas (Saint-Denis). Evite usar tarde da noite com muitas malas. O RoissyBus ou Táxi são mais seguros nesse horário.",
+                    "10. Museu do Louvre na Terça: O Louvre fecha às terças-feiras. Muita gente esquece disso e perde a viagem. O Palácio de Versalhes fecha às segundas. Confira os dias de folga!"
+                ],
                 // SEUS LINKS DE AFILIADO
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?ss=Paris&aid=304142", 
@@ -2010,6 +2770,11 @@ function openModal(cidade, imagemUrl) {
         <div class="cat-card" onclick="showCategory('geral')"><i class="ri-coins-fill"></i><h4>Info. Gerais</h4></div>
         <div class="cat-card" onclick="showCategory('numeros')"><i class="ri-phone-line"></i><h4>SOS & Útil</h4></div>
         <div class="cat-card warning" onclick="showCategory('antes')"><i class="ri-alert-fill"></i><h4>Antes de Ir</h4></div>
+
+        <div class="cat-card warning" onclick="showCategory('riscos')" style="border-color: var(--neon-coral);">
+            <i class="ri-alarm-warning-fill" style="color: var(--neon-coral);"></i>
+            <h4 style="color: var(--neon-coral);">Riscos & Erros</h4>
+        </div>
     `;
     modal.classList.add('active');
 }
@@ -2059,6 +2824,10 @@ function showCategory(type) {
             case 'numeros':
             title = "Números Importantes";
             content = currentCity.numeros ? formatList(currentCity.numeros) : "<p>Números não cadastrados para esta cidade.</p>";
+            break;
+            case 'riscos':
+            title = "⚠️ Riscos & Erros Comuns";
+            content = currentCity.riscos ? formatList(currentCity.riscos) : "<p>Dados de riscos ainda não cadastrados para esta cidade.</p>";
             break;
     }
 

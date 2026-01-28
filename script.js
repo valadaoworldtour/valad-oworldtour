@@ -1,5 +1,5 @@
 // --- CONFIGURAÇÃO GLOBAL ---
-const countryFlags = { "Brasil": "br", "Portugal": "pt", "Marrocos": "ma", "Japão": "jp", "Austrália": "au", "Estados Unidos": "us", "Argentina": "ar", "Espanha": "es", "França": "fr", "Chile": "cl", "Inglaterra": "gb", "Itália": "it" };
+const countryFlags = { "Brasil": "br", "Portugal": "pt", "Marrocos": "ma", "Japão": "jp", "Austrália": "au", "Estados Unidos": "us", "Argentina": "ar", "Espanha": "es", "França": "fr", "Chile": "cl", "Inglaterra": "gb", "Itália": "it", "República Dominicana": "do", "México": "mx", "Colômbia": "co" };
 const defaultImage = "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop";
 /* BANCO DE DADOS COMPLETO */
 const worldData = {
@@ -11,6 +11,13 @@ const worldData = {
                 tags: ["Praia", "Cartão Postal", "Agito"],
                 mapa: "https://goo.gl/maps/rio",
                 clima: "Tropical Atlântico. Verão 40ºC e Inverno ameno.",
+                name: "Rio de Janeiro",
+                estimativa_custos: {
+                    alimentacao: "R$ 120",
+                    hospedagem: "R$ 280",
+                    transporte: "R$ 45",
+                    atracoes: "R$ 90"
+                },
                 
                 pontos_turisticos: [
                     "1. Cristo Redentor: Uma das 7 Maravilhas. Compre ingresso antecipado do trem.",
@@ -157,13 +164,17 @@ const worldData = {
                             "Dia 7 (Esporte e Visual): Trilha da Pedra da Gávea (para fortes) ou Voo de Asa Delta em São Conrado.",
                             "Dia 8 (Despedida): Compras no Barra Shopping ou dia relax na praia do Leblon."
                         ]
-                    }
+                        
+                    },
                 },
+                
+                
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?city=-666610&aid=304142", 
                     passeio: "https://www.civitatis.com/br/rio-de-janeiro/", 
                     seguro: "https://www.segurospromo.com.br" 
-                }
+                },
+                
             },
             
             {
@@ -2512,7 +2523,347 @@ const worldData = {
                     passeio: "https://www.civitatis.com/br/buzios/", 
                     seguro: "https://www.segurospromo.com.br" 
                 }
-            }
+            },
+            {
+                name: "Natal",
+                // FOTO: Ponta Negra e Morro do Careca
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Alex_Regis_Morro_do_Careca_Ponta_Negra_Natal_RN_%2840261556354%29.jpg/960px-Alex_Regis_Morro_do_Careca_Ponta_Negra_Natal_RN_%2840261556354%29.jpg",
+                tags: ["Dunas", "Praias", "Sol"],
+                mapa: "https://goo.gl/maps/natal",
+                clima: "Tropical. Sol 300 dias por ano. Venta bastante (a 'Noiva do Sol'). Chuvas concentradas entre Abril e Julho.",
+                
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Praia de Ponta Negra e Morro do Careca: O cartão-postal. A praia urbana mais famosa. O Morro é área de preservação (não pode subir), mas a foto é obrigatória.",
+                    "2. Dunas de Genipabu: O passeio de Buggy mais famoso do Brasil. Escolha 'com emoção'. Inclui skibunda, aerobunda e os dromedários.",
+                    "3. O Maior Cajueiro do Mundo: Fica em Pirangi. É uma árvore única que cobre uma área de 8.500m². Impressionante.",
+                    "4. Parrachos de Maracajaú: As 'Maldivas' brasileiras. Piscinas naturais (corais) a 7km da costa. Mergulho com peixinhos (consulte a tábua de marés!).",
+                    "5. Forte dos Reis Magos: Onde a cidade começou. Uma fortaleza em formato de estrela no encontro do rio com o mar.",
+                    "6. Praia da Pipa (Bate-volta): A 80km de Natal. Falésias, golfinhos e uma vila charmosa. O ideal é dormir lá, mas o bate-volta é muito comum.",
+                    "7. Barreira do Inferno: Centro de Lançamento de Foguetes. Tem um museu aeroespacial muito legal para visitar na rota do Litoral Sul.",
+                    "8. Lagoa de Arituba: Águas calmas e doces, ideal para relaxar, andar de pedalinho e comer peixe frito.",
+                    "9. Centro de Turismo (Antiga Casa de Detenção): Ótimo para comprar artesanato, renda de bilro e ver o Forró com Turista (às quintas).",
+                    "10. Aquário Natal: Na Redinha. Tem tubarões, pinguins e você pode até tocar em alguns animais (tanque de toque)."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Ginga com Tapioca: Patrimônio imaterial. Um peixinho pequeno frito servido dentro da tapioca. Clássico do Mercado da Redinha.",
+                    "2. Camarão Potiguar: Natal é a terra do camarão. Prove o 'Camarão Internacional' (cremoso com arroz e batata palha) no restaurante Camarões.",
+                    "3. Carne de Sol com Macaxeira: A carne de sol do Nordeste é diferente (mais úmida). Acompanha pirão de queijo ou macaxeira frita.",
+                    "4. Cartola: Sobremesa de banana frita, queijo coalho derretido, açúcar e canela. Divina.",
+                    "5. Paçoca de Pilão: Carne de sol desfiada e socada no pilão com farinha e cebola. Não é doce!",
+                    "6. Baião de Dois: Arroz, feijão verde, queijo coalho e nata. Cremoso e forte.",
+                    "7. Caranguejo: Nos quiosques da praia, o 'Chico' (caranguejo) é muito pedido.",
+                    "8. Suco de Mangaba: Fruta típica da região, leitosa e azedinha. Muito refrescante.",
+                    "9. Peixe na Telha: Peixe cozido ou assado servido na telha de barro.",
+                    "10. Bolo de Rolo: Embora seja pernambucano, é muito comum e delicioso em Natal (camadas finíssimas de bolo e goiabada)."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Esquina do Continente: É um dos pontos das Américas mais próximos da África e Europa. Por isso foi base estratégica dos EUA na 2ª Guerra Mundial.",
+                    "2. Forró For All?: Uma lenda diz que o nome 'Forró' veio das festas americanas na base aérea que eram 'For All' (para todos). Historiadores debatem, mas a lenda ficou.",
+                    "3. Ar Mais Puro: A NASA já considerou o ar de Natal como o mais puro das Américas, graças aos ventos alísios que vêm do mar.",
+                    "4. Potiguar: Quem nasce no RN é Potiguar, que em tupi significa 'Comedor de Camarão'.",
+                    "5. Cidade Espacial: A Barreira do Inferno foi a primeira base de lançamento de foguetes da América do Sul (1965).",
+                    "6. Noiva do Sol: O sol nasce muito cedo (as 4h30 - 5h da manhã já está claro) e se põe cedo (17h30). Aproveite o dia!",
+                    "7. Dunas Móveis: As dunas de Genipabu mudam de lugar e formato com o vento. A paisagem nunca é a mesma.",
+                    "8. Chiclete com Banana: A banda famosa começou a fazer sucesso nos carnavais fora de época de Natal (Carnatal).",
+                    "9. Cajueiro Mutante: O Maior Cajueiro cresce devido a uma anomalia genética; os galhos tocam o chão, criam raízes e sobem de novo.",
+                    "10. Ponte Newton Navarro: Uma ponte estaiada gigante que liga a Zona Norte. A vista do pôr do sol lá de cima (ou debaixo dela) é linda."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Reis Magos: A cidade se chama Natal porque foi fundada em 25 de dezembro. A relação com os Reis Magos (Santos Reis) é forte.",
+                    "2. Catedral Metropolitana: Uma arquitetura moderna e diferente, em formato trapezoidal.",
+                    "3. Estátua dos Reis Magos: Um pórtico enorme na entrada da cidade (BR-101) com as estátuas dos três reis.",
+                    "4. Festa de Santos Reis (Janeiro): É o feriado municipal mais importante depois do Natal.",
+                    "5. Igreja do Galo: No centro histórico (Cidade Alta), uma das mais antigas, barroca.",
+                    "6. Mártires de Cunhaú e Uruaçu: Santos brasileiros canonizados pelo Papa, vítimas de invasões holandesas. O santuário é muito visitado.",
+                    "7. Artesanato de Bilro: As rendeiras fazem trabalhos incríveis na praia ou centros de artesanato.",
+                    "8. Boi de Reis: Folclore local colorido, parecido com o Bumba-meu-boi.",
+                    "9. Candomblé: Presença forte de terreiros e festas de Iemanjá nas praias.",
+                    "10. Capela de São Pedro: Frequentada pelos pescadores na Redinha."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Carnatal (Dezembro): O maior carnaval fora de época do Brasil. Trios elétricos ao redor do estádio Arena das Dunas.",
+                    "2. Verão (Dez-Mar): Alta temporada. Sol forte, ventos constantes. Reserve buggy com antecedência.",
+                    "3. Inverno (Abr-Jul): É a estação das chuvas ('Inverno' no Nordeste é chuva, não frio). Preços caem pela metade.",
+                    "4. Agosto a Novembro: Melhor época! Venta muito (bom para Kitesurf), chove pouco e preços são médios.",
+                    "5. Festa Junina (São João): Natal tem o 'São João de Natal' com shows grandes na Arena das Dunas.",
+                    "6. Natal em Natal (Dezembro): Festival de música e luzes que celebra o aniversário da cidade.",
+                    "7. FENACAM: Feira Nacional do Camarão. Evento de negócios, mas movimenta a gastronomia.",
+                    "8. Réveillon: Queima de fogos na Ponte Newton Navarro e em Ponta Negra.",
+                    "9. Maré Baixa: Essencial consultar para ir aos Parrachos (Maracajaú/Perobas). Se a maré for alta, não tem passeio.",
+                    "10. Temporada de Buggy: O ano todo, mas no verão as dunas ficam lotadas de turistas."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Aeroporto (NAT): Fica em São Gonçalo do Amarante, longe pra caramba (40km / 1h do centro). O Uber dá uns R$ 80-100.",
+                    "2. 220V: A voltagem é 220V. Cuidado com eletrônicos.",
+                    "3. Buggy Credenciado: Só ande com bugueiros credenciados (placa vermelha ou adesivo da SETUR). É questão de vida ou morte nas dunas.",
+                    "4. Tábua de Marés: Baixe um app. Piscinas naturais só aparecem na maré baixa (0.0 a 0.5 é o ideal).",
+                    "5. Sol: O sol é cruel. Use protetor fator 50+. O vento fresco mascara a queimadura.",
+                    "6. Água: Evite beber da torneira. O índice de salinidade pode ser alto em algumas áreas.",
+                    "7. Uber: Funciona muito bem em Ponta Negra e Centro. Para Litoral Norte/Sul, melhor fechar passeio ou alugar carro.",
+                    "8. Via Costeira: A avenida dos hotéis resorts. É linda, mas não tem nada para fazer a pé (só mar e hotel). Precisa de carro para ir jantar.",
+                    "9. DDD: 84.",
+                    "10. Gorjeta: Os garçons esperam os 10%. Em barracas de praia, verifique se já está incluído."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Maracajaú vs Perobas: Maracajaú é mais fundo (mergulho), Perobas é mais raso (água na cintura, caribe). Escolha seu perfil.",
+                    "2. Não suba o Morro: Subir o Morro do Careca é proibido e dá multa ambiental. Respeite.",
+                    "3. Buggy 'Com Emoção': Se você não tem problemas de coluna, peça 'com emoção'. Sem emoção é só um passeio de táxi na areia.",
+                    "4. Restaurante Camarões: É turístico? Sim. Vale a pena? Muito. A fila é grande, chegue cedo (11h30 ou 18h30).",
+                    "5. Pipa: Tente passar pelo menos uma noite em Pipa. O bate-volta é cansativo e você perde a noite na vila, que é o melhor.",
+                    "6. Óculos Escuros no Buggy: A areia voa muito no rosto. Óculos são proteção, não só estilo.",
+                    "7. Litoral Norte vs Sul: Norte = Dunas e Buggy (Genipabu). Sul = Falésias e Golfinhos (Pipa/Tabatinga). Faça os dois em dias diferentes.",
+                    "8. Vento: Mulheres, evitem vestidos muito soltos nos passeios de falésia. O vento levanta tudo.",
+                    "9. Cajueiro: Paga-se uma entrada barata. Leve dinheiro trocado.",
+                    "10. Protetor Solar nas Costas: No buggy, você fica exposto o tempo todo. Passe muito protetor nas costas e orelhas."
+                ],
+
+                // --- NÚMEROS IMPORTANTES (NATAL) ---
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergência.",
+                    "2. 192 (SAMU): Ambulância.",
+                    "3. (84) 3232-7404 (Delegacia do Turista - DEATUR): Fica na Praia do Meio.",
+                    "4. (84) 3343-4177 (Aeroporto Internacional): Informações de voos.",
+                    "5. 193 (Bombeiros): Resgate e busca.",
+                    "6. (84) 3232-2525 (Rodoviária): Ônibus para Pipa/Recife.",
+                    "7. (84) 3232-6000 (Hospital Walfredo Gurgel): Maior hospital público.",
+                    "8. (84) 98138-0676 (Sindicato dos Bugueiros): Para checar credenciais.",
+                    "9. 199 (Defesa Civil): Chuvas e deslizamentos.",
+                    "10. (84) 3211-0000 (Rádio Táxi): Opção além do Uber."
+                ],
+
+                // --- RISCOS E ERROS (NATAL) ---
+                riscos: [
+                    "1. Bugueiro Pirata: O MAIOR RISCO. Bugueiros não credenciados não sabem as rotas seguras nas dunas. Já ocorreram acidentes fatais. Exija a credencial.",
+                    "2. Maré nos Parrachos: Comprar o passeio para Maracajaú sem olhar a maré. Se estiver alta (acima de 0.6), você vai ver água turva e não vai dar pé. Dinheiro jogado fora.",
+                    "3. Andar na Areia à Noite: Ponta Negra é segura no calçadão movimentado. Não vá para as partes escuras ou areia deserta à noite (assaltos).",
+                    "4. 'Amostra Grátis' de Castanha: No mercado, prove, mas pergunte o preço antes de pedir o pacote. Às vezes cobram preços abusivos na hora de pesar.",
+                    "5. Correnteza: O mar de Natal (exceto onde tem arrecifes) é forte. Respeite as bandeiras vermelhas dos salva-vidas.",
+                    "6. Insolação no Buggy: O vento engana e você não sente que está queimando. No fim do dia, vem a febre. Hidrate-se e cubra-se.",
+                    "7. Falésias Instáveis: Na praia de Pipa e litoral sul, mantenha distância das falésias. Deslizamentos acontecem. Respeite as placas de perigo.",
+                    "8. Táxi no Aeroporto: Os táxis comuns cobram tarifa de outra cidade (São Gonçalo). Uber ou Transfer compartilhado costumam ser mais baratos.",
+                    "9. Lagosta Barata Demais: Na praia, desconfie de lagosta muito barata. Pode ser fora de época (congelada velha) ou nem ser lagosta.",
+                    "10. Esquecer a CNH: Se for alugar carro para ir a Pipa, as blitze na estrada são frequentes (Lei Seca rigorosa)."
+                ],
+
+                // --- ROTEIROS AUTOMÁTICOS (NATAL) ---
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (O Clássico): Manhã: Passeio de Buggy Litoral Norte (Genipabu) 'com emoção'. Tarde: Visita ao Forte dos Reis Magos e pôr do sol no Potengi. Noite: Jantar em Ponta Negra.",
+                            "Dia 2 (Litoral Sul): Manhã: Maior Cajueiro do Mundo e banho na Praia de Cotovelo. Tarde: Relaxe em Ponta Negra olhando o Morro do Careca. Noite: Ginga com Tapioca."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Caribe Potiguar): Bate-volta aos Parrachos de Maracajaú ou Perobas (depende da maré). Mergulho nos corais.",
+                            "Dia 4 (Pipa): Passe o dia na Praia da Pipa. Veja os golfinhos na Baía dos Golfinhos e almoce na vila. (Se puder, durma lá).",
+                            "Dia 5 (Relax e Compras): Manhã na Lagoa de Arituba ou Carcará. Tarde: Compras no Centro de Turismo (artesanato)."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Mergulho Profundo): Galinhos. É longe (170km), mas é um paraíso de salinas e dunas intocadas. Um dos lugares mais bonitos do estado.",
+                            "Dia 7 (Cultura e História): Centro Histórico (Igrejas), Barreira do Inferno e Aquário Natal.",
+                            "Dia 8 (Despedida): Repita sua praia favorita ou vá ao restaurante Camarões para o almoço de despedida."
+                        ]
+                    }
+                },
+
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-656860&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/natal/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+            {
+                name: "Maceió",
+                // FOTO: Ponta Verde ou Pajuçara (Wikimedia/Unsplash)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Ponta_Verde_Lighthouse_landscape_-_Macei%C3%B3%2C_Brazil_%28edited%29.jpg/960px-Ponta_Verde_Lighthouse_landscape_-_Macei%C3%B3%2C_Brazil_%28edited%29.jpg",
+                tags: ["Caribe Brasileiro", "Piscinas Naturais", "Praias"],
+                mapa: "https://goo.gl/maps/maceio",
+                clima: "Tropical Quente. A cor do mar é mais bonita entre Setembro e Março. Abril a Julho chove mais e a água pode turvar.",
+                
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Praia de Pajuçara: Onde saem as jangadas para as piscinas naturais. Água morna, sem ondas e feirinha de artesanato.",
+                    "2. Ponta Verde: A orla mais bonita do Brasil. Tem o letreiro 'Eu Amo Maceió' e o Farol da Ponta Verde (dá para ir a pé na maré seca).",
+                    "3. Praia do Gunga: Fica no município vizinho (Roteiro). Tem o famoso mirante de coqueiros sem fim e as falésias coloridas (passeio de buggy).",
+                    "4. Praia do Francês: Em Marechal Deodoro. Um lado tem barreira de corais (piscina), o outro tem ondas fortes (surf).",
+                    "5. Maragogi (Bate-volta): O 'Caribe Brasileiro' oficial. Fica a 2h de Maceió. O passeio às Galés (piscinas) é imperdível, mas só na maré baixa.",
+                    "6. Ipioca (Hibiscus Beach Club): Uma praia deserta e paradisíaca com um clube de praia de luxo (day-use). Ideal para relaxar.",
+                    "7. Barra de São Miguel: Praia protegida por arrecifes, parece uma lagoa gigante. Ótima para andar de lancha ou kayak.",
+                    "8. Mirante de São Gonçalo: No centro da cidade, oferece uma vista panorâmica do porto e do mar.",
+                    "9. Pavilhão do Artesanato: Na Pajuçara. O melhor lugar para comprar renda filé (típica) e lembrancinhas.",
+                    "10. Catedral Metropolitana: No centro. Arquitetura neoclássica bonita, com vitrais e altares preservados."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Chiclete de Camarão: Prato inventado aqui (Restaurante Imperador dos Camarões). Camarão ao molho de queijos que 'estica' como chiclete.",
+                    "2. Sururu: Um molusco (parece marisco) típico das lagoas de Alagoas. O caldinho de sururu com leite de coco é afrodisíaco (dizem).",
+                    "3. Tapioca da Orla: As tapioqueiras de Maceió são patrimônio. A massa é fina e crocante. Recheio de carne de sol com queijo coalho é o clássico.",
+                    "4. Carne de Sol com Nata: Muito comum no café da manhã ou almoço.",
+                    "5. Bolo de Rolo (versão alagoana): Embora seja de PE, aqui é muito forte e servido com queijo do reino.",
+                    "6. Peixada Alagoana: Cozido de peixe com legumes, ovos cozidos e pirão. Leve e saboroso.",
+                    "7. Arroz de Polvo: O polvo do litoral alagoano é muito macio.",
+                    "8. Cocada de Massagueira: Na volta do Francês, pare em Massagueira. É o maior pólo gastronômico de doces caseiros.",
+                    "9. Passaporte: O 'cachorro-quente' de Maceió. Leva carne moída temperada, salsicha, queijo e maionese caseira. O 'Passaporte do Gaúcho' é famoso.",
+                    "10. Suco de Mangaba ou Cajá: As frutas da estação são deliciosas."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. A Orla Mais Bonita: A orla urbana de Maceió é considerada a mais bonita e bem cuidada do Brasil, com coqueiros e calçadão largo.",
+                    "2. Ma-çay-ó: O nome vem do tupi e significa 'O que tapa o alagadiço', referindo-se aos rios e lagoas da região.",
+                    "3. Paraíso das Águas: Alagoas tem a segunda maior barreira de corais do mundo (só perde para a Austrália e a barreira da Mesoamérica?), o que garante o mar calmo.",
+                    "4. Marechal Deodoro: A primeira capital de Alagoas e terra onde nasceu o proclamador da República fica colada em Maceió.",
+                    "5. Gogó da Ema: Um coqueiro torto lendário que parecia um pescoço de ema. Ele caiu, mas virou símbolo da cidade.",
+                    "6. Renda Filé: Um tipo de bordado colorido e vazado que só existe em Alagoas. É Patrimônio Imaterial.",
+                    "7. Zumbi dos Palmares: O maior quilombo das Américas (Quilombo dos Palmares) ficava em Alagoas, na Serra da Barriga.",
+                    "8. Farol no Mar: O Farol da Ponta Verde fica literalmente dentro da água. Na maré baixa (0.0), você caminha até a base dele.",
+                    "9. Braskem: Uma curiosidade triste. Bairros inteiros (Pinheiro/Mutange) afundaram devido à mineração de sal-gema e hoje são bairros fantasmas.",
+                    "10. Caribe?: A cor da água (azul turquesa/verde esmeralda) se deve ao fundo de areia branca e calcário, igual ao Caribe."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Iemanjá: A festa de 8 de Dezembro (N.S. da Conceição) e Iemanjá lota a orla de Pajuçara com oferendas.",
+                    "2. Igreja de Nossa Senhora do Rosário dos Pretos: Construída no século 19 por irmandades negras.",
+                    "3. Igreja dos Martírios: Tem uma fachada de azulejos portugueses belíssima no centro.",
+                    "4. Guerreiro: Uma dança folclórica típica de Alagoas, colorida e cheia de fitas (mistura de Reisado com Caboclinho).",
+                    "5. Mirante de São Gonçalo: Tem uma capela histórica lá em cima.",
+                    "6. Artesanato do Pontal da Barra: O bairro onde as rendeiras ficam sentadas na porta de casa fazendo o Filé.",
+                    "7. São João: Maceió tem um dos maiores festejos juninos do litoral.",
+                    "8. Pastoral: A religiosidade católica é forte no interior e reflete na capital.",
+                    "9. Xangô de Alagoas: O estado foi palco de uma perseguição histórica aos terreiros em 1912 (Quebra de Xangô), hoje lembrada com respeito e retomada.",
+                    "10. Capelinha de Jaraguá: Uma igreja histórica no bairro boêmio de Jaraguá."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Verão (Dez-Mar): A água fica num azul neon inacreditável. Cidade cheia, preços altos.",
+                    "2. Inverno (Abr-Ago): Chove bastante ('Inverno' no Nordeste é chuva). A água pode ficar 'barrenta' perto dos rios.",
+                    "3. São João (Junho): Festas gigantes no bairro de Jaraguá e Benedito Bentes.",
+                    "4. Maceió Fest: O carnaval fora de época (se ocorrer no ano).",
+                    "5. Réveillon: As festas privadas de Réveillon (Mil Sorrisos, Celebration) são as maiores e mais caras do Brasil.",
+                    "6. Festival do Bumba Meu Boi: Acontece anualmente celebrando a cultura popular.",
+                    "7. Agosto: Mês das ventanias, bom para Kitesurf.",
+                    "8. Setembro a Novembro: A melhor época 'Custo-Benefício'. Sol, mar azul e preços médios.",
+                    "9. Maré Baixa (Lua Cheia/Nova): É quando os passeios para as piscinas (Pajuçara/Maragogi) valem a pena.",
+                    "10. Feriados: A cidade lota de turistas regionais (PE, BA, SE)."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Aeroporto (MCZ): Fica em Rio Largo, bem longe da orla (45-60 min). Uber custa uns R$ 70-90.",
+                    "2. Tábua de Marés: É a bíblia de Maceió. Passeio de piscina natural na maré alta (acima de 0.6) é dinheiro jogado fora.",
+                    "3. Uber: Funciona muito bem e é barato para circular entre as praias urbanas (Pajuçara-Ponta Verde-Jatiúca).",
+                    "4. Segurança: A orla turística é bem policiada. Evite o centro à noite e bairros periféricos.",
+                    "5. Voltagem: 220V.",
+                    "6. Sol: Nasce às 5h e se põe às 17h30. Acorde cedo para aproveitar.",
+                    "7. Algas (Sargaço): Em algumas épocas, a maré traz algas para a areia. Cheira forte, mas é natural.",
+                    "8. Jangadas: O passeio de Pajuçara é tabelado e feito pela associação. Seguro e organizado.",
+                    "9. Day-Use: Muitos beach clubs (Hibiscus, Lopana, Kanoa) cobram entrada ou consumação mínima alta.",
+                    "10. Água da Torneira: Não beba. Compre mineral."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Maragogi ou Milagres?: Maragogi é mais lotada e turística. São Miguel dos Milagres é mais rústica, vazia e chique. Escolha seu estilo.",
+                    "2. Língua Suja: Após chuvas fortes, verifique a balneabilidade. Algumas 'línguas' (canais de drenagem) na orla podem sujar a praia urbana.",
+                    "3. Caminho de Moisés: Em Maragogi (Barra Grande), na maré seca, abre um caminho de areia mar adentro. Cuidado para a maré não subir e te ilhar.",
+                    "4. Francês: O lado esquerdo é piscina (família), o direito é surf (perigoso). Fique no esquerdo se não sabe nadar bem.",
+                    "5. Cadeira de Praia: Na orla, se sentar, paga (ou consome). Pergunte o valor da cadeira ANTES de sentar.",
+                    "6. Protetor Solar: O reflexo do sol na areia branca queima em dobro.",
+                    "7. Bate-volta Maragogi: É cansativo (2h30 pra ir, 2h30 pra voltar). Se puder, durma lá 1 noite.",
+                    "8. Domingo na Orla: A avenida da orla fecha para carros no domingo (Rua de Lazer). Ótimo para caminhar.",
+                    "9. Restaurantes: Jatiúca é o bairro gastronômico. Ponta Verde é o bairro dos hotéis.",
+                    "10. Cânions do São Francisco: Fica a 4h de Maceió (Piranhas/Xingó). É lindo, mas precisa de 2 dias (pernoite) para valer a pena."
+                ],
+
+                // --- NÚMEROS IMPORTANTES (MACEIÓ) ---
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergência.",
+                    "2. 192 (SAMU): Ambulância.",
+                    "3. (82) 3315-3000 (Aeroporto Zumbi dos Palmares): Informações.",
+                    "4. (82) 3312-5850 (Delegacia do Turista): Na orla de Pajuçara (ou perto).",
+                    "5. 193 (Bombeiros): Resgate no mar.",
+                    "6. (82) 3221-4615 (Rodoviária): Ônibus interestaduais.",
+                    "7. (82) 3315-6700 (HGE - Hospital Geral): Emergência pública.",
+                    "8. (82) 3336-2300 (Associação dos Jangadeiros): Pajuçara.",
+                    "9. 199 (Defesa Civil): Chuvas.",
+                    "10. SMTT (Trânsito): 118."
+                ],
+
+                // --- RISCOS E ERROS (MACEIÓ) ---
+                riscos: [
+                    "1. Maré Alta em Maragogi: O ERRO CLÁSSICO. Ir para Maragogi na maré alta ou lua 'morta'. A água não fica tão clara e não dá pé nas piscinas. Consulte a tábua!",
+                    "2. 'Línguas Negras': Em dias de muita chuva, os canais de água pluvial podem levar sujeira para o mar das praias urbanas (Pajuçara/Ponta Verde). Evite tomar banho logo na saída desses canais.",
+                    "3. Assédio de Vendedores: Na orla, a abordagem para vender passeio, óculos e comida é intensa. Diga 'não, obrigado' e não dê papo se não quiser comprar.",
+                    "4. Ouriços: Nas piscinas naturais e recifes (Francês/Ipioca), cuidado onde pisa. Tem ouriços pretos que furam o pé. Use sapatilha aquática.",
+                    "5. Bairro do Pinheiro: Evite alugar Airbnb nos bairros afetados pelo afundamento (Pinheiro, Mutange, Bom Parto). São áreas de risco interditadas.",
+                    "6. Estrada para Maragogi: A AL-101 Norte é linda, mas tem trechos sinuosos e às vezes esburacados. Cuidado ao dirigir à noite.",
+                    "7. Insolação: O vento constante faz você esquecer o sol. Use chapéu.",
+                    "8. Golpe da Lagosta: Na praia, vendem 'lagosta' que na verdade é lagostim ou está estragada. Coma em restaurante.",
+                    "9. Correnteza no Francês: O lado direito da Praia do Francês (o das ondas) tem correnteza forte. Não se arrisque se não for surfista.",
+                    "10. Preço do Táxi: Táxi do aeroporto é tabelado e caro. Uber costuma ser metade do preço."
+                ],
+
+                // --- ROTEIROS AUTOMÁTICOS (MACEIÓ) ---
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (O Cartão Postal): Manhã: Passeio de Jangada em Pajuçara (na maré baixa!). Tarde: Caminhada na orla de Ponta Verde até o Farol. Foto no letreiro. Noite: Chiclete de Camarão.",
+                            "Dia 2 (Litoral Sul): Dia de praia no Francês (lado esquerdo) ou Barra de São Miguel. Almoço em Massagueira na volta."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (O Caribe): Bate-volta para Maragogi ou São Miguel dos Milagres (saia às 5h da manhã!). Passeio de lancha nas piscinas.",
+                            "Dia 4 (Falésias): Praia do Gunga. Vá de buggy até as falésias coloridas e tome banho na lagoa.",
+                            "Dia 5 (Relax VIP): Day-use no Hibiscus Beach Club em Ipioca ou Capitão Nikolas. Praia deserta e estrutura de luxo."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Sertão - Opcional): Bate-volta (cansativo) ou pernoite nos Cânions do Xingó (Rio São Francisco). Passeio de catamarã inesquecível.",
+                            "Dia 7 (História e Renda): Visite o centro histórico de Marechal Deodoro e o bairro das rendeiras no Pontal da Barra.",
+                            "Dia 8 (Despedida): Compre castanhas e bolo de rolo no Mercado e despeça-se do mar em Ponta Verde."
+                        ]
+                    }
+                },
+
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-653066&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/maceio/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
 
         ],
         "Argentina": [
@@ -2857,6 +3208,180 @@ const worldData = {
         
         
         
+    },
+    "América Central": {
+        "República Dominicana": [
+            {
+                name: "Punta Cana",
+                // FOTO: Praia de Bavaro ou Ilha Saona
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Playa_Bavaro.JPG/960px-Playa_Bavaro.JPG",
+                tags: ["All Inclusive", "Caribe", "Lua de Mel"],
+                mapa: "https://goo.gl/maps/puntacana",
+                clima: "Tropical Úmido. Calor o ano todo (28ºC-30ºC). Agosto a Outubro é época de furacões (risco baixo, mas existe) e sargaço (algas).",
+                
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Isla Saona: O passeio nº 1. Uma ilha virgem de areia branca e água turquesa. Onde foi gravado 'A Lagoa Azul'. Inclui parada nas piscinas naturais com estrelas do mar.",
+                    "2. Praia de Bávaro: A principal praia onde ficam a maioria dos resorts. Mar calmo, coqueiros e areia fofa.",
+                    "3. Hoyo Azul (Scape Park): Um cenote (piscina natural em caverna) com água azul neon inacreditável. Fica dentro do Scape Park.",
+                    "4. Coco Bongo: Não é só uma balada, é um show estilo Broadway/Las Vegas com open bar. Imperdível para quem gosta de festa.",
+                    "5. Parasailing: Voar de paraquedas puxado por uma lancha. A vista lá de cima é surreal.",
+                    "6. Ojos Indígenas: Reserva ecológica com 12 lagoas de água doce cristalina para nadar no meio da floresta.",
+                    "7. Isla Catalina: Menos lotada que Saona, ótima para snorkeling e mergulho (muitos peixes e corais).",
+                    "8. Montaña Redonda: Uma montanha com balanços gigantes na beira do abismo. As fotos ficam incríveis (parece que você está voando).",
+                    "9. Dolphin Explorer: Nadar com golfinhos no mar (não em tanque). É uma experiência muito procurada.",
+                    "10. Altos de Chavón: Uma réplica de vila medieval italiana construída no alto de um penhasco. Tem um anfiteatro romano e vista pro Rio Chavón."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Mofongo: O prato nacional. Purê de banana da terra frita com alho e torresmo (chicharrón), servido com carne ou camarão.",
+                    "2. Mamajuana: A bebida típica 'medicinal' e afrodisíaca. Rum, vinho tinto, mel e raízes curtidas em garrafa.",
+                    "3. Sancocho: Uma sopa/cozido potente com 7 tipos de carne e tubérculos. Cura qualquer ressaca.",
+                    "4. Lagosta Caribenha: Mais barata que no Brasil. Nos passeios (como Saona), costuma ser servida grelhada na praia.",
+                    "5. Pescado Frito: Peixe inteiro frito (estilo Boca Chica), servido com 'tostones' (banana frita).",
+                    "6. Tostones: Rodelas de banana verde frita e amassada. Substitui a batata frita em tudo.",
+                    "7. Rum Dominicano: Brugal e Barceló são as marcas locais. O rum é suave e barato.",
+                    "8. Chocolate Dominicano: O país é um grande produtor de cacau orgânico. O chocolate é excelente.",
+                    "9. Bandera Dominicana: O prato do dia a dia: Arroz, feijão vermelho, carne ensopada e salada.",
+                    "10. Habichuelas con Dulce: Um creme doce de feijão (sim, feijão doce!) com leite de coco e especiarias. Sobremesa curiosa."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Aeroporto de Palha: O aeroporto de Punta Cana (PUJ) é o primeiro do mundo privado e internacional com teto de folhas de palmeira e aberto (sem paredes de vidro no check-in).",
+                    "2. Não é a Capital: Muita gente acha que é, mas a capital é Santo Domingo (a 2h30 de carro). Punta Cana é só uma região turística.",
+                    "3. Cristóvão Colombo: A ilha (Hispaniola) foi onde Colombo desembarcou pela primeira vez nas Américas. Seus restos mortais (supostamente) estão em Santo Domingo.",
+                    "4. Larimar: Uma pedra preciosa azul-celeste que SÓ existe na República Dominicana. É o souvenir mais chique.",
+                    "5. Merengue e Bachata: Ritmos nascidos aqui. Você vai ouvir 24h por dia no resort e na rua.",
+                    "6. Baleias Jubarte: De janeiro a março, elas vêm para a Baía de Samaná (norte) para ter filhotes. Passeio incrível.",
+                    "7. All-Inclusive: O conceito é levado a sério. Punta Cana tem a maior concentração de resorts all-inclusive do Caribe.",
+                    "8. Jurassic Park: Cenas do filme foram gravadas aqui (perto do Museu do Âmbar).",
+                    "9. Beisebol: É a religião deles, não o futebol. Eles exportam muitos jogadores para a liga americana (MLB).",
+                    "10. Casamentos: É um dos principais destinos de 'Destination Wedding' do mundo."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Basílica de Higüey: A padroeira é a Virgem de Altagracia. A catedral moderna de concreto é um marco arquitetônico.",
+                    "2. Primeira Catedral das Américas: Fica em Santo Domingo (Catedral Primada). Construída em 1514.",
+                    "3. Sincretismo: Assim como no Brasil, há mistura de catolicismo com crenças africanas (Vodu Dominicano, mas é tabu falar sobre isso).",
+                    "4. Carnaval Dominicano: Acontece em fevereiro. Os 'Diablos Cojuelos' são mascarados que batem nas pessoas com bexigas de boi (para dar sorte!).",
+                    "5. Charutos: A cultura do tabaco é forte. Visitar uma fábrica de charutos (Don Lucas) é um passeio cultural comum.",
+                    "6. Museu do Âmbar: Explica a formação da resina fossilizada (famosa no Jurassic Park).",
+                    "7. Tainos: O povo indígena original. Há cavernas com pinturas rupestres tainas no Parque Nacional del Este.",
+                    "8. Hospitalidade: O dominicano é extremamente sorridente, dançarino e gosta de agradar (às vezes esperando propina).",
+                    "9. Santo Domingo Colonial: A Zona Colonial é Patrimônio da UNESCO, com as primeiras ruas, hospitais e universidades do Novo Mundo.",
+                    "10. Bíblia na Bandeira: É o único país do mundo que tem uma Bíblia aberta no brasão da bandeira."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Alta Temporada (Dez-Abr): Clima perfeito, seco e menos quente. Preços lá em cima (Americanos e Europeus fugindo do inverno).",
+                    "2. Temporada de Furacões (Ago-Out): O risco existe. Monitore a previsão. É a época mais barata.",
+                    "3. Sargaço (Mai-Set): As algas podem invadir as praias. Os resorts limpam, mas é um fenômeno natural imprevisível.",
+                    "4. Carnaval (Fevereiro): Desfiles coloridos em todo o país.",
+                    "5. Spring Break (Março): Jovens americanos lotam os hotéis festeiros (como o Hard Rock). Se quer paz, evite essa época.",
+                    "6. Festival de Merengue (Julho): Música ao vivo em Santo Domingo.",
+                    "7. Baleias (Jan-Mar): Única época para ver as Jubarte em Samaná.",
+                    "8. Torneio de Golfe (Corales): Acontece no campo do Puntacana Resort, atrai a elite do esporte.",
+                    "9. Black Friday: Os shoppings (BlueMall) fazem promoções reais.",
+                    "10. Natal: Os resorts fazem ceias gigantescas e decorações lindas."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Visto: Brasileiros não precisam. Paga-se uma 'tarjeta de turista' (usualmente inclusa na passagem) ou taxa de entrada (E-Ticket).",
+                    "2. E-Ticket: OBRIGATÓRIO preencher o formulário de entrada e saída online antes de embarcar. Gera um QR Code.",
+                    "3. Moeda: Peso Dominicano (DOP), mas Dólar Americano (USD) é aceito em TUDO. Leve Dólares trocados para gorjetas.",
+                    "4. Tomada: Tipo A (dois pinos chatos, igual EUA/Japão). Leve adaptador.",
+                    "5. Água: NUNCA beba da torneira. Nem para escovar os dentes se tiver estômago sensível. Use água mineral engarrafada.",
+                    "6. Idioma: Espanhol. Nos resorts, falam inglês e 'portunhol'.",
+                    "7. Transporte: Não existe transporte público bom. Use táxi (caro e sem taxímetro - combine antes) ou transfer privado.",
+                    "8. Internet: O Wi-Fi dos resorts costuma ser bom. Fora deles, compre um chip local (Claro/Altice) ou use roaming.",
+                    "9. Gorjeta (Propina): É cultural. Dê 1-2 dólares para o camareiro, barman, maleteiro. O serviço melhora magicamente.",
+                    "10. Segurança: Dentro dos resorts é 100% seguro. Fora, cuidado com furtos, mas é mais seguro que capitais brasileiras."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Protetor Solar Biodegradável: Em passeios como Cenotes e Ilha Saona, exigem para não matar os corais e peixes.",
+                    "2. Remédio para Estômago: A mudança de tempero e água pode causar desarranjo. Leve seu kit farmácia.",
+                    "3. Escolha o Resort Certo: Tem resort 'Adults Only' (silêncio/lua de mel) e resort 'Family' (criança gritando). Pesquise o perfil antes.",
+                    "4. Não toque nas Estrelas: Em Saona, NÃO tire as estrelas do mar da água para foto. Elas morrem em segundos (sufocadas). Multa pesada.",
+                    "5. Barganhe: Nas lojinhas de praia, o primeiro preço é sempre o triplo ('preço de gringo'). Negocie.",
+                    "6. Hard Rock ou Barceló?: Hard Rock é gigante e tem pouca praia (mar bravo). Barceló tem praia melhor. Riu tem festa.",
+                    "7. Transfer: Contrate o transfer Aeroporto-Hotel do Brasil. Chegar lá e negociar táxi sai mais caro.",
+                    "8. Vestuário Jantar: Alguns restaurantes à la carte nos resorts exigem calça comprida para homens no jantar.",
+                    "9. Repelente: Tem mosquito, principalmente ao amanhecer e anoitecer.",
+                    "10. Sargaço: Entre em grupos de Facebook/TripAdvisor recentes para ver como está a situação das algas na semana da sua viagem."
+                ],
+
+                // --- NÚMEROS IMPORTANTES (PUNTA CANA) ---
+                numeros: [
+                    "1. 911: Emergência Geral (Polícia, Bombeiros, Ambulância).",
+                    "2. +1 809-552-1670 (Polícia Turística - CESTUR): Eles ficam nas praias e áreas turísticas.",
+                    "3. +1 809-959-2376 (Centro Médico Punta Cana): Hospital privado bom.",
+                    "4. +1 809-686-3029 (Hospiten Bávaro): Outro hospital de referência.",
+                    "5. +1 809-532-4200 (Consulado do Brasil): Fica em Santo Domingo.",
+                    "6. +1 809-959-2424 (Aeroporto PUJ): Informações de voos.",
+                    "7. +1 829-200-3136 (Assistência ao Turista): Ministério do Turismo.",
+                    "8. Taxis Berón (Sindicato): +1 809-466-1133.",
+                    "9. Farmácias (Farmaconal): Tem várias em Bávaro.",
+                    "10. Uber: Funciona em algumas áreas, mas os taxistas locais brigam muito (risco de confusão). Evite em hotéis se puder."
+                ],
+
+                // --- RISCOS E ERROS (PUNTA CANA) ---
+                riscos: [
+                    "1. Time-Sharing (Clube de Férias): O ERRO Nº 1. Vendedores dentro do resort te oferecem 'café da manhã VIP' ou 'brinde'. É uma palestra de 4 horas para te vender cota de hotel. Fuja!",
+                    "2. Beber Água da Torneira: A água não é potável. O gelo dos resorts é feito com água purificada, mas da torneira do quarto não beba jamais.",
+                    "3. Táxi sem Preço Combinado: Não existe taxímetro. Se você entrar sem combinar, na chegada vão cobrar 50 dólares por 5km.",
+                    "4. Comprar Charuto na Praia: É falsificado. Folha de bananeira pintada. Compre em lojas oficiais (Don Lucas) ou duty free.",
+                    "5. Mamajuana de Plástico: Não compre as garrafas caseiras vendidas no sol da praia. A higiene é duvidosa. Compre as lacradas.",
+                    "6. Passeio Pirata: Comprar passeio de gente aleatória na areia. O barato sai caro (barco velho, comida ruim, sem seguro). Compre no hotel ou agência.",
+                    "7. Sol do Caribe: O sol é muito mais forte que no sul do Brasil. Insolação no primeiro dia estraga a viagem toda.",
+                    "8. Dirigir lá: O trânsito dominicano é caótico e perigoso. Alugar carro não é recomendado (a não ser que seja muito aventureiro).",
+                    "9. Droga na Balada: Oferta de drogas em baladas é comum. As leis são severíssimas e a cadeia dominicana é um inferno. Não arrisque.",
+                    "10. Passaporte Vencendo: Precisa ter validade de 6 meses além da data da viagem. Se vencer antes, você não embarca."
+                ],
+
+                // --- ROTEIROS AUTOMÁTICOS (PUNTA CANA) ---
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Relax (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Resort Life): Aproveite a estrutura do All-Inclusive. Piscina, praia em frente ao hotel e jantar em um restaurante temático (reserve na chegada).",
+                            "Dia 2 (Obrigatório): Passeio de dia inteiro para Isla Saona. Catamarã na ida (festa) e lancha na volta. Piscinas naturais e almoço na ilha."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Relax acima.",
+                            "Dia 3 (Aventura): Scape Park (Hoyo Azul). Nade no cenote azul e faça as tirolesas. Tarde no resort.",
+                            "Dia 4 (Vida Marinha): Dolphin Explorer ou Marinarium (nadar com tubarões lixa e raias). Noite: Coco Bongo.",
+                            "Dia 5 (Cultura ou Lama): Passeio de Buggy na lama (macacão velho!) visitando a praia de Macao e caverna Taina OU Santo Domingo (histórico)."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Outra Ilha): Isla Catalina ou Isla Saona VIP (Canto de la Playa - parte mais exclusiva).",
+                            "Dia 7 (Natureza): Ojos Indígenas ou Montaña Redonda (fotos nos balanços).",
+                            "Dia 8 (Luxo): Almoço no restaurante Bachata Rosa (do cantor Juan Luis Guerra) ou dia de Spa no resort."
+                        ]
+                    }
+                },
+
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-3364964&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/punta-cana/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            }
+        ]
     },
     "América do Norte": {
         "Estados Unidos": [
@@ -3360,6 +3885,182 @@ const worldData = {
                 links: {
                     hotel: "https://www.booking.com/searchresults.pt-br.html?ss=New+York&aid=304142", 
                     passeio: "https://www.civitatis.com/br/nova-york/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            }
+        ]
+    },
+    "Ásia": {
+        "Japão": [
+            {
+                name: "Tóquio",
+                // FOTO: Cruzamento de Shibuya ou Monte Fuji ao fundo
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Skyscrapers_of_Shinjuku_2009_January.jpg/1280px-Skyscrapers_of_Shinjuku_2009_January.jpg",
+                tags: ["Tecnologia", "Anime", "Gastronomia"],
+                mapa: "https://goo.gl/maps/tokyo",
+                clima: "Temperado. Verão (Jun-Ago) é muito quente e úmido. Inverno (Dez-Fev) é frio e seco (raramente neva). A melhor época é a Primavera (Sakura) ou Outono.",
+                
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Cruzamento de Shibuya: O cruzamento mais movimentado do mundo. Suba no 'Shibuya Sky' para ver de cima (reserve antes!).",
+                    "2. Templo Senso-ji (Asakusa): O templo mais antigo e famoso, com o portão do trovão (Kaminarimon) e a rua de lojinhas Nakamise-dori.",
+                    "3. Tokyo Skytree: A torre mais alta do Japão. A vista alcança o Monte Fuji em dias claros.",
+                    "4. Akihabara: O bairro dos eletrônicos, animes e maid cafés. O paraíso otaku.",
+                    "5. TeamLab Planets: Museu de arte digital imersiva onde você anda descalço na água e entre luzes. Fotos surreais.",
+                    "6. Santuário Meiji (Meiji Jingu): Uma floresta de paz no meio da cidade. Fica ao lado de Harajuku.",
+                    "7. Shinjuku Gyoen: Um dos parques mais bonitos, mistura jardim japonês, francês e inglês. Lindo na época das cerejeiras.",
+                    "8. Tsukiji Outer Market: O antigo mercado de peixes. Vá cedo para comer o sushi mais fresco da sua vida e omelete japonesa.",
+                    "9. Harajuku (Takeshita Street): O berço da moda kawaii, crepes coloridos e roupas excêntricas.",
+                    "10. Tokyo Disneyland e DisneySea: O DisneySea é único no mundo (tema náutico) e considerado o melhor parque da Disney."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Sushi de Esteira (Kaiten-zushi): Barato, divertido e delicioso. Peça pelo tablet e o trem-bala traz o sushi.",
+                    "2. Ramen: Existem mil tipos (Shoyu, Miso, Tonkotsu). O Ichiran Ramen (cabines individuais) é parada obrigatória.",
+                    "3. Wagyu (Carne Japonesa): A carne mais macia do mundo. Derrete na boca. Caro, mas vale provar um espetinho.",
+                    "4. Tempura: Legumes e camarões empanados numa massa leve e crocante.",
+                    "5. Okonomiyaki: A 'panqueca japonesa' feita na chapa com repolho, carne, ovo e molho especial.",
+                    "6. Yakitori: Espetinhos de frango grelhados na brasa. Perfeito para acompanhar cerveja nos becos (Izakayas).",
+                    "7. Konbini Food: A comida das lojas de conveniência (7-Eleven, Lawson, FamilyMart) é incrivelmente boa. Prove o Onigiri e o Frango Frito (Famichiki).",
+                    "8. Fluffy Pancakes: Panquecas super altas e fofas que balançam. Tem em Harajuku.",
+                    "9. Matcha: Tudo de chá verde. Sorvete, latte, bolo, chocolate.",
+                    "10. Tonkatsu: Lombo de porco empanado e frito, servido com repolho fininho."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Silêncio no Trem: É proibido falar ao celular e mal educado conversar alto no metrô. É um silêncio absoluto.",
+                    "2. Vending Machines: Tem máquina de vender bebidas (quentes e frias) em cada esquina. Tem até de sopa e banana.",
+                    "3. Sem Lixeiras: É difícil achar lixeira na rua (medida antiterrorismo antiga), mas a cidade é limpíssima. Leve seu lixo com você.",
+                    "4. Privadas Tecnológicas: Os vasos sanitários (Washlet) têm botões para jato de água, aquecer o assento e tocar música.",
+                    "5. Gorjeta: NÃO dê gorjeta. É considerado ofensivo. O bom serviço já está incluso no orgulho do trabalho.",
+                    "6. Tatuagem: Muitos Onsens (fontes termais) e academias proíbem pessoas tatuadas (associado à Yakuza). Cubra com curativo.",
+                    "7. Fila para Tudo: Japoneses respeitam filas religiosamente. Para entrar no trem, escada rolante, restaurante.",
+                    "8. Lado da Escada: Em Tóquio, fica-se à ESQUERDA na escada rolante (em Osaka é à direita).",
+                    "9. Dormir na Rua: É seguro e comum ver assalariados (Salaryman) dormindo na rua ou no trem depois de beberem muito.",
+                    "10. Máscaras: Usar máscara cirúrgica é comum para qualquer resfriado ou alergia, mesmo antes da pandemia."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Xintoísmo e Budismo: A maioria dos japoneses pratica os dois. Nascem xintoístas, casam cristãos (estilo) e morrem budistas.",
+                    "2. Torii: Os portais vermelhos marcam a entrada de um santuário xintoísta (mundo sagrado).",
+                    "3. Purificação (Temizuya): Antes de entrar no templo, lave a mão esquerda, a direita e a boca na fonte de água.",
+                    "4. Omikuji: A sorte de papel. Se tirar 'Grande Azar', amarre o papel no templo para o azar ficar lá.",
+                    "5. Ema: Plaquinhas de madeira onde você escreve seus desejos e pendura no santuário.",
+                    "6. Curvar-se (Ojigi): O cumprimento padrão. Quanto mais baixa a reverência, maior o respeito.",
+                    "7. Goshuin: Um caderno de selos que você pode colecionar visitando templos (como um passaporte espiritual).",
+                    "8. Sumo: O esporte nacional sagrado. Os torneios acontecem em Janeiro, Maio e Setembro em Tóquio.",
+                    "9. Festivals (Matsuri): No verão, os templos fazem festivais com dança, tambores (Taiko) e comida de rua.",
+                    "10. Tira o Sapato: Obrigatório tirar os sapatos ao entrar em casas, templos e alguns restaurantes (Izakayas)."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Sakura (Cerejeiras): Final de Março/Começo de Abril. A cidade fica rosa. O povo faz piquenique (Hanami) nos parques.",
+                    "2. Golden Week (Maio): Feriadão nacional. Tudo lota e fica caro. Evite viajar nessa semana.",
+                    "3. Hanabi (Fogos): Julho e Agosto. Festivais de fogos de artifício gigantes (Sumida River). O povo usa Yukata (quimono de verão).",
+                    "4. Koyo (Outono): Novembro. As folhas ficam vermelhas e amarelas. Lindo no Shinjuku Gyoen e Monte Takao.",
+                    "5. Monte Fuji (Escalada): Só é permitido subir de Julho a Setembro. No resto do ano, só ver de longe.",
+                    "6. Inverno: Iluminação de Natal em Roppongi e Shibuya é espetacular.",
+                    "7. Chuvas (Tsuyu): Junho é o mês chuvoso. Leve guarda-chuva transparente (vende em todo lugar).",
+                    "8. Comiket: A maior feira de quadrinhos do mundo (Agosto e Dezembro) no Tokyo Big Sight.",
+                    "9. Ano Novo (Oshogatsu): O feriado mais importante. De 1 a 3 de janeiro, muitas lojas fecham e o povo vai ao templo.",
+                    "10. Tufões: Setembro é a época mais propensa a tufões. Fique atento aos alertas."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Suica/Pasmo: Cartão recarregável de transporte. Compre logo no aeroporto ou adicione no iPhone Wallet. Serve para metrô, trem e comprar no Konbini.",
+                    "2. Japan Rail Pass (JR Pass): Passe de trem-bala ilimitado para turistas. Ficou caro recentemente, calcule se vale a pena (calculadora online).",
+                    "3. Metrô Labirinto: Shinjuku é a estação mais movimentada do mundo. Use o Google Maps, ele diz exatamente qual vagão e qual saída pegar.",
+                    "4. Tax Free: Leve o passaporte. Compras acima de 5.500 ienes são isentas de imposto (10%). Eles lacram a sacola.",
+                    "5. Internet: O Wi-Fi público é ruim. Alugue um Pocket Wi-Fi no aeroporto ou compre um eSIM (Holafly/Airalo).",
+                    "6. Tomada: Tipo A (dois pinos chatos, igual EUA). Voltagem 100V (funciona aparelhos 110V/bivolt).",
+                    "7. Táxi: É caro e a porta abre sozinha (automática). Não tente abrir.",
+                    "8. Moeda: Iene (JPY). O Japão ainda usa muito dinheiro vivo (Cash), principalmente em restaurantes pequenos. Tenha notas.",
+                    "9. Segurança: Uma das cidades mais seguras do mundo. Pode andar com câmera no pescoço às 3h da manhã.",
+                    "10. Tatuagem: Se tiver tatuagem grande, verifique as regras antes de ir a onsens ou piscinas públicas."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Visit Japan Web: Preencha o formulário de imigração e alfândega online antes de embarcar para gerar o QR Code. Agiliza a entrada.",
+                    "2. Reserve Disney e Ghibli: Ingressos esgotam semanas antes. Não deixe para comprar na hora.",
+                    "3. Sapatos Fáceis: Você vai tirar e pôr o sapato muitas vezes. Evite botas difíceis de amarrar.",
+                    "4. Google Translate: Baixe o pacote japonês offline e use a função de câmera para ler cardápios e placas.",
+                    "5. Powerbank: Você vai usar muito o celular (mapa/foto). Bateria extra é vital.",
+                    "6. Mala Pequena: Os quartos de hotel são minúsculos e carregar mala gigante no metrô é um inferno.",
+                    "7. Lencinho de Mão: Muitos banheiros públicos não têm papel toalha. Japoneses andam com uma toalhinha.",
+                    "8. Shinkansen (Trem-Bala): Se tiver mala grande, precisa reservar o assento 'Baggage Area' no trem-bala.",
+                    "9. Horário dos Trens: O metrô NÃO é 24h. O último trem passa por volta da meia-noite. Se perder, o táxi é caríssimo.",
+                    "10. Etiqueta: Não coma andando na rua (exceto em festivais). Pare num cantinho, coma e depois ande."
+                ],
+
+                // --- NÚMEROS IMPORTANTES (TÓQUIO) ---
+                numeros: [
+                    "1. 110 (Polícia): Emergência e acidentes.",
+                    "2. 119 (Bombeiros/Ambulância): Emergência médica e incêndio.",
+                    "3. 118 (Guarda Costeira): Emergências no mar.",
+                    "4. +81 3-3404-5211 (Embaixada do Brasil): Fica em Aoyama.",
+                    "5. 0570-00-2437 (Japan Visitor Hotline): Suporte ao turista em inglês/português.",
+                    "6. Aeroporto Narita (NRT) e Haneda (HND): Tenha os contatos da sua companhia aérea.",
+                    "7. Lost & Found (Polícia): Se perder algo, vá ao Koban (posto policial). A chance de devolverem é de 90%.",
+                    "8. JR East Infoline: 050-2016-1603 (Informações sobre trens).",
+                    "9. Taxi Center: Para reclamar ou achar coisas perdidas no táxi.",
+                    "10. Seguro Viagem: O atendimento médico no Japão é excelente, mas CARÍSSIMO. Não vá sem seguro."
+                ],
+
+                // --- RISCOS E ERROS (TÓQUIO) ---
+                riscos: [
+                    "1. O Golpe de Kabukicho: O MAIOR PERIGO. Em Shinjuku (Kabukicho), homens (geralmente nigerianos ou japoneses) te convidam na rua para beber barato com 'meninas'. É GOLPE. Eles batizam a bebida e zeram seu cartão de crédito. NUNCA siga ninguém na rua (tout).",
+                    "2. Terremotos: O Japão treme. Se sentir tremer, mantenha a calma, proteja a cabeça e fique longe de vidros. Se estiver no hotel, abra a porta (para não travar). O celular vai emitir um alarme alto (J-Alert).",
+                    "3. Perder o Último Trem: Os táxis noturnos são caros. Se perder o trem, vá para um Internet Café (Manga Kissa) ou Karaokê esperar amanhecer.",
+                    "4. Roaming de Dados: Usar o chip do Brasil sem pacote internacional vai custar uma fortuna. Desligue o roaming ou compre chip local.",
+                    "5. Andar e Fumar: É proibido fumar na rua em muitas áreas (multa de 2.000 ienes). Use os fumódromos designados.",
+                    "6. Tatuagem em Onsen: Entrar em fonte termal com tatuagem sem avisar pode causar sua expulsão. Procure 'Tattoo Friendly'.",
+                    "7. Fotografar Maiko/Geisha: Em Kyoto (Gion), não toque nem bloqueie o caminho das Geishas para tirar foto. É proibido e dá multa.",
+                    "8. Barulho em Apartamento: Se alugar Airbnb, silêncio total após as 22h. Vizinhos chamam a polícia rápido.",
+                    "9. Cartão de Crédito: Alguns lugares antigos só aceitam dinheiro. Se ficar sem 'cash', pode passar aperto.",
+                    "10. Escadas de Estação: Estações grandes são labirintos. Siga as placas coloridas no chão ou teto. Olhar o celular andando pode causar acidentes."
+                ],
+
+                // --- ROTEIROS AUTOMÁTICOS (TÓQUIO) ---
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (3 Dias)",
+                        texto: [
+                            "Dia 1 (Oeste Moderno): Manhã no Santuário Meiji e Harajuku (Takeshita St). Tarde: Shibuya Crossing e Shibuya Sky no pôr do sol. Noite em Shinjuku (Omoide Yokocho).",
+                            "Dia 2 (Leste Tradicional): Templo Senso-ji (Asakusa) cedo. Barco pelo rio Sumida até Odaiba ou Hamarikyu Garden. Tarde: Akihabara (Eletrônicos/Anime).",
+                            "Dia 3 (Arte e Luxo): TeamLab Planets pela manhã (reserve!). Tarde em Ginza (compras) e Palácio Imperial (jardins)."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (5 a 7 Dias)",
+                        texto: [
+                            "Dias 1 a 3: Siga o Roteiro Express acima.",
+                            "Dia 4 (Magia): DisneySea (Parque único no mundo) OU Tokyo Disneyland.",
+                            "Dia 5 (Cultura Pop): Nakano Broadway (colecionáveis) e Ikebukuro (Pokemon Center).",
+                            "Dia 6 (Bate-volta Histórico): Kamakura (Grande Buda) e Enoshima (Ilha). Fica a 1h de trem.",
+                            "Dia 7 (Natureza/Fuji): Bate-volta para Hakone ou Lago Kawaguchiko para ver o Monte Fuji e tomar banho termal (Onsen)."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (10+ Dias)",
+                        texto: [
+                            "Dias 1 a 7: Siga o Roteiro Essencial acima.",
+                            "Dia 8 (Patrimônio): Bate-volta para Nikko (Toshogu Shrine). Patrimônio da UNESCO nas montanhas.",
+                            "Dia 9 (Vibe Local): Bairros hipsters como Shimokitazawa (brechós) e Kichijoji (Parque Inokashira).",
+                            "Dia 10 (Mercado e Despedida): Tsukiji Outer Market para café da manhã com sushi. Compras finais na Don Quijote (Mega Donki)."
+                        ]
+                    }
+                },
+
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-246227&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/toquio/", 
                     seguro: "https://www.segurospromo.com.br" 
                 }
             }
@@ -4724,4 +5425,58 @@ function loadCities(nomePais, listaCidades) {
         card.onclick = () => openModal(cidade, bgImage);
         grid.appendChild(card);
     });
+}
+// FUNÇÃO PARA ABRIR O MODAL DA CIDADE
+function openCity(cityName) {
+    let cidade = null;
+    for (const cont in worldData) {
+        for (const pais in worldData[cont]) {
+            cidade = worldData[cont][pais].find(c => c.name === cityName);
+            if (cidade) break;
+        }
+        if (cidade) break;
+    }
+
+    if (!cidade) return;
+
+    document.getElementById('modalTitle').innerText = cidade.name;
+    document.getElementById('modalImg').style.backgroundImage = `url(${cidade.imagem})`;
+    document.getElementById('modalSubtitle').innerText = cidade.clima;
+    
+    // Mostra/Esconde Custos
+    const costSection = document.getElementById('costSection');
+    if (cidade.estimativa_custos) {
+        costSection.classList.remove('hidden');
+        document.getElementById('costFood').innerText = cidade.estimativa_custos.alimentacao;
+        document.getElementById('costHotel').innerText = cidade.estimativa_custos.hospedagem;
+        document.getElementById('costTransport').innerText = cidade.estimativa_custos.transporte;
+        document.getElementById('costTickets').innerText = cidade.estimativa_custos.atracoes;
+    } else {
+        costSection.classList.add('hidden');
+    }
+
+    // Google Maps
+    const mapLink = document.getElementById('modalMapLink');
+    if (cidade.mapa) {
+        mapLink.href = cidade.mapa;
+        mapLink.classList.remove('hidden');
+    } else {
+        mapLink.classList.add('hidden');
+    }
+
+    renderModalMenu(cidade);
+    document.getElementById('cityModal').classList.add('active');
+}
+
+// FUNÇÃO PARA FECHAR O MODAL
+function closeModal() {
+    document.getElementById('cityModal').classList.remove('active');
+    // Volta para o menu principal do modal ao fechar
+    backToMenu();
+}
+
+// FUNÇÃO PARA VOLTAR AO MENU DE CATEGORIAS DENTRO DO MODAL
+function backToMenu() {
+    document.getElementById('modalMenu').classList.remove('hidden');
+    document.getElementById('modalDetails').classList.add('hidden');
 }

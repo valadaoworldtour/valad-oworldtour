@@ -78,8 +78,8 @@
     </div>
 
     <div id="cityModal" class="modal-overlay">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal()"><i class="ri-close-line"></i></button>
+      <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">&times;</button>
             
             <div class="modal-header-img" id="modalImg">
                 <div class="modal-gradient"></div>
@@ -91,11 +91,54 @@
             </div>
 
             <div class="modal-body">
+                <div id="costSection" class="cost-section hidden">
+                    <h3 style="font-family: 'Orbitron', sans-serif; font-size: 1rem; margin-bottom: 15px; color: #001e36;">
+                        <i class="ri-money-dollar-circle-line"></i> ESTIMATIVA DE CUSTOS (DIÁRIO)
+                    </h3>
+                    <div class="cost-grid">
+                        <div class="cost-card">
+                            <i class="ri-restaurant-line"></i>
+                            <h4>Alimentação</h4>
+                            <p id="costFood">---</p>
+                        </div>
+                        <div class="cost-card">
+                            <i class="ri-hotel-bed-line"></i>
+                            <h4>Hospedagem</h4>
+                            <p id="costHotel">---</p>
+                        </div>
+                        <div class="cost-card">
+                            <i class="ri-taxi-line"></i>
+                            <h4>Transporte</h4>
+                            <p id="costTransport">---</p>
+                        </div>
+                        <div class="cost-card">
+                            <i class="ri-ticket-2-line"></i>
+                            <h4>Atrações</h4>
+                            <p id="costTickets">---</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div id="modalMenu" class="menu-view">
                     <div id="affiliateContainer" class="affiliate-section"></div>
-                    
                     <div class="category-grid" id="categoryGrid"></div>
                 </div>
+
+                <div id="modalDetails" class="detail-view hidden">
+                    <button class="back-btn" onclick="backToMenu()">
+                        <i class="ri-arrow-left-line"></i> VOLTAR AO MENU
+                    </button>
+                    <h3 id="detailTitle" class="detail-title">Titulo</h3>
+                    <div id="detailContent" class="detail-text-area"></div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <a href="#" id="modalMapLink" target="_blank" class="action-btn">
+                    <i class="ri-map-pin-user-fill"></i> VER NO GOOGLE MAPS
+                </a>
+            </div>
+        </div>
 
                 <div id="modalDetails" class="detail-view hidden">
                     <button class="back-btn" onclick="backToMenu()">

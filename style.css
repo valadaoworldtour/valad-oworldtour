@@ -519,3 +519,74 @@ body {
 .time-btn:hover::before {
     left: 100%; /* Passa o brilho da esquerda para a direita */
 }
+/* --- ESTILOS PARA CUSTO REAL --- */
+.cost-section {
+    margin-top: 40px;
+    padding: 30px;
+    background: rgba(0, 196, 230, 0.05);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 196, 230, 0.2);
+}
+
+.cost-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.cost-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.cost-card:hover {
+    border-color: var(--neon-green);
+    transform: translateY(-5px);
+}
+
+.cost-card i {
+    font-size: 2rem;
+    color: var(--neon-green);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.cost-card h4 {
+    font-family: var(--font-head);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.cost-card p {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin: 5px 0;
+}
+
+.cost-card span {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    display: block;
+}
+
+.cost-disclaimer {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 15px;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Ajuste mobile */
+@media (max-width: 768px) {
+    .cost-grid { grid-template-columns: 1fr 1fr; }
+}
+.hidden { display: none !important; }

@@ -9926,14 +9926,6 @@ function searchSystem() {
     }
 }
 
-// --- FUNÇÃO PARA O MENU MOBILE ---
-function toggleSidebar() {
-    const sidebar = document.querySelector('.sidebar');
-    const overlay = document.querySelector('.sidebar-overlay');
-    
-    sidebar.classList.toggle('active');
-    overlay.classList.toggle('active');
-}
 
 // Inicializa o sistema
 init();

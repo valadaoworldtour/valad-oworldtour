@@ -9937,3 +9937,30 @@ function toggleSidebar() {
 
 // Inicializa o sistema
 init();
+// --- CORREÇÃO MOBILE: FECHAR MENU AO PESQUISAR ---
+// Adicione isso no final do seu script.js
+
+const searchInputMobile = document.getElementById('searchInput'); 
+// (Certifique-se que o ID do seu input de busca é 'searchInput')
+
+if (searchInputMobile) {
+    searchInputMobile.addEventListener('keyup', function(event) {
+        // Verifica se a tecla apertada foi ENTER
+        if (event.key === 'Enter') {
+            
+            // Verifica se está no celular (tela menor que 768px)
+            if (window.innerWidth <= 768) {
+                const sidebar = document.querySelector('.sidebar');
+                const overlay = document.querySelector('.sidebar-overlay');
+                
+                // Se o menu estiver aberto, fecha ele
+                if (sidebar.classList.contains('active')) {
+                    toggleSidebar(); // Chama sua função existente que fecha o menu
+                }
+                
+                // Tira o foco do campo (isso faz o teclado do celular baixar)
+                this.blur(); 
+            }
+        }
+    });
+}

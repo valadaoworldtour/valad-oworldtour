@@ -9937,30 +9937,31 @@ function toggleSidebar() {
 
 // Inicializa o sistema
 init();
-// --- CORREÇÃO MOBILE: FECHAR MENU AO PESQUISAR ---
-// Adicione isso no final do seu script.js
-
-const searchInputMobile = document.getElementById('searchInput'); 
-// (Certifique-se que o ID do seu input de busca é 'searchInput')
+// --- SCRIPT: MODO FOCO MOBILE ---
+const searchInputMobile = document.getElementById('searchInput');
+const sidebar = document.querySelector('.sidebar');
 
 if (searchInputMobile) {
-    searchInputMobile.addEventListener('keyup', function(event) {
-        // Verifica se a tecla apertada foi ENTER
-        if (event.key === 'Enter') {
-            
-            // Verifica se está no celular (tela menor que 768px)
-            if (window.innerWidth <= 768) {
-                const sidebar = document.querySelector('.sidebar');
-                const overlay = document.querySelector('.sidebar-overlay');
-                
-                // Se o menu estiver aberto, fecha ele
-                if (sidebar.classList.contains('active')) {
-                    toggleSidebar(); // Chama sua função existente que fecha o menu
-                }
-                
-                // Tira o foco do campo (isso faz o teclado do celular baixar)
-                this.blur(); 
-            }
+    // Quando clicar para digitar (Foco)
+    searchInputMobile.addEventListener('focus', function() {
+        if (window.innerWidth <= 768) {
+            sidebar.classList.add('search-active');
+        }
+    });
+
+    // Quando sair do campo ou apertar Enter (Blur)
+    searchInputMobile.addEventListener('blur', function() {
+        // Pequeno delay para dar tempo de clicar em algo se precisar
+        setTimeout(() => {
+            sidebar.classList.remove('search-active');
+        }, 200);
+    });
+
+    // Garante que ao apertar Enter, o teclado feche e o menu volte ao normal
+    searchInputMobile.addEventListener('keyup', function(e) {
+        if (e.key === 'Enter') {
+            this.blur(); // Tira o foco, fechando o teclado e o modo foco
+            toggleSidebar(); // Opcional: Fecha o menu lateral completamente
         }
     });
 }

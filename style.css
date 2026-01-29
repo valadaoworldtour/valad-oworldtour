@@ -1,4 +1,5 @@
 
+
 :root {
     /* --- PALETA "DAYTIME NEON" (OCEANO CRISTALINO) --- */
     --bg-deep: #f0f8ff; /* Branco Gelo / AliceBlue */
@@ -1058,4 +1059,35 @@ body {
     .verdict-header { flex-direction: column; align-items: flex-start; }
     .best-time-badge { width: 100%; justify-content: center; }
 }
+
+/* --- CORREÇÃO MOBILE: MODO FOCO NA PESQUISA --- */
+@media (max-width: 768px) {
+    /* Quando a classe .search-active é adicionada à sidebar */
+    .sidebar.search-active {
+        background: rgba(0, 0, 0, 0.2) !important; /* Fundo quase transparente */
+        backdrop-filter: none; /* Remove o borrão se tiver */
+        box-shadow: none;
+        width: 100%; /* Garante que pegue a largura mas deixe ver atrás */
+    }
+
+    /* Esconde tudo dentro do menu... */
+    .sidebar.search-active > * {
+        opacity: 0; 
+        pointer-events: none; /* Impede cliques no nada */
+        transition: opacity 0.2s;
+    }
+
+    /* ...EXCETO a barra de pesquisa */
+    .sidebar.search-active .search-box {
+        opacity: 1 !important;
+        pointer-events: all;
+        position: absolute; /* Destaca a barra */
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        background: var(--glass-bg); /* Garante fundo na barra para leitura */
+        box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        z-index: 9999;
+    }
 }

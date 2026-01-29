@@ -18,8 +18,10 @@ const countryFlags = {
     "Uruguai": "uy",
     "Panamá": "pa",
     "Peru": "pe",
-    "Alemanha": "de"
-};// --- CONFIGURAÇÃO GLOBAL ---
+    "Alemanha": "de",
+    
+};
+// --- CONFIGURAÇÃO GLOBAL ---
 
 const defaultImage = "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop";
 
@@ -162,7 +164,19 @@ const realCostData = {
     hospedagem: "R$ 120 – R$ 300",
     transporte: "R$ 25 – R$ 50", 
     atracoes: "R$ 30 – R$ 90"
-},
+    },
+    "Cabo Frio": {
+    comida: "R$ 60 – R$ 100",
+    hospedagem: "R$ 120 – R$ 300",
+    transporte: "R$ 20 – R$ 40", 
+    atracoes: "R$ 50 – R$ 100"
+    },
+    "Bonito": {
+    comida: "R$ 60 – R$ 120",
+    hospedagem: "R$ 180 – R$ 450",
+    transporte: "R$ 50 – R$ 100", 
+    atracoes: "R$ 150 – R$ 450"
+    },
     "Buenos Aires": {
         comida: "R$ 90 – R$ 180",
         hospedagem: "R$ 180 – R$ 450",
@@ -217,6 +231,12 @@ const realCostData = {
     transporte: "R$ 40 – R$ 120",
     atracoes: "R$ 200 – R$ 600"
    },
+   "Cidade do México": {
+    comida: "R$ 50 – R$ 100", // Comida de rua é muito barata e deliciosa
+    hospedagem: "R$ 150 – R$ 400", // Hostels e hotéis boutique têm ótimo preço
+    transporte: "R$ 10 – R$ 30", // Metrô custa centavos (5 pesos) e Uber é barato
+    atracoes: "R$ 50 – R$ 150" // Museus são acessíveis, balão em Teotihuacán é extra
+},
     "Orlando": {
         comida: "R$ 250 – R$ 450",
         hospedagem: "R$ 450 – R$ 1200",
@@ -276,11 +296,730 @@ const realCostData = {
         hospedagem: "R$ 550 – R$ 1400",
         transporte: "R$ 45 – R$ 120",
         atracoes: "R$ 90 – R$ 300"
-    }
+    },
+    "Frankfurt": {
+    comida: "R$ 80 – R$ 150", // Restaurantes são caros, mas as salsichas na rua salvam o orçamento
+    hospedagem: "R$ 250 – R$ 600", // Muito caro durante feiras (Messe), razoável noutras datas
+    transporte: "R$ 40 – R$ 60", // O bilhete diário é caro, mas a rede cobre tudo
+    atracoes: "R$ 60 – R$ 120" // Museus e subida à Main Tower custam entre 10€ a 15€
+    },
+    "Torre Eiffel": {
+    comida: "R$ 50 – R$ 1.500", // Desde um crepe na rua até o jantar no Jules Verne
+    hospedagem: "R$ 800 – R$ 3.000", // Hotéis com vista para a Torre são premium
+    transporte: "R$ 15 – R$ 50", // Metrô/Uber até o Champ de Mars
+    atracoes: "R$ 180 – R$ 350" // Ingresso subida (Topo vs 2º Andar)
+    },
+    "Machu Picchu": {
+    comida: "R$ 60 – R$ 120", // Aguas Calientes é muito turística e cara
+    hospedagem: "R$ 150 – R$ 500", // Desde hostels a hotéis de charme
+    transporte: "R$ 400 – R$ 800", // O comboio (trem) ida e volta + autocarro de subida pesam muito
+    atracoes: "R$ 300 – R$ 500" // Entrada oficial + Guia (obrigatório/recomendado)
+    },
+    "Cristo Redentor": {
+    comida: "R$ 40 – R$ 100", // Lanches na lanchonete do topo ou no centro de visitantes
+    hospedagem: "R$ 200 – R$ 600", // Hotéis na Zona Sul (Copacabana/Ipanema) ou Santa Teresa
+    transporte: "R$ 30 – R$ 60", // Uber/Metrô até o Cosme Velho (Trem) ou Paineiras (Van)
+    atracoes: "R$ 90 – R$ 130" // Ingresso oficial (Trem do Corcovado ou Van Paineiras - alta temporada)
+    },
+    "Coliseu": {
+    comida: "R$ 60 – R$ 150", // Jantar em Trastevere vs Panini na rua
+    hospedagem: "R$ 300 – R$ 800", // Centro Histórico é muito valorizado
+    transporte: "R$ 10 – R$ 40", // Metrô/Autocarro ou muito a pé
+    atracoes: "R$ 100 – R$ 250" // Entrada Coliseu + Fórum + Palatino (básico vs arena/subterrâneo)
+},
+
+    
 };
 
 /* BANCO DE DADOS COMPLETO */
 const worldData = {
+    "Pontos Turísticos Famosos": {
+        "Monumento": [
+            {
+                name: "Torre Eiffel",
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Eiffel_Tower_from_Champ-de-Mars%2C_7_August_2017.jpg/500px-Eiffel_Tower_from_Champ-de-Mars%2C_7_August_2017.jpg",
+                tags: ["Ícone Mundial", "Romance", "Vista Panorâmica"],
+                mapa: "https://goo.gl/maps/eiffel",
+                clima: "Vento forte no topo. Leve casaco mesmo no verão.",
+
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Ao pôr do sol (para ver a cidade acender). Evite fins de semana e o horário das 11h às 15h (filas gigantes).",
+                    ideal_para: [
+                        "Casais apaixonados (o pedido de casamento clássico)",
+                        "Fotógrafos (a vista do Trocadéro é obrigatória)",
+                        "Primeira vez em Paris (não tem como ignorar)",
+                        "Quem quer ver Paris inteira de uma vez só"
+                    ],
+                    nao_ideal_para: [
+                        "Quem tem vertigem ou medo de altura (o chão de vidro e o balanço do topo assustam)",
+                        "Quem odeia filas e revistas de segurança (é como um aeroporto)",
+                        "Quem busca uma experiência 'local' e sem turistas"
+                    ],
+                    perfis: [
+                        { icone: "ri-hearts-fill", nome: "Romance" },
+                        { icone: "ri-camera-lens-fill", nome: "Foto/Ícone" },
+                        { icone: "ri-building-line", nome: "Engenharia" },
+                        { icone: "ri-eye-fill", nome: "Vista 360º" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Le Sommet (O Topo): A 276m de altura. Tem o escritório de Gustave Eiffel e o Bar de Champagne.",
+                    "2. 2º Andar: Considerado a melhor vista para fotos, pois você ainda vê os prédios com detalhes.",
+                    "3. 1º Andar e Piso de Vidro: Caminhe sobre o vazio a 57m de altura. Ótimo para fotos criativas.",
+                    "4. Esplanada (Térreo): Gratuita. Veja a estrutura de ferro de baixo para cima (impressionante).",
+                    "5. Jardins do Trocadéro: Do outro lado do rio, é o melhor lugar para tirar AQUELA foto da Torre inteira.",
+                    "6. Champ de Mars: O gramado atrás da Torre, perfeito para piqueniques olhando para ela.",
+                    "7. Carrossel da Torre: Na esquina da Ponte d'Iéna, rende fotos lindas e nostálgicas.",
+                    "8. Busto de Gustave Eiffel: Homenagem ao engenheiro, fica escondido num dos pés (Pilar Norte).",
+                    "9. Ponte de Bir-Hakeim: A ponte 'do filme A Origem', dá uma vista lateral incrível da Torre.",
+                    "10. Rue de l'Université: A rua lateral que dá uma vista 'instagramável' entre os prédios residenciais."
+                ],
+
+                gastronomia: [
+                    "1. Le Jules Verne (Estrela Michelin): Restaurante de luxo no 2º andar. Precisa reservar meses antes.",
+                    "2. Madame Brasserie: No 1º andar, mais casual que o Jules Verne, mas ainda chique.",
+                    "3. Bar à Champagne: No topo da torre. Uma taça custa caro, mas brinda-se nas nuvens.",
+                    "4. Buffets da Esplanada: Lanches rápidos (sanduíches e saladas) no térreo e andares.",
+                    "5. Crepe de Rua: Nas barracas do Trocadéro e Champ de Mars (Nutella ou Açúcar). Clássico.",
+                    "6. Macarons Pierre Hermé: Tem quiosque dentro da torre para um doce refinado.",
+                    "7. Piquenique no Gramado: Compre vinho, queijo e baguete no mercado e coma sentado na grama (verão).",
+                    "8. Café do Museu do Homem: No Trocadéro, com vista direta para a Torre.",
+                    "9. Rue Cler: Rua de pedestres próxima cheia de mercados e bistrôs autênticos.",
+                    "10. Vendedores de Água/Cerveja: Ambulantes vendem bebidas no gramado (negocie o preço!)."
+                ],
+
+                religiao: [
+                    "1. Ícone Sagrado do Turismo: Para muitos viajantes, ver a Torre é o ponto alto 'espiritual' da viagem.",
+                    "2. Cúpula dos Inválidos: A cúpula dourada (túmulo de Napoleão) brilha ali perto.",
+                    "3. Catedral da Santíssima Trindade: Igreja Ortodoxa Russa próxima, com cúpulas douradas lindas.",
+                    "4. Muro da Paz: No final do Champ de Mars, monumento com a palavra 'Paz' em 49 idiomas.",
+                    "5. Luz Noturna: O feixe de luz que gira no topo serve como um farol moderno para a cidade.",
+                    "6. Casamentos: O Trocadéro é palco de 'peregrinações' de noivas asiáticas e americanas às 6h da manhã.",
+                    "7. Engenharia como Religião: A torre foi construída para celebrar a ciência (não tem cruz, tem nomes de cientistas gravados).",
+                    "8. O 'Ferro': Apelidada de 'Dama de Ferro', é venerada e odiada com fervor pelos parisienses.",
+                    "9. Silêncio no Topo: Apesar da multidão, a altura traz uma sensação de paz e distanciamento.",
+                    "10. Ano Novo: É o centro das celebrações, onde todos os olhos se voltam."
+                ],
+
+                curiosidades: [
+                    "1. Era Temporária: Foi construída para a Exposição de 1889 e deveria ser demolida 20 anos depois.",
+                    "2. Salva pelo Rádio: Só não foi demolida porque servia como antena de rádio gigante.",
+                    "3. Cresce no Verão: O ferro dilata com o calor e ela pode ficar até 15cm mais alta.",
+                    "4. Pintura Manual: A cada 7 anos, ela é pintada inteiramente à mão (são 60 toneladas de tinta).",
+                    "5. Odiada: Intelectuais da época chamaram-na de 'esqueleto inútil' e 'chaminé trágica'.",
+                    "6. Nomes Gravados: Há 72 nomes de cientistas e matemáticos franceses gravados ao redor do 1º andar.",
+                    "7. Apartamento Secreto: Gustave Eiffel tinha um apartamento privado no topo para receber convidados.",
+                    "8. Suicídios e Paraquedas: A história da torre tem vários saltos trágicos e tentativas de voo.",
+                    "9. Cintilante: As luzes que piscam (sparkle) acontecem nos primeiros 5 minutos de cada hora à noite.",
+                    "10. Cor Exclusiva: A cor é 'Marrom Torre Eiffel', patenteada e em degradê."
+                ],
+
+                eventos_estacoes: [
+                    "1. 14 de Julho (Queda da Bastilha): O maior show de fogos de artifício da França acontece aqui.",
+                    "2. Iluminação de Natal: A torre ganha decorações especiais em Dezembro.",
+                    "3. Outubro Rosa: A torre fica rosa para conscientização do câncer de mama.",
+                    "4. Verão no Gramado: O Champ de Mars fica lotado até tarde da noite com piqueniques.",
+                    "5. Patinação no Gelo: Em alguns invernos, montam uma pista de patinação no 1º andar.",
+                    "6. Corridas Verticais: A 'Verticale de la Tour Eiffel' é uma corrida subindo as escadas.",
+                    "7. Ano Novo Chinês: Às vezes iluminada de vermelho para celebrar.",
+                    "8. Paris Plages: No verão, a margem do rio embaixo dela vira praia.",
+                    "9. Fashion Week: O Trocadéro vira passarela e cenário de desfiles.",
+                    "10. Hora do Planeta: Ela apaga as luzes por 1 hora em março."
+                ],
+
+                info_gerais: [
+                    "1. Altura: 330 metros (com as antenas atuais).",
+                    "2. Degraus: 1.665 até o topo (mas a pé só se pode ir até o 2º andar, ~674 degraus).",
+                    "3. Entradas: Pelos Pilares (Leste, Oeste, Norte, Sul). Verifique qual a fila menor.",
+                    "4. Elevadores: São hidráulicos e inclinados. Uma maravilha da engenharia do século XIX.",
+                    "5. Segurança: Há raio-X e vidros blindados ao redor da base. Não leve canivetes.",
+                    "6. Ingressos: 'Summit' (Topo - Elevador) ou '2nd Floor' (Escada ou Elevador). Escada é mais barato.",
+                    "7. Horário: Geralmente das 9h30 às 23h45. No verão fecha mais tarde.",
+                    "8. Banheiros: Tem em todos os andares (gratuitos para quem subiu).",
+                    "9. Wi-Fi: Disponível, mas o sinal de 4G lá em cima é ótimo.",
+                    "10. Vento: Lá em cima venta muito. Cuidado com chapéus e saias."
+                ],
+
+                antes_de_ir: [
+                    "1. Compre Online: A bilheteria física tem filas de horas. Compre no site oficial com 60 dias de antecedência.",
+                    "2. Golpe da Pulseira: No térreo, homens tentarão amarrar uma 'pulseira' no seu braço e cobrar. Diga NÃO e esconda as mãos.",
+                    "3. Jogo do Copo: Não pare para ver o jogo de 'adivinhar onde está a bolinha' na calçada. É golpe.",
+                    "4. Escadas vs Elevador: Subir de escada até o 2º andar é cansativo, mas a fila é minúscula.",
+                    "5. Chegue Cedo: Se tiver ingresso marcado para 10h, chegue 9h30 para passar na segurança.",
+                    "6. O Melhor Ângulo: Saia na estação de metrô Trocadéro para ter a vista frontal impactante.",
+                    "7. Brilho Noturno: Não vá embora antes de ver ela piscar (começa ao anoitecer, de hora em hora).",
+                    "8. Proibido Álcool: Oficialmente é proibido beber vidro/álcool no Champ de Mars à noite.",
+                    "9. Ratos: Sim, os parques de Paris têm ratos à noite. Não deixe comida no chão.",
+                    "10. Saída: A descida de elevador também tem fila. Calcule esse tempo."
+                ],
+
+                numeros: [
+                    "1. 112 (Emergência Geral na Europa).",
+                    "2. Segurança da Torre (Há agentes fardados em toda a esplanada).",
+                    "3. Achados e Perdidos (No pilar Norte).",
+                    "4. Site Oficial: toureiffel.paris (único lugar confiável para ingressos).",
+                    "5. Metrô Trocadéro (Linha 6 e 9).",
+                    "6. Metrô Bir-Hakeim (Linha 6).",
+                    "7. RER C (Estação Champ de Mars - Tour Eiffel).",
+                    "8. Batobus (Parada Tour Eiffel no rio).",
+                    "9. Táxi (Ponto oficial na Quai Branly).",
+                    "10. Polícia Turística (Patrulhando a área)."
+                ],
+
+                riscos: [
+                    "1. Pickpockets (Batedores de Carteira): Atuam em bando no elevador e no Trocadéro.",
+                    "2. Golpes de Rua: O 'anel de ouro', a 'petição para surdos', a 'pulseira'. Ignore todos.",
+                    "3. Vendedores Agressivos: Vendem mini-torres. Se tocar, vão te pressionar a comprar.",
+                    "4. Ventania: No topo, o vento pode derrubar óculos e bonés.",
+                    "5. Terrorismo: É um alvo sensível. A segurança é nível aeroporto.",
+                    "6. Degraus Escorregadios: Se chover, as escadas externas ficam lisas.",
+                    "7. Preço da Água: Ambulantes cobram 1€, quiosques 4€. Negocie.",
+                    "8. Filas no Sol: A espera no térreo é a céu aberto. Leve água e chapéu.",
+                    "9. Tontura: O elevador sobe na diagonal, sensação estranha no estômago.",
+                    "10. Multas: Jogar lixo nos jardins dá multa pesada."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "A Foto Perfeita (2 Horas)",
+                        texto: [
+                            "Chegada: Metrô Trocadéro. Fotos na esplanada superior.",
+                            "Descida: Caminhe pelos jardins do Trocadéro até a Ponte d'Iéna.",
+                            "Base: Entre na segurança (grátis) para ver a torre de baixo.",
+                            "Saída: Pela Rue de l'Université para a foto entre os prédios."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Subida Clássica (4 Horas)",
+                        texto: [
+                            "Manhã: Subida de elevador até o 2º Andar (fotos panorâmicas).",
+                            "Topo: Troca de elevador para o Sommet (taça de Champagne).",
+                            "Descida: Desça de escada do 2º para o 1º andar (Piso de Vidro).",
+                            "Final: Crepe no carrossel da base."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Dia Eiffel Completo (6+ Horas)",
+                        texto: [
+                            "Tarde: Piquenique no Champ de Mars.",
+                            "Pôr do Sol: Subida à torre para ver o dia virar noite.",
+                            "Noite: Jantar no Madame Brasserie (reserva) ou passeio de barco.",
+                            "Encerramento: Ver o brilho das luzes (sparkle) da ponte Bir-Hakeim."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/landmark/fr/eiffel-tower.pt-br.html", 
+                    passeio: "https://www.civitatis.com/br/paris/ingresso-torre-eiffel/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
+            
+        {
+            name: "Cristo Redentor",
+            imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Santa_Teresa%2C_Rio_de_Janeiro_-_State_of_Rio_de_Janeiro%2C_Brazil_-_panoramio_%2810%29.jpg/960px-Santa_Teresa%2C_Rio_de_Janeiro_-_State_of_Rio_de_Janeiro%2C_Brazil_-_panoramio_%2810%29.jpg",
+            tags: ["Maravilha do Mundo", "Fé", "Vista Panorâmica"],
+            mapa: "https://goo.gl/maps/cristoredentor",
+            clima: "Tropical de Altitude. Lá em cima venta e o tempo muda rápido (nuvens passam dentro do monumento).",
+
+            // === DADOS DO VEREDICTO ===
+            veredicto: {
+                melhor_epoca: "Manhã cedo (8h) para ver o sol iluminar o rosto do Cristo. À tarde o sol se põe nas costas dele (bom para silhuetas, ruim para selfies de rosto). Evite dias nublados a todo custo.",
+                ideal_para: [
+                    "Peregrinos e fiéis (há uma capela consagrada na base)",
+                    "Amantes de vistas aéreas (dá para ver o Pão de Açúcar, Maracanã e Lagoa)",
+                    "Turistas de primeira viagem (é o símbolo máximo do Brasil)",
+                    "Quem gosta de passeios históricos (o Trem do Corcovado é centenário)"
+                ],
+                nao_ideal_para: [
+                    "Quem tem fobia de multidões (o terraço é apertado e lota muito)",
+                    "Dias com tempo fechado (você sobe e só vê uma parede branca de neblina)",
+                    "Quem busca silêncio absoluto (é um dos lugares mais movimentados do país)"
+                ],
+                perfis: [
+                    { icone: "ri-emotion-happy-fill", nome: "Maravilha" },
+                    { icone: "ri-church-fill", nome: "Fé" },
+                    { icone: "ri-camera-lens-fill", nome: "Vista 360º" },
+                    { icone: "ri-train-fill", nome: "Trem" }
+                ]
+            },
+            // =================================
+
+            pontos_turisticos: [
+                "1. A Estátua: 30 metros de altura (mais 8m de pedestal). O revestimento é de pedra-sabão.",
+                "2. Mirante Principal: O terraço aos pés do Cristo oferece a vista mais completa do Rio de Janeiro.",
+                "3. Capela Nossa Senhora Aparecida: Fica na base da estátua (atrás), onde ocorrem missas e batizados.",
+                "4. Trem do Corcovado: A subida pela Mata Atlântica é uma atração à parte. Sente do lado direito na subida para ver a vista.",
+                "5. Coração do Cristo: Existe um coração esculpido no peito da estátua (visível apenas de helicóptero ou drone próximo).",
+                "6. Escadas Rolantes: Facilitam o acesso final, mas a escadaria original (220 degraus) ainda existe.",
+                "7. Floresta da Tijuca: O monumento fica dentro do maior parque urbano replantado do mundo.",
+                "8. Centro de Visitantes Paineiras: Museu moderno sobre a fauna, flora e história do parque (parada das vans).",
+                "9. Vista do Maracanã: De um dos lados do mirante, vê-se o estádio perfeitamente.",
+                "10. Vista da Lagoa: Do outro lado, a Lagoa Rodrigo de Freitas em formato de coração."
+            ],
+
+            gastronomia: [
+                "1. Restaurante Mirante Paineiras: Buffet com vista espetacular no centro de visitantes (antes de subir a van final).",
+                "2. Lanchonete do Cristo: No topo, vende salgados e bebidas (preços turísticos).",
+                "3. Biscoito Globo e Mate: Clássico carioca, leve na mochila para comer apreciando a vista.",
+                "4. Feijoada: Na descida, em Santa Teresa (Bar do Mineiro) ou Cosme Velho.",
+                "5. Água de Coco: Indispensável no calor do Rio.",
+                "6. Açaí: Para repor as energias após a visita.",
+                "7. Picolé Itália: Marca tradicional do Rio, vende em quiosques no caminho.",
+                "8. Empada Praiana: Se estiver de van, pode encontrar vendedores na orla antes de subir.",
+                "9. Café do Trem: Na estação do Cosme Velho, um cafézinho antes de embarcar.",
+                "10. Caipirinha: Para celebrar a visita (mas cuidado com o sol forte)."
+            ],
+
+            religiao: [
+                "1. Santuário a Céu Aberto: É o primeiro santuário a céu aberto do mundo reconhecido pelo Vaticano.",
+                "2. Pedra-Sabão: Escolhida por ser resistente e, simbolicamente, por ser 'macia' ao toque, representando a bondade.",
+                "3. Braços Abertos: Formam uma cruz, simbolizando o abraço e a acolhida a quem chega.",
+                "4. Relíquia: Uma parte de osso de um santo e uma pedra do Santo Sepulcro estão na pedra fundamental.",
+                "5. Missas: Ocorrem diariamente na capela (lugares limitadíssimos).",
+                "6. Pedidos: Fiéis deixam bilhetes e fotos na capela pedindo graças.",
+                "7. Iluminação: Em datas religiosas, a cor muda (roxo na quaresma, etc).",
+                "8. Casamentos: É possível casar aos pés do Cristo (a fila de espera é grande).",
+                "9. Proteção: A estátua é atingida por raios cerca de 6 vezes por ano, servindo como para-raios da cidade.",
+                "10. Cardeal Leme: Foi o grande idealizador religioso da obra."
+            ],
+
+            curiosidades: [
+                "1. Mosaico Coletivo: A estátua é coberta por milhões de triângulos de pedra-sabão. Mulheres da sociedade escreveram nomes de parentes no verso de muitos deles.",
+                "2. Cabeça Oca: A cabeça tem acesso interno (escada) e saída pelo topo (para manutenção).",
+                "3. França ou Brasil?: A cabeça e as mãos foram moldadas em Paris pelo escultor Paul Landowski, mas o projeto é do brasileiro Heitor da Silva Costa.",
+                "4. Não foi presente da França: Foi financiado por doações do povo brasileiro na 'Semana do Monumento' (1923).",
+                "5. Túneis nos Braços: É possível andar por dentro dos braços até as mãos (só manutenção).",
+                "6. 7 Maravilhas: Eleito uma das 7 Maravilhas do Mundo Moderno em 2007.",
+                "7. Maior Art Déco: É a maior estátua em estilo Art Déco do mundo.",
+                "8. Escondido nas Nuvens: É comum a cidade estar sol e o Cristo encoberto. Olhe para o topo antes de comprar o ingresso.",
+                "9. Braço Esticado: O braço esquerdo é 40cm menor que o direito para dar estabilidade contra o vento.",
+                "10. Invasão: Em 2014, Lee Thompson escalou a estátua e tirou a primeira selfie do topo da cabeça (ilegalmente)."
+            ],
+
+            eventos_estacoes: [
+                "1. Réveillon: Vê-se os fogos de Copacabana lá de cima (acesso restrito/vip).",
+                "2. Semana Santa: Via Sacra e missas especiais.",
+                "3. Outubro Rosa: Iluminação especial rosa.",
+                "4. Dia do Corcovado (12 Outubro): Aniversário da inauguração, junto com dia de N.S. Aparecida.",
+                "5. Verão (Dez-Mar): Alta temporada, filas de 2h se não comprar antecipado. Pôr do sol às 19h.",
+                "6. Inverno (Jun-Set): Melhor visibilidade (menos bruma), dias mais claros e frios.",
+                "7. Carnaval: O trem funciona em esquema especial, cidade cheia.",
+                "8. Hora do Planeta: Luzes apagam por 1h.",
+                "9. Dia da Padroeira: Missas campais.",
+                "10. Eventos Esportivos: Geralmente é o ponto de partida ou passagem da tocha olímpica/cenário de TV."
+            ],
+
+            info_gerais: [
+                "1. Altura Total: 38 metros (equivalente a um prédio de 13 andares).",
+                "2. Peso: 1.145 toneladas.",
+                "3. Como Chegar (Trem): Estação Cosme Velho. Mais tradicional, vista linda. Compre online.",
+                "4. Como Chegar (Van): Saídas de Copacabana, Largo do Machado ou Paineiras. Mais rápido.",
+                "5. Não vá a pé: Subir a pé pela estrada é perigoso (assaltos) e cansativo. Evite ir de carro próprio (não tem onde estacionar).",
+                "6. Ingressos: Incluem o transporte e a entrada. Trem do Corcovado ou Paineiras Corcovado.",
+                "7. Wi-Fi: Tem sinal lá em cima para postar a foto na hora.",
+                "8. Elevador: Sim, há elevadores e escadas rolantes para quem não pode subir degraus.",
+                "9. Horário: 8h às 19h (Trem). A primeira subida é a mais vazia.",
+                "10. Drone: Estritamente proibido sem autorização da ANAC e do Santuário (área de segurança)."
+            ],
+
+            antes_de_ir: [
+                "1. Monitoramento ao Vivo: Antes de sair do hotel, pesquise 'câmera ao vivo Cristo Redentor'. Se estiver branco (nuvem), não suba.",
+                "2. Lado Direito do Trem: Na ida (subida), sente na janela da direita para ver a vista da cidade e lagoa.",
+                "3. Ingresso Antecipado: Na alta temporada, esgota dias antes. Não deixe para a hora.",
+                "4. Água e Boné: O sol lá em cima é impiedoso e a água é cara. Leve a sua.",
+                "5. Paciência para a Foto: Todo mundo quer a foto de braços abertos. Tenha paciência e seja gentil.",
+                "6. Guarda-Volumes: Não pode entrar com malas grandes. Deixe no hotel.",
+                "7. Trilha do Parque Lage: Existe uma trilha que sobe a pé (pesada, 3h). Só faça em grupo grande e com guia (risco de segurança).",
+                "8. Ingresso Meia: Brasileiros e estudantes têm desconto, leve documento.",
+                "9. Horário de Ouro: O pôr do sol é lindo, mas a descida depois dele tem filas enormes.",
+                "10. Respeito: Lembre-se que é um santuário religioso. Roupas de banho (biquíni/sunga) não são permitidas."
+            ],
+
+            numeros: [
+                "1. Trem do Corcovado (Bilheteria): tremdocorcovado.rio",
+                "2. Paineiras Corcovado (Vans): paineirascorcovado.com.br",
+                "3. 190 (Polícia Militar).",
+                "4. 192 (SAMU).",
+                "5. (21) 2558-1329 (Santuário Cristo Redentor).",
+                "6. 184 (Disque Denúncia).",
+                "7. Deat (Delegacia do Turista): (21) 2332-2924.",
+                "8. Metrô Largo do Machado (ponto de vans).",
+                "9. Uber (funciona bem até o Cosme Velho).",
+                "10. Centro de Visitantes Paineiras."
+            ],
+
+            riscos: [
+                "1. Nuvens Repentinas: O tempo no Rio muda rápido. Pode subir com sol e chegar lá nublado.",
+                "2. Furtos na Multidão: Cuide do celular ao levantar os braços para a foto.",
+                "3. Golpes de Táxi: No Cosme Velho, taxistas tentam convencer que o trem quebrou para te levar de carro por preços abusivos. Ignore.",
+                "4. Insolação: Pouca sombra no terraço principal.",
+                "5. Desidratação: Calor úmido intenso.",
+                "6. Quedas: Piso pode ser escorregadio se chover.",
+                "7. Animais Silvestres: Quatis e macacos nas Paineiras podem morder se tentar alimentar (não alimente!).",
+                "8. Trilha Perigosa: A trilha a pé tem histórico de assaltos. Prefira o trem ou van oficial.",
+                "9. Ingressos Falsos: Compre apenas nos sites oficiais ou quiosques credenciados.",
+                "10. Trânsito: O Cosme Velho engarrafa muito nos fins de semana."
+            ],
+
+            roteiros: {
+                "curto": {
+                    titulo: "Express (3 Horas)",
+                    texto: [
+                        "Chegada: Trem do Corcovado (8h da manhã).",
+                        "Visita: Terraço principal, Capela e fotos clássicas.",
+                        "Descida: Retorno de trem e café no Cosme Velho."
+                    ]
+                },
+                "medio": {
+                    titulo: "Rio Clássico (5 Horas)",
+                    texto: [
+                        "Manhã: Cristo Redentor (Van via Paineiras).",
+                        "Almoço: Mirante das Paineiras (buffet com vista).",
+                        "Tarde: Descida e visita ao Mirante Dona Marta (vista de helicóptero)."
+                    ]
+                },
+                "longo": {
+                    titulo: "Dia Maravilha (Dia Todo)",
+                    texto: [
+                        "Manhã: Cristo Redentor (Trem).",
+                        "Almoço: Santa Teresa (bonde e feijoada).",
+                        "Tarde: Escadaria Selarón e Pão de Açúcar para o pôr do sol."
+                    ]
+                },
+            },
+
+            links: {
+                hotel: "https://www.booking.com/landmark/br/christ-the-redeemer.pt-br.html", 
+                passeio: "https://www.civitatis.com/br/rio-de-janeiro/ingresso-trem-corcovado/", 
+                seguro: "https://www.segurospromo.com.br" 
+            },
+        },
+        // --- COLISEU (ITÁLIA) ---
+            {
+                name: "Coliseu",
+                imagem: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1996&auto=format&fit=crop",
+                tags: ["Império Romano", "História", "Gladiadores"],
+                mapa: "https://goo.gl/maps/coliseu",
+                clima: "Mediterrânico. Verão muito quente e húmido. Primavera/Outono ideais.",
+                veredicto: {
+                    melhor_epoca: "Abril/Maio ou Outubro (Clima ameno). Evite Julho/Agosto (Calor infernal e filas).",
+                    ideal_para: ["Amantes de História", "Fãs de 'Gladiador'", "Fotógrafos"],
+                    nao_ideal_para: ["Quem tem claustrofobia (nos subterrâneos)", "Quem odeia andar (o complexo é enorme)"],
+                    perfis: [
+                        { icone: "ri-ancient-pavilion-fill", nome: "Império" },
+                        { icone: "ri-sword-fill", nome: "Gladiador" },
+                        { icone: "ri-camera-lens-fill", nome: "Foto" },
+                        { icone: "ri-history-line", nome: "História" }
+                    ]
+                },
+                pontos_turisticos: [
+                    "1. Arena (O Chão): Onde as lutas aconteciam. A reconstrução parcial permite ver a perspectiva do gladiador.",
+                    "2. Hipogeu (Subterrâneo): Os bastidores, onde ficavam as jaulas dos animais e elevadores manuais.",
+                    "3. Terceiro Anel (Belvedere): A vista mais alta e panorâmica do interior (acesso restrito).",
+                    "4. Arco de Constantino: O arco do triunfo perfeitamente preservado logo ao lado de fora.",
+                    "5. Fórum Romano: O centro político da Roma Antiga (o bilhete costuma incluir).",
+                    "6. Monte Palatino: Onde Roma foi fundada e viviam os imperadores (vista incrível do Coliseu de cima).",
+                    "7. Ludus Magnus: As ruínas da escola de gladiadores que ficam do outro lado da rua.",
+                    "8. Via Sacra: A rua principal por onde passavam as procissões triunfais.",
+                    "9. Cruz do Papa: Uma cruz moderna colocada no interior em memória aos mártires cristãos.",
+                    "10. Museu do Coliseu: No segundo andar, exibe objetos encontrados nas escavações."
+                ],
+                gastronomia: [
+                    "1. Carbonara: O prato clássico romano (ovo, queijo pecorino, guanciale e pimenta).",
+                    "2. Cacio e Pepe: Massa simples e deliciosa com queijo e pimenta preta.",
+                    "3. Carciofi alla Giudia: Alcachofras fritas, típicas do bairro judeu próximo.",
+                    "4. Gelato: Geladaria artesanal é paragem obrigatória.",
+                    "5. Pizza al Taglio: Pizza quadrada vendida ao peso para comer a andar.",
+                    "6. Suppli: Bolinho de arroz frito com recheio de queijo (o 'primo' do arancini).",
+                    "7. Amatriciana: Molho de tomate, guanciale e queijo.",
+                    "8. Tiramisu: A sobremesa italiana mais famosa.",
+                    "9. Espresso: Café curto e forte, bebido ao balcão.",
+                    "10. Spritz: O aperitivo laranja para o fim de tarde."
+                ],
+                religiao: [
+                    "1. Sangue dos Mártires: Embora debatido por historiadores, a Igreja vê o local como solo sagrado de cristãos mortos.",
+                    "2. Via Crucis: Na Sexta-Feira Santa, o Papa lidera a procissão da Via Sacra aqui.",
+                    "3. Cruz: Existe uma cruz de madeira no interior desde o Jubileu de 2000.",
+                    "4. Paganismo: Originalmente um templo de entretenimento pagão e brutalidade.",
+                    "5. Consagração: Foi consagrado no século XVIII para evitar que fosse usado como pedreira.",
+                    "6. Capela: Existe uma pequena capela (Santa Maria della Pietà) inserida numa das arcadas.",
+                    "7. Símbolo contra a Pena de Morte: O Coliseu é iluminado de dourado quando algum país abole a pena de morte.",
+                    "8. Peregrinação: Ponto de passagem para muitos peregrinos a caminho do Vaticano.",
+                    "9. Deus Júpiter: O Templo de Júpiter ficava próximo, dominando a vida religiosa da época.",
+                    "10. Vestais: As Sacerdotisas do Fogo Sagrado tinham casa no Fórum anexo."
+                ],
+                curiosidades: [
+                    "1. Batalhas Navais: No início, a arena era inundada para simular batalhas de barcos (Naumaquias).",
+                    "2. Capacidade: Comportava cerca de 50.000 a 80.000 espectadores.",
+                    "3. Pedreira: Durante séculos, as pedras do Coliseu foram roubadas para construir igrejas (incluindo São Pedro).",
+                    "4. Nome Original: Anfiteatro Flávio. 'Coliseu' veio de uma estátua gigante (Colosso) de Nero que ficava ao lado.",
+                    "5. Entrada Grátis: Na Roma Antiga, a entrada era gratuita para o povo (Pão e Circo).",
+                    "6. Toldo Gigante: Havia um teto retrátil de tecido (Velarium) operado por marinheiros para fazer sombra.",
+                    "7. Terramotos: O lado sul colapsou num terramoto no ano 847.",
+                    "8. Animais Exóticos: Milhares de leões, tigres e elefantes foram mortos ali.",
+                    "9. Elevadores: Havia dezenas de elevadores manuais para fazer as feras 'surgirem' do chão.",
+                    "10. Gatos: Hoje, centenas de gatos vivem nas ruínas e são protegidos por lei."
+                ],
+                eventos_estacoes: [
+                    "1. Via Sacra (Páscoa): O evento religioso mais importante com o Papa.",
+                    "2. Natale di Roma (21 Abril): Desfiles de gladiadores e recriações históricas.",
+                    "3. Verão (Luna sul Colosseo): Visitas noturnas especiais muito concorridas.",
+                    "4. Inverno: Menos filas, luz bonita para fotos, anoitece cedo (16h30).",
+                    "5. Temporada de Ópera: Ocasionalmente ocorrem concertos nas Termas de Caracalla próximas.",
+                    "6. Dia da República (2 Junho): Parada militar nos Fori Imperiali.",
+                    "7. Maratona de Roma: Passa em frente ao monumento.",
+                    "8. Ferragosto (15 Agosto): A cidade esvazia, mas as atrações turísticas lotam.",
+                    "9. Outono: Folhas secas nas ruínas dão um ar romântico.",
+                    "10. Domingos Gratuitos: No primeiro domingo do mês (fila quilométrica, evite se puder)."
+                ],
+                info_gerais: [
+                    "1. Bilhete Único: O ingresso vale para Coliseu, Fórum Romano e Palatino (24h).",
+                    "2. Segurança: Raio-X na entrada. Garrafas de vidro e sprays proibidos.",
+                    "3. Água: Leve garrafa vazia, há fontes potáveis (nasoni) dentro.",
+                    "4. Acessibilidade: Existe elevador para o 2º andar para cadeiras de rodas.",
+                    "5. Piso Irregular: O chão é de pedras milenares, use ténis confortáveis.",
+                    "6. Horário: Abre 8h30 e fecha uma hora antes do pôr do sol (varia no ano).",
+                    "7. Guia de Áudio: Disponível na entrada, ou baixe apps gratuitas.",
+                    "8. Mochilas: Malas grandes não entram e não há guarda-volumes no local.",
+                    "9. Metro: Estação 'Colosseo' (Linha B) sai literalmente na frente.",
+                    "10. Vendedores: Cuidado com quem vende 'fura-fila' na rua. Quase sempre é ilegal."
+                ],
+                antes_de_ir: [
+                    "1. Reserve Online: É OBRIGATÓRIO reservar horário de entrada. Não há bilheteria física para o dia.",
+                    "2. Full Experience: Se quiser ver a Arena (chão) ou Subterrâneo, compre o bilhete 'Full Experience' com semanas de antecedência.",
+                    "3. Chegue Cedo: A segurança demora. Chegue 30 min antes do seu horário.",
+                    "4. Gladiadores de Rua: Tirar foto com os homens vestidos de gladiador lá fora custa dinheiro (e eles cobram caro, combine antes!).",
+                    "5. Fórum Romano: A entrada fica perto, mas é separada. Visite o Fórum depois ou antes, com o mesmo bilhete.",
+                    "6. Sombra: Não há sombra lá dentro. No verão, chapéu e protetor são vitais.",
+                    "7. Banheiros: Poucos e com fila lá dentro. Use antes de entrar.",
+                    "8. Carteira: Área com muitos batedores de carteira (pickpockets) na saída do metro.",
+                    "9. Foto Perfeita: O melhor ângulo não é de frente, mas de cima da mureta na Via Nicola Salvi.",
+                    "10. Validar Bilhete: Tenha o QR Code no telemóvel pronto e com brilho alto."
+                ],
+                numeros: [
+                    "1. 112 (Número Único de Emergência).",
+                    "2. Coopculture (Site Oficial de Bilhetes): coopculture.it",
+                    "3. Polícia Turística Roma: +39 06 4686.",
+                    "4. Metro Colosseo (Linha B).",
+                    "5. Táxi Roma: 06 3570.",
+                    "6. Embaixada Brasil Roma: +39 06 683 981.",
+                    "7. Aeroporto Fiumicino (FCO).",
+                    "8. Aeroporto Ciampino (CIA).",
+                    "9. Central de Achados e Perdidos.",
+                    "10. Posto de Primeiros Socorros (dentro do monumento)."
+                ],
+                riscos: [
+                    "1. Batedores de Carteira: Profissionais atuam no Metro Colosseo e nas filas.",
+                    "2. Calor Extremo: No verão, turistas desmaiam com frequência.",
+                    "3. Vendedores Agressivos: Pulseirinhas, pau de selfie, brinquedos. Ignore.",
+                    "4. Golpes de Troco: Em quiosques de comida na rua.",
+                    "5. Restaurantes Pega-Turista: Evite comer com vista para o Coliseu (caro e ruim). Ande 2 ruas para trás (Monti).",
+                    "6. Pedras Soltas: Cuidado ao caminhar no Fórum e Palatino.",
+                    "7. Água Cara: Food trucks cobram 5€ por água. Use as fontes grátis.",
+                    "8. Cambistas: Sites não oficiais cobram o triplo pelo ingresso.",
+                    "9. Greves de Transporte: Comuns em sextas-feiras.",
+                    "10. Multas: Não risque as paredes nem tente levar pedras de recordação."
+                ],
+                roteiros: {
+                    "curto": { titulo: "O Essencial", texto: ["Fotos de fora", "1º e 2º Anéis", "Arco de Constantino"] },
+                    "medio": { titulo: "Roma Antiga", texto: ["Coliseu (Arena)", "Fórum Romano", "Monte Palatino"] },
+                    "longo": { titulo: "Império Total", texto: ["Coliseu (Subterrâneo)", "Fórum e Palatino", "Circo Máximo", "Termas de Caracalla"] }
+                },
+                links: {
+                    hotel: "https://www.booking.com/landmark/it/colosseum.pt-br.html", 
+                    passeio: "https://www.civitatis.com/br/roma/coliseu-forum-palatino/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+    
+        ],
+         "Sítio": [
+        {
+            name: "Machu Picchu",
+            imagem: "https://images.unsplash.com/photo-1526392060635-9d6019884377?q=80&w=2070&auto=format&fit=crop",
+            tags: ["Incas", "Montanha", "Maravilha do Mundo"],
+            mapa: "https://goo.gl/maps/machupicchu",
+            clima: "Subtropical de altitude. Húmido e quente de dia, fresco à noite.",
+
+            // === DADOS DO VEREDICTO ===
+            veredicto: {
+                melhor_epoca: "Maio a Setembro (Época Seca). Junho e Julho são o auge, com céu azul garantido. Evite Fevereiro (Trilha Inca fecha e chove torrencialmente).",
+                ideal_para: [
+                    "Aventureiros e Trekkers (Trilha Inca ou Salkantay)",
+                    "Amantes de História e Misticismo (A energia do lugar é inegável)",
+                    "Fotógrafos de Paisagem (As nuvens a dissipar-se de manhã são mágicas)",
+                    "Quem procura realizar um sonho de vida (Bucket List)"
+                ],
+                nao_ideal_para: [
+                    "Pessoas com mobilidade muito reduzida (muitas escadas de pedra irregulares e sem corrimão)",
+                    "Quem sofre muito com o 'Soroche' (mal de altitude), embora seja mais baixo que Cusco",
+                    "Quem odeia acordar cedo (as melhores entradas são às 6h da manhã)"
+                ],
+                perfis: [
+                    { icone: "ri-ancient-pavilion-fill", nome: "Incas" },
+                    { icone: "ri-footprint-fill", nome: "Trekking" },
+                    { icone: "ri-camera-lens-fill", nome: "Foto" },
+                    { icone: "ri-magic-fill", nome: "Místico" }
+                ]
+            },
+            // =================================
+
+            pontos_turisticos: [
+                "1. A Cidadela: O complexo principal de ruínas, com terraços agrícolas e casas de pedra perfeitas.",
+                "2. Huayna Picchu: A montanha alta ao fundo das fotos. Subida íngreme e assustadora (exige ingresso extra).",
+                "3. Templo do Sol: Construção semicircular com janelas alinhadas aos solstícios.",
+                "4. Intihuatana: A pedra sagrada 'onde se amarra o sol'. Dizem que tocar nela (proibido agora) recarrega energias.",
+                "5. Montanha Machu Picchu: A montanha oposta a Huayna Picchu. Caminhada mais longa, vista panorâmica mais alta.",
+                "6. Ponte Inca: Uma ponte levadiça de madeira num caminho estreito no penhasco (entrada separada).",
+                "7. Porta do Sol (Inti Punku): A entrada original de quem vem pela Trilha Inca. Vista clássica de longe.",
+                "8. Templo do Condor: Formação rochosa no chão que se assemelha às asas de um condor em voo.",
+                "9. Rocha Sagrada: Uma pedra enorme esculpida para imitar a silhueta da montanha atrás dela.",
+                "10. Aguas Calientes (Machu Picchu Pueblo): A cidade base, cheia de restaurantes, mercado de artesanato e termas."
+            ],
+
+            gastronomia: [
+                "1. Cuy (Porquinho-da-índia): Assado ou frito. É a iguaria andina mais tradicional (parece coelho).",
+                "2. Carne de Alpaca: Muito macia e saudável, geralmente servida grelhada com molhos.",
+                "3. Lomo Saltado: Tiras de carne, cebola, tomate e batata frita com arroz. Fusão chinesa-peruana.",
+                "4. Quinoa: A base da alimentação inca. Prove a sopa de quinoa (deliciosa e leve para a altitude).",
+                "5. Choclo con Queso: Milho gigante cozido servido com uma fatia de queijo fresco.",
+                "6. Pisco Sour: O cocktail nacional. Cuidado, o álcool bate mais forte na altitude.",
+                "7. Chicha Morada: Bebida doce e não alcoólica feita de milho roxo, canela e cravo.",
+                "8. Mate de Coca: O chá sagrado para combater o mal de altitude e digestão.",
+                "9. Truta (Trucha): Os rios da região são cheios de trutas, servidas fritas ou no vapor.",
+                "10. Causa Limeña: Puré de batata amarela temperado com limão e pimenta, recheado com frango ou atum."
+            ],
+
+            religiao: [
+                "1. Pachamama: A 'Mãe Terra'. A divindade máxima, reverenciada em tudo na natureza.",
+                "2. Apus: Os espíritos das montanhas. Cada pico nevado é um protetor.",
+                "3. Inti (Sol): O deus supremo dos Incas, a quem a cidade foi provavelmente dedicada.",
+                "4. Cosmovisão Andina: O mundo dividido em Hanan Pacha (céu/condor), Kay Pacha (terra/puma) e Uku Pacha (submundo/serpente).",
+                "5. Oferendas: É comum ver turistas e locais fazendo pequenas oferendas de folhas de coca.",
+                "6. Alinhamento Astronómico: Templos construídos com precisão milimétrica para marcar as estações.",
+                "7. Energia: Muitos visitantes relatam sentir vibrações físicas ou emocionais fortes nas ruínas.",
+                "8. Sincretismo: Em Aguas Calientes, a fé católica mistura-se com rituais andinos.",
+                "9. Chakana: A cruz andina, símbolo recorrente na arquitetura sagrada.",
+                "10. Lhamas Sagradas: Eram usadas em sacrifícios (hoje são apenas as cortadoras de relva fofas do parque)."
+            ],
+
+            curiosidades: [
+                "1. Cidade Perdida: Os espanhóis nunca a encontraram. Foi 'redescoberta' por Hiram Bingham em 1911.",
+                "2. Terramotos: A construção é antissísmica. As pedras 'dançam' nos tremores e voltam ao lugar.",
+                "3. Sem Argamassa: As pedras encaixam tão perfeitamente que não passa nem uma lâmina de barbear entre elas.",
+                "4. Sem Rodas: Os Incas não usavam a roda para transporte. As pedras gigantes foram arrastadas por força humana.",
+                "5. População: Estima-se que viviam ali cerca de 750 a 1000 pessoas, a maioria nobres e sacerdotes.",
+                "6. Engenharia Hidráulica: O sistema de drenagem e fontes funciona até hoje, prevenindo deslizamentos.",
+                "7. Nome Errado: Machu Picchu significa 'Velha Montanha'. O nome real da cidade é desconhecido.",
+                "8. Limite de Visitantes: Para preservação, o número de turistas diários é estritamente limitado.",
+                "9. Caminho Inca: Faz parte do Qhapaq Ñan, uma rede de estradas de 30.000 km.",
+                "10. Bandeira: A bandeira de arco-íris que se vê muito é de Cusco/Tahuantinsuyo, não confunda com a LGBTQIA+."
+            ],
+
+            eventos_estacoes: [
+                "1. Inti Raymi (24 Junho): A Festa do Sol. Ocorre em Cusco, mas a vibração chega a Machu Picchu.",
+                "2. Solstício de Inverno (21 Junho): O sol entra exatamente pela janela do Templo do Sol.",
+                "3. Época das Chuvas (Dez-Mar): Orquídeas florescem e tudo fica verde musgo, mas a visibilidade cai.",
+                "4. Aniversário da Descoberta (Julho): Eventos culturais em Aguas Calientes.",
+                "5. Pachamama Raymi (1 Agosto): Dia da Mãe Terra, com rituais de pagamento à terra.",
+                "6. Maratonas: Existem ultramaratonas de montanha na região do Vale Sagrado.",
+                "7. Carnaval: Joga-se água e talco nas ruas (cuidado em Aguas Calientes).",
+                "8. Corpus Christi: Procissões gigantescas em Cusco que enchem a região.",
+                "9. Semana Santa: Muita movimentação de turismo interno.",
+                "10. Limpeza Anual: Em fevereiro, a Trilha Inca fecha para manutenção."
+            ],
+
+            info_gerais: [
+                "1. Moeda: Novo Sol (PEN).",
+                "2. Altitude: A cidade fica a 2.430m (mais baixa que Cusco, que está a 3.400m).",
+                "3. Passaporte: Obrigatório para entrar no parque (e pode carimbar na saída como souvenir!).",
+                "4. Casas de Banho: Só existem LÁ FORA, na entrada. Dentro do sítio não há casa de banho. Planeie-se!",
+                "5. Guia: É tecnicamente obrigatório contratar um guia para a primeira entrada.",
+                "6. Circuito Único: Agora os caminhos são de mão única. Não pode voltar atrás para tirar foto se já passou.",
+                "7. Bastões: Só permitidos para idosos ou deficientes, e com ponta de borracha.",
+                "8. Repelente: Essencial. Os 'sandflies' picam e deixam marcas que duram semanas.",
+                "9. Água: Leve garrafa reutilizável. Plástico descartável é proibido.",
+                "10. Protetor Solar: O sol da montanha queima muito rápido."
+            ],
+
+            antes_de_ir: [
+                "1. Compre o Bilhete Antes: Os ingressos esgotam meses antes. Não deixe para comprar em Cusco.",
+                "2. Bilhete de Comboio: Compre o bilhete do PeruRail ou IncaRail logo depois de garantir a entrada do parque.",
+                "3. Autocarro (Ônibus): O bilhete para subir de Aguas Calientes até a entrada compra-se na hora (fila) ou em Cusco.",
+                "4. Aclimatação: Fique pelo menos 2 dias em Cusco ou no Vale Sagrado antes de ir para evitar passar mal.",
+                "5. Mochila Pequena: Não pode entrar com mochilas grandes (maiores que 20L). Deixe no guarda-volumes.",
+                "6. Documentos: O nome no bilhete tem de ser exato ao do passaporte.",
+                "7. Roupa: Camadas. De manhã faz frio, a caminhar faz calor, se chover esfria.",
+                "8. Lanche: Leve snacks energéticos (nozes, chocolate), mas coma discretamente. É proibido piquenique lá dentro.",
+                "9. Bateria: Leve powerbank. Vai tirar 500 fotos e a bateria acaba rápido no frio.",
+                "10. Horário de Chegada: Esteja na fila do autocarro 1 hora antes do seu horário de entrada."
+            ],
+
+            numeros: [
+                "1. 105 (Polícia Nacional do Peru).",
+                "2. 116 (Bombeiros e Resgate).",
+                "3. +51 84 211121 (Polícia de Turismo Cusco).",
+                "4. iPerú (Assistência ao Turista): +51 1 574 8000.",
+                "5. Clínica Pardo (Cusco): Referência para turistas.",
+                "6. Consulado do Brasil em Lima: +51 1 512 0830.",
+                "7. PeruRail Call Center: +51 84 581414.",
+                "8. Consettur (Autocarros da subida): Site oficial para horários.",
+                "9. Ministerio de Cultura: Site oficial dos ingressos (tuboleto.cultura.pe).",
+                "10. Emergência Médica Aguas Calientes: Posto médico local (básico)."
+            ],
+
+            riscos: [
+                "1. Soroche (Mal de Altitude): Dores de cabeça, falta de ar e náuseas. Tome chá de coca e descanse.",
+                "2. Degraus Escorregadios: Se chover, as pedras viram sabão. Use calçado de trekking com boa aderência.",
+                "3. Insetos: Os mosquitos locais são silenciosos e vorazes. Use calças compridas.",
+                "4. Comida de Rua: Evite saladas cruas e gelo se tiver estômago sensível.",
+                "5. Greves: Ocasionalmente há greves que bloqueiam o comboio. Tenha seguro viagem que cubra atrasos.",
+                "6. Furtos: Em Cusco e no comboio, cuidado com a carteira. Dentro do parque é seguro.",
+                "7. Insolação: O índice UV é extremo.",
+                "8. Desidratação: Beba água constantemente.",
+                "9. Perder o Comboio: Se perder a hora, perde o bilhete. Eles são rigorosos.",
+                "10. Selfie Perigosa: Não suba em muros ou chegue muito à beira dos penhascos."
+            ],
+
+            roteiros: {
+                "curto": {
+                    titulo: "Bate-volta (Muito Cansativo)",
+                    texto: [
+                        "Madrugada: Comboio de Cusco/Ollantaytambo para Aguas Calientes (3h).",
+                        "Manhã: Subida de autocarro e visita à cidadela (Circuito clássico).",
+                        "Tarde: Almoço em Aguas Calientes e comboio de volta para Cusco."
+                    ]
+                },
+                "medio": {
+                    titulo: "Com Pernoite (Recomendado)",
+                    texto: [
+                        "Dia 1: Vale Sagrado (Pisac, Ollantaytambo). Comboio à tarde para Aguas Calientes. Dormir lá.",
+                        "Dia 2: Subir para Machu Picchu no primeiro horário (6h). Visita com calma.",
+                        "Dia 2 (Tarde): Descer, almoçar e voltar de comboio tranquilo."
+                    ]
+                },
+                "longo": {
+                    titulo: "Caminho Inca (4 Dias)",
+                    texto: [
+                        "Dia 1 a 3: Trekking pelas montanhas, dormindo em acampamentos e vendo outros sítios.",
+                        "Dia 4: Chegada triunfal pela Porta do Sol ao amanhecer (visão exclusiva). Visita à cidadela e descida."
+                    ]
+                },
+            },
+
+            links: {
+                hotel: "https://www.booking.com/city/pe/machu-picchu.pt-br.html", 
+                passeio: "https://www.civitatis.com/br/aguas-calientes/ingresso-machu-picchu/", 
+                seguro: "https://www.segurospromo.com.br" 
+            },
+        }
+    ],
+    },
     "América do Sul": {
         "Brasil": [
             {
@@ -4535,6 +5274,367 @@ veredicto: {
         seguro: "https://www.segurospromo.com.br"
     }
 },
+{
+    name: "Cabo Frio",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Cabo_Frio_-_vista_a%C3%A9rea.jpg/960px-Cabo_Frio_-_vista_a%C3%A9rea.jpg",
+    tags: ["Praia", "Família", "Mergulho"],
+    mapa: "https://goo.gl/maps/cabofrio",
+    clima: "Tropical Litorâneo. Vento constante e sol forte. Água gelada.",
+
+    // === DADOS DO VEREDICTO ===
+    veredicto: {
+        melhor_epoca: "Março a Maio (Outono) ou Setembro a Novembro (Primavera). Evite Janeiro e Carnaval (Cidade lotada e trânsito parado).",
+        ideal_para: [
+            "Famílias com crianças (Praia do Forte tem boa estrutura)",
+            "Mergulhadores (devido à visibilidade da água)",
+            "Compradores de Moda Praia (preços de fábrica)",
+            "Quem busca praias de areia branca e fina como talco"
+        ],
+        nao_ideal_para: [
+            "Quem odeia água gelada (fenômeno da ressurgência)",
+            "Quem não gosta de vento (venta muito o ano todo)",
+            "Quem busca sossego absoluto na alta temporada"
+        ],
+        perfis: [
+            { icone: "ri-group-fill", nome: "Família" },
+            { icone: "ri-drop-fill", nome: "Mergulho" },
+            { icone: "ri-t-shirt-air-fill", nome: "Compras" },
+            { icone: "ri-sun-fill", nome: "Praia" }
+        ]
+    },
+    // =================================
+
+    pontos_turisticos: [
+        "1. Praia do Forte: O cartão postal. Areia branca, águas cristalinas e calçadão movimentado.",
+        "2. Forte São Mateus: Construção histórica do séc. XVII na ponta da praia, com vista incrível.",
+        "3. Ilha do Japonês: Um santuário de águas rasas e calmas dentro da lagoa. Acesso de barco ou a pé (maré baixa).",
+        "4. Bairro da Passagem: O centro histórico, com ruas de paralelepípedo, casarões coloniais e ótimos restaurantes.",
+        "5. Rua dos Biquínis: O maior shopping a céu aberto de moda praia da América Latina.",
+        "6. Praia das Conchas: Praia em formato de concha, ótima para famílias e com quiosques rústicos.",
+        "7. Praia do Peró: Vizinha das Conchas, extensa, limpa e com selo Bandeira Azul de qualidade.",
+        "8. Morro da Guia: Mirante com uma capela no topo e vista 360º da cidade e da lagoa.",
+        "9. Praia das Dunas: Continuação da Praia do Forte, mas com ondas mais fortes e cercada por dunas brancas.",
+        "10. Canal do Itajuru: Onde ficam os barcos turísticos e um calçadão agradável para caminhar."
+    ],
+
+    gastronomia: [
+        "1. Peixe com Banana: Prato típico da região caiçara, servido em quase todos os quiosques.",
+        "2. Camarão na Moranga: Clássico dos restaurantes mais sofisticados do Bairro da Passagem.",
+        "3. Bolinho de Bacalhau: Petisco obrigatório no Boulevard Canal.",
+        "4. Açaí: Muito consumido nas praias e lanchonetes após o sol.",
+        "5. Pastel de Camarão: Gigante e bem recheado, encontrado na orla da Praia do Forte.",
+        "6. Lula à Dorê: Aperitivo perfeito para acompanhar uma cerveja gelada à beira-mar.",
+        "7. Restaurantes da Passagem: Gastronomia internacional (italiana, portuguesa) em ambiente charmoso.",
+        "8. Picolé de Frutas: Vendedores ambulantes na areia são tradição.",
+        "9. Moqueca Capixaba: Devido à proximidade com ES, muitos lugares servem a versão sem dendê.",
+        "10. Frutos do Mar Frescos: Compre direto no Mercado de Peixe para fazer em casa se estiver em aluguel."
+    ],
+
+    religiao: [
+        "1. Igreja de São Benedito: No Bairro da Passagem, construída em 1761 para os escravos.",
+        "2. Matriz de Nossa Senhora da Assunção: A igreja principal no centro, de 1666, estilo jesuítico.",
+        "3. Convento de Nossa Senhora dos Anjos: Um marco da arquitetura franciscana, hoje museu de arte sacra.",
+        "4. Capela do Morro da Guia: Pequena capela dedicada a N.S. da Guia no ponto mais alto da cidade.",
+        "5. Festas de Padroeira: Agosto é o mês de Nossa Senhora da Assunção, com procissões e quermesses.",
+        "6. Diversidade: Forte presença de igrejas evangélicas e centros espíritas na região urbana.",
+        "7. Iemanjá: No Ano Novo, oferendas são entregues na Praia do Forte.",
+        "8. Capela de São Mateus: Dentro do Forte, uma das mais antigas do Brasil.",
+        "9. Procissão Marítima: Evento tradicional onde barcos enfeitados percorrem o Canal do Itajuru.",
+        "10. Turismo Religioso: A cidade faz parte de rotas de peregrinação histórica da Região dos Lagos."
+    ],
+
+    curiosidades: [
+        "1. Ressurgência: Fenômeno que traz águas profundas do oceano para a superfície, tornando o mar rico em nutrientes e muito gelado.",
+        "2. Areia Fria: A areia de Cabo Frio não esquenta muito, mesmo sob sol forte, devido à composição de corais.",
+        "3. 7ª Cidade Mais Antiga: Fundada em 1615, tem muita história colonial.",
+        "4. Pau-Brasil: A região foi alvo de contrabandistas franceses no início da colonização pela madeira.",
+        "5. Capital da Moda Praia: Produz milhões de peças por ano distribuídas para todo o Brasil.",
+        "6. Salinas: Já foi um dos maiores produtores de sal do país (ainda existem as Salinas Perinas).",
+        "7. Ventos Alísios: A cidade é uma das melhores do mundo para a prática de Iatismo e Kitesurf.",
+        "8. Bandeira Azul: A Praia do Peró possui certificação internacional de qualidade ambiental.",
+        "9. Ponte Feliciano Sodré: Inaugurada em 1926, liga o centro à Gamboa.",
+        "10. Vizinha Famosa: Fica a apenas 25 min de Arraial do Cabo e 40 min de Búzios."
+    ],
+
+    eventos_estacoes: [
+        "1. Verão (Dez-Mar): Cidade lotada, trânsito intenso, sol forte e águas geladas refrescantes.",
+        "2. Réveillon: A segunda maior queima de fogos do estado (Praia do Forte), só perde para Copacabana.",
+        "3. Cabo Frio Folia: Carnaval fora de época (micareta) que costuma ocorrer na cidade.",
+        "4. Carnaval: Blocos de rua arrastam multidões e a orla fica intransitável de carro.",
+        "5. Inverno (Jun-Set): Melhor época para quem gosta de sossego e preços baixos. Água continua fria.",
+        "6. Festival Sabores de Cabo Frio: Evento gastronômico anual (geralmente Setembro) com pratos exclusivos.",
+        "7. Semana Santa: Movimento intenso, mas mais familiar que o Carnaval.",
+        "8. Festival de Surf: Competições nas Dunas e Praia do Forte devido às ondas.",
+        "9. Corpus Christi: Tapetes de sal coloridos são confeccionados nas ruas principais.",
+        "10. Primavera: Ventos fortes, ideal para campeonatos de vela e kitesurf."
+    ],
+
+    info_gerais: [
+        "1. Moeda: Real Brasileiro (BRL).",
+        "2. Voltagem: 110V é o padrão, mas verifique sempre (alguns hotéis têm 220V).",
+        "3. Tomada: Tipo N (3 pinos).",
+        "4. DDD: 22.",
+        "5. Distância do Rio: Aprox. 150km (2h30 sem trânsito).",
+        "6. Aeroporto: Cabo Frio (CFB) recebe voos diretos de BH e conexões, mas a maioria usa o do Rio.",
+        "7. Uber/Táxi: Funcionam bem, mas no verão o Uber pode demorar e ficar caro (dinâmico).",
+        "8. Água: Imprópria para beber da torneira. Use mineral.",
+        "9. Estradas: Acesso pela Via Lagos (pedágio caro, mas estrada boa).",
+        "10. Saúde: Hospital Central de Emergência e UPA no Parque Burle."
+    ],
+
+    antes_de_ir: [
+        "1. Água Gelada: Esteja preparado. A água pode chegar a 12ºC em dias de ressurgência forte.",
+        "2. Vento: Leve um casaco corta-vento mesmo no verão para a noite, pois a brisa é constante.",
+        "3. Sol Engana: O vento disfarça o calor, mas o sol queima muito. Use protetor solar sempre.",
+        "4. Trânsito na Chegada: Sextas-feiras e vésperas de feriado a entrada da cidade engarrafa.",
+        "5. Roupas: Estilo praiano total. Chinelo e bermuda em qualquer lugar.",
+        "6. Dinheiro: A maioria aceita cartão/PIX, mas leve dinheiro para vendedores de praia e passeios de barco.",
+        "7. Hospedagem: Se não tiver carro, fique no Centro ou perto da Praia do Forte para fazer tudo a pé.",
+        "8. Segurança: Evite andar com correntes e celulares caros à mostra no calçadão à noite em dias vazios.",
+        "9. Reserva: Restaurantes na Passagem lotam cedo no jantar em alta temporada.",
+        "10. Arraial do Cabo: Se for visitar a vizinha, saia muito cedo (7h da manhã) para conseguir estacionar."
+    ],
+
+    numeros: [
+        "1. 190 (Polícia Militar): Emergências e segurança.",
+        "2. 193 (Bombeiros): Resgate e afogamentos.",
+        "3. 199 (Defesa Civil): Em caso de tempestades fortes.",
+        "4. (22) 2645-5666 (Hospital Central): Emergências médicas.",
+        "5. 192 (SAMU): Ambulância.",
+        "6. (22) 2647-2121 (Rodoviária): Informações sobre ônibus.",
+        "7. 153 (Guarda Municipal): Trânsito e ordem urbana.",
+        "8. (22) 2643-0145 (Aeroporto): Informações de voos.",
+        "9. (22) 2647-6228 (Turismo): Centro de informações turísticas.",
+        "10. 191 (Polícia Rodoviária): Para quem vem pela estrada."
+    ],
+
+    riscos: [
+        "1. Correnteza: Respeite as bandeiras vermelhas. O mar na Praia do Forte tem cavas perigosas.",
+        "2. Insolação: O vento fresco faz você esquecer de repassar o protetor.",
+        "3. Furto na Areia: Em dias lotados, não deixe bolsas sozinhas na areia ao entrar na água.",
+        "4. Trânsito: Atravessar a ponte para a Gamboa/Rua dos Biquínis pode levar horas no verão.",
+        "5. Ouriços: Cuidado ao pisar nas pedras perto do Forte e na Ilha do Japonês.",
+        "6. Preços de Temporada: Alguns quiosques cobram valores abusivos no verão. Pergunte antes.",
+        "7. Golpes de Aluguel: Cuidado com casas de temporada falsas na internet. Verifique reviews.",
+        "8. Vendedores Insistentes: Na praia, a abordagem é constante. Diga 'não, obrigado' com firmeza.",
+        "9. Água Viva: Ocorrem ocasionalmente. Se for queimado, use vinagre (postos de salva-vidas costumam ter).",
+        "10. Bebida e Mar: A combinação não dá certo, o mar de Cabo Frio exige atenção física."
+    ],
+
+    roteiros: {
+        "curto": {
+            titulo: "Fim de Semana (2 Dias)",
+            texto: [
+                "Dia 1: Manhã na Praia do Forte + Visita ao Forte São Mateus. Almoço na orla. Tarde de compras na Rua dos Biquínis.",
+                "Dia 1 (Noite): Jantar e música ao vivo no Bairro da Passagem.",
+                "Dia 2: Manhã na Ilha do Japonês (vá cedo na maré baixa). Tarde na Praia das Conchas."
+            ]
+        },
+        "medio": {
+            titulo: "Férias Curtas (4 Dias)",
+            texto: [
+                "Dias 1 e 2: Siga o roteiro curto acima.",
+                "Dia 3: Passeio de barco pelo Canal, passando pela Ilha do Farol e Gruta Azul (muitos saem de Arraial, mas há saídas de Cabo Frio também).",
+                "Dia 4: Dia relaxante na Praia do Peró (menos cheia). Final de tarde vendo o pôr do sol no Morro da Guia."
+            ]
+        },
+        "longo": {
+            titulo: "Imersão Região dos Lagos (7 Dias)",
+            texto: [
+                "Dias 1 a 4: Siga o roteiro médio acima.",
+                "Dia 5: Bate-volta em Arraial do Cabo (Pontal do Atalaia e Praia do Forno).",
+                "Dia 6: Bate-volta em Búzios (Rua das Pedras e Praia da Ferradura).",
+                "Dia 7: Despedida com caminhada nas Dunas e almoço de frutos do mar no Mercado de Peixe."
+            ]
+        },
+    },
+
+    links: {
+        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-632942", 
+        passeio: "https://www.civitatis.com/br/cabo-frio/", 
+        seguro: "https://www.segurospromo.com.br" 
+    },
+},
+{
+    name: "Bonito",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Abismo_Anhumas%2C_Bonito%2C_MS.JPG/960px-Abismo_Anhumas%2C_Bonito%2C_MS.JPG",
+    tags: ["Ecoturismo", "Flutuação", "Aventura"],
+    mapa: "https://goo.gl/maps/bonito",
+    clima: "Tropical. Verão chuvoso (cachoeiras cheias) e Inverno seco (águas cristalinas).",
+
+    // === DADOS DO VEREDICTO ===
+    veredicto: {
+        melhor_epoca: "Maio a Agosto (Inverno/Seca). É quando as águas estão mais cristalinas e os peixes mais visíveis. Dezembro a Março chove e a água pode turvar, mas as cachoeiras estão cheias.",
+        ideal_para: [
+            "Amantes de Ecoturismo (é o melhor destino organizado do Brasil)",
+            "Famílias com crianças (as flutuações são calmas e seguras)",
+            "Mergulhadores (Abismo Anhumas e Lagoa Misteriosa são lendários)",
+            "Quem busca conexão profunda com a natureza e animais"
+        ],
+        nao_ideal_para: [
+            "Quem viaja sem planejamento (é OBRIGATÓRIO reservar passeios com antecedência pelo sistema de Voucher Único)",
+            "Orçamentos muito apertados (os passeios são tabelados e caros)",
+            "Quem busca vida noturna agitada (a cidade dorme cedo para acordar cedo)"
+        ],
+        perfis: [
+            { icone: "ri-drop-fill", nome: "Flutuação" },
+            { icone: "ri-plant-fill", nome: "Natureza" },
+            { icone: "ri-bear-smile-fill", nome: "Animais" },
+            { icone: "ri-flashlight-fill", nome: "Cavernas" }
+        ]
+    },
+    // =================================
+
+    pontos_turisticos: [
+        "1. Gruta do Lago Azul: O cartão-postal. Uma caverna imensa com um lago azul profundo surreal.",
+        "2. Rio da Prata: Uma das melhores flutuações. Parece que você está dentro de um aquário gigante.",
+        "3. Rio Sucuri: Considerado uma das águas mais cristalinas do planeta. Flutuação leve e relaxante.",
+        "4. Buraco das Araras: Uma dolina gigantesca onde dezenas de araras vermelhas vivem e voam. Espetáculo visual.",
+        "5. Abismo Anhumas: Aventura radical. Rapel de 72m para entrar numa caverna com lago subterrâneo.",
+        "6. Boca da Onça: A cachoeira mais alta do estado (156m) e trilhas incríveis.",
+        "7. Balneário Municipal: O 'piscinão' natural da cidade. Cheio de peixes e entrada mais acessível.",
+        "8. Lagoa Misteriosa: Uma caverna inundada de profundidade desconhecida. Água azul turquesa impressionante.",
+        "9. Estância Mimosa: Trilha de cachoeiras com almoço de fazenda típico.",
+        "10. Projeto Jiboia: Palestra educativa e interativa para perder o medo e tirar foto com as cobras."
+    ],
+
+    gastronomia: [
+        "1. Carne de Jacaré: O prato exótico mais famoso. Tem gosto de frango com textura de peixe.",
+        "2. Pacu Assado: Peixe local delicioso, geralmente servido com farofa de banana.",
+        "3. Pintado a Urucum: Filé de peixe com molho de urucum, tomate e creme de leite.",
+        "4. Caldo de Piranha: Dizem ser afrodisíaco e dá muita energia.",
+        "5. Guavira: Fruta símbolo do MS. Prove em sucos, sorvetes ou na caipirinha.",
+        "6. Tereré: A bebida oficial. Mate gelado servido na guampa (chifre).",
+        "7. Chico Balanceado: Doce de banana caramelizada com creme e merengue.",
+        "8. Palmito de Guariroba: Um palmito mais amargo, típico do cerrado.",
+        "9. Arroz Carreteiro: Herança das comitivas pantaneiras.",
+        "10. Pastel de Jacaré: Ótimo petisco para provar a carne sem gastar muito num prato principal."
+    ],
+
+    religiao: [
+        "1. Capela da Sagrada Família: Pequena e charmosa, no centro da cidade.",
+        "2. Natureza Sagrada: A espiritualidade em Bonito é muito ligada à preservação e conexão com a Terra.",
+        "3. Gruta de São Miguel: Embora turística, tem uma energia mística forte nas formações geológicas.",
+        "4. Festa de São Pedro: Padroeiro da cidade (29 de Junho), com a tradicional Cavalgada.",
+        "5. Sincretismo: Presença de tradições indígenas misturadas com o cristianismo rural.",
+        "6. Igrejas Evangélicas: Diversas denominações presentes no centro urbano.",
+        "7. Rituais de Benção: Algumas fazendas antigas ainda mantêm rituais de benção das águas.",
+        "8. Turismo Contemplativo: Muitos visitantes relatam experiências espirituais ao flutuar nos rios silenciosos.",
+        "9. Lendas Locais: Histórias sobre os guardiões das cavernas e rios (folclore).",
+        "10. Cruz do Peão: Monumentos simples em estradas rurais lembrando a fé do homem do campo."
+    ],
+
+    curiosidades: [
+        "1. Voucher Único: O sistema pioneiro no mundo que controla o número de visitantes. Você não entra em nada sem agência.",
+        "2. Calcário: O solo rico em calcário age como um filtro natural, deixando a água transparente.",
+        "3. Proibido Protetor: Em passeios como Rio da Prata e Sucuri, é proibido usar filtro solar e repelente para não contaminar a água.",
+        "4. Capital do Ecoturismo: Já foi eleito inúmeras vezes o melhor destino de ecoturismo do Brasil.",
+        "5. Sem Cloro: As piscinas dos hotéis muitas vezes usam água natural, sem produtos químicos.",
+        "6. Cobras: Sim, existem sucuris nos rios. Elas são tímidas e raramente atacam humanos (respeite a distância).",
+        "7. Gruta Fechada: O Lago Azul já foi aberto para mergulho, hoje é só contemplação para preservação.",
+        "8. Fuso Horário: MS tem 1 hora a menos que Brasília (fique atento!).",
+        "9. Pantanal Vizinho: Muita gente combina Bonito com Pantanal (ficam próximos).",
+        "10. Água da Torneira: É muito calcária (pesada). Evite beber muito se não estiver acostumado."
+    ],
+
+    eventos_estacoes: [
+        "1. Festival de Inverno (Julho): O maior evento cultural, com shows nacionais, teatro e arte na praça.",
+        "2. Verão (Dez-Mar): Chuvas frequentes. Cachoeiras caudalosas, mas rios podem turvar.",
+        "3. Inverno (Mai-Ago): Seca. Melhor visibilidade subaquática e noites frias.",
+        "4. Piracema (Out-Fev): Época de reprodução dos peixes. A pesca é proibida, mas vê-los nos rios é incrível.",
+        "5. Semana Santa: Cidade lotada, preços sobem.",
+        "6. Primavera: Início da floração dos Ipês (amarelos, brancos e roxos).",
+        "7. Festa de São Pedro: Desfiles a cavalo e quermesses em Junho.",
+        "8. Bonito Blues & Jazz: Festival de música que ocorre esporadicamente.",
+        "9. Lobo Guará Bike Adventure: Evento de ciclismo de aventura.",
+        "10. Observação de Aves: Setembro é ótimo para birdwatching."
+    ],
+
+    info_gerais: [
+        "1. Moeda: Real Brasileiro (BRL).",
+        "2. Voltagem: 110V/127V na maioria, mas alguns hotéis usam 220V. Leve adaptador universal.",
+        "3. Tomada: Tipo N (3 pinos).",
+        "4. DDD: 67.",
+        "5. Fuso Horário: -1 hora em relação a Brasília (GMT-4).",
+        "6. Aeroporto: Aeroporto Regional de Bonito (BYO) - voos limitados. Ou Campo Grande (CGR) + 4h de van.",
+        "7. Transporte Local: Não tem Uber (tem apps locais instáveis). Melhor alugar carro ou usar vans compartilhadas.",
+        "8. Internet: 4G funciona bem no centro, mas cai nas fazendas e passeios.",
+        "9. Bancos: Tem Banco do Brasil, Bradesco, Caixa e Sicredi no centro.",
+        "10. Voucher: É lei municipal. Preços são tabelados, não adianta pechinchar na agência."
+    ],
+
+    antes_de_ir: [
+        "1. Reserve Antes: Se não reservar os passeios com semanas de antecedência, você vai ficar sem ir. É sério.",
+        "2. Aeroporto: Decida se vai pagar mais caro pra descer em Bonito ou economizar descendo em Campo Grande (+4h de estrada).",
+        "3. Câmera Subaquática: Leve GoPro ou compre capinha estanque para o celular. As fotos na água são essenciais.",
+        "4. Tênis Obrigatório: Para a Gruta do Lago Azul e trilhas, é proibido ir de chinelo.",
+        "5. Dinheiro Vivo: Leve um pouco. Algumas fazendas afastadas podem ter problema com máquina de cartão.",
+        "6. Não use Protetor: Nas flutuações é proibido. Use camisa UV de manga longa.",
+        "7. Carro Alugado: Dá muito mais liberdade, pois os passeios ficam distantes uns dos outros.",
+        "8. Frio na Água: A água é gelada (20ºC-22ºC) o ano todo. As roupas de neoprene (inclusas) ajudam, mas se prepare.",
+        "9. Vacina: Febre Amarela é recomendada para áreas rurais do Brasil.",
+        "10. Tempo de Deslocamento: Os passeios demoram. Geralmente só dá pra fazer 1 ou 2 por dia."
+    ],
+
+    numeros: [
+        "1. 190 (Polícia Militar).",
+        "2. 193 (Bombeiros).",
+        "3. (67) 3255-1115 (Hospital Darci João Bigaton).",
+        "4. (67) 3255-1850 (Secretaria de Turismo).",
+        "5. 192 (SAMU).",
+        "6. (67) 3255-3000 (Aeroporto de Bonito).",
+        "7. 153 (Guarda Municipal).",
+        "8. (67) 3255-1351 (Delegacia de Polícia Civil).",
+        "9. 0800 647 0911 (Ouvidoria Turismo).",
+        "10. 191 (Polícia Rodoviária Federal)."
+    ],
+
+    riscos: [
+        "1. Preço Alto: Se não planejar, a conta final assusta. É um dos destinos mais caros do Brasil.",
+        "2. Mosquitos: Borrachudos e pernilongos são vorazes nas fazendas. Repelente (onde permitido) é lei.",
+        "3. Chuva x Visibilidade: Se chover muito na noite anterior, alguns passeios de flutuação são cancelados ou a água fica turva.",
+        "4. Animais Silvestres: Não alimente quatis ou macacos. Eles podem morder e transmitir doenças.",
+        "5. Escadaria da Gruta: A descida da Gruta do Lago Azul é íngreme e escorregadia. Não recomendada para idosos com dificuldade.",
+        "6. Hipotermia Leve: Crianças muito magras podem sentir muito frio na água, mesmo com neoprene.",
+        "7. Estradas de Terra: Se alugar carro 1.0, cuidado. Quando chove, o barro é liso.",
+        "8. Desidratação: O calor de MS é seco e intenso. Beba muita água.",
+        "9. Venda de Vagas: Cuidado com gente vendendo 'vaga' na rua. Só agências credenciadas emitem voucher.",
+        "10. Fuso Horário: Perder o horário do passeio porque esqueceu de atrasar o relógio em 1 hora."
+    ],
+
+    roteiros: {
+        "curto": {
+            titulo: "Essencial (3 Dias)",
+            texto: [
+                "Dia 1: Gruta do Lago Azul (manhã) + Balneário Municipal (tarde para relaxar). Noite no centro.",
+                "Dia 2: Flutuação no Rio Sucuri ou Prata (toma o dia quase todo com almoço).",
+                "Dia 3: Bote no Rio Formoso (aventura leve) e compras de lembrancinhas antes de partir."
+            ]
+        },
+        "medio": {
+            titulo: "Aventura Completa (5 Dias)",
+            texto: [
+                "Dias 1 a 3: Siga o roteiro essencial.",
+                "Dia 4: Buraco das Araras (cedinho ou fim de tarde) + Flutuação na Lagoa Misteriosa (se estiver aberta).",
+                "Dia 5: Cachoeiras da Boca da Onça ou Estância Mimosa (dia de trilha e banho)."
+            ]
+        },
+        "longo": {
+            titulo: "Imersão Total (7 Dias)",
+            texto: [
+                "Dias 1 a 5: Siga o roteiro médio.",
+                "Dia 6: Abismo Anhumas (para corajosos) ou Ceita Corê (fazenda com cachoeiras).",
+                "Dia 7: Projeto Jiboia (noite anterior) e manhã livre para curtir a praça e gastronomia local com calma."
+            ]
+        },
+    },
+
+    links: {
+        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-630656", 
+        passeio: "https://www.civitatis.com/br/bonito/", 
+        seguro: "https://www.segurospromo.com.br" 
+    },
+},
             
             
 
@@ -6753,6 +7853,186 @@ veredicto: {
             seguro: "https://www.segurospromo.com.br"
         }
     },
+    {
+    name: "Cidade do México",
+    imagem: "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?q=80&w=2070&auto=format&fit=crop",
+    tags: ["História", "Gastronomia", "Cultura Vibrante"],
+    mapa: "https://goo.gl/maps/cdmx",
+    clima: "Temperado de Altitude. Dias quentes, noites frescas. Chuvas de Maio a Outubro.",
+
+    // === DADOS DO VEREDICTO ===
+    veredicto: {
+        melhor_epoca: "Novembro a Abril (Estação Seca). Março e Abril são lindos com os Jacarandás roxos. Evite o verão (Junho-Setembro) se não gostar de chuva diária.",
+        ideal_para: [
+            "Apaixonados por História (Astecas, Colonial e Moderna no mesmo lugar)",
+            "Foodies e aventureiros gastronómicos (A melhor comida de rua do mundo)",
+            "Amantes de Arte e Museus (São mais de 150 museus, perdendo apenas para Londres)",
+            "Quem busca uma metrópole caótica, viva e colorida"
+        ],
+        nao_ideal_para: [
+            "Pessoas com problemas respiratórios graves (a poluição e a altitude de 2.250m pesam)",
+            "Quem procura silêncio e organização impecável (o trânsito e o barulho são intensos)",
+            "Quem tem fobia de multidões (o metro na hora de ponta é uma experiência de sobrevivência)"
+        ],
+        perfis: [
+            { icone: "ri-ancient-pavilion-fill", nome: "Astecas" },
+            { icone: "ri-restaurant-2-fill", nome: "Tacos" },
+            { icone: "ri-palette-fill", nome: "Frida" },
+            { icone: "ri-skull-fill", nome: "Dia dos Mortos" }
+        ]
+    },
+    // =================================
+
+    pontos_turisticos: [
+        "1. Teotihuacán: As pirâmides do Sol e da Lua. Fica a 50km, vá cedo ou faça o voo de balão ao amanhecer.",
+        "2. Museu Frida Kahlo (Casa Azul): A casa onde ela nasceu e morreu. Bilhetes esgotam semanas antes, compre online!",
+        "3. Zócalo & Catedral: O coração do país. Visite o Templo Mayor (ruínas astecas) ali mesmo ao lado.",
+        "4. Museu Nacional de Antropologia: Um dos melhores do mundo. A Pedra do Sol (Calendário Asteca) está lá. Reserve 4 horas.",
+        "5. Bosque de Chapultepec: O 'Central Park' mexicano. Abriga o único castelo real das Américas.",
+        "6. Xochimilco: As 'Venezas Mexicanas'. Passeio em barcos coloridos (trajineras) com mariachis e comida.",
+        "7. Palácio de Belas Artes: A arquitetura é deslumbrante. Entre para ver os murais de Rivera e Siqueiros.",
+        "8. Coyoacán: O bairro boémio e colonial onde fica a Casa Azul. Perfeito para caminhar e tomar café.",
+        "9. Bairro Roma e Condesa: A zona hipster, cheia de cafés, livrarias e arquitetura Art Déco.",
+        "10. Basílica de Guadalupe: O santuário católico mais visitado das Américas. A antiga basílica está visivelmente a afundar."
+    ],
+
+    gastronomia: [
+        "1. Tacos al Pastor: O rei da rua. Carne de porco marinada, assada no espeto (trompo), com ananás.",
+        "2. Mole Poblano: Um molho complexo com dezenas de ingredientes, incluindo chocolate e pimentas.",
+        "3. Chilaquiles: Totopos (nachos) banhados em molho verde ou vermelho, com natas e queijo. O pequeno-almoço clássico.",
+        "4. Elotes e Esquites: Milho cozido ou assado com maionese, queijo, limão e pimenta. Viciante.",
+        "5. Tamales: Massa de milho recheada e cozida em folha de milho ou bananeira. Tempos doces e salgados.",
+        "6. Pozole: Uma sopa rica de milho (cacahuazintle) com carne (porco ou frango) e muitos temperos.",
+        "7. Churros do El Moro: Uma instituição da cidade. Peça com chocolate quente mexicano.",
+        "8. Tostadas: Tortilhas crocantes com tudo em cima (frutos do mar, frango, natas).",
+        "9. Pulque: Bebida fermentada ancestral do agave. Tem uma textura viscosa e sabor único.",
+        "10. Insetos (Chapulines): Grilos fritos com limão e sal. Crocantes e vendem-se como pipocas."
+    ],
+
+    religiao: [
+        "1. Virgem de Guadalupe: A padroeira do México e 'Imperatriz da América'. A sua imagem na tilma (manto) de Juan Diego é venerada.",
+        "2. Fé Sincrética: O catolicismo aqui mistura-se profundamente com rituais indígenas pré-hispânicos.",
+        "3. Dia 12 de Dezembro: Dia da Virgem. Milhões de peregrinos chegam à Basílica, muitos de joelhos.",
+        "4. Catedral Metropolitana: Construída em cima do templo sagrado dos Astecas, usando as próprias pedras do templo destruído.",
+        "5. San Judas Tadeo: O santo das causas impossíveis, extremamente popular na cidade (dia 28 de cada mês).",
+        "6. Altares de Mortos: Em novembro, a religiosidade foca-se na memória dos antepassados com cores e alegria.",
+        "7. Santa Muerte: Um culto não reconhecido pela Igreja, mas muito popular em bairros mais perigosos (Tepito).",
+        "8. Igrejas Coloniais: Coyoacán e San Ángel têm igrejas antiquíssimas e preservadas.",
+        "9. Danças Astecas: No Zócalo, grupos fazem rituais de limpeza espiritual (limpias) com copal.",
+        "10. Cristo Negro: Em algumas igrejas, venera-se um Cristo de cor negra com lendas de milagres."
+    ],
+
+    curiosidades: [
+        "1. A Cidade Afunda: Construída sobre um lago aterrado (Texcoco), a cidade afunda centímetros todos os anos.",
+        "2. Maior que NY: É a cidade que mais consome Coca-Cola no mundo e tem mais museus que Nova Iorque.",
+        "3. CDMX: A sigla oficial da cidade (Ciudad de México), adotada recentemente.",
+        "4. Metro Laranja: Os pneus do metro são de borracha, não de ferro, para reduzir a vibração em caso de terramotos.",
+        "5. Cor de Rosa: Os táxis oficiais já foram verdes (fuscas), dourados e agora são brancos e cor-de-rosa (Hello Kitty style).",
+        "6. Altitude: A 2.250m, você pode sentir falta de ar e cansaço nos primeiros dias.",
+        "7. Axolotl: O anfíbio 'sorridente' e endémico vive apenas nos canais de Xochimilco.",
+        "8. Vulcões: Em dias claros, vê-se o Popocatépetl e o Iztaccíhuatl (a mulher adormecida) ao fundo.",
+        "9. O Trânsito: É considerado um dos piores do mundo. Planeie deslocações com folga.",
+        "10. Chapultepec: É duas vezes maior que o Central Park de Nova Iorque."
+    ],
+
+    eventos_estacoes: [
+        "1. Dia dos Mortos (1 e 2 Nov): O evento mais icónico. Desfiles, altares e a cidade cheia de Cempasúchil (flores laranja).",
+        "2. Grito de Independência (15 Set): O presidente toca o sino no Palácio Nacional e a multidão grita 'Viva México!'.",
+        "3. Primavera (Março): A cidade fica roxa com as árvores Jacarandás em flor.",
+        "4. Fórmula 1 (Out/Nov): O GP do México traz muita festa e preços altos na hotelaria.",
+        "5. Semana Santa: A cidade esvazia um pouco, pois os locais vão para a praia.",
+        "6. Feira de Arte (Fevereiro): A Zona Maco atrai colecionadores de todo o mundo.",
+        "7. Natal no Zócalo: Pista de gelo gigante e decorações luminosas.",
+        "8. Festival de Alebrijes: Desfile de monstros coloridos gigantes de papel machê (Outubro).",
+        "9. Parada Gay (Junho): Uma das maiores e mais animadas da América Latina.",
+        "10. Vive Latino: Um dos maiores festivais de música ibero-americana (Março/Abril)."
+    ],
+
+    info_gerais: [
+        "1. Moeda: Peso Mexicano (MXN). O símbolo é o mesmo do dólar ($), cuidado não confunda.",
+        "2. Voltagem: 110V - 127V (Tipo A/B, pino chato, igual aos EUA). Precisa de adaptador se os seus forem redondos.",
+        "3. Gorjeta (Propina): É cultural e quase obrigatória (10% a 15%). Não dar é visto como rude.",
+        "4. Água: NUNCA beba da torneira. Nem para lavar os dentes se tiver estômago sensível. Só garrafa.",
+        "5. Uber: Funciona muito bem e é seguro. Evite táxis de rua (táxis 'libres') à noite.",
+        "6. Segurança: Zonas turísticas (Roma, Condesa, Polanco, Centro) são seguras de dia. Evite bairros como Tepito ou Doctores.",
+        "7. Visto: Brasileiros precisam de VISTO FÍSICO (colado no passaporte) para entrar no México atualmente.",
+        "8. Idioma: Espanhol. Inglês é falado nas zonas turísticas, mas um 'hola' e 'gracias' ajudam.",
+        "9. SIM Card: Compre um chip da Telcel na OXXO (loja de conveniência) para ter internet.",
+        "10. Casas de Câmbio: No aeroporto as taxas são boas, diferente de outros países."
+    ],
+
+    antes_de_ir: [
+        "1. Visto Obrigatório: Verifique a exigência de visto para o seu passaporte com antecedência. A regra mudou recentemente.",
+        "2. Altitude: Beba muita água e não coma muito pesado no primeiro dia para evitar o 'soroche'.",
+        "3. Bilhetes Frida: Se não comprar online semanas antes, não entra. A fila de espera é brutal.",
+        "4. Seguro Viagem: Essencial. O sistema de saúde privado é excelente, mas caro.",
+        "5. Picante: Se perguntar 'tem pimenta?' e disserem 'poquito', acredite: é muito. Peça 'sin chile' se não aguentar.",
+        "6. Dinheiro Trocado: Notas pequenas ajudam muito para comida de rua e pequenas compras.",
+        "7. Sismos: Existem alarmes sísmicos na cidade. Se ouvir uma sirene tocar, siga os locais e saia dos edifícios.",
+        "8. Poluição: Leve colírio e soro nasal se for sensível, o ar é seco e poluído.",
+        "9. Protetor Solar: O sol de altitude queima rápido, mesmo em dias nublados.",
+        "10. Vestuário: Vista-se em camadas (cebola). De manhã faz frio, à tarde calor."
+    ],
+
+    numeros: [
+        "1. 911 (Emergência Geral): Polícia, Bombeiros e Ambulância.",
+        "2. 078 (Angeles Verdes): Assistência turística e mecânica nas estradas.",
+        "3. 55 5283-3400 (Embaixada do Brasil na Cidade do México).",
+        "4. 55 5658-1111 (Locatel): Informações gerais e localização de pessoas.",
+        "5. 55 5533-5533 (Conselho Cidadão): Apoio jurídico e psicológico a turistas.",
+        "6. 55 5250-8221 (Polícia Turística).",
+        "7. 55 5571-3600 (Aeroporto Internacional Benito Juárez).",
+        "8. 55 5627-4950 (Terminal de Autocarros do Norte - para Teotihuacán).",
+        "9. Uber/Didi: Tenha as apps instaladas.",
+        "10. Google Tradutor: Baixe o pacote de espanhol offline."
+    ],
+
+    riscos: [
+        "1. A Vingança de Montezuma: Diarreia do viajante. Cuidado com água, gelo e saladas cruas na rua.",
+        "2. Carteiristas: No metro e no Zócalo (centro), cuide da carteira e telemóvel nos bolsos da frente.",
+        "3. Táxis Piratas: Use apenas táxis de 'Sítio' (ponto fixo) ou Apps. Nunca pegue na rua à noite.",
+        "4. Terramotos: A cidade é zona sísmica. Mantenha a calma e observe as rotas de fuga nos hotéis.",
+        "5. Bairros Perigosos: Evite entrar em Tepito ou Lagunilla sem um guia local experiente.",
+        "6. Golpe do Troco: Confira sempre o troco, às vezes 'confundem' notas de 500 com 50.",
+        "7. Multas Falsas: Se conduzir, cuidado com polícias a pedir 'mordida' (suborno).",
+        "8. Altitude Sickness: Dores de cabeça e náuseas. Descanse.",
+        "9. Trânsito Imprevisível: Pode demorar 2 horas para fazer 10km. Não saia em cima da hora para o aeroporto.",
+        "10. Bebida Adulterada: Em bares noturnos, veja sempre a sua bebida a ser servida."
+    ],
+
+    roteiros: {
+        "curto": {
+            titulo: "Clássicos Express (3 Dias)",
+            texto: [
+                "Dia 1: Centro Histórico. Zócalo, Catedral, Templo Mayor e Palácio de Belas Artes. Almoço na Casa de los Azulejos.",
+                "Dia 2: Teotihuacán (manhã toda). Tarde livre para descansar ou passear na avenida Reforma.",
+                "Dia 3: Coyoacán e Museu Frida Kahlo (manhã). Tarde em Xochimilco nos barcos."
+            ]
+        },
+        "medio": {
+            titulo: "Cultura e Vibe (5 Dias)",
+            texto: [
+                "Dias 1 a 3: Siga o roteiro curto.",
+                "Dia 4: Bosque de Chapultepec, Castelo e Museu de Antropologia (dia intenso). Noite em Polanco.",
+                "Dia 5: Bairros Roma e Condesa. Café da manhã hipster, galerias de arte e compras locais."
+            ]
+        },
+        "longo": {
+            titulo: "Experiência Chilanga (7 Dias)",
+            texto: [
+                "Dias 1 a 5: Siga o roteiro médio.",
+                "Dia 6: San Ángel (Bazar de Sábado se for o dia) e Museu Soumaya.",
+                "Dia 7: Bate-volta a Puebla (cidade colonial próxima e gastronómica) ou dia livre para mercados (San Juan ou La Ciudadela)."
+            ]
+        },
+    },
+
+    links: {
+        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-1658079", 
+        passeio: "https://www.civitatis.com/br/cidade-do-mexico/", 
+        seguro: "https://www.segurospromo.com.br" 
+    },
+},
 ]
         
     
@@ -8098,7 +9378,192 @@ veredicto: {
             }
             
             
-        ]
+        ],
+        
+    "Alemanha": [
+        {
+            name: "Frankfurt",
+            imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Frankfurt_Main_August_2020_1.jpg/960px-Frankfurt_Main_August_2020_1.jpg",
+            tags: ["Negócios", "Arranha-céus", "História"],
+            mapa: "https://goo.gl/maps/frankfurt",
+            clima: "Temperado. Verões agradáveis e Invernos frios e cinzentos (neve ocasional).",
+
+            // === DADOS DO VEREDICTO ===
+            veredicto: {
+                melhor_epoca: "Maio a Setembro (Dias longos e cafés ao ar livre) ou Dezembro (Mercados de Natal). Evite datas de grandes feiras comerciais (Messe) se não quiser pagar o triplo no hotel.",
+                ideal_para: [
+                    "Viajantes em Conexão (o aeroporto é enorme e o trem para o centro leva 15 min)",
+                    "Amantes de Arquitetura (o contraste entre a 'Mainhattan' futurista e o centro histórico reconstruído)",
+                    "Fãs de Museus (a Museumsufer, margem dos museus, é de classe mundial)",
+                    "Quem procura uma base central para explorar a Alemanha (trens para todo o lado)"
+                ],
+                nao_ideal_para: [
+                    "Quem procura a Alemanha 'conto de fadas' em cada esquina (a cidade é moderna e financeira)",
+                    "Viajantes com orçamento mochileiro (é o centro financeiro da UE, tudo é caro)",
+                    "Quem espera vida noturna até de manhã cedo durante a semana"
+                ],
+                perfis: [
+                    { icone: "ri-building-2-fill", nome: "Skyline" },
+                    { icone: "ri-goblet-fill", nome: "Apfelwein" },
+                    { icone: "ri-briefcase-fill", nome: "Business" },
+                    { icone: "ri-flight-takeoff-fill", nome: "Conexão" }
+                ]
+            },
+            // =================================
+
+            pontos_turisticos: [
+                "1. Römerberg: O coração histórico reconstruído. As casas em enxaimel são lindas para fotos.",
+                "2. Main Tower: O único arranha-céu com terraço aberto ao público. A vista do skyline é imbatível.",
+                "3. Ponte de Ferro (Eiserner Steg): Ponte de pedestres icônica sobre o rio Meno, cheia de cadeados.",
+                "4. Catedral de Frankfurt (Kaiserdom): Onde os imperadores eram coroados. A torre gótica domina a paisagem.",
+                "5. Museumsufer: A margem do rio repleta de museus (Städel, Cinema, Arquitetura).",
+                "6. Casa de Goethe: O local de nascimento do escritor mais famoso da Alemanha.",
+                "7. Palmengarten: Um jardim botânico gigantesco e histórico, perfeito para relaxar.",
+                "8. Kleinmarkthalle: O mercado municipal gourmet. Prove a salsicha da senhora Schreiber (fila enorme).",
+                "9. Alte Oper: A antiga ópera, destruída na guerra e reconstruída. A praça em frente é lindíssima.",
+                "10. Zeil: A principal rua de compras, com shoppings futuristas como o MyZeil."
+            ],
+
+            gastronomia: [
+                "1. Apfelwein (Ebbelwoi): Vinho de maçã azedo. É a bebida oficial. Beba nas tabernas de Sachsenhausen.",
+                "2. Grüne Soße (Molho Verde): Molho frio feito com 7 ervas específicas, servido com ovos cozidos e batatas.",
+                "3. Frankfurter Würstchen: A salsicha original de Frankfurt (fina e cozida), servida com pão e mostarda.",
+                "4. Handkäs mit Musik: Queijo marinado em vinagre, óleo e cebola. O cheiro é forte, o sabor é adquirido.",
+                "5. Schnitzel: Embora austríaco, é onipresente e servido em porções gigantes com batatas fritas.",
+                "6. Bethmännchen: Doce tradicional de maçapão com amêndoas, típico do Natal.",
+                "7. Frankfurter Kranz: Um bolo em forma de coroa (anel) com creme de manteiga e crocante.",
+                "8. Currywurst: Salsicha cortada com molho de ketchup e curry (comida de rua rápida).",
+                "9. Bretzel: O pão entrelaçado salgado, perfeito para acompanhar cerveja.",
+                "10. Rippchen: Costeletas de porco curadas e cozidas, servidas com chucrute."
+            ],
+
+            religiao: [
+                "1. Kaiserdom St. Bartholomäus: Catedral Imperial Católica. Imponente tijolo vermelho.",
+                "2. Paulskirche: Antiga igreja protestante, hoje um monumento secular. Foi o berço da democracia alemã.",
+                "3. Alte Nikolaikirche: Igreja medieval luterana no Römerberg.",
+                "4. Diversidade: Frankfurt é muito multicultural, com grandes mesquitas e sinagogas.",
+                "5. Westend Synagogue: Uma das poucas sinagogas que sobreviveu à Noite de Cristal.",
+                "6. Justinuskirche: No bairro de Höchst, é um dos edifícios mais antigos da Alemanha (séc. IX).",
+                "7. Sinos da Cidade: Em feriados religiosos, todos os sinos das igrejas do centro tocam juntos.",
+                "8. Liebfrauenkirche: Igreja e mosteiro capuchinho no centro, um oásis de silêncio na zona comercial.",
+                "9. Cemitério Principal (Hauptfriedhof): Um parque enorme e local de descanso de filósofos.",
+                "10. Liberdade Religiosa: A cidade é conhecida pela tolerância histórica."
+            ],
+
+            curiosidades: [
+                "1. Mainhattan: Apelido dado devido aos arranha-céus (raros na Europa) à beira do rio Main.",
+                "2. Euro: É a sede do Banco Central Europeu. O símbolo gigante do Euro (€) é um ponto de foto famoso.",
+                "3. Reconstrução: Quase todo o centro histórico foi destruído na 2ª Guerra. O que vê no Römer é reconstrução fiel.",
+                "4. Salsicha: A 'Hot Dog' americana nasceu aqui (Frankfurter), trazida para os EUA por imigrantes.",
+                "5. Maior Aeroporto: É um dos maiores hubs do mundo. Muita gente conhece Frankfurt só de vista do avião.",
+                "6. Feira do Livro: A maior e mais importante feira editorial do mundo acontece aqui em Outubro.",
+                "7. Goethe: Johann Wolfgang von Goethe nasceu aqui e a universidade leva o seu nome.",
+                "8. Floresta da Cidade: Frankfurt tem a maior floresta urbana da Alemanha (Stadtwald).",
+                "9. Banqueiros: Diz-se que há tantos banqueiros quanto habitantes na cidade.",
+                "10. Museu Städel: Possui uma das coleções de arte mais importantes da Alemanha."
+            ],
+
+            eventos_estacoes: [
+                "1. Mercado de Natal (Dezembro): Um dos maiores e mais antigos da Alemanha (desde 1393) no Römerberg.",
+                "2. Museumsuferfest (Agosto): Festival gigante na margem dos museus com arte, música e comida.",
+                "3. Dippemess (Primavera e Outono): Feira popular tradicional com carrosséis e barracas.",
+                "4. Wäldchestag: Festival na floresta da cidade, muito popular entre os locais.",
+                "5. Feira do Livro (Outubro): O mundo literário encontra-se aqui.",
+                "6. Festival do Vinho de Maçã (Agosto): Celebração da bebida local no Roßmarkt.",
+                "7. Jazz Festival (Outubro): O festival de jazz alemão mais antigo.",
+                "8. Luminale (Bienal): Festival de luzes que ilumina os arranha-céus e monumentos.",
+                "9. Ironman Germany (Verão): A cidade para para ver o triatlo europeu.",
+                "10. Rheingau Wine Festival (Setembro): Vinhos da região vizinha tomam conta da 'Fressgass'."
+            ],
+
+            info_gerais: [
+                "1. Moeda: Euro (€).",
+                "2. Voltagem: 230V (Tomada Tipo F - Schuko). Precisa de adaptador.",
+                "3. Pfand: Sistema de reciclagem. Garrafas de plástico e latas têm depósito (0,25€). Devolva na máquina.",
+                "4. Água: Potável e de excelente qualidade. Pode beber da torneira.",
+                "5. Gorjeta (Trinkgeld): Arredonde a conta ou deixe 5-10%. Diga o valor total ao pagar.",
+                "6. Domingo: TUDO fecha. Lojas, mercados, farmácias. Só restaurantes e a estação central funcionam.",
+                "7. Transporte: RMV. Bilhetes caros. Valide o bilhete antes de entrar se não for digital.",
+                "8. Idioma: Alemão. Inglês é falado perfeitamente por quase todos.",
+                "9. Ciclovias: A cidade é plana e cheia de bicicletas. Cuidado para não andar na ciclovia.",
+                "10. Segurança: Muito segura, mas a zona da estação central (Bahnhofsviertel) é 'áspera'."
+            ],
+
+            antes_de_ir: [
+                "1. Dinheiro Vivo: A Alemanha ainda ama 'Bargeld' (dinheiro). Tenha sempre euros em espécie.",
+                "2. Estação Central: A área em frente à Hauptbahnhof tem viciados e prostituição visíveis. Fique atento.",
+                "3. Frankfurt Card: Verifique se compensa para o seu grupo (dá transporte + descontos).",
+                "4. Clima Instável: Leve sempre um guarda-chuva ou capa. O tempo muda rápido.",
+                "5. Lojas Fechadas: Domingo é dia de descanso sagrado. Faça compras no sábado.",
+                "6. Reserva: Para jantar em Sachsenhausen sexta ou sábado, reserve mesa.",
+                "7. Escadas Rolantes: Fique à DIREITA. A esquerda é para quem quer subir andando.",
+                "8. Atravessar a rua: Não atravesse no sinal vermelho (Ampelmann) mesmo sem carros. É mal visto.",
+                "9. Tax Free: Guarde os recibos para pedir reembolso do IVA no aeroporto se for elegível.",
+                "10. Trens: Geralmente pontuais, mas verifique sempre o app DB Navigator."
+            ],
+
+            numeros: [
+                "1. 110 (Polícia).",
+                "2. 112 (Bombeiros e Ambulância).",
+                "3. +49 30 18170 (Ministério das Relações Exteriores).",
+                "4. 116 117 (Médico de plantão não urgente).",
+                "5. 069 212 38800 (Turismo de Frankfurt).",
+                "6. 069 6900 (Aeroporto de Frankfurt).",
+                "7. 069 24 24 60 24 (Táxi Frankfurt).",
+                "8. App DB Navigator (Para horários de trens).",
+                "9. App RMV (Para transporte local).",
+                "10. +49 69 9595860 (Consulado do Brasil em Frankfurt)."
+            ],
+
+            riscos: [
+                "1. Bahnhofsviertel: A zona da estação tem consumo de drogas a céu aberto. É chocante visualmente.",
+                "2. Carteiristas: Em zonas turísticas (Römer) e transportes cheios.",
+                "3. Multas de Transporte: Os fiscais andam à paisana. A multa é alta (60€+) se não tiver bilhete.",
+                "4. Ciclistas: Não caminhe na ciclovia. Risco real de atropelamento.",
+                "5. Golpes de Rua: Pessoas pedindo assinaturas para 'surdos-mudos' ou caridade falsa.",
+                "6. Custo de Vida: Um café e um bolo podem custar 10€. Controle o orçamento.",
+                "7. Manifestações: Sendo o centro financeiro, é palco comum de protestos.",
+                "8. Futebol: Evite a zona do estádio em dias de jogo se houver rivalidade.",
+                "9. Gelo no Inverno: As calçadas podem ficar escorregadias.",
+                "10. Trens Cancelados: A Deutsche Bahn tem tido muitos atrasos recentemente."
+            ],
+
+            roteiros: {
+                "curto": {
+                    titulo: "Conexão Longa (1 Dia)",
+                    texto: [
+                        "Manhã: Römerberg (Centro Histórico) e Catedral. Atravesse a Ponte de Ferro.",
+                        "Almoço: Kleinmarkthalle (Salsicha rápida) ou Restaurante tradicional no Römer.",
+                        "Tarde: Suba à Main Tower para ver a vista e caminhe na Zeil (compras).",
+                        "Noite: Jantar em Sachsenhausen com Apfelwein."
+                    ]
+                },
+                "medio": {
+                    titulo: "Cultura e Relax (3 Dias)",
+                    texto: [
+                        "Dia 1: Siga o roteiro curto.",
+                        "Dia 2: Museumsufer (Manhã no Städel Museum). Tarde no Palmengarten (Jardim Botânico).",
+                        "Dia 3: Visita à Casa de Goethe e à Antiga Ópera. Compras finais ou passeio de barco no rio Meno."
+                    ]
+                },
+                "longo": {
+                    titulo: "Base para Explorar (5 Dias)",
+                    texto: [
+                        "Dias 1 a 3: Siga o roteiro médio.",
+                        "Dia 4: Bate-volta a Heidelberg (cidade universitária com castelo, a 1h de trem).",
+                        "Dia 5: Bate-volta ao Vale do Reno (Rüdesheim) ou Mainz."
+                    ]
+                },
+            },
+
+            links: {
+                hotel: "https://www.booking.com/searchresults.pt-br.html?city=-1771148", 
+                passeio: "https://www.civitatis.com/br/frankfurt/", 
+                seguro: "https://www.segurospromo.com.br" 
+            },
+        }
+    ]
+
     
     
     }

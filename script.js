@@ -9938,56 +9938,61 @@ function toggleSidebar() {
 // Inicializa o sistema
 init();
 // ======================================================
-// CORREÇÃO FINAL: MODO PESQUISA TRANSPARENTE (MOBILE)
+// CORREÇÃO FINAL 2.0: MODO PESQUISA FLUTUANTE (MOBILE)
 // ======================================================
 
 document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.getElementById('globalSearch'); // Seu ID correto
+    // Garante que pega o ID correto que vi no seu arquivo: globalSearch
+    const searchInput = document.getElementById('globalSearch'); 
     const sidebar = document.querySelector('.sidebar');
-    const overlay = document.querySelector('.sidebar-overlay'); // O fundo escuro
+    const overlay = document.querySelector('.sidebar-overlay');
 
-    if (searchInput && sidebar && overlay) {
+    if (searchInput && sidebar) {
         
-        // 1. AO ENTRAR NA PESQUISA (Foco)
+        // 1. AO TOCAR NA PESQUISA (Foco)
         searchInput.addEventListener('focus', function() {
             if (window.innerWidth <= 768) {
-                // Adiciona a classe que deixa tudo invisível, menos a busca
+                // Ativa o modo flutuante
                 sidebar.classList.add('mobile-searching');
-                overlay.classList.add('mobile-searching');
+                if(overlay) overlay.classList.add('mobile-searching');
             }
         });
 
         // 2. AO SAIR DA PESQUISA (Blur)
         searchInput.addEventListener('blur', function() {
-            // Pequeno delay para não piscar
+            // Pequeno delay para não piscar se o usuário estiver apenas rolando a tela
             setTimeout(() => {
-                // Se o campo estiver vazio, volta o menu normal
-                if (this.value.trim() === '') {
-                    sidebar.classList.remove('mobile-searching');
-                    overlay.classList.remove('mobile-searching');
-                }
-                // Se tiver texto, MANTÉM transparente para você ver o resultado
-                // Mas removemos se o usuário fechar o menu depois
-            }, 200);
+                // Remove o modo flutuante
+                sidebar.classList.remove('mobile-searching');
+                if(overlay) overlay.classList.remove('mobile-searching');
+            }, 300);
         });
 
-        // 3. AO DIGITAR (Garante que a busca roda)
+        // 3. ENQUANTO DIGITA (Tempo Real)
         searchInput.addEventListener('input', function() {
-            searchSystem(); // Sua função de busca
+            // Garante que o modo continue ativo enquanto digita
+            if (window.innerWidth <= 768 && !sidebar.classList.contains('mobile-searching')) {
+                 sidebar.classList.add('mobile-searching');
+                 if(overlay) overlay.classList.add('mobile-searching');
+            }
+            // Chama a busca do sistema
+            if (typeof searchSystem === 'function') {
+                searchSystem();
+            }
         });
 
         // 4. AO APERTAR ENTER
         searchInput.addEventListener('keyup', function(e) {
             if (e.key === 'Enter') {
-                this.blur(); // Tira o teclado
+                this.blur(); // Fecha o teclado mobile
                 
-                // Fecha o menu lateral completamente para ver os resultados limpos
+                // Fecha o menu lateral completamente
                 sidebar.classList.remove('active');
-                overlay.classList.remove('active');
+                if(overlay) overlay.classList.remove('active');
                 
-                // Limpa o modo pesquisa também
+                // Limpa as classes de pesquisa
                 sidebar.classList.remove('mobile-searching');
-                overlay.classList.remove('mobile-searching');
+                if(overlay) overlay.classList.remove('mobile-searching');
             }
         });
     }

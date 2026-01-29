@@ -1091,43 +1091,57 @@ body {
         z-index: 9999;
     }
 }
-/* --- CORREÇÃO MOBILE: MODO 'RAIO-X' NA PESQUISA --- */
+/* --- CORREÇÃO MOBILE DEFINITIVA --- */
 @media (max-width: 768px) {
-    /* Quando a classe .mobile-searching estiver ativa na sidebar */
     
-    /* 1. Torna o fundo do menu INVISÍVEL */
+    /* 1. O Menu Lateral fica "invisível" mas ainda existe */
     .sidebar.mobile-searching {
         background: transparent !important;
         box-shadow: none !important;
-        backdrop-filter: none !important;
-        pointer-events: none; /* Deixa você clicar no site atrás */
+        width: 100% !important; /* Ocupa a largura para centralizar a busca */
+        z-index: 1000;
+        transition: none !important; /* Remove animação para ser instantâneo */
     }
 
-    /* 2. Esconde TODOS os itens do menu (Links, Logo, Rodapé) */
+    /* 2. Esconde TUDO dentro do menu... */
     .sidebar.mobile-searching > * {
         opacity: 0 !important;
         visibility: hidden !important;
-        transition: opacity 0.2s ease;
     }
 
-    /* 3. Traz a barra de pesquisa de volta e destaca ela */
+    /* 3. ...EXCETO a barra de pesquisa, que forçamos a aparecer no topo */
     .sidebar.mobile-searching .search-box {
         opacity: 1 !important;
         visibility: visible !important;
-        pointer-events: auto !important; /* Permite digitar */
-        position: absolute;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
-        background: rgba(20, 30, 48, 0.95); /* Fundo escuro só na barra */
-        border: 1px solid var(--neon-blue);
-        box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
-        z-index: 99999;
+        display: block !important;
+        
+        /* O Segredo: Tira ela do fluxo do menu e cola na tela */
+        position: fixed !important; 
+        top: 15px !important;
+        left: 5% !important;
+        width: 90% !important;
+        
+        /* Estilo da barra flutuante */
+        background: var(--bg-deep) !important;
+        border: 2px solid var(--neon-blue);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        border-radius: 12px;
+        z-index: 10001 !important;
     }
 
-    /* 4. ESCONDE O OVERLAY (O fundo preto atrás do menu) */
+    /* Ajuste para o ícone de lupa e o input ficarem alinhados na barra flutuante */
+    .sidebar.mobile-searching .search-box i {
+        line-height: 50px; /* Ajuste conforme altura da sua barra */
+    }
+    
+    .sidebar.mobile-searching .search-box input {
+        background: transparent;
+        color: var(--text-main);
+    }
+
+    /* 4. Esconde o fundo escuro (Overlay) para ver a cidade atrás */
     .sidebar-overlay.mobile-searching {
+        display: none !important;
         opacity: 0 !important;
         pointer-events: none !important;
     }

@@ -473,7 +473,26 @@ const worldData = {
                 tags: ["Urbano", "Gastronomia", "Cultura"],
                 mapa: "https://goo.gl/maps/saopaulo",
                 clima: "Subtropical. Conhecida como 'Terra da Garoa', mas o tempo muda rápido.",
-                
+                veredicto: {
+                    melhor_epoca: "Abril a Agosto (Outono/Inverno). Menos chuva, clima mais ameno. Evite o verão (enchentes).",
+                    ideal_para: [
+                        "Amantes de alta gastronomia (melhores restaurantes do país)",
+                        "Quem busca vida cultural intensa (teatros, museus)",
+                        "Fãs de vida noturna e baladas underground",
+                        "Compras de luxo (Oscar Freire) ou pechinchas (25 de Março)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem busca contato intenso com a natureza e praias",
+                        "Pessoas que odeiam trânsito e poluição visual",
+                        "Quem prefere cidades silenciosas e lentas"
+                    ],
+                    perfis: [
+                        { icone: "ri-restaurant-fill", nome: "Foodie" },
+                        { icone: "ri-building-4-fill", nome: "Urbano" },
+                        { icone: "ri-briefcase-fill", nome: "Business" },
+                        { icone: "ri-artboard-fill", nome: "Cultura" }
+                    ]
+                },
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Avenida Paulista: O coração financeiro e cultural. Aos domingos fecha para carros e vira um parque.",
@@ -639,7 +658,27 @@ const worldData = {
                 tags: ["Romance", "Frio", "Chocolate"],
                 mapa: "https://goo.gl/maps/gramado",
                 clima: "Temperado. Invernos rigorosos (pode gear) e verões amenos.",
-                
+                // Adicione dentro do objeto de Gramado (após 'clima' e antes de 'pontos_turisticos')
+veredicto: {
+    melhor_epoca: "Junho a Agosto (Inverno/Fondue) ou Novembro a Janeiro (Natal Luz). Março é mais tranquilo.",
+    ideal_para: [
+        "Casais em lua de mel ou busca de romance",
+        "Famílias com crianças (Snowland, Mini Mundo, Florybal)",
+        "Amantes de gastronomia (Café colonial, Galeto e Fondue)",
+        "Quem busca charme europeu e segurança total"
+    ],
+    nao_ideal_para: [
+        "Viajantes com orçamento 'mochilão' (tudo é cobrado e caro)",
+        "Quem busca vida noturna agitada de baladas (a cidade dorme cedo)",
+        "Quem prefere trilhas selvagens e isolamento (turismo massificado)"
+    ],
+    perfis: [
+        { icone: "ri-hearts-fill", nome: "Romântico" },
+        { icone: "ri-bear-smile-fill", nome: "Família" },
+        { icone: "ri-goblet-fill", nome: "Gastrô" },
+        { icone: "ri-vip-diamond-fill", nome: "Luxo" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Lago Negro: O cartão-postal da cidade. Caminhe ao redor, ande de pedalinho e aprecie as hortênsias.",
@@ -805,7 +844,27 @@ const worldData = {
                 imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Sunset_over_Iguazu2.jpg/960px-Sunset_over_Iguazu2.jpg",
                 mapa: "https://goo.gl/maps/foz",
                 clima: "Subtropical. Verões quentes e invernos amenos (mas pode fazer frio!).",
-                
+                // Adicione dentro do objeto de Foz do Iguaçu
+veredicto: {
+    melhor_epoca: "Abril a Junho ou Setembro a Novembro (Clima agradável). Verão é muito quente, mas as quedas estão com volume máximo.",
+    ideal_para: [
+        "Amantes da natureza e ecoturismo (Cataratas e Parque das Aves)",
+        "Quem busca compras e eletrônicos baratos (Ciudad del Este - Paraguai)",
+        "Curiosos por engenharia gigante (Usina de Itaipu)",
+        "Jantares internacionais (Puerto Iguazú - Argentina)"
+    ],
+    nao_ideal_para: [
+        "Quem tem mobilidade muito reduzida (muita caminhada nas trilhas)",
+        "Quem não suporta calor úmido extremo (Dezembro/Janeiro é sufocante)",
+        "Quem odeia aglomeração e caos urbano (na parte de compras no Paraguai)"
+    ],
+    perfis: [
+        { icone: "ri-plant-fill", nome: "Natureza" },
+        { icone: "ri-shopping-bag-3-fill", nome: "Compras" },
+        { icone: "ri-group-fill", nome: "Família" },
+        { icone: "ri-earth-fill", nome: "Fronteira" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Cataratas do Iguaçu (Brasil): A vista panorâmica mais bonita. A trilha leva até a 'Garganta do Diabo'.",
@@ -972,7 +1031,27 @@ const worldData = {
                 tags: ["Praia", "Ilha da Magia", "Surf"],
                 mapa: "https://goo.gl/maps/floripa",
                 clima: "Subtropical Úmido. Verões quentes (e chuvosos) e invernos amenos com vento sul gelado.",
-                
+                // Adicione dentro do objeto de Florianópolis
+veredicto: {
+    melhor_epoca: "Março e Abril (O 'Veranico' tem sol, água agradável e menos trânsito). Dezembro/Janeiro é o auge do agito, mas o trânsito é intenso.",
+    ideal_para: [
+        "Amantes de praia (são 42 oficiais, uma para cada gosto)",
+        "Surfistas e praticantes de esportes ao ar livre (Sandboard, Kitesurf)",
+        "Vida noturna agitada (Beach Clubs de Jurerê e bares da Lagoa)",
+        "Gastronomia de frutos do mar (Rota das Ostras no Ribeirão da Ilha)"
+    ],
+    nao_ideal_para: [
+        "Quem tem fobia de trânsito parado (as filas no verão são lendárias)",
+        "Quem espera água morna o ano todo (a água é mais fria que no Nordeste)",
+        "Quem depende exclusivamente de ônibus (as distâncias são longas e demoradas)"
+    ],
+    perfis: [
+        { icone: "ri-sun-fill", nome: "Praia" },
+        { icone: "ri-surfboard-fill", nome: "Surf/Vibe" },
+        { icone: "ri-goblet-fill", nome: "Agito" },
+        { icone: "ri-restaurant-2-fill", nome: "Gastrô" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Ponte Hercílio Luz: O ícone da cidade. Atravesse a pé no pôr do sol para uma vista incrível.",
@@ -1138,7 +1217,27 @@ const worldData = {
                 tags: ["História", "Axé", "Praia"],
                 mapa: "https://goo.gl/maps/salvador",
                 clima: "Tropical Quente. Sol o ano todo, com chuvas de Abril a Junho. Vento constante.",
-                
+                // Adicione dentro do objeto de Salvador
+veredicto: {
+    melhor_epoca: "Setembro a Março (Época seca e festiva). Evite Abril e Maio (Chuvas torrenciais). O Carnaval (Fev/Mar) é uma experiência à parte.",
+    ideal_para: [
+        "Imersão profunda na cultura e história afro-brasileira (Pelourinho)",
+        "Amantes de música e festas de rua (Axé, Olodum, Ensaios de Verão)",
+        "Quem busca gastronomia com personalidade forte (Acarajé, Dendê)",
+        "Praias urbanas com água morna o ano todo (Porto da Barra)"
+    ],
+    nao_ideal_para: [
+        "Quem busca silêncio e ordem (a cidade é vibrante, barulhenta e caótica)",
+        "Pessoas com estômago sensível a temperos fortes (o dendê não perdoa)",
+        "Quem se incomoda com abordagens constantes de vendedores na rua"
+    ],
+    perfis: [
+        { icone: "ri-bank-fill", nome: "História" },
+        { icone: "ri-music-2-fill", nome: "Axé/Festa" },
+        { icone: "ri-fire-fill", nome: "Gastrô" },
+        { icone: "ri-sun-fill", nome: "Praia" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Pelourinho: O centro histórico, patrimônio da UNESCO. Casas coloridas, igrejas e o som do Olodum.",
@@ -1306,7 +1405,27 @@ const worldData = {
                 tags: ["Arquitetura", "História", "Política"],
                 mapa: "https://goo.gl/maps/brasilia",
                 clima: "Tropical de Altitude. Seca extrema no inverno (Jun-Set) e chuvas no verão.",
-                
+                // Adicione dentro do objeto de Brasília
+veredicto: {
+    melhor_epoca: "Maio a Setembro (Época da Seca). O céu é o mais bonito e os Ipês florescem (Ago/Set), mas a umidade é de deserto. Evite o verão se quiser fugir da chuva.",
+    ideal_para: [
+        "Fãs de arquitetura modernista e design (O maior museu a céu aberto de Niemeyer)",
+        "Turismo Cívico e Histórico (Congresso, Planalto, Praça dos Três Poderes)",
+        "Quem busca pores do sol espetaculares (Pontão do Lago Sul ou Ermida)",
+        "Místicos e esotéricos (Templo da Boa Vontade, proximidade com Chapada)"
+    ],
+    nao_ideal_para: [
+        "Quem gosta de fazer tudo a pé (a cidade foi feita para carros, as escalas são monumentais)",
+        "Quem busca vida noturna de rua aglomerada estilo Lapa/Vila Madalena",
+        "Pessoas que sofrem muito com tempo seco (leve soro fisiológico)"
+    ],
+    perfis: [
+        { icone: "ri-building-2-fill", nome: "Arquit." },
+        { icone: "ri-government-fill", nome: "Cívico" },
+        { icone: "ri-camera-lens-fill", nome: "Foto" },
+        { icone: "ri-leaf-fill", nome: "Zen" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Praça dos Três Poderes: O centro das decisões do país. Veja o Congresso, o Planalto e o STF de perto.",
@@ -1472,7 +1591,27 @@ const worldData = {
                 tags: ["História", "Gastronomia", "Praia"],
                 mapa: "https://goo.gl/maps/recife",
                 clima: "Tropical Úmido. Sol e calor o ano todo. Chuvas intensas entre Maio e Julho.",
-                
+                // Adicione dentro do objeto de Recife
+veredicto: {
+    melhor_epoca: "Setembro a Fevereiro (Muito sol). Evite Maio a Julho (Chuvas fortes). O Carnaval é o maior e mais democrático de rua do mundo.",
+    ideal_para: [
+        "Mergulho cultural profundo (Frevo, Maracatu, Bonecos Gigantes)",
+        "Turismo Histórico (Recife Antigo e a vizinha Olinda)",
+        "Gulosos (Bolo de Rolo, Cartola e cozinha pernambucana de ponta)",
+        "Base para praias paradisíacas próximas (Porto de Galinhas, Carneiros)"
+    ],
+    nao_ideal_para: [
+        "Quem quer nadar despreocupado na praia urbana (risco de tubarão em Boa Viagem - respeite as placas)",
+        "Quem busca isolamento absoluto (é uma metrópole vibrante e densa)",
+        "Caminhadas noturnas em áreas desertas do centro (requer atenção)"
+    ],
+    perfis: [
+        { icone: "ri-music-fill", nome: "Cultura" },
+        { icone: "ri-goblet-fill", nome: "Gastrô" },
+        { icone: "ri-bank-fill", nome: "História" },
+        { icone: "ri-sun-fill", nome: "Sol" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Recife Antigo (Marco Zero): O coração da cidade. Tire a clássica foto na rosa dos ventos e pegue o barquinho para as esculturas.",
@@ -1639,7 +1778,27 @@ const worldData = {
                 tags: ["Cultura Gaúcha", "Churrasco", "Parques"],
                 mapa: "https://goo.gl/maps/portoalegre",
                 clima: "Subtropical. Verão muito quente (abafado) e Inverno rigoroso e úmido.",
-                
+                // Adicione dentro do objeto de Porto Alegre
+veredicto: {
+    melhor_epoca: "Março a Maio (Outono) ou Outubro/Novembro (Primavera). O inverno é úmido e frio. Setembro é especial pelo Acampamento Farroupilha (cultura gaúcha).",
+    ideal_para: [
+        "Carnívoros e amantes de churrasco (as melhores churrascarias do país)",
+        "Apreciadores de um pôr do sol inesquecível (na revitalizada Orla do Guaíba)",
+        "Roteiro cultural urbano (Casa de Cultura Mario Quintana, Fundação Iberê)",
+        "Passeios tranquilos em parques (Redenção aos domingos é obrigatório)"
+    ],
+    nao_ideal_para: [
+        "Quem busca praias de mar azul (a cidade é banhada pelo Lago Guaíba)",
+        "Quem detesta oscilação térmica (é comum fazer as 4 estações no mesmo dia)",
+        "Quem espera uma cidade turística pequena (é uma metrópole de negócios e serviços)"
+    ],
+    perfis: [
+        { icone: "ri-fire-fill", nome: "Churrasco" },
+        { icone: "ri-sun-fill", nome: "Pôr do Sol" },
+        { icone: "ri-museum-fill", nome: "Cultura" },
+        { icone: "ri-tree-fill", nome: "Parques" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Orla do Guaíba: O ponto de encontro oficial. Calçadão revitalizado, perfeito para ver o pôr do sol (o mais bonito do mundo).",
@@ -1805,7 +1964,27 @@ const worldData = {
                 tags: ["Parques", "Frio", "Organização"],
                 mapa: "https://goo.gl/maps/curitiba",
                 clima: "Subtropical Úmido. O tempo muda rápido: pode fazer sol, chover e gear no mesmo dia. Traga casaco sempre.",
-                
+                // Adicione dentro do objeto de Curitiba
+veredicto: {
+    melhor_epoca: "Março a Maio (Outono agradável) ou Setembro a Novembro (Primavera florida). O inverno é rigoroso para os padrões brasileiros e o verão costuma ser chuvoso.",
+    ideal_para: [
+        "Amantes de parques e áreas verdes impecáveis (Jardim Botânico, Tanguá)",
+        "Quem busca organização urbana, limpeza e transporte eficiente",
+        "Turismo cultural e arquitetônico (Museu Oscar Niemeyer, Ópera de Arame)",
+        "Gulosos por culinária italiana e cafés coloniais (Bairro Santa Felicidade)"
+    ],
+    nao_ideal_para: [
+        "Quem detesta dias nublados, cinzas e chuva (o apelido 'Churitiba' é real)",
+        "Quem busca calor tropical constante e praias (a cidade é fria e fica no planalto)",
+        "Quem espera agito de rua desordenado (a cidade é mais contida que Rio/Salvador)"
+    ],
+    perfis: [
+        { icone: "ri-leaf-fill", nome: "Ecológico" },
+        { icone: "ri-building-2-fill", nome: "Urbano" },
+        { icone: "ri-cup-fill", nome: "Frio/Café" },
+        { icone: "ri-camera-lens-fill", nome: "Fotos" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Jardim Botânico: O cartão-postal. A estufa de vidro estilo Art Nouveau e os jardins franceses são lindos.",
@@ -1974,7 +2153,27 @@ const worldData = {
                 tags: ["Sol", "Praias", "Humor"],
                 mapa: "https://goo.gl/maps/fortaleza",
                 clima: "Tropical. Calor o ano todo (28ºC a 32ºC) e vento constante. Chuvas rápidas entre fev-mai.",
-                
+                // Adicione dentro do objeto de Fortaleza
+veredicto: {
+    melhor_epoca: "Julho a Dezembro (Sol garantido e ventos fortes). Evite Março a Maio se não quiser pegar a estação chuvosa. Agosto a Novembro é o paraíso do Kitesurf.",
+    ideal_para: [
+        "Famílias e adictos em adrenalina (Beach Park é parada obrigatória)",
+        "Amantes de caranguejo (a tradição da 'Quinta do Caranguejo' é sagrada)",
+        "Praticantes de Kitesurf e Windsurf (os ventos são perfeitos)",
+        "Quem busca base para explorar praias vizinhas (Cumbuco, Canoa Quebrada)"
+    ],
+    nao_ideal_para: [
+        "Quem espera nadar em qualquer praia urbana (alguns trechos podem ser impróprios)",
+        "Quem se incomoda com vento constante (na orla venta muito o tempo todo)",
+        "Caminhadas despreocupadas em áreas desertas à noite (segurança requer atenção)"
+    ],
+    perfis: [
+        { icone: "ri-sun-fill", nome: "Sol/Vento" },
+        { icone: "ri-bear-smile-fill", nome: "Diversão" },
+        { icone: "ri-restaurant-line", nome: "Caranguejo" },
+        { icone: "ri-water-flash-fill", nome: "Kitesurf" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Praia do Futuro: A melhor praia urbana para banho, famosa pelas megabarracas (Crocobeach, Chico do Caranguejo) com piscinas e shows.",
@@ -2143,7 +2342,27 @@ const worldData = {
                 tags: ["Inverno", "Romance", "Montanha"],
                 mapa: "https://goo.gl/maps/camposdojordao",
                 clima: "Tropical de Altitude. É a cidade mais alta do Brasil. Inverno gela (pode chegar a -2ºC) e verão é fresco.",
-                
+                // Adicione dentro do objeto de Campos do Jordão
+veredicto: {
+    melhor_epoca: "Junho a Agosto (Inverno/Festival). É o auge do glamour e do frio, mas prepare o bolso. Abril e Maio são ótimos para pegar frio sem pagar preços de alta temporada.",
+    ideal_para: [
+        "Casais em busca de romance (lareira, vinho e fondue)",
+        "Famílias com crianças (Tarundu, Parque da Floresta Encantada)",
+        "Apreciadores de cervejas artesanais (Baden Baden) e chocolate",
+        "Quem curte o clima de serra e arquitetura europeia ('Suíça Brasileira')"
+    ],
+    nao_ideal_para: [
+        "Viajantes com orçamento muito apertado (hospedagem e alimentação são caros)",
+        "Quem odeia trânsito parado (no inverno, o bairro Capivari trava)",
+        "Quem busca calor ou agito de rua despojado (o foco é ver e ser visto)"
+    ],
+    perfis: [
+        { icone: "ri-hearts-fill", nome: "Romance" },
+        { icone: "ri-cup-fill", nome: "Frio/Choc" },
+        { icone: "ri-vip-diamond-fill", nome: "Luxo" },
+        { icone: "ri-beer-fill", nome: "Cerveja" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Vila Capivari: O centrinho turístico. Arquitetura europeia, restaurantes, lojas de grife e a famosa Cervejaria Baden Baden.",
@@ -2312,7 +2531,27 @@ const worldData = {
                 tags: ["Piscinas Naturais", "Mergulho", "Romance"],
                 mapa: "https://goo.gl/maps/portodegalinhas",
                 clima: "Tropical. Sol o ano todo. Chuvas concentradas entre maio e julho. A água é sempre morna (28ºC).",
-                
+                // Adicione dentro do objeto de Porto de Galinhas
+veredicto: {
+    melhor_epoca: "Setembro a Março (Sol firme). Dica Vital: Consulte a Tábua de Marés! Vá na Lua Cheia ou Nova para pegar a maré baixa (piscinas naturais). Evite Abril a Julho (Chuva).",
+    ideal_para: [
+        "Famílias com crianças (águas mornas, sem ondas e piscinas naturais)",
+        "Amantes de snorkeling e vida marinha (os peixes comem na mão)",
+        "Quem busca resorts pé na areia com estrutura completa",
+        "Passeios de Buggy 'Ponta a Ponta' (de Muro Alto a Maracaípe)"
+    ],
+    nao_ideal_para: [
+        "Surfistas na praia principal da vila (vá para Maracaípe, ao lado, para ondas)",
+        "Quem busca praias desertas e selvagens no centrinho (é muito lotado)",
+        "Quem se irrita com abordagem constante de vendedores e jangadeiros"
+    ],
+    perfis: [
+        { icone: "ri-sun-fill", nome: "Praia" },
+        { icone: "ri-star-smile-fill", nome: "Família" },
+        { icone: "ri-drop-fill", nome: "Mergulho" },
+        { icone: "ri-hotel-fill", nome: "Resort" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Piscinas Naturais: O cartão-postal. Vá de jangada na maré baixa para nadar com os peixinhos coloridos.",
@@ -2481,7 +2720,27 @@ const worldData = {
                 tags: ["Praias", "História", "Festas"],
                 mapa: "https://goo.gl/maps/portoseguro",
                 clima: "Tropical quente. Sol o ano todo. Chuvas rápidas podem ocorrer, mas o 'verão eterno' é real.",
-                
+                // Adicione dentro do objeto de Porto Seguro
+veredicto: {
+    melhor_epoca: "Agosto a Março (Sol firme). Evite Abril e Maio (Chuvas). Atenção: Julho e Outubro a cidade é invadida por excursões de formatura. O Carnaval é gigante.",
+    ideal_para: [
+        "Quem ama agito, axé e megabarracas de praia (Axé Moi, Toa Toa)",
+        "Viajantes com orçamento controlado (é mais barato que Trancoso e Arraial)",
+        "Turismo Histórico (Rota do Descobrimento e o charmoso Centro Histórico)",
+        "Solteiros e grupos de amigos em busca de paquera"
+    ],
+    nao_ideal_para: [
+        "Quem busca praias silenciosas e desertas (as praias centrais têm som alto e lambaeróbica)",
+        "Quem procura luxo e sofisticação exclusiva (neste caso, siga para a vizinha Trancoso)",
+        "Quem se irrita com vendedores e multidões na Passarela do Álcool"
+    ],
+    perfis: [
+        { icone: "ri-music-2-fill", nome: "Festa/Axé" },
+        { icone: "ri-history-line", nome: "História" },
+        { icone: "ri-wallet-3-fill", nome: "Econômico" },
+        { icone: "ri-group-fill", nome: "Jovens" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Centro Histórico (Cidade Alta): Onde o Brasil começou. Visite o Marco do Descobrimento, a Igreja N.S. da Pena e o Farol. Vista linda do mar.",
@@ -2651,7 +2910,27 @@ const worldData = {
                 tags: ["Praias", "Luxo", "Gastronomia"],
                 mapa: "https://goo.gl/maps/buzios",
                 clima: "Tropical Seco. Chove menos que no Rio de Janeiro. Venta bastante. A água do mar é fria o ano todo.",
-                
+                // Adicione dentro do objeto de Búzios
+veredicto: {
+    melhor_epoca: "Abril e Maio ou Setembro a Novembro (Clima ótimo e cidade mais vazia). O verão (Dez-Fev) é lotado, caro e o trânsito para. Setembro costuma ventar bastante.",
+    ideal_para: [
+        "Quem busca charme e sofisticação (o estilo 'Saint-Tropez brasileira')",
+        "Casais (pousadas boutique e jantares românticos na Rua das Pedras)",
+        "Amantes de praias variadas (tem de surf em Geribá a piscina na Ferradura)",
+        "Vida noturna de alto nível (beach clubs e baladas famosas)"
+    ],
+    nao_ideal_para: [
+        "Quem tem dificuldade de locomoção (a Rua das Pedras é terrível para cadeirantes, saltos ou carrinhos de bebê)",
+        "Viajantes com orçamento muito curto (alimentação e hospedagem são valorizadas)",
+        "Quem não tem paciência para trânsito (na alta temporada, cruzar a cidade pode levar horas)"
+    ],
+    perfis: [
+        { icone: "ri-hearts-fill", nome: "Charme" },
+        { icone: "ri-sun-fill", nome: "Praia" },
+        { icone: "ri-goblet-fill", nome: "Night" },
+        { icone: "ri-vip-diamond-fill", nome: "Sofisticado" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Rua das Pedras: O coração da cidade. Lojas de grife, restaurantes e bares badalados. O charme acontece à noite.",
@@ -2821,7 +3100,27 @@ const worldData = {
                 tags: ["Dunas", "Praias", "Sol"],
                 mapa: "https://goo.gl/maps/natal",
                 clima: "Tropical. Sol 300 dias por ano. Venta bastante (a 'Noiva do Sol'). Chuvas concentradas entre Abril e Julho.",
-                
+                // Adicione dentro do objeto de Natal
+veredicto: {
+    melhor_epoca: "Setembro a Fevereiro (Sol garantido). A 'Cidade do Sol' tem luz o ano todo, mas de Abril a Julho é a estação chuvosa. Março é quente e úmido.",
+    ideal_para: [
+        "Aventureiros (o passeio de Buggy 'com emoção' em Genipabu é obrigatório)",
+        "Quem busca base para paraísos vizinhos (Pipa e São Miguel do Gostoso)",
+        "Famílias com crianças (águas mornas e atrações como o Maior Cajueiro)",
+        "Quem ama sol intenso e vento constante (ótimo para respirar ar puro)"
+    ],
+    nao_ideal_para: [
+        "Quem detesta areia e vento (venta muito o tempo todo)",
+        "Quem busca vida cultural urbana agitada (o foco total é praia e natureza)",
+        "Quem tem medo de altura ou velocidade (as dunas podem ser intimidantes para alguns)"
+    ],
+    perfis: [
+        { icone: "ri-sun-fill", nome: "Sol" },
+        { icone: "ri-roadster-fill", nome: "Buggy" },
+        { icone: "ri-windy-fill", nome: "Natureza" },
+        { icone: "ri-star-smile-fill", nome: "Família" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Praia de Ponta Negra e Morro do Careca: O cartão-postal. A praia urbana mais famosa. O Morro é área de preservação (não pode subir), mas a foto é obrigatória.",
@@ -2991,7 +3290,27 @@ const worldData = {
                 tags: ["Caribe Brasileiro", "Piscinas Naturais", "Praias"],
                 mapa: "https://goo.gl/maps/maceio",
                 clima: "Tropical Quente. A cor do mar é mais bonita entre Setembro e Março. Abril a Julho chove mais e a água pode turvar.",
-                
+                // Adicione dentro do objeto de Maceió
+veredicto: {
+    melhor_epoca: "Setembro a Março (Época seca). É quando o mar fica 'azul Caribe'. Evite Maio a Julho: chove muito e a água pode ficar turva (marrom) devido aos rios.",
+    ideal_para: [
+        "Quem busca a cor de mar mais bonita do Brasil (o apelido 'Caribe Brasileiro' é real)",
+        "Famílias e casais (águas mornas, sem ondas e piscinas naturais na cidade)",
+        "Gulosos (a orla tem as melhores tapioqueiras e restaurantes de frutos do mar)",
+        "Base estratégica para 'Bate-Volta' (Maragogi, Gunga, Francês e Milagres)"
+    ],
+    nao_ideal_para: [
+        "Quem busca vida noturna frenética até o amanhecer (a orla é animada, mas a cidade dorme relativamente cedo)",
+        "Quem visita no auge do inverno esperando mar azul (se chover, a cor muda drasticamente)",
+        "Quem se irrita com abordagem de vendedores (nas praias urbanas é intenso)"
+    ],
+    perfis: [
+        { icone: "ri-drop-fill", nome: "Caribe BR" },
+        { icone: "ri-hearts-fill", nome: "Romance" },
+        { icone: "ri-restaurant-2-fill", nome: "Gastrô" },
+        { icone: "ri-anchor-fill", nome: "Passeios" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Praia de Pajuçara: Onde saem as jangadas para as piscinas naturais. Água morna, sem ondas e feirinha de artesanato.",
@@ -3160,7 +3479,27 @@ const worldData = {
     tags: ["Gastronomia", "Cultura", "Arquitetura"],
     mapa: "https://goo.gl/maps/bhz",
     clima: "Tropical de Altitude. Clima ameno e agradável na maior parte do ano.",
-    
+    // Adicione dentro do objeto de Belo Horizonte
+veredicto: {
+    melhor_epoca: "Abril a Setembro (Outono/Inverno). É a época seca e agradável, ideal para os botecos ao ar livre. O verão (Dez-Mar) costuma ser quente e chuvoso.",
+    ideal_para: [
+        "Amantes da gastronomia raiz (é a Capital Mundial dos Botecos)",
+        "Quem busca turismo cultural (Circuito Liberdade e a genial Pampulha)",
+        "Base para visitar Inhotim (o maior museu a céu aberto do mundo, em Brumadinho)",
+        "Gulosos por queijos, doces e cachaças (Mercado Central é o paraíso)"
+    ],
+    nao_ideal_para: [
+        "Quem busca praia e mar (mas tem cachoeiras próximas e o 'mar de morros')",
+        "Quem odeia ladeiras e caminhar subindo morro (a topografia é acidentada)",
+        "Quem prefere silêncio total à noite (a vida boêmia nas calçadas é intensa)"
+    ],
+    perfis: [
+        { icone: "ri-goblet-fill", nome: "Boteco/Gastrô" },
+        { icone: "ri-artboard-fill", nome: "Cultura/Arte" },
+        { icone: "ri-group-fill", nome: "Social" },
+        { icone: "ri-shopping-basket-fill", nome: "Mercado" }
+    ]
+},
     pontos_turisticos: [
         "1. Praça da Liberdade: O coração cultural, cercada por museus em prédios históricos e arquitetura neoclássica e moderna.",
         "2. Conjunto Moderno da Pampulha: Patrimônio da UNESCO. Inclui a Igreja de São Francisco de Assis (Niemeyer) e a Casa do Baile.",
@@ -3318,7 +3657,27 @@ const worldData = {
     tags: ["Natureza", "Gastronomia", "Aventura"],
     mapa: "https://goo.gl/maps/manaus",
     clima: "Equatorial. Quente e úmido o ano todo, com chuvas frequentes.",
-    
+    // Adicione dentro do objeto de Manaus
+veredicto: {
+    melhor_epoca: "Junho a Novembro (Verão Amazônico/Seca). Junho/Julho é o auge para ver a floresta alagada (Igapós). Setembro/Outubro surgem as praias de rio. O calor é intenso e úmido o ano todo.",
+    ideal_para: [
+        "Aventureiros e amantes da natureza (Selva, Encontro das Águas, Botos)",
+        "Exploradores gastronômicos (Tambaqui, Pirarucu, Tacacá e frutas exóticas)",
+        "Turismo Cultural e Histórico (Teatro Amazonas e Ciclo da Borracha)",
+        "Experiências imersivas em hotéis de selva ou cruzeiros fluviais"
+    ],
+    nao_ideal_para: [
+        "Quem não suporta calor extremo e umidade alta (é uma sauna a céu aberto)",
+        "Pessoas com fobia intensa de insetos (na selva, eles são os donos)",
+        "Quem espera encontrar praias de água azul turquesa (os rios são negros ou barrentos)"
+    ],
+    perfis: [
+        { icone: "ri-plant-fill", nome: "Selva/Eco" },
+        { icone: "ri-restaurant-2-fill", nome: "Sabores" },
+        { icone: "ri-ship-fill", nome: "Fluvial" },
+        { icone: "ri-history-line", nome: "História" }
+    ]
+},
     pontos_turisticos: [
         "1. Teatro Amazonas: Ícone do Ciclo da Borracha, com sua cúpula colorida e interior luxuoso.",
         "2. Encontro das Águas: Onde o Rio Negro e o Rio Solimões correm lado a lado sem se misturar.",
@@ -3474,7 +3833,27 @@ const worldData = {
     tags: ["Praias", "Tranquilidade", "História"],
     mapa: "https://goo.gl/maps/joaopessoa",
     clima: "Tropical Úmido. Sol constante e brisa agradável, com chuvas entre abril e julho.",
-    
+    // Adicione dentro do objeto de João Pessoa
+veredicto: {
+    melhor_epoca: "Setembro a Março (Mar esmeralda e muito sol). Janeiro é movimentado. Evite Abril a Julho se quiser fugir da chuva. Dica: A cidade acorda com as galinhas (o sol nasce às 4h30)!",
+    ideal_para: [
+        "Quem busca a capital mais tranquila, verde e segura do Nordeste",
+        "Famílias e terceira idade (orla organizada, plana e sem prédios altos na areia)",
+        "Viajantes que querem economizar (ótimo custo-benefício em comida/hospedagem)",
+        "Madrugadores (o dia começa antes das 5h da manhã e rende muito)"
+    ],
+    nao_ideal_para: [
+        "Quem busca vida noturna frenética até o amanhecer (a orla fica vazia cedo)",
+        "Quem gosta de dormir até tarde (o sol nasce muito cedo e o comércio fecha cedo)",
+        "Quem espera mar agitado nas praias urbanas (a maioria é protegida por recifes)"
+    ],
+    perfis: [
+        { icone: "ri-leaf-fill", nome: "Zen/Paz" },
+        { icone: "ri-home-heart-fill", nome: "Família" },
+        { icone: "ri-wallet-3-fill", nome: "Econômico" },
+        { icone: "ri-sun-fill", nome: "Sol/Mar" }
+    ]
+},
     pontos_turisticos: [
         "1. Farol do Cabo Branco: Simboliza o ponto mais oriental das Américas (Ponta do Seixas).",
         "2. Pôr do Sol na Praia do Jacaré: Onde o Bolero de Ravel é tocado diariamente ao saxofone no rio.",
@@ -3631,7 +4010,27 @@ const worldData = {
     tags: ["Surfe", "Natureza", "Praias"],
     mapa: "https://goo.gl/maps/ubatuba",
     clima: "Tropical Litorâneo. Quente e úmido, conhecida carinhosamente como 'Ubatuba-chuva' pela frequência das precipitações.",
-    
+    // Adicione dentro do objeto de Ubatuba
+veredicto: {
+    melhor_epoca: "Maio a Agosto (Inverno seco). O apelido 'Ubachuva' é real: no verão chove quase todo dia. Se quer sol garantido e céu azul, vá no inverno (mas a água é gelada).",
+    ideal_para: [
+        "Surfistas (é a capital do Surf em SP, com ondas lendárias em Itamambuca)",
+        "Amantes de natureza intocada (Mata Atlântica densa, trilhas e cachoeiras)",
+        "Quem busca variedade (são mais de 100 praias, da calmaria ao mar bravo)",
+        "Passeios de barco para ilhas paradisíacas (Ilha Anchieta e Prumirim)"
+    ],
+    nao_ideal_para: [
+        "Quem tem alergia a insetos (os 'borrachudos' são vorazes, repelente é lei)",
+        "Quem não tem paciência para trânsito (na temporada, a Rio-Santos trava totalmente)",
+        "Quem desanima com previsão de chuva (aqui o tempo vira em minutos)"
+    ],
+    perfis: [
+        { icone: "ri-surfboard-fill", nome: "Surf" },
+        { icone: "ri-tree-fill", nome: "Ecoturismo" },
+        { icone: "ri-drop-fill", nome: "Natureza" },
+        { icone: "ri-group-fill", nome: "Família" }
+    ]
+},
     pontos_turisticos: [
         "1. Ilha das Couves: Águas cristalinas ideais para snorkel; acesso controlado por barcos partindo de Picinguaba.",
         "2. Projeto TAMAR: Centro de conservação de tartarugas marinhas, parada educativa obrigatória no centro.",
@@ -3788,7 +4187,27 @@ const worldData = {
     tags: ["Praias", "Gastronomia", "Ilha"],
     mapa: "https://goo.gl/maps/vitoria",
     clima: "Tropical Litorâneo. Quente e úmido no verão, ameno no inverno. Venta bastante (Nordeste).",
-    
+    // Adicione dentro do objeto de Vitória
+veredicto: {
+    melhor_epoca: "Abril a Setembro (Menos chuva e clima ameno). O verão é quente e úmido. No inverno, aproveite para combinar com as Montanhas Capixabas (Domingos Martins) que ficam perto.",
+    ideal_para: [
+        "Amantes de frutos do mar (a regra é clara: 'Moqueca é capixaba, o resto é peixada')",
+        "Quem busca qualidade de vida e uma capital organizada, limpa e segura",
+        "Famílias com crianças (Praça da Ciência, Projeto Tamar e calçadão de Camburi)",
+        "Turismo Religioso (o Convento da Penha, na vizinha Vila Velha, é imperdível)"
+    ],
+    nao_ideal_para: [
+        "Quem busca mar azul turquesa na cidade (a água é mais escura; para praias cristalinas, suba para o Norte do estado)",
+        "Quem espera vida noturna caótica e interminável (o ritmo aqui é mais tranquilo)",
+        "Quem não tem paciência para pontes (o trânsito na Terceira Ponte nos horários de pico é intenso)"
+    ],
+    perfis: [
+        { icone: "ri-restaurant-2-fill", nome: "Moqueca" },
+        { icone: "ri-building-4-fill", nome: "Urbano/Zen" },
+        { icone: "ri-star-smile-fill", nome: "Família" },
+        { icone: "ri-anchor-fill", nome: "Náutico" }
+    ]
+},
     pontos_turisticos: [
         "1. Convento da Penha: O cartão-postal do ES. Fica na vizinha Vila Velha, mas a vista de (e para) Vitória é obrigatória.",
         "2. Ilha das Caieiras: Bairro histórico de pescadores, polo gastronômico famoso pelas desfiadeiras de siri.",
@@ -3945,7 +4364,27 @@ const worldData = {
     tags: ["Praias", "Cultura", "Tranquilidade"],
     mapa: "https://goo.gl/maps/aracaju",
     clima: "Tropical Litorâneo. Quente o ano todo, com brisa constante. Chuvas mais frequentes entre abril e julho.",
-    
+    // Adicione dentro do objeto de Aracaju
+veredicto: {
+    melhor_epoca: "Setembro a Março (Sol e Vento). Junho é imperdível para quem ama São João (o 'Forró Caju' é gigante). Evite Abril a Julho (Chuva).",
+    ideal_para: [
+        "Quem busca a orla urbana mais bonita, segura e estruturada do Brasil (Atalaia)",
+        "Amantes de Caranguejo (a Passarela do Caranguejo é um templo gastronômico)",
+        "Famílias com crianças (Mundo Maravilhoso da Criança, Oceanário, Lagos)",
+        "Quem quer fugir do turismo de massa e preços altos das vizinhas famosas"
+    ],
+    nao_ideal_para: [
+        "Quem busca mar azul turquesa (as águas são turvas/marrons devido aos rios, embora limpas)",
+        "Quem procura agito cosmopolita 24h (é uma capital com ritmo acolhedor de interior)",
+        "Surfistas radicais (o mar na maioria da orla urbana é mais calmo/plano)"
+    ],
+    perfis: [
+        { icone: "ri-restaurant-line", nome: "Caranguejo" },
+        { icone: "ri-home-smile-fill", nome: "Família" },
+        { icone: "ri-music-2-fill", nome: "Forró" },
+        { icone: "ri-wallet-3-fill", nome: "Custo/Ben." }
+    ]
+},
     pontos_turisticos: [
         "1. Orla de Atalaia: Considerada a orla mais bonita e estruturada do Brasil, com lagos, quadras e a Passarela do Caranguejo.",
         "2. Croa do Goré: Um banco de areia no meio do rio Vaza-Barris acessível apenas na maré baixa. Um paraíso.",
@@ -4108,7 +4547,27 @@ const worldData = {
                 tags: ["Tango", "Gastronomia", "Romance"],
                 mapa: "https://goo.gl/maps/buenosaires",
                 clima: "Temperado. Verões quentes e úmidos, invernos frios (mas sem neve na capital).",
-                
+                // Adicione dentro do objeto de Buenos Aires
+veredicto: {
+    melhor_epoca: "Março a Maio (Outono) ou Setembro a Novembro (Primavera - Jacarandás em flor). O verão (Dez-Fev) é muito quente e úmido. O inverno é charmoso, mas frio.",
+    ideal_para: [
+        "Carnívoros e amantes de vinho (O trio Parrilla + Malbec + Doce de Leite é sagrado)",
+        "Casais em busca de romance e charme europeu a preço acessível",
+        "Intelectuais e amantes de cultura (cidade com mais livrarias per capita do mundo)",
+        "Corujas da noite (a vida noturna começa às 2h da manhã e o jantar às 22h)"
+    ],
+    nao_ideal_para: [
+        "Quem gosta de jantar cedo (restaurantes abrem às 20h e enchem às 22h30)",
+        "Quem busca praia (a cidade é banhada pelo Rio da Prata, não tem mar balneável)",
+        "Quem se estressa com manifestações políticas (o centro costuma ter protestos frequentes)"
+    ],
+    perfis: [
+        { icone: "ri-knife-blood-fill", nome: "Parrilla" },
+        { icone: "ri-hearts-fill", nome: "Romance" },
+        { icone: "ri-book-open-fill", nome: "Cultura" },
+        { icone: "ri-moon-fill", nome: "Noite" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Obelisco e Av. 9 de Julho: O ícone da cidade na avenida mais larga do mundo.",
@@ -4277,7 +4736,27 @@ const worldData = {
                 tags: ["Neve", "Vinho", "Montanha"],
                 mapa: "https://goo.gl/maps/santiago",
                 clima: "Mediterrâneo. Verão seco e quente (30ºC). Inverno frio e chuvoso na cidade, com neve nas montanhas vizinhas.",
-                
+                // Adicione dentro do objeto de Santiago
+veredicto: {
+    melhor_epoca: "Setembro a Novembro (Primavera) ou Março a Maio (Outono). Se o foco for NEVE/ESQUI, vá de Junho a Agosto (mas prepare-se para o ar mais poluído).",
+    ideal_para: [
+        "Amantes de Vinho (vinícolas de classe mundial acessíveis até de metrô)",
+        "Esquiadores e fãs de neve (Valle Nevado e Farellones ficam a 1h30)",
+        "Quem busca uma metrópole organizada, limpa e com a Cordilheira de fundo",
+        "Historiadores e Cultura (Museu da Memória, Casa de Pablo Neruda)"
+    ],
+    nao_ideal_para: [
+        "Pessoas com problemas respiratórios graves no inverno (o 'smog' fica preso entre as montanhas)",
+        "Quem busca praia para banho (o litoral fica longe e a água do Pacífico é gelada)",
+        "Quem espera preços muito baixos (é uma das capitais mais caras da América do Sul)"
+    ],
+    perfis: [
+        { icone: "ri-goblet-fill", nome: "Vinho" },
+        { icone: "ri-snowy-fill", nome: "Neve/Esqui" },
+        { icone: "ri-building-4-fill", nome: "Urbano" },
+        { icone: "ri-history-line", nome: "História" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Sky Costanera: O prédio mais alto da América do Sul. A vista da Cordilheira dos Andes no pôr do sol é obrigatória.",
@@ -4446,7 +4925,27 @@ const worldData = {
         tags: ["Histórica", "Praias", "Romântica"],
         mapa: "https://goo.gl/maps/cartagena",
         clima: "Tropical. Quente e úmido o ano todo, com brisa do mar constante.",
-        
+        // Adicione dentro do objeto de Cartagena
+veredicto: {
+    melhor_epoca: "Dezembro a Abril (Estação Seca e Ventosa). Evite Outubro e Novembro, que costumam ser muito chuvosos. O calor é intenso e úmido o ano todo.",
+    ideal_para: [
+        "Casais em busca de romance (a Cidade Murada à noite é mágica)",
+        "Amantes de História Colonial (Muralhas, Castelo de San Felipe)",
+        "Quem busca vida noturna vibrante (Salsa, Reggaeton e a Chiva Rumbera)",
+        "Base para explorar ilhas do Caribe real (Islas del Rosario e Barú)"
+    ],
+    nao_ideal_para: [
+        "Quem não suporta calor extremo e 'bafo' úmido (você vai suar 24h por dia)",
+        "Quem se irrita facilmente com vendedores ambulantes (são muito insistentes)",
+        "Quem espera praias de areia branca dentro da cidade (as praias urbanas têm areia escura, o 'Caribe' fica nas ilhas)"
+    ],
+    perfis: [
+        { icone: "ri-hearts-fill", nome: "Romance" },
+        { icone: "ri-history-line", nome: "História" },
+        { icone: "ri-goblet-fill", nome: "Festa" },
+        { icone: "ri-anchor-fill", nome: "Ilhas" }
+    ]
+},
         pontos_turisticos: [
             "1. Cidade Amuralhada: O coração histórico com ruas coloridas, sacadas floridas e igrejas coloniais.",
             "2. Castillo de San Felipe de Barajas: A maior fortaleza construída pelos espanhóis nas Américas.",
@@ -4602,7 +5101,27 @@ const worldData = {
     tags: ["Capital", "Cultura", "Altitude"],
     mapa: "https://goo.gl/maps/bogota",
     clima: "Temperado de Montanha. Fresco durante o dia e frio à noite devido à altitude (2.640m).",
-    
+    // Adicione dentro do objeto de Bogotá
+veredicto: {
+    melhor_epoca: "Dezembro a Março ou Julho e Agosto (Meses secos). Atenção: Bogotá é alta e fria o ano todo (média de 14ºC). Leve casaco e guarda-chuva sempre.",
+    ideal_para: [
+        "Ratos de Museu e Cultura (O Museu do Ouro e o Botero são imperdíveis)",
+        "Foodies e amantes da alta gastronomia (Zona G e Zona T são espetaculares)",
+        "Quem curte vida noturna cosmopolita e sofisticada",
+        "Amantes de história colonial e arte de rua (La Candelaria)"
+    ],
+    nao_ideal_para: [
+        "Quem viaja para a Colômbia esperando calor tropical (aqui faz frio de montanha)",
+        "Pessoas sensíveis à altitude (são 2.640m, o ar é rarefeito e cansa subir ladeiras)",
+        "Quem tem fobia de trânsito pesado (o tráfego é considerado um dos piores do mundo)"
+    ],
+    perfis: [
+        { icone: "ri-artboard-fill", nome: "Cultura" },
+        { icone: "ri-restaurant-2-fill", nome: "Gastrô" },
+        { icone: "ri-building-4-fill", nome: "Urbano" },
+        { icone: "ri-moon-fill", nome: "Noite" }
+    ]
+},
     pontos_turisticos: [
         "1. Cerro de Monserrate: Suba de teleférico ou funicular para ter a melhor vista panorâmica da cidade.",
         "2. Museo del Oro: Abriga a maior coleção de ourivesaria pré-hispânica do mundo.",
@@ -4762,7 +5281,27 @@ const worldData = {
         tags: ["Cultura", "Histórica", "Gastronomia"],
         mapa: "https://goo.gl/maps/montevideo",
         clima: "Temperado. Verões quentes e invernos frios e úmidos, com ventos frequentes do Rio da Prata.",
-        
+        // Adicione dentro do objeto de Montevidéu
+veredicto: {
+    melhor_epoca: "Outubro a Março (Clima mais quente). Janeiro e Fevereiro a cidade esvazia (os locais vão para as praias do leste). O inverno é úmido, cinza e ventoso.",
+    ideal_para: [
+        "Quem busca desacelerar (o ritmo aqui é muito tranquilo e sem pressa)",
+        "Carnívoros e amantes de vinho (o Mercado del Puerto e o vinho Tannat são sagrados)",
+        "Caminhadas nostálgicas pela Rambla (o calçadão à beira-rio ao pôr do sol)",
+        "Segurança e civilidade (é considerada a capital mais segura da América do Sul)"
+    ],
+    nao_ideal_para: [
+        "Quem busca agito frenético e baladas insanas (a vibe é muito mais calma que Buenos Aires)",
+        "Quem espera praias de mar azul (a cidade é banhada pelo Rio da Prata, a água é turva)",
+        "Viajantes com orçamento apertado (o custo de vida é alto, bem mais caro que Brasil e Argentina)"
+    ],
+    perfis: [
+        { icone: "ri-cup-fill", nome: "Mate/Zen" },
+        { icone: "ri-knife-blood-fill", nome: "Parrilla" },
+        { icone: "ri-history-line", nome: "Nostalgia" },
+        { icone: "ri-walk-fill", nome: "Rambla" }
+    ]
+},
         pontos_turisticos: [
             "1. Plaza Independencia: O coração da cidade, onde se encontra o Monumento e Mausoléu ao General Artigas.",
             "2. Palacio Salvo: Um dos edifícios mais icônicos da América do Sul, com sua torre imponente.",
@@ -4921,7 +5460,27 @@ const worldData = {
         tags: ["Gastronomia", "História", "Costeira"],
         mapa: "https://goo.gl/maps/lima",
         clima: "Desértico Subtropical. Húmido e nublado na maior parte do ano ('La Gris'), mas quase nunca chove forte.",
-        
+        // Adicione dentro do objeto de Lima
+veredicto: {
+    melhor_epoca: "Dezembro a Abril (Verão). É a única época com sol garantido. De Maio a Novembro reina a 'Garúa': uma névoa que deixa o céu permanentemente branco/cinza ('Lima la Gris'), embora raramente chova forte.",
+    ideal_para: [
+        "Peregrinos Gastronômicos (É a Capital Gastronômica da América Latina - Ceviche, Nikkei e Chifa)",
+        "Amantes de História e Museus (O Museu Larco e as ruínas de Huaca Pucllana são obrigatórios)",
+        "Passeios com vista dramática (Caminhar no Malecón de Miraflores sobre as falésias)",
+        "Aventureiros (Voo de parapente sobre a Costa Verde)"
+    ],
+    nao_ideal_para: [
+        "Quem se deprime com céu nublado (no inverno, você pode ficar semanas sem ver a cor do céu)",
+        "Quem busca praia de banho (o mar é gelado, o fundo é de pedras e não de areia)",
+        "Quem tem fobia de trânsito agressivo (o tráfego em Lima é notoriamente caótico)"
+    ],
+    perfis: [
+        { icone: "ri-restaurant-2-fill", nome: "Gastrô/Ceviche" },
+        { icone: "ri-ancient-pavilion-fill", nome: "História" },
+        { icone: "ri-cloud-windy-fill", nome: "Cinza/Urbano" },
+        { icone: "ri-flight-takeoff-fill", nome: "Parapente" }
+    ]
+},
         pontos_turisticos: [
             "1. Plaza Mayor (Plaza de Armas): O berço da cidade, cercada pela Catedral, Palácio do Governo e palácios coloniais.",
             "2. Malecón de Miraflores: Um calçadão espetacular no topo das falésias com vista para o Oceano Pacífico.",
@@ -5085,7 +5644,27 @@ const worldData = {
                 tags: ["All Inclusive", "Caribe", "Lua de Mel"],
                 mapa: "https://goo.gl/maps/puntacana",
                 clima: "Tropical Úmido. Calor o ano todo (28ºC-30ºC). Agosto a Outubro é época de furacões (risco baixo, mas existe) e sargaço (algas).",
-                
+                // Adicione dentro do objeto de Punta Cana
+veredicto: {
+    melhor_epoca: "Dezembro a Abril (Tempo seco e sol garantido). Evite Setembro e Outubro (Auge da época de furacões e tempestades). Maio a Julho é mais quente e húmido, mas com preços atrativos.",
+    ideal_para: [
+        "Fãs do regime 'Tudo Incluído' (All-Inclusive) e vida de resort",
+        "Casais em Lua de Mel (muitos hotéis com áreas exclusivas para adultos)",
+        "Famílias com crianças (resorts com parques aquáticos e equipas de animação)",
+        "Quem procura o mar azul-turquesa de postal (o passeio à Ilha Saona é obrigatório)"
+    ],
+    nao_ideal_para: [
+        "Quem procura imersão cultural genuína (é uma 'bolha' turística, longe da vida real dominicana)",
+        "Mochileiros ou quem viaja com orçamento muito reduzido (os grandes complexos dominam)",
+        "Quem não gosta de turismo de massas ou de ficar circunscrito ao hotel"
+    ],
+    perfis: [
+        { icone: "ri-hotel-fill", nome: "Resort" },
+        { icone: "ri-hearts-fill", nome: "Romance" },
+        { icone: "ri-sun-fill", nome: "Praia" },
+        { icone: "ri-star-smile-fill", nome: "Família" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Isla Saona: O passeio nº 1. Uma ilha virgem de areia branca e água turquesa. Onde foi gravado 'A Lagoa Azul'. Inclui parada nas piscinas naturais com estrelas do mar.",
@@ -5256,7 +5835,27 @@ const worldData = {
         tags: ["Canal", "Compras", "História"],
         mapa: "https://goo.gl/maps/panamacity",
         clima: "Tropical Úmido. Quente e úmido o ano todo. Estação chuvosa de maio a dezembro.",
-        
+        // Adicione dentro do objeto de Cidade do Panamá
+veredicto: {
+    melhor_epoca: "Dezembro a Abril (Estação Seca). É a melhor época para bater perna sem se molhar. De Maio a Novembro chove praticamente todo dia (tempestades tropicais rápidas).",
+    ideal_para: [
+        "Compradores compulsivos (Albrook Mall e Multiplaza são gigantes, embora o dólar alto diminua a vantagem)",
+        "Amantes de Engenharia (visitar as Eclusas de Miraflores do Canal é mandatório)",
+        "Quem busca contraste urbano (Arranha-céus modernos vs. Charme colonial de Casco Viejo)",
+        "Conexões longas (o 'Stopover' da Copa Airlines permite conhecer o básico em 1 ou 2 dias)"
+    ],
+    nao_ideal_para: [
+        "Quem espera praia de banho na cidade (a orla é bonita, mas poluída; praia boa exige viagem de 2h+ para San Blas ou Pacífico)",
+        "Quem não suporta calor úmido (a sensação térmica é de 'sauna' o ano todo)",
+        "Quem busca turismo 100% a pé fora do Casco Viejo (a cidade é feita para carros e o trânsito é pesado)"
+    ],
+    perfis: [
+        { icone: "ri-ship-2-fill", nome: "Canal" },
+        { icone: "ri-shopping-bag-fill", nome: "Compras" },
+        { icone: "ri-building-line", nome: "Urbano" },
+        { icone: "ri-history-line", nome: "História" }
+    ]
+},
         pontos_turisticos: [
             "1. Canal do Panamá (Eclusas de Miraflores): A atração nº 1. Veja os navios subindo e descendo o nível do oceano.",
             "2. Casco Antiguo (San Felipe): O charmoso centro histórico colonial com restaurantes, bares e igrejas restauradas.",
@@ -5418,7 +6017,27 @@ const worldData = {
                 tags: ["Magia", "Parques", "Compras"],
                 mapa: "https://goo.gl/maps/orlando",
                 clima: "Subtropical. Verão muito quente e chuvoso (Jun-Set). Inverno seco e ameno.",
-                
+                // Adicione dentro do objeto de Orlando
+veredicto: {
+    melhor_epoca: "Abril, Maio, Setembro e Outubro (Menos filas e clima mais ameno). Evite Julho e Agosto (Calor intenso e parques lotados). Dezembro é mágico, mas muito cheio.",
+    ideal_para: [
+        "Famílias e realizadores de sonhos (Disney e Universal são o foco)",
+        "Compradores (Outlets Premium e shoppings com preços atrativos)",
+        "Fãs de cultura pop (Harry Potter, Star Wars, Avatar, Marvel)",
+        "Quem tem disposição para andar (a média é de 10km a 15km caminhados por dia)"
+    ],
+    nao_ideal_para: [
+        "Viajantes com orçamento muito curto (ingressos e alimentação em dólar pesam)",
+        "Quem não gosta de planejar (é preciso reservar parques e restaurantes com antecedência)",
+        "Quem busca descanso físico (são conhecidas como 'férias cansativas')"
+    ],
+    perfis: [
+        { icone: "ri-magic-fill", nome: "Magia" },
+        { icone: "ri-shopping-bag-fill", nome: "Compras" },
+        { icone: "ri-castle-fill", nome: "Parques" },
+        { icone: "ri-group-fill", nome: "Família" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Magic Kingdom: Onde fica o Castelo da Cinderela. O parque clássico da Disney, obrigatório para a primeira vez.",
@@ -5586,7 +6205,27 @@ const worldData = {
                 tags: ["Praia", "Vida Noturna", "Compras"],
                 mapa: "https://goo.gl/maps/miami",
                 clima: "Tropical. Verão quente e úmido. Inverno seco e muito agradável (Alta Temporada).",
-                
+                // Adicione dentro do objeto de Miami
+veredicto: {
+    melhor_epoca: "Novembro a Abril (Seco e agradável). O auge é o inverno. Evite Agosto a Outubro: calor úmido sufocante e risco de furacões. Cuidado com Março (Spring Break) se quiser fugir da bagunça.",
+    ideal_para: [
+        "Compradores profissionais (Sawgrass Mills, Aventura Mall, Lincoln Road)",
+        "Amantes de Arte Urbana e Design (Wynwood Walls é parada obrigatória)",
+        "Quem curte vida noturna, luxo e 'ver e ser visto' (South Beach)",
+        "Quem busca a vibe latina nos EUA (Little Havana e gastronomia cubana)"
+    ],
+    nao_ideal_para: [
+        "Quem viaja sem carro (o transporte público é limitado e as distâncias são enormes)",
+        "Orçamentos muito apertados (hospedagem, alimentação e estacionamento são caros)",
+        "Quem busca praias selvagens e isolamento (a orla é urbana e agitada)"
+    ],
+    perfis: [
+        { icone: "ri-shopping-bag-fill", nome: "Compras" },
+        { icone: "ri-sun-fill", nome: "Praia" },
+        { icone: "ri-paint-brush-fill", nome: "Arte/Wynwood" },
+        { icone: "ri-goblet-fill", nome: "Festa" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. South Beach & Ocean Drive: O coração de Miami. Prédios Art Deco, neons, carrões e a praia mais famosa.",
@@ -5752,7 +6391,27 @@ const worldData = {
                 tags: ["Metrópole", "Compras", "Cultura"],
                 mapa: "https://goo.gl/maps/novayork",
                 clima: "Temperado. Verão muito quente e úmido (sauna). Inverno com neve e vento cortante. Outono é perfeito.",
-                
+                // Adicione dentro do objeto de Nova York
+veredicto: {
+    melhor_epoca: "Abril a Junho (Primavera florida) ou Setembro a Novembro (Outono laranja no Central Park). Dezembro é mágico, mas caríssimo. Evite Julho e Agosto (Calor úmido e cheiro forte nas ruas).",
+    ideal_para: [
+        "Fãs de cultura e espetáculos (Musicais da Broadway, MET, MoMA)",
+        "Caminhantes urbanos incansáveis (High Line, Brooklyn Bridge, Central Park)",
+        "Gastrônomos de todos os bolsos (da pizza de $1 ao jantar 3 estrelas Michelin)",
+        "Compradores que buscam tendências globais (SoHo, 5th Avenue)"
+    ],
+    nao_ideal_para: [
+        "Quem viaja com orçamento muito curto (hospedagem é uma das mais caras do mundo)",
+        "Quem odeia multidões, barulho e sirenes (a cidade é caótica e nunca dorme)",
+        "Quem tem dificuldade de locomoção (muitas estações de metrô antigas não têm elevador)"
+    ],
+    perfis: [
+        { icone: "ri-building-2-fill", nome: "Cosmopolita" },
+        { icone: "ri-ticket-fill", nome: "Broadway" },
+        { icone: "ri-shopping-bag-fill", nome: "Compras" },
+        { icone: "ri-restaurant-2-fill", nome: "Gastrô" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Estátua da Liberdade: O ícone. Pegue o ferry para a ilha ou o ferry gratuito de Staten Island para ver de longe.",
@@ -5922,7 +6581,27 @@ const worldData = {
         tags: ["Praias", "Resorts", "Vida Noturna"],
         mapa: "https://goo.gl/maps/cancun",
         clima: "Tropical. Calor o ano todo, com brisa caribenha e chuvas ocasionais (principalmente de agosto a outubro).",
-        
+        // Adicione dentro do objeto de Cancún
+veredicto: {
+    melhor_epoca: "Dezembro a Abril (Tempo seco e sol). Evite Setembro e Outubro (Risco alto de furacões e chuva). Atenção em Março: é o 'Spring Break' (estudantes americanos), a cidade vira uma festa gigante.",
+    ideal_para: [
+        "Quem busca o mar azul turquesa clássico do Caribe e resorts All-Inclusive",
+        "Festeiros e notívagos (Coco Bongo, Mandala e a vibrante Zona Hoteleira)",
+        "Exploradores de História (Base estratégica para Chichén Itzá, Tulum e Cobá)",
+        "Amantes da natureza (Mergulho em Cenotes e parques como Xcaret/Xel-Há)"
+    ],
+    nao_ideal_para: [
+        "Quem busca cultura mexicana autêntica na Zona Hoteleira (é tudo muito americanizado)",
+        "Quem viaja com orçamento muito restrito (passeios e parques são caros e cotados em dólar)",
+        "Quem tem pavor de algas (o 'Sargaço' pode aparecer, sendo mais comum nos meses quentes)"
+    ],
+    perfis: [
+        { icone: "ri-sun-fill", nome: "Caribe" },
+        { icone: "ri-goblet-fill", nome: "Festa" },
+        { icone: "ri-ancient-pavilion-fill", nome: "Maias" },
+        { icone: "ri-hotel-fill", nome: "Resort" }
+    ]
+},
         pontos_turisticos: [
             "1. Zona Hoteleira: A famosa faixa de areia em formato de '7' onde ficam os grandes resorts e praias de tirar o fôlego.",
             "2. Playa Delfines: Uma das poucas praias públicas com vista livre para o mar e o famoso letreiro de 'CANCÚN'.",
@@ -6087,7 +6766,28 @@ const worldData = {
                 tags: ["Tecnologia", "Anime", "Gastronomia"],
                 mapa: "https://goo.gl/maps/tokyo",
                 clima: "Temperado. Verão (Jun-Ago) é muito quente e úmido. Inverno (Dez-Fev) é frio e seco (raramente neva). A melhor época é a Primavera (Sakura) ou Outono.",
-                
+                // Adicione dentro do objeto de Tóquio
+veredicto: {
+    melhor_epoca: "Março e Abril (Sakura/Cerejeiras) ou Outubro e Novembro (Outono/Folhas Vermelhas). Evite o Verão (Junho a Agosto): o calor é úmido, sufocante e chove bastante.",
+    ideal_para: [
+        "Geeks, Otakus e Gamers (Akihabara é o paraíso na terra)",
+        "Foodies obcecados (a cidade tem mais estrelas Michelin que Paris e comida de rua barata incrível)",
+        "Amantes de tecnologia e choque cultural (a mistura de templos milenares com neon futurista)",
+        "Quem busca segurança absoluta e limpeza impecável nas ruas"
+    ],
+    nao_ideal_para: [
+        "Claustrofóbicos (o metrô na hora do rush é uma experiência de compressão humana)",
+        "Quem não gosta de andar (as estações de trem são gigantescas labirintos)",
+        "Quem tem dificuldade em seguir regras rígidas (silêncio no trem, não comer andando, filas para tudo)",
+        "Quem não come peixe ou arroz (embora haja opções, é a base de tudo)"
+    ],
+    perfis: [
+        { icone: "ri-gamepad-fill", nome: "Geek/Otaku" },
+        { icone: "ri-restaurant-2-fill", nome: "Sushi/Lamen" },
+        { icone: "ri-building-2-fill", nome: "Futurista" },
+        { icone: "ri-ancient-pavilion-fill", nome: "Tradição" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Cruzamento de Shibuya: O cruzamento mais movimentado do mundo. Suba no 'Shibuya Sky' para ver de cima (reserve antes!).",
@@ -6263,7 +6963,27 @@ const worldData = {
                 tags: ["História", "Gastronomia", "Fado"],
                 mapa: "https://goo.gl/maps/lisboa",
                 clima: "Mediterrânico. Verões quentes e secos, invernos chuvosos mas amenos (raramente gela).",
-                
+                // Adicione dentro do objeto de Lisboa
+veredicto: {
+    melhor_epoca: "Março a Maio ou Setembro e Outubro (Clima ameno e luz incrível). Julho e Agosto são muito quentes e as filas são grandes. O inverno é chuvoso, mas não gela.",
+    ideal_para: [
+        "Caminhantes dispostos (perder-se nas ladeiras de Alfama e Bairro Alto é a alma da viagem)",
+        "Gulosos e amantes de doces (Pastel de Belém, Bacalhau e Vinho Verde)",
+        "Caçadores de vistas panorâmicas (os Miradouros ao pôr do sol são imbatíveis)",
+        "Base para visitar Sintra (Palácio da Pena) e Cascais"
+    ],
+    nao_ideal_para: [
+        "Pessoas com mobilidade reduzida (o apelido 'Cidade das 7 Colinas' e a calçada portuguesa irregular dificultam muito)",
+        "Quem espera água quente nas praias vizinhas (o Atlântico é lindo, mas gela os ossos)",
+        "Quem busca silêncio absoluto no centro histórico (a vida noturna e o bonde 28 fazem barulho)"
+    ],
+    perfis: [
+        { icone: "ri-goblet-fill", nome: "Vinho/Gastrô" },
+        { icone: "ri-camera-lens-fill", nome: "Miradouros" },
+        { icone: "ri-history-line", nome: "História" },
+        { icone: "ri-walk-fill", nome: "Ladeiras" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Torre de Belém: O ícone da Era dos Descobrimentos. A vista do rio Tejo é linda.",
@@ -6431,7 +7151,27 @@ const worldData = {
                 tags: ["Arte", "Tapas", "História"],
                 mapa: "https://goo.gl/maps/madrid",
                 clima: "Continental Mediterrânico. Verão muito quente e seco (Jul/Ago). Inverno frio, mas ensolarado.",
-                
+                // Adicione dentro do objeto de Madrid
+veredicto: {
+    melhor_epoca: "Maio, Junho, Setembro e Outubro (Clima perfeito). Evite Julho e Agosto a todo custo: o calor seco passa dos 40ºC e a cidade esvazia. O inverno é frio, mas geralmente ensolarado.",
+    ideal_para: [
+        "Amantes de Arte (O 'Triângulo de Ouro' com Prado, Reina Sofia e Thyssen é imbatível)",
+        "Fãs de Tapas e vida boêmia (Mercado de San Miguel e o bairro de La Latina)",
+        "Corujas da noite (aqui o jantar é às 22h e a balada só começa de verdade às 3h)",
+        "Fãs de Futebol (visitar o Santiago Bernabéu é quase uma religião)"
+    ],
+    nao_ideal_para: [
+        "Quem busca praia (Madrid fica no centro exato do país, longe do mar)",
+        "Quem gosta de jantar cedo (às 19h as cozinhas estão fechadas ou os restaurantes desertos)",
+        "Quem sofre com ar muito seco (a baixa umidade no verão castiga, hidrate-se)"
+    ],
+    perfis: [
+        { icone: "ri-brush-fill", nome: "Arte/Museus" },
+        { icone: "ri-goblet-fill", nome: "Tapas/Vinho" },
+        { icone: "ri-moon-fill", nome: "Noite" },
+        { icone: "ri-football-fill", nome: "Futebol" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Museu do Prado: Um dos museus de arte mais importantes do mundo (Goya, Velázquez). Reserve horas.",
@@ -6601,7 +7341,28 @@ const worldData = {
                 tags: ["Romance", "Arte", "Gastronomia"],
                 mapa: "https://goo.gl/maps/paris",
                 clima: "Temperado. Verão agradável (dias longos). Inverno cinza, chuvoso e frio (mas raramente neva muito).",
-                
+                // Adicione dentro do objeto de Paris
+veredicto: {
+    melhor_epoca: "Abril a Junho (Primavera florida) ou Setembro e Outubro (Outono charmoso). Evite Agosto: muitos estabelecimentos locais fecham para férias e faz calor. O inverno é cinza e chuvoso, mas os museus ficam mais vazios.",
+    ideal_para: [
+        "Casais em busca do clichê romântico (que em Paris, funciona de verdade)",
+        "Amantes de Arte (Louvre, d'Orsay, Pompidou - a lista é infinita)",
+        "Flâneurs (quem ama caminhar sem rumo, sentar em cafés e observar o movimento)",
+        "Gastrônomos (dos bistrôs clássicos às pâtisseries impecáveis)"
+    ],
+    nao_ideal_para: [
+        "Quem espera serviço rápido e sorrisos fáceis (o atendimento parisiense é formal e direto, não leve para o pessoal)",
+        "Quem tem orçamento apertado (hospedagem e alimentação são caros)",
+        "Quem se incomoda com sujeira urbana (o metrô é antigo e algumas ruas têm cheiro forte)",
+        "Claustrofóbicos (os quartos de hotel padrão costumam ser minúsculos)"
+    ],
+    perfis: [
+        { icone: "ri-hearts-fill", nome: "Romance" },
+        { icone: "ri-artboard-fill", nome: "Arte/Museus" },
+        { icone: "ri-restaurant-2-fill", nome: "Bistrô/Vinho" },
+        { icone: "ri-camera-lens-fill", nome: "Iconic" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Torre Eiffel: O ícone mundial. Suba ao topo ou faça um piquenique no Champ de Mars vendo ela piscar à noite.",
@@ -6770,7 +7531,27 @@ const worldData = {
                 tags: ["Realeza", "História", "Pubs"],
                 mapa: "https://goo.gl/maps/londres",
                 clima: "Oceânico Temperado. Cinza e úmido, mas chove menos do que dizem. Inverno frio (4ºC) e Verão agradável (22ºC).",
-                
+                // Adicione dentro do objeto de Londres
+veredicto: {
+    melhor_epoca: "Maio a Setembro (Dias longos e parques verdes). Prepare-se: o clima é instável e você pode viver as 4 estações no mesmo dia. Dezembro é mágico (luzes de Natal), mas escurece às 16h.",
+    ideal_para: [
+        "Ratos de Museu (A maioria dos gigantes, como British Museum e Tate, é de entrada Gratuita)",
+        "Fãs da Realeza e Cultura Pop (Harry Potter, Beatles, Sherlock, The Crown)",
+        "Amantes de Teatro (O West End rivaliza de igual para igual com a Broadway)",
+        "Quem curte a cultura de Pub (Pint de cerveja, Fish & Chips e história em cada esquina)"
+    ],
+    nao_ideal_para: [
+        "Quem viaja com orçamento apertado (A libra é pesada e o transporte público é um dos mais caros do mundo)",
+        "Quem depende de sol forte para ser feliz (o céu cinza/nublado é o padrão)",
+        "Quem tem fobia de lugares apertados (o metrô/Tube é antigo, fundo e costuma ser quente/lotado)"
+    ],
+    perfis: [
+        { icone: "ri-crown-fill", nome: "Realeza" },
+        { icone: "ri-bank-fill", nome: "Museus Grátis" },
+        { icone: "ri-beer-fill", nome: "Pubs" },
+        { icone: "ri-ticket-fill", nome: "Teatro" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Big Ben e Parlamento: O ícone mundial. A torre do relógio (Elizabeth Tower) brilha dourada após a reforma.",
@@ -6941,7 +7722,27 @@ const worldData = {
                 tags: ["História", "Arte", "Gastronomia"],
                 mapa: "https://goo.gl/maps/roma",
                 clima: "Mediterrâneo. Verões quentes e secos (Agosto é sufocante). Invernos amenos e úmidos.",
-                
+                // Adicione dentro do objeto de Roma
+veredicto: {
+    melhor_epoca: "Abril a Junho (Primavera) ou Setembro e Outubro (Outono). Evite Julho e Agosto: calor africano, multidões insuportáveis e muitos restaurantes locais fecham para férias. O inverno é ameno, mas pode chover.",
+    ideal_para: [
+        "Amantes de História (É um museu a céu aberto: Coliseu, Fórum Romano, Panteão)",
+        "Gastrônomos (A 'santíssima trindade' das massas: Carbonara, Cacio e Pepe e Amatriciana)",
+        "Fãs de Arte e Religião (Vaticano, Basílica de São Pedro e Capela Sistina)",
+        "Caminhantes românticos (Perder-se nas ruelas de Trastevere e jogar moeda na Fontana di Trevi)"
+    ],
+    nao_ideal_para: [
+        "Quem tem fobia de multidões (as filas para as atrações principais são quilométricas, reserve antes!)",
+        "Pessoas com mobilidade reduzida (o calçamento antigo de paralelepípedos, os 'sanpietrini', é lindo mas cruel para cadeiras de rodas e saltos)",
+        "Quem busca organização suíça e silêncio (o trânsito é caótico, os ônibus atrasam e a cidade é barulhenta)"
+    ],
+    perfis: [
+        { icone: "ri-ancient-pavilion-fill", nome: "Império" },
+        { icone: "ri-restaurant-2-fill", nome: "Massas/Vinho" },
+        { icone: "ri-church-fill", nome: "Vaticano" },
+        { icone: "ri-artboard-fill", nome: "Arte" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Coliseu: O maior anfiteatro do mundo. Compre ingresso 'fura-fila' com acesso à Arena ou Subterrâneo.",
@@ -7111,7 +7912,28 @@ const worldData = {
                 tags: ["História", "Moda", "Gastronomia"],
                 mapa: "https://goo.gl/maps/milao",
                 clima: "Continental. Verão muito quente e úmido. Inverno frio e cinzento (neblina é comum). Primavera/Outono são ideais.",
-                
+                // Adicione dentro do objeto de Milão
+veredicto: {
+    melhor_epoca: "Abril a Junho (Primavera) ou Setembro e Outubro (Outono). Abril é sagrado para o Design (Salone del Mobile). Evite Agosto: a cidade vira um deserto, muitos restaurantes fecham e o calor é sufocante.",
+    ideal_para: [
+        "Fashionistas e amantes do Design (o Quadrilátero da Moda é a meca do estilo)",
+        "Quem busca a Itália cosmopolita, rica e organizada (o oposto do caos de Nápoles)",
+        "Adeptos do 'Aperitivo' (o happy hour nos canais de Navigli é uma instituição)",
+        "Caçadores de Arte Renascentista ('A Última Ceia' de Da Vinci mora aqui, reserve meses antes!)"
+    ],
+    nao_ideal_para: [
+        "Quem viaja com orçamento mochileiro (é a cidade mais cara da Itália)",
+        "Quem espera encontrar ruínas romanas em cada esquina (Milão é moderna e vertical)",
+        "Quem busca a vibe 'Dolce Far Niente' toscana (aqui o ritmo é 'Business' e acelerado)",
+        "Quem se incomoda com neblina e cinza (no inverno, a 'scighera' é comum)"
+    ],
+    perfis: [
+        { icone: "ri-t-shirt-air-fill", nome: "Moda/Luxo" },
+        { icone: "ri-artboard-fill", nome: "Design/Arte" },
+        { icone: "ri-goblet-fill", nome: "Aperitivo" },
+        { icone: "ri-building-4-fill", nome: "Business" }
+    ]
+},
                 // TOP 10 PONTOS TURÍSTICOS
                 pontos_turisticos: [
                     "1. Duomo de Milão: A catedral gótica mais famosa. Subir aos terraços (de elevador ou escada) é obrigatório para ver a cidade e os Alpes.",

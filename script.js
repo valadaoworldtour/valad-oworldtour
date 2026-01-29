@@ -1,3 +1,4 @@
+
 const countryFlags = { 
     "Brasil": "br", 
     "Portugal": "pt", 
@@ -23,7 +24,6 @@ const countryFlags = {
 const defaultImage = "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop";
 
 // ========== DADOS DE CUSTO REAL DA VIAGEM ==========
-// ========== DADOS DE CUSTO REAL DA VIAGEM (ESTIMATIVA DIÁRIA POR PESSOA) ==========
 const realCostData = {
     "Rio de Janeiro": {
         comida: "R$ 80 – R$ 120",
@@ -290,6 +290,29 @@ const worldData = {
                 mapa: "https://goo.gl/maps/rio",
                 clima: "Tropical Atlântico. Verão 40ºC e Inverno ameno.",
                 
+                // === NOVO: DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Abril a Junho (Outono) ou Setembro a Novembro (Primavera). Evite Janeiro (Calor extremo).",
+                    ideal_para: [
+                        "Quem ama natureza misturada com cidade grande",
+                        "Viajantes que buscam vida noturna agitada",
+                        "Turistas que gostam de história e cultura",
+                        "Fotógrafos (paisagens dramáticas)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem busca silêncio absoluto e isolamento",
+                        "Quem se estressa facilmente com trânsito",
+                        "Pessoas sensíveis a calor extremo (no verão)"
+                    ],
+                    perfis: [
+                        { icone: "ri-hearts-fill", nome: "Casal" },
+                        { icone: "ri-user-star-fill", nome: "Solo" },
+                        { icone: "ri-group-fill", nome: "Jovens" },
+                        { icone: "ri-camera-fill", nome: "Fotos" }
+                    ]
+                },
+                // =================================
+
                 pontos_turisticos: [
                     "1. Cristo Redentor: Uma das 7 Maravilhas. Compre ingresso antecipado do trem.",
                     "2. Pão de Açúcar: Suba no final da tarde para ver o pôr do sol mais lindo do mundo.",
@@ -7251,6 +7274,8 @@ const worldData = {
                     seguro: "https://www.segurospromo.com.br" 
                 }
             }
+            
+            
         ]
     
     
@@ -7259,25 +7284,61 @@ const worldData = {
         
 // ========== FUNÇÃO PARA ATUALIZAR CUSTO REAL ==========
 function updateRealCost(cityName) {
-    // Verifica se há dados de custo para esta cidade
     const costData = realCostData[cityName];
-    
     if (costData) {
-        // Atualiza os valores no modal
         document.getElementById('realCostFood').textContent = costData.comida;
         document.getElementById('realCostHotel').textContent = costData.hospedagem;
         document.getElementById('realCostTransport').textContent = costData.transporte;
         document.getElementById('realCostTickets').textContent = costData.atracoes;
-        
-        // Garante que a seção esteja visível
         document.getElementById('realCostSection').classList.remove('hidden');
     } else {
-        // Se não houver dados para esta cidade, pode esconder a seção
-        // ou mostrar valores padrão. Vou manter visível com valores genéricos.
         document.getElementById('realCostFood').textContent = "R$ 0 – R$ 0";
         document.getElementById('realCostHotel').textContent = "R$ 0 – R$ 0";
         document.getElementById('realCostTransport').textContent = "R$ 0 – R$ 0";
         document.getElementById('realCostTickets').textContent = "R$ 0 – R$ 0";
+    }
+}
+
+// ========== NOVO: FUNÇÃO PARA ATUALIZAR O VEREDICTO (VALE A PENA?) ==========
+function updateVerdict(cidade) {
+    const section = document.getElementById('verdictSection');
+    
+    if (cidade.veredicto) {
+        // 1. Melhor Época
+        document.getElementById('verdictBestTime').textContent = cidade.veredicto.melhor_epoca;
+
+        // 2. Prós (Ideal Para)
+        const prosList = document.getElementById('verdictPros');
+        prosList.innerHTML = '';
+        cidade.veredicto.ideal_para.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            prosList.appendChild(li);
+        });
+
+        // 3. Contras (Não Ideal Para)
+        const consList = document.getElementById('verdictCons');
+        consList.innerHTML = '';
+        cidade.veredicto.nao_ideal_para.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            consList.appendChild(li);
+        });
+
+        // 4. Perfis (Combina Com)
+        const profilesGrid = document.getElementById('verdictProfiles');
+        profilesGrid.innerHTML = '';
+        cidade.veredicto.perfis.forEach(perfil => {
+            const div = document.createElement('div');
+            div.className = 'profile-card';
+            div.innerHTML = `<i class="${perfil.icone}"></i> <span>${perfil.nome}</span>`;
+            profilesGrid.appendChild(div);
+        });
+
+        section.classList.remove('hidden');
+    } else {
+        // Se a cidade não tiver dados de veredicto, esconde a seção
+        section.classList.add('hidden');
     }
 }
 
@@ -7378,6 +7439,9 @@ function openModal(cidade, imagemUrl) {
     // ========== ATUALIZA CUSTO REAL DA VIAGEM ==========
     updateRealCost(cidade.name);
 
+    // ========== NOVO: ATUALIZA O VEREDICTO ==========
+    updateVerdict(cidade);
+
     // BOTÕES DE AFILIADO
     const affContainer = document.getElementById('affiliateContainer');
     let affHTML = '';
@@ -7388,7 +7452,7 @@ function openModal(cidade, imagemUrl) {
     }
     affContainer.innerHTML = affHTML;
     
-    // 2. NOVO: ROTEIRO AUTOMÁTICO (INSERIDO AQUI)
+    // ROTEIRO AUTOMÁTICO
     const roteiroDiv = document.getElementById('roteiroArea') || document.createElement('div');
     roteiroDiv.id = 'roteiroArea';
     roteiroDiv.className = 'roteiro-box';

@@ -873,3 +873,189 @@ body {
         min-width: auto;
     }
 }
+
+/* ========== NOVO: SEÇÃO VEREDICTO (VALE A PENA?) ========== */
+.verdict-section {
+    margin-bottom: 40px;
+    padding: 30px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.verdict-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.verdict-header h3 {
+    font-family: var(--font-head);
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.verdict-header h3 i { color: var(--neon-gold); font-size: 1.8rem; }
+
+.best-time-badge {
+    background: rgba(255, 187, 0, 0.1);
+    border: 1px solid var(--neon-gold);
+    color: #b38600;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.best-time-badge i { font-size: 1.1rem; }
+
+.verdict-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.verdict-col {
+    padding: 25px;
+    border-radius: 12px;
+    height: 100%;
+}
+
+/* Estilo Positivo (Para quem é ideal) */
+.verdict-col.positive {
+    background: rgba(0, 214, 88, 0.05);
+    border-left: 5px solid var(--neon-green);
+}
+
+.verdict-col.positive h4 {
+    color: #008f39;
+    margin-bottom: 15px;
+    font-family: var(--font-head);
+    font-size: 1rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.verdict-col.positive ul { list-style: none; }
+.verdict-col.positive li {
+    margin-bottom: 10px;
+    color: var(--text-muted);
+    font-weight: 600;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+.verdict-col.positive li::before {
+    content: "\eb7b"; /* RemixIcon check-line */
+    font-family: 'remixicon';
+    color: var(--neon-green);
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+/* Estilo Negativo (Para quem não é) */
+.verdict-col.negative {
+    background: rgba(255, 51, 102, 0.05);
+    border-left: 5px solid var(--neon-coral);
+}
+
+.verdict-col.negative h4 {
+    color: #cc0033;
+    margin-bottom: 15px;
+    font-family: var(--font-head);
+    font-size: 1rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.verdict-col.negative ul { list-style: none; }
+.verdict-col.negative li {
+    margin-bottom: 10px;
+    color: var(--text-muted);
+    font-weight: 600;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+.verdict-col.negative li::before {
+    content: "\eb98"; /* RemixIcon close-line */
+    font-family: 'remixicon';
+    color: var(--neon-coral);
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+/* Perfis (Combina com) */
+.verdict-profiles {
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding-top: 20px;
+}
+
+.verdict-profiles > span {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.profiles-grid {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.profile-card {
+    background: #fff;
+    border: 1px solid rgba(0, 196, 230, 0.2);
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-main);
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.profile-card:hover {
+    background: var(--neon-cyan);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 196, 230, 0.3);
+}
+
+.profile-card i {
+    font-size: 1.2rem;
+    color: var(--neon-blue);
+}
+.profile-card:hover i { color: #fff; }
+
+@media (max-width: 768px) {
+    .verdict-content-grid { grid-template-columns: 1fr; gap: 20px; }
+    .verdict-header { flex-direction: column; align-items: flex-start; }
+    .best-time-badge { width: 100%; justify-content: center; }
+}
+}

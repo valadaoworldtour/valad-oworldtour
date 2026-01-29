@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -77,7 +78,6 @@
         </main>
     </div>
 
-    <!-- ================= MODAL CIDADE ================= -->
     <div id="cityModal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-modal" onclick="closeModal()">&times;</button>
@@ -93,7 +93,6 @@
 
             <div class="modal-body">
 
-                <!-- ========= CUSTO REAL DA VIAGEM ========= -->
                 <div id="realCostSection" class="real-cost-section">
                     <h3 class="real-cost-title">
                         <i class="ri-money-dollar-circle-line"></i>
@@ -130,8 +129,32 @@
                         </div>
                     </div>
                 </div>
-                <!-- ======================================= -->
+                <div id="verdictSection" class="verdict-section hidden">
+                    <div class="verdict-header">
+                        <h3><i class="ri-scales-3-fill"></i> VALE A PENA?</h3>
+                        <div class="best-time-badge">
+                            <i class="ri-sun-cloudy-line"></i> Melhor Época: <span id="verdictBestTime">...</span>
+                        </div>
+                    </div>
 
+                    <div class="verdict-content-grid">
+                        <div class="verdict-col positive">
+                            <h4><i class="ri-thumb-up-fill"></i> Ideal Para:</h4>
+                            <ul id="verdictPros"></ul>
+                        </div>
+
+                        <div class="verdict-col negative">
+                            <h4><i class="ri-thumb-down-fill"></i> Não é bom para:</h4>
+                            <ul id="verdictCons"></ul>
+                        </div>
+                    </div>
+
+                    <div class="verdict-profiles">
+                        <span><i class="ri-user-heart-line"></i> COMBINA COM:</span>
+                        <div class="profiles-grid" id="verdictProfiles">
+                            </div>
+                    </div>
+                </div>
                 <div id="modalMenu" class="menu-view">
                     <div id="affiliateContainer" class="affiliate-section"></div>
                     <div class="category-grid" id="categoryGrid"></div>
@@ -154,8 +177,7 @@
             </div>
         </div>
     </div>
-    <!-- =============================================== -->
-
     <script src="script.js"></script>
 </body>
 </html>
+}

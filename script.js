@@ -9937,31 +9937,46 @@ function toggleSidebar() {
 
 // Inicializa o sistema
 init();
-// --- SCRIPT: MODO FOCO MOBILE ---
-const searchInputMobile = document.getElementById('searchInput');
-const sidebar = document.querySelector('.sidebar');
+// ======================================================
+// CORREÇÃO MOBILE: MODO FOCO & FECHAR MENU AO PESQUISAR
+// ======================================================
 
-if (searchInputMobile) {
-    // Quando clicar para digitar (Foco)
-    searchInputMobile.addEventListener('focus', function() {
-        if (window.innerWidth <= 768) {
-            sidebar.classList.add('search-active');
-        }
-    });
+document.addEventListener('DOMContentLoaded', function() {
+    // Pegamos o elemento pelo ID CORRETO que você usa no sistema
+    const searchInput = document.getElementById('globalSearch');
+    const sidebar = document.querySelector('.sidebar');
 
-    // Quando sair do campo ou apertar Enter (Blur)
-    searchInputMobile.addEventListener('blur', function() {
-        // Pequeno delay para dar tempo de clicar em algo se precisar
-        setTimeout(() => {
-            sidebar.classList.remove('search-active');
-        }, 200);
-    });
+    if (searchInput) {
+        // 1. Ao clicar para digitar (Foco): Deixa o menu transparente
+        searchInput.addEventListener('focus', function() {
+            if (window.innerWidth <= 768) {
+                sidebar.classList.add('search-active');
+            }
+        });
 
-    // Garante que ao apertar Enter, o teclado feche e o menu volte ao normal
-    searchInputMobile.addEventListener('keyup', function(e) {
-        if (e.key === 'Enter') {
-            this.blur(); // Tira o foco, fechando o teclado e o modo foco
-            toggleSidebar(); // Opcional: Fecha o menu lateral completamente
-        }
-    });
-}
+        // 2. Ao sair da pesquisa (clicar fora): Volta o menu ao normal
+        searchInput.addEventListener('blur', function() {
+            // Pequeno delay para não piscar se clicar num resultado
+            setTimeout(() => {
+                sidebar.classList.remove('search-active');
+            }, 200);
+        });
+
+        // 3. Ao apertar ENTER: Fecha o menu totalmente e tira o teclado
+        searchInput.addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') {
+                this.blur(); // Tira o foco (fecha teclado e modo foco)
+                
+                // Se estiver no celular, fecha o menu lateral
+                if (window.innerWidth <= 768 && sidebar.classList.contains('active')) {
+                    toggleSidebar(); 
+                }
+            }
+        });
+        
+        // 4. Correção extra: Se digitar algo, garante que a busca rode
+        searchInput.addEventListener('input', function() {
+            searchSystem(); // Chama sua função de busca em tempo real
+        });
+    }
+});

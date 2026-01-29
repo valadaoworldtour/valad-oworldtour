@@ -9930,43 +9930,52 @@ function searchSystem() {
 // Inicializa o sistema
 init();
 // ======================================================
-// CORREÇÃO FINAL 2.0: MODO PESQUISA FLUTUANTE (MOBILE)
+// CORREÇÃO FINAL 3.0: PESQUISA FLUTUANTE SEM BUG DE FOCO
 // ======================================================
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Garante que pega o ID correto que vi no seu arquivo: globalSearch
     const searchInput = document.getElementById('globalSearch'); 
     const sidebar = document.querySelector('.sidebar');
     const overlay = document.querySelector('.sidebar-overlay');
+    const searchBoxContainer = document.querySelector('.search-box'); // O container da lupa+input
 
     if (searchInput && sidebar) {
         
-        // 1. AO TOCAR NA PESQUISA (Foco)
+        // 1. AO TOCAR NA PESQUISA (Ativa o modo)
         searchInput.addEventListener('focus', function() {
             if (window.innerWidth <= 768) {
-                // Ativa o modo flutuante
                 sidebar.classList.add('mobile-searching');
                 if(overlay) overlay.classList.add('mobile-searching');
             }
         });
 
-        // 2. AO SAIR DA PESQUISA (Blur)
-        searchInput.addEventListener('blur', function() {
-            // Pequeno delay para não piscar se o usuário estiver apenas rolando a tela
-            setTimeout(() => {
-                // Remove o modo flutuante
-                sidebar.classList.remove('mobile-searching');
-                if(overlay) overlay.classList.remove('mobile-searching');
-            }, 300);
+        // 2. DETECTAR CLIQUE FORA (Para fechar)
+        // Substituímos o 'blur' por isso. O 'blur' causava o bug de fechar sozinho.
+        document.addEventListener('click', function(event) {
+            // Verifica se o modo pesquisa está ativo no celular
+            if (sidebar.classList.contains('mobile-searching')) {
+                
+                // Se o clique NÃO foi dentro da caixa de pesquisa (lupa + input)
+                if (!searchBoxContainer.contains(event.target)) {
+                    
+                    // Fecha o modo pesquisa
+                    sidebar.classList.remove('mobile-searching');
+                    if(overlay) overlay.classList.remove('mobile-searching');
+                    
+                    // Tira o foco do teclado
+                    searchInput.blur();
+                }
+            }
         });
 
         // 3. ENQUANTO DIGITA (Tempo Real)
         searchInput.addEventListener('input', function() {
-            // Garante que o modo continue ativo enquanto digita
+            // Garante que o modo continue ativo se algo tentar tirar
             if (window.innerWidth <= 768 && !sidebar.classList.contains('mobile-searching')) {
                  sidebar.classList.add('mobile-searching');
                  if(overlay) overlay.classList.add('mobile-searching');
             }
+            
             // Chama a busca do sistema
             if (typeof searchSystem === 'function') {
                 searchSystem();
@@ -9976,13 +9985,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // 4. AO APERTAR ENTER
         searchInput.addEventListener('keyup', function(e) {
             if (e.key === 'Enter') {
-                this.blur(); // Fecha o teclado mobile
+                this.blur(); // Fecha o teclado
                 
                 // Fecha o menu lateral completamente
                 sidebar.classList.remove('active');
                 if(overlay) overlay.classList.remove('active');
                 
-                // Limpa as classes de pesquisa
+                // Limpa o modo pesquisa
                 sidebar.classList.remove('mobile-searching');
                 if(overlay) overlay.classList.remove('mobile-searching');
             }

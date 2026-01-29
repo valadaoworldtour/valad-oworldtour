@@ -151,6 +151,18 @@ const realCostData = {
         transporte: "R$ 30 – R$ 60", 
         atracoes: "R$ 40 – R$ 90"
     },
+    "Vitória": {
+    comida: "R$ 60 – R$ 120",
+    hospedagem: "R$ 130 – R$ 320",
+    transporte: "R$ 25 – R$ 60", 
+    atracoes: "R$ 20 – R$ 80"
+    },
+    "Aracaju": {
+    comida: "R$ 50 – R$ 100",
+    hospedagem: "R$ 120 – R$ 300",
+    transporte: "R$ 25 – R$ 50", 
+    atracoes: "R$ 30 – R$ 90"
+},
     "Buenos Aires": {
         comida: "R$ 90 – R$ 180",
         hospedagem: "R$ 180 – R$ 450",
@@ -180,6 +192,12 @@ const realCostData = {
     hospedagem: "R$ 200 – R$ 500",
     transporte: "R$ 35 – R$ 90", 
     atracoes: "R$ 40 – R$ 150"
+    },
+    "Lima": {
+    comida: "R$ 50 – R$ 120",
+    hospedagem: "R$ 130 – R$ 350",
+    transporte: "R$ 20 – R$ 50", 
+    atracoes: "R$ 40 – R$ 120"
 },
     "Punta Cana": {
         comida: "R$ 180 – R$ 350",
@@ -187,6 +205,12 @@ const realCostData = {
         transporte: "R$ 60 – R$ 180",
         atracoes: "R$ 180 – R$ 500"
     },
+    "Cidade do Panamá": {
+    comida: "R$ 60 – R$ 130",
+    hospedagem: "R$ 180 – R$ 450",
+    transporte: "R$ 20 – R$ 50", 
+    atracoes: "R$ 80 – R$ 250"
+},
     "Cancun": {
     comida: "R$ 150 – R$ 300",
     hospedagem: "R$ 350 – R$ 1200",
@@ -3735,6 +3759,320 @@ const worldData = {
         seguro: "https://www.segurospromo.com.br"
     }
 },
+{
+    name: "Vitória",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/-2016-11-05_ao_13-_Vit%C3%B3ria_94_Romerito_Pontes_%2830875449812%29_%28cropped%29.jpg/1280px--2016-11-05_ao_13-_Vit%C3%B3ria_94_Romerito_Pontes_%2830875449812%29_%28cropped%29.jpg",
+    tags: ["Praias", "Gastronomia", "Ilha"],
+    mapa: "https://goo.gl/maps/vitoria",
+    clima: "Tropical Litorâneo. Quente e úmido no verão, ameno no inverno. Venta bastante (Nordeste).",
+    
+    pontos_turisticos: [
+        "1. Convento da Penha: O cartão-postal do ES. Fica na vizinha Vila Velha, mas a vista de (e para) Vitória é obrigatória.",
+        "2. Ilha das Caieiras: Bairro histórico de pescadores, polo gastronômico famoso pelas desfiadeiras de siri.",
+        "3. Parque da Pedra da Cebola: Parque urbano com uma formação rochosa curiosa que lembra uma cebola.",
+        "4. Praia de Camburi: A principal orla da cidade, ótima para esportes, caminhadas e quiosques.",
+        "5. Galpão das Paneleiras de Goiabeiras: Onde são feitas as autênticas panelas de barro (Patrimônio Cultural).",
+        "6. Praça do Papa: Área nobre com vista para a baía, cruz comemorativa e o Projeto Tamar.",
+        "7. Curva da Jurema: Praia de águas calmas e visual bonito, ao lado do Shopping Vitória.",
+        "8. Palácio Anchieta: Sede do governo estadual, construção jesuítica histórica aberta a visitação.",
+        "9. Catedral Metropolitana de Vitória: Imponente construção neogótica no centro da cidade.",
+        "10. Centro Histórico: Inclui a Escadaria Maria Ortiz, o Theatro Carlos Gomes e casarões antigos."
+    ],
+
+    gastronomia: [
+        "1. Moqueca Capixaba: A estrela local. Diferente da baiana, não leva dendê nem leite de coco. O sabor vem do coentro, urucum e da panela de barro.",
+        "2. Torta Capixaba: Prato tradicional da Semana Santa, mistura bacalhau, palmito, siri, camarão e sururu.",
+        "3. Caranguejo: Ir aos 'caranguejais' (bares especializados) é um ritual de fim de semana.",
+        "4. Muma de Siri: Um pirão ou ensopado delicioso feito com a carne do siri.",
+        "5. Peroá Frito: Peixe típico servido inteiro e frito nos quiosques, geralmente com aipim e vinagrete.",
+        "6. Panela de Barro: Não se come a panela, mas a comida TEM que ser feita nela para ser autêntica.",
+        "7. Casquinha de Siri: Entrada clássica servida em conchas.",
+        "8. Doces de Banana: A região produz muitos derivados da fruta.",
+        "9. Café Arábica: O Espírito Santo é um grande produtor de cafés especiais (região serrana próxima).",
+        "10. Bobó de Camarão: Versão capixaba, mais leve que a nordestina."
+    ],
+
+    religiao: [
+        "1. Festa da Penha: O terceiro maior evento religioso mariano do Brasil, reunindo milhões de fiéis.",
+        "2. Convento da Penha: Santuário histórico fundado em 1558 no topo de um penhasco de 154 metros.",
+        "3. Catedral Metropolitana: Dedicada a Nossa Senhora da Vitória.",
+        "4. Igreja do Rosário: Uma das mais antigas, localizada na Prainha (Vila Velha) e centro histórico.",
+        "5. Santuário de Santo Antônio: Basílica imponente dedicada ao santo casamenteiro.",
+        "6. Igrejas Históricas do Centro: Capela de Santa Luzia (a construção mais antiga da cidade).",
+        "7. Caminhos da Fé: Rotas de peregrinação que ligam Vitória ao santuário de Anchieta (sul do estado).",
+        "8. Comunidades Evangélicas: Grande presença de igrejas batistas e presbiterianas históricas.",
+        "9. Centros Espíritas: Movimento forte e organizado na capital.",
+        "10. Sincretismo: Presença de religiões de matriz africana, com festas para Iemanjá nas praias."
+    ],
+
+    curiosidades: [
+        "1. Moqueca é Capixaba...: O resto é peixada. Esse é o lema oficial (e orgulhoso) do estado.",
+        "2. Capital Ilha: Vitória é uma ilha (Ilha do Mel), ligada ao continente por várias pontes.",
+        "3. Terceira Ponte: A principal ligação com Vila Velha é uma das pontes mais altas do Brasil.",
+        "4. Paneleiras: O ofício das paneleiras de Goiabeiras foi o primeiro bem cultural registrado como Patrimônio Imaterial pelo IPHAN.",
+        "5. Qualidade de Vida: Frequentemente listada entre as melhores capitais para se viver no Brasil (alto IDH).",
+        "6. Cidade Limpa: Conhecida por ter ruas muito limpas e bem cuidadas.",
+        "7. Manguezal Urbano: Possui a maior área de manguezal urbano da América Latina (Estação Ecológica Ilha do Lameirão).",
+        "8. Terceira Mais Antiga: Fundada em 1551, é a terceira capital mais antiga do Brasil (atrás de Recife e Salvador).",
+        "9. Marlin Azul: O Espírito Santo é capital mundial da pesca do Marlin Azul.",
+        "10. Aeroporto: O antigo aeroporto era famoso por ser minúsculo; o novo é moderno e funcional."
+    ],
+
+    eventos_estacoes: [
+        "1. Verão (Dez-Mar): Praias lotadas, shows na areia e muito calor.",
+        "2. Festa da Penha (Abril): O maior evento do estado, com romarias gigantescas.",
+        "3. Festival de Torta Capixaba (Semana Santa): Feira gastronômica na Ilha das Caieiras.",
+        "4. Inverno (Jun-Ago): Clima ameno, ideal para subir a serra (Domingos Martins fica a 40min).",
+        "5. Vitória Jazz e Blues: Festival de música instrumental.",
+        "6. Vital (Carnaval fora de época): Já foi um dos maiores do país e está retornando.",
+        "7. Festival de Cinema de Vitória: Importante evento audiovisual.",
+        "8. Temporada das Baleias (Jun-Nov): É possível avistar Jubartes na costa capixaba.",
+        "9. Aniversário de Vitória (Setembro): Shows e eventos comemorativos.",
+        "10. Réveillon: Queima de fogos na Praia de Camburi."
+    ],
+
+    info_gerais: [
+        "1. Moeda: Real (BRL).",
+        "2. Voltagem: 127v.",
+        "3. Tomada: Tipo N (3 pinos).",
+        "4. DDD: 27.",
+        "5. População: Aprox. 370 mil habitantes (mas a Grande Vitória tem quase 2 milhões).",
+        "6. Aeroporto: Eurico de Aguiar Salles (VIX).",
+        "7. Transporte: Sistema Transcol (ônibus) integra Vitória, Vila Velha, Serra e Cariacica.",
+        "8. Segurança: Zonas turísticas são tranquilas, mas evite o centro velho à noite.",
+        "9. Uber/99: Funcionam muito bem em toda a região metropolitana.",
+        "10. Distâncias: Tudo é muito perto. Você cruza a cidade em 20 minutos fora do pico."
+    ],
+
+    antes_de_ir: [
+        "1. Vila Velha: Considere visitar. O Convento e a Praia da Costa ficam lá, basta cruzar a ponte.",
+        "2. Vento Sul: Quando venta sul, a temperatura cai e o mar fica agitado.",
+        "3. Panela de Barro: Se for comprar, vá à Associação das Paneleiras em Goiabeiras. É mais barato e autêntico.",
+        "4. Serra Capixaba: Se tiver tempo, visite a Pedra Azul (frio europeu) a apenas 1h30 da capital.",
+        "5. Trânsito na Ponte: Evite a Terceira Ponte nos horários de pico (7h-9h e 17h-19h).",
+        "6. Praias Próprias: Verifique a balneabilidade das praias de Vitória; às vezes Camburi tem trechos impróprios.",
+        "7. Trem da Vale: É de Vitória que sai o trem de passageiros para Minas Gerais (Belo Horizonte).",
+        "8. Roupas: Leves e casuais. O capixaba é bem despojado.",
+        "9. Domingo no Centro: O centro fica deserto aos domingos; prefira as praias ou parques.",
+        "10. Culinária: Não saia sem provar a Moqueca. É uma ofensa local."
+    ],
+
+    numeros: [
+        "1. 190 (Polícia Militar).",
+        "2. (27) 3235-6300 (Aeroporto de Vitória).",
+        "3. 192 (SAMU).",
+        "4. 193 (Bombeiros).",
+        "5. (27) 3322-1836 (Rodoviária de Vitória).",
+        "6. 156 (Fala Vitória - Prefeitura).",
+        "7. (27) 3324-1549 (Delegacia de Turismo).",
+        "8. (27) 3636-1033 (Hospital Estadual de Urgência).",
+        "9. 0800 039 0318 (Disque-Silêncio).",
+        "10. (27) 3235-2900 (Projeto Tamar)."
+    ],
+
+    riscos: [
+        "1. Insolação: O sol é forte mesmo com vento; proteja-se.",
+        "2. Centro à Noite: Ruas vazias e mal iluminadas podem ser perigosas.",
+        "3. Pedras nos Costões: Cuidado ao tirar fotos nas pedras, elas escorregam.",
+        "4. Correnteza: Praias de tombo (como algumas partes da Costa em Vila Velha) são perigosas.",
+        "5. Ciclovia: Respeite a faixa de pedestre na orla; bicicletas passam rápido.",
+        "6. Raios: No verão, tempestades elétricas são comuns no fim da tarde.",
+        "7. Furto de Celular: Atenção na areia da praia em dias muito cheios.",
+        "8. Água Viva: Ocorrências ocasionais no verão.",
+        "9. Trânsito: Motoristas capixabas às vezes correm; atenção ao atravessar.",
+        "10. Golpes de Aluguel: Cuidado com aluguéis de temporada muito baratos na internet."
+    ],
+
+    roteiros: {
+        "curto": {
+            titulo: "Vitória Express (2 Dias)",
+            texto: [
+                "Dia 1: Convento da Penha (manhã) e moqueca na Ilha das Caieiras (almoço). Pôr do sol na Curva da Jurema.",
+                "Dia 2: Praia de Camburi, Galpão das Paneleiras e Triângulo das Bermudas (noite)."
+            ]
+        },
+        "medio": {
+            titulo: "Capixaba da Gema (4 Dias)",
+            texto: [
+                "Dias 1 e 2: Siga o roteiro de 2 dias.",
+                "Dia 3: Centro Histórico (Palácio Anchieta e Catedral) e Parque da Pedra da Cebola.",
+                "Dia 4: Dia de praia na Ilha do Boi ou passeio de escuna pela baía."
+            ]
+        },
+        "longo": {
+            titulo: "Mar e Montanha (7+ Dias)",
+            texto: [
+                "Dias 1 a 4: Siga o roteiro de 4 dias.",
+                "Dia 5: Bate-volta para Guarapari (Praias famosas).",
+                "Dia 6: Subida para a região serrana (Domingos Martins/Pedra Azul).",
+                "Dia 7: Visita ao Museu da Vale e compras na Praia do Canto."
+            ]
+        },
+    },
+
+    links: {
+        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-679230&aid=304142",
+        passeio: "https://www.civitatis.com/br/vitoria/",
+        seguro: "https://www.segurospromo.com.br"
+    }
+},
+{
+    name: "Aracaju",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/d/db/Avenida_Hermes_Fontes_Aracaju_SE.jpg",
+    tags: ["Praias", "Cultura", "Tranquilidade"],
+    mapa: "https://goo.gl/maps/aracaju",
+    clima: "Tropical Litorâneo. Quente o ano todo, com brisa constante. Chuvas mais frequentes entre abril e julho.",
+    
+    pontos_turisticos: [
+        "1. Orla de Atalaia: Considerada a orla mais bonita e estruturada do Brasil, com lagos, quadras e a Passarela do Caranguejo.",
+        "2. Croa do Goré: Um banco de areia no meio do rio Vaza-Barris acessível apenas na maré baixa. Um paraíso.",
+        "3. Museu da Gente Sergipana: Um dos museus mais interativos e tecnológicos do país, celebrando a cultura nordestina.",
+        "4. Oceanário de Aracaju: Mantido pelo Projeto Tamar, tem formato de tartaruga gigante e mostra a vida marinha local.",
+        "5. Ilha dos Namorados: Geralmente visitada no mesmo passeio da Croa do Goré, com redes flutuantes.",
+        "6. Mercados Centrais (Thales Ferraz e Antônio Franco): Artesanato, literatura de cordel e castanhas.",
+        "7. Colina de Santo Antônio: O ponto onde a cidade nasceu, com uma igreja histórica e vista panorâmica.",
+        "8. Parque da Sementeira: Grande área verde no meio da cidade, ideal para piqueniques e caminhadas.",
+        "9. Praia de Aruana: Mais tranquila que Atalaia, com barracas de praia excelentes e boa comida.",
+        "10. Ponte do Imperador: Um marco histórico no centro, construído para receber Dom Pedro II."
+    ],
+
+    gastronomia: [
+        "1. Caranguejo: O ícone da cidade. Quebrar caranguejo na Passarela é obrigatório.",
+        "2. Moqueca de Camarão: Diferente da baiana, é mais leve, valorizando o sabor do fruto do mar.",
+        "3. Mangaba: Fruta nativa de Sergipe. O sorvete e o suco de mangaba são divinos.",
+        "4. Aratu: Um crustáceo pequeno e saboroso, geralmente servido na palha de bananeira ou em moquecas.",
+        "5. Caju: A fruta é aproveitada integralmente, desde o suco até doces e castanhas frescas.",
+        "6. Pirão de Leite: Acompanhamento comum para carnes de sol e peixes.",
+        "7. Carne de Sol com Pirão de Aipim: Um clássico do sertão que desceu para o litoral.",
+        "8. Amendoim Cozido: Vendido em toda esquina e nas praias, é o petisco oficial.",
+        "9. Beiju (Tapioca): Feito com coco fresco, queijo coalho e manteiga de garrafa.",
+        "10. Suco de Umbu: Fruta azedinha típica da caatinga, muito refrescante."
+    ],
+
+    religiao: [
+        "1. Igreja de Santo Antônio: No alto da colina, marco zero da cidade.",
+        "2. Catedral Metropolitana: Localizada no centro, com arquitetura imponente.",
+        "3. Festa de São João: Sergipe se intitula o 'País do Forró'. A festa religiosa e cultural é massiva em junho.",
+        "4. Lavagem das Escadarias: Sincretismo religioso forte nas festas de Nosso Senhor do Bonfim.",
+        "5. Procissão de Bom Jesus dos Navegantes: Tradicional cortejo fluvial no estuário do Rio Sergipe.",
+        "6. Religiões de Matriz Africana: O Candomblé e a Umbanda têm forte presença e respeito na cultura local.",
+        "7. Igreja de São Judas Tadeu: Conhecida como a igreja dos estudantes e causas impossíveis.",
+        "8. Santuário Nossa Senhora Aparecida: No bairro Bugio, atrai multidões em outubro.",
+        "9. Peregrinação a Divina Pastora: Embora fora da capital (40km), mobiliza muitos aracajuanos.",
+        "10. Tolerância: A cidade é conhecida pelo convívio pacífico entre diversas crenças."
+    ],
+
+    curiosidades: [
+        "1. Cidade Planejada: Aracaju foi uma das primeiras cidades planejadas do Brasil (tabuleiro de xadrez).",
+        "2. Nome Tupi: Significa 'Cajueiro dos Papagaios' (Ará = Papagaio, Caju = Cajueiro).",
+        "3. Orla Perfeita: A Orla de Atalaia tem 6km de extensão e infraestrutura impecável.",
+        "4. Qualidade de Vida: Famosa pelos hábitos saudáveis da população e ciclovias planas.",
+        "5. Projeto Tamar: O primeiro oceanário do Nordeste fica aqui.",
+        "6. Limpeza: Frequentemente elogiada como uma das capitais mais limpas do Nordeste.",
+        "7. Cajus Gigantes: Existem réplicas gigantes de cajus espalhadas pela cidade para fotos.",
+        "8. Rio e Mar: A cidade é cortada por rios (Sergipe, Vaza-Barris) e pelo mar.",
+        "9. Forró Caju: Um dos maiores eventos juninos do Brasil, com shows gratuitos gigantescos.",
+        "10. Preços: É considerada uma das capitais mais baratas para o turista no Brasil."
+    ],
+
+    eventos_estacoes: [
+        "1. Forró Caju (Junho): O auge da cidade. A praça de eventos dos mercados fica lotada.",
+        "2. Pré-Caju (Novembro): Uma das maiores prévias carnavalescas do país.",
+        "3. Verão (Dez-Mar): Sol forte, mar morno e barracas de praia movimentadas.",
+        "4. Vila do Natal Iluminado: O centro e os parques ganham decorações de luzes premiadas nacionalmente.",
+        "5. Festival do Caranguejo: Evento gastronômico que celebra o prato típico.",
+        "6. Aniversário da Cidade (17 de Março): Shows e eventos cívicos.",
+        "7. Inverno (Maio-Julho): É a estação chuvosa, mas o forró esquenta a cidade.",
+        "8. Motociclismo: Encontros de motociclistas são comuns na orla.",
+        "9. Réveillon: Queima de fogos tranquila e familiar na Orla de Atalaia.",
+        "10. Festas de Padroeiros: Ocorrem em vários bairros ao longo do ano."
+    ],
+
+    info_gerais: [
+        "1. Moeda: Real (BRL).",
+        "2. Voltagem: 127v (maioria), mas hotéis podem ter 220v. Cheque sempre.",
+        "3. Tomada: Tipo N (3 pinos).",
+        "4. DDD: 79.",
+        "5. População: Aprox. 670 mil habitantes.",
+        "6. Gentílico: Aracajuano.",
+        "7. Aeroporto: Santa Maria (AJU) - Pequeno e muito próximo da zona hoteleira.",
+        "8. Transporte: Uber e táxi são baratos devido às curtas distâncias.",
+        "9. Água: Consuma água mineral.",
+        "10. Segurança: A zona turística (Atalaia) é bem policiada e segura."
+    ],
+
+    antes_de_ir: [
+        "1. Tábua de Marés: Essencial para visitar a Croa do Goré. Vá na maré baixa.",
+        "2. Vento: Venta muito em Aracaju, o que ameniza o calor, mas cuidado com o guarda-sol voando.",
+        "3. Segunda-feira: Museus (incluindo o da Gente Sergipana) fecham às segundas.",
+        "4. Aluguel de Carro: Não é estritamente necessário se ficar na Orla, Uber atende bem.",
+        "5. Cânion do Xingó: Fica no sertão (3h a 4h de viagem). Reserve um dia inteiro ou pernoite lá (Canindé de São Francisco).",
+        "6. Caranguejo: Comer caranguejo é um ritual lento (toc-toc). Não vá com pressa.",
+        "7. Protetor Solar: O sol de Sergipe é intenso.",
+        "8. Hospedagem: Ficar na Orla de Atalaia é a melhor opção para turismo.",
+        "9. Trânsito: Muito tranquilo comparado a outras capitais.",
+        "10. Hospitalidade: O sergipano é muito acolhedor e gosta de conversar."
+    ],
+
+    numeros: [
+        "1. 190 (Polícia Militar).",
+        "2. (79) 3212-8500 (Aeroporto).",
+        "3. 192 (SAMU).",
+        "4. 193 (Bombeiros).",
+        "5. (79) 3259-2848 (Rodoviária Nova).",
+        "6. (79) 3214-5487 (Delegacia do Turista).",
+        "7. 118 (SMTT - Trânsito).",
+        "8. (79) 3216-2600 (Hospital de Urgência de Sergipe - HUSE).",
+        "9. (79) 3179-1915 (Museu da Gente Sergipana).",
+        "10. (79) 3226-8300 (Centro de Turismo)."
+    ],
+
+    riscos: [
+        "1. Mar Agitado: Algumas partes da praia de Atalaia têm ondas fortes; prefira Aruana para banho.",
+        "2. Águas Vivas: Ocorrem sazonalmente (verão); observe as bandeiras roxas se houver.",
+        "3. Sol: Queimaduras solares são o problema nº 1 dos turistas.",
+        "4. Centro à Noite: Evite circular a pé no centro comercial após o fechamento das lojas.",
+        "5. Rodovias para o Sertão: Se for dirigir até Xingó, atenção aos animais na pista.",
+        "6. Golpes de Passeio: Contrate catamarãs para Croa do Goré em locais oficiais (Orla Pôr do Sol).",
+        "7. Hidratação: O vento mascara a desidratação; beba água.",
+        "8. Ouriços: Cuidado ao caminhar em áreas de pedras na maré baixa.",
+        "9. Cuidado com Crianças: A Orla é enorme, mantenha as crianças por perto.",
+        "10. Preços na Areia: Pergunte o preço antes de consumir, embora abusos sejam raros."
+    ],
+
+    roteiros: {
+        "curto": {
+            titulo: "Aracaju Express (2 Dias)",
+            texto: [
+                "Dia 1: Orla de Atalaia, Oceanário e Passarela do Caranguejo à noite.",
+                "Dia 2: Manhã na Croa do Goré (Catamarã) e tarde no Museu da Gente Sergipana."
+            ]
+        },
+        "medio": {
+            titulo: "Belezas Sergipanas (4 Dias)",
+            texto: [
+                "Dias 1 e 2: Siga o roteiro de 2 dias.",
+                "Dia 3: Praia de Aruana (barracas de praia) e Pôr do Sol na Orla do Mosqueiro.",
+                "Dia 4: Mercados Centrais, Colina de Santo Antônio e compras de artesanato."
+            ]
+        },
+        "longo": {
+            titulo: "Sergipe Completo (7+ Dias)",
+            texto: [
+                "Dias 1 a 4: Siga o roteiro de 4 dias.",
+                "Dia 5: Bate-volta para a cidade histórica de São Cristóvão (4ª mais antiga do Brasil).",
+                "Dia 6: Bate-volta (longo) para os Cânions do Xingó no Rio São Francisco.",
+                "Dia 7: Praia do Saco (Litoral Sul) e Lagoa dos Tambaquis."
+            ]
+        },
+    },
+
+    links: {
+        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-625487&aid=304142",
+        passeio: "https://www.civitatis.com/br/aracaju/",
+        seguro: "https://www.segurospromo.com.br"
+    }
+},
             
             
 
@@ -4552,6 +4890,164 @@ const worldData = {
             seguro: "https://www.segurospromo.com.br"
         }
     }
+],
+"Peru": [
+    {
+        name: "Lima",
+        imagem: "https://images.unsplash.com/photo-1531968455001-5c5272a41129?q=80&w=2074&auto=format&fit=crop",
+        tags: ["Gastronomia", "História", "Costeira"],
+        mapa: "https://goo.gl/maps/lima",
+        clima: "Desértico Subtropical. Húmido e nublado na maior parte do ano ('La Gris'), mas quase nunca chove forte.",
+        
+        pontos_turisticos: [
+            "1. Plaza Mayor (Plaza de Armas): O berço da cidade, cercada pela Catedral, Palácio do Governo e palácios coloniais.",
+            "2. Malecón de Miraflores: Um calçadão espetacular no topo das falésias com vista para o Oceano Pacífico.",
+            "3. Huaca Pucllana: Uma pirâmide de adobe pré-inca localizada bem no meio do bairro moderno de Miraflores.",
+            "4. Bairro de Barranco: O distrito boémio, cheio de murais de arte urbana, casarões antigos e a Ponte dos Suspiros.",
+            "5. Museu Larco: A melhor coleção de arte pré-colombiana, famoso também pela sua sala de cerâmica erótica.",
+            "6. Circuito Mágico das Águas: O maior complexo de fontes dançantes do mundo num parque público (vá à noite).",
+            "7. Parque del Amor: Inspirado no Parque Güell de Barcelona, com a famosa estátua 'O Beijo'.",
+            "8. Catacumbas de São Francisco: Túneis subterrâneos no centro histórico repletos de ossadas antigas.",
+            "9. Larcomar: Um shopping center construído encravado na falésia, com vista total para o mar.",
+            "10. Callao Monumental: Área portuária revitalizada com muita arte de rua, galerias e restaurantes."
+        ],
+
+        gastronomia: [
+            "1. Ceviche: O prato nacional. Peixe cru marinado em sumo de limão, cebola roxa, ají e coentro.",
+            "2. Lomo Saltado: Tiras de carne salteadas com cebola, tomate e batata frita (influência chinesa).",
+            "3. Ají de Gallina: Frango desfiado num creme amarelo picante de nozes e pimenta ají.",
+            "4. Anticuchos: Espetinhos de coração de boi marinados e grelhados (deliciosos, apesar da descrição).",
+            "5. Causa Limeña: Prato frio de camadas de puré de batata amarela com recheio de frango ou atum.",
+            "6. Pisco Sour: O cocktail obrigatório à base de Pisco, limão, clara de ovo e angostura.",
+            "7. Chicha Morada: Bebida doce e não alcoólica feita de milho roxo fervido com especiarias.",
+            "8. Suspiro Limeño: Sobremesa extremamente doce à base de manjar branco e merengue.",
+            "9. Cuy: O porquinho-da-índia, geralmente servido frito ou assado (mais comum nos Andes, mas presente em Lima).",
+            "10. Tiradito: Primo do ceviche, mas sem cebola e cortado como sashimi (influência japonesa Nikkei)."
+        ],
+
+        religiao: [
+            "1. Santa Rosa de Lima: Padroeira do Peru, das Américas e das Filipinas. O seu santuário é local de peregrinação.",
+            "2. Senhor dos Milagres (Señor de los Milagros): A maior procissão católica da América do Sul (Outubro, o 'Mês Roxo').",
+            "3. Catedral de Lima: Onde repousam os restos mortais de Francisco Pizarro, o conquistador.",
+            "4. Convento de Santo Domingo: Complexo histórico importante onde viveram santos peruanos.",
+            "5. Sincretismo Andino: Mistura de crenças católicas com a cosmovisão inca e pré-inca.",
+            "6. São Martinho de Lima: O santo da vassoura, padroeiro da justiça social e harmonia racial.",
+            "7. Huacas Sagradas: As pirâmides espalhadas pela cidade eram antigos centros religiosos pré-hispânicos.",
+            "8. Semana Santa: Visitada com fervor nas igrejas do centro histórico.",
+            "9. Santuário de Las Nazarenas: Casa da imagem do Senhor dos Milagres.",
+            "10. Liberdade Religiosa: Embora maioritariamente católica, há presença de todas as fés."
+        ],
+
+        curiosidades: [
+            "1. Lima la Gris: O céu de Lima é cinzento 8 meses por ano devido à corrente de Humboldt, mas raramente chove.",
+            "2. Capital Gastronómica: Eleita consistentemente o melhor destino culinário do mundo.",
+            "3. Segunda Capital mais Seca: Perde apenas para o Cairo (Egito) em falta de chuva.",
+            "4. Civilização Antiga: Lima tem sítios arqueológicos (Huacas) mais antigos que Machu Picchu dentro da cidade.",
+            "5. Falésias Verdes: A Costa Verde é uma falésia enorme que separa a cidade do mar.",
+            "6. Trânsito Caótico: Lima tem um dos trânsitos mais intensos e barulhentos da América Latina.",
+            "7. Batata: O Peru é o berço da batata, com mais de 3.000 variedades (muitas encontradas nos mercados de Lima).",
+            "8. Olivo: O Parque El Olivar tem oliveiras plantadas no século XVI que ainda produzem.",
+            "9. Nikkei e Chifa: A cidade tem fusões culinárias únicas com o Japão (Nikkei) e China (Chifa).",
+            "10. Tamanho: É uma cidade gigante, abrigando quase 1/3 de toda a população do Peru."
+        ],
+
+        eventos_estacoes: [
+            "1. Fiestas Patrias (28-29 Julho): Celebração da independência com desfiles e muita comida.",
+            "2. Mês do Senhor dos Milagres (Outubro): A cidade veste-se de roxo e há procissões gigantescas.",
+            "3. Dia do Pisco Sour (Fevereiro): Degustações e festas em honra à bebida nacional.",
+            "4. Mistura (Setembro): Já foi a maior feira gastronómica da América Latina (verificar edições atuais).",
+            "5. Verão (Dez-Abril): A única época em que o céu fica azul e os limenhos vão à praia.",
+            "6. Inverno (Jun-Out): Céu nublado, garoa fina e humidade alta, mas não faz frio extremo.",
+            "7. Aniversário de Lima (18 Janeiro): Serenatas e festas na Plaza de Armas.",
+            "8. Festival de Cinema de Lima (Agosto): Evento cultural importante em San Isidro.",
+            "9. Semana Santa: Visita às 7 igrejas no centro.",
+            "10. Dia da Canção Crioula (31 Outubro): Celebrado no mesmo dia do Halloween, com muita música local."
+        ],
+
+        info_gerais: [
+            "1. Moeda: Novo Sol (PEN).",
+            "2. Voltagem: 220v.",
+            "3. Tomada: Tipo A (dois pinos chatos) e Tipo C (dois pinos redondos). Leve adaptador universal.",
+            "4. DDD: +51 (1 para Lima).",
+            "5. População: Aprox. 11 milhões de habitantes.",
+            "6. Gentílico: Limenho (Limeño).",
+            "7. Aeroporto: Jorge Chávez (LIM) - Localizado em Callao (cuidado nos arredores).",
+            "8. Segurança: Miraflores e San Isidro são seguros; Centro Histórico requer atenção; Callao exige cuidado.",
+            "9. Gorjeta: 10% é costume em restaurantes.",
+            "10. Água: NUNCA beba água da torneira no Peru."
+        ],
+
+        antes_de_ir: [
+            "1. Câmbio: Troque dólares/reais em casas de câmbio (casas de cambio) e evite o aeroporto.",
+            "2. Uber: É a forma mais segura de se locomover para turistas.",
+            "3. Soroche: Lima está ao nível do mar, então não há mal de altitude (mas prepare-se se for a Cusco depois).",
+            "4. Roupas: Traga um casaco leve mesmo no verão, a brisa do mar é fresca à noite.",
+            "5. Reservas: Os melhores restaurantes (como Central ou Maido) exigem reserva com meses de antecedência.",
+            "6. Trânsito: Calcule o dobro do tempo para chegar ao aeroporto ou centro.",
+            "7. Negociar: Em táxis de rua (não recomendados) e mercados, negocie o preço antes.",
+            "8. Adaptador: As tomadas variam muito, tenha um adaptador universal.",
+            "9. Humidade: A cidade é muito húmida, o que aumenta a sensação de frio no inverno.",
+            "10. Prove tudo: A comida de rua (com higiene) é parte essencial da experiência."
+        ],
+
+        numeros: [
+            "1. 105: Emergência Policial.",
+            "2. 116: Bombeiros (incêndio e resgate).",
+            "3. 106: SAMU (Ambulância).",
+            "4. +51 (1) 575-1718 (Polícia de Turismo).",
+            "5. +51 (1) 517-3100 (Aeroporto Jorge Chávez).",
+            "6. +51 (1) 512-0830 (Embaixada do Brasil em Lima).",
+            "7. +51 (1) 617-3000 (Hospital Clínica Anglo Americana - Privado).",
+            "8. +51 (1) 222-7777 (Taxi Satelital - Seguro).",
+            "9. +51 (1) 574-8000 (iPerú - Informação ao Turista).",
+            "10. +51 (1) 204-4040 (Serenazgo Miraflores - Segurança local)."
+        ],
+
+        riscos: [
+            "1. Furtos: Mão leve em áreas cheias e transporte público é comum.",
+            "2. Táxis Piratas: Evite pegar táxi na rua; use Apps ou táxis de hotel.",
+            "3. Trânsito: Atravessar a rua é uma aventura; os carros não respeitam peões.",
+            "4. Câmbio de Rua: Evite os 'cambistas' de colete na rua; prefira lojas físicas.",
+            "5. Água: Beber água da torneira garante problemas estomacais.",
+            "6. Bairros Perigosos: Evite áreas ao norte e leste da cidade e arredores do aeroporto à noite.",
+            "7. Sismos: Lima está numa zona sísmica ativa; saiba as rotas de fuga do seu hotel.",
+            "8. Notas Falsas: Verifique o dinheiro ao receber troco.",
+            "9. Golpes de Aeroporto: Use apenas táxis oficiais dentro do aeroporto (Taxi Green/Directo).",
+            "10. Neblina: No inverno, a visibilidade nas estradas costeiras pode ser baixa."
+        ],
+
+        roteiros: {
+            "curto": {
+                titulo: "Essência de Lima (2 Dias)",
+                texto: [
+                    "Dia 1: Centro Histórico (Plaza Mayor, Catedral, Catacumbas) e Circuito Mágico das Águas à noite.",
+                    "Dia 2: Miraflores (Parque del Amor, Larcomar) e Huaca Pucllana com almoço de Ceviche."
+                ]
+            },
+            "medio": {
+                titulo: "Gastronomia e Boémia (4 Dias)",
+                texto: [
+                    "Dias 1 e 2: Siga o roteiro de 2 dias.",
+                    "Dia 3: Bairro de Barranco (Arte e Ponte dos Suspiros) e Museu Larco.",
+                    "Dia 4: Tour gastronómico pelos mercados e almoço num restaurante premiado."
+                ]
+            },
+            "longo": {
+                titulo: "Lima Completa (6+ Dias)",
+                texto: [
+                    "Dias 1 a 4: Siga o roteiro de 4 dias.",
+                    "Dia 5: Callao Monumental e passeio de barco às Ilhas Palomino (nadar com leões marinhos).",
+                    "Dia 6: Sítio Arqueológico de Pachacamac (arredores da cidade)."
+                ]
+            }
+        },
+
+        links: {
+            hotel: "https://www.booking.com/searchresults.pt-br.html?city=-352608&aid=304142",
+            passeio: "https://www.civitatis.com/br/lima/",
+            seguro: "https://www.segurospromo.com.br"
+        }
+    }
 ]
         
         
@@ -4730,167 +5226,165 @@ const worldData = {
                 }
             }
         ],
-        "México": [
+        "Panamá": [
     {
-        name: "Cancun",
-        imagem: "https://images.unsplash.com/photo-1510097467424-192d713fd8b2?q=80&w=2070&auto=format&fit=crop",
-        tags: ["Praias", "Resorts", "Vida Noturna"],
-        mapa: "https://goo.gl/maps/cancun",
-        clima: "Tropical. Calor o ano todo, com brisa caribenha e chuvas ocasionais (principalmente de agosto a outubro).",
+        name: "Cidade do Panamá",
+        imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/HDR_of_Panama_City%2C_Panama.jpg/960px-HDR_of_Panama_City%2C_Panama.jpg",
+        tags: ["Canal", "Compras", "História"],
+        mapa: "https://goo.gl/maps/panamacity",
+        clima: "Tropical Úmido. Quente e úmido o ano todo. Estação chuvosa de maio a dezembro.",
         
         pontos_turisticos: [
-            "1. Zona Hoteleira: A famosa faixa de areia em formato de '7' onde ficam os grandes resorts e praias de tirar o fôlego.",
-            "2. Playa Delfines: Uma das poucas praias públicas com vista livre para o mar e o famoso letreiro de 'CANCÚN'.",
-            "3. Coco Bongo: Mais que uma boate, é um show acrobático e performático mundialmente famoso.",
-            "4. Isla Mujeres: Uma ilha vizinha paradisíaca; alugue um carrinho de golfe e visite a Playa Norte.",
-            "5. Chichén Itzá: Antiga capital maia e uma das 7 Maravilhas do Mundo Moderno (localizada a 2h30 de Cancun).",
-            "6. Tulum: Única cidade maia construída à beira-mar, com ruínas sobre falésias de frente para o azul turquesa.",
-            "7. Parque Xcaret: Gigantesco parque eco-arqueológico com rios subterrâneos e shows de cultura mexicana.",
-            "8. Cenotes: Piscinas naturais sagradas dos maias. Visite o Cenote Ik Kil ou o Dos Ojos.",
-            "9. MUSA (Museu Subaquático): Centenas de esculturas submersas que podem ser vistas em snorkel ou mergulho.",
-            "10. La Isla Shopping Village: O shopping mais charmoso de Cancun, aberto e às margens da Lagoa Nichupté."
+            "1. Canal do Panamá (Eclusas de Miraflores): A atração nº 1. Veja os navios subindo e descendo o nível do oceano.",
+            "2. Casco Antiguo (San Felipe): O charmoso centro histórico colonial com restaurantes, bares e igrejas restauradas.",
+            "3. Cinta Costera: Um calçadão moderno à beira-mar que liga o centro antigo à parte moderna, com vista para os arranha-céus.",
+            "4. Calçada de Amador (Causeway): Uma estrada construída sobre o mar ligando três ilhas, perfeita para alugar bicicletas.",
+            "5. Biomuseo: O museu colorido projetado por Frank Gehry que conta a história da biodiversidade do istmo.",
+            "6. Panamá Viejo: As ruínas da cidade original destruída pelo pirata Henry Morgan em 1671.",
+            "7. Mercado de Mariscos: Local autêntico para provar o famoso ceviche panamenho a preços baixos.",
+            "8. Cerro Ancón: O ponto mais alto da cidade, com uma bandeira gigante e vista 360º (tucanos são comuns aqui).",
+            "9. Multiplaza Pacific: O shopping mais luxuoso da cidade, consolidando o Panamá como destino de compras.",
+            "10. Parque Natural Metropolitano: Uma floresta tropical densa dentro dos limites da cidade."
         ],
 
         gastronomia: [
-            "1. Tacos ao Pastor: Tortilha de milho recheada com porco marinado e abacaxi.",
-            "2. Cochinita Pibil: Carne de porco marinada em urucum e cítricos, cozida em folhas de bananeira.",
-            "3. Guacamole com Totopos: Abacate temperado servido com tortilhas de milho crocantes.",
-            "4. Ceviche de Camarão: Frutos do mar frescos marinados em limão, cebola roxa e coentro.",
-            "5. Quesadillas: Dobradas e recheadas com queijo derretido e carnes variadas.",
-            "6. Sopa de Lima: Sopa tradicional da região de Yucatán com frango e tiras de tortilha.",
-            "7. Marquesitas: Crepes crocantes enrolados, recheados com queijo bola e chocolate (comum nas ruas).",
-            "8. Aguachile: Camarões crus marinados em molho de pimenta, limão e pepino.",
-            "9. Tequila e Mezcal: As bebidas espirituosas icônicas do México para degustar ou em coquetéis.",
-            "10. Margarita: O drink refrescante de limão e tequila, perfeito para o clima de praia."
+            "1. Ceviche Panamenho: Geralmente servido em copinhos com cebola, limão e coentro. Prove o de corvina.",
+            "2. Sancocho: A sopa nacional de frango com ñame (inhame) e culantro (coentro local).",
+            "3. Patacones: Rodelas de banana-da-terra verde fritas e amassadas, acompanhamento obrigatório.",
+            "4. Ropa Vieja: Carne desfiada cozida em molho de tomate e especiarias.",
+            "5. Arroz con Pollo: Clássico das festas, servido com salada de batata e beterraba.",
+            "6. Raspados: A versão local da raspadinha, servida com leite condensado e malte em pó.",
+            "7. Carimañolas: Bolinhos de mandioca fritos recheados com carne moída.",
+            "8. Café Geisha: O Panamá produz um dos cafés mais caros e premiados do mundo (região de Boquete).",
+            "9. Hojaldres: Pão frito plano, típico do café da manhã.",
+            "10. No Me Olvides: A sobremesa clássica da sorveteria La Inmaculada (sorvete, bolo e marshmallow)."
         ],
 
         religiao: [
-            "1. Virgen de Guadalupe: Padroeira do México; você verá altares dedicados a ela em quase todos os lugares.",
-            "2. Espiritualidade Maia: Muitos tours incluem ritos de purificação como o Temazcal (sauna sagrada).",
-            "3. Paróquia de Cristo Ressuscitado: Localizada na Zona Hoteleira, com arquitetura aberta e missas bilíngues.",
-            "4. Dia dos Mortos (Día de Muertos): Celebração religiosa-cultural profunda em novembro para honrar os ancestrais.",
-            "5. Capilla de Nuestra Señora de Guadalupe: Pequena e charmosa capela com vista para o mar em Isla Mujeres.",
-            "6. Ofrendas: Altares coloridos com flores e fotos encontrados em casas e espaços públicos.",
-            "7. Catedral de Cancun: Localizada no centro (Downtown), ponto central da fé católica local.",
-            "8. Sincretismo: A mistura única de ritos indígenas maias com a liturgia católica espanhola.",
-            "9. Festas Patronais: Procissões e festas nas ruas do centro em homenagem aos santos locais.",
-            "10. Igrejas Históricas de Yucatán: Muitas igrejas da era colonial podem ser visitadas em cidades próximas como Valladolid."
+            "1. Catedral Basílica Santa María la Antigua: Localizada na praça principal do Casco Antiguo.",
+            "2. Igreja de San José: Famosa pelo seu Altar de Ouro (diz a lenda que foi pintado de preto para enganar piratas).",
+            "3. Igreja del Carmen: Imponente construção gótica no centro bancário da cidade.",
+            "4. Sinagoga Kol Shearith Israel: O Panamá tem uma comunidade judaica muito influente.",
+            "5. Templo Baha'i: Um dos poucos templos desta fé no mundo, com arquitetura em forma de ovo no topo de um morro.",
+            "6. Cristo Negro de Portobelo: Embora fora da cidade, é a maior devoção popular do país (Outubro).",
+            "7. Igreja da Merced: Fachada barroca de pedra que foi transportada pedra por pedra de Panamá Viejo.",
+            "8. Mesquita de Colón: A comunidade árabe é grande, especialmente na zona livre.",
+            "9. Semana Santa: Procissões solenes no Casco Antiguo.",
+            "10. Diversidade: Liberdade religiosa total, com forte presença protestante e católica."
         ],
 
         curiosidades: [
-            "1. Cidade Planejada: Cancun não existia até 1970; foi criada do zero pelo governo para ser um polo turístico.",
-            "2. Nome Maia: 'Cancun' significa 'Ninho de Serpentes' na língua maia antiga.",
-            "3. Areia Térmica: A areia branca de coral triturado não esquenta, permitindo caminhar descalço mesmo sob sol forte.",
-            "4. Mar de 7 Cores: A tonalidade da água muda conforme a profundidade e o tipo de coral no fundo.",
-            "5. Segundo Maior Recife: Fica de frente para o Grande Arrecife Maia, a segunda maior barreira de corais do mundo.",
-            "6. Spring Break: Entre março e abril, a cidade recebe milhares de estudantes americanos em festas intensas.",
-            "7. Tartarugas: Entre maio e outubro, várias espécies de tartarugas marinhas usam as praias para desovar.",
-            "8. Zona Hoteleira vs Centro: São quase duas cidades diferentes; o centro é onde os locais vivem e os preços são menores.",
-            "9. Lagoa vs Mar: De um lado da zona hoteleira está o Mar do Caribe; do outro, a enorme Lagoa Nichupté.",
-            "10. Formato de 7: A zona hoteleira vista de cima tem o formato exato do número sete."
+            "1. Dubai das Américas: Tem a maior concentração de arranha-céus da América Latina.",
+            "2. Moeda Dolarizada: A moeda oficial é o Balboa, mas na prática só existem moedas; o papel-moeda é o Dólar Americano.",
+            "3. Chapéu Panamá?: O famoso chapéu é, na verdade, originário do Equador.",
+            "4. Sol no Mar: Devido à curva do istmo, é um dos poucos lugares onde se vê o sol nascer no Pacífico e se pôr no Atlântico (em pontos específicos).",
+            "5. Floresta Urbana: É a única capital do mundo com uma floresta tropical dentro dos seus limites municipais.",
+            "6. O Canal: Usa água da chuva (Lago Gatún) para operar as eclusas, não água do mar.",
+            "7. Zona Livre: A Zona Livre de Colón é a segunda maior do mundo, atrás apenas de Hong Kong.",
+            "8. Uber: Funciona muito bem e é extremamente barato comparado aos táxis 'amarelos'.",
+            "9. Aposentadoria: Considerado um dos melhores países do mundo para se aposentar (benefícios fiscais).",
+            "10. 1999: O Canal só passou a ser totalmente administrado pelo Panamá em 31 de dezembro de 1999."
         ],
 
         eventos_estacoes: [
-            "1. Festival de Jazz de Cancun (Novembro): Evento de classe mundial que reúne grandes nomes na praia.",
-            "2. Solstício de Verão: Momento em que o sol ilumina as pirâmides de forma especial em Chichén Itzá.",
-            "3. Temporada de Tubarão-Baleia (Junho-Setembro): Época em que é permitido nadar com esses gigantes dóceis.",
-            "4. Grito da Independência (15 de Setembro): Grandes festas patrióticas com fogos e comidas típicas.",
-            "5. Carnaval de Cancun: Desfiles de carros alegóricos e danças tradicionais no centro da cidade.",
-            "6. Torneios de Pesca Esportiva: Eventos anuais que atraem competidores de todo o mundo.",
-            "7. Réveillon: Festas luxuosas nos resorts com queima de fogos sobre o mar.",
-            "8. Temporada de Furacões: Vai de junho a novembro, exigindo atenção às previsões meteorológicas.",
-            "9. Inverno Seco (Dezembro-Abril): Melhor clima para visitar, com céu azul constante e baixa umidade.",
-            "10. Festival de Cinema de Riviera Maya: Exibições de filmes internacionais em cenários paradisíacos."
+            "1. Carnaval do Panamá (Fevereiro): Muita água (culecos), carros alegóricos e as 'Reinas' de Calle Arriba e Calle Abajo.",
+            "2. Black Weekend (Setembro): Fim de semana de descontos massivos nos shoppings, atraindo turistas de toda a região.",
+            "3. Panama Jazz Festival (Janeiro): Evento cultural de classe mundial organizado por Danilo Pérez.",
+            "4. Fiestas Patrias (Novembro): O mês inteiro é de celebração da independência com desfiles de bandas escolares.",
+            "5. Estação Seca (Jan-Abril): Chamada de 'verão', é a melhor época para visitar (céu azul e muito vento).",
+            "6. Estação Chuvosa (Maio-Dez): Chuvas tropicais fortes, geralmente à tarde, mas rápidas.",
+            "7. IFF Panamá (Abril): Festival Internacional de Cinema.",
+            "8. Desfile das Mil Polleras (Janeiro): Em Las Tablas (interior), mas reflete na cultura da capital.",
+            "9. Natal e Ano Novo: Queima de fogos na Cinta Costera.",
+            "10. Sobresaltos: O clima muda rápido; sempre tenha um plano B para chuva."
         ],
 
         info_gerais: [
-            "1. Moeda: Peso Mexicano (MXN). Dólares são aceitos, mas o troco costuma ser em pesos e com taxa ruim.",
-            "2. Voltagem: 127v (Padrão americano de pinos chatos).",
-            "3. Idioma: Espanhol, mas o Inglês é falado fluentemente em toda a zona turística.",
-            "4. DDD: +52.",
-            "5. Visto: Brasileiros precisam de visto para entrar no México (consulte as regras atuais).",
-            "6. Aeroporto: Aeroporto Internacional de Cancun (CUN) - muito moderno e movimentado.",
-            "7. Taxa de Saneamento: Hotéis cobram uma pequena taxa diária por quarto no check-out.",
-            "8. Água: Nunca beba água da torneira; use apenas água engarrafada, mesmo para escovar os dentes.",
-            "9. Gorjetas (Propina): É cultural deixar entre 10% e 15% em restaurantes.",
-            "10. Visitax: Imposto turístico que deve ser pago online por todos os visitantes estrangeiros."
+            "1. Moeda: Dólar Americano (USD). O Balboa (PAB) circula apenas em moedas de mesmo valor e tamanho.",
+            "2. Voltagem: 110v (igual aos EUA).",
+            "3. Tomada: Tipo A e B (padrão americano de pinos chatos).",
+            "4. DDD: +507.",
+            "5. População: Aprox. 1.9 milhão na área metropolitana.",
+            "6. Gentílico: Panamenho (Panameño).",
+            "7. Aeroporto: Tocumen (PTY) - O 'Hub das Américas', super conectado.",
+            "8. Idioma: Espanhol, mas Inglês é amplamente falado em serviços e turismo.",
+            "9. Gorjeta: 10% é o padrão em restaurantes.",
+            "10. Água: A água da torneira na Cidade do Panamá é potável e segura (uma raridade na região)."
         ],
 
         antes_de_ir: [
-            "1. Protetor Solar Biodegradável: Obrigatório para entrar em cenotes e parques para proteger o ecossistema.",
-            "2. Seguro Viagem: Altamente recomendado, pois hospitais particulares em Cancun são extremamente caros.",
-            "3. Câmbio: Evite trocar dinheiro no aeroporto; casas de câmbio no centro oferecem taxas melhores.",
-            "4. Transporte: Ônibus de linha (R1 e R2) na zona hoteleira são baratos, seguros e funcionam 24h.",
-            "5. Sargasso: Verifique sites de monitoramento de algas (sargasso) para escolher a praia mais limpa no dia.",
-            "6. Reserve Chichén Itzá: Vá o mais cedo possível para evitar as multidões e o calor extremo do meio-dia.",
-            "7. Aluguel de Carro: Vale a pena para explorar a Riviera Maya, mas atenção aos limites de velocidade.",
-            "8. Adaptador de Tomada: Se seus aparelhos forem do padrão brasileiro novo (3 pinos redondos), você precisará de adaptador.",
-            "9. App de Câmbio: Tenha um conversor de moedas no celular para não se confundir entre Peso e Real.",
-            "10. Compras: O Mercado 28 no centro é o melhor lugar para lembrancinhas baratas e autênticas."
+            "1. Passaporte: Obrigatório, com validade mínima de 3 meses (verifique regra atual, às vezes pedem 6).",
+            "2. Vacina: Febre Amarela é exigida para brasileiros (Certificado Internacional).",
+            "3. Dinheiro: Leve notas baixas de Dólar ($1, $5, $10, $20). Notas de $50 e $100 são difíceis de trocar.",
+            "4. Trânsito: O tráfego na cidade é caótico nos horários de pico. Use o Metrô se possível.",
+            "5. Metrô: Limpo, moderno e barato. Compra-se um cartão recarregável.",
+            "6. Táxis Amarelos: Não têm taxímetro. Combine o preço ANTES de entrar ou será cobrado a mais.",
+            "7. Roupas: Tecidos leves (linho/algodão). A umidade é muito alta.",
+            "8. Compras: O Albrook Mall é o maior e mais popular; o Multiplaza é marcas de luxo.",
+            "9. Segurança: Casco Antiguo é seguro, mas evite cruzar as fronteiras para o bairro El Chorrillo a pé.",
+            "10. Canal: O Centro de Visitantes de Miraflores abre de manhã até a tarde; verifique o horário de passagem dos navios."
         ],
 
         numeros: [
-            "1. 911: Número de emergência geral (Polícia, Ambulância e Bombeiros).",
-            "2. +52 998 884 8073: Polícia Turística de Cancun.",
-            "3. +52 998 884 1616: Cruz Vermelha (Ambulância).",
-            "4. +52 998 881 2700: Informações do Aeroporto.",
-            "5. +52 998 884 1050: Rodoviária (ADO) - principal empresa de ônibus.",
-            "6. +52 55 5202 3366: Embaixada do Brasil no México (Cidade do México).",
-            "7. +52 998 887 4333: Consulado Honorário do Brasil em Cancun.",
-            "8. 078: 'Ángeles Verdes' (Assistência mecânica gratuita nas estradas federais).",
-            "9. +52 998 848 3000: Hospital Galenia (Referência em atendimento particular).",
-            "10. +52 998 884 1202: Bombeiros de Cancun."
+            "1. 911: Emergência Geral (Polícia, Ambulância, Bombeiros).",
+            "2. 104: Polícia Nacional.",
+            "3. +507 502-2513 (Polícia de Turismo).",
+            "4. +507 238-2700 (Aeroporto de Tocumen).",
+            "5. +507 263-5322 (Embaixada do Brasil).",
+            "6. 311: Centro de Atenção Cidadã.",
+            "7. +507 204-6100 (Hospital Punta Pacífica - Privado de alto padrão).",
+            "8. +507 303-3030 (Terminal de Transporte Albrook).",
+            "9. +507 511-6000 (Autoridade do Canal do Panamá).",
+            "10. +507 521-1600 (Hospital Santo Tomás - Público)."
         ],
 
         riscos: [
-            "1. Desidratação: O calor úmido é intenso; beba muito líquido mesmo sem sede.",
-            "2. Insolação: O sol caribenho queima muito rápido; use chapéu e evite exposição direta ao meio-dia.",
-            "3. Correntes Marítimas: Respeite as bandeiras na praia (Vermelha = Proibido entrar).",
-            "4. Extorsão: Algumas viaturas de polícia param turistas dirigindo para pedir dinheiro; peça sempre a multa oficial.",
-            "5. Golpes de Táxi: Combine o valor fixo da corrida ANTES de entrar no veículo.",
-            "6. 'La Vingança de Moctezuma': Nome dado ao piriri causado por água ou comida mal lavada.",
-            "7. Tempo de Viagem: Não subestime as distâncias; Chichén Itzá e Tulum tomam o dia inteiro.",
-            "8. Vendedores Insistentes: No centro e em sítios arqueológicos, seja educado mas firme ao dizer 'No, gracias'.",
-            "9. Vida Noturna: Mantenha sempre seu copo sob vista em boates muito lotadas.",
-            "10. Animais: Não toque em quatis ou iguanas nos resorts; eles podem morder se acuados."
+            "1. 'No voy': Taxistas podem recusar corridas se não gostarem do destino ou do trânsito.",
+            "2. Fronteiras do Casco: O bairro turístico é seguro, mas as ruas ao redor (El Chorrillo/Calidonia) não são.",
+            "3. Umidade: Pode causar queda de pressão em quem não está acostumado; hidrate-se.",
+            "4. Golpes de Troco: Confira o troco, às vezes tentam passar moedas de outros países.",
+            "5. Atravessar a Rua: Pedestres não têm prioridade na prática; cuidado nas avenidas.",
+            "6. Chuvas Repentinas: Pode chover torrencialmente do nada e parar em 15 min.",
+            "7. Preços para Turistas: Em mercados de artesanato, barganhar é esperado.",
+            "8. Vida Noturna: Mantenha seus pertences próximos em bares lotados no Casco.",
+            "9. Trânsito: Engarrafamentos (tranques) podem fazer você perder voos; saia com antecedência.",
+            "10. Sol: Use protetor solar mesmo em dias nublados."
         ],
 
         roteiros: {
             "curto": {
-                titulo: "Cancun Express (3 Dias)",
+                titulo: "Conexão Panamá (2 Dias)",
                 texto: [
-                    "Dia 1: Praia Delfines pela manhã, compras no La Isla e pôr do sol na Lagoa Nichupté.",
-                    "Dia 2: Bate-volta para Isla Mujeres de balsa (ferry) e relaxar na Playa Norte.",
-                    "Dia 3: Manhã de praia na Zona Hoteleira e noite épica no Coco Bongo."
+                    "Dia 1: Canal do Panamá (Manhã) e tarde explorando as ruas e igrejas do Casco Antiguo.",
+                    "Dia 2: Compras no Albrook Mall ou Multiplaza e caminhada na Cinta Costera ao pôr do sol."
                 ]
             },
             "medio": {
-                titulo: "O Coração da Riviera (5 Dias)",
+                titulo: "Cidade e Natureza (4 Dias)",
                 texto: [
-                    "Dia 1 a 3: Siga o roteiro de 3 dias.",
-                    "Dia 4: Tour histórico para Chichén Itzá com parada em um Cenote e na cidade de Valladolid.",
-                    "Dia 5: Dia de aventura e natureza no Parque Xcaret (incluindo o show noturno)."
+                    "Dias 1 e 2: Siga o roteiro de 2 dias.",
+                    "Dia 3: Calçada de Amador (bicicleta), Biomuseo e Mercado de Mariscos.",
+                    "Dia 4: Caminhada no Parque Natural Metropolitano ou subida ao Cerro Ancón e ruínas de Panamá Viejo."
                 ]
             },
             "longo": {
-                titulo: "Exploração Maia Total (8+ Dias)",
+                titulo: "Panamá Explorer (7+ Dias)",
                 texto: [
-                    "Dia 1 a 5: Siga o roteiro de 5 dias.",
-                    "Dia 6: Ruínas de Tulum pela manhã e nado com tartarugas em Akumal à tarde.",
-                    "Dia 7: Mergulho ou Snorkel em Cozumel (pegue o ferry em Playa del Carmen).",
-                    "Dia 8: Relaxar em Playa del Carmen, caminhando pela 5ª Avenida para compras finais."
+                    "Dias 1 a 4: Siga o roteiro de 4 dias.",
+                    "Dia 5: Bate-volta para a ilha de Taboga (Praia) ou Emberá (Aldeia Indígena).",
+                    "Dia 6: Passeio de dia inteiro (caro mas vale a pena) para as ilhas de San Blas.",
+                    "Dia 7: Tour de trem até Colón (ferrovia transístmica) e visita às eclusas de Agua Clara (lado Atlântico)."
                 ]
-            }
+            },
         },
 
         links: {
-            hotel: "https://www.booking.com/searchresults.pt-br.html?city=-1654636&aid=304142",
-            passeio: "https://www.civitatis.com/br/cancun/",
+            hotel: "https://www.booking.com/searchresults.pt-br.html?city=-169238&aid=304142",
+            passeio: "https://www.civitatis.com/br/cidade-do-panama/",
             seguro: "https://www.segurospromo.com.br"
         }
     }
 ]
-        
     },
     "América do Norte": {
         "Estados Unidos": [
@@ -5397,7 +5891,169 @@ const worldData = {
                     seguro: "https://www.segurospromo.com.br" 
                 }
             }
-        ]
+        ],
+          "México": [
+    {
+        name: "Cancun",
+        imagem: "https://images.unsplash.com/photo-1510097467424-192d713fd8b2?q=80&w=2070&auto=format&fit=crop",
+        tags: ["Praias", "Resorts", "Vida Noturna"],
+        mapa: "https://goo.gl/maps/cancun",
+        clima: "Tropical. Calor o ano todo, com brisa caribenha e chuvas ocasionais (principalmente de agosto a outubro).",
+        
+        pontos_turisticos: [
+            "1. Zona Hoteleira: A famosa faixa de areia em formato de '7' onde ficam os grandes resorts e praias de tirar o fôlego.",
+            "2. Playa Delfines: Uma das poucas praias públicas com vista livre para o mar e o famoso letreiro de 'CANCÚN'.",
+            "3. Coco Bongo: Mais que uma boate, é um show acrobático e performático mundialmente famoso.",
+            "4. Isla Mujeres: Uma ilha vizinha paradisíaca; alugue um carrinho de golfe e visite a Playa Norte.",
+            "5. Chichén Itzá: Antiga capital maia e uma das 7 Maravilhas do Mundo Moderno (localizada a 2h30 de Cancun).",
+            "6. Tulum: Única cidade maia construída à beira-mar, com ruínas sobre falésias de frente para o azul turquesa.",
+            "7. Parque Xcaret: Gigantesco parque eco-arqueológico com rios subterrâneos e shows de cultura mexicana.",
+            "8. Cenotes: Piscinas naturais sagradas dos maias. Visite o Cenote Ik Kil ou o Dos Ojos.",
+            "9. MUSA (Museu Subaquático): Centenas de esculturas submersas que podem ser vistas em snorkel ou mergulho.",
+            "10. La Isla Shopping Village: O shopping mais charmoso de Cancun, aberto e às margens da Lagoa Nichupté."
+        ],
+
+        gastronomia: [
+            "1. Tacos ao Pastor: Tortilha de milho recheada com porco marinado e abacaxi.",
+            "2. Cochinita Pibil: Carne de porco marinada em urucum e cítricos, cozida em folhas de bananeira.",
+            "3. Guacamole com Totopos: Abacate temperado servido com tortilhas de milho crocantes.",
+            "4. Ceviche de Camarão: Frutos do mar frescos marinados em limão, cebola roxa e coentro.",
+            "5. Quesadillas: Dobradas e recheadas com queijo derretido e carnes variadas.",
+            "6. Sopa de Lima: Sopa tradicional da região de Yucatán com frango e tiras de tortilha.",
+            "7. Marquesitas: Crepes crocantes enrolados, recheados com queijo bola e chocolate (comum nas ruas).",
+            "8. Aguachile: Camarões crus marinados em molho de pimenta, limão e pepino.",
+            "9. Tequila e Mezcal: As bebidas espirituosas icônicas do México para degustar ou em coquetéis.",
+            "10. Margarita: O drink refrescante de limão e tequila, perfeito para o clima de praia."
+        ],
+
+        religiao: [
+            "1. Virgen de Guadalupe: Padroeira do México; você verá altares dedicados a ela em quase todos os lugares.",
+            "2. Espiritualidade Maia: Muitos tours incluem ritos de purificação como o Temazcal (sauna sagrada).",
+            "3. Paróquia de Cristo Ressuscitado: Localizada na Zona Hoteleira, com arquitetura aberta e missas bilíngues.",
+            "4. Dia dos Mortos (Día de Muertos): Celebração religiosa-cultural profunda em novembro para honrar os ancestrais.",
+            "5. Capilla de Nuestra Señora de Guadalupe: Pequena e charmosa capela com vista para o mar em Isla Mujeres.",
+            "6. Ofrendas: Altares coloridos com flores e fotos encontrados em casas e espaços públicos.",
+            "7. Catedral de Cancun: Localizada no centro (Downtown), ponto central da fé católica local.",
+            "8. Sincretismo: A mistura única de ritos indígenas maias com a liturgia católica espanhola.",
+            "9. Festas Patronais: Procissões e festas nas ruas do centro em homenagem aos santos locais.",
+            "10. Igrejas Históricas de Yucatán: Muitas igrejas da era colonial podem ser visitadas em cidades próximas como Valladolid."
+        ],
+
+        curiosidades: [
+            "1. Cidade Planejada: Cancun não existia até 1970; foi criada do zero pelo governo para ser um polo turístico.",
+            "2. Nome Maia: 'Cancun' significa 'Ninho de Serpentes' na língua maia antiga.",
+            "3. Areia Térmica: A areia branca de coral triturado não esquenta, permitindo caminhar descalço mesmo sob sol forte.",
+            "4. Mar de 7 Cores: A tonalidade da água muda conforme a profundidade e o tipo de coral no fundo.",
+            "5. Segundo Maior Recife: Fica de frente para o Grande Arrecife Maia, a segunda maior barreira de corais do mundo.",
+            "6. Spring Break: Entre março e abril, a cidade recebe milhares de estudantes americanos em festas intensas.",
+            "7. Tartarugas: Entre maio e outubro, várias espécies de tartarugas marinhas usam as praias para desovar.",
+            "8. Zona Hoteleira vs Centro: São quase duas cidades diferentes; o centro é onde os locais vivem e os preços são menores.",
+            "9. Lagoa vs Mar: De um lado da zona hoteleira está o Mar do Caribe; do outro, a enorme Lagoa Nichupté.",
+            "10. Formato de 7: A zona hoteleira vista de cima tem o formato exato do número sete."
+        ],
+
+        eventos_estacoes: [
+            "1. Festival de Jazz de Cancun (Novembro): Evento de classe mundial que reúne grandes nomes na praia.",
+            "2. Solstício de Verão: Momento em que o sol ilumina as pirâmides de forma especial em Chichén Itzá.",
+            "3. Temporada de Tubarão-Baleia (Junho-Setembro): Época em que é permitido nadar com esses gigantes dóceis.",
+            "4. Grito da Independência (15 de Setembro): Grandes festas patrióticas com fogos e comidas típicas.",
+            "5. Carnaval de Cancun: Desfiles de carros alegóricos e danças tradicionais no centro da cidade.",
+            "6. Torneios de Pesca Esportiva: Eventos anuais que atraem competidores de todo o mundo.",
+            "7. Réveillon: Festas luxuosas nos resorts com queima de fogos sobre o mar.",
+            "8. Temporada de Furacões: Vai de junho a novembro, exigindo atenção às previsões meteorológicas.",
+            "9. Inverno Seco (Dezembro-Abril): Melhor clima para visitar, com céu azul constante e baixa umidade.",
+            "10. Festival de Cinema de Riviera Maya: Exibições de filmes internacionais em cenários paradisíacos."
+        ],
+
+        info_gerais: [
+            "1. Moeda: Peso Mexicano (MXN). Dólares são aceitos, mas o troco costuma ser em pesos e com taxa ruim.",
+            "2. Voltagem: 127v (Padrão americano de pinos chatos).",
+            "3. Idioma: Espanhol, mas o Inglês é falado fluentemente em toda a zona turística.",
+            "4. DDD: +52.",
+            "5. Visto: Brasileiros precisam de visto para entrar no México (consulte as regras atuais).",
+            "6. Aeroporto: Aeroporto Internacional de Cancun (CUN) - muito moderno e movimentado.",
+            "7. Taxa de Saneamento: Hotéis cobram uma pequena taxa diária por quarto no check-out.",
+            "8. Água: Nunca beba água da torneira; use apenas água engarrafada, mesmo para escovar os dentes.",
+            "9. Gorjetas (Propina): É cultural deixar entre 10% e 15% em restaurantes.",
+            "10. Visitax: Imposto turístico que deve ser pago online por todos os visitantes estrangeiros."
+        ],
+
+        antes_de_ir: [
+            "1. Protetor Solar Biodegradável: Obrigatório para entrar em cenotes e parques para proteger o ecossistema.",
+            "2. Seguro Viagem: Altamente recomendado, pois hospitais particulares em Cancun são extremamente caros.",
+            "3. Câmbio: Evite trocar dinheiro no aeroporto; casas de câmbio no centro oferecem taxas melhores.",
+            "4. Transporte: Ônibus de linha (R1 e R2) na zona hoteleira são baratos, seguros e funcionam 24h.",
+            "5. Sargasso: Verifique sites de monitoramento de algas (sargasso) para escolher a praia mais limpa no dia.",
+            "6. Reserve Chichén Itzá: Vá o mais cedo possível para evitar as multidões e o calor extremo do meio-dia.",
+            "7. Aluguel de Carro: Vale a pena para explorar a Riviera Maya, mas atenção aos limites de velocidade.",
+            "8. Adaptador de Tomada: Se seus aparelhos forem do padrão brasileiro novo (3 pinos redondos), você precisará de adaptador.",
+            "9. App de Câmbio: Tenha um conversor de moedas no celular para não se confundir entre Peso e Real.",
+            "10. Compras: O Mercado 28 no centro é o melhor lugar para lembrancinhas baratas e autênticas."
+        ],
+
+        numeros: [
+            "1. 911: Número de emergência geral (Polícia, Ambulância e Bombeiros).",
+            "2. +52 998 884 8073: Polícia Turística de Cancun.",
+            "3. +52 998 884 1616: Cruz Vermelha (Ambulância).",
+            "4. +52 998 881 2700: Informações do Aeroporto.",
+            "5. +52 998 884 1050: Rodoviária (ADO) - principal empresa de ônibus.",
+            "6. +52 55 5202 3366: Embaixada do Brasil no México (Cidade do México).",
+            "7. +52 998 887 4333: Consulado Honorário do Brasil em Cancun.",
+            "8. 078: 'Ángeles Verdes' (Assistência mecânica gratuita nas estradas federais).",
+            "9. +52 998 848 3000: Hospital Galenia (Referência em atendimento particular).",
+            "10. +52 998 884 1202: Bombeiros de Cancun."
+        ],
+
+        riscos: [
+            "1. Desidratação: O calor úmido é intenso; beba muito líquido mesmo sem sede.",
+            "2. Insolação: O sol caribenho queima muito rápido; use chapéu e evite exposição direta ao meio-dia.",
+            "3. Correntes Marítimas: Respeite as bandeiras na praia (Vermelha = Proibido entrar).",
+            "4. Extorsão: Algumas viaturas de polícia param turistas dirigindo para pedir dinheiro; peça sempre a multa oficial.",
+            "5. Golpes de Táxi: Combine o valor fixo da corrida ANTES de entrar no veículo.",
+            "6. 'La Vingança de Moctezuma': Nome dado ao piriri causado por água ou comida mal lavada.",
+            "7. Tempo de Viagem: Não subestime as distâncias; Chichén Itzá e Tulum tomam o dia inteiro.",
+            "8. Vendedores Insistentes: No centro e em sítios arqueológicos, seja educado mas firme ao dizer 'No, gracias'.",
+            "9. Vida Noturna: Mantenha sempre seu copo sob vista em boates muito lotadas.",
+            "10. Animais: Não toque em quatis ou iguanas nos resorts; eles podem morder se acuados."
+        ],
+
+        roteiros: {
+            "curto": {
+                titulo: "Cancun Express (3 Dias)",
+                texto: [
+                    "Dia 1: Praia Delfines pela manhã, compras no La Isla e pôr do sol na Lagoa Nichupté.",
+                    "Dia 2: Bate-volta para Isla Mujeres de balsa (ferry) e relaxar na Playa Norte.",
+                    "Dia 3: Manhã de praia na Zona Hoteleira e noite épica no Coco Bongo."
+                ]
+            },
+            "medio": {
+                titulo: "O Coração da Riviera (5 Dias)",
+                texto: [
+                    "Dia 1 a 3: Siga o roteiro de 3 dias.",
+                    "Dia 4: Tour histórico para Chichén Itzá com parada em um Cenote e na cidade de Valladolid.",
+                    "Dia 5: Dia de aventura e natureza no Parque Xcaret (incluindo o show noturno)."
+                ]
+            },
+            "longo": {
+                titulo: "Exploração Maia Total (8+ Dias)",
+                texto: [
+                    "Dia 1 a 5: Siga o roteiro de 5 dias.",
+                    "Dia 6: Ruínas de Tulum pela manhã e nado com tartarugas em Akumal à tarde.",
+                    "Dia 7: Mergulho ou Snorkel em Cozumel (pegue o ferry em Playa del Carmen).",
+                    "Dia 8: Relaxar em Playa del Carmen, caminhando pela 5ª Avenida para compras finais."
+                ]
+            }
+        },
+
+        links: {
+            hotel: "https://www.booking.com/searchresults.pt-br.html?city=-1654636&aid=304142",
+            passeio: "https://www.civitatis.com/br/cancun/",
+            seguro: "https://www.segurospromo.com.br"
+        }
+    },
+]
+        
+    
     },
     "Ásia": {
         "Japão": [

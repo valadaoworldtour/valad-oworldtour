@@ -1,3 +1,4 @@
+
 :root {
     /* --- PALETA "DAYTIME NEON" (OCEANO CRISTALINO) --- */
     --bg-deep: #f0f8ff; /* Branco Gelo / AliceBlue */
@@ -53,11 +54,15 @@ body {
 }
 @keyframes floatBubbles { from { background-position: 0 0; } to { background-position: 0 -400px; } }
 
-/* SCROLLBAR */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #e6f7ff; }
-::-webkit-scrollbar-thumb { background: var(--neon-cyan); border-radius: 10px; }
-
+/* SCROLLBAR FUTURISTA */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: rgba(0, 30, 54, 0.05); }
+::-webkit-scrollbar-thumb { 
+    background: linear-gradient(180deg, var(--neon-cyan), var(--neon-blue)); 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px var(--neon-cyan); /* A barra brilha! */
+}
+::-webkit-scrollbar-thumb:hover { background: var(--neon-blue); }
 /* --- SIDEBAR (BARRA LATERAL) --- */
 .app-shell { display: flex; height: 100vh; }
 
@@ -223,17 +228,54 @@ body {
 
 .cities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; padding-bottom: 50px; }
 
-.city-card {
-    background: #fff; border: var(--border-vibrant); border-radius: 20px;
-    overflow: hidden; position: relative; height: 360px; display: flex; flex-direction: column;
-    cursor: pointer; transition: 0.4s; box-shadow: 0 15px 35px rgba(0, 43, 66, 0.1);
-    animation: oceanFloat 6s ease-in-out infinite;
-}
+
 .city-card:nth-child(2) { animation-delay: 1s; } .city-card:nth-child(3) { animation-delay: 2s; }
 @keyframes oceanFloat { 0% { transform: translateY(0px); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0px); } }
 
-.city-card:hover { transform: translateY(-20px) scale(1.02); border-color: var(--neon-cyan); box-shadow: 0 30px 60px rgba(0, 196, 230, 0.3); }
+.city-card {
+    background: rgba(255, 255, 255, 0.85); /* Vidro mais translúcido */
+    backdrop-filter: blur(15px) saturate(180%); /* Desfoque de alta tecnologia */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    /* Sombra inicial suave azulada */
+    box-shadow: 0 10px 30px -10px rgba(0, 196, 230, 0.3);
+}
 
+/* Efeito de Scanner passando (Linha de luz) */
+.city-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 50%; height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.8), transparent);
+    transform: skewX(-25deg);
+    transition: 0.7s;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.city-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    border-color: var(--neon-cyan);
+    /* O "Glow" Futurista */
+    box-shadow: 
+        0 20px 50px rgba(0, 196, 230, 0.4),
+        0 0 0 1px inset var(--neon-cyan); /* Borda interna brilhante */
+}
+
+.city-card:hover::after {
+    left: 150%; /* Passa o brilho */
+    opacity: 1;
+    transition: 0.7s ease-in-out;
+}
 .card-img-wrapper { height: 210px; width: 100%; overflow: hidden; position: relative; }
 .card-img { width: 100%; height: 100%; object-fit: cover; transition: 1s; }
 .city-card:hover .card-img { transform: scale(1.1); }

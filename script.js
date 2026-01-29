@@ -9929,19 +9929,76 @@ function searchSystem() {
 
 // Inicializa o sistema
 init();
+/* --- ATUALIZAÇÃO FINAL: MENU MOBILE E PESQUISA --- */
+
+// 1. Função para Abrir/Fechar o Menu Lateral
 function toggleSidebar() {
     const sidebar = document.querySelector('.sidebar');
     const overlay = document.querySelector('.sidebar-overlay');
     
+    // Alterna a classe 'active' que criamos no CSS
     sidebar.classList.toggle('active');
     overlay.classList.toggle('active');
 }
 
-// Fecha o menu automaticamente ao clicar em um país no mobile
-function loadCities(nomePais, listaCidades) {
-    // ... seu código atual de carregar cidades ...
-    
-    if(window.innerWidth <= 768) {
-        toggleSidebar();
-    }
+// 2. Função de Fechar o Menu ao Clicar no Link (Melhora a navegação)
+// Adiciona evento em todos os botões de continente para fechar o menu ao selecionar (opcional)
+document.querySelectorAll('.continent-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Apenas fecha se for mobile (verificando se o botão toggle está visível)
+        if (window.getComputedStyle(document.querySelector('.mobile-toggle')).display !== 'none') {
+            // Não fechamos imediatamente para dar tempo de ver a animação do submenu
+            // Mas se clicar num país específico, aí sim fecha:
+        }
+    });
+});
+
+// 3. Função de Pesquisa (Filtro Instantâneo)
+// Procura o input de pesquisa
+const searchInput = document.querySelector('.search-wrapper input');
+
+if (searchInput) {
+    searchInput.addEventListener('input', function(e) {
+        const termo = e.target.value.toLowerCase();
+        const navGroups = document.querySelector('.nav-groups');
+        const continentes = document.querySelectorAll('.continent-group');
+        let encontrouAlgo = false;
+
+        continentes.forEach(grupo => {
+            const paises = grupo.querySelectorAll('.country-btn');
+            let encontrouNoGrupo = false;
+
+            paises.forEach(pais => {
+                const nomePais = pais.innerText.toLowerCase();
+                
+                // Se o termo está no nome do país
+                if (nomePais.includes(termo)) {
+                    pais.style.display = 'flex'; // Mostra o país
+                    encontrouNoGrupo = true;
+                    encontrouAlgo = true;
+                } else {
+                    pais.style.display = 'none'; // Esconde o país
+                }
+            });
+
+            // Lógica para abrir/fechar os continentes baseado na pesquisa
+            if (termo === "") {
+                // Se limpou a busca, reseta a visualização
+                grupo.style.display = 'block'; 
+                grupo.classList.remove('open'); // Fecha os acordeons
+                grupo.querySelector('.country-list').style.maxHeight = null;
+            } else {
+                if (encontrouNoGrupo) {
+                    grupo.style.display = 'block'; // Mostra o continente
+                    grupo.classList.add('open'); // Abre o acordeon automaticamente
+                    grupo.querySelector('.country-list').style.maxHeight = "1000px";
+                } else {
+                    grupo.style.display = 'none'; // Esconde o continente inteiro se não tiver o país
+                }
+            }
+        });
+        
+        // (Opcional) Feedback visual se não encontrar nada
+        // Você pode adicionar um aviso aqui se 'encontrouAlgo' for false
+    });
 }

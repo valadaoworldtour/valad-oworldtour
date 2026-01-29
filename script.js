@@ -9929,3 +9929,19 @@ function searchSystem() {
 
 // Inicializa o sistema
 init();
+function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.querySelector('.sidebar-overlay');
+    
+    sidebar.classList.toggle('active');
+    overlay.classList.toggle('active');
+}
+
+// Fecha o menu automaticamente ao clicar em um país no mobile
+function loadCities(nomePais, listaCidades) {
+    // ... seu código atual de carregar cidades ...
+    
+    if(window.innerWidth <= 768) {
+        toggleSidebar();
+    }
+}

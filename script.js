@@ -9938,45 +9938,57 @@ function toggleSidebar() {
 // Inicializa o sistema
 init();
 // ======================================================
-// CORREÇÃO MOBILE: MODO FOCO & FECHAR MENU AO PESQUISAR
+// CORREÇÃO FINAL: MODO PESQUISA TRANSPARENTE (MOBILE)
 // ======================================================
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Pegamos o elemento pelo ID CORRETO que você usa no sistema
-    const searchInput = document.getElementById('globalSearch');
+    const searchInput = document.getElementById('globalSearch'); // Seu ID correto
     const sidebar = document.querySelector('.sidebar');
+    const overlay = document.querySelector('.sidebar-overlay'); // O fundo escuro
 
-    if (searchInput) {
-        // 1. Ao clicar para digitar (Foco): Deixa o menu transparente
+    if (searchInput && sidebar && overlay) {
+        
+        // 1. AO ENTRAR NA PESQUISA (Foco)
         searchInput.addEventListener('focus', function() {
             if (window.innerWidth <= 768) {
-                sidebar.classList.add('search-active');
+                // Adiciona a classe que deixa tudo invisível, menos a busca
+                sidebar.classList.add('mobile-searching');
+                overlay.classList.add('mobile-searching');
             }
         });
 
-        // 2. Ao sair da pesquisa (clicar fora): Volta o menu ao normal
+        // 2. AO SAIR DA PESQUISA (Blur)
         searchInput.addEventListener('blur', function() {
-            // Pequeno delay para não piscar se clicar num resultado
+            // Pequeno delay para não piscar
             setTimeout(() => {
-                sidebar.classList.remove('search-active');
+                // Se o campo estiver vazio, volta o menu normal
+                if (this.value.trim() === '') {
+                    sidebar.classList.remove('mobile-searching');
+                    overlay.classList.remove('mobile-searching');
+                }
+                // Se tiver texto, MANTÉM transparente para você ver o resultado
+                // Mas removemos se o usuário fechar o menu depois
             }, 200);
         });
 
-        // 3. Ao apertar ENTER: Fecha o menu totalmente e tira o teclado
+        // 3. AO DIGITAR (Garante que a busca roda)
+        searchInput.addEventListener('input', function() {
+            searchSystem(); // Sua função de busca
+        });
+
+        // 4. AO APERTAR ENTER
         searchInput.addEventListener('keyup', function(e) {
             if (e.key === 'Enter') {
-                this.blur(); // Tira o foco (fecha teclado e modo foco)
+                this.blur(); // Tira o teclado
                 
-                // Se estiver no celular, fecha o menu lateral
-                if (window.innerWidth <= 768 && sidebar.classList.contains('active')) {
-                    toggleSidebar(); 
-                }
+                // Fecha o menu lateral completamente para ver os resultados limpos
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+                
+                // Limpa o modo pesquisa também
+                sidebar.classList.remove('mobile-searching');
+                overlay.classList.remove('mobile-searching');
             }
-        });
-        
-        // 4. Correção extra: Se digitar algo, garante que a busca rode
-        searchInput.addEventListener('input', function() {
-            searchSystem(); // Chama sua função de busca em tempo real
         });
     }
 });

@@ -1091,36 +1091,44 @@ body {
         z-index: 9999;
     }
 }
-/* --- CORREÇÃO MOBILE: MODO FOCO NA PESQUISA --- */
+/* --- CORREÇÃO MOBILE: MODO 'RAIO-X' NA PESQUISA --- */
 @media (max-width: 768px) {
-    /* Quando a classe .search-active é adicionada à sidebar pelo JS */
-    .sidebar.search-active {
-        background: rgba(0, 0, 0, 0.1) !important; /* Fundo quase invisível */
-        backdrop-filter: blur(2px); /* Borrão leve para ler o texto */
-        box-shadow: none;
-        width: 100%; 
-        transition: all 0.3s ease;
+    /* Quando a classe .mobile-searching estiver ativa na sidebar */
+    
+    /* 1. Torna o fundo do menu INVISÍVEL */
+    .sidebar.mobile-searching {
+        background: transparent !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+        pointer-events: none; /* Deixa você clicar no site atrás */
     }
 
-    /* Esconde os links e botões do menu... */
-    .sidebar.search-active .nav-links,
-    .sidebar.search-active .sidebar-header,
-    .sidebar.search-active .sidebar-footer {
-        opacity: 0;
-        pointer-events: none; /* Impede cliques no nada */
-        visibility: hidden;
+    /* 2. Esconde TODOS os itens do menu (Links, Logo, Rodapé) */
+    .sidebar.mobile-searching > * {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: opacity 0.2s ease;
     }
 
-    /* ...Mas MANTÉM a barra de pesquisa visível e destacada */
-    .sidebar.search-active .search-box {
+    /* 3. Traz a barra de pesquisa de volta e destaca ela */
+    .sidebar.mobile-searching .search-box {
         opacity: 1 !important;
-        visibility: visible;
-        pointer-events: all;
+        visibility: visible !important;
+        pointer-events: auto !important; /* Permite digitar */
         position: absolute;
-        top: 20px; /* Ajuste conforme seu layout */
+        top: 20px;
         left: 50%;
         transform: translateX(-50%);
         width: 90%;
-        z-index: 10000;
+        background: rgba(20, 30, 48, 0.95); /* Fundo escuro só na barra */
+        border: 1px solid var(--neon-blue);
+        box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+        z-index: 99999;
+    }
+
+    /* 4. ESCONDE O OVERLAY (O fundo preto atrás do menu) */
+    .sidebar-overlay.mobile-searching {
+        opacity: 0 !important;
+        pointer-events: none !important;
     }
 }

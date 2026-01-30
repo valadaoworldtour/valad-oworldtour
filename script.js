@@ -897,6 +897,126 @@ const realCostData = {
             idioma: "Inglês"
         }
     },
+    "Ilhabela": {
+        comida: "R$ 80 – R$ 200",
+        hospedagem: "R$ 250 – R$ 700",
+        transporte: "R$ 30 – R$ 100", // Balsa (carro) + Combustível
+        atracoes: "R$ 50 – R$ 250",
+        checklist: {
+            passaporte: "Não (RG ou CNH)",
+            visto: "Nenhum",
+            vacinas: "Febre amarela recomendada (área de mata)",
+            seguro: "Recomendado (trilhas/mar)",
+            tomada: "220V (Atenção! Diferente da capital SP)",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
+    },
+    "Itacaré": {
+        comida: "R$ 60 – R$ 150",
+        hospedagem: "R$ 200 – R$ 600",
+        transporte: "R$ 20 – R$ 80", // Táxi/Mototáxi para praias distantes
+        atracoes: "R$ 0 – R$ 150",   // Praias grátis, passeios de canoa/cachoeira pagos
+        checklist: {
+            passaporte: "Não (RG ou CNH)",
+            visto: "Nenhum",
+            vacinas: "Febre amarela (recomendada, área de mata atlântica)",
+            seguro: "Recomendado (surf/trilhas)",
+            tomada: "127V (Atenção! Diferente de 220V do Nordeste comum)",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
+    },
+    "San Andrés": {
+        comida: "R$ 60 – R$ 150",
+        hospedagem: "R$ 200 – R$ 500",
+        transporte: "R$ 150 – R$ 300", // Aluguel de 'Mule' (carrinho de golfe) é essencial
+        atracoes: "R$ 100 – R$ 300",   // Passeios de barco (Johnny Cay/Acuario) + Taxa de entrada
+        checklist: {
+            passaporte: "Recomendado (RG recente aceito)",
+            visto: "Tarjeta de Turismo (Paga no aeroporto: ~R$ 180)",
+            vacinas: "Febre Amarela (OBRIGATÓRIA para brasileiros)",
+            seguro: "Recomendado",
+            tomada: "110V (Tipo A/B - Dois pinos chatos | Precisa de adaptador)",
+            moeda: "Peso Colombiano (COP)",
+            idioma: "Espanhol, Inglês e Creole"
+        }
+    },
+    "Bariloche": {
+        comida: "R$ 60 – R$ 180",
+        hospedagem: "R$ 300 – R$ 900",
+        transporte: "R$ 100 – R$ 250", // Aluguel de carro é muito recomendado + Remises
+        atracoes: "R$ 150 – R$ 500",   // Passes de esqui/teleféricos são caros na temporada
+        checklist: {
+            passaporte: "Não (RG com menos de 10 anos serve)",
+            visto: "Nenhum",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Essencial (Esportes de Inverno cobrem acidentes?)",
+            tomada: "220V (Tipo I - Três pinos chatos inclinados | Leve adaptador)",
+            moeda: "Peso Argentino (ARS) / Dólar / Real (Câmbio Blue vale a pena)",
+            idioma: "Espanhol"
+        }
+    },
+    "Stonehenge": {
+        comida: "R$ 80 – R$ 180", // Preço de pubs e cafés em Salisbury/Amesbury
+        hospedagem: "R$ 500 – R$ 1.200", // Diária em Salisbury (Libras são caras)
+        transporte: "R$ 200 – R$ 450", // Trem Londres-Salisbury + Stonehenge Tour Bus
+        atracoes: "R$ 180 – R$ 250",   // Ingresso oficial do monumento (é caro)
+        checklist: {
+            passaporte: "Obrigatório (Válido)",
+            visto: "Não (Brasileiros a turismo não precisam)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Altamente Recomendado (Saúde no UK para turista é paga)",
+            tomada: "230V (Tipo G - Três pinos retangulares | OBRIGATÓRIO adaptador)",
+            moeda: "Libra Esterlina (£) - Não aceitam Euro",
+            idioma: "Inglês"
+        }
+    },
+    "Sagrada Família": {
+        comida: "R$ 90 – R$ 200", // Preços de Barcelona (Tapas/Paella)
+        hospedagem: "R$ 600 – R$ 1.500", // Barcelona é cara
+        transporte: "R$ 30 – R$ 80", // Metrô (T-Casual) é barato e eficiente
+        atracoes: "R$ 170 – R$ 250",   // Ingresso com Torre + Audioguia (Comprar online!)
+        checklist: {
+            passaporte: "Obrigatório (Validade +3 meses)",
+            visto: "Não (ETIAS previsto para o futuro, verifique)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Obrigatório (Espaço Schengen exige cobertura de €30k)",
+            tomada: "230V (Tipo F - Dois pinos redondos | Precisa de adaptador se for pino chato)",
+            moeda: "Euro (€)",
+            idioma: "Catalão e Espanhol (Castelhano)"
+        }
+    },
+    "Cidade Proibida": {
+        comida: "R$ 40 – R$ 120", // China é barata, mas Pequim varia muito
+        hospedagem: "R$ 300 – R$ 800", // Hotéis em Pequim
+        transporte: "R$ 10 – R$ 50", // Metrô é excelente e barato. Didi (Uber) também.
+        atracoes: "R$ 45 – R$ 150",   // Ingresso é barato (~60 Yuan), mas difícil de conseguir
+        checklist: {
+            passaporte: "Obrigatório (Válido +6 meses)",
+            visto: "Obrigatório (Brasileiros precisam de visto de turismo L)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Altamente Recomendado (Hospitais internacionais são caros)",
+            tomada: "220V (Tipo A, C e I - O padrão chinês de 3 pinos inclinados é comum)",
+            moeda: "Yuan / Renminbi (CNY) - Dinheiro vivo quase não aceitam mais!",
+            idioma: "Mandarim (Pouco inglês falado)"
+        }
+    },
+    "Times Square": {
+        comida: "R$ 50 – R$ 300", // De hot dog de rua ($5) a restaurantes caros ($50+)
+        hospedagem: "R$ 1.000 – R$ 2.500", // Ficar na Times Square é caríssimo
+        transporte: "R$ 15 – R$ 20", // Metrô (OMNY/MetroCard) custa $2.90
+        atracoes: "R$ 0 – R$ 800",   // Ver as luzes é grátis. Broadway é caro ($100-$200+)
+        checklist: {
+            passaporte: "Obrigatório (Válido)",
+            visto: "Obrigatório (Visto Americano B1/B2)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Essencial (Saúde nos EUA é a mais cara do mundo - $5.000 uma ambulância)",
+            tomada: "110V (Tipo A/B - Dois pinos chatos | OBRIGATÓRIO adaptador)",
+            moeda: "Dólar Americano (USD)",
+            idioma: "Inglês"
+        }
+    },
     
 };
 
@@ -1949,7 +2069,188 @@ const worldData = {
                 passeio: "https://www.civitatis.com/br/aguas-calientes/ingresso-machu-picchu/", 
                 seguro: "https://www.segurospromo.com.br" 
             },
-        }
+        },
+        {
+                name: "Stonehenge",
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Stonehenge_back_wide.jpg/960px-Stonehenge_back_wide.jpg",
+                tags: ["História", "Mistério", "Arqueologia"],
+                mapa: "https://goo.gl/maps/stonehenge",
+                clima: "Temperado Oceânico. Venta MUITO na planície. Chuva fina é constante o ano todo. Leve capa.",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Junho (Solstício de Verão) para ver o sol alinhar. Maio e Setembro para menos chuva.",
+                    ideal_para: [
+                        "Apaixonados por História (Mistério de 5.000 anos)",
+                        "Místicos e Esotéricos (Energia das Ley Lines)",
+                        "Fotógrafos (O contraste das pedras com o céu cinza ou azul)",
+                        "Viajantes de Bate-volta (Fácil ir de Londres)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem espera tocar nas pedras (é proibido, exceto em tours VIP caríssimos ou Solstício)",
+                        "Quem acha que o ingresso é barato (custa cerca de £26-£30)",
+                        "Quem não gosta de caminhar (do centro de visitantes até as pedras é uma caminhada ou shuttle)"
+                    ],
+                    perfis: [
+                        { icone: "ri-ancient-pavilion-fill", nome: "História" },
+                        { icone: "ri-magic-line", nome: "Misticismo" },
+                        { icone: "ri-camera-lens-fill", nome: "Fotografia" },
+                        { icone: "ri-bus-fill", nome: "Tour" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. O Círculo de Pedras: A atração principal. Você anda em volta dele em um caminho demarcado.",
+                    "2. Visitor Centre: Museu moderno incrível com esqueletos, objetos neolíticos e reconstrução facial dos construtores.",
+                    "3. Casas Neolíticas: Réplicas de como as pessoas viviam ali há 4.500 anos (do lado de fora do museu).",
+                    "4. Salisbury Cathedral: Na cidade vizinha, tem a torre mais alta do Reino Unido e a Carta Magna original.",
+                    "5. Old Sarum: As ruínas da antiga cidade de Salisbury, num monte com vista linda.",
+                    "6. Woodhenge: Um sítio arqueológico vizinho, menos famoso, feito de madeira (hoje marcado com concreto).",
+                    "7. Durrington Walls: Onde ficava a vila dos construtores de Stonehenge.",
+                    "8. Avenida Processional: O caminho antigo que alinha com o sol.",
+                    "9. Bath: Cidade romana vizinha, geralmente incluída no mesmo dia do passeio.",
+                    "10. Amesbury: A cidadezinha mais próxima, boa para um almoço rápido."
+                ],
+
+                gastronomia: [
+                    "1. Cornish Pasty: Pastelão de massa grossa recheado de carne e batata. Clássico almoço rápido.",
+                    "2. Fish & Chips: Peixe frito com batatas. Procure um pub em Salisbury.",
+                    "3. Cream Tea: Chá com scones, geleia e clotted cream (creme de nata).",
+                    "4. Rock Cakes: Bolinhos duros que lembram pedras (vendidos no café do museu).",
+                    "5. Sunday Roast: Se for domingo, coma o assado tradicional (carne, batata, yorkshire pudding) num pub.",
+                    "6. Cerveja Ale (Bitter): A cerveja inglesa tradicional, morna e com pouco gás.",
+                    "7. Cider (Sidra): Bebida alcoólica de maçã muito popular no interior da Inglaterra.",
+                    "8. Shepherd's Pie: Escondidinho de carne de ovelha.",
+                    "9. Full English Breakfast: Café da manhã pesado com feijão, linguiça, ovo e cogumelo.",
+                    "10. Fudge: Docinhos de açúcar e leite, ótimos para levar de lembrança."
+                ],
+
+                religiao: [
+                    "1. Druidismo Moderno: Stonehenge é o templo central para druidas e pagãos atuais.",
+                    "2. Solstício de Verão: Milhares de pessoas se reúnem para ver o sol nascer alinhado com a Heel Stone.",
+                    "3. Paganismo: Celebração dos ciclos da natureza e colheita.",
+                    "4. Catedral de Salisbury: Anglicana (Igreja da Inglaterra), gótica e imponente.",
+                    "5. Misticismo: Crença em linhas de energia (Ley Lines) que cruzam o monumento.",
+                    "6. Enterros Neolíticos: A área ao redor (Barrows) é um vasto cemitério sagrado antigo.",
+                    "7. Lendas Arthurianas: Merlin teria trazido as pedras da Irlanda com mágica.",
+                    "8. Culto Solar: A construção é um calendário astronômico religioso.",
+                    "9. Peregrinação: Muitos vão para pedir cura ou sentir a vibração das pedras.",
+                    "10. Sincretismo: Turistas misturam meditação oriental com o cenário celta."
+                ],
+
+                curiosidades: [
+                    "1. Pedras Azuis: As pedras menores vieram do País de Gales, a 250km de distância. Ninguém sabe como trouxeram.",
+                    "2. Lego Gigante: As pedras grandes (Sarsen) têm encaixes tipo 'macho-fêmea' para não cair.",
+                    "3. Não é Único: Existem centenas de círculos de pedra no Reino Unido (como Avebury), mas este é o mais sofisticado.",
+                    "4. Estrada A303: Uma rodovia barulhenta passa muito perto do monumento (estragava a vibe, agora tem projeto de túnel).",
+                    "5. Leilão: Stonehenge já foi propriedade privada e foi comprado em leilão em 1915 por £6.600.",
+                    "6. Darwin: Charles Darwin estudou as minhocas de Stonehenge e como elas enterravam pedras.",
+                    "7. Alinhamento: O monumento marca o nascer do sol no dia mais longo do ano e o pôr do sol no dia mais curto.",
+                    "8. Cemitério: Era um local de cremação antes de porem as pedras grandes.",
+                    "9. Toque Proibido: Até 1977 podia subir nas pedras. Hoje tem corda de proteção.",
+                    "10. Obama: O ex-presidente dos EUA visitou e disse: 'É legal ter estado em um lugar que sobreviveu a tudo'."
+                ],
+
+                eventos_estacoes: [
+                    "1. Summer Solstice (20/21 Junho): O único dia que deixam entrar no meio do círculo de graça. Vira uma festa hippie gigante.",
+                    "2. Winter Solstice (21/22 Dezembro): Menor e mais frio, mas muito bonito o pôr do sol.",
+                    "3. Equinócios (Março e Setembro): Também celebrados por druidas.",
+                    "4. Verão (Jul-Ago): Filas enormes, muitos ônibus de turismo. Reserve com antecedência.",
+                    "5. Inverno: Venta muito e o campo fica enlameado, mas é vazio e místico.",
+                    "6. Festival de Salisbury (Maio/Junho): Artes e música na cidade vizinha.",
+                    "7. Natal em Salisbury: Mercado de Natal lindo na praça da cidade.",
+                    "8. English Heritage Events: Encenações históricas no campo ao redor.",
+                    "9. Colheita (Lammas): Celebração pagã em agosto.",
+                    "10. Ano Novo: Não tem fogos lá, o local fecha."
+                ],
+
+                info_gerais: [
+                    "1. Ingresso Antecipado: É OBRIGATÓRIO reservar hora no site da English Heritage. Não vende na hora se lotar.",
+                    "2. Audio Guide: Baixe o app 'Stonehenge Audio Tour' no celular (tem em português). É excelente.",
+                    "3. Vento: A planície de Salisbury é muito aberta. Leve jaqueta corta-vento mesmo no sol.",
+                    "4. The Stone Circle Experience: Existe um ingresso especial (caro) para entrar no círculo antes de abrir ou depois de fechar.",
+                    "5. Transporte: Se não alugar carro, pegue o trem de Londres (Waterloo) para Salisbury + o ônibus 'The Stonehenge Tour'.",
+                    "6. Mão Inglesa: Se dirigir, cuidado! Volante na direita, dirige na esquerda.",
+                    "7. Distância: Fica a 2h de Londres e 1h de Bath.",
+                    "8. Banheiros: Só tem no Centro de Visitantes (a 2km das pedras). Nas pedras não tem nada.",
+                    "9. Shuttle: Do museu até as pedras tem um ônibus (incluído no ingresso) ou você anda 25min pelo campo.",
+                    "10. Tomada: Leve adaptador Tipo G (Reino Unido). O padrão europeu (dois pinos) não entra."
+                ],
+
+                antes_de_ir: [
+                    "1. Baixe o App: O sinal de internet lá no meio do campo é ruim. Baixe o guia antes.",
+                    "2. Sapato Confortável: Se choveu, a grama vira lama. Evite salto ou tênis branco novo.",
+                    "3. Binóculos: Legal para ver os detalhes das pedras de longe (já que tem corda).",
+                    "4. Lanche: A comida no café do museu é cara e básica. Leve água e snacks.",
+                    "5. Guarda-chuva resistente: O vento quebra guarda-chuva fraco. Melhor capa de chuva.",
+                    "6. Combos: Se for a Bath ou Windsor também, compre tours que fazem os 3 no mesmo dia (cansativo, mas prático).",
+                    "7. English Heritage Pass: Se for visitar castelos (como Dover), vale a pena comprar o passe de sócio.",
+                    "8. Horário: Tente ir no primeiro horário da manhã (9h30) para pegar o lugar vazio.",
+                    "9. Realidade Aumentada: O app tem uma função que mostra como era o círculo completo.",
+                    "10. Respeito: Para muitos é um templo religioso ativo. Evite gritar ou fazer poses desrespeitosas."
+                ],
+
+                numeros: [
+                    "1. 999 (Emergência Reino Unido: Polícia, Bombeiros, Ambulância).",
+                    "2. 111 (NHS - Saúde não emergencial).",
+                    "3. English Heritage (Admin): +44 370 333 1181.",
+                    "4. Salisbury Hospital: O mais próximo para emergências.",
+                    "5. Taxi Salisbury: +44 1722 505050.",
+                    "6. National Rail: Informações de trens Londres-Salisbury.",
+                    "7. Consulado Brasileiro em Londres: +44 20 7930 9055.",
+                    "8. The Stonehenge Tour (Ônibus): +44 1202 338420.",
+                    "9. Polícia de Wiltshire: 101 (não emergência).",
+                    "10. Visitor Centre: Wi-Fi gratuito disponível."
+                ],
+
+                riscos: [
+                    "1. Clima: O risco de hipotermia leve ou ficar encharcado é real se não levar casaco. O tempo muda em 5 minutos.",
+                    "2. Trânsito na A303: A estrada ao lado trava sempre. Planeje tempo extra se for de carro.",
+                    "3. Preço da Comida: Comer no local é 'pega-turista'. Caro e sem graça.",
+                    "4. Batedores de Carteira: Na aglomeração do solstício ou na fila do ônibus.",
+                    "5. Tropeçar: O terreno é irregular, cheio de tocas de coelho no campo ao redor.",
+                    "6. Dirigir na Esquerda: Maior causa de acidentes com turistas brasileiros.",
+                    "7. Perder o Trem: Os trens britânicos são pontuais, mas caros se comprar na hora. Compre 'Advance'.",
+                    "8. Decepção: Muita gente acha 'só um monte de pedra' e se decepciona porque não pode tocar.",
+                    "9. Ovelhas: Nos campos ao redor tem gado e ovelhas. Cuidado onde pisa (fezes).",
+                    "10. Multas de Trânsito: Câmeras de velocidade estão por toda parte no UK."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Bate-volta Londres (1 Dia)",
+                        texto: [
+                            "08:00: Trem de Waterloo para Salisbury.",
+                            "10:00: Stonehenge Tour Bus (visita ao monumento e museu).",
+                            "14:00: Volta para Salisbury, visita à Catedral e almoço num pub.",
+                            "18:00: Trem de volta para Londres."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "História e Mistério (2 Dias)",
+                        texto: [
+                            "Dia 1: Chegada em Salisbury, visita a Old Sarum e Catedral. Noite no hotel 'The Haunch of Venison' (dizem ser assombrado).",
+                            "Dia 2: Stonehenge com calma pela manhã. Tarde em Woodhenge e Durrington Walls."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Rota Great West Way (4 Dias)",
+                        texto: [
+                            "Dia 1: Castelo de Windsor.",
+                            "Dia 2: Stonehenge e Avebury (outro círculo de pedras onde pode tocar).",
+                            "Dia 3: Bath (Termas Romanas).",
+                            "Dia 4: Cotswolds (vilarejos de pedra amarela) e volta."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/gb/salisbury.pt-br.html", 
+                    passeio: "https://www.english-heritage.org.uk/visit/places/stonehenge/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
     ],
     "Patrimônio Mundial": [
         {
@@ -2132,7 +2433,187 @@ const worldData = {
                 passeio: "https://www.civitatis.com/br/pequim/excursao-grande-muralha-china-mutianyu/", 
                 seguro: "https://www.segurospromo.com.br" 
             }
-        }
+        },
+        {
+                name: "Cidade Proibida",
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Forbidden_city_panoramic_edit.jpg/2560px-Forbidden_city_panoramic_edit.jpg",
+                tags: ["Império", "História", "Pequim"],
+                mapa: "https://goo.gl/maps/forbidden-city",
+                clima: "Continental. Verão muito quente e úmido. Inverno seco e congelante. Primavera tem tempestades de areia.",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Outubro (Outono é dourado e fresco). Abril também é bom, mas venta.",
+                    ideal_para: [
+                        "Amantes de História (O maior palácio do mundo)",
+                        "Fotógrafos de Arquitetura (Simetria perfeita)",
+                        "Curiosos Culturais (Entender a China Imperial)",
+                        "Quem gosta de caminhar (São 72 hectares de complexo)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem tem fobia de multidões (É sempre lotado, nível extremo)",
+                        "Quem não tem VPN no celular (Instagram/WhatsApp não funcionam sem VPN)",
+                        "Quem odeia filas e revistas de segurança (São constantes)"
+                    ],
+                    perfis: [
+                        { icone: "ri-government-fill", nome: "Império" },
+                        { icone: "ri-history-fill", nome: "História" },
+                        { icone: "ri-camera-fill", nome: "Fotografia" },
+                        { icone: "ri-drag-move-fill", nome: "Imensidão" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Portão Meridiano (Meridian Gate): A entrada principal colossal em forma de U.",
+                    "2. Salão da Suprema Harmonia: O maior e mais importante prédio, onde ocorriam as grandes cerimônias.",
+                    "3. Parque Jingshan: A colina artificial atrás da saída norte. Suba para ter a vista panorâmica de toda a Cidade Proibida.",
+                    "4. O Muro dos Nove Dragões: Um painel de cerâmica espetacular dentro do complexo.",
+                    "5. Jardim Imperial: No fundo do complexo, com ciprestes antigos e pedras exóticas.",
+                    "6. Museu do Relógio: Uma coleção incrível de relógios mecânicos europeus e chineses dados aos imperadores.",
+                    "7. Praça da Paz Celestial (Tiananmen): Fica logo em frente. É o coração político da China.",
+                    "8. Turret (Torres de Canto): As torres nas esquinas do fosso são as mais fotogênicas ao pôr do sol.",
+                    "9. Salão da Preservação da Harmonia: Onde eram feitos os exames imperiais.",
+                    "10. Grande Muralha (Badaling ou Mutianyu): Não fica na Cidade Proibida, mas quem vai a um, vai ao outro (bate-volta)."
+                ],
+
+                gastronomia: [
+                    "1. Pato de Pequim (Peking Duck): A pele é pururucada e servida com panquecas finas e molho doce. Obrigatório.",
+                    "2. Jiaozi (Dumplings): Pasteizinhos cozidos ou fritos, comida básica e deliciosa.",
+                    "3. Hot Pot (Mongolian): Caldo fervente na mesa onde você cozinha a carne de carneiro.",
+                    "4. Zha Jiang Mian: O 'macarrão à bolonhesa' de Pequim, com pasta de soja fermentada.",
+                    "5. Tanghulu: Espetinho de frutas caramelizadas (geralmente pilriteiro, que parece uma maçãzinha azeda).",
+                    "6. Chá Chinês: As casas de chá são tradicionais (cuidado com golpes em casas turísticas).",
+                    "7. Iogurte de Pequim: Vendido em potinhos de cerâmica branca com papel azul nas ruas.",
+                    "8. Baozi: Pãozinho cozido no vapor recheado de carne ou vegetais.",
+                    "9. Escorpião no Espeto: Na Wangfujing Street (mais para turista ver do que local comer).",
+                    "10. Baijiu: Destilado chinês fortíssimo feito de sorgo/arroz."
+                ],
+
+                religiao: [
+                    "1. Confucionismo: A estrutura da Cidade Proibida reflete a ordem, hierarquia e harmonia social.",
+                    "2. Taoismo: Muito presente nos símbolos de longevidade e equilíbrio (Yin Yang) na arquitetura.",
+                    "3. Budismo Tibetano: Existem templos e santuários budistas dentro do complexo usados pelos imperadores.",
+                    "4. Culto ao Céu: O Imperador era o 'Filho do Céu'. A arquitetura conecta o terreno ao divino.",
+                    "5. Superstição Numérica: O número 9 é sagrado (soam como 'eternidade').",
+                    "6. Animais Místicos: Dragões (Imperador), Fênix (Imperatriz) e Leões de Guarda protegem as entradas.",
+                    "7. Feng Shui: A localização e orientação (Norte-Sul) seguem regras estritas de energia.",
+                    "8. Templo do Céu: Fica próximo, onde o imperador orava por boas colheitas.",
+                    "9. Ancestralidade: O respeito aos antepassados é a base da fé chinesa.",
+                    "10. Ateísmo Estatal: Oficialmente o governo é ateu, mas a espiritualidade cultural é fortíssima."
+                ],
+
+                curiosidades: [
+                    "1. 9.999 Salas e Meia: Diz a lenda que o céu tem 10.000 salas, então o imperador fez uma a menos para não ofender os deuses.",
+                    "2. Sem Árvores: Nas grandes praças cerimoniais não há árvores para que assassinos não pudessem se esconder.",
+                    "3. Piso Falso: Alguns pisos têm 15 camadas de tijolos cruzados para impedir que cavassem túneis por baixo.",
+                    "4. Madeira: É a maior estrutura de madeira antiga preservada do mundo. O risco de incêndio sempre foi o maior medo (tem grandes caldeirões de água espalhados).",
+                    "5. Ninguém entrava: Por 500 anos, qualquer plebeu que entrasse sem convite era executado.",
+                    "6. Último Imperador: Puyi viveu lá até 1924, mesmo depois da queda do império, jogando tênis nos pátios.",
+                    "7. Starbucks: Teve uma cafeteria lá dentro que foi fechada por protestos de que 'feria a cultura chinesa'.",
+                    "8. Restauração Constante: Parte do complexo está sempre coberta por andaimes.",
+                    "9. Gatos Reais: Hoje, muitos gatos vivem lá e são cuidados pelos seguranças. São descendentes dos gatos das concubinas.",
+                    "10. Cor Amarela: Telhados amarelos eram exclusivos do Imperador. Só a biblioteca tem telhado preto (água) para proteger de incêndio."
+                ],
+
+                eventos_estacoes: [
+                    "1. Ano Novo Chinês (Jan/Fev): A cidade para ou lota. Decoração vermelha em todo lugar, mas muito frio.",
+                    "2. Golden Week (1ª semana de Outubro): Feriado nacional. EVITE A TODO CUSTO. 1 bilhão de pessoas viajam.",
+                    "3. Festival do Meio Outono (Set/Out): Comemoração da lua cheia com Mooncakes (bolinhos).",
+                    "4. Verão: Calor sufocante e muita chuva em Julho/Agosto.",
+                    "5. Inverno: Pode nevar. A Cidade Proibida com neve é a visão mais bonita possível.",
+                    "6. Festival das Lanternas: Encerra o ano novo com luzes.",
+                    "7. Florada da Primavera: Magnólias florescem nos jardins imperiais em Março/Abril.",
+                    "8. Troca da Guarda: Acontece na praça Tiananmen ao nascer do sol (tem que chegar de madrugada).",
+                    "9. Maratona de Pequim: Geralmente em Outubro.",
+                    "10. Dia dos Solteiros (11/11): O maior evento de compras do mundo (online)."
+                ],
+
+                info_gerais: [
+                    "1. INTERNET/VPN: Google, Insta, Zap, Facebook e YouTube são BLOQUEADOS. Baixe uma VPN paga (Astrill ou similar) ANTES de viajar.",
+                    "2. Pagamento Digital: Cartão de crédito internacional quase não passa. Baixe o 'Alipay' e vincule seu cartão brasileiro. Você vai pagar tudo com QR Code.",
+                    "3. Visto: Brasileiros precisam de visto. Se for ficar até 144h (6 dias) e tiver voo para um terceiro país, pode tentar a isenção de trânsito (regra complexa, verifique).",
+                    "4. Passaporte: Você precisa dele para entrar na Cidade Proibida (é seu ingresso) e para comprar chip de celular.",
+                    "5. Ingressos Antecipados: Os ingressos da Cidade Proibida esgotam 7 dias antes em minutos. Compre via agência se não conseguir no site oficial.",
+                    "6. Metrô: Tem raio-x em toda estação. Não leve canivetes ou sprays.",
+                    "7. Banheiros: Muitos são no estilo 'agachamento' (buraco no chão). Leve papel higiênico na bolsa.",
+                    "8. Poluição: Baixe um app de qualidade do ar. Se estiver ruim, use máscara N95.",
+                    "9. Tradutor: Baixe o Google Translate OFF-LINE ou apps como 'Baidu Translate'. Ninguém fala inglês na rua.",
+                    "10. Táxi: Tenha o endereço escrito em chinês (mandarim) para mostrar ao motorista."
+                ],
+
+                antes_de_ir: [
+                    "1. Instale o WeChat/Alipay: A China não usa dinheiro vivo. Sem app, você não compra nem água na máquina.",
+                    "2. VPN no Celular: Instale e teste ainda no Brasil.",
+                    "3. Sapatos Confortáveis: Você vai andar quilômetros dentro do palácio.",
+                    "4. Endereço em Chinês: O hotel deve te dar um cartãozinho com o endereço em caracteres hanzi.",
+                    "5. Bateria Extra: O uso de QR Code e VPN drena a bateria. Powerbank é vital.",
+                    "6. Remédios de Estômago: A comida tem temperos e óleos diferentes. Esteja prevenido.",
+                    "7. Inverno Rigoroso: Se for entre nov-mar, leve roupas térmicas pesadas. Venta muito.",
+                    "8. Água: Não beba da torneira. Só garrafa lacrada.",
+                    "9. Chip Local: Comprar um chip na chegada (aeroporto) facilita a conexão (mas ainda precisa de VPN).",
+                    "10. Paciência: A cultura é diferente (cuspir no chão, falar alto). Vá com a mente aberta."
+                ],
+
+                numeros: [
+                    "1. 110 (Polícia).",
+                    "2. 120 (Ambulância).",
+                    "3. 119 (Bombeiros).",
+                    "4. Embaixada do Brasil em Pequim: +86 10 6532-2881.",
+                    "5. Linha de Apoio ao Turista: 12301 (tem opção inglês).",
+                    "6. Aeroporto Pequim Capital (PEK) ou Daxing (PKX).",
+                    "7. Beijing United Family Hospital (Particular/Internacional): +86 10 5927 7000.",
+                    "8. Metrô de Pequim: Baixe o app 'MetroMan'.",
+                    "9. Táxi Didi (App): Versão chinesa do Uber (tem em inglês).",
+                    "10. China Telecom/Mobile: Operadoras de celular."
+                ],
+
+                riscos: [
+                    "1. Golpe da Casa de Chá: Estudantes simpáticos pedem para praticar inglês e te levam para tomar chá. A conta vem em R$ 5.000. É o golpe mais comum.",
+                    "2. Táxi Clandestino (Black Taxi): No aeroporto ou pontos turísticos, ignore quem te chama. Vá para a fila oficial.",
+                    "3. Atravessar a Rua: Carros e motos elétricas (silenciosas) não param para pedestres. Cuidado total.",
+                    "4. Great Firewall: Ficar sem comunicação se a VPN cair.",
+                    "5. Câmeras: Você está sendo filmado 100% do tempo. Comporte-se.",
+                    "6. Cambistas: Dinheiro falso pode ser trocado se usar cambistas de rua.",
+                    "7. Triciclos (Rickshaw): Negocie o preço ANTES de subir, ou vão cobrar uma fortuna no final.",
+                    "8. Empurra-Empurra: Filas na China são um conceito abstrato. Use os cotovelos educadamente.",
+                    "9. Poluição do Ar: Em dias de alerta vermelho, evite esforço físico ao ar livre.",
+                    "10. Drogas: Tolerância zero absoluta. Pena de morte ou prisão perpétua. Não arrisque nada."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Eixo Central (Meio Dia)",
+                        texto: [
+                            "Manhã: Entrada pelo Portão Meridiano.",
+                            "Caminhada pelo eixo central: Portão da Suprema Harmonia, Três Grandes Salões.",
+                            "Jardim Imperial e Saída pelo Portão Norte.",
+                            "Subida na Colina Jingshan para ver o palácio de cima."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Pequim Imperial (1 Dia)",
+                        texto: [
+                            "Manhã: Praça da Paz Celestial (Tiananmen) e Cidade Proibida (Roteiro Curto mas visitando as alas laterais - Tesouro e Relógios).",
+                            "Tarde: Parque Jingshan e Jantar de Pato de Pequim em Wangfujing."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Grande Muralha e Palácios (3 Dias)",
+                        texto: [
+                            "Dia 1: Cidade Proibida e Tiananmen.",
+                            "Dia 2: Grande Muralha da China (Seção Mutianyu - com teleférico e tobogã).",
+                            "Dia 3: Templo do Céu pela manhã e Palácio de Verão à tarde."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/cn/beijing.pt-br.html", 
+                    passeio: "https://www.dpm.org.cn/Home.html", // Site oficial do Palace Museum
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
     ],
     "Parque": [
         {
@@ -2294,6 +2775,374 @@ const worldData = {
                 seguro: "https://www.segurospromo.com.br" 
             },
         }
+    ],
+    Arquitetura: [
+        {
+                name: "Sagrada Família",
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/%CE%A3%CE%B1%CE%B3%CF%81%CE%AC%CE%B4%CE%B1_%CE%A6%CE%B1%CE%BC%CE%AF%CE%BB%CE%B9%CE%B1_2941.jpg/500px-%CE%A3%CE%B1%CE%B3%CF%81%CE%AC%CE%B4%CE%B1_%CE%A6%CE%B1%CE%BC%CE%AF%CE%BB%CE%B9%CE%B1_2941.jpg",
+                tags: ["Gaudí", "Basílica", "Arte"],
+                mapa: "https://goo.gl/maps/sagradafamilia",
+                clima: "Mediterrâneo. Verão quente e úmido. Inverno ameno. Melhor luz para fotos: Primavera/Outono.",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Manhã cedo (luz azul/fria na fachada da Paixão) ou Fim de tarde (luz laranja/quente na Natividade).",
+                    ideal_para: [
+                        "Amantes de Arquitetura (A obra prima do Modernismo Catalão)",
+                        "Fotógrafos (O jogo de luzes dos vitrais no interior é único no mundo)",
+                        "Religiosos e Espiritualistas (A simbologia é profunda)",
+                        "Engenheiros (As estruturas de catenária e colunas de árvore são geniais)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem tem vertigem (A descida das torres é por escada caracol estreita)",
+                        "Quem não compra antecipado (Ingressos esgotam dias antes)",
+                        "Quem tem pressa (A fila de segurança pode demorar)"
+                    ],
+                    perfis: [
+                        { icone: "ri-home-heart-fill", nome: "Arquitetura" }, // Ícone focado no tema pedido
+                        { icone: "ri-camera-lens-fill", nome: "Luz & Cor" },
+                        { icone: "ri-ancient-pavilion-fill", nome: "História" },
+                        { icone: "ri-eye-fill", nome: "Detalhes" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Fachada da Natividade: A única construída por Gaudí em vida. Rica em detalhes da natureza e nascimento.",
+                    "2. Fachada da Paixão: O oposto da Natividade. Ossuda, austera e moderna, representa a morte de Cristo.",
+                    "3. O Interior (A Floresta): As colunas imitam árvores que se ramificam no teto. A luz dos vitrais muda a cor do templo.",
+                    "4. Torre da Natividade: Vista para o mar e para o lado leste de Barcelona (subida de elevador, descida de escada).",
+                    "5. Torre da Paixão: Vista para o centro da cidade e Montjuïc.",
+                    "6. O Claustro: Corredores que circundam a igreja, desenhados para procissões e isolamento acústico.",
+                    "7. Museu Gaudí: Fica no subsolo. Mostra as maquetes de pesos e cordas (polifunicular) que ele usava.",
+                    "8. Escolas da Sagrada Família: Um prédio pequeno e ondulado no pátio, joia da arquitetura simples.",
+                    "9. Cripta: Onde Gaudí está enterrado. É uma igreja funcional abaixo do altar principal.",
+                    "10. Praça de Gaudí: O parque em frente com o lago, de onde se tira a foto clássica do reflexo na água."
+                ],
+
+                gastronomia: [
+                    "1. Jamón Ibérico: Presunto curado de alta qualidade. Tem em todo lugar ao redor.",
+                    "2. Crema Catalana: A versão local do Crème Brûlée.",
+                    "3. Paella / Fideuà: Prato de arroz ou macarrão com frutos do mar (cuidado com restaurantes 'pega-turista' ao lado da igreja).",
+                    "4. Tapas: Patatas Bravas (batatas picantes) e Pan con Tomate (pão com tomate e alho).",
+                    "5. Cava: O espumante catalão.",
+                    "6. Churros com Chocolate: Clássico para o café da tarde.",
+                    "7. Horchata: Bebida de chufa (tubérculo), doce e leitosa.",
+                    "8. Sangria: Cuidado, os locais bebem mais 'Tinto de Verano' (vinho com soda).",
+                    "9. Botifarra: Linguiça catalã servida com feijão branco.",
+                    "10. Turrón: Doce de amêndoas típico."
+                ],
+
+                religiao: [
+                    "1. Bíblia de Pedra: A ideia de Gaudí era que o prédio fosse uma bíblia que os pobres pudessem ler olhando.",
+                    "2. Simbologia Numérica: Tudo tem significado (12 torres apóstolos, 4 evangelistas, 1 Maria, 1 Jesus).",
+                    "3. Natureza Divina: Gaudí dizia que 'a originalidade consiste em voltar à origem', copiando as formas de Deus na natureza.",
+                    "4. Morte de Gaudí: Ele era tão devoto e humilde que, quando foi atropelado por um bonde, acharam que era um mendigo.",
+                    "5. Fachada da Glória: A futura fachada principal, representará o Juízo Final e a Glória (ainda em obras).",
+                    "6. Quadrado Mágico: Na fachada da Paixão, há um quadro numérico onde a soma dá sempre 33 (idade de Cristo).",
+                    "7. Missas Internacionais: Acontecem aos domingos de manhã (entrada restrita).",
+                    "8. Torre de Jesus: Será a torre mais alta, com 172,5m (um pouco menos que a montanha Montjuïc, pois 'o homem não deve superar Deus').",
+                    "9. Consagração: Foi consagrada como Basílica Menor pelo Papa Bento XVI apenas em 2010.",
+                    "10. Obras Eternas: 'Meu cliente não tem pressa' (frase famosa de Gaudí sobre Deus e a demora da obra)."
+                ],
+
+                curiosidades: [
+                    "1. Construção Infinita: Começou em 1882 e a previsão de término é por volta de 2026-2030 (centenário de Gaudí).",
+                    "2. Financiamento: É um Templo Expiatório, ou seja, financiado 100% por doações e ingressos. O governo não paga.",
+                    "3. Incêndio: Na Guerra Civil Espanhola, anarquistas queimaram o ateliê de Gaudí e destruíram as maquetes originais.",
+                    "4. Sem Linhas Retas: No interior, não existem linhas retas puras, tudo é orgânico e curvo.",
+                    "5. Metrô: O trem passa a poucos metros dos alicerces (houve pânico na época da construção do túnel).",
+                    "6. Elevator man: As torres têm elevador para subir, mas a descida é a pé (mais de 300 degraus).",
+                    "7. Ingressos Esgotados: É o monumento mais visitado da Espanha. Tentar comprar na hora é impossível.",
+                    "8. Visão 360º: As torres oferecem vistas únicas dos quarteirões octogonais de Barcelona (Eixample).",
+                    "9. Acústica: O coro foi projetado para abrigar milhares de vozes nas galerias superiores.",
+                    "10. Polêmica: Muitos críticos dizem que a parte nova (Fachada da Paixão) não segue o estilo de Gaudí."
+                ],
+
+                eventos_estacoes: [
+                    "1. Sant Jordi (23 de Abril): Dia dos namorados catalão. A cidade enche de rosas e livros. A Sagrada Família recebe iluminação especial.",
+                    "2. Natal: Feira de Natal tradicional acontece na praça em frente à igreja.",
+                    "3. La Mercè (Setembro): Padroeira de Barcelona. Projeções de luzes e fogos na cidade.",
+                    "4. Portas Abertas (Setembro): Dias gratuitos para moradores (sorteio), celebração da Mercè.",
+                    "5. Verão (Jul-Ago): Calor intenso e filas gigantescas. A luz interna é forte e vertical.",
+                    "6. Inverno (Dez-Fev): Sol mais baixo cria efeitos de luz longos e bonitos nos vitrais à tarde.",
+                    "7. Semana Santa: Iluminações especiais na Fachada da Paixão.",
+                    "8. Concertos: Ocasionalmente ocorrem concertos de música sacra ou órgão.",
+                    "9. Obras: Guindastes são parte da vista. Eventualmente uma torre nova é inaugurada (como a de Maria em 2021).",
+                    "10. Primavera: Melhor época para visitar os parques ao redor."
+                ],
+
+                info_gerais: [
+                    "1. Dress Code: É uma igreja ativa. Ombros e joelhos devem estar cobertos. Bonés e chapéus fora. Eles barram na entrada!",
+                    "2. App Oficial: Baixe o app 'Sagrada Familia Official' para ouvir o audioguia no seu celular (leve fones).",
+                    "3. Torres: Vale a pena? Sim, mas não é para quem tem claustrofobia. A vista é linda, mas o interior da igreja é o principal.",
+                    "4. Mochilas: Tem raio-x na entrada tipo aeroporto. Evite bolsas grandes.",
+                    "5. Metrô: Estação 'Sagrada Família' (Linhas L2 e L5) sai na porta.",
+                    "6. Furtos: A área externa é o paraíso dos 'batedores de carteira' (pickpockets). Cuidado com o celular ao tirar fotos.",
+                    "7. Banheiros: Existem dentro da área paga e são limpos.",
+                    "8. Tempo de visita: Reserve pelo menos 1h30 a 2 horas.",
+                    "9. Fotografia: Tripés não são permitidos sem autorização especial.",
+                    "10. Saída: A saída é pelos fundos (Fachada da Paixão), onde tem a loja de souvenirs."
+                ],
+
+                antes_de_ir: [
+                    "1. COMPRE ONLINE: Não vá sem ingresso. Compre no site oficial com semanas de antecedência.",
+                    "2. Escolha o Horário: 'Pôr do sol' (Golden Hour) é mágico por causa dos vitrais laranjas/vermelhos.",
+                    "3. Roupas: Leve um lenço na bolsa para cobrir os ombros se estiver de regata.",
+                    "4. Carregador: Você vai tirar muitas fotos e usar o audioguia no celular. Leve powerbank.",
+                    "5. Água: Leve uma garrafa. O calor no verão é forte na fila.",
+                    "6. Livro/Guia: Ler um pouco sobre a simbologia antes ajuda a entender, senão parece só 'muita pedra'.",
+                    "7. Crianças: Carrinhos de bebê não sobem nas torres.",
+                    "8. Grupos: Se estiver em grupo grande, use fones para não gritar dentro da nave.",
+                    "9. Combine com Hospital de Sant Pau: Outra joia arquitetônica que fica no final da avenida (10 min a pé).",
+                    "10. Golpe da Assinatura: Evite pessoas na rua pedindo assinatura para 'abaixo-assinado de surdos-mudos'. É golpe para roubar carteira."
+                ],
+
+                numeros: [
+                    "1. 112 (Emergência Geral Europa).",
+                    "2. 091 (Polícia Nacional).",
+                    "3. 092 (Guardia Urbana - Polícia Local).",
+                    "4. Consulado do Brasil em Barcelona: +34 934 88 22 88.",
+                    "5. Metrô Barcelona (TMB): Informações nas estações.",
+                    "6. Hospital de Sant Pau: Emergência médica próxima.",
+                    "7. Táxi (Amarelo e Preto): App 'Free Now' é muito usado.",
+                    "8. Renfe (Trens): Para sair da cidade.",
+                    "9. Aeroporto El Prat (BCN).",
+                    "10. Lost & Found (Sagrada Família): Pergunte na entrada da Carrer de la Marina."
+                ],
+
+                riscos: [
+                    "1. Pickpockets (Batedores de Carteira): Barcelona é a capital mundial disso. Cuidado no metrô e olhando para o alto.",
+                    "2. Restaurantes Ruins: A 'Avinguda de Gaudí' tem muitos restaurantes caros e ruins. Caminhe 2 quarteirões para dentro do bairro para comer bem.",
+                    "3. Vendedores de Rua: Vendendo lenços, imãs, etc. Costumam ser insistentes.",
+                    "4. Tropeços: Dentro da igreja, as pessoas andam olhando para o teto e esbarram umas nas outras.",
+                    "5. Calor: No verão, a praça em frente não tem muita sombra na fila.",
+                    "6. Cambistas: Não compre ingressos de estranhos na rua. São falsos.",
+                    "7. Escadaria das Torres: É caracol, estreita e dá tontura. Segure no corrimão.",
+                    "8. Manifestações: Às vezes ocorrem protestos na região que fecham ruas.",
+                    "9. Bicicletas/Patinetes: As ciclovias são muito usadas e rápidas. Cuidado ao atravessar.",
+                    "10. Taxa Turística: Hotéis cobram uma taxa extra por dia (não é golpe, é lei)."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Essencial Gaudí (2 Horas)",
+                        texto: [
+                            "1. Fotos externas na Praça de Gaudí (lado do lago).",
+                            "2. Entrada pela Fachada da Natividade (audioguia).",
+                            "3. Interior: Nave central, altar e vitrais.",
+                            "4. Saída pela Fachada da Paixão e visita ao Museu no subsolo."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Completo com Torres (3-4 Horas)",
+                        texto: [
+                            "1. Siga o roteiro curto.",
+                            "2. Subida à Torre (Natividade ou Paixão) - agendar horário!",
+                            "3. Visita às Escolas da Sagrada Família no pátio.",
+                            "4. Caminhada pela Avinguda de Gaudí até o Hospital de Sant Pau para almoçar."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Dia Modernista (Dia Inteiro)",
+                        texto: [
+                            "Manhã: Park Güell (precisa de ingresso separado).",
+                            "Tarde: Sagrada Família (Roteiro Médio) no horário da 'Golden Hour' (16h-18h).",
+                            "Noite: Passeio no Passeig de Gràcia para ver a Casa Batlló e La Pedrera iluminadas."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/es/barcelona.pt-br.html", 
+                    passeio: "https://sagradafamilia.org/en/tickets", 
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
+            
+    ],
+    "Ícone Urbano": [
+        {
+            name: "Times Square",
+            imagem: "https://images.unsplash.com/photo-1534430480872-3498386e7856?q=80&w=2070&auto=format&fit=crop",
+            tags: ["Nova York", "Luzes", "Broadway"],
+            mapa: "https://goo.gl/maps/timessquare",
+            clima: "Temperado. Verão muito quente e úmido (o concreto esquenta). Inverno gélido e com neve/vento encanado.",
+            
+            // === DADOS DO VEREDICTO ===
+            veredicto: {
+                melhor_epoca: "Maio/Junho (Primavera) ou Setembro/Outubro (Outono). Dezembro é lindo (Natal), mas insuportavelmente cheio.",
+                ideal_para: [
+                    "Turistas de primeira viagem (Obrigatório ir pelo menos uma vez)",
+                    "Fãs de Teatro Musical (O coração da Broadway)",
+                    "Amantes de Compras (Lojas gigantescas que fecham de madrugada)",
+                    "Quem gosta de agito 24h (A cidade que nunca dorme)"
+                ],
+                nao_ideal_para: [
+                    "Quem tem fobia de multidão (É o lugar mais cheio do mundo)",
+                    "Quem busca silêncio ou natureza (É barulho de sirene e luz na cara o tempo todo)",
+                    "Quem odeia cheiro de maconha (Legalizada em NY, o cheiro é onipresente na rua)"
+                ],
+                perfis: [
+                    { icone: "ri-building-2-fill", nome: "Urbano" },
+                    { icone: "ri-shopping-bag-fill", nome: "Compras" },
+                    { icone: "ri-music-2-fill", nome: "Teatro" },
+                    { icone: "ri-lightbulb-flash-fill", nome: "Luzes" }
+                ]
+            },
+            // =================================
+
+            pontos_turisticos: [
+                "1. Escadaria Vermelha (Red Steps): Fica em cima da bilheteria da TKTS. O lugar clássico para a foto panorâmica.",
+                "2. Broadway: As ruas transversais (42nd a 54th) onde ficam os teatros mais famosos do mundo (O Rei Leão, Wicked, Hamilton).",
+                "3. One Times Square: O prédio estreito onde a bola cai no Ano Novo (não dá para entrar, só ver de fora).",
+                "4. Lojas Flagship: M&M's World, Disney Store, Hersheys Chocolate World (são atrações por si só).",
+                "5. Hard Rock Cafe NYC: Gigante, com guitarra na entrada e memorabilia de rock.",
+                "6. Madame Tussauds: O museu de cera famoso, fica na 42nd St.",
+                "7. Bryant Park: A 5 minutos a pé. Um oásis verde no meio dos prédios, com pista de patinação no inverno.",
+                "8. Rockefeller Center: A 10 minutos a pé. Onde tem a árvore de Natal gigante e o observatório Top of the Rock.",
+                "9. Midnight Moment: Todas as noites, das 23:57 à 00:00, os telões sincronizam uma arte digital.",
+                "10. Naked Cowboy: O artista de rua mais famoso (um cara de cueca e violão), faça chuva ou sol."
+            ],
+
+            gastronomia: [
+                "1. Pizza de US$ 1 (ou $1.50): Fatia de queijo barata e rápida. (Joe's Pizza é a melhor, fica perto).",
+                "2. Cheesecake: Junior's Cheesecake é lendário e tem uma unidade na 45th St.",
+                "3. Hot Dog de Rua: Clássico, mas cuidado com a higiene (chamam de 'dirty water dog').",
+                "4. Ellen's Stardust Diner: Restaurante onde os garçons são cantores da Broadway esperando uma chance. Fila enorme, mas divertido.",
+                "5. Shake Shack: Hambúrguer nova-iorquino famoso (tem fila, mas anda rápido).",
+                "6. Bubba Gump Shrimp: Turístico, caro, mas tem a vista para as luzes.",
+                "7. Halal Guys: O carrinho de comida de rua mais famoso (arroz com frango/cordeiro e molho branco) na 53rd com a 6th Ave.",
+                "8. Olive Garden: Brasileiros amam, fica bem no centro da Times Square.",
+                "9. Bagel com Cream Cheese: Café da manhã típico.",
+                "10. Pret A Manger: Sanduíches prontos e saudáveis para comer andando."
+            ],
+
+            religiao: [
+                "1. O Deus Dinheiro: Times Square é o templo do capitalismo e consumismo mundial.",
+                "2. The Crossroads of the World: Ponto de encontro de todas as culturas e crenças.",
+                "3. Gospel no Harlem: Muitos turistas saem daqui domingo de manhã para ver missas no Harlem.",
+                "4. St. Malachy's (The Actors' Chapel): Uma igreja católica na W 49th St frequentada por atores da Broadway.",
+                "5. Igreja de Scientology: Tem uma sede grande perto, sempre tentando recrutar turistas.",
+                "6. Judaísmo: Forte presença em NY, com muitas delis kosher na região.",
+                "7. St. Patrick's Cathedral: A catedral gótica mais famosa dos EUA fica a 10 min a pé.",
+                "8. Misticismo Urbano: As previsões de fim de mundo e cartazes religiosos são comuns nas esquinas.",
+                "9. O Homem Pelado (Naked Cowboy): Virou quase uma entidade espiritual do local pela constância.",
+                "10. Natal: A decoração natalina é levada muito a sério, quase como ritual sagrado."
+            ],
+
+            curiosidades: [
+                "1. Visível do Espaço: A concentração de luz é tão forte que astronautas conseguem identificar à noite.",
+                "2. Não era assim: Nos anos 70/80, era uma área perigosa, cheia de sex shops e crimes. A Disney ajudou a revitalizar nos anos 90.",
+                "3. Bilhões: Os painéis de LED custam milhões por mês para anunciar. É o metro quadrado publicitário mais caro do mundo.",
+                "4. A Bola: A 'Ball Drop' de Ano Novo pesa 5 toneladas e fica lá o ano todo no topo do prédio.",
+                "5. TKTS: A escadaria vermelha na verdade é o teto da bilheteria que vende ingressos da Broadway com desconto para o mesmo dia.",
+                "6. Sem Noite: É tão iluminado que seu cérebro acha que é dia às 3 da manhã.",
+                "7. Pedestres: A Broadway foi fechada para carros na Times Square e virou calçadão para pedestres em 2009.",
+                "8. Elmo Malvado: Os bonecos (Mickey, Elmo, etc.) não são oficiais. São pessoas cobrando gorjeta. Se tirar foto, pague ou eles brigam.",
+                "9. Good Morning America: O estúdio de TV fica lá, você vê a gravação da rua.",
+                "10. Fumaça de Bueiro: Aquela fumaça saindo do chão é vapor do sistema de aquecimento da cidade, não esgoto."
+            ],
+
+            eventos_estacoes: [
+                "1. Réveillon (Ball Drop): Tem que chegar às 10h da manhã e usar fralda (não tem banheiro e não pode sair da grade).",
+                "2. Broadway Week (Jan/Set): Ingressos 2 por 1 para musicais.",
+                "3. Thanksgiving (Novembro): A parada da Macy's passa perto (6th Ave).",
+                "4. Verão (Solstício): Acontece uma aula de Yoga gigante no meio da rua fechada.",
+                "5. Natal: A árvore do Rockefeller (perto) e as vitrines da 5ª Avenida.",
+                "6. Restaurant Week: Menus a preço fixo em restaurantes caros.",
+                "7. St. Patrick's Day (Março): Parada irlandesa, tudo verde e bares lotados.",
+                "8. Pride March (Junho): A parada LGBTQIA+ é gigantesca.",
+                "9. Halloween Parade: Desfile de fantasias (geralmente no Village, mas reflete na cidade toda).",
+                "10. New York Comic Con (Outubro): A cidade enche de cosplayers."
+            ],
+
+            info_gerais: [
+                "1. GORJETA (TIP): Nos EUA não é opcional. É culturalmente OBRIGATÓRIO dar entre 18% e 22% em restaurantes com garçom.",
+                "2. Taxas: O preço na etiqueta NUNCA é o final. Adicione ~8.8% de taxa de venda.",
+                "3. Banheiro: É difícil achar. Use o do McDonald's, Starbucks (às vezes precisa de código), hotéis grandes ou lojas de departamento (Macy's).",
+                "4. Metrô: Funciona 24h, mas é sujo e tem ratos. Use o Google Maps para saber as linhas. Pague com o celular (aproxime na catraca).",
+                "5. Água: Pode pedir 'Tap Water' (torneira) nos restaurantes, é grátis e potável.",
+                "6. CD de Rap: Não pegue CDs que te oferecem na rua. Eles vão te coagir a pagar e ficam agressivos.",
+                "7. Wi-Fi: Tem Wi-Fi grátis na praça, mas cuidado com dados sensíveis.",
+                "8. Tomada: Leve adaptador. A voltagem é 110V.",
+                "9. Ar Condicionado: No verão, as lojas são geladas. Tenha um casaco leve.",
+                "10. Sirenes: O barulho é constante. Leve protetor auricular se tiver sono leve no hotel."
+            ],
+
+            antes_de_ir: [
+                "1. Sapatos Confortáveis: Você vai andar 15km por dia sem perceber. Esqueça salto alto.",
+                "2. Adaptador de Tomada: Compre um 'Pino Chato' universal.",
+                "3. Remédios: Farmácia (CVS/Walgreens) vende tudo, menos antibiótico. Leve o seu kit básico.",
+                "4. Visto Impresso: Tenha cópias das reservas e passagens para a imigração.",
+                "5. Ingressos Broadway: Compre online antes para garantir (Lion King esgota). TKTS é para arriscar na hora.",
+                "6. Seguro Viagem: NUNCA viajo para os EUA sem seguro de pelo menos US$ 60.000 de cobertura.",
+                "7. Cartão Global: Nomad/Wise economizam muito IOF comparado ao cartão de crédito br.",
+                "8. Powerbank: O uso de GPS e fotos drena bateria rápido.",
+                "9. Mala de Mão: Cuidado com o peso nas compras da volta.",
+                "10. App 'CityMapper': Às vezes melhor que o Google Maps para o metrô de NY."
+            ],
+
+            numeros: [
+                "1. 911 (Emergência Geral - Polícia/Bombeiro/Ambulância).",
+                "2. 311 (Informações da Cidade e Reclamações não urgentes).",
+                "3. Consulado do Brasil em NY: +1 (917) 777-7777 (Fica na 225 E 41st St).",
+                "4. NYPD Times Square Substation: Tem uma delegacia bem no meio da praça.",
+                "5. Mount Sinai West: Hospital próximo com pronto-socorro.",
+                "6. Aeroporto JFK / LaGuardia / Newark.",
+                "7. Central de Táxi Amarelo: Basta levantar a mão na rua.",
+                "8. TKTS Booth: Venda de ingressos na Father Duffy Square.",
+                "9. Port Authority Bus Terminal: Rodoviária principal (perto, na 42nd com 8th).",
+                "10. Penn Station / Grand Central: Estações de trem."
+            ],
+
+            riscos: [
+                "1. Golpes de Rua: Monges falsos pedindo 'doação', rappers com CD, bonecos da Disney cobrando foto. Ignore e não pare.",
+                "2. Pickpockets: Na aglomeração do Ano Novo ou olhando para cima tirando foto, cuide da carteira.",
+                "3. Ciclistas de Delivery: As bicicletas elétricas andam rápido e na contramão. Olhe para os dois lados.",
+                "4. Cheiro de Maconha: Pode ser forte e incomodar quem não gosta, mas é legalizado.",
+                "5. Metrô de Madrugada: O vagão vazio pode ter pessoas com problemas mentais ou agressivas. Fique no vagão do condutor (meio).",
+                "6. Preços Ocultos: Cuidado com taxas de serviço e 'resort fees' em hotéis.",
+                "7. Rickshaws (Bicitáxi): Cobram preços abusivos ($5 por minuto). Evite.",
+                "8. Inverno: O vento entre os prédios corta a pele. Risco de congelamento se não estiver protegido.",
+                "9. Ratos: Comuns no metrô e pilhas de lixo na rua à noite.",
+                "10. Cambistas Broadway: Não compre ingresso de caras na rua. São falsos."
+            ],
+
+            roteiros: {
+                "curto": {
+                    titulo: "Noite de Luzes (4 Horas)",
+                    texto: [
+                        "17:00: Chegada e fotos na Escadaria Vermelha.",
+                        "18:00: Compras nas flagships (M&M's, Disney).",
+                        "19:00: Jantar no Junior's (Cheesecake) ou Ellen's Stardust.",
+                        "21:00: Ver o Midnight Moment nos telões."
+                    ]
+                },
+                "medio": {
+                    titulo: "Dia de Broadway (1 Dia)",
+                    texto: [
+                        "Manhã: Bryant Park e Biblioteca Pública (perto).",
+                        "Tarde: Rockefeller Center e Top of the Rock.",
+                        "Noite: Assistir a um Musical da Broadway (começa às 19h ou 20h) e jantar pizza pós-teatro."
+                    ]
+                },
+                "longo": {
+                    titulo: "Explorador de Manhattan (3 Dias - Base Times Square)",
+                    texto: [
+                        "Dia 1: Times Square, Broadway e 5ª Avenida.",
+                        "Dia 2: Central Park (Norte) e Museus.",
+                        "Dia 3: Estátua da Liberdade (Sul), Wall St e Ponte do Brooklyn."
+                    ]
+                },
+            },
+
+            links: {
+                hotel: "https://www.booking.com/district/us/new-york/times-square.pt-br.html", 
+                passeio: "https://www.broadway.com/", 
+                seguro: "https://www.segurospromo.com.br" 
+            },
+        },
     ],
     },
     "América do Sul": {
@@ -7275,14 +8124,373 @@ veredicto: {
                     seguro: "https://www.segurospromo.com.br" 
                 },
             },
-            
+            {
+                name: "Ilhabela",
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Sunset_View_-_Ilhabela.jpg/1280px-Sunset_View_-_Ilhabela.jpg",
+                tags: ["Praia", "Natureza", "Vela"],
+                mapa: "https://goo.gl/maps/ilhabela",
+                clima: "Tropical Litorâneo. Quente e úmido. Chuvas frequentes no verão.",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Abril e Maio (Menos chuva e temperatura agradável). O verão chove muito e a fila da balsa é longa.",
+                    ideal_para: [
+                        "Amantes de natureza selvagem (85% da ilha é parque preservado)",
+                        "Velejadores e praticantes de Kitesurf (Capital da Vela)",
+                        "Casais (pousadas charmosas e restaurantes românticos)",
+                        "Aventureiros (trilhas para praias isoladas como Bonete)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem tem alergia grave a picadas de insetos (os borrachudos não perdoam)",
+                        "Quem busca agito urbano intenso (o foco aqui é praia e natureza)",
+                        "Quem não tem paciência com trânsito (a fila da balsa pode levar horas)"
+                    ],
+                    perfis: [
+                        { icone: "ri-sailboat-fill", nome: "Vela" },
+                        { icone: "ri-leaf-fill", nome: "Natureza" },
+                        { icone: "ri-bug-fill", nome: "Aventura" }, // Ícone alusivo à mata/insetos
+                        { icone: "ri-hearts-fill", nome: "Romance" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Praia de Castelhanos: Acessível apenas por 4x4, barco ou trilha. Uma das mais selvagens e bonitas.",
+                    "2. Centro Histórico (Vila): Charme colonial, lojinhas, píer e ótimos restaurantes.",
+                    "3. Praia do Bonete: Uma comunidade caiçara isolada. O acesso é por uma trilha de 12km ou barco (maré permitindo).",
+                    "4. Praia do Curral: A mais badalada. Areia cheia, música alta, bares de luxo e pôr do sol incrível.",
+                    "5. Cachoeira do Gato: Uma queda d'água impressionante acessível pela trilha de Castelhanos.",
+                    "6. Praia do Jabaquara: Uma das mais preservadas do norte, acessível de carro (estrada de terra).",
+                    "7. Ilha das Cabras: Santuário ecológico marinho, o melhor ponto para mergulho e snorkel.",
+                    "8. Praia da Feiticeira: Tranquila, familiar e com um antigo engenho de cana.",
+                    "9. Pico do Baepi: Para quem aguenta subir, a vista lá de cima abrange todo o canal de São Sebastião.",
+                    "10. Praia do Perequê: Central, ótima para esportes, ciclovia e ver o movimento."
+                ],
+
+                gastronomia: [
+                    "1. Camarão na Moranga: Prato clássico servido em quase todos os restaurantes da ilha.",
+                    "2. Peixe com Banana: A mistura do doce da banana da terra com o peixe fresco local.",
+                    "3. Casquinha de Siri: A entrada obrigatória nos quiosques à beira-mar.",
+                    "4. Lula Recheada: Muito comum devido à pesca local.",
+                    "5. Caipirinha de Folha de Mexerica: Uma variação aromática e deliciosa da bebida nacional.",
+                    "6. Sorvetes Artesanais: Na Vila, há sorveterias famosas com sabores de frutas locais.",
+                    "7. Frutos do Mar: Polvo, mariscos e ostras são sempre frescos.",
+                    "8. Bistrôs da Vila: A gastronomia internacional é forte no centro histórico.",
+                    "9. Açaí: Para repor as energias depois da praia.",
+                    "10. Borrachudo (Drink): Alguns bares servem drinks vermelhos brincando com o nome do mosquito."
+                ],
+
+                religiao: [
+                    "1. Igreja Nossa Senhora D'Ajuda: Padroeira da cidade, uma construção colonial linda no topo da escadaria da Vila.",
+                    "2. Lendas Caiçaras: A espiritualidade local é misturada com lendas de piratas e tesouros escondidos.",
+                    "3. Capela de São Pedro: Nas comunidades isoladas (como Bonete), a fé no santo pescador é vital.",
+                    "4. Festas de Padroeiros: As comunidades tradicionais fazem festas com procissões marítimas.",
+                    "5. Natureza Mística: Muitos buscam a ilha para retiros de yoga e conexão espiritual na mata.",
+                    "6. Cruz do Pico do Baepi: Um marco de fé no ponto alto da ilha.",
+                    "7. Congada de Ilhabela: Manifestação cultural e religiosa de herança africana, muito forte na festa de São Benedito.",
+                    "8. Igrejas Evangélicas: Presentes nos bairros residenciais.",
+                    "9. Benzideiras: Em bairros mais antigos, a tradição das rezadeiras ainda resiste.",
+                    "10. Naufrágios: Existe um respeito quase religioso pelos mortos nos centenas de navios afundados ao redor da ilha."
+                ],
+
+                curiosidades: [
+                    "1. Capital da Vela: Sedia a 'Semana Internacional de Vela', maior evento do tipo na América Latina.",
+                    "2. Borrachudos: A ilha tem o mosquito 'Simulídeo'. Ele não pica, ele morde (e coça por dias).",
+                    "3. Lendas de Piratas: Dizem que o pirata Thomas Cavendish escondeu tesouros aqui no século XVI.",
+                    "4. Cemitério de Navios: A costa de Ilhabela tem mais de 100 naufrágios registrados (o 'Triângulo das Bermudas' brasileiro).",
+                    "5. 85% Preservada: A maior parte da ilha é Parque Estadual, onde não se pode construir.",
+                    "6. Cachoeiras: Dizem que a ilha tem 365 cachoeiras (uma para cada dia do ano), mas é exagero (são cerca de 30 visitáveis).",
+                    "7. Toca do Polvo: Um abrigo natural em Castelhanos que teria sido usado por piratas.",
+                    "8. Balsa: É o único acesso para carros. Em feriados, a fila pode chegar a 4 ou 5 horas.",
+                    "9. Engenhos: No passado, a ilha foi uma grande produtora de cana-de-açúcar e cachaça.",
+                    "10. Trilha do Bonete: Eleita pelo jornal The Guardian como uma das 10 praias mais bonitas do Brasil."
+                ],
+
+                eventos_estacoes: [
+                    "1. Semana de Vela (Julho): A cidade lota de velejadores, festas e gente bonita. Preços sobem.",
+                    "2. Festival do Camarão (Agosto): Ocorre na Vila, com pratos especiais a preços promocionais.",
+                    "3. X-Terra (Maio): Etapa do circuito de Triathlon cross-country e corridas de trilha.",
+                    "4. Verão (Dez-Mar): Calor, chuva, trânsito e praias lotadas. A balsa é um teste de paciência.",
+                    "5. Inverno (Jun-Ago): Clima seco, dias lindos e noites frias. Ótimo para trilhas e comer bem.",
+                    "6. Réveillon: Festas famosas em beach clubs (DPNY, Sea Club) com ingressos caríssimos.",
+                    "7. Festival de Jazz (Outubro): Shows de música instrumental na praça da Vila.",
+                    "8. Kitesurf (Set-Nov): Temporada dos ventos fortes no canal, céu colorido de pipas.",
+                    "9. Carnaval: Blocos de rua na Vila e desfiles.",
+                    "10. Birdwatching (Primavera): Observadores de aves vêm ver espécies endêmicas da Mata Atlântica."
+                ],
+
+                info_gerais: [
+                    "1. Voltagem: 220V (Cuidado! A maioria das cidades de SP é 110V, mas Ilhabela é 220V).",
+                    "2. DDD: 12.",
+                    "3. Balsa: Paga-se apenas na ida (São Sebastião -> Ilhabela). Pedestres não pagam.",
+                    "4. Hora Marcada: Vale muito a pena agendar a balsa pelo site (é mais caro, mas fura a fila).",
+                    "5. Transporte: Existe ônibus que percorre a avenida principal (norte-sul) e 'aquabus'.",
+                    "6. Carro 4x4: Essencial se quiser ir para Castelhanos por conta própria (carros baixos atolam ou são proibidos).",
+                    "7. Bancos: Tem agências na Vila e no Perequê, mas leve dinheiro para praias isoladas.",
+                    "8. Sinal de Celular: Vivo pega bem. Outras operadoras falham no lado sul e leste (Castelhanos).",
+                    "9. Água: Beba mineral. A água da ilha é captada na serra, mas o tratamento varia.",
+                    "10. Taxa Ambiental: Cobra-se uma TPA (Taxa de Preservação) para entrar na ilha (placa do carro)."
+                ],
+
+                antes_de_ir: [
+                    "1. Repelente Citronela: O repelente comum NÃO funciona contra borrachudos. Compre o 'Citroilha' ou similar lá mesmo. Passe a cada 2h.",
+                    "2. Complexo B: Começar a tomar vitamina B12 dias antes ajuda a diminuir a atração dos mosquitos (dica local).",
+                    "3. Agende a Balsa: Se for feriado ou sexta à tarde, agende a 'Hora Marcada' no site do DH (Departamento Hidroviário).",
+                    "4. Óleo de Bebê: Moradores usam óleo corporal (tipo Johnson's) nas pernas. O borrachudo escorrega e não pica (mas mela).",
+                    "5. Dinheiro em Espécie: Em praias como Bonete ou Castelhanos, a maquininha de cartão pode não ter sinal.",
+                    "6. Abasteça Antes: O combustível na ilha é mais caro que no continente (São Sebastião). Encha o tanque antes da balsa.",
+                    "7. Trânsito na Ilha: Só existe uma avenida principal. Se engarrafar, não tem rota de fuga. Tenha paciência.",
+                    "8. Tênis Velho: Se for fazer trilhas, leve um tênis que possa sujar de lama vermelha.",
+                    "9. Kit Praia: Muitas praias não têm quiosque ou cobram caro. Levar cooler e cadeira ajuda a economizar.",
+                    "10. Cuidado com Waze: Não confie cegamente. Ele pode te mandar para trilhas de 4x4 achando que é rua."
+                ],
+
+                numeros: [
+                    "1. 190 (Polícia Militar).",
+                    "2. 193 (Bombeiros e Resgate).",
+                    "3. 192 (SAMU).",
+                    "4. (12) 3896-9200 (Hospital Mário Covas): O único hospital público da ilha.",
+                    "5. 0800 77 33 711 (DERSA/Balsa): Informações sobre a fila e operação da balsa.",
+                    "6. (12) 3896-9400 (Prefeitura/Turismo).",
+                    "7. 199 (Defesa Civil): Para deslizamentos em chuvas fortes.",
+                    "8. (12) 3896-1266 (Delegacia de Polícia).",
+                    "9. Ponto de Táxi da Balsa: (12) 3895-8334.",
+                    "10. Parque Estadual de Ilhabela: (12) 3896-2585."
+                ],
+
+                riscos: [
+                    "1. Picadas de Borrachudo: Se você é alérgico, a perna pode inchar muito. Leve antialérgico (consulte médico). Eles atacam no nascer e pôr do sol.",
+                    "2. Fila da Balsa: O maior estresse. Pode levar 30 minutos ou 5 horas. Monitore as câmeras online antes de descer a serra.",
+                    "3. Pedras Escorregadias: Nas cachoeiras, o limo é traiçoeiro. Cuidado redobrado ao andar nas pedras molhadas.",
+                    "4. Marés: Em trilhas costeiras (como a do Bonete), a maré alta pode bloquear trechos.",
+                    "5. Estrada de Castelhanos: Se chover, a estrada de terra vira sabão. Carros sem 4x4 ficam atolados e o resgate é caríssimo.",
+                    "6. Correnteza: Praias de tombo (como Bonete e Castelhanos) têm correntes fortes. Respeite o mar aberto.",
+                    "7. Preços: Ilhabela é um destino caro (padrão 'Ilha da Fantasia'). Pergunte o preço antes de consumir.",
+                    "8. Ouriços: Nas áreas de pedra (Ilha das Cabras), use sapatilha para não pisar em espinhos.",
+                    "9. Ventos Súbitos: O canal canaliza vento. Se estiver de caiaque ou SUP, cuidado para não ser empurrado para o meio do mar.",
+                    "10. Roubos em Carros: Não deixe mochilas visíveis no carro estacionado em trilhas isoladas."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Fim de Semana (2 Dias)",
+                        texto: [
+                            "Dia 1: Chegada e Centro Histórico (Vila). Almoço e tarde na Praia do Curral (pôr do sol).",
+                            "Dia 2: Passeio de escuna ou lancha para Praia da Fome e Jabaquara. Noite na pizzaria no Perequê."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Aventura 4x4 (4 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o roteiro curto.",
+                            "Dia 3: Passeio de Jipe (4x4) para a Praia de Castelhanos (atravessando o parque). Volta de barco parando nas praias.",
+                            "Dia 4: Ilha das Cabras (mergulho) e tarde tranquila na Praia da Feiticeira."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Ilha Completa (7 Dias)",
+                        texto: [
+                            "Dias 1 a 4: Siga o roteiro médio.",
+                            "Dia 5: Trilha ou barco para o Bonete (passe o dia ou durma lá uma noite).",
+                            "Dia 6: Cachoeiras (Toca, Gato ou Três Tombos).",
+                            "Dia 7: Ciclovia da orla (alugue uma bike) e despedida no Saco da Capela."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/br/ilhabela.pt-br.html", 
+                    passeio: "https://www.civitatis.com/br/ilhabela/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
+            {
+                name: "Itacaré",
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/MARCIO_FILHO_ITACARE_CIDADE_ITACARE_BAHIA_%2840933336562%29.jpg/960px-MARCIO_FILHO_ITACARE_CIDADE_ITACARE_BAHIA_%2840933336562%29.jpg",
+                tags: ["Surf", "Praia", "Cacau"],
+                mapa: "https://goo.gl/maps/itacare",
+                clima: "Tropical Úmido. Sol e chuva se alternam o ano todo. Verão é quente e agitado.",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Setembro a Novembro (Menos chuva e cidade mais tranquila). O verão é lotado e animado.",
+                    ideal_para: [
+                        "Surfistas (ondas famosas internacionalmente)",
+                        "Jovens e Solteiros (a vida noturna na Rua da Pituba é intensa)",
+                        "Amantes de Ecoturismo (trilhas na mata e cachoeiras)",
+                        "Apreciadores de Chocolate (região cacaueira)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem tem dificuldade de locomoção (muitas ladeiras e trilhas)",
+                        "Quem odeia insetos (é uma cidade cercada de mata fechada)",
+                        "Quem busca resorts 'pé na areia' estilo Caribe (aqui o estilo é rústico-chique)"
+                    ],
+                    perfis: [
+                        { icone: "ri-surf-line", nome: "Surf" },
+                        { icone: "ri-plant-fill", nome: "Natureza" },
+                        { icone: "ri-beer-fill", nome: "Agito" }, 
+                        { icone: "ri-sun-fill", nome: "Praia" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Prainha: Cartão-postal da cidade. Acesso por trilha de 40min ou guia. Visual selvagem inesquecível.",
+                    "2. Praia da Tiririca: O point do surf. Ondas fortes, gente jovem e campeonatos frequentes.",
+                    "3. Rua da Pituba: Onde tudo acontece à noite. Restaurantes, bares, música ao vivo e artesanato.",
+                    "4. Itacarezinho: Praia longa (3.5km), com estrutura de restaurante e coqueirais a perder de vista.",
+                    "5. Praia de Jeribucaçu: Acesso por trilha passando por mangue. O encontro do rio com o mar é lindo.",
+                    "6. Cachoeira do Tijuípe: Acesso fácil, ótima para banho e ideal para famílias.",
+                    "7. Praia do Resende: Pequena, charmosa e com gramado e coqueiros. Ótima para relaxar perto do centro.",
+                    "8. Mirante do Xaréu: O local clássico para assistir ao pôr do sol no mar.",
+                    "9. Praia da Engenhoca: A preferida dos surfistas de longboard e iniciantes. Trilha fácil.",
+                    "10. Rio de Contas: Passeios de canoa ou lancha para ver o manguezal e cachoeira do Cleandro."
+                ],
+
+                gastronomia: [
+                    "1. Moqueca Baiana: Com dendê e leite de coco fresco, imperdível em qualquer restaurante local.",
+                    "2. Chocolate de Origem: Itacaré está na Costa do Cacau. Prove o chocolate produzido nas fazendas vizinhas.",
+                    "3. Suco de Cacau: Refrescante, doce e muito diferente do chocolate. Vende-se a polpa ou o cacau in natura.",
+                    "4. Tapioca: No café da manhã ou jantar, recheada com queijo coalho e banana.",
+                    "5. Acarajé: Nas barracas de rua no final da tarde, tradição baiana.",
+                    "6. Peixe na Folha de Bananeira: Preparo indígena/caiçara comum na região.",
+                    "7. Bobó de Camarão: Cremoso e intenso.",
+                    "8. Pizza na Pituba: A rua principal tem ótimas pizzarias rústicas.",
+                    "9. Caipirinha de Cacau ou Biribiri: Frutas locais que dão drinks exóticos.",
+                    "10. Bares de Praia: Petiscos como isca de peixe e macaxeira frita."
+                ],
+
+                religiao: [
+                    "1. Igreja de São Miguel Arcanjo: Construção jesuíta de 1723, a mais antiga e importante da cidade.",
+                    "2. Candomblé: Forte presença na Bahia, com terreiros e festas tradicionais na região.",
+                    "3. Lavagem da Escadaria: Festividade sincrética que une catolicismo e religiões de matriz africana.",
+                    "4. Festas Juninas: São João é celebrado com muita fé e forró na cidade.",
+                    "5. Lendas do Rio de Contas: Histórias de pescadores sobre espíritos das águas.",
+                    "6. Capoeira: Mais que esporte, é uma filosofia espiritual e cultural muito forte em Itacaré.",
+                    "7. Igrejas Evangélicas: Presentes nos bairros residenciais.",
+                    "8. Misticismo e Yoga: Muitos retiros espirituais se instalam aqui pela energia da natureza.",
+                    "9. Benzedeiras: Tradição antiga ainda viva entre os nativos mais velhos.",
+                    "10. Festa de São Miguel (Setembro): Padroeiro da cidade, com procissão e festa profana."
+                ],
+
+                curiosidades: [
+                    "1. Coronéis do Cacau: A cidade foi porto de escoamento de cacau e já foi muito rica. Entrou em decadência com a 'vassoura-de-bruxa' (praga) e renasceu com o turismo.",
+                    "2. Cenário de Novela: Foi cenário de 'Renascer' (versão antiga e trechos da nova) e filmes.",
+                    "3. Surf Town: É considerada o Havaí Baiano pela constância das ondas.",
+                    "4. Mata Atlântica: É uma das poucas áreas do Nordeste onde a mata atlântica chega quase até o mar.",
+                    "5. Acesso Difícil: Até 1998, a estrada era de terra batida muito ruim, o que preservou a cidade do turismo de massa por anos.",
+                    "6. Capoeira: Tem uma das rodas de capoeira mais respeitadas da Bahia.",
+                    "7. Taboquinhas: Um distrito de Itacaré onde se faz rafting, famoso por ser mais 'raiz'.",
+                    "8. Chocolates Premiados: O cacau da região hoje é 'fino', usado em chocolates gourmet mundialmente.",
+                    "9. Forró: Não importa se é Bahia, o forró pé-de-serra toca alto quase toda noite.",
+                    "10. Arquitetura: Os casarões do centro são herança da era de ouro do cacau."
+                ],
+
+                eventos_estacoes: [
+                    "1. Réveillon: Um dos mais famosos (e caros) do Brasil. Festas privadas gigantescas.",
+                    "2. Carnaval: Blocos de rua tradicionais e 'caretas' (mascarados que assustam as crianças).",
+                    "3. Festival de Surf (Outubro): Etapas do mundial ou nacional costumam ocorrer na Tiririca.",
+                    "4. Festival Gastronômico (Julho/Agosto): Pratos especiais usando ingredientes locais como cacau e dendê.",
+                    "5. São João (Junho): A cidade se enfeita e tem muito forró na praça.",
+                    "6. Verão (Dez-Fev): Cidade lotada, trânsito lento, preços altos e muito sol.",
+                    "7. Inverno (Jun-Ago): Chuvas frequentes ('Inverno Baiano'), mas o mar continua morno.",
+                    "8. Temporada das Baleias (Jul-Out): Baleias Jubarte podem ser vistas na costa em passeios de barco.",
+                    "9. Dia de Iemanjá (2 de Fevereiro): Oferendas no mar, partindo da Praia da Concha.",
+                    "10. Baixa Temporada (Maio/Setembro): Melhor época para quem quer paz e preços baixos."
+                ],
+
+                info_gerais: [
+                    "1. Voltagem: 127V (Cuidado, boa parte do Nordeste é 220V, mas Itacaré costuma ser 127V).",
+                    "2. DDD: 73.",
+                    "3. Bancos: Tem Banco do Brasil, Bradesco e Lotérica. Caixas 24h às vezes faltam dinheiro em feriados.",
+                    "4. Internet: Boa no centro e pousadas, mas falha nas praias mais afastadas (Prainha, Jeribucaçu).",
+                    "5. Água: Não beba da torneira em hipótese alguma.",
+                    "6. Transporte: Não precisa de carro para as praias urbanas (Resende, Tiririca, Concha). Para as rurais, precisa.",
+                    "7. Mototáxi: É o meio de transporte oficial e mais rápido da cidade.",
+                    "8. Estradas: A BA-001 (que vem de Ilhéus) é asfaltada e bonita, mas sinuosa.",
+                    "9. Aeroporto: O mais próximo é Ilhéus (IOS), a 70km de distância.",
+                    "10. Taxas: Algumas praias (Itacarezinho) cobram estacionamento caro se entrar de carro."
+                ],
+
+                antes_de_ir: [
+                    "1. Dinheiro Vivo: Leve sempre um pouco. Algumas barracas de trilha e guias não aceitam cartão.",
+                    "2. Tênis ou Papete: Para as trilhas (Prainha e Jeribucaçu). Chinelo escorrega e arrebenta.",
+                    "3. Repelente: Essencial. Tem mosquito, maruim e mutuca nas áreas de mata.",
+                    "4. Protetor Solar: O sol da Bahia queima mesmo nublado.",
+                    "5. Marés: Verifique a tábua de marés. Na maré baixa, praias como a Concha ficam piscinas; na alta, somem.",
+                    "6. Guias: Para Prainha, se for a primeira vez, contrate um guia ou vá com grupos. A trilha tem bifurcações.",
+                    "7. Transfer: Agende seu transfer de Ilhéus com antecedência se não for alugar carro.",
+                    "8. Roupas Leves: Faz calor o ano todo. Esqueça casacos pesados, traga no máximo um corta-vento para chuva.",
+                    "9. Mochila Estanque: Se for fazer passeios de barco ou cachoeira, protege o celular.",
+                    "10. Respeite os Nativos: A cultura local é forte. Peça licença ao entrar e tirar fotos de pessoas."
+                ],
+
+                numeros: [
+                    "1. 190 (Polícia Militar).",
+                    "2. 192 (SAMU).",
+                    "3. (73) 3251-2195 (Delegacia).",
+                    "4. Fundação Hospitalar de Itacaré: Atendimento básico de emergência.",
+                    "5. (73) 3251-3108 (Secretaria de Turismo).",
+                    "6. Ponto de Táxi Rodoviária: Pergunte no local, varia muito.",
+                    "7. Aeroporto de Ilhéus: (73) 3234-4000 (Base para informações de voo).",
+                    "8. Associação de Guias: Geralmente tem quiosque no centro.",
+                    "9. Farmácias: Várias na Rua Pituba e arredores.",
+                    "10. Bombeiros: A base mais próxima costuma ser Ilhéus, cuidado redobrado."
+                ],
+
+                riscos: [
+                    "1. Correnteza: Praias como Tiririca e Itacarezinho têm correntes de retorno fortes. Se não surfa, cuidado.",
+                    "2. Trilhas Escorregadias: Depois de chuva, o barro fica liso. Risco de torção.",
+                    "3. Furtos na Praia: Não deixe coisas sozinhas na areia enquanto entra no mar, especialmente em praias cheias.",
+                    "4. Coco: Não fique deitado bem embaixo de coqueiros carregados.",
+                    "5. Estradas à Noite: A estrada Ilhéus-Itacaré é escura e tem animais na pista. Evite dirigir de madrugada.",
+                    "6. Assédio: Vendedores ambulantes e guias podem ser insistentes. Um 'não, obrigado' firme resolve.",
+                    "7. Águas Vivas: Ocorrem em certas épocas. Se ver na areia, não toque.",
+                    "8. Pedras: Na Praia da Concha e costões, as pedras têm cracas que cortam o pé.",
+                    "9. Bebida Adulterada: Em festas muito cheias, cuide do seu copo.",
+                    "10. Golpe do Passeio Barato: Desconfie de preços muito abaixo da tabela. O barato sai caro (barco ruim, sem colete)."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Essencial (3 Dias)",
+                        texto: [
+                            "Dia 1: Praias Urbanas (Resende, Tiririca, Costa) e pôr do sol na Ponta do Xaréu. Noite na Pituba.",
+                            "Dia 2: Trilha da Prainha (manhã) e tarde na Praia da Ribeira (arborismo opcional).",
+                            "Dia 3: Praia da Concha (mar calmo, stand-up paddle) e compras de cacau no centro."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Explorador (5 Dias)",
+                        texto: [
+                            "Dias 1 a 3: Siga o roteiro curto.",
+                            "Dia 4: Passeio '4 Praias' (Itacarezinho, Engenhoca, Havaizinho, Camboinha) - trilha leve.",
+                            "Dia 5: Cachoeira do Tijuípe e tarde relaxando em algum Beach Club."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Imersão Total (7 Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o roteiro médio.",
+                            "Dia 6: Passeio de barco/canoa pelo Rio de Contas até a Cachoeira do Cleandro.",
+                            "Dia 7: Trilha de Jeribucaçu (passa por mangue e praia linda) e despedida com moqueca."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/br/itacare.pt-br.html", 
+                    passeio: "https://www.tripadvisor.com.br/Attractions-g303270-Activities-Itacare_State_of_Bahia.html", 
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
 
         ],
         "Argentina": [
             {
                 name: "Buenos Aires",
                 // FOTO: Obelisco e Av. 9 de Julho (Wikimedia - Link Estável)
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/A_View_of_the_Obelisk%2C_in_Buenos_Aires%2C_Argentina%2C_the_Host_Site_for_the_2018_G-20_Leaders%27_Summit_%2846114415381%29.jpg/500px-A_View_of_the_Obelisk%2C_in_Buenos_Aires%2C_Argentina%2C_the_Host_Site_for_the_2018_G-20_Leaders%27_Summit_%2846114415381%29.jpg",
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Casa_Rosada_%282051973489%29.jpg/960px-Casa_Rosada_%282051973489%29.jpg",
                 tags: ["Tango", "Gastronomia", "Romance"],
                 mapa: "https://goo.gl/maps/buenosaires",
                 clima: "Temperado. Verões quentes e úmidos, invernos frios (mas sem neve na capital).",
@@ -7464,7 +8672,190 @@ veredicto: {
                     passeio: "https://www.civitatis.com/br/buenos-aires/", 
                     seguro: "https://www.segurospromo.com.br" 
                 }
-            }
+            },
+            {
+                name: "Bariloche",
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/View_from_the_Golf_course_at_Llao_Llao.jpg/960px-View_from_the_Golf_course_at_Llao_Llao.jpg",
+                tags: ["Neve", "Montanha", "Chocolate"],
+                mapa: "https://goo.gl/maps/bariloche",
+                clima: "Frio de Montanha. Inverno (Jun-Set) com neve e gelo. Verão (Dez-Mar) agradável e seco, dias longos.",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Inverno (Julho/Agosto) para esquiar. Verão (Janeiro) para lagos e trilhas.",
+                    ideal_para: [
+                        "Esquiadores e Snowboarders (Cerro Catedral é a maior estação da América do Sul)",
+                        "Amantes de Chocolate (a cidade é a capital nacional do chocolate)",
+                        "Casais (clima romântico de montanha e fondue)",
+                        "Famílias (contato com a neve pela primeira vez)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem odeia frio extremo (no inverno as temperaturas são negativas)",
+                        "Quem busca praia tropical (os lagos são gelados até no verão)",
+                        "Quem quer economizar em eletrônicos (não é um destino de compras tecnológicas)"
+                    ],
+                    perfis: [
+                        { icone: "ri-snowflake-fill", nome: "Neve" },
+                        { icone: "ri-goblet-fill", nome: "Gastronomia" },
+                        { icone: "ri-landscape-fill", nome: "Paisagem" },
+                        { icone: "ri-car-fill", nome: "Roadtrip" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Cerro Catedral: O principal centro de esqui. No verão, ótimo para trekking.",
+                    "2. Circuito Chico: O passeio básico. Um tour panorâmico de 60km passando pelos principais lagos e mirantes.",
+                    "3. Cerro Campanario: Dizem ter a vista mais bonita da região (sobe-se de teleférico).",
+                    "4. Isla Victoria e Bosque de Arrayanes: Passeio de barco clássico que inspirou o filme Bambi (dizem).",
+                    "5. Centro Cívico: A praça principal com arquitetura alpina, cães São Bernardo e o museu.",
+                    "6. Lago Nahuel Huapi: O imenso lago que banha a cidade. Passeios de barco ou caiaque.",
+                    "7. Rota dos 7 Lagos: Estrada cênica que liga Bariloche a San Martín de los Andes. Imperdível.",
+                    "8. Cerro Otto: Onde fica a Confeitaria Giratória. Sobe-se de gôndola fechada.",
+                    "9. Villa La Angostura: Uma cidadezinha vizinha super charmosa e elitizada.",
+                    "10. Piedras Blancas: Parque de diversão na neve, famoso pelo 'esquibunda' (trineo)."
+                ],
+
+                gastronomia: [
+                    "1. Chocolate Artesanal: Mamuschka e Rapa Nui são paradas obrigatórias.",
+                    "2. Cordeiro Patagônico: Assado na estaca, carne macia e saborosa.",
+                    "3. Truta (Trucha): Peixe típico dos lagos da região, servido com molhos variados.",
+                    "4. Fondue de Queijo: Clássico nas noites frias.",
+                    "5. Cerveja Artesanal: Bariloche é um polo cervejeiro (Patagonia, Wesley, Manush).",
+                    "6. Ahumados (Defumados): Cervo, javali e queijos defumados são aperitivos comuns.",
+                    "7. Alfajor: As lojas de chocolate vendem versões frescas incríveis.",
+                    "8. Goulash com Spätzle: Influência da imigração alemã/suíça.",
+                    "9. Sorvete (Helado): Mesmo no frio, o sorvete argentino é espetacular (provavelmente o 'Super Dulce de Leche').",
+                    "10. Chá da Tarde: No Hotel Llao Llao, uma experiência de luxo com vista."
+                ],
+
+                religiao: [
+                    "1. Catedral de San Carlos de Bariloche: Templo neogótico imponente à beira do lago.",
+                    "2. Capilla San Eduardo: Uma capela de madeira linda perto do Hotel Llao Llao.",
+                    "3. Virgem das Neves: Padroeira dos montanhistas, com gruta na estrada para o Catedral.",
+                    "4. Cultura Mapuche: A espiritualidade dos povos originários ainda é presente na região.",
+                    "5. Influência Europeia: As igrejas lembram as dos Alpes suíços e alemães.",
+                    "6. Turismo Religioso: Peregrinações à Gruta da Virgem de Lourdes.",
+                    "7. Judaísmo: A cidade recebe muitos turistas israelenses e tem estrutura kosher.",
+                    "8. Lendas do Lago: O 'Nahuelito' (monstro do lago) faz parte do folclore místico.",
+                    "9. Retiros Espirituais: A paz das montanhas atrai grupos de meditação.",
+                    "10. Cemitério do Montanhista: Um local de respeito aos que perderam a vida nas escaladas."
+                ],
+
+                curiosidades: [
+                    "1. Brasiloche: Em julho, a cidade enche tanto de brasileiros que aceitam Real em todo lugar.",
+                    "2. Arquitetura Suíça: O Centro Cívico foi construído para parecer uma vila europeia.",
+                    "3. Nazistas: Existem muitas teorias (e algumas confirmações) sobre refúgio de nazistas na região pós-guerra.",
+                    "4. Walt Disney: Diz a lenda que ele se inspirou no Bosque de Arrayanes para criar cenários de Bambi.",
+                    "5. Nahuelito: A versão patagônica do Monstro do Lago Ness, que viveria no Nahuel Huapi.",
+                    "6. Viagem de Formatura: Bariloche é o destino clássico de formatura dos estudantes argentinos (baladas insanas).",
+                    "7. Vulcões: As cinzas de vulcões chilenos (como o Puyehue) às vezes cobrem a cidade.",
+                    "8. Cães São Bernardo: Os famosos cachorros do Centro Cívico para tirar foto.",
+                    "9. Capital do Chocolate: A cidade produz toneladas de chocolate por ano.",
+                    "10. Vento: Na Patagônia venta muito. As árvores às vezes crescem tortas por isso."
+                ],
+
+                eventos_estacoes: [
+                    "1. Festa Nacional da Neve (Agosto): Shows, concursos de hacheros (lenhadores) e descida de tochas.",
+                    "2. Fiesta del Chocolate (Páscoa): Fazem a maior barra de chocolate do mundo na rua principal.",
+                    "3. Bariloche a la Carta (Outubro): Festival gastronômico gigante com preços promocionais.",
+                    "4. Natal no Centro Cívico: Decoração linda e árvore gigante iluminada.",
+                    "5. Inverno (Jun-Set): Temporada alta, neve, trânsito e preços altos.",
+                    "6. Verão (Jan-Fev): Temporada de praias de lago, trekking e dias que escurecem às 22h.",
+                    "7. Primavera: As flores (retamas) deixam as estradas amarelas e lindas.",
+                    "8. Outono: As árvores ficam vermelhas e ocre. É a época mais fotogênica e tranquila.",
+                    "9. 1000 Milhas Sport (Novembro): Competição de carros clássicos antigos.",
+                    "10. Iron Man: Competições de triatlo aproveitando o cenário."
+                ],
+
+                info_gerais: [
+                    "1. Câmbio Blue: Nunca use o cartão de crédito direto (câmbio oficial ruim) ou troque no aeroporto. Use a Western Union ou troque reais nas 'cuevas' (Rua Mitre). O dinheiro vale o dobro.",
+                    "2. Remises: São como táxis, mas com preço fixo. Mais seguros e comuns que Uber.",
+                    "3. Aluguel de Roupa: Se não tiver roupa de neve, alugue no centro (mais barato que no cerro).",
+                    "4. Trânsito: A Avenida Bustillo (que margeia o lago) engarrafa nos horários de pico (volta do ski).",
+                    "5. Aeroporto: Fica a uns 20-30 min do centro.",
+                    "6. Ecotaxa: Hotéis cobram uma pequena taxa ecológica por noite por pessoa.",
+                    "7. SUBE: Para andar de ônibus, precisa do cartão SUBE (o mesmo de Buenos Aires).",
+                    "8. Internet: O Wi-Fi costuma ser bom, mas o sinal de celular some nas estradas.",
+                    "9. Horário Comercial: Lojas fecham para a 'siesta' (13h às 16h) e reabrem até tarde. No centro turístico, muitas não fecham.",
+                    "10. Gorjeta (Propina): Espera-se cerca de 10% em restaurantes."
+                ],
+
+                antes_de_ir: [
+                    "1. Dinheiro Vivo: Leve reais ou dólares para trocar no paralelo (Blue). A diferença é brutal.",
+                    "2. Correntes para Pneu: Se alugar carro no inverno, é obrigatório ter correntes no porta-malas e saber colocar (veja vídeo no YouTube).",
+                    "3. Roupas em Camadas: O segredo não é um casacão, mas sim: segunda pele + fleece + casaco impermeável.",
+                    "4. Hidratante: O ar é muito seco e frio. Leve protetor labial potente e creme de mãos.",
+                    "5. Óculos de Sol: A neve reflete o sol e queima a retina. Obrigatório usar.",
+                    "6. Reservas: Restaurantes famosos (como Alto el Fuego) precisam de reserva dias antes na alta temporada.",
+                    "7. Habilitação: A CNH brasileira é válida. Cuidado com o gelo na pista (preto).",
+                    "8. Seguro Viagem: Verifique se cobre 'prática de esportes amadores' se for esquiar.",
+                    "9. Adaptador: A tomada é de 3 pinos chatos (padrão Oceania/Argentina). A nossa não entra.",
+                    "10. Tênis Impermeável: Se for andar na neve com tênis comum de pano, seu pé vai congelar."
+                ],
+
+                numeros: [
+                    "1. 911 (Emergência Geral).",
+                    "2. 107 (Ambulância).",
+                    "3. 100 (Bombeiros).",
+                    "4. Hospital Zonal Bariloche: (0294) 442-6100.",
+                    "5. Polícia Turística: No Centro Cívico.",
+                    "6. Consulado do Brasil (em BsAs): +54 11 4515-6500 (Bariloche tem consulado honorário).",
+                    "7. Aeroporto Teniente Luis Candelaria: (0294) 440-5016.",
+                    "8. Club Andino Bariloche: Informações sobre trilhas e refúgios.",
+                    "9. Defesa Civil: 103.",
+                    "10. Informações Turísticas: (0294) 442-9850."
+                ],
+
+                riscos: [
+                    "1. Gelo na Pista: O 'Gelo Negro' é invisível e faz o carro derrapar. Dirija devagar e use correntes se exigido.",
+                    "2. Troca de Dinheiro na Rua: Evite os 'arbolitos' que gritam 'câmbio' no meio da rua. Vá a uma agência (cueva) recomendada.",
+                    "3. Queimadura de Sol: O sol da montanha queima muito, mesmo no frio. Use protetor.",
+                    "4. Preços Turista: Alguns lugares tentam cobrar mais caro se percebem que é turista. Peça o menu.",
+                    "5. Hipotermia: Não subestime o frio em trilhas. O tempo muda rápido.",
+                    "6. Avalanches: Apenas em áreas fora de pista proibidas. Respeite a sinalização do Cerro.",
+                    "7. Cães de Rua: Existem muitos, geralmente dóceis, mas cuidado.",
+                    "8. Cinzas Vulcânicas: Raramente acontece, mas pode fechar o aeroporto.",
+                    "9. Furtos em Carros: Não deixe malas visíveis no carro estacionado em mirantes.",
+                    "10. Hantavírus: Transmitido por ratos silvestres em áreas de mata fechada (raro, mas evite lugares abandonados)."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Neve Express (4 Dias)",
+                        texto: [
+                            "Dia 1: Circuito Chico e subida ao Cerro Campanario. Noite no Centro Cívico e Fondue.",
+                            "Dia 2: Dia inteiro de neve no Cerro Catedral (Esqui ou brincadeiras).",
+                            "Dia 3: Navegação Isla Victoria e Bosque de Arrayanes.",
+                            "Dia 4: Compras de chocolate na Rua Mitre e almoço em uma cervejaria."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Clássico Patagônico (6 Dias)",
+                        texto: [
+                            "Dias 1 a 3: Siga o roteiro curto.",
+                            "Dia 4: Passeio para Piedras Blancas (esquibunda) pela manhã e Confeitaria Giratória (Cerro Otto) à tarde.",
+                            "Dia 5: Bate-volta para Villa La Angostura e Rota dos 7 Lagos (trecho inicial).",
+                            "Dia 6: Dia livre para voltar ao Catedral ou fazer compras."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Explorador dos Lagos (8 Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o roteiro médio.",
+                            "Dia 6: Circuito Grande ou travessia para o Chile (Peulla) se o tempo permitir.",
+                            "Dia 7: Trekking ao Refúgio Frey (verão) ou dia de SPA e Museu do Chocolate.",
+                            "Dia 8: Almoço de Cordeiro Patagônico e despedida."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/ar/san-carlos-de-bariloche.pt-br.html", 
+                    passeio: "https://www.civitatis.com/br/bariloche/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
         ], // <--- VÍRGULA DEPOIS DO PAÍS ANTERIOR
 
         "Chile": [
@@ -8011,6 +9402,189 @@ veredicto: {
         seguro: "https://www.segurospromo.com.br"
     }
 },
+{
+                name: "San Andrés",
+                imagem: "https://images.unsplash.com/photo-1596436889106-be35e843f974?q=80&w=2070&auto=format&fit=crop",
+                tags: ["Caribe", "Praia", "Compras"],
+                mapa: "https://goo.gl/maps/sanandres",
+                clima: "Tropical Caribenho. Quente o ano todo. Temporada de furacões (raros, mas possíveis) entre Set-Nov.",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Janeiro a Abril (Época seca e mar mais azul). Setembro a Novembro chove mais.",
+                    ideal_para: [
+                        "Casais e Lua de Mel (o mar de 7 cores é romântico)",
+                        "Famílias (praias sem ondas e resorts all-inclusive)",
+                        "Compradores (a ilha é zona franca/Duty Free)",
+                        "Mergulhadores (vida marinha acessível sem cilindro)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem busca luxo extremo (a estrutura da ilha é antiga e simples)",
+                        "Quem se incomoda com vendedores insistentes (nas praias públicas)",
+                        "Quem espera praias desertas (a ilha é densamente povoada)"
+                    ],
+                    perfis: [
+                        { icone: "ri-shopping-bag-fill", nome: "Compras" },
+                        { icone: "ri-sun-fill", nome: "Praia" },
+                        { icone: "ri-anchor-fill", nome: "Náutico" },
+                        { icone: "ri-money-dollar-circle-fill", nome: "Custo-Benefício" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Johnny Cay: A ilhota mais famosa. Mar azul neon, iguanas e almoço pé na areia.",
+                    "2. El Acuario: Um banco de areia no meio do mar onde você nada com centenas de peixes.",
+                    "3. West View: Um parque natural com tobogã que cai direto no mar profundo e cheio de peixes.",
+                    "4. Hoyo Soplador: Um gêiser natural que esguicha água do mar quando a onda bate forte.",
+                    "5. Rocky Cay: Uma ilha que você acessa caminhando pelo mar (água na cintura) com um navio encalhado ao lado.",
+                    "6. La Piscinita: Similar a West View, ótimo para snorkel e ver peixes coloridos.",
+                    "7. Spratt Bight: A praia principal do centro, com calçadão, vista para Johnny Cay e mar calmo.",
+                    "8. Morgan's Cave (Cueva de Morgan): Uma caverna onde o pirata Morgan teria escondido tesouros.",
+                    "9. Primeira Igreja Batista: Em La Loma, oferece a vista panorâmica mais alta e bonita da ilha.",
+                    "10. Manglares (Mangues): Passeio de caiaque transparente pelos túneis de mangue."
+                ],
+
+                gastronomia: [
+                    "1. Rondón: O prato típico nº 1. Sopa de peixe, caracol, rabo de porco, inhame e leite de coco.",
+                    "2. Arroz de Coco: Acompanhamento obrigatório, feito com coco queimado (marrom) ou branco.",
+                    "3. Pescado Frito: Geralmente Pargo (Vermelho), servido inteiro com patacones.",
+                    "4. Patacones: Discos de banana da terra verde frita, crocantes e deliciosos.",
+                    "5. Limonada de Coco: A bebida oficial da Colômbia caribenha. Cremosa e refrescante.",
+                    "6. Arepa de Huevo: Massa de milho frita com um ovo dentro. Café da manhã clássico.",
+                    "7. Crab backs: Carne de caranguejo temperada e servida na própria casca.",
+                    "8. Caracol Guisado: Molusco local preparado com temperos ilhéus.",
+                    "9. Breadfruit (Fruta-pão): Frita ou cozida, substitui a batata.",
+                    "10. Coquetel Coco Loco: Mistura de vários destilados servida dentro do coco."
+                ],
+
+                religiao: [
+                    "1. Igreja Batista: A religião predominante entre os nativos (Raizais). Os cultos são em inglês/creole e muito musicais.",
+                    "2. Primeira Igreja Batista de La Loma: Marco histórico de 1844, madeira branca e teto vermelho.",
+                    "3. Catolicismo: Forte entre os colombianos do continente que moram na ilha.",
+                    "4. Lendas de Piratas: O passado pirata traz um misticismo sobre tesouros e fantasmas.",
+                    "5. Gospel Caribenho: A música religiosa é vibrante e faz parte da identidade cultural.",
+                    "6. Cemitérios Tradicionais: Túmulos coloridos e cuidados pelas famílias nos quintais.",
+                    "7. Tolerância: A ilha convive bem com a mistura de culturas e crenças.",
+                    "8. Influência Puritana: Herança dos colonizadores ingleses.",
+                    "9. Festas Patronais: Celebrações de santos nas áreas católicas.",
+                    "10. Mitos: Histórias sobre 'Duppy' (espíritos) são contadas pelos mais velhos."
+                ],
+
+                curiosidades: [
+                    "1. Mar de 7 Cores: O apelido da ilha é real. Do avião, você conta vários tons de azul e verde.",
+                    "2. Duty Free: A ilha inteira é isenta de impostos. Perfumes e bebidas são muito baratos.",
+                    "3. Idioma: Os nativos falam Creole (uma mistura de inglês antigo e espanhol). Entre eles, você não entende nada.",
+                    "4. Pirata Morgan: O famoso corsário Henry Morgan usava San Andrés como base de ataques.",
+                    "5. Carrinhos de Golfe: São o principal meio de transporte para turistas darem a volta na ilha.",
+                    "6. Nicarágua vs Colômbia: A ilha fica muito mais perto da Nicarágua, que disputa o território há décadas.",
+                    "7. Navio Encalhado: Perto de Rocky Cay, há um navio cargueiro encalhado que virou atração turística.",
+                    "8. População: É uma das ilhas mais densamente povoadas do Caribe.",
+                    "9. Sem Água Doce: A água da torneira geralmente é dessalinizada e salobra. Não beba e cuidado ao escovar os dentes.",
+                    "10. Aeroporto na Cidade: A pista do aeroporto começa praticamente na praia do centro."
+                ],
+
+                eventos_estacoes: [
+                    "1. Green Moon Festival (Setembro): Festival de música caribenha, reggae e gospel.",
+                    "2. Dia da Raça (Outubro): Celebração da cultura Raizal.",
+                    "3. Temporada Seca (Jan-Abr): Ventos fortes, céu limpo e mar agitado no lado leste.",
+                    "4. Temporada de Chuvas (Mai-Nov): Pancadas de chuva tropicais, geralmente rápidas.",
+                    "5. Semana Santa: A ilha lota de turistas colombianos.",
+                    "6. Férias de Meio de Ano (Jun-Jul): Outro pico de alta temporada.",
+                    "7. Temporada de Furacões (Set-Nov): Risco baixo, mas existe. O clima fica instável.",
+                    "8. Festival do Caranguejo (Janeiro): Comidas típicas à base de caranguejo.",
+                    "9. Independência da Colômbia (20 de Julho): Desfiles militares e festas cívicas.",
+                    "10. Natal e Ano Novo: Hotéis lotados e ceias com preços elevados."
+                ],
+
+                info_gerais: [
+                    "1. Tarjeta de Turismo: Obrigatória. Compre no balcão da cia aérea antes de embarcar (~R$ 180). Guarde até a saída!",
+                    "2. Voltagem: 110V. Tomada tipo 'faca' (dois pinos chatos), igual aos EUA. Leve adaptador.",
+                    "3. Água: A água da torneira não é potável. Compre garrafões no mercado.",
+                    "4. Internet: O 4G funciona bem no centro, mas falha na volta à ilha. Wi-Fi de hotel costuma ser lento.",
+                    "5. Dinheiro: Troque Reais por Pesos (COP) ainda no Brasil ou leve Dólares para trocar lá. Cartão passa, mas taxas (IOF) pegam.",
+                    "6. Transporte: Táxis não têm taxímetro (combine o preço antes). Ônibus são baratos e velhos, mas úteis.",
+                    "7. Segurança: O centro é seguro, mas evite lugares escuros à noite. No sul da ilha, atenção redobrada.",
+                    "8. Sapatos de Água (Sapatilhas): Item obrigatório por causa dos ouriços e corais. Compre lá (é barato).",
+                    "9. Negociação: Tudo é negociável, especialmente na praia.",
+                    "10. Fuso Horário: Geralmente -2h em relação a Brasília."
+                ],
+
+                antes_de_ir: [
+                    "1. Vacina Febre Amarela: Tome pelo menos 10 dias antes e tenha o Certificado Internacional (ANVISA). Eles pedem no check-in.",
+                    "2. Adaptador Universal: As tomadas são diferentes do Brasil (pino chato).",
+                    "3. Snorkel: Se tiver o seu, leve. Alugar lá toda hora sai caro e a higiene é duvidosa.",
+                    "4. GoPro/Câmera à prova d'água: Essencial. A vida marinha é o ponto alto.",
+                    "5. Bolsa Estanque: Para proteger celular e dinheiro nos passeios de barco (tudo molha).",
+                    "6. Remédios: Leve os seus (dor de cabeça, enjoo, estômago). Farmácias lá vendem marcas desconhecidas.",
+                    "7. Protetor Solar Biodegradável: Alguns parques pedem para não prejudicar os corais.",
+                    "8. Check-Mig: Preencher o formulário de imigração da Colômbia online 24h antes do voo.",
+                    "9. CNH: Se for alugar carrinho de golfe (Mule), precisa apresentar habilitação (a brasileira serve).",
+                    "10. Cabelo: O vento no passeio de barco embaraça muito. Mulheres, levem creme e prendedores."
+                ],
+
+                numeros: [
+                    "1. 123 (Emergência Nacional Colômbia).",
+                    "2. 132 (Cruz Vermelha).",
+                    "3. 119 (Bombeiros).",
+                    "4. Hospital Amor de Patria: Principal hospital público da ilha.",
+                    "5. Polícia de Turismo: Ficam em postos no calçadão (Peatonal).",
+                    "6. Consulado do Brasil em Bogotá: +57 1 635 1300 (Não há consulado na ilha).",
+                    "7. Prefixos: +57 (Colômbia).",
+                    "8. Táxis Aeroporto: Têm tabela fixa, verifique no desembarque.",
+                    "9. Aeroporto Gustavo Rojas Pinilla (ADZ).",
+                    "10. Farmácias (Droguerías): Comuns no centro."
+                ],
+
+                riscos: [
+                    "1. Golpes na Praia: 'Massagem grátis' e 'provianha de ostra' não existem. Eles fazem e cobram caro depois. Recuse firmemente.",
+                    "2. Trânsito de Mules: Turistas dirigem mal e bêbados. Cuidado ao cruzar a rua e ao dirigir.",
+                    "3. Ouriços do Mar: Em áreas de pedra, pise com sapatilha. O espinho dói e infecciona.",
+                    "4. Sol Caribenho: Queima muito mais rápido que no Brasil. Use fator alto.",
+                    "5. Furto em Mules: Não deixe bolsas no carrinho de golfe enquanto para para tirar foto.",
+                    "6. Corais de Fogo: Não toque nos corais. Alguns queimam a pele.",
+                    "7. Água da Torneira: Risco alto de infecção intestinal.",
+                    "8. Vendedores de Pérolas: Muitas vezes são falsas ou de plástico.",
+                    "9. Motoqueiros: Eles ultrapassam pela direita e esquerda. Atenção ao dirigir.",
+                    "10. Perder a Tarjeta de Turismo: Se perder, tem que pagar outra e a burocracia na saída é grande."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Caribe Express (4 Dias)",
+                        texto: [
+                            "Dia 1: Chegada, compra de sapatilhas e tarde em Spratt Bight (praia do centro). Noite no calçadão.",
+                            "Dia 2: Passeio de barco para Johnny Cay e Acuario (dia todo).",
+                            "Dia 3: Volta à ilha de carrinho de golfe (Mule): West View, Hoyo Soplador e San Luis.",
+                            "Dia 4: Manhã de compras (perfumes/bebidas) e voo de volta."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Clássico San Andrés (6 Dias)",
+                        texto: [
+                            "Dias 1 a 3: Siga o roteiro curto.",
+                            "Dia 4: Rocky Cay (manhã na praia e almoço no clube de praia). Tarde livre.",
+                            "Dia 5: Parasail (paraquedas no barco) ou Jet Ski. Jantar no restaurante La Regatta (chique).",
+                            "Dia 6: Último mergulho em La Piscinita e compras finais."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Experiência Completa (8 Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o roteiro médio.",
+                            "Dia 6: Bate-volta para ilha de Providência (avião ou catamarã) - *Requer planejamento extra*.",
+                            "Dia 7: Dia de SPA ou mergulho com cilindro (batismo) para ver estátuas submersas.",
+                            "Dia 8: Café da manhã típico com arepas e despedida."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/co/san-andres.pt-br.html", 
+                    passeio: "https://www.civitatis.com/br/san-andres/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
     
 ],
 "Uruguai": [

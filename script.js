@@ -177,6 +177,18 @@ const realCostData = {
     transporte: "R$ 50 – R$ 100", 
     atracoes: "R$ 150 – R$ 450"
     },
+    "Caldas Novas": {
+    comida: "R$ 40 – R$ 90", // Muita opção de buffet a quilo e lanches
+    hospedagem: "R$ 150 – R$ 500", // Varia muito (flats alugados vs resorts all-inclusive)
+    transporte: "R$ 20 – R$ 50", // Uber funciona bem, mas alguns hotéis exigem carro para o centro
+    atracoes: "R$ 80 – R$ 250" // Ingressos de parques como Water Park ou Hot Park (Rio Quente)
+   },
+   "Balneário Camboriú": {
+    comida: "R$ 50 – R$ 150", // Restaurantes na Atlântica são caros; buffets na Av. Brasil são ok
+    hospedagem: "R$ 250 – R$ 800", // Alta temporada e feriados os preços explodem
+    transporte: "R$ 20 – R$ 40", // Uber ou o famoso "Bondindinho" (ônibus turístico aberto)
+    atracoes: "R$ 80 – R$ 200" // Big Wheel, Unipraias e Aquário têm ingressos elevados
+},
     "Buenos Aires": {
         comida: "R$ 90 – R$ 180",
         hospedagem: "R$ 180 – R$ 450",
@@ -255,6 +267,12 @@ const realCostData = {
         transporte: "R$ 45 – R$ 120",
         atracoes: "R$ 180 – R$ 600"
     },
+    "Atlanta": {
+    comida: "R$ 100 – R$ 250", // Dólar alto. Um almoço simples custa $20.
+    hospedagem: "R$ 600 – R$ 1.500", // Hotéis no centro (Downtown/Midtown) são caros.
+    transporte: "R$ 100 – R$ 250", // Uber é essencial ou aluguel de carro. O metrô (MARTA) é limitado.
+    atracoes: "R$ 200 – R$ 400" // O Aquário e o Mundo da Coca-Cola são caros ($40+ cada).
+},
     "Tóquio": {
         comida: "R$ 180 – R$ 400",
         hospedagem: "R$ 400 – R$ 1100",
@@ -272,6 +290,12 @@ const realCostData = {
         hospedagem: "R$ 400 – R$ 900",
         transporte: "R$ 35 – R$ 90",
         atracoes: "R$ 70 – R$ 220"
+    },
+    "Barcelona": {
+    comida: "R$ 80 – R$ 200", // Tapas podem ser baratas, mas jantares sentados são caros.
+    hospedagem: "R$ 400 – R$ 1.200", // Alta temporada (Verão) os preços triplicam.
+    transporte: "R$ 30 – R$ 60", // O bilhete T-Casual (10 viagens) vale muito a pena.
+    atracoes: "R$ 150 – R$ 450" // Casa Batlló e Sagrada Família custam mais de 30€ cada.
     },
     "Paris": {
         comida: "R$ 220 – R$ 500",
@@ -326,8 +350,31 @@ const realCostData = {
     hospedagem: "R$ 300 – R$ 800", // Centro Histórico é muito valorizado
     transporte: "R$ 10 – R$ 40", // Metrô/Autocarro ou muito a pé
     atracoes: "R$ 100 – R$ 250" // Entrada Coliseu + Fórum + Palatino (básico vs arena/subterrâneo)
+    },
+    "Grande Muralha da China": {
+    comida: "R$ 30 – R$ 100", // Comida de rua é barata; Pato de Pequim é caro.
+    hospedagem: "R$ 200 – R$ 600", // Hotéis em Pequim (base para a visita).
+    transporte: "R$ 50 – R$ 150", // Trem-bala ou tour privado até as seções da muralha.
+    atracoes: "R$ 100 – R$ 300" // Entrada + Teleférico + Tobogã (descida).
+    },
+    "Estátua da Liberdade": {
+    comida: "R$ 60 – R$ 180", // De Hot Dogs de rua a restaurantes turísticos
+    hospedagem: "R$ 800 – R$ 2.500", // Hotéis em Manhattan são caríssimos
+    transporte: "R$ 15 – R$ 30", // Metrô (MTA) ou Ferry pago
+    atracoes: "R$ 150 – R$ 200" // O Ferry oficial (Statue City Cruises) é pago. O Staten Island Ferry é grátis (mas passa longe).
+    },
+    "Taj Mahal": {
+    comida: "R$ 20 – R$ 60", // Comida de rua é centavos, restaurantes turísticos são baratos.
+    hospedagem: "R$ 100 – R$ 400", // Agra tem hotéis para todos os bolsos.
+    transporte: "R$ 10 – R$ 30", // Tuk-tuks (Auto Rickshaws) são muito baratos.
+    atracoes: "R$ 60 – R$ 80" // O ingresso para estrangeiros custa cerca de 1100 Rúpias (~R$ 70).
 },
-
+"Yellowstone National Park": {
+    comida: "R$ 80 – R$ 200", // Comida dentro do parque (lanchonetes/restaurantes) é cara e básica.
+    hospedagem: "R$ 800 – R$ 2.500", // Cabanas dentro do parque ou hotéis em West Yellowstone.
+    transporte: "R$ 200 – R$ 400", // Diária de aluguel de carro (SUV recomendado) + Gasolina.
+    atracoes: "R$ 180" // Passe de entrada do carro (válido por 7 dias).
+},
     
 };
 
@@ -836,6 +883,369 @@ const worldData = {
                     seguro: "https://www.segurospromo.com.br" 
                 }
             },
+            // --- ESTÁTUA DA LIBERDADE (EUA) ---
+            {
+                name: "Estátua da Liberdade",
+                imagem: "https://images.unsplash.com/photo-1605130284535-11dd9eedc58a?q=80&w=2070&auto=format&fit=crop",
+                tags: ["Símbolo de Liberdade", "Nova York", "História"],
+                mapa: "https://goo.gl/maps/statueofliberty",
+                clima: "Temperado. Verões úmidos e quentes, invernos congelantes com vento forte na ilha.",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Outono (Set-Nov) ou Primavera (Abr-Mai). O inverno é muito frio para ficar no barco/ilha.",
+                    ideal_para: [
+                        "Primeira vez em NY (Obrigatório)",
+                        "Imigrantes e Historiadores (Museu da Imigração em Ellis Island)",
+                        "Famílias (Passeio de barco diverte as crianças)",
+                        "Patriotas e Amantes de Democracia"
+                    ],
+                    nao_ideal_para: [
+                        "Quem tem claustrofobia (Subir na coroa é apertadíssimo)",
+                        "Quem tem pressa (A segurança tipo aeroporto e filas do barco levam horas)",
+                        "Quem enjoa fácil em barcos (embora o trajeto seja curto)"
+                    ],
+                    perfis: [
+                        { icone: "ri-liberty-fill", nome: "Liberdade" }, // Se não tiver esse ícone, use ri-star-fill
+                        { icone: "ri-ship-fill", nome: "Ferry" },
+                        { icone: "ri-building-line", nome: "Skyline" },
+                        { icone: "ri-history-line", nome: "História" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. A Coroa: O ponto mais alto acessível. Exige ingresso especial comprado meses antes.",
+                    "2. O Pedestal: Oferece uma vista incrível de Manhattan e permite ver a estrutura interna da estátua.",
+                    "3. Museu da Estátua da Liberdade: Novo e moderno, conta a história da construção e tem a tocha original exposta.",
+                    "4. Ellis Island: A ilha vizinha (incluída no bilhete) onde os imigrantes chegavam. O museu é emocionante.",
+                    "5. Battery Park: O parque onde sai a balsa. Tem o monumento 'The Sphere' que sobreviveu ao 11 de Setembro.",
+                    "6. Charging Bull: O Touro de Wall Street fica pertinho da saída da balsa.",
+                    "7. Staten Island Ferry: A opção GRÁTIS. É um barco laranja que passa perto da estátua (mas não para nela).",
+                    "8. One World Trade Center: O prédio mais alto do ocidente, visível da ilha.",
+                    "9. Ponte do Brooklyn: Ícone próximo para completar o dia turístico.",
+                    "10. Torch (Tocha): A original, trocada nos anos 80, fica no museu. A atual é folheada a ouro 24k."
+                ],
+
+                gastronomia: [
+                    "1. Hot Dog de Rua: Clássico de NY (com mostarda e chucrute). Tem carrinhos no Battery Park.",
+                    "2. NY Pizza: Fatias finas e gigantes vendidas por $1 dólar (ou um pouco mais).",
+                    "3. Bagel com Cream Cheese: O café da manhã oficial do novaiorquino.",
+                    "4. Cheesecake: A sobremesa densa e cremosa típica da cidade.",
+                    "5. Pretzel Gigante: Salgado e macio, vendido em carrinhos.",
+                    "6. Halal Guys: Comida de rua árabe famosa (arroz com frango/gyro) perto do centro.",
+                    "7. Pastrami Sandwich: No Katz's Delicatessen (famoso, mas longe da balsa).",
+                    "8. Crown Café: A lanchonete dentro da Liberty Island (comida básica e cara).",
+                    "9. Shake Shack: Hambúrguer famoso que nasceu na cidade.",
+                    "10. Café Starbucks: Tem em cada esquina para esquentar no inverno."
+                ],
+
+                religiao: [
+                    "1. Templo da Liberdade: Para muitos, é um santuário secular dos valores democráticos.",
+                    "2. Correntes Quebradas: Aos pés dela (difícil de ver do chão) há correntes quebradas, simbolizando o fim da escravidão/opressão.",
+                    "3. Deusa Romana: A estátua representa Libertas, a deusa romana da liberdade.",
+                    "4. Tábua da Lei: Na mão esquerda, ela segura uma tábua com a data da independência dos EUA (4 de Julho de 1776).",
+                    "5. St. Paul's Chapel: Igreja histórica perto do WTC que sobreviveu aos ataques e serviu de refúgio.",
+                    "6. Trinity Church: Igreja neogótica famosa no final da Wall Street.",
+                    "7. Sinagogas: NY tem a maior população judaica fora de Israel.",
+                    "8. Catedral de St. Patrick: A maior catedral católica dos EUA, na 5ª Avenida.",
+                    "9. Sete Raios: A coroa tem 7 pontas, representando os 7 mares e 7 continentes (universalidade).",
+                    "10. 'A Mãe dos Exilados': Apelido dado pelo poema 'O Novo Colosso' gravado no pedestal."
+                ],
+
+                curiosidades: [
+                    "1. Presente Francês: Foi um presente da França para os EUA pelo centenário da independência.",
+                    "2. Cor Verde: Ela é feita de cobre (como moedas de centavo). Ficou verde devido à oxidação (ferrugem do cobre).",
+                    "3. Estrutura Eiffel: O esqueleto interno de ferro foi projetado por Gustave Eiffel (o mesmo da Torre de Paris).",
+                    "4. Rosto da Mãe: Dizem que o escultor Bartholdi usou o rosto da própria mãe como modelo.",
+                    "5. Montada como Lego: Chegou em 350 peças e demorou 4 meses para ser montada.",
+                    "6. Onde fica?: Tecnicamente está em águas de Nova Jersey, mas a ilha pertence a Nova York (briga antiga).",
+                    "7. Raios: A estátua é atingida por raios cerca de 600 vezes por ano.",
+                    "8. Farol: Ela funcionou como farol para navios entre 1886 e 1902.",
+                    "9. Tamanho do Pé: Se ela comprasse sapatos, calçaria número 879.",
+                    "10. Tocha Fechada: Ninguém pode subir na tocha desde 1916, quando foi danificada por uma explosão (sabotagem alemã na 1ª Guerra)."
+                ],
+
+                eventos_estacoes: [
+                    "1. 4 de Julho (Independência): O maior show de fogos da Macy's acontece no rio, com a estátua ao fundo.",
+                    "2. Maratona de NY (Novembro): A largada é em Staten Island, com vista para a estátua.",
+                    "3. 11 de Setembro: Homenagens com luzes (Tribute in Light) que iluminam o céu perto dela.",
+                    "4. Fleet Week (Maio): Navios de guerra e marinheiros chegam à cidade, passando pela estátua.",
+                    "5. Ano Novo Chinês: Fogos no rio Hudson.",
+                    "6. Verão: Shows de Jazz no ferry ou parques próximos.",
+                    "7. Tribeca Film Festival: Evento cultural importante em Lower Manhattan.",
+                    "8. St. Patrick's Day (Março): Parada verde gigante.",
+                    "9. Thanksgiving (Novembro): Parada dos balões (Macy's), cidade lotada.",
+                    "10. Natal: A cidade fica mágica, mas venta muito na ilha."
+                ],
+
+                info_gerais: [
+                    "1. Ingressos: O único vendedor oficial é a 'Statue City Cruises'. Cuidado com cambistas na rua!",
+                    "2. Segurança: Nível aeroporto antes de entrar no barco. Nada de facas, sprays ou armas.",
+                    "3. Mochilas: Mochilas grandes não podem subir no pedestal ou coroa (tem lockers pagos).",
+                    "4. Coroa: Só sobe com reserva específica (Crown Ticket). Crianças devem ter altura mínima.",
+                    "5. Acessibilidade: O terreno é plano e há elevadores até o pedestal. A coroa é só escada.",
+                    "6. Tempo: Reserve pelo menos 4 a 5 horas para visitar as duas ilhas (Liberty e Ellis).",
+                    "7. Banheiros: Tem nos barcos e nas ilhas.",
+                    "8. Áudio Guia: Geralmente incluído no ingresso, tem em português.",
+                    "9. Vento: Leve agasalho, no meio da baía venta muito mesmo no sol.",
+                    "10. Selfie Stick: Proibido dentro do monumento."
+                ],
+
+                antes_de_ir: [
+                    "1. Golpes no Battery Park: Homens com coletes escritos 'Ticket Agent' vão tentar te vender bilhetes caros de ônibus. IGNORE. Vá para a bilheteria oficial no Castle Clinton (o forte redondo).",
+                    "2. Reserve a Coroa: Se quiser subir na cabeça, compre 3 ou 4 meses antes. Esgota instantaneamente.",
+                    "3. Lado do Barco: Na ida, fique do lado DIREITO do barco para as melhores fotos da estátua.",
+                    "4. Ellis Island: Não pule essa parte. É onde você pode pesquisar se teve antepassados que entraram nos EUA.",
+                    "5. Grátis?: Se a grana estiver curta, pegue o 'Staten Island Ferry' (terminal laranja ao lado). É de graça, passa perto (mas não para) e tem bar a bordo.",
+                    "6. Protetor Solar: Não tem sombra na ilha.",
+                    "7. Câmera: Leve zoom, a estátua é alta.",
+                    "8. Horário: Vá no primeiro barco (8h30/9h) para evitar filas de 2 horas na segurança.",
+                    "9. Comida: Coma antes ou leve lanche. A comida na ilha é cara e ruim.",
+                    "10. Metrô: Desça na estação 'South Ferry' (Linha 1) ou 'Bowling Green' (Linha 4/5)."
+                ],
+
+                numeros: [
+                    "1. 911 (Emergência Geral).",
+                    "2. Statue City Cruises (Bilhetes): +1 877-523-9849.",
+                    "3. National Park Service info.",
+                    "4. Consulado do Brasil em NY: +1 917 777-7777.",
+                    "5. MTA (Metrô/Ônibus): 511.",
+                    "6. 311 (Info da cidade não urgente).",
+                    "7. JFK Airport.",
+                    "8. Newark Airport (EWR - Fica em NJ mas é perto).",
+                    "9. LaGuardia Airport (LGA).",
+                    "10. Yellow Cabs (Táxis)."
+                ],
+
+                riscos: [
+                    "1. Vendedores Falsos: O maior risco. Eles mentem dizendo que o barco oficial 'já saiu' ou 'quebrou' para vender passeio de ônibus. Mentira.",
+                    "2. Frio no Inverno: A sensação térmica na ilha pode ser -15ºC.",
+                    "3. Filas: No verão, a fila da segurança pode levar 2 horas sob o sol.",
+                    "4. Gaivotas: Elas roubam comida da sua mão se vacilar.",
+                    "5. Escadas da Coroa: São 162 degraus estreitos em espiral. Se passar mal, é difícil sair.",
+                    "6. Metrô à Noite: Seguro, mas fique atento a figuras estranhas ou vagões vazios.",
+                    "7. Preços de Água: Ambulantes cobram $5 por água. Compre no mercado antes.",
+                    "8. Trânsito: Nunca vá de táxi/Uber para o porto na hora do rush. Vá de metrô.",
+                    "9. Selfie na Borda: Cuidado ao tirar fotos na beira do barco.",
+                    "10. Perda de Bilhete: Guarde o bilhete, você precisa dele para voltar."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Visto de Longe (2 Horas)",
+                        texto: [
+                            "Manhã: Pegar o Staten Island Ferry (Grátis) ida e volta.",
+                            "Foto: Tirar foto com o Touro de Wall Street.",
+                            "Almoço: Pizza em Lower Manhattan."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "A Ilha Completa (5 Horas)",
+                        texto: [
+                            "Manhã: Barco oficial (Statue Cruises).",
+                            "Visita: Pedestal da Estátua e Museu.",
+                            "Tarde: Parada em Ellis Island (Museu da Imigração).",
+                            "Volta: Caminhada no Battery Park."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Ícones de NY (Dia Todo)",
+                        texto: [
+                            "Manhã: Estátua da Liberdade e Ellis Island.",
+                            "Tarde: Touro de Wall Street, Memorial do 11 de Setembro e One World Observatory.",
+                            "Noite: Cruzar a Ponte do Brooklyn a pé."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/us/new-york.pt-br.html", 
+                    passeio: "https://www.cityexperiences.com/new-york/city-cruises/statue/", // Site Oficial
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
+            // --- TAJ MAHAL (ÍNDIA) ---
+            {
+                name: "Taj Mahal",
+                imagem: "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=2071&auto=format&fit=crop",
+                tags: ["Maravilha do Mundo", "Amor Eterno", "Mármore"],
+                mapa: "https://goo.gl/maps/tajmahal",
+                clima: "Tropical. Evite Maio/Junho (Calor insuportável de 45ºC). Inverno (Nov-Fev) tem neblina de manhã.",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Outubro a Março. O melhor horário é o nascer do sol (menos gente e luz mágica). EVITE SEXTAS-FEIRAS (Fechado).",
+                    ideal_para: [
+                        "Românticos (é o maior monumento ao amor do mundo)",
+                        "Fotógrafos (a simetria é perfeita)",
+                        "Amantes de Arquitetura (o ápice da arte Mughal)",
+                        "Quem busca o 'Check' na lista de Maravilhas do Mundo"
+                    ],
+                    nao_ideal_para: [
+                        "Quem tem asma ou problemas respiratórios (Agra é muito poluída)",
+                        "Quem odeia assédio de vendedores (é intenso na entrada)",
+                        "Quem espera ver o interior cheio de móveis (é um mausoléu vazio com túmulos)"
+                    ],
+                    perfis: [
+                        { icone: "ri-hearts-fill", nome: "Romance" },
+                        { icone: "ri-ancient-pavilion-fill", nome: "Império" },
+                        { icone: "ri-camera-lens-fill", nome: "Simetria" },
+                        { icone: "ri-vip-diamond-fill", nome: "Jóia" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. O Mausoléu Principal: A cúpula de mármore branco onde estão os túmulos (cenotáfios) de Mumtaz e Shah Jahan.",
+                    "2. Banco da Diana: O banco de mármore em frente à piscina central, famoso pela foto da Princesa Diana.",
+                    "3. Mehtab Bagh: O 'Jardim do Luar' do outro lado do rio. A melhor vista do Taj ao pôr do sol sem pagar ingresso caro.",
+                    "4. Agra Fort: Um forte vermelho gigante onde o imperador ficou preso olhando para o Taj Mahal até morrer.",
+                    "5. A Mesquita: Fica ao lado oeste do Taj, feita de arenito vermelho.",
+                    "6. Jawab: O edifício gêmeo da mesquita no lado leste (usado como casa de hóspedes) para manter a simetria.",
+                    "7. Portão Real (Darwaza-i-Rauza): A entrada majestosa que emoldura a primeira visão do monumento.",
+                    "8. Baby Taj (Itmad-ud-Daulah): Um mausoléu menor, apelidado de rascunho do Taj Mahal.",
+                    "9. Kalakriti Cultural Center: Onde ocorre o show de teatro 'Mohabbat-the-Taj' à noite.",
+                    "10. Bazar Kinari: O mercado caótico e colorido de Agra para compras locais."
+                ],
+
+                gastronomia: [
+                    "1. Petha: O doce mais famoso de Agra (abóbora cristalizada). Tem de todos os sabores (açafrão, coco).",
+                    "2. Mughlai Cuisine: A comida dos imperadores. Curries ricos, cremosos e com frutas secas.",
+                    "3. Chicken Tikka Masala: Frango marinado e assado no forno tandoor com molho laranja.",
+                    "4. Naan com Alho: Pão indiano feito na hora no forno de barro.",
+                    "5. Chai (Masala Tea): Chá preto com leite, gengibre e cardamomo. Bebe-se o dia todo.",
+                    "6. Biryani: Arroz aromático com especiarias e carne (Agra tem ótimas versões).",
+                    "7. Lassi: Iogurte batido (doce ou salgado). O de manga é o favorito dos turistas.",
+                    "8. Samosa: Pastelzinho frito triangular recheado de batata e ervilha.",
+                    "9. Dal Makhani: Lentilhas pretas cozidas com manteiga e creme.",
+                    "10. Pani Puri: Bolinhas crocantes de rua recheadas com água temperada (cuidado com a higiene!)."
+                ],
+
+                religiao: [
+                    "1. Islão: O Taj Mahal é um monumento islâmico. Há inscrições do Alcorão em caligrafia negra no mármore.",
+                    "2. Mesquita Ativa: A mesquita ao lado funciona. Às sextas, o complexo fecha para orações locais.",
+                    "3. Sapatos: É proibido entrar no mausoléu de sapatos. Você recebe uma proteção (shoe cover) ou anda descalço.",
+                    "4. Túmulos: Os túmulos reais ficam no subsolo (fechado). O que vemos em cima são réplicas para o público.",
+                    "5. Rio Yamuna: Sagrado para os hindus, corre atrás do Taj Mahal.",
+                    "6. Respeito: Deve-se vestir roupas modestas (ombros e joelhos cobertos).",
+                    "7. Tolerância: A arquitetura mistura elementos islâmicos, persas e hindus (como a flor de lótus no topo).",
+                    "8. Call to Prayer (Adhan): Ouve-se o chamado para a oração vindo dos minaretes.",
+                    "9. Minaretes: As 4 torres são levemente inclinadas para fora, para não caírem sobre o túmulo em caso de terremoto.",
+                    "10. Paraíso: O jardim foi desenhado para representar o paraíso islâmico com seus 4 rios."
+                ],
+
+                curiosidades: [
+                    "1. Muda de Cor: O mármore reflete a luz. É rosado ao amanhecer, branco brilhante ao meio-dia e dourado à noite.",
+                    "2. Taj Preto?: Diz a lenda que o imperador queria construir um Taj Mahal Preto do outro lado do rio para ele, mas não deu tempo.",
+                    "3. Mãos Cortadas?: Mito falso. Dizem que o imperador cortou as mãos dos pedreiros para não repetirem a obra. Historiadores negam.",
+                    "4. Pedras Preciosas: As flores coloridas no mármore não são pintura, são pedras semipreciosas incrustadas (Pietra Dura).",
+                    "5. Andaimes de Bambu: Na 2ª Guerra, cobriram o Taj com bambus para parecer uma pilha de madeira e enganar bombardeiros.",
+                    "6. Poluição: O mármore está ficando amarelado devido à poluição. Eles aplicam máscaras de lama para limpar.",
+                    "7. 22 Anos: Tempo que demorou para ficar pronto, com 20 mil trabalhadores e 1.000 elefantes.",
+                    "8. Carros Proibidos: Veículos a motor não podem chegar perto (poluição). Você vai de carro elétrico ou camelo.",
+                    "9. O Barco: A madeira da fundação precisa da umidade do rio Yamuna para não rachar.",
+                    "10. Simetria Quebrada: A única coisa assimétrica no complexo é o túmulo do imperador (colocado depois ao lado da esposa, que está no centro)."
+                ],
+
+                eventos_estacoes: [
+                    "1. Taj Mahotsav (Fevereiro): Festival de arte, artesanato e cultura de 10 dias perto do portão leste.",
+                    "2. Full Moon Viewing: O Taj abre à noite 5 dias por mês (lua cheia). Ingressos limitadíssimos.",
+                    "3. Diwali (Out/Nov): O festival das luzes. A cidade fica iluminada, mas o monumento fecha à noite.",
+                    "4. Holi (Março): O festival das cores. Cuidado, turistas são alvos de tinta colorida nas ruas.",
+                    "5. Inverno (Nevoeiro): Em Dezembro/Janeiro, a neblina pode esconder o Taj completamente até o meio-dia.",
+                    "6. Monções (Jul-Set): Chove, mas o jardim fica verde vibrante e o mármore limpo.",
+                    "7. Eid: Festividades muçulmanas lotam a mesquita.",
+                    "8. Yoga Day: Eventos de yoga nos jardins próximos.",
+                    "9. World Heritage Week (Novembro): Eventos especiais de conservação.",
+                    "10. Ramadã: Horários de comida na cidade podem mudar."
+                ],
+
+                info_gerais: [
+                    "1. Visto: Brasileiros precisam de E-Visa para a Índia (faça online antes).",
+                    "2. Sexta-Feira: O Taj Mahal NÃO ABRE às sextas-feiras.",
+                    "3. O que não levar: Tripé, comida, chiclete, fones de ouvido, bandeiras, livros. A segurança confisca tudo.",
+                    "4. Macacos: Há muitos macacos. Não sorria (mostrar dentes é ameaça) e esconda comida.",
+                    "5. Guias: Contrate apenas guias oficiais com crachá. Há muitos golpistas na entrada.",
+                    "6. Poluição: Agra é muito poluída. Leve máscara N95 se for sensível.",
+                    "7. Água: Você ganha uma garrafa de água e o protetor de sapato com o ingresso de estrangeiro.",
+                    "8. Banheiros: Tem dentro do complexo, razoáveis.",
+                    "9. Fotos: Proibido fotografar dentro do mausoléu principal (onde estão os túmulos).",
+                    "10. Tuk-Tuk: Negocie o preço ANTES de entrar. Sempre."
+                ],
+
+                antes_de_ir: [
+                    "1. Compre Online: A bilheteria tem filas caóticas. Compre no site oficial do governo (ASI Pay).",
+                    "2. Portão Leste (East Gate): Geralmente é o mais organizado para turistas estrangeiros.",
+                    "3. Barriga de Deli: Evite saladas cruas, gelo e água de torneira a todo custo. Coma apenas cozidos.",
+                    "4. Sapato Fácil: Vá com um sapato fácil de tirar e pôr, ou use o protetor descartável.",
+                    "5. Chegue na Abertura: Esteja na fila às 5h30 da manhã. Ver o sol nascer no mármore é inesquecível.",
+                    "6. Powerbank: Não pode entrar com powerbank (bateria externa) nem cabos extras. Deixe no hotel.",
+                    "7. Repelente: Necessário, especialmente ao amanhecer e anoitecer.",
+                    "8. Vestimenta: Homens e mulheres devem evitar roupas muito curtas. É um local de respeito.",
+                    "9. Hotel com Vista: Vale a pena pagar mais num hotel com terraço para ver o Taj tomando café.",
+                    "10. Paciência: A Índia é intensa. Buzinas, gente, cheiros. Respire fundo e aproveite a beleza."
+                ],
+
+                numeros: [
+                    "1. 100 (Polícia - mas para turistas use 112).",
+                    "2. 102 (Ambulância).",
+                    "3. +91 11 2301 7301 (Embaixada do Brasil em Nova Delhi).",
+                    "4. ASI (Archaeological Survey of India): Site dos ingressos.",
+                    "5. Polícia Turística de Agra (Ficam na estação de trem e monumentos).",
+                    "6. Ola / Uber (Funcionam em Agra e são mais seguros que tuk-tuk de rua).",
+                    "7. Estação Agra Cantt (Principal estação de trem).",
+                    "8. Gatimaan Express (Trem rápido Delhi-Agra em 1h40).",
+                    "9. Hospital Apollo (Privado e bom padrão).",
+                    "10. MakeMyTrip (App útil para reservas na Índia)."
+                ],
+
+                riscos: [
+                    "1. Batedores de Carteira: Na multidão da saída.",
+                    "2. Golpes de Loja: O motorista de tuk-tuk vai insistir para te levar numa 'loja de mármore'. Ele ganha comissão. Diga não.",
+                    "3. Assédio para Fotos: Locais podem pedir para tirar foto com você (especialmente mulheres loiras). Seja firme se não quiser.",
+                    "4. Trânsito: Atravessar a rua é uma aventura. Siga os locais.",
+                    "5. Intoxicação Alimentar: O risco é alto. Tome probióticos.",
+                    "6. Calor Extremo: Em maio/junho, turistas desmaiam. Hidrate-se.",
+                    "7. Macacos Agressivos: Se tiver comida na mão, eles atacam.",
+                    "8. Guias Falsos: Inventam histórias absurdas.",
+                    "9. Preço para Turista: Tudo custa 10x mais para estrangeiro. Negocie.",
+                    "10. Ar Puro: Em novembro, a queima de colheitas deixa o ar irrespirável."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Amanhecer Mágico (4 Horas)",
+                        texto: [
+                            "5h30: Entrada no Taj Mahal (Portão Leste).",
+                            "8h00: Fotos no Banco da Diana e passeio nos jardins.",
+                            "9h00: Café da manhã num hotel próximo."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Agra Clássica (1 Dia)",
+                        texto: [
+                            "Manhã: Taj Mahal.",
+                            "Tarde: Agra Fort (visão do Taj de longe) e Baby Taj.",
+                            "Pôr do Sol: Mehtab Bagh (Jardim do outro lado do rio)."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Triângulo Dourado (Extensão)",
+                        texto: [
+                            "Dia 1: Agra (Taj e Forte).",
+                            "Dia 2: Fatehpur Sikri (Cidade abandonada a 1h de Agra).",
+                            "Dia 3: Ida para Jaipur (Cidade Rosa)."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/in/agra.pt-br.html", 
+                    passeio: "https://www.civitatis.com/br/agra/ingresso-taj-mahal/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
     
         ],
          "Sítio": [
@@ -1015,6 +1425,349 @@ const worldData = {
             links: {
                 hotel: "https://www.booking.com/city/pe/machu-picchu.pt-br.html", 
                 passeio: "https://www.civitatis.com/br/aguas-calientes/ingresso-machu-picchu/", 
+                seguro: "https://www.segurospromo.com.br" 
+            },
+        }
+    ],
+    "Patrimônio Mundial": [
+        {
+            name: "Grande Muralha da China",
+            imagem: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?q=80&w=2070&auto=format&fit=crop",
+            tags: ["Maravilha do Mundo", "História", "Aventura"],
+            mapa: "https://goo.gl/maps/greatwall",
+            clima: "Continental. Invernos congelantes (neve) e Verões muito quentes. Primavera e Outono são perfeitos.",
+            
+            // === DADOS DO VEREDICTO ===
+            veredicto: {
+                melhor_epoca: "Abril/Maio ou Setembro/Outubro. Evite a 'Golden Week' (1 a 7 de Outubro) a todo custo (lotado).",
+                ideal_para: [
+                    "Aventureiros (fazer trekking nas partes 'selvagens')",
+                    "Fotógrafos (o nascer do sol na muralha é único)",
+                    "Historiadores (a maior obra de engenharia militar da história)",
+                    "Famílias (a seção Mutianyu tem teleférico e tobogã)"
+                ],
+                nao_ideal_para: [
+                    "Quem tem problemas no joelho (são milhares de degraus irregulares)",
+                    "Quem odeia multidões (se for para Badaling, a seção mais turística)",
+                    "Quem sofre com poluição (em dias de smog, a vista some)"
+                ],
+                perfis: [
+                    { icone: "ri-ancient-pavilion-fill", nome: "Império" },
+                    { icone: "ri-walk-fill", nome: "Trekking" },
+                    { icone: "ri-camera-lens-fill", nome: "Vistas" },
+                    { icone: "ri-shield-fill", nome: "Defesa" }
+                ]
+            },
+            // =================================
+
+            pontos_turisticos: [
+                "1. Mutianyu: A seção mais equilibrada. Tem paisagem linda, menos gente e um tobogã para descer escorregando.",
+                "2. Badaling: A mais famosa e acessível, mas absurdamente lotada de turistas chineses.",
+                "3. Jiankou: A muralha 'selvagem' e não restaurada. Perigosa e linda, só para trekkers experientes.",
+                "4. Simatai: A única seção aberta à noite para passeios iluminados.",
+                "5. Jinshanling: Para quem gosta de caminhar. Tem muitas torres de vigia e é perfeita para fotos.",
+                "6. Huanghuacheng: A única parte da muralha que toca um lago (Muralha da Água).",
+                "7. Gubeikou: Palco de batalhas históricas antigas e recentes, menos restaurada.",
+                "8. Juyongguan: Uma das passagens mais importantes, perto de Pequim, com muitos templos.",
+                "9. Shanhai Pass: Onde a 'Cabeça do Dragão Velho' encontra o mar (Laolongtou).",
+                "10. Pequim (Cidade Proibida): A visita à Muralha geralmente inclui a cidade imperial."
+            ],
+
+            gastronomia: [
+                "1. Pato de Pequim (Peking Duck): A pele é servida crocante com açúcar, a carne com panquecas. Imperdível.",
+                "2. Dumplings (Jiaozi): Bolinhos cozidos ou fritos recheados de porco e vegetais.",
+                "3. Hot Pot: Uma panela de caldo fervendo na mesa onde você cozinha suas carnes e verduras.",
+                "4. Zha Jiang Mian: Macarrão com molho de soja fermentada e carne de porco.",
+                "5. Tanghulu: Espetinho de frutas caramelizadas (geralmente espinheiro chinês), clássico de inverno.",
+                "6. Baozi: Pães cozidos no vapor recheados de carne ou pasta de feijão.",
+                "7. Chá Chinês: A cerimônia do chá é levada a sério. Prove o chá Oolong.",
+                "8. Jianbing: Um crepe chinês crocante vendido na rua no café da manhã.",
+                "9. Mapo Tofu: Tofu picante com carne moída (cuidado, a pimenta de Sichuan adormece a boca).",
+                "10. Baijiu: A cachaça chinesa de sorgo. Teor alcoólico fortíssimo."
+            ],
+
+            religiao: [
+                "1. Sem Religião Oficial: A Muralha é uma obra militar, não religiosa.",
+                "2. Budismo: É a religião mais visível. Há templos budistas perto das entradas da muralha.",
+                "3. Taoismo: Influencia a arquitetura e a visão de natureza ao redor.",
+                "4. Confucionismo: A base da sociedade chinesa (respeito à hierarquia e antepassados).",
+                "5. Templo do Céu: Em Pequim, onde o imperador orava por boas colheitas.",
+                "6. Superstição: Cores (Vermelho é sorte) e Números (4 é morte, 8 é riqueza) são levados a sério.",
+                "7. Dragão Chinês: Símbolo de poder e proteção, associado à forma da muralha.",
+                "8. Lendas: A lenda de Meng Jiangnu, que chorou tanto pela morte do marido na construção que a muralha caiu.",
+                "9. Protetores: Estátuas de bestas míticas nos telhados das torres para afastar o mal.",
+                "10. Ancestrais: O respeito aos mortos que construíram a muralha é grande."
+            ],
+
+            curiosidades: [
+                "1. Visível do Espaço?: NÃO. É um mito. A muralha é estreita demais para ser vista a olho nu da órbita.",
+                "2. Arroz na Massa: A argamassa usada na construção continha sopa de arroz glutinoso (pegajoso), o que a fez durar milênios.",
+                "3. Cemitério?: Dizem ser o 'maior cemitério do mundo', pois muitos trabalhadores morreram e foram enterrados nela.",
+                "4. Extensão: Tem mais de 21.000 km (contando todas as ramificações), mas a parte famosa é a da Dinastia Ming.",
+                "5. Não é Contínua: Não é um muro só, mas vários pedaços construídos em épocas diferentes.",
+                "6. Tobogã: Em Mutianyu, você sobe de teleférico e desce num carrinho de rolimã/tobogã. Michelle Obama já desceu!",
+                "7. Grafite: Infelizmente, há muitas pedras rabiscadas por turistas.",
+                "8. Maratona: Existe uma 'Maratona da Grande Muralha' anual, considerada uma das mais difíceis do mundo.",
+                "9. Defesa: Não servia só para barrar invasões, mas para cobrar impostos na Rota da Seda.",
+                "10. Tijolos Roubados: Durante a Revolução Cultural, muitos moradores pegaram tijolos da muralha para construir casas."
+            ],
+
+            eventos_estacoes: [
+                "1. Ano Novo Chinês (Jan/Fev): A maior festa do mundo. Tudo para, fogos por toda parte, lanternas vermelhas.",
+                "2. Festival das Lanternas: Encerra o ano novo com luzes lindas.",
+                "3. Outono Dourado (Outubro): As árvores ao redor da muralha ficam amarelas e vermelhas. Visual incrível.",
+                "4. Festival do Barco do Dragão (Junho): Corridas de barcos e comida típica (Zongzi).",
+                "5. Golden Week (Outubro): Feriado nacional. Meio bilhão de pessoas viajam. Evite.",
+                "6. Maratona da Muralha (Maio): Corredores do mundo todo.",
+                "7. Festival de Gelo (Harbin): Longe da muralha, mas muitos combinam a viagem no inverno.",
+                "8. Florada da Primavera: Em abril, as árvores de damasco florescem branco e rosa ao redor da muralha.",
+                "9. Dia dos Solteiros (11/11): O maior evento de compras do mundo.",
+                "10. Festival da Lua (Setembro): Come-se o 'Mooncake' (bolo da lua)."
+            ],
+
+            info_gerais: [
+                "1. Visto: Brasileiros precisam de visto para a China (exceto se for conexão de até 144h em Pequim).",
+                "2. Internet (VPN): Google, Instagram, WhatsApp e Facebook são BLOQUEADOS. Instale uma VPN paga antes de embarcar.",
+                "3. Pagamento: Cartão de crédito quase não passa. Baixe o Alipay ou WeChat Pay e cadastre seu cartão lá. É vital.",
+                "4. Banheiros: Muitos são no estilo 'buraco no chão' (agachado). Leve papel higiênico sempre.",
+                "5. Idioma: Poucos falam inglês fora do hotel. Tenha um app de tradução offline.",
+                "6. Poluição: Baixe um app de qualidade do ar. Use máscara se o índice estiver alto.",
+                "7. Segurança: Pequim é extremamente segura, com câmeras em todo lugar.",
+                "8. Passaporte: Leve sempre. É exigido para comprar bilhetes de trem e atrações.",
+                "9. Água: Nunca beba da torneira. Só garrafa.",
+                "10. Gorjeta: Não é costume na China (exceto para guias turísticos)."
+            ],
+
+            antes_de_ir: [
+                "1. VPN: Sério, sem VPN você fica incomunicável. Instale a Astrill ou ExpressVPN antes de ir.",
+                "2. Alipay: Configure sua conta no Alipay ainda no Brasil. Lá não se usa dinheiro, até o camelô usa QR Code.",
+                "3. Calçado: Use tênis com muito amortecimento. A muralha é feita de pedras irregulares e degraus altos.",
+                "4. Guia ou Motorista: Contratar um motorista privado para te levar a Mutianyu vale cada centavo (evita golpes de ônibus).",
+                "5. Chegue Cedo: Esteja na portaria às 7h30 da manhã para ter a muralha só para você por uns minutos.",
+                "6. Golpe do Chá: Se estudantes simpáticos te convidarem para uma 'cerimônia do chá', fuja. É um golpe famoso.",
+                "7. Bateria: Leve powerbank. O frio drena a bateria do celular rápido.",
+                "8. Tradutor: Baixe o pacote Chinês offline no Google Translate ou use o Microsoft Translator.",
+                "9. Papel Higiênico: Leve lencinhos na mochila. Banheiros públicos raramente têm papel.",
+                "10. Inverno: Se for no inverno, use roupas térmicas pesadas. O vento na muralha corta a pele."
+            ],
+
+            numeros: [
+                "1. 110 (Polícia).",
+                "2. 120 (Ambulância).",
+                "3. 119 (Bombeiros).",
+                "4. +86 10 6532-2881 (Embaixada do Brasil em Pequim).",
+                "5. 12306 (Informações de Trens).",
+                "6. DiDi (O 'Uber' chinês - tem versão em inglês).",
+                "7. Trip.com (Melhor app para reservar trens e hotéis na China).",
+                "8. Baidu Maps (O 'Google Maps' deles, só em chinês).",
+                "9. Alipay (App de pagamento e tudo mais).",
+                "10. WeChat (O 'WhatsApp' deles, essencial)."
+            ],
+
+            riscos: [
+                "1. Golpes de Turista: 'Estudantes de arte', 'Cerimônia do Chá', 'Táxi sem taxímetro'. Fique alerta.",
+                "2. Multidões: Risco de pisoteamento em feriados nacionais.",
+                "3. Poluição do Ar: Pode causar tosse e dor de cabeça em dias críticos.",
+                "4. Escadas Íngremes: Alguns degraus têm 50cm de altura. Cuidado na descida.",
+                "5. Crio: No inverno, temperaturas de -15ºC são comuns.",
+                "6. Trânsito: O trânsito de Pequim é caótico. Saia com antecedência.",
+                "7. Cuspida: É cultural (especialmente os mais velhos) cuspir no chão. Cuidado onde pisa.",
+                "8. Atravessar a Rua: Carros muitas vezes não param na faixa. Olhe bem.",
+                "9. Censores: Cuidado ao falar de política ou tirar fotos de militares/policiais.",
+                "10. Comida Apimentada: Se não aguenta, pergunte 'Bu la?' (Não apimentado?)."
+            ],
+
+            roteiros: {
+                "curto": {
+                    titulo: "O Clássico (1 Dia)",
+                    texto: [
+                        "Manhã: Ida a Mutianyu (1h30 de Pequim). Subida de teleférico.",
+                        "Tarde: Caminhada até a Torre 6 e descida de Tobogã.",
+                        "Noite: Jantar Pato de Pequim em Wangfujing."
+                    ]
+                },
+                "medio": {
+                    titulo: "Pequim Imperial (3 Dias)",
+                    texto: [
+                        "Dia 1: Grande Muralha (Mutianyu).",
+                        "Dia 2: Cidade Proibida e Praça da Paz Celestial (Tiananmen).",
+                        "Dia 3: Templo do Céu e Palácio de Verão."
+                    ]
+                },
+                "longo": {
+                    titulo: "China Histórica (5 Dias)",
+                    texto: [
+                        "Dias 1-3: Roteiro Imperial.",
+                        "Dia 4: Trem-bala para Xi'an (Guerreiros de Terracota).",
+                        "Dia 5: Retorno e compras no Silk Market."
+                    ]
+                },
+            },
+
+            links: {
+                hotel: "https://www.booking.com/city/cn/beijing.pt-br.html", 
+                passeio: "https://www.civitatis.com/br/pequim/excursao-grande-muralha-china-mutianyu/", 
+                seguro: "https://www.segurospromo.com.br" 
+            },
+        }
+    ],
+    "Parque": [
+        {
+            name: "Yellowstone National Park",
+            imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Aerial_image_of_Grand_Prismatic_Spring_%28view_from_the_south%29.jpg/960px-Aerial_image_of_Grand_Prismatic_Spring_%28view_from_the_south%29.jpg",
+            tags: ["Natureza", "Gêiseres", "Vida Selvagem"],
+            mapa: "https://goo.gl/maps/yellowstone",
+            clima: "Montanhoso. Verão agradável, Inverno brutal com muita neve.",
+            
+            // === DADOS DO VEREDICTO ===
+            veredicto: {
+                melhor_epoca: "Junho a Setembro. Setembro é ótimo para ver animais.",
+                ideal_para: [
+                    "Amantes da Natureza (maior concentração de animais dos EUA)",
+                    "Fotógrafos (Gêiseres coloridos e ursos)",
+                    "Famílias (Educação ambiental)",
+                    "Aventureiros (Trilhas selvagens)"
+                ],
+                nao_ideal_para: [
+                    "Quem não dirige (impossível sem carro)",
+                    "Quem busca luxo urbano",
+                    "Impacientes (trânsito para quando animais cruzam a pista)"
+                ],
+                perfis: [
+                    { icone: "ri-fire-fill", nome: "Vulcão" },
+                    { icone: "ri-bear-smile-fill", nome: "Animais" },
+                    { icone: "ri-landscape-fill", nome: "Paisagem" },
+                    { icone: "ri-roadster-fill", nome: "Roadtrip" }
+                ]
+            },
+            // =================================
+
+            pontos_turisticos: [
+                "1. Old Faithful: O gêiser mais famoso, entra em erupção a cada 90 minutos.",
+                "2. Grand Prismatic Spring: A maior fonte termal dos EUA, com cores de arco-íris.",
+                "3. Grand Canyon of the Yellowstone: Cânion dourado com cachoeiras gigantes.",
+                "4. Lamar Valley: O 'Serengeti Americano'. Melhor lugar para ver lobos e ursos.",
+                "5. Mammoth Hot Springs: Terraços de calcário branco que parecem cavernas.",
+                "6. Hayden Valley: O lugar certo para ver manadas gigantes de bisões.",
+                "7. Norris Geyser Basin: A área termal mais quente e ácida do parque.",
+                "8. Yellowstone Lake: O maior lago de altitude da América do Norte.",
+                "9. West Thumb: Gêiseres que explodem dentro do lago.",
+                "10. Roosevelt Arch: O portal de entrada norte histórico."
+            ],
+
+            gastronomia: [
+                "1. Bison Burger: Hambúrguer de carne de bisão.",
+                "2. Huckleberry: Frutinha roxa local (sorvete, torta, geleia).",
+                "3. Truta (Trout): Peixe fresco dos rios da região.",
+                "4. Elk (Alce): Carne de caça servida em restaurantes fora do parque.",
+                "5. Roosevelt Beans: Feijão doce estilo cowboy.",
+                "6. Prime Rib: Costela assada clássica dos lodges.",
+                "7. Old Faithful Inn Dining: Jantar no hotel histórico.",
+                "8. Piquenique: Compre sanduíches no mercado e coma nas áreas designadas.",
+                "9. Cervejas Artesanais: Montana tem ótimas microcervejarias.",
+                "10. Beef Jerky: Carne seca para trilhas."
+            ],
+
+            religiao: [
+                "1. Natureza Sagrada: Vital para tribos nativas (Shoshone, Bannock).",
+                "2. Grande Espírito: Atividade geotermal vista como poder divino.",
+                "3. Chapel of the Sacred Heart: Pequena capela católica no parque.",
+                "4. Espiritualidade: Conexão transcendental com a natureza.",
+                "5. Sítios Arqueológicos: Áreas de preservação indígena.",
+                "6. Lendas: Primeiros exploradores chamados de mentirosos sobre a 'fumaça no chão'.",
+                "7. Missão Sagrada: O conceito de Parque Nacional nasceu aqui.",
+                "8. Cemitérios Antigos: Áreas de enterro não demarcadas.",
+                "9. Silêncio: Zonas de contemplação absoluta.",
+                "10. Terra Viva: O vulcão atrai retiros espirituais."
+            ],
+
+            curiosidades: [
+                "1. Supervulcão: O parque é a cratera de um vulcão ativo gigante.",
+                "2. Primeiro do Mundo: Fundado em 1872.",
+                "3. Gêiseres: Contém metade de todos os gêiseres do mundo.",
+                "4. Cores: Causadas por bactérias que amam calor.",
+                "5. Ursos: Cerca de 700 ursos pardos vivem lá.",
+                "6. Terremotos: Milhares de pequenos tremores por ano.",
+                "7. Água Ácida: Algumas piscinas dissolvem matéria orgânica.",
+                "8. Pontualidade: Old Faithful é o gêiser mais previsível.",
+                "9. Lobos: Reintroduzidos em 1995, mudaram o curso dos rios.",
+                "10. Tamanho: Maior que dois estados americanos juntos."
+            ],
+
+            eventos_estacoes: [
+                "1. Abertura (Maio): Degelo das estradas.",
+                "2. Rut (Setembro): Acasalamento e briga dos alces.",
+                "3. Migração Bisões (Novembro): Descida para áreas baixas.",
+                "4. Inverno (Dez-Mar): Apenas snowmobiles entram.",
+                "5. Nascimento (Primavera): Bebês de bisão e ursinhos.",
+                "6. Flores Silvestres (Julho): Prados coloridos.",
+                "7. Pesca: Temporada regulamentada.",
+                "8. Queda das Folhas (Outubro): Álamos dourados.",
+                "9. Fechamento (Novembro): Preparação para neve.",
+                "10. Star Parties: Observação de estrelas no verão."
+            ],
+
+            info_gerais: [
+                "1. Carro: Obrigatório. Sem transporte público.",
+                "2. Distâncias: O parque é imenso, trânsito lento.",
+                "3. Animais: Mantenha 100m de distância de ursos.",
+                "4. Internet: Inexistente. Baixe mapas offline.",
+                "5. Hospedagem: Reserve com 1 ano de antecedência.",
+                "6. Spray de Urso: Essencial para trilhas.",
+                "7. Gás: Abasteça sempre que ver um posto.",
+                "8. Caminhos: Não saia dos decks de madeira (perigo de morte).",
+                "9. Lixo: Leve tudo com você.",
+                "10. Entradas: Verifique qual das 5 está aberta."
+            ],
+
+            antes_de_ir: [
+                "1. App Oficial: Baixe o 'NPS Yellowstone' offline.",
+                "2. Acorde Cedo: Entre às 6h para ver animais.",
+                "3. Binóculos: Essencial para ver lobos.",
+                "4. Roupas: Camadas (frio de manhã, calor à tarde).",
+                "5. Comida: Leve cooler com lanches.",
+                "6. Trânsito: Tenha paciência com os bisões na estrada.",
+                "7. West Yellowstone: Melhor cidade base fora do parque.",
+                "8. Grand Teton: Combine com o parque vizinho.",
+                "9. Chapéu: Sol de altitude queima.",
+                "10. Cuidado Noturno: Animais na pista."
+            ],
+
+            numeros: [
+                "1. 911 (Emergência).",
+                "2. Ranger Stations: Postos de guarda.",
+                "3. Clínicas Médicas: Em Mammoth e Old Faithful.",
+                "4. Info Parque: (307) 344-7381.",
+                "5. Xanterra: Reservas de hotéis.",
+                "6. Recreation.gov: Campings.",
+                "7. Aeroporto Bozeman (BZN).",
+                "8. Aeroporto Jackson Hole (JAC).",
+                "9. Guincho: Caríssimo lá dentro.",
+                "10. Bear Report: Avisar sobre ursos."
+            ],
+
+            riscos: [
+                "1. Animais: Bisões atacam se chegar perto.",
+                "2. Águas Termais: Cair é fatal. Siga a trilha.",
+                "3. Hipotermia: O tempo muda rápido.",
+                "4. Altitude: 2.400m cansa rápido.",
+                "5. Árvores: Cuidado em áreas queimadas com vento.",
+                "6. Trânsito: Colisões com animais.",
+                "7. Desidratação: Ar seco.",
+                "8. Se perder: Tenha mapa físico.",
+                "9. Carrapatos: Use calça.",
+                "10. Drones: Proibidos (multa)."
+            ],
+
+            roteiros: {
+                "curto": { titulo: "Loop Inferior", texto: ["Old Faithful", "Grand Prismatic", "Cânion"] },
+                "medio": { titulo: "O Grande 8", texto: ["Mammoth Hot Springs", "Norris Basin", "Lamar Valley"] },
+                "longo": { titulo: "Yellowstone + Teton", texto: ["5 dias no parque", "2 dias em Jackson Hole"] }
+            },
+
+            links: {
+                hotel: "https://www.booking.com/city/us/west-yellowstone.pt-br.html", 
+                passeio: "https://www.nps.gov/yell/planyourvisit/index.htm", 
                 seguro: "https://www.segurospromo.com.br" 
             },
         }
@@ -5635,7 +6388,369 @@ veredicto: {
         seguro: "https://www.segurospromo.com.br" 
     },
 },
-            
+// --- CALDAS NOVAS (BRASIL) ---
+            {
+                name: "Caldas Novas",
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Piscinas_de_ondas.jpg",
+                tags: ["Águas Termais", "Parques Aquáticos", "Família"],
+                mapa: "https://goo.gl/maps/caldasnovas",
+                clima: "Tropical Semiúmido. Quente o ano todo, mas no inverno as noites são frescas (ideal para banho quente).",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Maio a Julho (Inverno). A água quente fica deliciosa com o ventinho frio fora. Janeiro e Julho são lotados (férias escolares).",
+                    ideal_para: [
+                        "Famílias com crianças (o paraíso dos toboáguas)",
+                        "Idosos (as águas têm propriedades terapêuticas relaxantes)",
+                        "Quem quer relaxar na piscina o dia todo (vida de resort)",
+                        "Grupos grandes (é muito comum alugar flats para famílias inteiras)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem odeia calor excessivo (no verão a água quente + sol forte pode baixar a pressão)",
+                        "Quem busca vida noturna agitada (o foco aqui é o dia)",
+                        "Quem prefere praias desertas e silêncio (os parques têm som alto e agito)"
+                    ],
+                    perfis: [
+                        { icone: "ri-drop-fill", nome: "Águas Quentes" },
+                        { icone: "ri-group-fill", nome: "Família" },
+                        { icone: "ri-sun-fill", nome: "Verão" },
+                        { icone: "ri-hotel-bed-fill", nome: "Resorts" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Hot Park (Rio Quente): Fica na cidade vizinha (20min), é o maior e melhor parque, com a 'Praia do Cerrado'.",
+                    "2. Water Park: Parque aquático bem no centro da cidade, ótimo para quem não quer pegar estrada.",
+                    "3. DiRoma Acqua Park: Outro gigante, famoso pelos toboáguas radicais e piscina de ondas.",
+                    "4. Jardim Japonês: Um lugar de paz e história, com construções típicas e natureza preservada.",
+                    "5. Parque Estadual da Serra de Caldas: Trilhas e cachoeiras de água FRIA para refrescar e ver a natureza do cerrado.",
+                    "6. Lagoa Quente de Pirapitinga: Onde as águas nascem com temperaturas de até 50ºC (cozinha-se ovo lá!).",
+                    "7. Monumento das Águas: Cartão-postal na entrada da cidade, rende ótimas fotos.",
+                    "8. Feira do Luar: Tradicional feira noturna com comidas típicas e artesanato.",
+                    "9. Náutico Praia Clube: Fica na beira do Lago Corumbá, oferece passeios de escuna e jet-ski.",
+                    "10. Cachaçaria Vale das Águas: Para conhecer a produção local de cachaça de alambique."
+                ],
+
+                gastronomia: [
+                    "1. Empadão Goiano: A estrela local. Massa podre recheada com tudo (frango, linguiça, guariroba, pequi).",
+                    "2. Pamonha: Salgada (de sal) ou Doce. Em Goiás é sagrada.",
+                    "3. Pequi: O fruto do cerrado. Ame ou odeie, mas tem que provar (cuidado com os espinhos!).",
+                    "4. Peixe na Telha: Filé de peixe com molho, servido borbulhando.",
+                    "5. Galinhada: Arroz com frango caipira, açafrão (cúrcuma) e temperos.",
+                    "6. Sorvete ao Forno: Sobremesa curiosa servida em alguns restaurantes tradicionais.",
+                    "7. Doces em Compota: Figo, mamão, laranja. Vendidos em potes nas feiras.",
+                    "8. Guariroba: Um palmito amargo típico da região, usado em recheios.",
+                    "9. Espetinho com Mandioca: A jantinha clássica de rua.",
+                    "10. Licor de Pequi: Uma forma mais suave de provar o sabor do fruto."
+                ],
+
+                religiao: [
+                    "1. Santuário Nossa Senhora da Salette: Um local lindo, com vista para a cidade e muita paz.",
+                    "2. Igreja Matriz: No centro, construção antiga e simples, coração da fé local.",
+                    "3. Fé nas Águas: Historicamente, muitos visitavam a cidade em busca de cura para reumatismo nas águas.",
+                    "4. Procissões: Na Semana Santa, a cidade para com as tradições católicas.",
+                    "5. Capela do Rio Quente: Pequena capela histórica dentro do complexo do resort.",
+                    "6. Folia de Reis: Tradição muito forte no interior de Goiás em janeiro.",
+                    "7. Estátuas: Há várias estátuas religiosas espalhadas pelas praças.",
+                    "8. Turismo Religioso: A cidade vizinha, Trindade (Pai Eterno), atrai muitos fiéis que esticam até Caldas.",
+                    "9. Casamentos: Muitos casais escolhem os jardins japoneses ou resorts para casar.",
+                    "10. Benzimento: Ainda é comum encontrar benzedeiras tradicionais nos bairros mais antigos."
+                ],
+
+                curiosidades: [
+                    "1. Maior do Mundo: É considerado o maior manancial hidrotermal do mundo.",
+                    "2. Não é Vulcão: Muita gente acha, mas a água esquenta pela geotermia (profundidade), não por vulcão.",
+                    "3. 57 Graus: A água pode sair do solo a temperaturas que queimam a pele.",
+                    "4. Culinária de Rua: Em Goiás, come-se 'Jantinha' (espetinho + feijão tropeiro + mandioca).",
+                    "5. Praia do Cerrado: O Hot Park tem a maior praia artificial de águas quentes correntes do mundo.",
+                    "6. Descoberta: As fontes foram descobertas em 1722 por Bartolomeu Bueno da Silva (filho do Anhanguera).",
+                    "7. Lago Corumbá: Um lago gigante formado por hidrelétrica, usado para esportes náuticos.",
+                    "8. População Flutuante: A cidade tem 90 mil habitantes, mas recebe 4 milhões de turistas por ano.",
+                    "9. Ovos Cozidos: No Poço do Ovo (Lagoa Quente), a água é tão quente que cozinha ovos em minutos.",
+                    "10. Shopping de Biquínis: A cidade tem uma indústria forte de moda praia."
+                ],
+
+                eventos_estacoes: [
+                    "1. Caldas Country (Novembro): Um dos maiores festivais de música sertaneja do Brasil.",
+                    "2. Férias de Julho: A cidade lota, preços sobem e há shows diários nos hotéis.",
+                    "3. Verão Sertanejo (Janeiro): Outro festival gigante de música.",
+                    "4. Carnaval: Voltado para família, mas com blocos de rua e shows.",
+                    "5. Inverno (Jun-Ago): A melhor época. Dias de sol (25ºC) e noites frescas (15ºC).",
+                    "6. Semana Santa: Lotada, reserve com meses de antecedência.",
+                    "7. Festival Gastronômico: Ocorre esporadicamente, celebrando o pequi e milho.",
+                    "8. Natal/Réveillon: Ceias fartas nos resorts e queima de fogos.",
+                    "9. Baixa Temporada (Mai/Jun/Ago/Set): Preços caem pela metade.",
+                    "10. Chuvas (Dez-Mar): Chove forte, mas geralmente são pancadas de verão que passam logo."
+                ],
+
+                info_gerais: [
+                    "1. Voltagem: 220V (Atenção! Diferente de SP/RJ/MG).",
+                    "2. Aeroporto: Tem aeroporto próprio (CLV), mas com poucos voos. Muita gente desce em Goiânia (GYN) e pega transfer (2h).",
+                    "3. Transporte: Carro é bom para ir aos parques afastados. Uber funciona.",
+                    "4. Água da Torneira: Não beba. É termal em muitos lugares e tem minerais em excesso (laxante natural).",
+                    "5. Entrada nos Parques: Hóspedes da rede Rio Quente e DiRoma costumam ter acesso gratuito aos parques da rede.",
+                    "6. Protetor Solar: O sol do cerrado queima mesmo nublado.",
+                    "7. Hidratação: A água quente desidrata o corpo sem você perceber. Beba água.",
+                    "8. DDD: 64.",
+                    "9. Bancos: Tem agências dos principais bancos no centro.",
+                    "10. Cuidado com Piso: O limo (algas) cresce rápido na água quente, deixando o chão liso."
+                ],
+
+                antes_de_ir: [
+                    "1. 220V: Cuidado para não queimar secadores e chapinhas.",
+                    "2. Roupas de Banho: Leve várias. Devido à umidade, elas demoram a secar no quarto.",
+                    "3. Capinha de Celular: Compre aquelas capinhas à prova d'água para tirar foto na piscina.",
+                    "4. Repelente: O cerrado tem mosquitos, principalmente perto do lago e matas.",
+                    "5. Ingressos Online: Comprar antecipado no site dos parques é mais barato que na bilheteria.",
+                    "6. Pressão Baixa: Se você tem pressão baixa, alterne banhos quentes com frios e não fique horas de molho.",
+                    "7. Almoço: Se for ao Hot Park, saiba que não pode entrar com comida. O almoço lá dentro é caro.",
+                    "8. Transfer: Se for de avião para Goiânia, reserve o transfer/ônibus antes.",
+                    "9. Creme de Cabelo: A água termal resseca muito o cabelo (muitos minerais). Hidrate.",
+                    "10. Carteirinha de Estudante: Funciona nos parques para meia entrada."
+                ],
+
+                numeros: [
+                    "1. 190 (Polícia Militar).",
+                    "2. 193 (Bombeiros).",
+                    "3. 192 (SAMU).",
+                    "4. (64) 3454-3500 (Rodoviária).",
+                    "5. (64) 3454-5500 (Aeroporto de Caldas).",
+                    "6. (64) 3453-3091 (Secretaria de Turismo).",
+                    "7. UPA Caldas Novas: Atendimento 24h.",
+                    "8. Hospital Municipal: (64) 3454-3536.",
+                    "9. Táxi/Mototáxi: Pontos na Praça Mestre Orlando.",
+                    "10. Centro de Atendimento ao Turista (entrada da cidade)."
+                ],
+
+                riscos: [
+                    "1. Quedas: Piso molhado e liso é o acidente nº 1.",
+                    "2. Insolação: Ficar na água quente sob o sol engana.",
+                    "3. Preços Abusivos: Em alta temporada, tudo triplica o preço.",
+                    "4. Afogamento: Cuidado com crianças, mesmo em piscinas rasas.",
+                    "5. Roubo em Carros: Não deixe pertences à vista no carro estacionado na rua.",
+                    "6. Venda de Cotas: Vendedores de multipropriedade (cotas de resort) abordam na rua oferecendo brindes. É uma palestra de 2h para tentar te vender algo caro. Cuidado.",
+                    "7. Choque Térmico: Sair da água 40ºC para o ar condicionado forte.",
+                    "8. Otite: Dor de ouvido por ficar muito tempo mergulhado.",
+                    "9. Ressaca: A água quente potencializa o efeito do álcool.",
+                    "10. Estradas: A GO-213 pode ter buracos, dirija com atenção."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Fim de Semana (Relax)",
+                        texto: [
+                            "Dia 1: Chegada e dia inteiro no parque aquático do hotel.",
+                            "Noite 1: Feira do Luar para comer empadão.",
+                            "Dia 2: Manhã no Jardim Japonês e comprinhas de doces antes de ir."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Clássico (4 Dias)",
+                        texto: [
+                            "Dia 1: Water Park ou DiRoma.",
+                            "Dia 2: Dia inteiro no Hot Park/Praia do Cerrado (bate-volta Rio Quente).",
+                            "Dia 3: Manhã no Parque da Serra (trilha leve) e tarde no Náutico Clube.",
+                            "Dia 4: Relax nas piscinas do hotel e retorno."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Férias Completas (7 Dias)",
+                        texto: [
+                            "Dias 1-4: Roteiro Clássico.",
+                            "Dia 5: Lagoa Quente de Pirapitinga e Cachaçaria.",
+                            "Dia 6: Dia livre para repetir o parque favorito ou descansar.",
+                            "Dia 7: Compras de moda praia e check-out."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/br/caldas-novas.pt-br.html", 
+                    passeio: "https://www.hotpark.com/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
+            // --- BALNEÁRIO CAMBORIÚ (BRASIL) ---
+            {
+                name: "Balneário Camboriú",
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Balne%C3%A1rio_Cambori%C3%BA_from_Unipraias_Park_2023-04-02.jpg/960px-Balne%C3%A1rio_Cambori%C3%BA_from_Unipraias_Park_2023-04-02.jpg",
+                tags: ["Arranha-céus", "Vida Noturna", "Luxo"],
+                mapa: "https://goo.gl/maps/balneariocamboriu",
+                clima: "Subtropical. Verões quentes e agitados, Invernos amenos e ventosos.",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Março e Abril (Ainda faz calor, mas a cidade não está entupida). O Réveillon é incrível, mas o trânsito para.",
+                    ideal_para: [
+                        "Jovens e Baladeiros (algumas das melhores baladas do mundo estão aqui)",
+                        "Fãs de Arquitetura (os prédios mais altos do Brasil)",
+                        "Famílias (muitas atrações pagas como aquário e roda gigante)",
+                        "Quem gosta de agito urbano na praia"
+                    ],
+                    nao_ideal_para: [
+                        "Quem busca praias desertas e selvagens (a Praia Central é urbana)",
+                        "Quem odeia sombra na areia (os prédios fazem sombra à tarde)",
+                        "Orçamento apertado em Janeiro (tudo fica muito caro)"
+                    ],
+                    perfis: [
+                        { icone: "ri-building-2-fill", nome: "Dubai BR" },
+                        { icone: "ri-music-2-fill", nome: "Festas" },
+                        { icone: "ri-shopping-bag-fill", nome: "Compras" },
+                        { icone: "ri-car-fill", nome: "Supercarros" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Parque Unipraias: Bondinho aéreo que liga a praia central à praia de Laranjeiras, passando pela mata.",
+                    "2. FG Big Wheel: A roda-gigante estaiada com vista incrível do skyline e do mar.",
+                    "3. Oceanic Aquarium: Um aquário moderno com túnel de vidro e muitas espécies.",
+                    "4. Praia de Laranjeiras: Águas calmas e muitos restaurantes, acessível por barco ou bondinho.",
+                    "5. Molhe da Barra Sul: O lugar clássico para tirar foto com os arranha-céus ao fundo.",
+                    "6. Cristo Luz: Um monumento similar ao Redentor, mas segura um canhão de luz que muda de cor.",
+                    "7. Avenida Atlântica: O calçadão para caminhar, ver carros de luxo e gente bonita.",
+                    "8. Praia Brava: Na divisa com Itajaí, é o point do surf, gente descolada e beach clubs chiques.",
+                    "9. Classic Car Show: Museu de carros antigos e bar temático americano.",
+                    "10. Morro do Careca: Vista panorâmica incrível e ponto de salto de parapente."
+                ],
+
+                gastronomia: [
+                    "1. Sequência de Camarão: Prato típico da região, servido em Laranjeiras.",
+                    "2. Churrasco: Grandes churrascarias de alto padrão na beira-mar.",
+                    "3. Passeio San Miguel: Um boulevard gastronômico charmoso com várias opções (pizza, sushi, vinhos).",
+                    "4. Churros da Praia: Clássico de fim de tarde na areia.",
+                    "5. Frutos do Mar: Frescos e sofisticados nos restaurantes da Barra Sul.",
+                    "6. Cozinha Internacional: A cidade tem ótimos italianos e japoneses.",
+                    "7. Café Colonial: Herança alemã da região, mesas fartas de bolos e pães.",
+                    "8. Milho Verde: Com manteiga, nas barracas numeradas da orla.",
+                    "9. Drinks Elaborados: Os bares da orla competem nos coquetéis.",
+                    "10. Hambúrguer Gourmet: A cena de burgers na cidade é fortíssima."
+                ],
+
+                religiao: [
+                    "1. Igreja Matriz Santa Inês: Tem um formato curioso que lembra um chapéu de palha ou barco.",
+                    "2. Capela de Santo Amaro: Uma construção histórica simples e preservada no Bairro da Barra.",
+                    "3. Cristo Luz: Embora turístico, é um símbolo de proteção sobre a cidade.",
+                    "4. Diversidade: Igrejas evangélicas grandes e modernas estão presentes.",
+                    "5. Iemanjá: Na virada do ano, muitas oferendas são feitas no mar.",
+                    "6. Igrejinha da Barra: A primeira igreja da cidade, patrimônio histórico.",
+                    "7. Paz no Alto: O Morro do Careca é usado por muitos para meditação.",
+                    "8. Procissão de Navegantes: Tradição na região vizinha que influencia a cidade.",
+                    "9. Eventos Gospel: A cidade sedia grandes congressos religiosos.",
+                    "10. Cruz: O complexo do Cristo Luz tem símbolos católicos."
+                ],
+
+                curiosidades: [
+                    "1. A Sombra: Devido à altura dos prédios, a Praia Central fica com sombra a partir das 15h/16h.",
+                    "2. Alargamento: A faixa de areia foi triplicada recentemente para tentar diminuir o problema da sombra.",
+                    "3. Prédios Mais Altos: BC abriga 7 dos 10 prédios mais altos do Brasil (incluindo o One Tower).",
+                    "4. Neymar: O jogador tem uma cobertura quadriplex num dos prédios da orla.",
+                    "5. Dubai Brasileira: Apelido dado pela arquitetura e ostentação.",
+                    "6. Supercarros: É comum ver Ferraris e Lamborghinis desfilando na Atlântica.",
+                    "7. Menor Município: É um dos menores de SC em área territorial, tudo é vertical.",
+                    "8. Bondindinho: O transporte coletivo é feito por caminhões adaptados abertos.",
+                    "9. Segurança: Apesar de urbana, é considerada uma das cidades mais seguras do Brasil.",
+                    "10. 1 milhão: A população salta de 150 mil para mais de 1 milhão no verão."
+                ],
+
+                eventos_estacoes: [
+                    "1. Réveillon: O show de fogos é um dos maiores do país, perdendo apenas para Copacabana.",
+                    "2. Carnaval: Blocos de rua e festas privadas gigantes nos clubes (Green Valley).",
+                    "3. Temporada de Verão (Dez-Fev): A cidade não dorme, trânsito intenso 24h.",
+                    "4. Páscoa: Decoração temática linda nas praças.",
+                    "5. Festival da Canção: Evento cultural tradicional.",
+                    "6. Maratonas: A orla plana atrai muitas corridas de rua no outono/inverno.",
+                    "7. Inverno (Jun-Ago): A cidade acalma, bom para gastronomia e vinho.",
+                    "8. Balneário Fashion Show: Eventos de moda nos shoppings.",
+                    "9. Flower Power: Festa hippie chic que ocorre na região.",
+                    "10. Oktoberfest: Muita gente fica em BC e vai para Blumenau (1h de carro) em Outubro."
+                ],
+
+                info_gerais: [
+                    "1. Voltagem: 220V (Cuidado!).",
+                    "2. Aeroporto: Navegantes (NVT) é o mais próximo, você pega uma balsa ou Uber para chegar em BC.",
+                    "3. Trânsito: A cidade tem poucas avenidas principais. No verão, tudo trava.",
+                    "4. Estacionamento: Caríssimo e difícil de achar. Vá de Uber.",
+                    "5. Praia Imprópria: Às vezes, pontos da Praia Central ficam impróprios para banho. Confira as placas.",
+                    "6. Segurança: Monitorada por câmeras, policiamento ostensivo.",
+                    "7. Comércio: Lojas de rua ficam abertas até tarde na temporada.",
+                    "8. Beto Carrero: Fica na cidade vizinha (Penha), a 40 min de carro.",
+                    "9. Baladas: A região da Barra Sul e Praia Brava concentra a vida noturna.",
+                    "10. Uber: Funciona muito bem, mas tem preço dinâmico alto no verão."
+                ],
+
+                antes_de_ir: [
+                    "1. Reserve Hotel: Se for no verão, reserve com 6 meses de antecedência ou pagará uma fortuna.",
+                    "2. Aeroporto de Navegantes: É melhor que descer em Florianópolis (que fica a 1h30 sem trânsito).",
+                    "3. Sombra na Areia: Se gosta de sol até tarde, vá para a praia de manhã cedo ou vá para Laranjeiras/Brava.",
+                    "4. Trânsito na Osvaldo Reis: A estrada para a Praia Brava/Itajaí engarrafa muito às 18h.",
+                    "5. Roupa de Balada: O dress code das festas aqui é alto nível. Capriche no look.",
+                    "6. Dinheiro: Aceitam cartão em tudo, até ambulantes.",
+                    "7. Balsa: Se vier do aeroporto de Navegantes, a travessia de balsa é rápida e prática.",
+                    "8. Crianças: O Oceanic Aquarium e a Aventura Jurássica são paradas obrigatórias.",
+                    "9. Alargamento: A areia da praia central é mais grossa e de tombo (afunda rápido) após a obra. Cuidado.",
+                    "10. Luxo: Não se assuste com os preços de garrafas de água ou cerveja em beach clubs."
+                ],
+
+                numeros: [
+                    "1. 190 (Polícia Militar).",
+                    "2. 193 (Bombeiros).",
+                    "3. 192 (SAMU).",
+                    "4. (47) 3267-7011 (Secretaria de Turismo).",
+                    "5. Guarda Municipal: 153 (Muito ativa na cidade).",
+                    "6. Rodoviária de BC: (47) 3367-2901.",
+                    "7. Hospital Ruth Cardoso: (47) 3169-3700.",
+                    "8. Aeroporto de Navegantes: (47) 3342-9200.",
+                    "9. Bondindinho (Transporte): Circula pela Atlântica e Av. Brasil.",
+                    "10. Ponto de Táxi Central: (47) 3367-0245."
+                ],
+
+                riscos: [
+                    "1. Trânsito Travado: No Réveillon, você pode levar 4 horas para andar 5km.",
+                    "2. Preços de Temporada: Restaurantes aumentam preços no verão.",
+                    "3. Mar Agitado: A praia de tombo pode ser perigosa para crianças desatentas.",
+                    "4. Furto de Celular: Em grandes aglomerações (Réveillon/Carnaval), cuide do bolso.",
+                    "5. Bebida Batizada: Cuidado aceitar bebidas de estranhos nas baladas.",
+                    "6. Insolação: O mormaço queima muito.",
+                    "7. Golpes de Aluguel: Cuidado ao alugar apê por redes sociais sem verificar.",
+                    "8. Multas de Trânsito: A fiscalização é rigorosa com estacionamento proibido.",
+                    "9. Ressaca do Mar: Às vezes o mar sobe e invade a avenida (raro, mas acontece).",
+                    "10. Barulho: Se seu hotel for na Av. Atlântica, o barulho dos carros vai até de madrugada."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Luxo e Altura (2 Dias)",
+                        texto: [
+                            "Dia 1: Parque Unipraias + Praia de Laranjeiras + Noite na Barra Sul.",
+                            "Dia 2: Big Wheel (Roda Gigante) + Caminhada no Molhe + Jantar no Passeio San Miguel."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Diversão Total (4 Dias)",
+                        texto: [
+                            "Dias 1-2: Roteiro Curto.",
+                            "Dia 3: Bate-volta ao Beto Carrero World (Penha).",
+                            "Dia 4: Oceanic Aquarium + Tarde na Praia Brava (Beach Club)."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Vida de Patrão (6 Dias)",
+                        texto: [
+                            "Dias 1-4: Roteiro Médio.",
+                            "Dia 5: Aluguel de Lancha ou Passeio de Barco Pirata.",
+                            "Dia 6: Compras e dia relax no Cristo Luz para ver o pôr do sol."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/br/balneario-camboriu.pt-br.html", 
+                    passeio: "https://www.unipraias.com.br/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
             
 
         ],
@@ -7672,7 +8787,188 @@ veredicto: {
                     passeio: "https://www.civitatis.com/br/nova-york/", 
                     seguro: "https://www.segurospromo.com.br" 
                 }
-            }
+            },
+            // --- ATLANTA (EUA) ---
+            {
+                name: "Atlanta",
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Atlanta_cityscape.jpg/1280px-Atlanta_cityscape.jpg",
+                tags: ["Coca-Cola", "Direitos Civis", "Aquário"],
+                mapa: "https://goo.gl/maps/atlanta",
+                clima: "Subtropical Úmido. Verões quentes e abafados (Hotlanta), Invernos amenos, raramente neva.",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Março a Maio (Primavera) ou Outubro/Novembro. O verão (Jun-Ago) é insuportavelmente quente e úmido.",
+                    ideal_para: [
+                        "Fãs de Cultura Pop (Local de filmagem da Marvel e Walking Dead)",
+                        "Famílias (O Aquário e a Coca-Cola ficam lado a lado)",
+                        "Interessados em História (Berço dos Direitos Civis e Martin Luther King Jr.)",
+                        "Viajantes de Negócios (Sede de grandes empresas mundiais)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem gosta de andar a pé (A cidade é feita para carros, tudo é longe)",
+                        "Quem odeia trânsito (O tráfego de Atlanta é famoso por ser um dos piores dos EUA)",
+                        "Quem busca vida noturna até o amanhecer durante a semana"
+                    ],
+                    perfis: [
+                        { icone: "ri-film-fill", nome: "Cinema" },
+                        { icone: "ri-cup-fill", nome: "Coca-Cola" },
+                        { icone: "ri-history-line", nome: "História" },
+                        { icone: "ri-building-4-fill", nome: "Urbano" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Georgia Aquarium: O maior aquário das Américas. É o único lugar do ocidente com Tubarões-Baleia.",
+                    "2. World of Coca-Cola: Museu interativo da marca. O cofre da fórmula secreta está lá e você prova refris do mundo todo.",
+                    "3. Centennial Olympic Park: O legado das Olimpíadas de 1996, com a famosa fonte dos anéis.",
+                    "4. Martin Luther King Jr. National Historical Park: Visite a casa onde ele nasceu e a igreja onde pregava.",
+                    "5. Piedmont Park: O 'Central Park' de Atlanta, enorme e com vista linda do skyline.",
+                    "6. Atlanta Botanical Garden: Famoso pelas esculturas gigantes feitas de plantas (Alice no País das Maravilhas).",
+                    "7. The BeltLine: Antiga linha de trem transformada em calçadão urbano cheio de arte, bares e gente caminhando.",
+                    "8. Fox Theatre: Um teatro histórico com decoração árabe e egípcia extravagante. Assista a um show ou faça o tour.",
+                    "9. Ponce City Market: Um prédio industrial antigo transformado em mercado gastronômico e lojas (estilo Chelsea Market).",
+                    "10. High Museum of Art: O principal museu de arte do sudeste americano, com arquitetura moderna branca."
+                ],
+
+                gastronomia: [
+                    "1. Fried Chicken (Frango Frito): O prato oficial do Sul. Experimente no Mary Mac's Tea Room.",
+                    "2. The Varsity: A maior lanchonete drive-in do mundo. Peça o 'Chili Dog' e anéis de cebola. Gorduroso e clássico.",
+                    "3. Waffle House: Ícone cultural aberto 24h. Café da manhã a qualquer hora.",
+                    "4. Peach Cobbler: Torta de pêssego quente com sorvete. A Geórgia é o 'estado do pêssego'.",
+                    "5. Soul Food: Comida caseira sulista (couve, feijão fradinho, broa de milho).",
+                    "6. BBQ (Churrasco): Carne de porco defumada (pulled pork) com molho barbecue doce.",
+                    "7. Sweet Tea: Chá gelado MUITO doce. É a bebida padrão em qualquer refeição.",
+                    "8. Shrimp and Grits: Camarão com uma papa de milho cremosa (grits). Delicioso.",
+                    "9. Fried Green Tomatoes: Tomates verdes empanados e fritos.",
+                    "10. Coca-Cola: Sim, aqui se bebe Coca em tudo. Pedir Pepsi é quase uma ofensa."
+                ],
+
+                religiao: [
+                    "1. Bible Belt: Atlanta é a capital informal do 'Cinturão Bíblico'. A religião é muito presente.",
+                    "2. Ebenezer Baptist Church: A igreja onde Martin Luther King Jr. foi pastor. É um local de peregrinação.",
+                    "3. Gospel: Aos domingos, os cultos com corais gospel são eventos culturais poderosos.",
+                    "4. Templo Hindu BAPS: Um templo impressionante de mármore branco no subúrbio (Lilburn), o maior fora da Índia.",
+                    "5. Diversidade: Apesar da raiz Batista forte, há grandes comunidades judaicas e muçulmanas.",
+                    "6. Southern Baptist Convention: Uma das maiores denominações protestantes dos EUA tem força aqui.",
+                    "7. Big Bethel AME: Igreja histórica com letreiro 'JESUS SAVES' visível na rodovia.",
+                    "8. Martin Luther King Jr. Center: O túmulo de MLK e sua esposa Coretta fica numa piscina reflexiva.",
+                    "9. Igrejas Históricas: Muitas serviram de refúgio e organização durante o movimento dos direitos civis.",
+                    "10. Domingo de Manhã: A cidade fica vazia, todos estão na igreja."
+                ],
+
+                curiosidades: [
+                    "1. Aeroporto Mais Movimentado: O Hartsfield-Jackson é o aeroporto com mais tráfego de passageiros do MUNDO.",
+                    "2. Hollywood do Sul: Devido a incentivos fiscais, a Marvel (Vingadores) e Stranger Things filmam tudo aqui.",
+                    "3. Fênix: A cidade foi totalmente queimada na Guerra Civil (cena de 'E o Vento Levou') e renasceu. O símbolo da cidade é uma Fênix.",
+                    "4. Ruas Peachtree: Existem mais de 70 ruas com 'Peachtree' no nome. O GPS confunde muito.",
+                    "5. The Walking Dead: A famosa cena do Rick entrando na cidade a cavalo é na Jackson Street Bridge.",
+                    "6. Sede Mundial: Coca-Cola, CNN, Delta Airlines e UPS têm sede aqui.",
+                    "7. Hip Hop: É considerada a capital mundial do Hip Hop moderno (OutKast, Ludacris, Usher).",
+                    "8. Stone Mountain: Uma pedra de granito gigante com esculturas controversas de generais confederados.",
+                    "9. Olimpíadas 1996: Foi sede dos jogos do centenário.",
+                    "10. Cidades Irmãs: Atlanta é cidade-irmã do Rio de Janeiro."
+                ],
+
+                eventos_estacoes: [
+                    "1. Dragon Con (Setembro): A maior convenção de cultura pop/sci-fi do sudeste. Desfile épico no centro.",
+                    "2. Atlanta Dogwood Festival (Abril): Festival de artes e música no Piedmont Park quando as árvores florescem.",
+                    "3. Music Midtown (Setembro): Festival gigante de música no parque.",
+                    "4. Peach Drop (Réveillon): A versão local da bola da Times Square, mas cai um pêssego gigante.",
+                    "5. Pride Festival (Outubro): Uma das maiores paradas LGBTQIA+ dos EUA.",
+                    "6. Chick-fil-A Peach Bowl (Dezembro): Futebol americano universitário, a cidade para.",
+                    "7. Black History Month (Fevereiro): Eventos especiais em toda a cidade.",
+                    "8. Jazz Festival (Maio): Um dos maiores festivais de Jazz gratuitos do país.",
+                    "9. Taste of Atlanta (Outubro): Festival gastronômico.",
+                    "10. Ice Skating: No inverno, o Centennial Park ganha pista de gelo."
+                ],
+
+                info_gerais: [
+                    "1. Voltagem: 110V (Tomada tipo A/B - pinos chatos). Precisa de adaptador.",
+                    "2. Visto: Obrigatório visto americano válido.",
+                    "3. Gorjeta (Tip): OBRIGATÓRIA. Entre 18% e 22% em restaurantes. Se não der, o garçom pode vir cobrar.",
+                    "4. MARTA: O sistema de trens e ônibus. Útil para ir do aeroporto ao centro, mas limitado para outros bairros.",
+                    "5. Carro: Alugar carro é a melhor forma de se mover, mas prepare-se para o trânsito.",
+                    "6. Água: Potável da torneira.",
+                    "7. Impostos: O preço na etiqueta não é o final. Adiciona-se taxa (~8.9%) no caixa.",
+                    "8. Segurança: O centro turístico é seguro de dia, mas evite andar em áreas desertas à noite.",
+                    "9. Fuso Horário: GMT-4 ou GMT-5 (Depende do horário de verão).",
+                    "10. CityPASS: Vale muito a pena se for no Aquário e na Coca-Cola (economiza 40%)."
+                ],
+
+                antes_de_ir: [
+                    "1. Seguro Viagem: Indispensável. Uma consulta médica nos EUA custa milhares de dólares.",
+                    "2. CityPASS: Compre online antes. Dá acesso a 5 atrações principais e fura filas.",
+                    "3. Trânsito: Evite as rodovias I-75/I-85 entre 16h e 19h (Hora do Rush). É brutal.",
+                    "4. Uber no Aeroporto: Tem uma zona específica para pegar Uber, siga as placas 'Rideshare'.",
+                    "5. Reservas: Restaurantes populares no Ponce City Market enchem rápido.",
+                    "6. Sapato Confortável: O Aquário é imenso, anda-se muito.",
+                    "7. Clima Doido: Leve um casaco leve mesmo no verão, o ar condicionado dos lugares é gelado.",
+                    "8. Buckhead: É o bairro chique com shoppings de luxo (Lenox Square).",
+                    "9. Little Five Points: Bairro alternativo/hipster bom para compras vintage.",
+                    "10. ID: Leve passaporte se for beber. Eles pedem identidade até para quem tem 80 anos."
+                ],
+
+                numeros: [
+                    "1. 911 (Polícia, Bombeiros e Ambulância - Tudo num só).",
+                    "2. Consulado do Brasil em Atlanta: +1 (404) 949-2400.",
+                    "3. 311 (Serviços da cidade não emergenciais).",
+                    "4. Aeroporto Hartsfield-Jackson: (800) 897-1910.",
+                    "5. Grady Memorial Hospital (Principal emergência/trauma).",
+                    "6. MARTA (Transporte): (404) 848-5000.",
+                    "7. Táxi (Atlanta Checker Cab): (404) 351-1111.",
+                    "8. CVS/Walgreens (Farmácias comuns, tem em toda esquina).",
+                    "9. Georgia Aquarium Info: (404) 581-4000.",
+                    "10. Uber/Lyft (Apps funcionam melhor que táxi)."
+                ],
+
+                riscos: [
+                    "1. Armas: A Geórgia tem leis de armas flexíveis (Open Carry). Não se assuste se ver alguém armado no mercado.",
+                    "2. Áreas Perigosas: Evite certas áreas do sudoeste de Atlanta (Southwest) e Bankhead à noite.",
+                    "3. Furto em Carros: NUNCA deixe malas ou mochilas visíveis dentro do carro estacionado. Quebram o vidro em segundos.",
+                    "4. Mendigos: No centro (perto do parque), há muitos sem-teto. Geralmente inofensivos, mas podem ser insistentes.",
+                    "5. Trânsito Agressivo: Os motoristas correm muito nas autoestradas (75mph+).",
+                    "6. Calor Extremo: No verão, risco de insolação e desidratação.",
+                    "7. Golpes de Rua: Pessoas oferecendo CDs de rap 'grátis' e depois cobrando/intimidando.",
+                    "8. Transporte Público à Noite: Algumas estações do MARTA podem parecer inseguras tarde da noite.",
+                    "9. Custo Médico: Qualquer acidente vira uma dívida milionária sem seguro.",
+                    "10. Tempestades: No verão, tempestades elétricas repentinas são comuns."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Pemberton Place (1 Dia)",
+                        texto: [
+                            "Manhã: Georgia Aquarium (chegue na abertura).",
+                            "Almoço: No Centennial Park ou arredores.",
+                            "Tarde: World of Coca-Cola e Centro Nacional dos Direitos Civis e Humanos."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "História e Cultura (3 Dias)",
+                        texto: [
+                            "Dia 1: Roteiro Curto.",
+                            "Dia 2: MLK National Park pela manhã e Ponce City Market à tarde (via BeltLine).",
+                            "Dia 3: High Museum of Art e passeio no Piedmont Park/Jardim Botânico."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Atlanta Completa (5 Dias)",
+                        texto: [
+                            "Dias 1-3: Roteiro Médio.",
+                            "Dia 4: Compras em Buckhead ou Little Five Points e Fox Theatre à noite.",
+                            "Dia 5: Stone Mountain Park ou Zoo Atlanta."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/us/atlanta.pt-br.html", 
+                    passeio: "https://www.citypass.com/atlanta", 
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
         ],
           "México": [
     {
@@ -8610,7 +9906,187 @@ veredicto: {
                     passeio: "https://www.civitatis.com/br/madrid/", 
                     seguro: "https://www.segurospromo.com.br" 
                 }
-            }
+            },
+            // --- BARCELONA (ESPANHA) ---
+            {
+                name: "Barcelona",
+                imagem: "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=2070&auto=format&fit=crop",
+                tags: ["Gaudí", "Praia", "Arquitetura", "Tapas"],
+                mapa: "https://goo.gl/maps/barcelona",
+                clima: "Mediterrânico. Verões quentes e úmidos, invernos amenos. Sol quase o ano todo.",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Maio/Junho ou Setembro/Outubro. Julho e Agosto são insuportavelmente quentes e lotados.",
+                    ideal_para: [
+                        "Amantes de Arte e Arquitetura (A cidade respira Gaudí)",
+                        "Jovens e Vida Noturna (Festas na praia e bares no Gótico)",
+                        "Foodies (A cultura de tapas e mercados é incrível)",
+                        "Skatistas (É a capital mundial do skate de rua)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem busca silêncio absoluto (Cidade muito vibrante e barulhenta)",
+                        "Quem tem medo de furtos (É a capital dos batedores de carteira da Europa)",
+                        "Quem quer jantar cedo (Restaurantes só abrem às 20h30/21h)"
+                    ],
+                    perfis: [
+                        { icone: "ri-layout-masonry-fill", nome: "Gaudí" },
+                        { icone: "ri-goblet-fill", nome: "Tapas" },
+                        { icone: "ri-sun-fill", nome: "Praia" },
+                        { icone: "ri-walk-fill", nome: "Caminhada" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Sagrada Família: A obra-prima inacabada de Gaudí. O interior parece uma floresta de pedra iluminada.",
+                    "2. Park Güell: O parque colorido com a famosa salamandra de mosaicos e vista para o mar.",
+                    "3. Casa Batlló: A fachada parece feita de ossos e escamas de dragão. Visita obrigatória.",
+                    "4. La Rambla: A avenida mais famosa, cheia de quiosques, flores e artistas de rua (cuidado com a carteira!).",
+                    "5. Bairro Gótico: O coração medieval da cidade, labirinto de ruas estreitas e charmosas.",
+                    "6. Mercado de la Boqueria: Um templo da comida. Prove sucos frescos e jamón ibérico no cone.",
+                    "7. Barceloneta: A praia urbana mais famosa. Ótima para comer paella à beira-mar (chiringuitos).",
+                    "8. Camp Nou: O estádio do FC Barcelona. O museu é um dos mais visitados do país.",
+                    "9. Montjuïc: O monte com o castelo, a Fonte Mágica (show de luzes) e museus.",
+                    "10. Passeig de Gràcia: A avenida de luxo onde ficam a Casa Batlló e a La Pedrera (Casa Milà)."
+                ],
+
+                gastronomia: [
+                    "1. Pan con Tomate (Pa amb tomàquet): Pão torrado esfregado com alho e tomate. Simples e divino.",
+                    "2. Jamón Ibérico: O presunto curado espanhol. O 'Bellota' é o mais caro e saboroso.",
+                    "3. Patatas Bravas: Batatas fritas com molho picante e aioli.",
+                    "4. Paella: Embora seja de Valência, come-se muito bem aqui (peça a 'Fideuà', versão com macarrão).",
+                    "5. Crema Catalana: A versão local do Crème Brûlée.",
+                    "6. Cava: O espumante catalão, muito barato e bom.",
+                    "7. Sangria e Tinto de Verano: Bebidas refrescantes à base de vinho.",
+                    "8. Churros com Chocolate: O chocolate aqui é grosso, quase um pudim para mergulhar o churros.",
+                    "9. Calçots: Cebolas doces grelhadas na brasa, comidas com molho romesco (na temporada de inverno).",
+                    "10. Botifarra: A linguiça típica catalã servida com feijão branco."
+                ],
+
+                religiao: [
+                    "1. Sagrada Família: Mais que turística, é uma basílica expiatória. A fé de Gaudí está em cada detalhe.",
+                    "2. Catedral de Barcelona (Santa Eulalia): Gótica e imponente, tem gansos vivendo no claustro.",
+                    "3. Santa Maria del Mar: A 'igreja do povo', construída pelos estivadores (bairro Born).",
+                    "4. Abadia de Montserrat: Nas montanhas próximas, guarda a 'Moreneta' (Virgem Negra), padroeira da Catalunha.",
+                    "5. Templo do Sagrado Coração: Fica no topo do monte Tibidabo, abraçando a cidade (estilo Rio de Janeiro).",
+                    "6. Diversidade: Bairros como Raval têm forte presença muçulmana e sikh.",
+                    "7. Sinagoga Maior: No bairro judeu (Call), é uma das mais antigas da Europa.",
+                    "8. La Mercè: A padroeira da cidade, cuja festa em setembro para Barcelona.",
+                    "9. Sant Jordi: O santo guerreiro. Dia 23 de abril a cidade se enche de rosas e livros.",
+                    "10. Corpus Christi: Tradição do 'Ovo Dançante' nas fontes das igrejas."
+                ],
+
+                curiosidades: [
+                    "1. Bairros Quadrados: O bairro Eixample visto de cima é uma grade perfeita com esquinas cortadas (octógonos).",
+                    "2. Dois Idiomas: Aqui se fala Catalão e Espanhol. As placas estão nos dois idiomas (ou só em Catalão).",
+                    "3. Inacabada: A Sagrada Família está em construção desde 1882 e deve terminar em 2026.",
+                    "4. Sem Praia: Antes das Olimpíadas de 92, Barcelona não tinha praias utilizáveis (era zona industrial).",
+                    "5. Dragão: A lenda de São Jorge (Sant Jordi) matando o dragão está escondida em vários prédios (Casa Batlló é um dragão).",
+                    "6. Camp Nou: É o maior estádio da Europa (quase 100 mil lugares).",
+                    "7. Rumba Catalana: Estilo musical cigano nascido aqui.",
+                    "8. Superblocos: A cidade está fechando ruas para carros para criar ilhas de pedestres.",
+                    "9. Torre Eiffel: Diz a lenda que Gustave Eiffel ofereceu a torre para Barcelona primeiro, mas acharam feia.",
+                    "10. Multa de Bikini: É proibido andar de biquíni/sunga fora da areia da praia (no calçadão dá multa)."
+                ],
+
+                eventos_estacoes: [
+                    "1. La Mercè (Setembro): A maior festa da cidade. Castelos humanos (Castellers), demônios com fogo (Correfoc) e música.",
+                    "2. Primavera Sound (Junho): Um dos festivais de música indie mais famosos do mundo.",
+                    "3. Sant Jordi (23 Abril): O 'Dia dos Namorados' local. Homens dão rosas, mulheres dão livros.",
+                    "4. Sonar Festival (Junho): Música eletrônica e tecnologia.",
+                    "5. Verbena de San Juan (23 Junho): Fogueiras na praia e fogos a noite toda para celebrar o verão.",
+                    "6. Natal: A feira de Santa Llúcia na catedral é linda.",
+                    "7. Caganer: No natal, eles colocam um boneco 'fazendo cocô' no presépio para dar sorte (tradição bizarra e amada).",
+                    "8. Festa Major de Gràcia (Agosto): Os moradores decoram as ruas com materiais reciclados. Espetacular.",
+                    "9. Fórmula 1: O GP da Espanha acontece no circuito de Montmeló.",
+                    "10. MWC (Fevereiro): O maior congresso de celulares do mundo lota a cidade."
+                ],
+
+                info_gerais: [
+                    "1. Moeda: Euro (€).",
+                    "2. Idioma: Catalão e Espanhol (Castelhano). Inglês é comum no turismo.",
+                    "3. Horários: Almoço às 14h, Jantar às 21h ou 22h. Lojas fecham na 'siesta' (14h-17h) em bairros menores.",
+                    "4. Água: Potável, mas o gosto não é bom (muito calcário). Melhor comprar garrafa.",
+                    "5. Metrô: Excelente, cobre tudo. Cuidado com batedores de carteira nas estações.",
+                    "6. Gorjeta: Não é obrigatória, mas arredondar ou deixar 1€ é simpático.",
+                    "7. Tax Free: Devolução de imposto para compras acima de certo valor (guarde recibos).",
+                    "8. Tomada: Tipo F (dois pinos redondos, padrão europeu).",
+                    "9. Domingo: Quase tudo fecha (lojas, mercados). Só restaurantes e atrações abrem.",
+                    "10. Bicicleta: Cidade muito plana e com muitas ciclovias (Bicing)."
+                ],
+
+                antes_de_ir: [
+                    "1. Reserve Sagrada Família: É sério. Se deixar para comprar na hora, não vai entrar. Esgota dias antes.",
+                    "2. Pickpockets (Batedores de Carteira): Barcelona é a capital mundial disso. NUNCA deixe celular na mesa ou mochila nas costas no metrô.",
+                    "3. Park Güell: A parte famosa (monumental) é paga e tem hora marcada.",
+                    "4. Aerobus: O ônibus azul que liga o aeroporto à Plaça Catalunya é a melhor opção custo-benefício.",
+                    "5. Jantar Tarde: Se chegar no restaurante às 19h, vai estar fechado ou vazio.",
+                    "6. Uber: Existe, mas os táxis (amarelo e preto) são mais comuns e têm preço justo (pelo app FreeNow).",
+                    "7. Política: Evite discussões sobre independência da Catalunha se não conhecer bem o interlocutor.",
+                    "8. Taxa Turística: Hotéis cobram uma taxa extra por noite/pessoa no check-in.",
+                    "9. Elevador no Castelo: No metrô, prefira elevadores se estiver com mala. As escadas são longas.",
+                    "10. Protetor Solar: O sol do Mediterrâneo é forte."
+                ],
+
+                numeros: [
+                    "1. 112 (Emergência Geral).",
+                    "2. 092 (Polícia Local - Guàrdia Urbana).",
+                    "3. 061 (Saúde / Ambulância).",
+                    "4. +34 93 402 70 00 (Turismo de Barcelona).",
+                    "5. Consulado do Brasil: +34 93 488 22 88.",
+                    "6. Aeroporto El Prat: +34 91 321 10 00.",
+                    "7. Rádio Táxi: +34 93 303 30 33.",
+                    "8. Renfe (Trens): +34 912 320 320.",
+                    "9. Objeto Perdidos (Transporte): TMB Info.",
+                    "10. FreeNow (App de táxi mais usado)."
+                ],
+
+                riscos: [
+                    "1. Batedores de Carteira: Nas Ramblas, Metrô e Praia. Eles são mestres da distração.",
+                    "2. Vendedores de Cerveja na Rua: 'Cerveza-Beer'. Guardam as latas em bueiros. Não beba.",
+                    "3. Jogo da Bolinha: Golpe clássico nas Ramblas para roubar turistas distraídos.",
+                    "4. Multas: Beber álcool na rua (botellón) dá multa pesada.",
+                    "5. Ciclovias: Cuidado ao andar a pé, as bicicletas e patinetes andam rápido e silenciosos.",
+                    "6. Golpes em Restaurantes: Nas Ramblas, a 'Paella congelada' e sangria cara são armadilhas.",
+                    "7. Calor: Hidrate-se no verão.",
+                    "8. Manifestações: Podem ocorrer e bloquear o transporte (geralmente pacíficas).",
+                    "9. Clubes de Cannabis: São legais apenas para sócios residentes, cuidado com convites na rua.",
+                    "10. Praia à Noite: Evite dormir ou deixar coisas na areia à noite, é roubo na certa."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Gaudí Essencial (2 Dias)",
+                        texto: [
+                            "Dia 1: Sagrada Família (manhã) + Passeig de Gràcia (Casa Batlló/Pedrera).",
+                            "Dia 2: Park Güell + Bairro Gótico e Catedral."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Mar e Cultura (4 Dias)",
+                        texto: [
+                            "Dias 1-2: Roteiro Curto.",
+                            "Dia 3: Barceloneta (Praia) + Montjuïc (Museu MNAC e Fonte Mágica).",
+                            "Dia 4: Mercado Boqueria + Born + Parque da Ciutadella."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Catalunha Completa (6 Dias)",
+                        texto: [
+                            "Dias 1-4: Roteiro Médio.",
+                            "Dia 5: Bate-volta a Montserrat (Mosteiro na montanha).",
+                            "Dia 6: Camp Nou (se gostar de futebol) ou Tibidabo (Parque vintage no topo da montanha)."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/es/barcelona.pt-br.html", 
+                    passeio: "https://www.civitatis.com/br/barcelona/ingresso-sagrada-familia-subida-torres/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
        ], // <--- VÍRGULA DEPOIS DO PAÍS ANTERIOR (ESPANHA OU PORTUGAL)
 
         "França": [

@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"> 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,6 +80,7 @@
     </div>
 
     <div id="cityModal" class="modal-overlay">
+
         <div class="modal-content">
             <button class="close-modal" onclick="closeModal()">&times;</button>
 
@@ -92,6 +94,17 @@
             </div>
 
             <div class="modal-body">
+
+                <div id="beforeYouGoSection" class="checklist-section">
+                    <h3 class="checklist-title">
+                        <i class="ri-flight-takeoff-line"></i> ANTES DE IR
+                        <span class="pulse-dot"></span>
+                    </h3>
+                    <p class="checklist-subtitle">Itens essenciais para sua entrada no país</p>
+
+                    <div class="checklist-grid" id="checklistContainer">
+                        </div>
+                </div>
 
                 <div id="realCostSection" class="real-cost-section">
                     <h3 class="real-cost-title">
@@ -177,6 +190,7 @@
             </div>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

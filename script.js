@@ -31,350 +31,872 @@ const realCostData = {
         comida: "R$ 80 – R$ 120",
         hospedagem: "R$ 150 – R$ 250",
         transporte: "R$ 30 – R$ 50", 
-        atracoes: "R$ 40 – R$ 80"
+        atracoes: "R$ 40 – R$ 80",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado para atividades de risco",
+            tomada: "Tipo N (variável em hotéis)",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "São Paulo": {
         comida: "R$ 90 – R$ 160",
         hospedagem: "R$ 200 – R$ 450",
         transporte: "R$ 40 – R$ 90",
-        atracoes: "R$ 30 – R$ 100"
+        atracoes: "R$ 30 – R$ 100",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo N (variável)",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Gramado": {
         comida: "R$ 120 – R$ 250",
         hospedagem: "R$ 300 – R$ 800",
         transporte: "R$ 50 – R$ 150",
-        atracoes: "R$ 100 – R$ 350"
+        atracoes: "R$ 100 – R$ 350",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Foz do Iguaçu": {
         comida: "R$ 80 – R$ 150",
         hospedagem: "R$ 150 – R$ 400",
         transporte: "R$ 40 – R$ 100",
-        atracoes: "R$ 120 – R$ 300"
+        atracoes: "R$ 120 – R$ 300",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Florianópolis": {
         comida: "R$ 90 – R$ 180",
         hospedagem: "R$ 180 – R$ 500",
         transporte: "R$ 40 – R$ 90",
-        atracoes: "R$ 40 – R$ 150"
+        atracoes: "R$ 40 – R$ 150",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado (surf/mergulho)",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Salvador": {
         comida: "R$ 70 – R$ 140",
         hospedagem: "R$ 130 – R$ 350",
         transporte: "R$ 30 – R$ 70",
-        atracoes: "R$ 30 – R$ 100"
+        atracoes: "R$ 30 – R$ 100",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Febre amarela recomendada",
+            seguro: "Recomendado",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Brasília": {
         comida: "R$ 90 – R$ 170",
         hospedagem: "R$ 200 – R$ 450",
         transporte: "R$ 30 – R$ 80",
-        atracoes: "R$ 10 – R$ 60"
+        atracoes: "R$ 10 – R$ 60",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Recife": {
         comida: "R$ 75 – R$ 150",
         hospedagem: "R$ 140 – R$ 400",
         transporte: "R$ 35 – R$ 80",
-        atracoes: "R$ 20 – R$ 120"
+        atracoes: "R$ 20 – R$ 120",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Febre amarela recomendada",
+            seguro: "Recomendado",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Porto Alegre": {
         comida: "R$ 85 – R$ 160",
         hospedagem: "R$ 170 – R$ 400",
         transporte: "R$ 35 – R$ 70",
-        atracoes: "R$ 20 – R$ 80"
+        atracoes: "R$ 20 – R$ 80",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Curitiba": {
         comida: "R$ 80 – R$ 150",
         hospedagem: "R$ 160 – R$ 380",
         transporte: "R$ 30 – R$ 70",
-        atracoes: "R$ 25 – R$ 90"
+        atracoes: "R$ 25 – R$ 90",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Fortaleza": {
         comida: "R$ 75 – R$ 150",
         hospedagem: "R$ 150 – R$ 400",
         transporte: "R$ 35 – R$ 80",
-        atracoes: "R$ 30 – R$ 180"
+        atracoes: "R$ 30 – R$ 180",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Febre amarela recomendada",
+            seguro: "Recomendado (mergulho/windsurf)",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Campos do Jordão": {
         comida: "R$ 130 – R$ 320",
         hospedagem: "R$ 400 – R$ 1000",
         transporte: "R$ 50 – R$ 120",
-        atracoes: "R$ 70 – R$ 250"
+        atracoes: "R$ 70 – R$ 250",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Porto de Galinhas": {
         comida: "R$ 110 – R$ 220",
         hospedagem: "R$ 280 – R$ 700",
         transporte: "R$ 60 – R$ 150",
-        atracoes: "R$ 90 – R$ 250"
+        atracoes: "R$ 90 – R$ 250",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Febre amarela recomendada",
+            seguro: "Recomendado (mergulho/snorkel)",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Porto Seguro": {
         comida: "R$ 75 – R$ 160",
         hospedagem: "R$ 130 – R$ 450",
         transporte: "R$ 35 – R$ 90",
-        atracoes: "R$ 45 – R$ 180"
+        atracoes: "R$ 45 – R$ 180",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Febre amarela recomendada",
+            seguro: "Recomendado",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Búzios": {
         comida: "R$ 125 – R$ 280",
         hospedagem: "R$ 280 – R$ 700",
         transporte: "R$ 45 – R$ 120",
-        atracoes: "R$ 55 – R$ 200"
+        atracoes: "R$ 55 – R$ 200",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado (praia/windsurf)",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Natal": {
         comida: "R$ 85 – R$ 160",
         hospedagem: "R$ 150 – R$ 400",
         transporte: "R$ 35 – R$ 90",
-        atracoes: "R$ 50 – R$ 200"
+        atracoes: "R$ 50 – R$ 200",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Febre amarela recomendada",
+            seguro: "Recomendado (surf/mergulho)",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Maceió": {
         comida: "R$ 85 – R$ 160",
         hospedagem: "R$ 160 – R$ 450",
         transporte: "R$ 35 – R$ 90",
-        atracoes: "R$ 45 – R$ 180"
+        atracoes: "R$ 45 – R$ 180",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Febre amarela recomendada",
+            seguro: "Recomendado",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Belo Horizonte": {
         comida: "R$ 70 – R$ 130",
         hospedagem: "R$ 140 – R$ 350",
         transporte: "R$ 30 – R$ 70", 
-        atracoes: "R$ 20 – R$ 100"
+        atracoes: "R$ 20 – R$ 100",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Manaus": {
-    comida: "R$ 60 – R$ 120",
-    hospedagem: "R$ 130 – R$ 350",
-    transporte: "R$ 30 – R$ 70", 
-    atracoes: "R$ 50 – R$ 200"
-   },
-   "João Pessoa": {
-    comida: "R$ 60 – R$ 110",
-    hospedagem: "R$ 130 – R$ 350",
-    transporte: "R$ 25 – R$ 60", 
-    atracoes: "R$ 20 – R$ 100"
+        comida: "R$ 60 – R$ 120",
+        hospedagem: "R$ 130 – R$ 350",
+        transporte: "R$ 30 – R$ 70", 
+        atracoes: "R$ 50 – R$ 200",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Febre amarela fortemente recomendada",
+            seguro: "Recomendado (trekking na floresta)",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
+    },
+    "João Pessoa": {
+        comida: "R$ 60 – R$ 110",
+        hospedagem: "R$ 130 – R$ 350",
+        transporte: "R$ 25 – R$ 60", 
+        atracoes: "R$ 20 – R$ 100",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Febre amarela recomendada",
+            seguro: "Recomendado",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Ubatuba": {
         comida: "R$ 70 – R$ 110",
         hospedagem: "R$ 160 – R$ 350",
         transporte: "R$ 30 – R$ 60", 
-        atracoes: "R$ 40 – R$ 90"
+        atracoes: "R$ 40 – R$ 90",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado (trilhas/mergulho)",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Vitória": {
-    comida: "R$ 60 – R$ 120",
-    hospedagem: "R$ 130 – R$ 320",
-    transporte: "R$ 25 – R$ 60", 
-    atracoes: "R$ 20 – R$ 80"
+        comida: "R$ 60 – R$ 120",
+        hospedagem: "R$ 130 – R$ 320",
+        transporte: "R$ 25 – R$ 60", 
+        atracoes: "R$ 20 – R$ 80",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Aracaju": {
-    comida: "R$ 50 – R$ 100",
-    hospedagem: "R$ 120 – R$ 300",
-    transporte: "R$ 25 – R$ 50", 
-    atracoes: "R$ 30 – R$ 90"
+        comida: "R$ 50 – R$ 100",
+        hospedagem: "R$ 120 – R$ 300",
+        transporte: "R$ 25 – R$ 50", 
+        atracoes: "R$ 30 – R$ 90",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Febre amarela recomendada",
+            seguro: "Recomendado",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Cabo Frio": {
-    comida: "R$ 60 – R$ 100",
-    hospedagem: "R$ 120 – R$ 300",
-    transporte: "R$ 20 – R$ 40", 
-    atracoes: "R$ 50 – R$ 100"
+        comida: "R$ 60 – R$ 100",
+        hospedagem: "R$ 120 – R$ 300",
+        transporte: "R$ 20 – R$ 40", 
+        atracoes: "R$ 50 – R$ 100",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado (mergulho/praia)",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Bonito": {
-    comida: "R$ 60 – R$ 120",
-    hospedagem: "R$ 180 – R$ 450",
-    transporte: "R$ 50 – R$ 100", 
-    atracoes: "R$ 150 – R$ 450"
+        comida: "R$ 60 – R$ 120",
+        hospedagem: "R$ 180 – R$ 450",
+        transporte: "R$ 50 – R$ 100", 
+        atracoes: "R$ 150 – R$ 450",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado (mergulho/rafting)",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Caldas Novas": {
-    comida: "R$ 40 – R$ 90", // Muita opção de buffet a quilo e lanches
-    hospedagem: "R$ 150 – R$ 500", // Varia muito (flats alugados vs resorts all-inclusive)
-    transporte: "R$ 20 – R$ 50", // Uber funciona bem, mas alguns hotéis exigem carro para o centro
-    atracoes: "R$ 80 – R$ 250" // Ingressos de parques como Water Park ou Hot Park (Rio Quente)
-   },
-   "Balneário Camboriú": {
-    comida: "R$ 50 – R$ 150", // Restaurantes na Atlântica são caros; buffets na Av. Brasil são ok
-    hospedagem: "R$ 250 – R$ 800", // Alta temporada e feriados os preços explodem
-    transporte: "R$ 20 – R$ 40", // Uber ou o famoso "Bondindinho" (ônibus turístico aberto)
-    atracoes: "R$ 80 – R$ 200" // Big Wheel, Unipraias e Aquário têm ingressos elevados
-},
+        comida: "R$ 40 – R$ 90",
+        hospedagem: "R$ 150 – R$ 500",
+        transporte: "R$ 20 – R$ 50", 
+        atracoes: "R$ 80 – R$ 250",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
+    },
+    "Balneário Camboriú": {
+        comida: "R$ 50 – R$ 150",
+        hospedagem: "R$ 250 – R$ 800",
+        transporte: "R$ 20 – R$ 40",
+        atracoes: "R$ 80 – R$ 200",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado (praia/surf)",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
+    },
     "Buenos Aires": {
         comida: "R$ 90 – R$ 180",
         hospedagem: "R$ 180 – R$ 450",
         transporte: "R$ 25 – R$ 60",
-        atracoes: "R$ 50 – R$ 150"
+        atracoes: "R$ 50 – R$ 150",
+        checklist: {
+            passaporte: "Válido (obrigatório)",
+            visto: "Nenhum (Brasil isento)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo I (3 pinos redondos)",
+            moeda: "Peso Argentino ($)",
+            idioma: "Espanhol"
+        }
     },
     "Santiago": {
         comida: "R$ 110 – R$ 220",
         hospedagem: "R$ 220 – R$ 550",
         transporte: "R$ 35 – R$ 80",
-        atracoes: "R$ 60 – R$ 180"
+        atracoes: "R$ 60 – R$ 180",
+        checklist: {
+            passaporte: "Válido (obrigatório)",
+            visto: "Nenhum (Brasil isento - 90 dias)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo C (2 pinos redondos)",
+            moeda: "Peso Chileno ($)",
+            idioma: "Espanhol"
+        }
     },
     "Cartagena": {
-    comida: "R$ 70 – R$ 140",
-    hospedagem: "R$ 200 – R$ 550",
-    transporte: "R$ 30 – R$ 70", 
-    atracoes: "R$ 50 – R$ 180"
+        comida: "R$ 70 – R$ 140",
+        hospedagem: "R$ 200 – R$ 550",
+        transporte: "R$ 30 – R$ 70", 
+        atracoes: "R$ 50 – R$ 180",
+        checklist: {
+            passaporte: "Válido (obrigatório)",
+            visto: "Nenhum (Brasil isento - 90 dias)",
+            vacinas: "Febre amarela recomendada",
+            seguro: "Recomendado",
+            tomada: "Tipo A/B (como EUA)",
+            moeda: "Peso Colombiano ($)",
+            idioma: "Espanhol"
+        }
     },
     "Bogotá": {
-    comida: "R$ 60 – R$ 110",
-    hospedagem: "R$ 150 – R$ 400",
-    transporte: "R$ 25 – R$ 60", 
-    atracoes: "R$ 40 – R$ 150"
+        comida: "R$ 60 – R$ 110",
+        hospedagem: "R$ 150 – R$ 400",
+        transporte: "R$ 25 – R$ 60", 
+        atracoes: "R$ 40 – R$ 150",
+        checklist: {
+            passaporte: "Válido (obrigatório)",
+            visto: "Nenhum (Brasil isento - 90 dias)",
+            vacinas: "Febre amarela recomendada",
+            seguro: "Recomendado",
+            tomada: "Tipo A/B",
+            moeda: "Peso Colombiano ($)",
+            idioma: "Espanhol"
+        }
     },
     "Montevideu": {
-    comida: "R$ 110 – R$ 200",
-    hospedagem: "R$ 200 – R$ 500",
-    transporte: "R$ 35 – R$ 90", 
-    atracoes: "R$ 40 – R$ 150"
+        comida: "R$ 110 – R$ 200",
+        hospedagem: "R$ 200 – R$ 500",
+        transporte: "R$ 35 – R$ 90", 
+        atracoes: "R$ 40 – R$ 150",
+        checklist: {
+            passaporte: "Válido (obrigatório)",
+            visto: "Nenhum (Brasil isento - 90 dias)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo I",
+            moeda: "Peso Uruguaio ($)",
+            idioma: "Espanhol"
+        }
     },
     "Lima": {
-    comida: "R$ 50 – R$ 120",
-    hospedagem: "R$ 130 – R$ 350",
-    transporte: "R$ 20 – R$ 50", 
-    atracoes: "R$ 40 – R$ 120"
-},
+        comida: "R$ 50 – R$ 120",
+        hospedagem: "R$ 130 – R$ 350",
+        transporte: "R$ 20 – R$ 50", 
+        atracoes: "R$ 40 – R$ 120",
+        checklist: {
+            passaporte: "Válido (obrigatório)",
+            visto: "Nenhum (Brasil isento - 183 dias)",
+            vacinas: "Febre amarela recomendada",
+            seguro: "Recomendado",
+            tomada: "Tipo A (2 pinos planos)",
+            moeda: "Sol Peruano (S/)",
+            idioma: "Espanhol"
+        }
+    },
     "Punta Cana": {
         comida: "R$ 180 – R$ 350",
         hospedagem: "R$ 450 – R$ 1300",
         transporte: "R$ 60 – R$ 180",
-        atracoes: "R$ 180 – R$ 500"
+        atracoes: "R$ 180 – R$ 500",
+        checklist: {
+            passaporte: "Válido (+6 meses)",
+            visto: "Nenhum (turismo até 30 dias)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado (resort/mergulho)",
+            tomada: "Tipo A/B (como EUA)",
+            moeda: "Peso Dominicano (RD$)",
+            idioma: "Espanhol"
+        }
     },
     "Cidade do Panamá": {
-    comida: "R$ 60 – R$ 130",
-    hospedagem: "R$ 180 – R$ 450",
-    transporte: "R$ 20 – R$ 50", 
-    atracoes: "R$ 80 – R$ 250"
-},
+        comida: "R$ 60 – R$ 130",
+        hospedagem: "R$ 180 – R$ 450",
+        transporte: "R$ 20 – R$ 50", 
+        atracoes: "R$ 80 – R$ 250",
+        checklist: {
+            passaporte: "Válido (+6 meses)",
+            visto: "Nenhum (turismo até 180 dias)",
+            vacinas: "Febre amarela recomendada",
+            seguro: "Recomendado",
+            tomada: "Tipo A/B",
+            moeda: "Balboa (B/.)",
+            idioma: "Espanhol"
+        }
+    },
     "Cancun": {
-    comida: "R$ 150 – R$ 300",
-    hospedagem: "R$ 350 – R$ 1200",
-    transporte: "R$ 40 – R$ 120",
-    atracoes: "R$ 200 – R$ 600"
-   },
-   "Cidade do México": {
-    comida: "R$ 50 – R$ 100", // Comida de rua é muito barata e deliciosa
-    hospedagem: "R$ 150 – R$ 400", // Hostels e hotéis boutique têm ótimo preço
-    transporte: "R$ 10 – R$ 30", // Metrô custa centavos (5 pesos) e Uber é barato
-    atracoes: "R$ 50 – R$ 150" // Museus são acessíveis, balão em Teotihuacán é extra
-},
+        comida: "R$ 150 – R$ 300",
+        hospedagem: "R$ 350 – R$ 1200",
+        transporte: "R$ 40 – R$ 120",
+        atracoes: "R$ 200 – R$ 600",
+        checklist: {
+            passaporte: "Válido (+6 meses)",
+            visto: "Nenhum (turismo até 180 dias)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado (resort/mergulho)",
+            tomada: "Tipo A/B",
+            moeda: "Peso Mexicano ($)",
+            idioma: "Espanhol/Inglês"
+        }
+    },
+    "Cidade do México": {
+        comida: "R$ 50 – R$ 100",
+        hospedagem: "R$ 150 – R$ 400",
+        transporte: "R$ 10 – R$ 30",
+        atracoes: "R$ 50 – R$ 150",
+        checklist: {
+            passaporte: "Válido (+6 meses)",
+            visto: "Nenhum (turismo até 180 dias)",
+            vacinas: "Febre amarela recomendada",
+            seguro: "Recomendado",
+            tomada: "Tipo A/B",
+            moeda: "Peso Mexicano ($)",
+            idioma: "Espanhol"
+        }
+    },
     "Orlando": {
         comida: "R$ 250 – R$ 450",
         hospedagem: "R$ 450 – R$ 1200",
         transporte: "R$ 120 – R$ 300",
-        atracoes: "R$ 650 – R$ 1400"
+        atracoes: "R$ 650 – R$ 1400",
+        checklist: {
+            passaporte: "Válido (+6 meses)",
+            visto: "ESTA (eletrônico - obrigatório)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Altamente recomendado (médico caro)",
+            tomada: "Tipo A/B",
+            moeda: "Dólar Americano ($)",
+            idioma: "Inglês"
+        }
     },
     "Miami": {
         comida: "R$ 300 – R$ 550",
         hospedagem: "R$ 550 – R$ 1600",
         transporte: "R$ 90 – R$ 250",
-        atracoes: "R$ 120 – R$ 400"
+        atracoes: "R$ 120 – R$ 400",
+        checklist: {
+            passaporte: "Válido (+6 meses)",
+            visto: "ESTA (eletrônico - obrigatório)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Altamente recomendado",
+            tomada: "Tipo A/B",
+            moeda: "Dólar Americano ($)",
+            idioma: "Inglês/Espanhol"
+        }
     },
     "Nova York": {
         comida: "R$ 350 – R$ 700",
         hospedagem: "R$ 900 – R$ 2200",
         transporte: "R$ 45 – R$ 120",
-        atracoes: "R$ 180 – R$ 600"
+        atracoes: "R$ 180 – R$ 600",
+        checklist: {
+            passaporte: "Válido (+6 meses)",
+            visto: "ESTA (eletrônico - obrigatório)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Altamente recomendado",
+            tomada: "Tipo A/B",
+            moeda: "Dólar Americano ($)",
+            idioma: "Inglês"
+        }
     },
     "Atlanta": {
-    comida: "R$ 100 – R$ 250", // Dólar alto. Um almoço simples custa $20.
-    hospedagem: "R$ 600 – R$ 1.500", // Hotéis no centro (Downtown/Midtown) são caros.
-    transporte: "R$ 100 – R$ 250", // Uber é essencial ou aluguel de carro. O metrô (MARTA) é limitado.
-    atracoes: "R$ 200 – R$ 400" // O Aquário e o Mundo da Coca-Cola são caros ($40+ cada).
-},
+        comida: "R$ 100 – R$ 250",
+        hospedagem: "R$ 600 – R$ 1.500",
+        transporte: "R$ 100 – R$ 250",
+        atracoes: "R$ 200 – R$ 400",
+        checklist: {
+            passaporte: "Válido (+6 meses)",
+            visto: "ESTA (eletrônico - obrigatório)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Altamente recomendado",
+            tomada: "Tipo A/B",
+            moeda: "Dólar Americano ($)",
+            idioma: "Inglês"
+        }
+    },
     "Tóquio": {
         comida: "R$ 180 – R$ 400",
         hospedagem: "R$ 400 – R$ 1100",
         transporte: "R$ 60 – R$ 180",
-        atracoes: "R$ 60 – R$ 250"
+        atracoes: "R$ 60 – R$ 250",
+        checklist: {
+            passaporte: "Válido (+6 meses)",
+            visto: "Nenhum (turismo até 90 dias)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo A (2 pinos planos)",
+            moeda: "Iene Japonês (¥)",
+            idioma: "Japonês (inglês limitado)"
+        }
     },
     "Lisboa": {
         comida: "R$ 140 – R$ 280",
         hospedagem: "R$ 350 – R$ 800",
         transporte: "R$ 35 – R$ 90",
-        atracoes: "R$ 60 – R$ 180"
+        atracoes: "R$ 60 – R$ 180",
+        checklist: {
+            passaporte: "Válido (obrigatório)",
+            visto: "Nenhum (Espaço Schengen - 90 dias)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo F (2 pinos redondos)",
+            moeda: "Euro (€)",
+            idioma: "Português"
+        }
     },
     "Madrid": {
         comida: "R$ 160 – R$ 320",
         hospedagem: "R$ 400 – R$ 900",
         transporte: "R$ 35 – R$ 90",
-        atracoes: "R$ 70 – R$ 220"
+        atracoes: "R$ 70 – R$ 220",
+        checklist: {
+            passaporte: "Válido (obrigatório)",
+            visto: "Nenhum (Espaço Schengen - 90 dias)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo F",
+            moeda: "Euro (€)",
+            idioma: "Espanhol"
+        }
     },
     "Barcelona": {
-    comida: "R$ 80 – R$ 200", // Tapas podem ser baratas, mas jantares sentados são caros.
-    hospedagem: "R$ 400 – R$ 1.200", // Alta temporada (Verão) os preços triplicam.
-    transporte: "R$ 30 – R$ 60", // O bilhete T-Casual (10 viagens) vale muito a pena.
-    atracoes: "R$ 150 – R$ 450" // Casa Batlló e Sagrada Família custam mais de 30€ cada.
+        comida: "R$ 80 – R$ 200",
+        hospedagem: "R$ 400 – R$ 1.200",
+        transporte: "R$ 30 – R$ 60",
+        atracoes: "R$ 150 – R$ 450",
+        checklist: {
+            passaporte: "Válido (obrigatório)",
+            visto: "Nenhum (Espaço Schengen - 90 dias)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo F",
+            moeda: "Euro (€)",
+            idioma: "Catalão/Espanhol/Inglês"
+        }
     },
     "Paris": {
         comida: "R$ 220 – R$ 500",
         hospedagem: "R$ 550 – R$ 1400",
         transporte: "R$ 45 – R$ 120",
-        atracoes: "R$ 120 – R$ 350"
+        atracoes: "R$ 120 – R$ 350",
+        checklist: {
+            passaporte: "Válido (obrigatório)",
+            visto: "Nenhum (Espaço Schengen - 90 dias)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo F",
+            moeda: "Euro (€)",
+            idioma: "Francês"
+        }
     },
     "Londres": {
         comida: "R$ 280 – R$ 550",
         hospedagem: "R$ 650 – R$ 1700",
         transporte: "R$ 70 – R$ 180",
-        atracoes: "R$ 180 – R$ 450"
+        atracoes: "R$ 180 – R$ 450",
+        checklist: {
+            passaporte: "Válido (+6 meses)",
+            visto: "Nenhum (turismo até 180 dias)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo G (3 retângulos)",
+            moeda: "Libra Esterlina (£)",
+            idioma: "Inglês"
+        }
     },
     "Roma": {
         comida: "R$ 200 – R$ 400",
         hospedagem: "R$ 450 – R$ 1100",
         transporte: "R$ 35 – R$ 90",
-        atracoes: "R$ 90 – R$ 300"
+        atracoes: "R$ 90 – R$ 300",
+        checklist: {
+            passaporte: "Válido (obrigatório)",
+            visto: "Nenhum (Espaço Schengen - 90 dias)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo F",
+            moeda: "Euro (€)",
+            idioma: "Italiano"
+        }
     },
     "Milão": {
         comida: "R$ 220 – R$ 450",
         hospedagem: "R$ 550 – R$ 1400",
         transporte: "R$ 45 – R$ 120",
-        atracoes: "R$ 90 – R$ 300"
+        atracoes: "R$ 90 – R$ 300",
+        checklist: {
+            passaporte: "Válido (obrigatório)",
+            visto: "Nenhum (Espaço Schengen - 90 dias)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo F",
+            moeda: "Euro (€)",
+            idioma: "Italiano"
+        }
     },
     "Frankfurt": {
-    comida: "R$ 80 – R$ 150", // Restaurantes são caros, mas as salsichas na rua salvam o orçamento
-    hospedagem: "R$ 250 – R$ 600", // Muito caro durante feiras (Messe), razoável noutras datas
-    transporte: "R$ 40 – R$ 60", // O bilhete diário é caro, mas a rede cobre tudo
-    atracoes: "R$ 60 – R$ 120" // Museus e subida à Main Tower custam entre 10€ a 15€
+        comida: "R$ 80 – R$ 150",
+        hospedagem: "R$ 250 – R$ 600",
+        transporte: "R$ 40 – R$ 60",
+        atracoes: "R$ 60 – R$ 120",
+        checklist: {
+            passaporte: "Válido (obrigatório)",
+            visto: "Nenhum (Espaço Schengen - 90 dias)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo F",
+            moeda: "Euro (€)",
+            idioma: "Alemão/Inglês"
+        }
     },
     "Torre Eiffel": {
-    comida: "R$ 50 – R$ 1.500", // Desde um crepe na rua até o jantar no Jules Verne
-    hospedagem: "R$ 800 – R$ 3.000", // Hotéis com vista para a Torre são premium
-    transporte: "R$ 15 – R$ 50", // Metrô/Uber até o Champ de Mars
-    atracoes: "R$ 180 – R$ 350" // Ingresso subida (Topo vs 2º Andar)
+        comida: "R$ 50 – R$ 1.500",
+        hospedagem: "R$ 800 – R$ 3.000",
+        transporte: "R$ 15 – R$ 50",
+        atracoes: "R$ 180 – R$ 350",
+        checklist: {
+            passaporte: "Válido (obrigatório)",
+            visto: "Nenhum (Espaço Schengen - 90 dias)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo F",
+            moeda: "Euro (€)",
+            idioma: "Francês"
+        }
     },
     "Machu Picchu": {
-    comida: "R$ 60 – R$ 120", // Aguas Calientes é muito turística e cara
-    hospedagem: "R$ 150 – R$ 500", // Desde hostels a hotéis de charme
-    transporte: "R$ 400 – R$ 800", // O comboio (trem) ida e volta + autocarro de subida pesam muito
-    atracoes: "R$ 300 – R$ 500" // Entrada oficial + Guia (obrigatório/recomendado)
+        comida: "R$ 60 – R$ 120",
+        hospedagem: "R$ 150 – R$ 500",
+        transporte: "R$ 400 – R$ 800",
+        atracoes: "R$ 300 – R$ 500",
+        checklist: {
+            passaporte: "Válido (obrigatório)",
+            visto: "Nenhum (turismo até 183 dias)",
+            vacinas: "Febre amarela recomendada",
+            seguro: "Recomendado (trekking/altitude)",
+            tomada: "Tipo A",
+            moeda: "Sol Peruano (S/)",
+            idioma: "Espanhol/Quéchua"
+        }
     },
     "Cristo Redentor": {
-    comida: "R$ 40 – R$ 100", // Lanches na lanchonete do topo ou no centro de visitantes
-    hospedagem: "R$ 200 – R$ 600", // Hotéis na Zona Sul (Copacabana/Ipanema) ou Santa Teresa
-    transporte: "R$ 30 – R$ 60", // Uber/Metrô até o Cosme Velho (Trem) ou Paineiras (Van)
-    atracoes: "R$ 90 – R$ 130" // Ingresso oficial (Trem do Corcovado ou Van Paineiras - alta temporada)
+        comida: "R$ 40 – R$ 100",
+        hospedagem: "R$ 200 – R$ 600",
+        transporte: "R$ 30 – R$ 60",
+        atracoes: "R$ 90 – R$ 130",
+        checklist: {
+            passaporte: "Válido (nenhuma exigência de meses)",
+            visto: "Nenhum (brasileiro)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado para atividades de risco",
+            tomada: "Tipo N",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
     },
     "Coliseu": {
-    comida: "R$ 60 – R$ 150", // Jantar em Trastevere vs Panini na rua
-    hospedagem: "R$ 300 – R$ 800", // Centro Histórico é muito valorizado
-    transporte: "R$ 10 – R$ 40", // Metrô/Autocarro ou muito a pé
-    atracoes: "R$ 100 – R$ 250" // Entrada Coliseu + Fórum + Palatino (básico vs arena/subterrâneo)
+        comida: "R$ 60 – R$ 150",
+        hospedagem: "R$ 300 – R$ 800",
+        transporte: "R$ 10 – R$ 40",
+        atracoes: "R$ 100 – R$ 250",
+        checklist: {
+            passaporte: "Válido (obrigatório)",
+            visto: "Nenhum (Espaço Schengen - 90 dias)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo F",
+            moeda: "Euro (€)",
+            idioma: "Italiano"
+        }
     },
     "Grande Muralha da China": {
-    comida: "R$ 30 – R$ 100", // Comida de rua é barata; Pato de Pequim é caro.
-    hospedagem: "R$ 200 – R$ 600", // Hotéis em Pequim (base para a visita).
-    transporte: "R$ 50 – R$ 150", // Trem-bala ou tour privado até as seções da muralha.
-    atracoes: "R$ 100 – R$ 300" // Entrada + Teleférico + Tobogã (descida).
+        comida: "R$ 30 – R$ 100",
+        hospedagem: "R$ 200 – R$ 600",
+        transporte: "R$ 50 – R$ 150",
+        atracoes: "R$ 100 – R$ 300",
+        checklist: {
+            passaporte: "Válido (+6 meses)",
+            visto: "Visto Chinês (eletrônico ou embaixada)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado",
+            tomada: "Tipo A/I",
+            moeda: "Yuan Chinês (¥)",
+            idioma: "Chinês (Mandarim)"
+        }
     },
     "Estátua da Liberdade": {
-    comida: "R$ 60 – R$ 180", // De Hot Dogs de rua a restaurantes turísticos
-    hospedagem: "R$ 800 – R$ 2.500", // Hotéis em Manhattan são caríssimos
-    transporte: "R$ 15 – R$ 30", // Metrô (MTA) ou Ferry pago
-    atracoes: "R$ 150 – R$ 200" // O Ferry oficial (Statue City Cruises) é pago. O Staten Island Ferry é grátis (mas passa longe).
+        comida: "R$ 60 – R$ 180",
+        hospedagem: "R$ 800 – R$ 2.500",
+        transporte: "R$ 15 – R$ 30",
+        atracoes: "R$ 150 – R$ 200",
+        checklist: {
+            passaporte: "Válido (+6 meses)",
+            visto: "ESTA (eletrônico - obrigatório)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Altamente recomendado",
+            tomada: "Tipo A/B",
+            moeda: "Dólar Americano ($)",
+            idioma: "Inglês"
+        }
     },
     "Taj Mahal": {
-    comida: "R$ 20 – R$ 60", // Comida de rua é centavos, restaurantes turísticos são baratos.
-    hospedagem: "R$ 100 – R$ 400", // Agra tem hotéis para todos os bolsos.
-    transporte: "R$ 10 – R$ 30", // Tuk-tuks (Auto Rickshaws) são muito baratos.
-    atracoes: "R$ 60 – R$ 80" // O ingresso para estrangeiros custa cerca de 1100 Rúpias (~R$ 70).
-},
-"Yellowstone National Park": {
-    comida: "R$ 80 – R$ 200", // Comida dentro do parque (lanchonetes/restaurantes) é cara e básica.
-    hospedagem: "R$ 800 – R$ 2.500", // Cabanas dentro do parque ou hotéis em West Yellowstone.
-    transporte: "R$ 200 – R$ 400", // Diária de aluguel de carro (SUV recomendado) + Gasolina.
-    atracoes: "R$ 180" // Passe de entrada do carro (válido por 7 dias).
-},
+        comida: "R$ 20 – R$ 60",
+        hospedagem: "R$ 100 – R$ 400",
+        transporte: "R$ 10 – R$ 30",
+        atracoes: "R$ 60 – R$ 80",
+        checklist: {
+            passaporte: "Válido (+6 meses)",
+            visto: "Visto Indiano (eletrônico - e-Visa)",
+            vacinas: "Febre amarela recomendada",
+            seguro: "Recomendado",
+            tomada: "Tipo D (3 pinos redondos)",
+            moeda: "Rúpia Indiana (₹)",
+            idioma: "Hindi/Inglês"
+        }
+    },
+    "Yellowstone National Park": {
+        comida: "R$ 80 – R$ 200",
+        hospedagem: "R$ 800 – R$ 2.500",
+        transporte: "R$ 200 – R$ 400",
+        atracoes: "R$ 180",
+        checklist: {
+            passaporte: "Válido (+6 meses)",
+            visto: "ESTA (eletrônico - obrigatório)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Altamente recomendado",
+            tomada: "Tipo A/B",
+            moeda: "Dólar Americano ($)",
+            idioma: "Inglês"
+        }
+    },
     
 };
 
@@ -1436,7 +1958,7 @@ const worldData = {
             tags: ["Maravilha do Mundo", "História", "Aventura"],
             mapa: "https://goo.gl/maps/greatwall",
             clima: "Continental. Invernos congelantes (neve) e Verões muito quentes. Primavera e Outono são perfeitos.",
-            
+        
             // === DADOS DO VEREDICTO ===
             veredicto: {
                 melhor_epoca: "Abril/Maio ou Setembro/Outubro. Evite a 'Golden Week' (1 a 7 de Outubro) a todo custo (lotado).",
@@ -1601,14 +2123,15 @@ const worldData = {
                         "Dia 4: Trem-bala para Xi'an (Guerreiros de Terracota).",
                         "Dia 5: Retorno e compras no Silk Market."
                     ]
-                },
+                }
             },
+        
 
             links: {
                 hotel: "https://www.booking.com/city/cn/beijing.pt-br.html", 
                 passeio: "https://www.civitatis.com/br/pequim/excursao-grande-muralha-china-mutianyu/", 
                 seguro: "https://www.segurospromo.com.br" 
-            },
+            }
         }
     ],
     "Parque": [
@@ -2150,6 +2673,7 @@ const worldData = {
                 tags: ["Romance", "Frio", "Chocolate"],
                 mapa: "https://goo.gl/maps/gramado",
                 clima: "Temperado. Invernos rigorosos (pode gear) e verões amenos.",
+                
                 // Adicione dentro do objeto de Gramado (após 'clima' e antes de 'pontos_turisticos')
 veredicto: {
     melhor_epoca: "Junho a Agosto (Inverno/Fondue) ou Novembro a Janeiro (Natal Luz). Março é mais tranquilo.",
@@ -11205,6 +11729,9 @@ function openModal(cidade, imagemUrl) {
     // ========== NOVO: ATUALIZA O VEREDICTO ==========
     updateVerdict(cidade);
 
+    // ========== NOVO: ATUALIZA O CHECKLIST (ANTES DE IR) ==========
+    renderChecklist(cidade.name);
+
     // BOTÕES DE AFILIADO
     const affContainer = document.getElementById('affiliateContainer');
     let affHTML = '';
@@ -11476,5 +12003,51 @@ if (searchInput) {
         
         // (Opcional) Feedback visual se não encontrar nada
         // Você pode adicionar um aviso aqui se 'encontrouAlgo' for false
+    });
+}
+
+// --- FUNÇÃO DO CHECKLIST (ANTES DE IR) ---
+function renderChecklist(cityKey) {
+    const container = document.getElementById('checklistContainer');
+    container.innerHTML = ''; // Limpa anterior
+
+    // 1. Busca os dados da cidade
+    const city = realCostData[cityKey];
+    
+    // 2. Dados padrão (caso você ainda não tenha preenchido no banco de dados)
+    const defaults = {
+        passaporte: "Requerido",
+        visto: "Verificar",
+        vacinas: "Consultar",
+        seguro: "Recomendado",
+        tomada: "Universal",
+        moeda: "Local",
+        idioma: "Inglês/Local"
+    };
+
+    // 3. Mescla dados reais com padrão (Segurança contra erros)
+    const data = (city && city.checklist) ? city.checklist : defaults;
+
+    // 4. Lista de Itens para desenhar
+    const items = [
+        { label: "Passaporte", val: data.passaporte, icon: "ri-passport-line", style: "" },
+        { label: "Visto", val: data.visto, icon: "ri-visa-fill", style: (data.visto && data.visto.toLowerCase().includes("nenhum")) ? "" : "warning" },
+        { label: "Vacinas", val: data.vacinas, icon: "ri-syringe-line", style: "" },
+        { label: "Seguro", val: data.seguro, icon: "ri-shield-cross-line", style: (data.seguro && data.seguro.toLowerCase().includes("obrig")) ? "alert" : "" },
+        { label: "Tomada", val: data.tomada, icon: "ri-plug-line", style: "" },
+        { label: "Moeda", val: data.moeda, icon: "ri-coins-line", style: "" },
+        { label: "Idioma", val: data.idioma, icon: "ri-translate-2", style: "" }
+    ];
+
+    // 5. Gera o HTML dinâmico
+    items.forEach(item => {
+        const div = document.createElement('div');
+        div.className = `checklist-item ${item.style}`;
+        div.innerHTML = `
+            <div class="check-icon-box"><i class="${item.icon}"></i></div>
+            <div class="check-label">${item.label}</div>
+            <div class="check-value">${item.val}</div>
+        `;
+        container.appendChild(div);
     });
 }

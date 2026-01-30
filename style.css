@@ -1189,3 +1189,111 @@ body {
         padding-bottom: 150px !important; 
     }
 }
+
+/* ========== CHECKLIST: ANTES DE IR (FUTURISTA) ========== */
+.checklist-section {
+    margin: 20px 0 40px 0; /* Margem ajustada */
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.6); /* Vidro claro */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 196, 230, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 30, 54, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Título com animação */
+.checklist-title {
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 5px;
+    font-weight: 800;
+}
+
+.checklist-title i {
+    color: var(--neon-coral);
+    font-size: 1.8rem;
+    animation: planeTakeoff 3s ease-in-out infinite;
+}
+
+@keyframes planeTakeoff {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-3px) translateX(3px); }
+}
+
+.checklist-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+    padding-left: 40px; /* Alinha com o texto do título */
+    font-weight: 600;
+}
+
+/* Grid dos itens */
+.checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Responsivo automático */
+    gap: 15px;
+}
+
+/* Item Individual (Cartãozinho) */
+.checklist-item {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: 0.3s;
+    position: relative;
+}
+
+.checklist-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 5px 15px rgba(0, 196, 230, 0.15);
+}
+
+/* Ícone do Item */
+.check-icon-box {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 196, 230, 0.1);
+    color: var(--neon-cyan);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.checklist-item.warning .check-icon-box {
+    background: rgba(255, 187, 0, 0.1);
+    color: var(--neon-gold);
+}
+
+.checklist-item.alert .check-icon-box {
+    background: rgba(255, 51, 102, 0.1);
+    color: var(--neon-coral);
+}
+
+/* Texto do Item */
+.check-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.check-value {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    font-weight: 800;
+    line-height: 1.2;
+}

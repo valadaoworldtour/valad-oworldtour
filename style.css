@@ -1297,3 +1297,118 @@ body {
     font-weight: 800;
     line-height: 1.2;
 }
+
+/* --- ASSISTENTE DECISOR DE VIAGEM --- */
+
+/* Botão na Sidebar */
+.assistant-btn {
+    width: 100%; display: flex; align-items: center; gap: 15px;
+    background: linear-gradient(135deg, #fff 0%, #f0faff 100%);
+    border: 2px solid var(--neon-cyan);
+    padding: 15px; border-radius: 16px; cursor: pointer;
+    margin-bottom: 25px; transition: 0.3s; position: relative; overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 196, 230, 0.15);
+}
+.assistant-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0, 196, 230, 0.3); }
+
+.bot-icon {
+    width: 45px; height: 45px; background: var(--neon-cyan); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; position: relative;
+}
+.bot-icon i { color: #fff; font-size: 1.5rem; z-index: 2; }
+
+/* Animação de pulso no robô */
+.pulse-ring {
+    position: absolute; width: 100%; height: 100%; border-radius: 50%;
+    border: 2px solid var(--neon-cyan); opacity: 0;
+    animation: pulseBot 2s infinite;
+}
+@keyframes pulseBot { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.8); opacity: 0; } }
+
+.bot-text { text-align: left; }
+.bot-text strong { display: block; font-family: var(--font-head); font-size: 0.9rem; color: var(--text-main); }
+.bot-text span { font-size: 0.7rem; color: var(--text-muted); }
+
+/* Modal do Assistente */
+.assistant-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 30, 54, 0.6); backdrop-filter: blur(8px);
+    z-index: 2000; display: flex; justify-content: center; align-items: center;
+    opacity: 1; transition: 0.3s;
+}
+.assistant-overlay.hidden { opacity: 0; pointer-events: none; }
+
+.assistant-card {
+    background: #fff; width: 90%; max-width: 500px;
+    border-radius: 24px; padding: 30px; position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    border: 1px solid rgba(0, 196, 230, 0.3);
+    text-align: center;
+}
+
+.close-assist {
+    position: absolute; top: 15px; right: 15px; background: none; border: none;
+    font-size: 1.5rem; color: var(--text-muted); cursor: pointer;
+}
+
+.assist-header { margin-bottom: 25px; }
+.bot-avatar {
+    width: 60px; height: 60px; background: linear-gradient(135deg, var(--neon-cyan), var(--neon-blue));
+    border-radius: 50%; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 2rem; box-shadow: 0 5px 15px rgba(0, 196, 230, 0.4);
+}
+.assist-header h2 { font-family: var(--font-head); color: var(--text-main); margin-bottom: 5px; }
+.assist-header p { color: var(--text-muted); font-size: 0.9rem; }
+
+.assist-step h3 { font-size: 1.2rem; margin-bottom: 20px; color: var(--text-main); }
+
+/* Opções (Botões de escolha) */
+.assist-options { display: flex; flex-direction: column; gap: 12px; }
+.assist-options.two-cols { display: grid; grid-template-columns: 1fr 1fr; }
+
+.option-card {
+    background: #f8fbff; border: 2px solid transparent;
+    padding: 15px; border-radius: 12px; cursor: pointer;
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    transition: 0.2s; color: var(--text-muted);
+}
+.option-card i { font-size: 1.8rem; color: var(--neon-cyan); transition: 0.2s; }
+.option-card span { font-weight: 700; font-size: 1rem; }
+.option-card small { font-size: 0.75rem; opacity: 0.7; }
+
+.option-card:hover { background: #fff; border-color: var(--neon-cyan); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0, 196, 230, 0.1); }
+.option-card:active { transform: scale(0.98); }
+
+/* Resultado */
+.assist-results-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    max-height: 300px; overflow-y: auto; margin-bottom: 20px;
+}
+.mini-result-card {
+    background: #fff; border-radius: 10px; overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.05);
+    cursor: pointer; transition: 0.3s;
+}
+.mini-result-card:hover { border-color: var(--neon-cyan); }
+.mini-result-card img { width: 100%; height: 80px; object-fit: cover; }
+.mini-result-card div { padding: 8px; }
+.mini-result-card h4 { font-size: 0.85rem; margin-bottom: 3px; color: var(--text-main); }
+.mini-result-card span { font-size: 0.7rem; color: var(--text-muted); }
+
+.restart-btn {
+    background: transparent; border: 1px solid var(--text-muted);
+    padding: 10px 20px; border-radius: 20px; cursor: pointer;
+    color: var(--text-muted); font-size: 0.8rem; font-weight: 600;
+    display: flex; align-items: center; gap: 8px; margin: 0 auto;
+}
+.restart-btn:hover { background: var(--text-main); color: #fff; border-color: var(--text-main); }
+
+/* --- CORREÇÃO OBRIGATÓRIA --- */
+.hidden {
+    display: none !important;
+}
+
+/* Garante que o Modal fique acima de tudo */
+#assistantModal {
+    z-index: 9999 !important; /* Força ficar no topo */
+}

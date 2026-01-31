@@ -1,5 +1,26 @@
 
-let countryFlags;
+const countryFlags = { 
+    "Brasil": "br", 
+    "Portugal": "pt", 
+    "Marrocos": "ma", 
+    "Japão": "jp", 
+    "Austrália": "au", 
+    "Estados Unidos": "us", 
+    "Argentina": "ar", 
+    "Espanha": "es", 
+    "França": "fr", 
+    "Chile": "cl", 
+    "Inglaterra": "gb", 
+    "Itália": "it", 
+    "República Dominicana": "do", 
+    "México": "mx", 
+    "Colômbia": "co",
+    "Uruguai": "uy",
+    "Panamá": "pa",
+    "Peru": "pe",
+    "Alemanha": "de",
+    
+};
 // --- CONFIGURAÇÃO GLOBAL ---
 
 const defaultImage = "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop";
@@ -13184,29 +13205,13 @@ function updateVerdict(cidade) {
 
 /* LÓGICA DO SISTEMA */
 
-function init() {
-    console.log('init() called');
-    renderSidebar();
-}
+function init() { renderSidebar(); }
 
 function renderSidebar() {
-    console.log('renderSidebar() called');
     const menu = document.getElementById('sidebarMenu');
     menu.innerHTML = '';
 
-    const continents = [
-        "América do Sul",
-        "América do Norte",
-        "América Central",
-        "Europa",
-        "Ásia",
-        "África",
-        "Oceania"
-    ];
-
-    continents.forEach(continente => {
-        if (!worldData[continente]) return; // Pula continentes que não estão no worldData
-
+    Object.keys(worldData).forEach(continente => {
         const group = document.createElement('div');
         group.className = 'continent-group';
         const btnContinente = document.createElement('button');
@@ -13230,7 +13235,7 @@ function renderSidebar() {
         btnContinente.onclick = () => {
             document.querySelectorAll('.continent-group').forEach(el => { if(el !== group) el.classList.remove('open'); });
             group.classList.toggle('open');
-            // A lógica de style.maxHeight foi removida pois o 'open' com CSS é mais limpo
+            btnContinente.classList.toggle('active');
         };
         group.appendChild(btnContinente);
         group.appendChild(countryList);
@@ -13617,26 +13622,200 @@ function renderChecklist(cityKey) {
             <div class="check-label">${item.label}</div>
             <div class="check-value">${item.val}</div>
         `;
-        container.appendChild(div);
+         container.appendChild(div);
     });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM fully loaded and parsed');
-    fetch('cidades.json')
-        .then(response => {
-            console.log('Fetch response received:', response);
-            if (!response.ok) {
-                throw new Error('Network response was not ok ' + response.statusText);
+/// ... existing code ...
+function resetAssistant() {
+    userChoices = { budget: null, type: null, vibe: null };
+    const steps = ['assistStep2', 'assistStep3', 'assistResult'];
+    steps.forEach(id => {
+        const el = document.getElementById(id);
+        if(el) el.classList.add('hidden');
+    });
+    
+    const step1 = document.getElementById('assistStep1');
+    if(step1) step1.classList.remove('hidden');
+    
+    const grid = document.getElementById('assistGrid');
+    if(grid) grid.innerHTML = '';
+}
+
+/* =======================================================
+   LÓGICA "CIRÚRGICA": CUSTO REAL + TAGS (VERSÃO DEFINITIVA)
+   ======================================================= */
+function calculateResults() {
+    console.log("Iniciando lógica cirúrgica..."); // Para confirmar que carregou
+    const resultsContainer = document.getElementById('assistGrid');
+    resultsContainer.innerHTML = '<p style="grid-column:1/-1;text-align:center"><i class="ri-loader-4-line ri-spin"></i> Calculando custos...</p>';
+
+    if (typeof worldData === 'undefined' || typeof realCostData === 'undefined') {
+        resultsContainer.innerHTML = '<p>Erro: Dados não carregados.</p>';
+        return;
+    }
+
+    const allDestinations = getAllDestinationsFlatSafe();
+
+    // Função para calcular custo médio diário e adicionar ao objeto
+    const addAvgCost = (dest) => {
+        let avgDailyCost = 9999; // Valor padrão alto para destinos sem dados
+        if (realCostData[dest.name]) {
+            const costs = realCostData[dest.name];
+            const extractVal = (str) => {
+                if (!str) return 0;
+                const nums = str.match(/(\d+)/g);
+                if (!nums) return 0;
+                return nums.length > 1 ? (parseInt(nums[0]) + parseInt(nums[1])) / 2 : parseInt(nums[0]);
+            };
+            const foodCost = extractVal(costs.comida);
+            const stayCost = extractVal(costs.hospedagem);
+            if (foodCost > 0 && stayCost > 0) {
+                avgDailyCost = foodCost + stayCost;
             }
-            return response.json();
-        })
-        .then(data => {
-            console.log('Data loaded from cidades.json:', data);
-            countryFlags = data;
-            init();
-        })
-        .catch(error => {
-            console.error('There has been a problem with your fetch operation:', error);
+        }
+        dest.avgDailyCost = avgDailyCost;
+        return dest;
+    };
+    
+    // Adiciona custo a todos os destinos
+    const allDestinationsWithCost = allDestinations.map(addAvgCost);
+
+    // 1. MAPA DE TAGS (Conecta escolha do usuário com tags do banco)
+    const tagMap = {
+        nature: ["Praia", "Natureza", "Montanha", "Parque", "Cachoeira", "Deserto", "Neve", "Aurora Boreal", "Mergulho"],
+        city: ["Cidade", "Urbano", "História", "Museu", "Arquitetura", "Metrópole", "Show", "Compras", "Maravilha do Mundo", "Império"],
+        rest: ["Relax", "Vinho", "Romance", "Resort", "Paz", "Gastronomia", "Hotel", "Spa", "All Inclusive", "Praia"],
+        adventure: ["Aventura", "Trilha", "Esporte", "Trekking", "Explorar", "Agito", "Noite", "Safari", "Mergulho", "Vela"]
+    };
+
+    // 2. FILTRAGEM MATEMÁTICA
+    const matches = allDestinationsWithCost.filter(dest => {
+        // Verifica se cabe no bolso (com faixas exclusivas)
+        let budgetMatch = false;
+        if (userChoices.budget === 'low' && dest.avgDailyCost <= 350) {
+            budgetMatch = true;
+        } else if (userChoices.budget === 'med' && dest.avgDailyCost > 350 && dest.avgDailyCost <= 800) {
+            budgetMatch = true;
+        } else if (userChoices.budget === 'high' && dest.avgDailyCost > 800) {
+            budgetMatch = true;
+        }
+
+        // --- B. CONTAGEM DE TAGS ---
+        let tagMatches = 0;
+        const targetTags = [...(tagMap[userChoices.type] || []), ...(tagMap[userChoices.vibe] || [])];
+        const destTagsString = (dest.tags || []).join(" ").toLowerCase() + " " + dest.name.toLowerCase();
+
+        targetTags.forEach(t => {
+            if (destTagsString.includes(t.toLowerCase())) tagMatches++;
         });
-});
+
+        // --- C. DECISÃO FINAL ---
+        if (budgetMatch && tagMatches > 0) {
+            dest.sortScore = tagMatches;
+            return true;
+        }
+        return false;
+    });
+
+    // 3. ORDENAR E EXIBIR
+    // Ordena: Primeiro pelo MAIS BARATO, depois desempata por quem tem mais tags
+    matches.sort((a, b) => a.avgDailyCost - b.avgDailyCost || b.sortScore - a.sortScore);
+    
+    // Se não achou NADA, pega genéricos do orçamento, já ordenados por preço
+    allDestinationsWithCost.sort((a, b) => a.avgDailyCost - b.avgDailyCost);
+
+    let finalResults = matches.length > 0 ? matches.slice(0, 12) : allDestinationsWithCost.slice(0, 12);
+
+    resultsContainer.innerHTML = '';
+    
+    if (matches.length === 0) {
+        resultsContainer.innerHTML = '<p style="grid-column:1/-1;text-align:center;font-size:0.8rem;color:#666">Nenhum destino perfeito encontrado. Veja algumas sugestões gerais, da mais barata para a mais cara:</p>';
+    }
+
+    finalResults.forEach(dest => {
+        // Pega o preço real para mostrar na etiqueta
+        const priceLabel = realCostData[dest.name] ? realCostData[dest.name].hospedagem.split('–')[0] : '$$$';
+
+        const div = document.createElement('div');
+        div.className = 'mini-result-card';
+        div.onclick = function() { closeAssistant(); openModal(dest); };
+        
+        div.innerHTML = `
+            <div style="position:relative">
+                <img src="${dest.imagem}" style="width:100%;height:80px;object-fit:cover;border-radius:8px 8px 0 0;">
+                <span style="position:absolute;bottom:0;right:0;background:rgba(0,0,0,0.7);color:#fff;font-size:0.6rem;padding:2px 6px;border-top-left-radius:4px;">
+                    Hospedagem: ${priceLabel}
+                </span>
+            </div>
+            <div style="padding:10px">
+                <h4 style="margin:0;font-size:0.9rem;color:#001e36">${dest.name}</h4>
+                <div style="display:flex;gap:5px;margin-top:5px;flex-wrap:wrap">
+                    <span style="font-size:0.65rem;background:#e0f7fa;color:#006064;padding:2px 4px;border-radius:3px">${dest.tags[0]}</span>
+                    ${dest.tags[1] ? `<span style="font-size:0.65rem;background:#f3e5f5;color:#4a148c;padding:2px 4px;border-radius:3px">${dest.tags[1]}</span>` : ''}
+                </div>
+            </div>
+        `;
+        resultsContainer.appendChild(div);
+    });
+}
+
+// =======================================================
+// FUNÇÕES AUXILIARES DO ASSISTENTE (ADICIONADAS)
+// =======================================================
+
+// Garante que a variável global exista
+var userChoices = { budget: null, type: null, vibe: null };
+
+function openAssistant() {
+    const modal = document.getElementById('assistantModal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        resetAssistant();
+    }
+}
+
+function closeAssistant() {
+    const modal = document.getElementById('assistantModal');
+    if (modal) {
+        modal.classList.add('hidden');
+    }
+}
+
+function selectBudget(value) {
+    userChoices.budget = value;
+    document.getElementById('assistStep1').classList.add('hidden');
+    document.getElementById('assistStep2').classList.remove('hidden');
+}
+
+function selectType(value) {
+    userChoices.type = value;
+    document.getElementById('assistStep2').classList.add('hidden');
+    document.getElementById('assistStep3').classList.remove('hidden');
+}
+
+function selectVibe(value) {
+    userChoices.vibe = value;
+    document.getElementById('assistStep3').classList.add('hidden');
+    document.getElementById('assistResult').classList.remove('hidden');
+    calculateResults();
+}
+
+function getAllDestinationsFlatSafe() {
+    let all = [];
+    if (typeof worldData === 'undefined') return [];
+    
+    Object.keys(worldData).forEach(category => {
+        const subCategories = worldData[category];
+        if (subCategories) {
+            Object.keys(subCategories).forEach(sub => {
+                const destinations = subCategories[sub];
+                if (Array.isArray(destinations)) {
+                    all = all.concat(destinations);
+                }
+            });
+        }
+    });
+    return all;
+}
+

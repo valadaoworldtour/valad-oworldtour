@@ -46,6 +46,17 @@
                 </a>
             </div>
 
+            <button class="assistant-btn" onclick="openAssistant()">
+                <div class="bot-icon">
+                    <i class="ri-robot-2-fill"></i>
+                    <div class="pulse-ring"></div>
+                </div>
+                <div class="bot-text">
+                    <strong>Decisor de Viagem</strong>
+                    <span>Descubra seu destino ideal</span>
+                </div>
+            </button>
+
             <div class="search-wrapper">
                 <i class="ri-search-2-line search-icon"></i>
                 <input type="text" id="globalSearch" placeholder="Buscar cidade ou país..." onkeyup="searchSystem()">
@@ -187,6 +198,81 @@
                 <a href="#" id="modalMapLink" target="_blank" class="action-btn">
                     <i class="ri-map-pin-user-fill"></i> VER NO GOOGLE MAPS
                 </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="assistantModal" class="assistant-overlay hidden">
+        <div class="assistant-card">
+            <button class="close-assist" onclick="closeAssistant()"><i class="ri-close-line"></i></button>
+            
+            <div class="assist-header">
+                <div class="bot-avatar">
+                    <i class="ri-robot-2-line"></i>
+                </div>
+                <h2>IA de Viagem</h2>
+                <p>Responda 3 perguntas rápidas:</p>
+            </div>
+
+            <div id="assistStep1" class="assist-step">
+                <h3>Quanto você quer gastar por dia?</h3>
+                <div class="assist-options">
+                    <button onclick="selectBudget('low')" class="option-card">
+                        <i class="ri-money-dollar-circle-line"></i>
+                        <span>Econômico</span>
+                        <small>Até R$ 350/dia</small>
+                    </button>
+                    <button onclick="selectBudget('med')" class="option-card">
+                        <i class="ri-wallet-3-line"></i>
+                        <span>Conforto</span>
+                        <small>R$ 350 - R$ 800</small>
+                    </button>
+                    <button onclick="selectBudget('high')" class="option-card">
+                        <i class="ri-vip-diamond-line"></i>
+                        <span>Luxo</span>
+                        <small>Acima de R$ 800</small>
+                    </button>
+                </div>
+            </div>
+
+            <div id="assistStep2" class="assist-step hidden">
+                <h3>O que você prefere ver?</h3>
+                <div class="assist-options two-cols">
+                    <button onclick="selectType('nature')" class="option-card">
+                        <i class="ri-plant-line"></i>
+                        <span>Natureza</span>
+                        <small>Praias, Montanhas, Parques</small>
+                    </button>
+                    <button onclick="selectType('city')" class="option-card">
+                        <i class="ri-building-2-line"></i>
+                        <span>Cidade</span>
+                        <small>História, Museus, Urbano</small>
+                    </button>
+                </div>
+            </div>
+
+            <div id="assistStep3" class="assist-step hidden">
+                <h3>Qual o objetivo da viagem?</h3>
+                <div class="assist-options two-cols">
+                    <button onclick="selectVibe('rest')" class="option-card">
+                        <i class="ri-cup-line"></i>
+                        <span>Descanso</span>
+                        <small>Relaxar, Comer, Beber</small>
+                    </button>
+                    <button onclick="selectVibe('adventure')" class="option-card">
+                        <i class="ri-compass-3-line"></i>
+                        <span>Aventura</span>
+                        <small>Explorar, Trilhas, Agito</small>
+                    </button>
+                </div>
+            </div>
+
+            <div id="assistResult" class="assist-step hidden">
+                <h3>Esses destinos combinam com você:</h3>
+                <div class="assist-results-grid" id="assistGrid"></div>
+                <button onclick="resetAssistant()" class="restart-btn">
+                    <i class="ri-refresh-line"></i> Começar de Novo
+                </button>
             </div>
         </div>
     </div>

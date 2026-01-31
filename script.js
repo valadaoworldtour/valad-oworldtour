@@ -1,26 +1,5 @@
 
-const countryFlags = { 
-    "Brasil": "br", 
-    "Portugal": "pt", 
-    "Marrocos": "ma", 
-    "Japão": "jp", 
-    "Austrália": "au", 
-    "Estados Unidos": "us", 
-    "Argentina": "ar", 
-    "Espanha": "es", 
-    "França": "fr", 
-    "Chile": "cl", 
-    "Inglaterra": "gb", 
-    "Itália": "it", 
-    "República Dominicana": "do", 
-    "México": "mx", 
-    "Colômbia": "co",
-    "Uruguai": "uy",
-    "Panamá": "pa",
-    "Peru": "pe",
-    "Alemanha": "de",
-    
-};
+let countryFlags;
 // --- CONFIGURAÇÃO GLOBAL ---
 
 const defaultImage = "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop";
@@ -13205,13 +13184,29 @@ function updateVerdict(cidade) {
 
 /* LÓGICA DO SISTEMA */
 
-function init() { renderSidebar(); }
+function init() {
+    console.log('init() called');
+    renderSidebar();
+}
 
 function renderSidebar() {
+    console.log('renderSidebar() called');
     const menu = document.getElementById('sidebarMenu');
     menu.innerHTML = '';
 
-    Object.keys(worldData).forEach(continente => {
+    const continents = [
+        "América do Sul",
+        "América do Norte",
+        "América Central",
+        "Europa",
+        "Ásia",
+        "África",
+        "Oceania"
+    ];
+
+    continents.forEach(continente => {
+        if (!worldData[continente]) return; // Pula continentes que não estão no worldData
+
         const group = document.createElement('div');
         group.className = 'continent-group';
         const btnContinente = document.createElement('button');
@@ -13235,7 +13230,7 @@ function renderSidebar() {
         btnContinente.onclick = () => {
             document.querySelectorAll('.continent-group').forEach(el => { if(el !== group) el.classList.remove('open'); });
             group.classList.toggle('open');
-            btnContinente.classList.toggle('active');
+            // A lógica de style.maxHeight foi removida pois o 'open' com CSS é mais limpo
         };
         group.appendChild(btnContinente);
         group.appendChild(countryList);
@@ -13625,3 +13620,23 @@ function renderChecklist(cityKey) {
         container.appendChild(div);
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM fully loaded and parsed');
+    fetch('cidades.json')
+        .then(response => {
+            console.log('Fetch response received:', response);
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Data loaded from cidades.json:', data);
+            countryFlags = data;
+            init();
+        })
+        .catch(error => {
+            console.error('There has been a problem with your fetch operation:', error);
+        });
+});

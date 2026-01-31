@@ -14771,7 +14771,35 @@ function updateVerdict(cidade) {
 
 /* LÓGICA DO SISTEMA */
 
-function init() { renderSidebar(); }
+function init() { 
+    renderSidebar();
+    fixSidebarLayout();
+}
+
+function fixSidebarLayout() {
+    const style = document.createElement('style');
+    style.innerHTML = `
+        .sidebar {
+            overflow-y: auto !important;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        #sidebarMenu {
+            overflow: visible !important;
+            height: auto !important;
+            flex: 0 0 auto;
+        }
+        /* Garante que os botões de Roteiro e Decisor não fiquem espremidos */
+        .sidebar > button, .sidebar > div {
+            flex-shrink: 0 !important;
+        }
+        /* Estilização da barra de rolagem */
+        .sidebar::-webkit-scrollbar { width: 5px; }
+         .sidebar::-webkit-scrollbar-thumb { background: var(--neon-blue); border-radius: 5px; }
+    `;
+    document.head.appendChild(style);
+}
 
 function renderSidebar() {
     const menu = document.getElementById('sidebarMenu');

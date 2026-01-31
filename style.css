@@ -1412,3 +1412,104 @@ body {
 #assistantModal {
     z-index: 9999 !important; /* Força ficar no topo */
 }
+
+/* --- WIDGET CONVERSOR DE MOEDAS --- */
+
+/* Botão Flutuante (Dourado Neon) */
+.currency-float-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--neon-gold), #ffaa00);
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 5px 20px rgba(255, 187, 0, 0.4);
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2000;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex; align-items: center; justify-content: center;
+}
+
+.currency-float-btn:hover {
+    transform: scale(1.1) rotate(-15deg);
+    box-shadow: 0 10px 25px rgba(255, 187, 0, 0.6);
+}
+
+/* Janela do Widget */
+.currency-modal {
+    position: fixed;
+    bottom: 100px; /* Acima do botão */
+    right: 30px;
+    width: 300px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,30,54, 0.15);
+    z-index: 2000;
+    overflow: hidden;
+    border: 1px solid rgba(0, 196, 230, 0.2);
+    transform-origin: bottom right;
+    animation: popIn 0.3s ease-out;
+}
+
+.currency-modal.hidden {
+    display: none;
+}
+
+/* Animação de Entrada */
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.8) translateY(20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Cabeçalho */
+.currency-header {
+    background: linear-gradient(90deg, #001e36, #003050);
+    padding: 15px 20px;
+    display: flex; justify-content: space-between; align-items: center;
+    color: #fff;
+}
+.header-title { display: flex; align-items: center; gap: 10px; font-family: var(--font-head); font-size: 0.9rem; letter-spacing: 1px; }
+.header-title i { color: var(--neon-green); }
+
+.close-widget { background: none; border: none; color: rgba(255,255,255,0.6); cursor: pointer; font-size: 1.2rem; transition: 0.2s; }
+.close-widget:hover { color: #fff; transform: rotate(90deg); }
+
+/* Corpo */
+.currency-body { padding: 20px; }
+
+.input-group { margin-bottom: 15px; }
+.input-group label { display: block; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 5px; font-weight: 700; text-transform: uppercase; }
+
+.input-group input, .input-group select {
+    width: 100%; padding: 12px;
+    border: 2px solid #eef2f5; border-radius: 8px;
+    font-family: var(--font-body); font-size: 1rem; color: var(--text-main);
+    background: #f8fbff; transition: 0.3s;
+}
+
+.input-group input:focus, .input-group select:focus {
+    border-color: var(--neon-cyan); background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 196, 230, 0.1);
+}
+
+/* Caixa de Resultado */
+.result-box {
+    background: linear-gradient(135deg, #f0f8ff, #e6f7ff);
+    padding: 15px; border-radius: 12px;
+    text-align: center; border: 1px solid rgba(0, 196, 230, 0.2);
+    margin-top: 10px;
+}
+.result-box small { display: block; color: var(--text-muted); font-size: 0.8rem; }
+.result-box span { 
+    display: block; font-size: 1.8rem; font-weight: 800; 
+    color: var(--neon-blue); margin-top: 5px; letter-spacing: -1px;
+}
+
+.rate-info { 
+    text-align: center; margin-top: 15px; font-size: 0.7rem; color: #9aaabb; 
+    display: flex; align-items: center; justify-content: center; gap: 5px;
+}

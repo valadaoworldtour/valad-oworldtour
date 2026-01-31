@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="pt-br"> 
+<html lang="pt-br, en">
 
 <head>
     <meta charset="UTF-8">
@@ -66,6 +66,7 @@
             <nav class="nav-groups" id="sidebarMenu"></nav>
 
             <div class="sidebar-footer">
+                
                 <p>VIAJAR É VIVER</p>
             </div>
         </aside>
@@ -273,6 +274,55 @@
                 <button onclick="resetAssistant()" class="restart-btn">
                     <i class="ri-refresh-line"></i> Começar de Novo
                 </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="currency-widget-container">
+        <button class="currency-float-btn" onclick="toggleCurrencyWidget()" title="Converter Moedas">
+            <i class="ri-money-dollar-circle-line"></i>
+        </button>
+
+        <div class="currency-modal hidden" id="currencyModal">
+            <div class="currency-header">
+                <div class="header-title">
+                    <i class="ri-exchange-dollar-line"></i>
+                    <span>Cotação Hoje</span>
+                </div>
+                <button class="close-widget" onclick="toggleCurrencyWidget()"><i class="ri-close-line"></i></button>
+            </div>
+            
+            <div class="currency-body">
+                <div class="input-group">
+                    <label>Valor do Gasto</label>
+                    <input type="number" id="convAmount" placeholder="Ex: 50.00" oninput="convertCurrency()">
+                </div>
+
+                <div class="input-group">
+                    <label>Moeda do País</label>
+                    <select id="convCurrency" onchange="convertCurrency()">
+                        <option value="USD" selected>🇺🇸 Dólar Americano (USD)</option>
+                        <option value="EUR">🇪🇺 Euro (EUR)</option>
+                        <option value="GBP">🇬🇧 Libra Esterlina (GBP)</option>
+                        <option value="ARS">🇦🇷 Peso Argentino (ARS)</option>
+                        <option value="CLP">🇨🇱 Peso Chileno (CLP)</option>
+                        <option value="UYU">🇺🇾 Peso Uruguaio (UYU)</option>
+                        <option value="COP">🇨🇴 Peso Colombiano (COP)</option>
+                        <option value="PEN">🇵🇪 Sol Peruano (PEN)</option>
+                        <option value="MXN">🇲🇽 Peso Mexicano (MXN)</option>
+                        <option value="JPY">🇯🇵 Iene Japonês (JPY)</option>
+                        <option value="AED">🇦🇪 Dirham (AED)</option>
+                    </select>
+                </div>
+
+                <div class="result-box">
+                    <small>Custo em Reais:</small>
+                    <span id="convResult">R$ 0,00</span>
+                </div>
+
+                <div class="rate-info">
+                    <i class="ri-refresh-line"></i> <span id="rateLabel">Carregando taxas...</span>
+                </div>
             </div>
         </div>
     </div>

@@ -19,7 +19,11 @@ const countryFlags = {
     "Panamá": "pa",
     "Peru": "pe",
     "Alemanha": "de",
-    
+    // Novos adicionados:
+    "Emirados Árabes Unidos": "ae",
+    "Canadá": "ca",
+    "República Tcheca": "cz",
+    "Holanda": "nl"
 };
 // --- CONFIGURAÇÃO GLOBAL ---
 
@@ -432,6 +436,36 @@ const realCostData = {
             idioma: "Português"
         }
     },
+    "Olímpia": {
+        comida: "R$ 50 – R$ 150", // Varia de 'prato feito' a buffets de resort
+        hospedagem: "R$ 300 – R$ 1.000", // Resorts 'pé no parque' são caros, pousadas são médias
+        transporte: "R$ 20 – R$ 50", // Uber funciona bem, mas muitos vão de carro próprio
+        atracoes: "R$ 120 – R$ 350",   // Os ingressos do Thermas e Hot Beach são o maior custo
+        checklist: {
+            passaporte: "Não (RG ou CNH)",
+            visto: "Nenhum",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado (Para acidentes em tobogãs/piscinas)",
+            tomada: "127V (Padrão do interior de SP - Fique atento!)",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
+    },
+    "Maragogi": {
+        comida: "R$ 60 – R$ 160", // Restaurantes pé na areia são mais caros
+        hospedagem: "R$ 250 – R$ 900", // De pousadas simples a resorts All-Inclusive (Salinas)
+        transporte: "R$ 50 – R$ 250", // O principal gasto é o passeio de Buggy e Catamarã
+        atracoes: "R$ 100 – R$ 150",   // Passeio às Galés (Piscinas Naturais)
+        checklist: {
+            passaporte: "Não (RG ou CNH)",
+            visto: "Nenhum",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado (Acidentes com ouriços/coral)",
+            tomada: "220V (Atenção! Alagoas é 220V)",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
+    },
     "Buenos Aires": {
         comida: "R$ 90 – R$ 180",
         hospedagem: "R$ 180 – R$ 450",
@@ -642,6 +676,21 @@ const realCostData = {
             idioma: "Inglês"
         }
     },
+    "São Francisco": {
+        comida: "R$ 80 – R$ 250", // Cidade caríssima. Um Sourdough com sopa custa uns $15-$20
+        hospedagem: "R$ 800 – R$ 2.000", // Hotéis no centro são caros e pequenos
+        transporte: "R$ 20 – R$ 60", // Muni/BART é ok. Bonde (Cable Car) custa $8 o trecho
+        atracoes: "R$ 0 – R$ 300",   // Golden Gate é grátis, mas Alcatraz e Museus são caros
+        checklist: {
+            passaporte: "Obrigatório (Válido)",
+            visto: "Obrigatório (Visto Americano B1/B2)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Essencial (Saúde nos EUA é caríssima)",
+            tomada: "110V (Tipo A/B - Dois pinos chatos | Leve adaptador)",
+            moeda: "Dólar Americano (USD)",
+            idioma: "Inglês"
+        }
+    },
     "Tóquio": {
         comida: "R$ 180 – R$ 400",
         hospedagem: "R$ 400 – R$ 1100",
@@ -655,6 +704,21 @@ const realCostData = {
             tomada: "Tipo A (2 pinos planos)",
             moeda: "Iene Japonês (¥)",
             idioma: "Japonês (inglês limitado)"
+        }
+    },
+    "Dubai": {
+        comida: "R$ 60 – R$ 300", // De Shawarma na rua a jantares de luxo
+        hospedagem: "R$ 400 – R$ 1.500", // Hotéis variam muito. Deira é barato, Marina/Palm é caro
+        transporte: "R$ 20 – R$ 60", // O Metrô é barato e eficiente. Táxi/Uber é preço médio
+        atracoes: "R$ 200 – R$ 600",   // Subir no Burj Khalifa e parques temáticos é caro
+        checklist: {
+            passaporte: "Obrigatório (Validade +6 meses)",
+            visto: "Não (Brasileiros não precisam de visto para turismo até 90 dias)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Essencial (Saúde lá é particular e caríssima)",
+            tomada: "220V (Tipo G - Três pinos retangulares, padrão Reino Unido)",
+            moeda: "Dirham (AED) - Dólar é aceito em alguns lugares, mas troque",
+            idioma: "Árabe (oficial), mas Inglês é falado por 100% dos turistas"
         }
     },
     "Lisboa": {
@@ -1017,7 +1081,66 @@ const realCostData = {
             idioma: "Inglês"
         }
     },
-    
+    "Pirâmides de Gizé": {
+        comida: "R$ 30 – R$ 100", // Comida de rua (Koshary) é muito barata; restaurantes turísticos são médios
+        hospedagem: "R$ 150 – R$ 600", // Hotéis em Gizé com vista para a pirâmide variam muito
+        transporte: "R$ 15 – R$ 50", // Uber no Cairo é muito barato. Metrô custa centavos
+        atracoes: "R$ 100 – R$ 250",   // Ingresso do Complexo + Entrada na Grande Pirâmide (opcional e caro)
+        checklist: {
+            passaporte: "Obrigatório (Validade +6 meses)",
+            visto: "Obrigatório (Pode comprar na chegada 'Visa on Arrival' por $25 USD em dinheiro)",
+            vacinas: "Febre Amarela (OBRIGATÓRIA - Com Certificado Internacional ANVISA)",
+            seguro: "Essencial (O trânsito é caótico e a comida pode dar 'Vingança do Faraó')",
+            tomada: "220V (Tipo C/F - Dois pinos redondos europeus | Precisa de adaptador se seu plug for 3 pinos)",
+            moeda: "Libra Egípcia (EGP) - Leve Dólares para trocar lá",
+            idioma: "Árabe (Inglês básico em áreas turísticas)"
+        }
+    },
+    "Sydney Opera House": {
+        comida: "R$ 80 – R$ 250", // Sydney é uma cidade cara para comer
+        hospedagem: "R$ 600 – R$ 1.800", // Hotéis no porto (Circular Quay) são caríssimos
+        transporte: "R$ 25 – R$ 60", // Cartão Opal (Metrô/Ferry/Ônibus)
+        atracoes: "R$ 150 – R$ 500",   // Tour guiado (~R$150) ou ingresso para show (~R$300+)
+        checklist: {
+            passaporte: "Obrigatório (Válido)",
+            visto: "Obrigatório (Brasileiros precisam do 'Visitor Visa' Subclass 600 ou eVisitor - peça online antes!)",
+            vacinas: "Febre Amarela (Exigida se você passou pelo Brasil/América do Sul recentemente)",
+            seguro: "Essencial (O sistema de saúde Medicare não cobre turistas e é caro)",
+            tomada: "230V (Tipo I - Três pinos chatos inclinados | OBRIGATÓRIO adaptador)",
+            moeda: "Dólar Australiano (AUD)",
+            idioma: "Inglês"
+        }
+    },
+    "Angkor Wat": {
+        comida: "R$ 20 – R$ 80", // O Camboja é muito barato. Comida de rua ou Pub Street é acessível.
+        hospedagem: "R$ 100 – R$ 400", // Hotéis excelentes em Siem Reap custam pouco.
+        transporte: "R$ 50 – R$ 100", // Diária de um Tuk-tuk privado para rodar os templos.
+        atracoes: "R$ 200 – R$ 380",   // O ingresso "Angkor Pass" é caro (1 dia $37 USD / 3 dias $62 USD).
+        checklist: {
+            passaporte: "Obrigatório (Validade +6 meses)",
+            visto: "Obrigatório (Visa on Arrival por ~$30 ou e-Visa online antecipado)",
+            vacinas: "Febre Amarela (Exigida para brasileiros)",
+            seguro: "Recomendado (Hospitais no Camboja são básicos)",
+            tomada: "230V (Tipos A, C e G - Leve adaptador universal, a mistura é grande)",
+            moeda: "Riel Cambojano (KHR) e Dólar Americano (USD) - O Dólar é usado para tudo!",
+            idioma: "Khmer (Inglês é muito falado no turismo)"
+        }
+    },
+    "Niagara Falls": {
+        comida: "R$ 60 – R$ 200", // De fast-food em Clifton Hill a jantares na Skylon Tower
+        hospedagem: "R$ 400 – R$ 1.200", // Hotéis com vista para as cataratas são caros
+        transporte: "R$ 30 – R$ 80", // O sistema WEGO (ônibus turístico) funciona bem
+        atracoes: "R$ 150 – R$ 400",   // Cruzeiro (Maid of the Mist) + Journey Behind the Falls
+        checklist: {
+            passaporte: "Obrigatório (Validade +6 meses)",
+            visto: "Obrigatório (Visto Canadense ou eTA se for via aérea; Visto Americano para o outro lado)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Essencial (Saúde na América do Norte é caríssima)",
+            tomada: "110V (Tipo A/B - Dois pinos chatos | OBRIGATÓRIO adaptador)",
+            moeda: "Dólar Canadense (CAD) ou Americano (USD) - Aceitam ambos na fronteira, mas o troco varia",
+            idioma: "Inglês (Lado Canadense e Americano)"
+        }
+    },
 };
 
 /* BANCO DE DADOS COMPLETO */
@@ -2251,6 +2374,186 @@ const worldData = {
                     seguro: "https://www.segurospromo.com.br" 
                 },
             },
+            {
+            name: "Pirâmides de Gizé",
+            imagem: "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?q=80&w=2070&auto=format&fit=crop",
+            tags: ["História", "Maravilha do Mundo", "Deserto"],
+            mapa: "https://goo.gl/maps/giza",
+            clima: "Desértico. Verão (Jun-Ago) é escaldante (+40ºC). Inverno (Dez-Fev) é ameno de dia e frio à noite.",
+            
+            // === DADOS DO VEREDICTO ===
+            veredicto: {
+                melhor_epoca: "Outubro a Abril (Inverno ou Meia-estação). Evite o verão a todo custo, o calor é perigoso.",
+                ideal_para: [
+                    "Apaixonados por História (A única Maravilha do Mundo Antigo em pé)",
+                    "Caçadores de 'Bucket List' (É o ponto turístico mais famoso do planeta)",
+                    "Fotógrafos (A luz do deserto no nascer/pôr do sol é única)",
+                    "Econômicos (O Egito é um país muito barato para brasileiros)"
+                ],
+                nao_ideal_para: [
+                    "Quem odeia assédio de vendedores (Eles são muito insistentes e agressivos)",
+                    "Quem tem fobia de lugares fechados (Entrar na pirâmide é claustrofóbico)",
+                    "Quem busca luxo e limpeza impecável (O Cairo é poeirento, caótico e barulhento)"
+                ],
+                perfis: [
+                    { icone: "ri-ancient-pavilion-fill", nome: "História" },
+                    { icone: "ri-cactus-fill", nome: "Deserto" },
+                    { icone: "ri-money-dollar-circle-fill", nome: "Barato" },
+                    { icone: "ri-camera-fill", nome: "Ícone" }
+                ]
+            },
+            // =================================
+
+            pontos_turisticos: [
+                "1. Grande Pirâmide de Quéops (Khufu): A maior de todas. É possível entrar (ingresso extra), mas lá dentro é apenas um corredor íngreme e vazio.",
+                "2. Pirâmide de Quéfren (Khafre): Parece a maior por estar em um terreno mais alto e ainda conserva o topo original.",
+                "3. Pirâmide de Miquerinos (Menkaure): A menor das três principais.",
+                "4. A Grande Esfinge: A guardiã com corpo de leão e cabeça de faraó. Fica na parte baixa do complexo.",
+                "5. Panoramic Point: O local no deserto onde todos os ônibus param para tirar a foto clássica das 3 pirâmides alinhadas.",
+                "6. Museu do Barco Solar: Um museu que abrigava um barco de 4.500 anos (alguns barcos foram movidos para o novo GEM).",
+                "7. Pizza Hut/KFC: Pode parecer brega, mas o terraço desses fast-foods tem uma das melhores vistas das pirâmides.",
+                "8. Show de Luzes e Som: Acontece à noite. É meio antigo/kitsch, mas ver as pirâmides iluminadas é bonito.",
+                "9. Grande Museu Egípcio (GEM): Fica ali perto (verifique se já inaugurou totalmente), guardará o tesouro de Tutankamon.",
+                "10. Passeio de Camelo: Clichê, mas rende a foto clássica. Negocie o preço ANTES de subir (e para descer também!)."
+            ],
+
+            gastronomia: [
+                "1. Koshary: O prato nacional. Mistura de arroz, macarrão, lentilha, grão de bico e molho de tomate. Barato e enche.",
+                "2. Falafel (Ta'ameya): No Egito é feito de fava, não de grão de bico. É verde por dentro e delicioso.",
+                "3. Shawarma: Sanduíche de carne ou frango no pão sírio. Muito comum.",
+                "4. Pombo Recheado (Hamam Mahshi): Iguaria local. O pombo é criado para comer (não é o de rua!), recheado com arroz.",
+                "5. Om Ali: Sobremesa de massa folhada, leite, nozes e passas (tipo um pudim de pão).",
+                "6. Suco de Cana (Asab): Muito popular e doce.",
+                "7. Chá de Hibisco (Karkadeh): Bebido quente ou frio.",
+                "8. Pão Baladi: O pão árabe local, servido em toda refeição.",
+                "9. Baba Ganoush / Hummus: Pastas clássicas.",
+                "10. Mahshi: Legumes (abobrinha, berinjela) recheados com arroz temperado."
+            ],
+
+            religiao: [
+                "1. Islã: A religião domina a vida cotidiana. Ouve-se o chamado para a oração (Adhan) 5 vezes ao dia.",
+                "2. Sexta-feira: É o dia sagrado. O metrô funciona só à tarde e muitas lojas fecham pela manhã.",
+                "3. Ramadan: Durante este mês, muçulmanos não comem nem bebem água do nascer ao pôr do sol. Turistas devem evitar comer na rua em respeito.",
+                "4. Vestimenta: Mulheres devem evitar roupas curtas ou decotadas fora dos hotéis para evitar olhares indesejados.",
+                "5. Coptas: Cristãos egípcios são minoria importante (cerca de 10%).",
+                "6. Misticismo Antigo: Muitos turistas vão para meditar ou buscar energia dentro das pirâmides (embora seja proibido rituais).",
+                "7. Mesquitas do Cairo: Vale combinar a viagem com a visita às mesquitas históricas (Cidadela de Saladino).",
+                "8. Álcool: Difícil de achar. Só em hotéis e bares específicos. Não se bebe na rua.",
+                "9. 'Insha'Allah': Você ouvirá muito ('Se Deus quiser'). Às vezes significa 'sim', às vezes 'talvez', às vezes 'nunca'.",
+                "10. Hospitalidade: O islã prega acolhimento. Egípcios são muito simpáticos e adoram brasileiros (futebol!)."
+            ],
+
+            curiosidades: [
+                "1. Não são no meio do nada: As fotos enganam. As pirâmides ficam literalmente na beira da cidade de Gizé. Tem um Pizza Hut na frente da Esfinge.",
+                "2. Como foram feitas?: Não foram escravos (como diz a Bíblia/Hollywood), mas sim trabalhadores pagos e respeitados, segundo descobertas recentes.",
+                "3. Revestimento: Originalmente eram brancas e lisas (pedra calcária polida). O que vemos hoje são os blocos internos (só o topo de Quéfren tem o original).",
+                "4. Napoleão: Diz a lenda que soldados de Napoleão atiraram no nariz da Esfinge (mas desenhos anteriores mostram que já estava quebrado).",
+                "5. Alinhamento: As três estão alinhadas perfeitamente com as estrelas do Cinturão de Órion.",
+                "6. Vazio: A Grande Pirâmide pesa 6 milhões de toneladas, mas por dentro é cheia de túneis e câmaras de alívio de peso.",
+                "7. Única Sobrevivente: É a única das 7 Maravilhas do Mundo Antigo que ainda existe.",
+                "8. Calor: Dentro da pirâmide é muito quente e úmido, mesmo no inverno.",
+                "9. Túneis Secretos: Ainda hoje descobrem novos espaços vazios usando tecnologia de raios cósmicos.",
+                "10. Baksheesh: A cultura da gorjeta. Todo mundo vai te pedir dinheiro por qualquer coisa (até para te indicar o banheiro ou tirar uma foto sua)."
+            ],
+
+            eventos_estacoes: [
+                "1. Show de Luz e Som: Diário, ao anoitecer. Narra a história do Egito com lasers.",
+                "2. Solstício: Em 21 de junho, o sol se põe exatamente entre as duas maiores pirâmides (vista da Esfinge).",
+                "3. Maratona das Pirâmides: Corrida anual que acontece ao redor do complexo.",
+                "4. Grande Museu Egípcio (Abertura): O evento mais aguardado do século (previsão constante de abertura total).",
+                "5. Inverno: Céu azul e dias lindos, mas lotado de turistas.",
+                "6. Verão: Calor insuportável e 'Haze' (neblina de poluição/poeira) que atrapalha as fotos.",
+                "7. Tempestades de Areia (Khamsin): Podem ocorrer entre Março e Abril, deixando o céu laranja.",
+                "8. Ramadan: A cidade muda de ritmo. O jantar (Iftar) vira uma festa.",
+                "9. Festivais de Arte: Ocasionalmente ocorrem exposições de arte contemporânea ('Forever Is Now') no planalto de Gizé.",
+                "10. Ano Novo Cívil: Fogos de artifício no Cairo."
+            ],
+
+            info_gerais: [
+                "1. Visto na Chegada: Leve US$ 25 em dinheiro vivo (notas novas). Você compra o selo no guichê do banco ANTES da imigração e cola no passaporte.",
+                "2. Uber: É a salvação. Não pegue táxi branco (eles não ligam taxímetro e cobram 10x mais). O Uber funciona bem e tem preço fixo.",
+                "3. Chip de Internet: Compre no aeroporto (Vodafone ou Orange). O Wi-Fi dos hotéis costuma ser ruim.",
+                "4. Vingança do Faraó: É a diarreia do viajante. NÃO beba água da torneira, não use gelo e evite saladas cruas na rua.",
+                "5. Carteira de Estudante: Se tiver carteira internacional (ISIC), você paga meia entrada em TUDO. Vale muito a pena.",
+                "6. Banheiros: Leve papel higiênico na bolsa. A maioria dos banheiros públicos não tem papel e cobra gorjeta para entrar.",
+                "7. Atravessar a Rua: No Cairo não tem sinal de pedestre. Você atravessa se jogando na frente dos carros (siga um local).",
+                "8. Negociação: Nunca aceite o primeiro preço. Negocie até 30% do valor inicial em lojas de souvenir.",
+                "9. Golpes: Ignore quem disser 'o museu está fechado', 'a entrada mudou de lugar' ou 'sou funcionário do governo'. É mentira para te levar para loja de papiro.",
+                "10. Drone: PROIBIDO. Se levar drone, ele será confiscado no aeroporto e você terá muita dor de cabeça."
+            ],
+
+            antes_de_ir: [
+                "1. Vacina Febre Amarela: Tome 10 dias antes e emita o certificado internacional da ANVISA. Eles pedem mesmo!",
+                "2. Imprima tudo: Tenha reservas de hotel e passagem de volta impressas para a imigração.",
+                "3. Dólares Trocados: Leve muitas notas de 1 dólar para dar de gorjeta (baksheesh).",
+                "4. Roupas Frescas e Compridas: Linho e algodão. Cobrem do sol e respeitam a cultura.",
+                "5. Remédios: Leve Floratil, Imosec e remédios de estômago. A comida é pesada (muito alho e óleo).",
+                "6. Óculos de Sol e Chapéu: O sol do deserto é implacável e o chão reflete luz.",
+                "7. Sapatos Confortáveis: O chão é areia e pedra. Tênis velho é o ideal (vai voltar marrom de poeira).",
+                "8. Guia em Português: O Egito é complexo. Contratar um egiptólogo que fala português enriquece muito a viagem.",
+                "9. Cadeado na Mala: Segurança básica.",
+                "10. Paciência: O assédio de vendedores é o maior do mundo. Aprenda a dizer 'La, shukran' (Não, obrigado) sem parar de andar."
+            ],
+
+            numeros: [
+                "1. 126 (Polícia de Turismo - Tourist Police).",
+                "2. 123 (Ambulância).",
+                "3. 122 (Emergência Polícia).",
+                "4. Embaixada do Brasil no Cairo: +20 2 2461-9837.",
+                "5. Uber (Funciona pelo app normal).",
+                "6. Aeroporto do Cairo (CAI).",
+                "7. Go Bus (Empresa de ônibus confiável para viagens internas).",
+                "8. Estação de Metrô Giza (fica a uns 10km das pirâmides, precisa completar de Uber).",
+                "9. Hospital Dar Al Fouad (Referência particular).",
+                "10. Farmácias (El Ezaby é uma rede confiável)."
+            ],
+
+            riscos: [
+                "1. Golpes de Camelo: Dizem que subir é 'x' dólares, mas para descer cobram mais 'y'. Combine preço total antes ou não suba.",
+                "2. 'Free Gift': Vendedor coloca um lenço/estátua na sua mão dizendo que é presente. Depois cobra e faz escândalo. Não pegue nada.",
+                "3. Trânsito: Atravessar a rua é um esporte radical. Risco real de atropelamento.",
+                "4. Intoxicação Alimentar: Higiene é precária. Coma em lugares com alto giro.",
+                "5. Mulheres Sozinhas: Risco alto de assédio verbal e 'encoxadas' em lugares cheios. Recomenda-se andar em grupo ou com guia.",
+                "6. Calor: Insolação é comum.",
+                "7. Golpes de Papiro/Perfume: O motorista de táxi vai tentar te levar numa 'loja do primo'. Recuse.",
+                "8. Notas de Dinheiro: Confira o troco. Notas de 50 piastras parecem com notas de 50 libras.",
+                "9. Terrorismo: A segurança é forte, mas o norte do Sinai é área proibida (longe das pirâmides).",
+                "10. Fotografia: Não tire fotos de prédios do governo, polícia ou militares. É proibido e dá cadeia."
+            ],
+
+            roteiros: {
+                "curto": {
+                    titulo: "O Básico (Meio Dia)",
+                    texto: [
+                        "08:00: Chegada (evite o sol do meio dia). Visita à Grande Pirâmide.",
+                        "10:00: Panoramic Point para fotos.",
+                        "11:00: Esfinge e Templo do Vale.",
+                        "12:30: Almoço com vista para as pirâmides (Pizza Hut ou restaurante local)."
+                    ]
+                },
+                "medio": {
+                    titulo: "Pirâmides Completas (1 Dia)",
+                    texto: [
+                        "Manhã: Complexo de Gizé (Roteiro Curto).",
+                        "Tarde: Ir para Saqqara (30km dali) ver a Pirâmide de Djoser (a mais antiga, de degraus).",
+                        "Noite: Show de Luzes e Som em Gizé."
+                    ]
+                },
+                "longo": {
+                    titulo: "Cairo Faraônico (2 Dias)",
+                    texto: [
+                        "Dia 1: Gizé, Esfinge e Saqqara.",
+                        "Dia 2: Museu Egípcio (Praça Tahrir ou o novo GEM) para ver as múmias e o tesouro de Tutankamon + Mercado Khan el Khalili."
+                    ]
+                },
+            },
+
+            links: {
+                hotel: "https://www.booking.com/landmark/eg/pyramids-of-giza.pt-br.html", 
+                passeio: "https://egymonuments.com/pyramids", // Site oficial de ingressos do governo
+                seguro: "https://www.segurospromo.com.br" 
+            },
+        },
     ],
     "Patrimônio Mundial": [
         {
@@ -2959,6 +3262,185 @@ const worldData = {
                     seguro: "https://www.segurospromo.com.br" 
                 },
             },
+            {
+            name: "Sydney Opera House",
+            imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Sydney_Australia._%2821339175489%29.jpg/960px-Sydney_Australia._%2821339175489%29.jpg",
+            tags: ["Ícone Mundial", "Arquitetura", "Porto"],
+            mapa: "https://goo.gl/maps/sydneyoperahouse",
+            clima: "Temperado Oceânico. Verão (Dez-Fev) quente e úmido. Inverno (Jun-Ago) ameno. O sol é MUITO forte (buraco na camada de ozônio).",
+            
+            // === DADOS DO VEREDICTO ===
+            veredicto: {
+                melhor_epoca: "Setembro a Novembro (Primavera) ou Março a Maio (Outono). Clima perfeito e menos chuvas.",
+                ideal_para: [
+                    "Fãs de Arquitetura (É o prédio moderno mais famoso do mundo)",
+                    "Amantes de Fotografia (O contraste das velas brancas com o mar azul)",
+                    "Apreciadores de Cultura (Assistir uma ópera ou balé lá dentro é histórico)",
+                    "Caminhantes (A orla do porto é maravilhosa para andar)"
+                ],
+                nao_ideal_para: [
+                    "Orçamento Apertado (Tudo em Sydney é caro: comida, bebida e ingressos)",
+                    "Quem odeia voos longos (São 24h a 30h de viagem saindo do Brasil)",
+                    "Quem esquece o protetor solar (O índice UV na Austrália queima em 15 minutos)"
+                ],
+                perfis: [
+                    { icone: "ri-building-2-fill", nome: "Arquitetura" },
+                    { icone: "ri-music-fill", nome: "Arte" },
+                    { icone: "ri-ship-fill", nome: "Porto" },
+                    { icone: "ri-sun-fill", nome: "Vibe Solar" }
+                ]
+            },
+            // =================================
+
+            pontos_turisticos: [
+                "1. As Velas (The Sails): A estrutura externa. Chegue perto para ver que são azulejos, não concreto liso.",
+                "2. Opera Bar: O bar ao ar livre mais famoso, fica no nível da água ao lado da Opera House. Pôr do sol obrigatório.",
+                "3. Harbour Bridge: A ponte gigante ao lado. Você pode atravessar a pé de graça ou pagar caro para escalar o arco (BridgeClimb).",
+                "4. Royal Botanic Garden: O parque que vizinha a Opera House. Tem a melhor vista panorâmica para tirar a foto 'cartão-postal' (Mrs Macquarie's Chair).",
+                "5. Circular Quay: O terminal de balsas movimentado onde tudo acontece.",
+                "6. The Rocks: O bairro histórico onde Sydney começou, cheio de pubs antigos e ruas de pedra.",
+                "7. Darling Harbour: Área de lazer com aquário, zoológico e restaurantes.",
+                "8. Bondi Beach: A praia mais famosa (peque o ônibus ou trem+bus).",
+                "9. Manly Ferry: Pegue a balsa pública para Manly. É um passeio de barco barato com vista incrível da Opera.",
+                "10. Taronga Zoo: Zoológico onde as girafas têm vista para a Opera House."
+            ],
+
+            gastronomia: [
+                "1. Fish and Chips: Peixe empanado com batata frita. Coma sentado na grama (cuidado com as gaivotas!).",
+                "2. Meat Pie: Torta de carne com molho gravy. O lanche nacional.",
+                "3. Flat White: O café australiano inventado lá. É tipo um latte, mas com espuma mais fina.",
+                "4. Vegemite: Pasta preta salgada de levedura. Prove no pão com manteiga (bem pouco!) ou vai odiar.",
+                "5. Lamington: Bolo esponja coberto de chocolate e coco ralado.",
+                "6. Barbecue (Barbie): Churrasco em parques públicos (grelhas elétricas grátis).",
+                "7. Canguru: Sim, vende no mercado e em restaurantes (Kangaroo Steak). É carne magra e forte.",
+                "8. Tim Tams: O biscoito recheado mais famoso (leve na mala).",
+                "9. Avocado Smash: Torrada com abacate e ovo poché. Clássico brunch.",
+                "10. Ostras de Sydney: Frescas e famosas (Sydney Rock Oysters)."
+            ],
+
+            religiao: [
+                "1. Templo da Arte: A Opera House é considerada um santuário da cultura moderna.",
+                "2. Secularismo: A Austrália é muito secular e relaxada com religião.",
+                "3. Sonhos Aborígenes (Dreamtime): A área (Bennelong Point) era sagrada para o povo Gadigal muito antes dos ingleses chegarem.",
+                "4. St Mary's Cathedral: Catedral católica imponente perto do Hyde Park.",
+                "5. Diversidade: Sydney tem templos budistas, mesquitas e sinagogas devido à imigração.",
+                "6. Cultura de Praia: Para o australiano, ir à praia domingo de manhã é a verdadeira religião.",
+                "7. Anzac Day: O dia de memória aos soldados é celebrado com reverência quase religiosa.",
+                "8. Hillsong: A famosa igreja moderna nasceu nos subúrbios de Sydney.",
+                "9. Respeito à Terra: A conexão espiritual com a natureza é forte.",
+                "10. Natal no Verão: Celebra-se o nascimento de Jesus fazendo churrasco na praia de short."
+            ],
+
+            curiosidades: [
+                "1. O Arquiteto Abandonou: Jørn Utzon (dinamarquês) brigou com o governo pelo custo, foi embora da Austrália em 1966 e NUNCA viu sua obra pronta pessoalmente.",
+                "2. Laranjas: Utzon teve a ideia das 'velas' descascando uma laranja. Todas as partes da esfera se encaixam.",
+                "3. Azulejos: O telhado tem mais de 1 milhão de azulejos autolimpantes (a chuva lava).",
+                "4. Custo: Era para custar 7 milhões e demorar 4 anos. Custou 102 milhões e demorou 14 anos.",
+                "5. Patrimônio: É o prédio mais jovem a virar Patrimônio da UNESCO.",
+                "6. Acústica: Por anos, a acústica do teatro principal foi criticada (era ruim). Foi reformada recentemente (2022).",
+                "7. Rede de Proteção: Durante a construção, instalaram redes para os operários não caírem no mar (isso salvou muitas vidas).",
+                "8. Arnold Schwarzenegger: Ganhou seu último título de Mr. Olympia no Concert Hall da Opera House em 1980.",
+                "9. Gaivotas Lairas: No Opera Bar, as gaivotas roubam comida da sua mão. Proteja suas batatas.",
+                "10. Luzes: No festival 'Vivid Sydney', as velas viram telas de projeção animada."
+            ],
+
+            eventos_estacoes: [
+                "1. Vivid Sydney (Maio/Junho): O maior festival de luzes e música do hemisfério sul. A cidade brilha à noite.",
+                "2. New Year's Eve (Réveillon): A queima de fogos na ponte e na Opera House é a primeira grande do mundo. 1 milhão de pessoas assistem.",
+                "3. Mardi Gras (Fev/Mar): Parada LGBTQIA+ gigante e festiva.",
+                "4. Sydney Festival (Janeiro): Artes e teatro no verão.",
+                "5. City2Surf (Agosto): Maior corrida de rua do mundo (14km até Bondi).",
+                "6. Boxing Day (26 Dez): Início da regata Sydney-Hobart. O porto lota de barcos.",
+                "7. Verão (Dez-Fev): Praia, Natal de short, muito calor.",
+                "8. Inverno (Jun-Ago): Fresco, bom para caminhar e ver baleias na costa.",
+                "9. Austrália Day (26 Jan): Feriado nacional com eventos no porto (polêmico para os indígenas).",
+                "10. Sculpure by the Sea (Outubro): Esculturas ao ar livre na caminhada Bondi-Coogee."
+            ],
+
+            info_gerais: [
+                "1. Opal Card: Cartão de transporte. Aos finais de semana, o teto de gastos é baixo (você viaja o dia todo pagando pouco). Pode usar cartão de crédito direto na catraca também (Contactless).",
+                "2. Mão Inglesa: Eles dirigem na esquerda. OLHE PARA A DIREITA antes de atravessar a rua (está escrito no chão 'LOOK RIGHT').",
+                "3. Sol: O sol australiano é perigoso. Use fator 50+ e chapéu sempre.",
+                "4. Água: Pode beber da torneira em qualquer lugar, é excelente.",
+                "5. Gorjeta: Não é obrigatória na Austrália. O serviço já está incluído e os salários são altos.",
+                "6. Bebida na Rua: É proibido beber álcool em parques e praias não licenciados (multa na hora).",
+                "7. Segurança: Extremamente segura, pode andar com câmera no pescoço à noite.",
+                "8. Horário: O comércio fecha cedo (17h ou 18h). Só quintas-feiras ('Late Night Shopping') abre até 21h.",
+                "9. Wi-Fi: Grátis em volta da Opera House e Circular Quay.",
+                "10. Tomada: Leve adaptador ou compre no mercado (Coles/Woolworths). O padrão deles é único."
+            ],
+
+            antes_de_ir: [
+                "1. Visto: Brasileiros precisam de visto! O eVisitor é online, mas peça com antecedência.",
+                "2. Proibido Entrar com Comida: A alfândega australiana é a mais chata do mundo. NÃO leve frutas, sementes, mel ou comida fresca. Cães farejadores pegam tudo e a multa é de $400+.",
+                "3. Reservar Tour: Se quiser entrar nos bastidores da Opera House, reserve o tour guiado (tem em várias línguas, às vezes português).",
+                "4. Adaptador: Compre um universal.",
+                "5. Powerbank: Você vai tirar muitas fotos.",
+                "6. Protetor Solar: Compre lá (Cancer Council), são melhores que os nossos para o sol de lá.",
+                "7. Tênis de Caminhada: Sydney é cheia de ladeiras e caminhadas longas.",
+                "8. Roupas de Banho: Mesmo no inverno, tem gente nadando (água fria).",
+                "9. Cigarro: O maço custa quase R$ 150. Se fuma, prepare o bolso (e é proibido em quase todo lugar).",
+                "10. Seguro Viagem: Não viaje sem. Uma perna quebrada pode custar milhares de dólares."
+            ],
+
+            numeros: [
+                "1. 000 (Emergência Geral - Polícia, Bombeiro, Ambulância. Fala-se 'Triple Zero').",
+                "2. 131 444 (Polícia sem emergência).",
+                "3. Consulado do Brasil em Sydney: +61 2 9267 4414.",
+                "4. Sydney Hospital (perto da Opera House): +61 2 9382 7111.",
+                "5. Transport Info: 131 500.",
+                "6. Aeroporto Kingsford Smith (SYD).",
+                "7. Taxis Combinados: 133 300 (Uber é mais comum).",
+                "8. Opera House Box Office: +61 2 9250 7777.",
+                "9. Taronga Zoo: +61 2 9969 2777.",
+                "10. Lifeline (Apoio emocional): 13 11 14."
+            ],
+
+            riscos: [
+                "1. Sol: Queimaduras de 3º grau acontecem se dormir no sol.",
+                "2. Correnteza (Rips): Nas praias, nade APENAS entre as bandeiras amarela e vermelha. Se nadar fora, a correnteza te puxa.",
+                "3. Aranhas/Cobras: Na cidade é raro, mas em trilhas no mato, faça barulho ao andar e não coloque a mão em buracos.",
+                "4. Gaivotas/Ibis: As aves (Bin Chicken) roubam comida da sua mão agressivamente.",
+                "5. Clicar o Cinto: Em táxis e Uber, cinto é obrigatório para todos. A multa vai para o passageiro.",
+                "6. Atravessar a Rua: Olhar para o lado errado (lembre da mão inglesa).",
+                "7. Medusas (Bluebottle): No verão, caravelas azuis aparecem na praia. Queimam.",
+                "8. Bebida: Beber demais e cair no porto é perigoso.",
+                "9. Custo: Se perder o controle, o cartão estoura rápido.",
+                "10. Multas: Jogar lixo no chão dá multa pesada."
+            ],
+
+            roteiros: {
+                "curto": {
+                    titulo: "Ícones do Porto (2 Dias)",
+                    texto: [
+                        "Dia 1: Tour na Opera House, almoço no Opera Bar, caminhada pelo Royal Botanic Garden até Mrs Macquarie's Chair.",
+                        "Dia 2: The Rocks (feirinha de fim de semana), caminhada pela Harbour Bridge e balsa para Manly no pôr do sol."
+                    ]
+                },
+                "medio": {
+                    titulo: "Praia e Cidade (4 Dias)",
+                    texto: [
+                        "Dias 1-2: Siga o roteiro curto.",
+                        "Dia 3: Bondi Beach + Caminhada costeira Bondi to Coogee (6km de vistas lindas).",
+                        "Dia 4: Darling Harbour, Aquário e pôr do sol na Barangaroo Reserve."
+                    ]
+                },
+                "longo": {
+                    titulo: "Sydney Completa (6 Dias)",
+                    texto: [
+                        "Dias 1-4: Siga o roteiro médio.",
+                        "Dia 5: Taronga Zoo (vá de balsa) e tarde em Watsons Bay.",
+                        "Dia 6: Bate-volta para Blue Mountains (montanhas azuis e cangurus soltos) de trem."
+                    ]
+                },
+            },
+
+            links: {
+                hotel: "https://www.booking.com/city/au/sydney.pt-br.html", 
+                passeio: "https://www.sydneyoperahouse.com/tours-and-experiences", 
+                seguro: "https://www.segurospromo.com.br" 
+            },
+        },
             
     ],
     "Ícone Urbano": [
@@ -3140,6 +3622,368 @@ const worldData = {
             links: {
                 hotel: "https://www.booking.com/district/us/new-york/times-square.pt-br.html", 
                 passeio: "https://www.broadway.com/", 
+                seguro: "https://www.segurospromo.com.br" 
+            },
+        },
+    ],
+    "Templo": [
+        {
+            name: "Angkor Wat",
+            imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Ankor_Wat_temple.jpg/960px-Ankor_Wat_temple.jpg",
+            tags: ["História", "Espiritualidade", "Camboja"],
+            mapa: "https://goo.gl/maps/angkorwat",
+            clima: "Tropical de Monção. Quente e úmido o ano todo. Seco: Nov-Abr. Chuva: Mai-Out.",
+            
+            // === DADOS DO VEREDICTO ===
+            veredicto: {
+                melhor_epoca: "Novembro a Fevereiro (Menos calor e pouca chuva). Março e Abril são insuportavelmente quentes.",
+                ideal_para: [
+                    "Aventureiros (Sentir-se no filme Tomb Raider)",
+                    "Amantes de História (O maior monumento religioso do mundo)",
+                    "Fotógrafos (O nascer do sol no templo principal é icônico)",
+                    "Orçamento Baixo (Tirando o ingresso, o país é muito barato)"
+                ],
+                nao_ideal_para: [
+                    "Quem tem dificuldade de locomoção (Muitas escadarias íngremes e pedras soltas)",
+                    "Quem odeia acordar cedo (O ideal é sair do hotel às 4h30 da manhã)",
+                    "Quem não suporta calor extremo e umidade"
+                ],
+                perfis: [
+                    { icone: "ri-ancient-pavilion-fill", nome: "Ruínas" },
+                    { icone: "ri-plant-fill", nome: "Selva" },
+                    { icone: "ri-sun-foggy-fill", nome: "Místico" },
+                    { icone: "ri-money-dollar-circle-fill", nome: "Barato" }
+                ]
+            },
+            // =================================
+
+            pontos_turisticos: [
+                "1. Angkor Wat: O templo principal e mais preservado. O nascer do sol refletido no lago é a foto clássica.",
+                "2. Bayon (Angkor Thom): O templo das 'faces'. Centenas de rostos de pedra sorrindo enigmaticamente.",
+                "3. Ta Prohm: O famoso 'Templo do Tomb Raider'. Árvores gigantescas cresceram por cima das ruínas.",
+                "4. Pub Street: A rua da balada em Siem Reap. Bares, massagem no pé e cerveja a US$ 0,50 à noite.",
+                "5. Banteay Srei: O 'Templo das Mulheres'. Feito de pedra rosa com entalhes super delicados (fica mais longe).",
+                "6. Preah Khan: Um templo enorme, labiríntico e menos lotado que Ta Prohm, também engolido pela selva.",
+                "7. Phnom Bakheng: O lugar clássico (e lotadíssimo) para ver o pôr do sol.",
+                "8. Terrace of the Elephants: Um terraço com esculturas de elefantes usado pelo Rei para ver o exército.",
+                "9. Tonlé Sap: Passeio de barco para ver as vilas flutuantes no lago (cuidado com golpes turísticos aqui).",
+                "10. Angkor Night Market: Mercado noturno para comprar artesanato e provar comidas exóticas."
+            ],
+
+            gastronomia: [
+                "1. Fish Amok: O prato nacional. Peixe cozido no vapor com curry de coco e folha de bananeira. Suave e delicioso.",
+                "2. Lok Lak: Cubos de carne marinada servidos com molho de pimenta e limão.",
+                "3. Tarântula Frita: Sim, é verdade. Vendem em carrinhos. Tem gosto de caranguejo (dizem).",
+                "4. Khmer Curry: Menos picante que o tailandês, muito saboroso.",
+                "5. Bai Sach Chrouk: Arroz com porco grelhado, café da manhã típico.",
+                "6. Fresh Spring Rolls: Rolinhos primavera frescos (não fritos) com molho de amendoim.",
+                "7. Cerveja Angkor: A cerveja nacional, barata e refrescante.",
+                "8. Sucos de Frutas: Shakes de manga, pitaya ou abacate por 1 dólar.",
+                "9. Kuy Teav: Sopa de macarrão de arroz (tipo Pho).",
+                "10. Churrasco de Crocodilo: Encontra-se nos menus da Pub Street."
+            ],
+
+            religiao: [
+                "1. Budismo Theravada: Religião oficial (95% da população).",
+                "2. Mistura Hindu: Angkor Wat foi construído originalmente como templo Hindu (Vishnu) e depois virou Budista.",
+                "3. Monges: Você verá muitos monges de túnica laranja. Mulheres não podem tocá-los sob hipótese alguma.",
+                "4. Código de Vestimenta: Ombros e joelhos PRECISAM estar cobertos para entrar nos templos. Lenços transparentes não valem.",
+                "5. Cabeça e Pés: A cabeça é sagrada (não toque na cabeça de crianças). Os pés são impuros (não aponte os pés para Buda).",
+                "6. Apsaras: As ninfas celestiais entalhadas nas paredes têm significado espiritual.",
+                "7. Respeito: Falar baixo dentro dos templos é exigido.",
+                "8. Lótus: A flor sagrada, ofertada nos santuários.",
+                "9. Espiritualidade na Selva: A conexão natureza-divino é muito forte em Ta Prohm.",
+                "10. New Year: O ano novo Khmer (abril) é a maior celebração religiosa."
+            ],
+
+            curiosidades: [
+                "1. Dólar é Rei: Ninguém usa a moeda local (Riel) para coisas caras. Você paga em Dólar e recebe o troco 'quebrado' em Riel.",
+                "2. Notas Novas: Eles não aceitam notas de Dólar rasgadas, velhas ou riscadas. Leve notas impecáveis ou serão recusadas.",
+                "3. Fosso Gigante: O fosso de água ao redor de Angkor Wat simboliza o oceano cósmico e ajudou a estabilizar a fundação do templo.",
+                "4. Bandeira: O Camboja e o Afeganistão são os únicos países com um prédio na bandeira nacional (Angkor Wat).",
+                "5. Angelina Jolie: Ela é amada lá por causa de Tomb Raider e suas ações humanitárias. Tem até um drink com o nome dela.",
+                "6. Cimento de Origem Vegetal: As pedras eram coladas com uma resina invisível, parecem apenas empilhadas.",
+                "7. Império Khmer: Já foi a maior cidade pré-industrial do mundo, maior que Londres na época.",
+                "8. Invertido: Angkor Wat é orientado para o Oeste (direção da morte), o que intriga arqueólogos.",
+                "9. Tuk-tuks: São carruagens puxadas por motos, diferentes dos da Tailândia.",
+                "10. Massagem: Uma massagem nos pés depois de andar o dia todo custa uns 3 a 5 dólares."
+            ],
+
+            eventos_estacoes: [
+                "1. Angkor Wat International Half Marathon (Dezembro): Correr entre as ruínas.",
+                "2. Khmer New Year (Abril): Muita festa, talco e água na rua (parece carnaval). Templos lotados.",
+                "3. Water Festival (Novembro): Corridas de barco no rio e fogos.",
+                "4. Equinócios: O sol nasce exatamente no topo da torre central de Angkor Wat (março e setembro).",
+                "5. Alta Temporada (Nov-Fev): Clima seco, céu azul, milhões de turistas.",
+                "6. Baixa Temporada (Jun-Set): Chuvas diárias, tudo muito verde, menos gente, lama.",
+                "7. Sunrise: Todo dia é um evento. Milhares de pessoas no lago às 5h da manhã.",
+                "8. Vesak Bochea: O aniversário de Buda, celebrado com procissões de velas.",
+                "9. Pchum Ben (Set/Out): Festival dos Ancestrais (dia dos mortos local).",
+                "10. Seca (Mar-Mai): A poeira é intensa e o calor passa dos 40ºC."
+            ],
+
+            info_gerais: [
+                "1. Angkor Pass: Compre na bilheteria oficial ou online. O ingresso de 1 dia é corrido. O de 3 dias ($62) é o ideal.",
+                "2. Vestimenta: Leve calças leves ou saias longas. Regata é proibida nos níveis superiores dos templos (Bakan).",
+                "3. Tuk-tuk Driver: Contrate um motorista para o dia todo ($15-$25). Ele te leva, espera e dá água gelada.",
+                "4. Circuitos: Existem dois roteiros clássicos: 'Small Circuit' (principais) e 'Big Circuit' (mais afastados).",
+                "5. Escadas: As escadas para o topo são quase verticais (70º). Precisa de fôlego e coragem.",
+                "6. Água: Beba muita água. O calor mata.",
+                "7. Visto: O Visa on Arrival precisa de uma foto 3x4 (às vezes dispensam, mas leve) e $30 em dinheiro trocado.",
+                "8. Golpes na Fronteira: Se vier de ônibus da Tailândia, cuidado com falsos oficiais de visto.",
+                "9. Internet: Compre um chip local (Smart ou Metfone) na cidade, é muito barato.",
+                "10. Moeda: 1 Dólar = ~4.000 Riels. Use isso para converter mentalmente."
+            ],
+
+            antes_de_ir: [
+                "1. Notas de Dólar Perfeitas: Vá ao banco no Brasil e peça notas novas de dólar. Notas de 1990 ou com carimbos não valem lá.",
+                "2. Foto 3x4: Leve para o visto (se não tiver, eles cobram uma multa de $2).",
+                "3. Vacina Febre Amarela: Tenha o certificado ANVISA. Eles conferem.",
+                "4. Tênis Confortável: Chinelo escorrega nas pedras antigas.",
+                "5. E-Visa: Se puder, faça o visto online antes para evitar fila na chegada.",
+                "6. Acordar Cedo: Mentalize que você vai acordar às 4h da manhã.",
+                "7. Repelente: Dengue existe na região.",
+                "8. Powerbank: Essencial.",
+                "9. App 'Grab': O Uber do sudeste asiático (funciona para tuk-tuks também).",
+                "10. Filme: Assista 'Tomb Raider' ou documentários sobre o Império Khmer para entrar no clima."
+            ],
+
+            numeros: [
+                "1. 117 (Polícia).",
+                "2. 119 (Ambulância).",
+                "3. Royal Angkor International Hospital: +855 63 761 888 (Melhor hospital, mas caro).",
+                "4. Polícia Turística: +855 12 402 424.",
+                "5. Aeroporto Siem Reap (SAI) - Novo, fica longe da cidade (45km).",
+                "6. Não há embaixada do Brasil no Camboja (atendida pela de Bangkok).",
+                "7. Táxi Aeroporto: Preço fixo (~$35 USD).",
+                "8. Ticket Office Angkor: Abre às 5h da manhã.",
+                "9. Heritage Police: Cuidam da segurança dos templos.",
+                "10. Prefixo País: +855."
+            ],
+
+            riscos: [
+                "1. Insolação: O maior risco real. O sol e a umidade derrubam turistas todo dia.",
+                "2. Golpes de Tuk-tuk: Combine o preço EXATO e o roteiro antes de subir.",
+                "3. Minas Terrestres: NÃO SAIA DAS TRILHAS MARCADAS. O Camboja ainda tem minas de guerras passadas em áreas remotas de mata.",
+                "4. Macacos: Em Angkor Wat eles roubam comida e óculos. Não sorria (mostrar dentes é agressão) e não toque.",
+                "5. Escadas: Cair das escadas íngremes é um acidente comum.",
+                "6. Leite em Pó: Golpe onde uma mãe pede para você comprar leite para o bebê na loja (superfaturado), depois ela devolve e divide o lucro.",
+                "7. Água: Jamais beba da torneira.",
+                "8. Fronteira Terrestre: A fronteira Poipet (Tailândia) é famosa por golpes de visto.",
+                "9. Mendicância Infantil: Não dê dinheiro ou doces para crianças nos templos (incentiva a largarem a escola).",
+                "10. Furto: Pub Street lotada exige atenção com carteira."
+            ],
+
+            roteiros: {
+                "curto": {
+                    titulo: "O Amanhecer Clássico (1 Dia)",
+                    texto: [
+                        "04:30: Saída para ver o nascer do sol em Angkor Wat.",
+                        "07:00: Explorar Angkor Wat (antes dos grupos grandes chegarem).",
+                        "09:00: Bayon (Templo das Faces).",
+                        "11:00: Ta Prohm (Tomb Raider).",
+                        "Tarde: Piscina do hotel (calor excessivo) e noite na Pub Street."
+                    ]
+                },
+                "medio": {
+                    titulo: "Small Circuit (2 Dias)",
+                    texto: [
+                        "Dia 1: Siga o roteiro curto.",
+                        "Dia 2: Acordar mais tarde. Visitar Angkor Thom completo (Terraço dos Elefantes) e pôr do sol em Phnom Bakheng."
+                    ]
+                },
+                "longo": {
+                    titulo: "Explorador Khmer (3 Dias)",
+                    texto: [
+                        "Dias 1-2: Siga o roteiro médio.",
+                        "Dia 3: Banteay Srei (Templo Rosa - fica a 30km) e Lago Tonlé Sap ou Grupo Roluos."
+                    ]
+                },
+            },
+
+            links: {
+                hotel: "https://www.booking.com/city/kh/siem-reap.pt-br.html", 
+                passeio: "https://www.angkorenterprise.gov.kh/", // Site oficial dos ingressos
+                seguro: "https://www.segurospromo.com.br" 
+            },
+        },
+    ],
+    "Maravilha Natural": [
+        {
+            name: "Niagara Falls",
+            imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Niagara_Falls_001.JPG/960px-Niagara_Falls_001.JPG",
+            tags: ["Cataratas", "Natureza", "Fronteira"],
+            mapa: "https://goo.gl/maps/niagarafalls",
+            clima: "Continental Úmido. Verão (Jun-Set) agradável e úmido. Inverno (Dez-Mar) congelante, com muita neve e vento.",
+            
+            // === DADOS DO VEREDICTO ===
+            veredicto: {
+                melhor_epoca: "Junho a Setembro (Verão). O fluxo de água é máximo e o passeio de barco opera (no inverno fecha por causa do gelo).",
+                ideal_para: [
+                    "Famílias (Clifton Hill parece uma mini Disney/Las Vegas para crianças)",
+                    "Casais (Jantares românticos com vista para as quedas iluminadas)",
+                    "Aventureiros Leves (Passeios de barco e tirolesa)",
+                    "Fãs de Vinho (A região de Niagara-on-the-Lake é famosa pelo Icewine)"
+                ],
+                nao_ideal_para: [
+                    "Quem odeia lugares 'pega-turista' (O centro é cheio de museus de cera e atrações caça-níquel)",
+                    "Quem busca silêncio absoluto (O barulho das águas e das multidões é constante)",
+                    "Quem não tem visto (Não dá para cruzar a ponte a pé sem passar pela imigração)"
+                ],
+                perfis: [
+                    { icone: "ri-drop-fill", nome: "Poder da Água" },
+                    { icone: "ri-camera-fill", nome: "Fotografia" },
+                    { icone: "ri-goblet-fill", nome: "Vinhos" },
+                    { icone: "ri-gamepad-fill", nome: "Diversão" }
+                ]
+            },
+            // =================================
+
+            pontos_turisticos: [
+                "1. Horseshoe Falls: A maior das três quedas (lado canadense), em forma de ferradura. Onde cai 90% da água.",
+                "2. Hornblower / Maid of the Mist: O passeio de barco clássico que te leva na base da queda d'água (você vai se molhar).",
+                "3. Journey Behind the Falls: Túneis escavados na rocha que levam você para trás da cortina de água. O barulho é ensurdecedor.",
+                "4. Skylon Tower: Torre de observação com restaurante giratório e vista panorâmica de todo o complexo.",
+                "5. Clifton Hill: A 'Rua da Diversão'. Neon, casas mal-assombradas, minigolfe e museus de cera.",
+                "6. Niagara-on-the-Lake: Cidadezinha vizinha super charmosa, cheia de flores, carruagens e vinícolas.",
+                "7. Whirlpool Aero Car: Um teleférico antigo que cruza o redemoinho do rio Niágara.",
+                "8. Butterfly Conservatory: Um jardim tropical coberto com milhares de borboletas soltas.",
+                "9. Rainbow Bridge: A ponte que liga Canadá e EUA. Você pode cruzar a pé (com passaporte) para ver a vista do meio.",
+                "10. Floral Clock: Um dos maiores relógios florais do mundo."
+            ],
+
+            gastronomia: [
+                "1. Poutine: O prato nacional do Canadá. Batata frita com queijo coalho e molho de carne (gravy).",
+                "2. Icewine: Vinho de sobremesa feito com uvas colhidas congeladas. A região é a maior produtora mundial.",
+                "3. Maple Syrup: Xarope de bordo em tudo (waffles, panquecas, pirulitos e até no bacon).",
+                "4. BeaverTails: Massa frita esticada (tipo um rabo de castor) com açúcar e canela ou chocolate.",
+                "5. Fudge: Docinhos de açúcar e leite, muito comuns nas lojas de souvenir.",
+                "6. Peameal Bacon: Um tipo de bacon canadense, curado e enrolado em farinha de milho.",
+                "7. Tim Hortons: O café mais famoso do Canadá. Prove o 'Timbits' (bolinhas de donut).",
+                "8. Hershey's Chocolate World: Loja gigante de chocolates na entrada da cidade.",
+                "9. Jantar Giratório: No Skylon Tower ou Konica Minolta Tower (caro, mas pela vista).",
+                "10. Buffet Fallsview: Vários hotéis oferecem buffets com vista para as quedas."
+            ],
+
+            religiao: [
+                "1. Força da Natureza: O local era sagrado para as tribos indígenas Ongiara muito antes dos europeus.",
+                "2. Lenda da Donzela da Névoa (Maid of the Mist): Lenda iroquesa sobre uma jovem sacrificada ao deus do trovão.",
+                "3. Turismo de Casamento: É um dos destinos mais populares do mundo para casamentos e luas de mel.",
+                "4. Diversidade: O Canadá é multicultural, você verá templos de várias religiões na região de Toronto.",
+                "5. Natureza como Templo: Muitos visitantes relatam uma experiência espiritual ao sentir a vibração da água.",
+                "6. Buddhist Monastery: O 'Ten Thousand Buddhas Sarira Stupa' fica ali perto e é impressionante.",
+                "7. Igrejas Históricas: Pequenas capelas em Niagara-on-the-Lake datam do século 19.",
+                "8. Iluminação Noturna: À noite, as quedas são iluminadas com cores, criando um clima quase místico.",
+                "9. Arco-íris Eterno: Em dias de sol, o arco-íris é constante, simbolizando aliança e esperança.",
+                "10. Respeito Ambiental: A conservação da área é levada muito a sério."
+            ],
+
+            curiosidades: [
+                "1. A Água Para?: À noite, eles reduzem o fluxo de água das cataratas para gerar energia hidrelétrica. De dia, 'ligam' a força total para os turistas.",
+                "2. Congelada: No inverno rigoroso, a base das cataratas congela e forma uma 'ponte de gelo'. Em 1848, ela parou de cair completamente por 30 horas devido ao gelo no rio.",
+                "3. Barris: Muitos malucos já tentaram descer as cataratas dentro de barris. A primeira foi uma professora de 63 anos (sobreviveu). Hoje é crime.",
+                "4. Volume: Caem cerca de 168.000 metros cúbicos de água por minuto.",
+                "5. Erosão: As cataratas estão recuando cerca de 30cm por ano. Em 50.000 anos, elas vão desaparecer.",
+                "6. Ilha da Cabra: A Goat Island (lado americano) separa as quedas Horseshoe das American Falls.",
+                "7. Filme Superman: Cenas clássicas do Superman II foram filmadas lá.",
+                "8. Tesla: Nikola Tesla projetou a primeira usina hidrelétrica lá. Tem uma estátua dele no parque.",
+                "9. Dois Lados: O lado canadense tem a vista panorâmica (melhor). O lado americano tem o parque natural (mais verde).",
+                "10. Pássaros: A região é rota migratória de milhares de gaivotas e aves de rapina."
+            ],
+
+            eventos_estacoes: [
+                "1. Festival das Luzes (Inverno): De novembro a janeiro, a cidade e as cataratas ficam super iluminadas (Winter Festival of Lights).",
+                "2. Queima de Fogos: Acontece quase todas as noites no verão e finais de semana no inverno.",
+                "3. Icewine Festival (Janeiro): Celebração da colheita da uva congelada em Niagara-on-the-Lake.",
+                "4. Verão (Jun-Ago): Calor, atrações molhadas abertas, filas grandes.",
+                "5. Outono (Set-Out): As árvores ficam vermelhas e laranjas (Foliage). É a época mais bonita para fotos.",
+                "6. Inverno (Dez-Mar): Tudo branco de neve. O barco não funciona, mas a vista é dramática.",
+                "7. Primavera (Abr-Mai): Tulipas florescem nos parques (Queen Victoria Park).",
+                "8. Canada Day (1º de Julho): Festa nacional gigante.",
+                "9. Comic Con: Acontece anualmente na cidade.",
+                "10. Clifton Hill Fun Pass: Pacotes de diversão para famílias nas férias escolares."
+            ],
+
+            info_gerais: [
+                "1. Visto Duplo: Se você estiver no Canadá e quiser cruzar a ponte para os EUA (a pé ou carro), PRECISA do visto americano. E vice-versa.",
+                "2. Capa de Chuva: O barco fornece uma capa descartável (vermelha no Canadá, azul nos EUA). Mas você vai se molhar igual.",
+                "3. Estacionamento: É caríssimo perto das cataratas. Tente estacionar mais longe e usar o ônibus WEGO.",
+                "4. WEGO Bus: O sistema de ônibus turístico conecta hotéis e atrações. O passe de 24h vale a pena.",
+                "5. Moeda: Lojas aceitam Dólar Americano, mas o troco vem em Canadense (e a cotação é ruim). Use cartão ou saque CAD.",
+                "6. Taxas: O preço na etiqueta não inclui imposto (HST de 13%). Alguns lugares cobram taxa de turismo extra (pode pedir para remover).",
+                "7. Tomada: Leve adaptador pino chato (igual EUA).",
+                "8. Fumar: É proibido em parques e perto de janelas/portas.",
+                "9. Gorjeta: Espera-se 15-20% em restaurantes.",
+                "10. Roaming: Cuidado com o celular perto da borda. Às vezes ele pega sinal da torre americana e cobra roaming internacional caro."
+            ],
+
+            antes_de_ir: [
+                "1. Decida o Lado: Canadá tem a melhor vista ('de camarote'). EUA tem o contato com a natureza ('dentro da água').",
+                "2. Reserve o Barco: No verão, compre o ingresso do Hornblower/Maid of the Mist online para pular a fila da bilheteria.",
+                "3. Roupas Secas: Leve uma muda de roupa extra ou vá de chinelo no barco. O tênis demora dias para secar.",
+                "4. Visto eTA: Se for voar para o Canadá, o eTA é rápido. Se for cruzar por terra vindo dos EUA, as regras mudam (verifique!).",
+                "5. Protetor de Celular: A névoa (mist) molha tudo a centenas de metros. Capinha impermeável ajuda.",
+                "6. Vinícolas: Se gosta de vinho, reserve um almoço em Niagara-on-the-Lake.",
+                "7. Adaptador: Essencial.",
+                "8. Seguro Viagem: Não esqueça.",
+                "9. Horário: As cataratas são públicas e abertas 24h. Ir ver o nascer do sol é grátis e vazio.",
+                "10. Cassinos: Tem grandes cassinos (Fallsview) se quiser tentar a sorte."
+            ],
+
+            numeros: [
+                "1. 911 (Emergência Geral - Canadá e EUA).",
+                "2. Niagara Falls Police: (905) 688-4111.",
+                "3. Hospital Greater Niagara General: (905) 358-0171.",
+                "4. Consulado do Brasil em Toronto: +1 (416) 922-2503.",
+                "5. Hornblower Cruises (Barco): +1 855-264-2427.",
+                "6. Táxi Niagara: (905) 357-4000.",
+                "7. Aeroporto Toronto Pearson (YYZ) - Fica a 1h30 de carro.",
+                "8. Aeroporto Buffalo (BUF) - Lado americano, 40 min.",
+                "9. WEGO Bus Info: (905) 356-1179.",
+                "10. Niagara Parks Commission: 1-877-642-7275."
+            ],
+
+            riscos: [
+                "1. Pedras Escorregadias: A névoa deixa tudo molhado. Cuidado ao andar perto das muretas.",
+                "2. Golpes de Câmbio: Casas de câmbio perto da fronteira cobram taxas absurdas.",
+                "3. Taxa de Turismo Opcional: Muitos hotéis/restaurantes adicionam uma taxa 'TIFF' ou 'DMF' na conta. É opcional, você pode pedir para tirar.",
+                "4. Fronteira: Não tente cruzar sem documentos. É área federal vigiada.",
+                "5. Gaivotas: Elas roubam comida da mão em Clifton Hill.",
+                "6. Congelamento: No inverno, a sensação térmica chega a -20ºC. Risco de hipotermia.",
+                "7. Estacionamento: Multas são aplicadas rigorosamente.",
+                "8. Crianças: Segure firme perto das grades.",
+                "9. Batedores de Carteira: Em aglomerações (fogos, barco), fique atento.",
+                "10. Roaming de Dados: Desative os dados móveis perto da ponte para não pagar tarifa internacional sem querer."
+            ],
+
+            roteiros: {
+                "curto": {
+                    titulo: "O Essencial (1 Dia)",
+                    texto: [
+                        "Manhã: Passeio de barco (Hornblower) para tomar banho de cachoeira.",
+                        "Tarde: Caminhada pelo calçadão até Table Rock e Journey Behind the Falls.",
+                        "Noite: Jantar em Clifton Hill e ver as luzes nas cataratas."
+                    ]
+                },
+                "medio": {
+                    titulo: "Vinho e Aventura (2 Dias)",
+                    texto: [
+                        "Dia 1: Siga o roteiro curto.",
+                        "Dia 2: Manhã em Niagara-on-the-Lake (alugue bicicleta ou visite vinícolas). Tarde no Whirlpool Aero Car."
+                    ]
+                },
+                "longo": {
+                    titulo: "Explorador da Fronteira (3 Dias)",
+                    texto: [
+                        "Dias 1-2: Siga o roteiro médio.",
+                        "Dia 3: Cruze a ponte para o lado Americano (Cave of the Winds e Goat Island) e compras no Outlet."
+                    ]
+                },
+            },
+
+            links: {
+                hotel: "https://www.booking.com/city/ca/niagara-falls.pt-br.html", 
+                passeio: "https://www.niagaraparks.com/", // Site oficial dos parques
                 seguro: "https://www.segurospromo.com.br" 
             },
         },
@@ -8484,6 +9328,367 @@ veredicto: {
                     seguro: "https://www.segurospromo.com.br" 
                 },
             },
+            {
+                name: "Olímpia",
+                // Trocamos a foto para uma de Parque Aquático/Piscina para não parecer litoral
+                imagem: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=2070&auto=format&fit=crop",
+                tags: ["Parques Aquáticos", "Interior SP", "Termas"],
+                mapa: "https://goo.gl/maps/olimpia",
+                clima: "Tropical de Interior. Verão quente e chuvoso. Inverno seco e agradável (água quente).",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Abril a Junho e Agosto a Novembro (Foge da chuva de verão e da lotação de férias).",
+                    ideal_para: [
+                        "Famílias com crianças (A 'Disney' brasileira das águas)",
+                        "Idosos (Piscinas termais relaxantes)",
+                        "Grupos de amigos (Diversão nos brinquedos radicais)",
+                        "Quem gosta de calor e piscina"
+                    ],
+                    nao_ideal_para: [
+                        "Quem busca praia de verdade (É interior, só tem praia artificial)",
+                        "Quem odeia filas (Na alta temporada, são inevitáveis)",
+                        "Quem procura turismo cultural profundo (O foco aqui é 100% lazer aquático)"
+                    ],
+                    perfis: [
+                        { icone: "ri-drop-fill", nome: "Água Termal" },
+                        { icone: "ri-emotion-happy-fill", nome: "Diversão" },
+                        { icone: "ri-sun-fill", nome: "Sol Caipira" },
+                        { icone: "ri-group-fill", nome: "Família" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Thermas dos Laranjais: O principal atrativo. Um dos maiores parques aquáticos do mundo, com montanha-russa de água e praia artificial.",
+                    "2. Hot Beach: O segundo grande parque da cidade. Mais moderno, 'pé na areia' (artificial) e focado em relaxamento.",
+                    "3. Vale dos Dinossauros: Parque temático com réplicas gigantes de dinossauros que se movem.",
+                    "4. Museu do Folclore: Olímpia é a Capital Nacional do Folclore. O museu preserva essa história rica.",
+                    "5. Dreamland Museu de Cera: Estátuas de famosos e personagens para fotos.",
+                    "6. Praia do Mirante: Uma praia artificial pública (checar se está em funcionamento).",
+                    "7. Orionverso: Parque de realidade virtual imersiva recém-inaugurado.",
+                    "8. Iquegami Supermercados: Famoso entre turistas pelas promoções, virou ponto de parada.",
+                    "9. Avenida Aurora Forti Neves: Onde fica o agito noturno, bares e restaurantes da cidade.",
+                    "10. Pit Stop da Neve: Bar de gelo para experimentar temperaturas negativas no calor do interior."
+                ],
+
+                gastronomia: [
+                    "1. Pamonha: A região é forte produtora de milho e as pamonhas de estrada são clássicas.",
+                    "2. Buffet de Resort: A maioria dos turistas come nos hotéis (pensão completa) que oferecem buffets variados.",
+                    "3. Comida Caipira: Restaurantes rurais com fogão a lenha (leitoa, feijão gordo, polenta).",
+                    "4. Pizza: Ótimas pizzarias na avenida principal atendem os turistas à noite.",
+                    "5. Pastel de Feira: Tradição local de domingo de manhã.",
+                    "6. Suco de Laranja: A região é o cinturão da laranja em SP.",
+                    "7. Churrasco: Churrascarias de estrada são comuns na rodovia Assis Chateaubriand.",
+                    "8. Sorvetes Artesanais: Essenciais para aguentar o calor da cidade.",
+                    "9. Lanches de Trailer: O 'podrão' do interior é caprichado e barato.",
+                    "10. Empadão: Salgado típico nas lanchonetes locais."
+                ],
+
+                religiao: [
+                    "1. Igreja Matriz de São João Batista: O centro da fé católica na praça principal.",
+                    "2. Folclore Religioso: Festas de Santos Reis e Congadas são manifestações de fé muito fortes e tradicionais.",
+                    "3. Igrejas Evangélicas: Diversas denominações presentes nos bairros.",
+                    "4. Turismo Religioso: Rota de passagem para quem vai a Aparecida ou Barretos.",
+                    "5. Benzedeiras: Cultura tradicional do interior ainda presente.",
+                    "6. Festas de Padroeiros: Quermesses movimentam a comunidade local.",
+                    "7. Santuário N. Sra. Aparecida: Local de devoção na cidade.",
+                    "8. Renovação Carismática: Eventos frequentes.",
+                    "9. Capelas Rurais: Charme e fé nas estradas de terra ao redor da cidade.",
+                    "10. Sincretismo: O folclore local mistura elementos católicos, africanos e indígenas."
+                ],
+
+                curiosidades: [
+                    "1. Petróleo que virou Água: Nos anos 50, a Petrobras furou o chão buscando petróleo e achou o Aquífero Guarani (água quente).",
+                    "2. Capital do Folclore: Sedia o FEFOL todo mês de agosto, o maior festival do gênero no país.",
+                    "3. Água Quente Natural: A água não é aquecida artificialmente, ela já sai quente da terra.",
+                    "4. Recordista: O Thermas dos Laranjais frequentemente aparece no Top 5 parques aquáticos do mundo.",
+                    "5. População Flutuante: A cidade tem ~55 mil habitantes, mas recebe milhões de turistas/ano.",
+                    "6. 'Orlando Brasileira': Apelido dado pela quantidade de hotéis e atrações temáticas surgindo.",
+                    "7. Surf no Interior: Tem piscina de surf profissional dentro do parque.",
+                    "8. Dinheiro de Plástico: Nos parques, usa-se cartão pré-pago à prova d'água para consumo.",
+                    "9. Expansão Imobiliária: A cidade virou um canteiro de obras de resorts gigantes.",
+                    "10. Trânsito: Em feriados, a cidadezinha trava com o fluxo de carros."
+                ],
+
+                eventos_estacoes: [
+                    "1. FEFOL (Festival do Folclore - Agosto): O evento cultural mais importante, com grupos do país todo e entrada franca.",
+                    "2. Alta Temporada (Jan/Jul): Férias escolares = Lotação máxima e preços altos.",
+                    "3. Verão (Dez-Mar): Calor intenso e pancadas de chuva diárias.",
+                    "4. Inverno (Jun-Ago): Seco e dias bonitos. Melhor época para aproveitar a água quente sem o sol queimar tanto.",
+                    "5. Réveillon: Festas nos resorts e parques.",
+                    "6. Carnaval: Voltado para família, com marchinhas e shows.",
+                    "7. Corpus Christi: Feriado que costuma lotar a cidade.",
+                    "8. Thermas Rock: Eventos musicais ocasionais dentro do parque.",
+                    "9. Black Friday: Promoções de hospedagem e ingressos.",
+                    "10. Baixa Temporada: Maio, Junho (exceto Corpus Christi), Setembro."
+                ],
+
+                info_gerais: [
+                    "1. Ingressos: Compre online ou em agências na cidade (na portaria é mais caro).",
+                    "2. Voltagem: 127V (Cuidado se você for de cidades 220V).",
+                    "3. Sapatilha Náutica: O chão quente queima o pé e escorrega. Item essencial.",
+                    "4. Armários: Pagos à parte nos parques. Leve pouca coisa.",
+                    "5. Aeroporto: O mais próximo é São José do Rio Preto (50km).",
+                    "6. Uber: Funciona bem, mas tem alta demanda na saída dos parques.",
+                    "7. Regras de Comida: Não entra comida/bebida nos parques (revistam bolsas).",
+                    "8. Protetor Solar: O sol do interior é forte, use mesmo nublado.",
+                    "9. Hidratação: A água quente desidrata sem você perceber. Beba água.",
+                    "10. Crianças: Use a pulseira de identificação fornecida na entrada."
+                ],
+
+                antes_de_ir: [
+                    "1. Planeje os Parques: O Thermas é enorme e cansativo (muita caminhada). O Hot Beach é relax.",
+                    "2. Capa de Celular: Compre a impermeável para tirar fotos na água.",
+                    "3. Toalhas: A maioria dos hotéis cobra taxa para toalha de piscina. Leve a sua de casa.",
+                    "4. Documentos Kids: Leve RG/Certidão para o hotel (obrigatório).",
+                    "5. Farmacinha: Leve remédio para dor de ouvido (comum em crianças na água) e dor muscular.",
+                    "6. Roupas UV: Camisetas de lycra protegem do sol e evitam assaduras nos tobogãs.",
+                    "7. Dinheiro: Leve um pouco, mas os parques usam sistema de cartão pré-pago.",
+                    "8. Jantar: Se não tiver janta no hotel, saia cedo (19h30) para evitar filas na avenida.",
+                    "9. Carro: Ar-condicionado revisado é vital na estrada.",
+                    "10. Paciência: As filas nos brinquedos fazem parte da experiência."
+                ],
+
+                numeros: [
+                    "1. (17) 3279-3500 (Thermas dos Laranjais).",
+                    "2. (17) 3279-1009 (Hot Beach).",
+                    "3. 192 (SAMU).",
+                    "4. (17) 3279-8752 (UPA Olímpia).",
+                    "5. (17) 3281-6420 (Rodoviária).",
+                    "6. 190 (Polícia Militar).",
+                    "7. (17) 3281-2222 (Táxi).",
+                    "8. (17) 3211-1000 (Aeroporto Rio Preto).",
+                    "9. 193 (Bombeiros).",
+                    "10. (17) 3280-6294 (Secretaria de Turismo)."
+                ],
+
+                riscos: [
+                    "1. Insolação: O erro nº 1 dos turistas. O sol queima muito.",
+                    "2. Acidentes em Brinquedos: Não desrespeite as regras de segurança dos tobogãs.",
+                    "3. Furtos: Não deixe celulares e carteiras sozinhos nas espreguiçadeiras.",
+                    "4. Piso Molhado: Crianças correndo em volta da piscina escorregam e se machucam.",
+                    "5. Crianças Perdidas: Marque ponto de encontro, os parques são labirintos.",
+                    "6. Otite: Dor de ouvido por entrada de água.",
+                    "7. Golpes de Aluguel: Cuidado com casas muito baratas na internet.",
+                    "8. Venda de Cotas: Vendedores de resort abordam na rua insistentemente.",
+                    "9. Trânsito na Estrada: Rodovias de pista simples requerem atenção.",
+                    "10. Intoxicação Alimentar: Cuidado com o que come fora dos estabelecimentos confiáveis."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Fim de Semana (2 Dias)",
+                        texto: [
+                            "Sábado: Thermas dos Laranjais (foque nos brinquedos principais).",
+                            "Domingo: Hot Beach (manhã relaxante) e retorno após o almoço."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Feriadão (3-4 Dias)",
+                        texto: [
+                            "Dia 1: Chegada e piscina do hotel.",
+                            "Dia 2: Thermas dos Laranjais (Dia Radical).",
+                            "Dia 3: Thermas (Dia Família/Praia) ou Vale dos Dinossauros.",
+                            "Dia 4: Compras no centrinho e retorno."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Férias de Verão (5 Dias)",
+                        texto: [
+                            "Dias 1-3: Alternar parques aquáticos.",
+                            "Dia 4: Atrações Secas (Museu de Cera, Dinos, Realidade Virtual).",
+                            "Dia 5: Descanso no resort e Museu do Folclore."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/br/olimpia.pt-br.html", 
+                    passeio: "https://www.termas.com.br/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
+            {
+                name: "Maragogi",
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Praia_de_Barra_Grande.jpg/960px-Praia_de_Barra_Grande.jpg",
+                tags: ["Praia", "Caribe Brasileiro", "Mergulho"],
+                mapa: "https://goo.gl/maps/maragogi",
+                clima: "Tropical. Sol o ano todo. Chuvas concentradas entre Abril e Julho (água pode turvar).",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Outubro a Janeiro (Mar mais transparente e menos chuva). Evite o inverno se quiser o 'azul caribe'.",
+                    ideal_para: [
+                        "Amantes de Praia (Água morna, calma e azul-turquesa)",
+                        "Famílias com crianças (Mar sem ondas na maré baixa)",
+                        "Casais (Pousadas charmosas e clima romântico)",
+                        "Fotógrafos (O Caminho de Moisés e os corais são surreais)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem busca agito noturno (A cidade dorme cedo, é bem parada à noite)",
+                        "Surfistas (O mar é uma piscina)",
+                        "Quem não gosta de acordar cedo (Os passeios dependem da maré, às vezes às 5h da manhã)"
+                    ],
+                    perfis: [
+                        { icone: "ri-anchor-fill", nome: "Mar" },
+                        { icone: "ri-sun-fill", nome: "Sol" },
+                        { icone: "ri-camera-lens-fill", nome: "Paisagem" },
+                        { icone: "ri-user-heart-fill", nome: "Relax" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Galés de Maragogi: As piscinas naturais principais. Só vá na maré baixa (0.0 a 0.6).",
+                    "2. Caminho de Moisés (Barra Grande): Um banco de areia que abre mar adentro na maré baixa. Imperdível.",
+                    "3. Praia de Antunes: A mais famosa e bonita. Água azul neon e coqueiros inclinados.",
+                    "4. Passeio de Buggy: Percorre o litoral norte (Burgalhau, Barra Grande, Antunes, Xaréu).",
+                    "5. Praia de Xaréu: Ótima para banho, menos lotada que Antunes.",
+                    "6. Ponta de Mangue: Praia de águas mornas e esverdeadas, quase na divisa com PE.",
+                    "7. Piscinas de Taocas e Barra Grande: Alternativas às Galés principais (menos cheias e mais preservadas).",
+                    "8. Mirante do Cruzeiro: A vista panorâmica da cidade e do mar.",
+                    "9. Ruínas de São Bento: No litoral sul, história e bolo de goma.",
+                    "10. Japaratinga: Cidade vizinha (ao sul) que vale o bate-volta ou esticada."
+                ],
+
+                gastronomia: [
+                    "1. Bolo de Goma: O 'sequilho' de Maragogi. Feito de manteiga e coco, derrete na boca. Compre na fábrica da Tia Marlene.",
+                    "2. Lagosta: Prato típico e farto na região.",
+                    "3. Peixada: Com leite de coco e dendê.",
+                    "4. Tapioca: Clássico nordestino no café da manhã ou jantar.",
+                    "5. Sururu: Molusco pequeno servido ao coco ou no caldo.",
+                    "6. Camarão no Coco: Servido dentro do coco verde.",
+                    "7. Carne de Sol com Macaxeira: Para quem cansar de frutos do mar.",
+                    "8. Sorvete de Graviola: Fruta comum na região.",
+                    "9. Água de Coco: Barata e fresca em qualquer quiosque.",
+                    "10. Caipifruta: De cajá, seriguela ou pitanga."
+                ],
+
+                religiao: [
+                    "1. Igreja de Santo Antônio: Padroeiro da cidade. A igreja fica na orla principal.",
+                    "2. Ruínas da Igreja de São Bento: Um mosteiro antigo inacabado à beira-mar.",
+                    "3. Festas de Padroeiro: Junho tem procissões e quermesses.",
+                    "4. Iemanjá: Oferendas no mar são comuns no Réveillon e 2 de Fevereiro.",
+                    "5. Fé dos Pescadores: As jangadas costumam ter nomes de santos para proteção no mar.",
+                    "6. Capelinhas de Praia: Comuns em propriedades privadas e pousadas.",
+                    "7. Igrejas Evangélicas: Presentes nos bairros residenciais.",
+                    "8. Cruzeiro: O alto do morro tem uma cruz que protege a cidade.",
+                    "9. Benzimentos: Tradição antiga contra 'mau-olhado' ainda existe.",
+                    "10. Misticismo das Marés: O povo local vive regido pela lua e pela maré."
+                ],
+
+                curiosidades: [
+                    "1. Tábua de Marés: É a Bíblia de Maragogi. Se a maré estiver alta (acima de 0.6), NÃO tem piscina natural. Planeje a viagem pela lua (Lua Cheia e Nova = Maré Baixa).",
+                    "2. APA Costa dos Corais: É a maior área de proteção ambiental marinha do Brasil.",
+                    "3. Caribe Brasileiro: O apelido pegou por causa da cor da água, que lembra muito Cancun.",
+                    "4. Gatos de Praia: Na praia de Antunes, muitos gatos vivem nos coqueirais e interagem com turistas.",
+                    "5. Salinas Maragogi: Um dos resorts all-inclusive mais premiados da América do Sul fica aqui.",
+                    "6. Bolacha Maragogi: O bolo de goma é tão famoso que é exportado para outros estados.",
+                    "7. Sem Ondas: A barreira de corais segura o mar, formando uma lagoa gigante.",
+                    "8. Buggy Credenciado: Só bugueiros credenciados (colete colorido) podem rodar nas praias.",
+                    "9. Divisa: Fica exatamente no meio do caminho entre Maceió e Recife (130km para cada lado).",
+                    "10. Peixinhos: Eles vêm comer na mão (mas evite alimentar com pão, faz mal)."
+                ],
+
+                eventos_estacoes: [
+                    "1. Festival da Lagosta (Setembro): Pratos especiais com desconto nos restaurantes.",
+                    "2. Réveillon: A cidade lota. Algumas festas privadas famosas (como Réveillon Mil Sorrisos) acontecem perto.",
+                    "3. Carnaval: Blocos de rua tradicionais e muita gente na praia.",
+                    "4. Verão (Dez-Mar): Água quente, sol forte e cidade cheia.",
+                    "5. Inverno (Mai-Ago): Chove. Se chover muito, a água fica turva ('barrenta') por causa dos rios.",
+                    "6. São João: Comemorado com forró e milho, mas menos intenso que no interior.",
+                    "7. Maré Viva (Luas Cheia/Nova): Quinzenalmente, a maré seca muito e formam-se as piscinas.",
+                    "8. Maré Morta (Luas Crescente/Minguante): A maré não seca tanto, ruim para passeios.",
+                    "9. Feriados: A cidade sempre lota de turistas de Maceió e Recife.",
+                    "10. Baixa Temporada: Abril, Maio, Agosto (preços bons, mas risco de chuva)."
+                ],
+
+                info_gerais: [
+                    "1. Tábua de Marés (DE NOVO): Consulte antes de ir. Maré 0.0 a 0.5 é excelente. 0.6 é aceitável. Acima de 0.7, não vá às Galés.",
+                    "2. Voltagem: 220V. Se levar secador 110V, vai queimar.",
+                    "3. Dinheiro: Leve espécie para pagar a travessia de barco menor ou comprar coco na areia.",
+                    "4. Aeroporto: Você pode descer em Maceió (MCZ) ou Recife (REC). A distância é quase a mesma (~2h30 de carro).",
+                    "5. Protetor Solar: O sol reflete na areia branca e na água. Queima muito.",
+                    "6. Sapatilha de Neoprene: Essencial para não cortar o pé nos corais ou pisar em ouriços.",
+                    "7. Transfer: O Uber é difícil para longas distâncias. Contrate transfer ou alugue carro.",
+                    "8. Centro x Praias: O centro de Maragogi é feio e tem praia urbana comum. As praias bonitas (Antunes, Barra Grande) ficam ao norte (5-10km). Fique hospedado lá se puder.",
+                    "9. Água: Beba mineral.",
+                    "10. Internet: 4G funciona bem, mas falha em praias isoladas."
+                ],
+
+                antes_de_ir: [
+                    "1. OLHE A LUA: Marque a viagem na Lua Cheia ou Lua Nova (maré baixa de manhã).",
+                    "2. Reserve o Passeio: As Galés têm limite de visitantes por dia (cota ambiental). Reserve antes.",
+                    "3. Snorkel: Se tiver o seu, leve. Os alugados são muito usados.",
+                    "4. Câmera Subaquática: GoPro ou capinha de celular é obrigatório.",
+                    "5. Carro: Vale a pena alugar para ir nas praias vizinhas (Japaratinga, São Miguel dos Milagres).",
+                    "6. Repelente: Tem pernilongo à noite.",
+                    "7. Roupas UV: Proteção solar é vital.",
+                    "8. Dinheiro Trocado: Para gorjetas e ambulantes.",
+                    "9. Horário dos Passeios: Muda todo dia conforme a maré. Esteja disposto a acordar 4h da manhã se necessário.",
+                    "10. Paciência com o Atendimento: O ritmo do litoral é 'devagar'. Relaxe."
+                ],
+
+              numeros: [
+                    "1. 190 (Polícia Militar).",
+                    "2. 192 (SAMU).",
+                    "3. (82) 3296-1657 (Delegacia Civil - 92º DP).",
+                    "4. (82) 3296-1406 (UPA 24h Maragogi - Santo Antônio).",
+                    "5. (82) 98164-3813 (Secretaria de Turismo / Prefeitura - Zap).",
+                    "6. (82) 3036-5200 (Aeroporto Maceió) / (81) 3464-4188 (Aeroporto Recife).",
+                    "7. 0800 009 7325 (Real Alagoas - Ônibus).",
+                    "8. (82) 3296-1206 (Prefeitura Geral).",
+                    "9. Associação de Bugueiros: Não tem telefone fixo, agende na recepção da sua pousada (é mais seguro).",
+                    "10. Bancos: BB, Caixa e Bradesco (Centro de Maragogi)."
+                ],
+
+                riscos: [
+                    "1. Ouriços do Mar: Eles ficam nas pedras. Se pisar, dói muito e infecciona. Olhe onde pisa.",
+                    "2. Corais Cortantes: Não suba nos corais (é proibido e corta).",
+                    "3. Queimadura Solar: O índice UV é extremo.",
+                    "4. Maré Enchendo: No Caminho de Moisés, a maré sobe rápido. Se você for muito longe, pode ter que voltar nadando. Cuidado!",
+                    "5. Águas Vivas: Ocorrem em certas épocas.",
+                    "6. Passeios Piratas: Barqueiros sem licença que levam a lugares sem peixe. Exija credencial.",
+                    "7. Preços de Praia: Barracas famosas cobram caro. Pergunte o preço antes.",
+                    "8. Trânsito na AL-101: Estrada pista simples, sinuosa e às vezes esburacada.",
+                    "9. Furto na Areia: Não deixe coisas sozinhas no Caminho de Moisés.",
+                    "10. Desidratação: Beba água de coco constante."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Bate-volta ou 2 Dias",
+                        texto: [
+                            "Dia 1: Passeio às Galés (na hora da maré baixa) + Tarde na Praia de Antunes.",
+                            "Dia 2: Passeio de Buggy pelo litoral Norte (Barra Grande/Caminho de Moisés)."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Relax Caribe (4 Dias)",
+                        texto: [
+                            "Dias 1-2: Siga o roteiro curto.",
+                            "Dia 3: Bate-volta a Japaratinga (balsa) e Mirante do Aruanã.",
+                            "Dia 4: Dia livre em um Beach Club (como o Barra Mar ou Pontal) ou Praia de Xaréu."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Costa dos Corais (6-7 Dias)",
+                        texto: [
+                            "Dias 1-4: Roteiro médio.",
+                            "Dia 5: Bate-volta a São Miguel dos Milagres (Praia do Patacho).",
+                            "Dia 6: Praia de Carneiros (PE) - fica a 1h de distância.",
+                            "Dia 7: Compras de artesanato e bolo de goma no centro."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/br/maragogi.pt-br.html", 
+                    passeio: "https://www.tripadvisor.com.br/Attractions-g303340-Activities-Maragogi_State_of_Alagoas.html", 
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
 
         ],
         "Argentina": [
@@ -11067,6 +12272,185 @@ veredicto: {
                     seguro: "https://www.segurospromo.com.br" 
                 },
             },
+            {
+                name: "São Francisco",
+                imagem: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?q=80&w=2070&auto=format&fit=crop",
+                tags: ["Golden Gate", "Tech", "Ladeiras"],
+                mapa: "https://goo.gl/maps/sanfrancisco",
+                clima: "Mediterrâneo com neblina fria. NUNCA faz calor tropical. O verão é frio e ventoso. Melhor clima: Setembro/Outubro.",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Setembro e Outubro (O famoso 'Indian Summer', quando a neblina some e esquenta). Julho é gelado.",
+                    ideal_para: [
+                        "Fãs de Tecnologia (Vale do Silício fica ao sul)",
+                        "Gastronômicos (Restaurantes incríveis e vinhos de Napa Valley perto)",
+                        "Fotógrafos (A Golden Gate na neblina é ícone)",
+                        "História LGBT (O bairro Castro é o berço do movimento)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem espera 'Califórnia Ensolarada' de praia (A água é gelada e venta muito)",
+                        "Quem quer alugar carro (Estacionar é impossível e arrombamentos são frequentes)",
+                        "Quem se assusta com moradores de rua (O centro tem uma crise social visível)"
+                    ],
+                    perfis: [
+                        { icone: "ri-foggy-fill", nome: "Clima Único" },
+                        { icone: "ri-code-s-slash-fill", nome: "Inovação" },
+                        { icone: "ri-restaurant-fill", nome: "Gastronomia" },
+                        { icone: "ri-building-line", nome: "Arquitetura" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Golden Gate Bridge: A ponte laranja mais famosa do mundo. Cruze a pé ou de bicicleta até Sausalito.",
+                    "2. Ilha de Alcatraz: O antigo presídio de segurança máxima. O tour com áudio é imperdível e arrepiante.",
+                    "3. Fisherman's Wharf / Pier 39: Turistão, mas tem que ir ver os Leões Marinhos tomando sol.",
+                    "4. Lombard Street: A 'rua mais torta do mundo', cheia de curvas e flores.",
+                    "5. Painted Ladies: As casas vitorianas coloridas em frente à Alamo Square (cenário de 'Três é Demais').",
+                    "6. Chinatown: A maior e mais antiga comunidade chinesa fora da Ásia. Entre pelo Dragon Gate.",
+                    "7. Cable Cars (Bondinhos): O único monumento histórico móvel dos EUA. Pegue na linha Powell-Hyde.",
+                    "8. Palace of Fine Arts: Uma estrutura romana gigante e linda para fotos.",
+                    "9. Castro: O bairro colorido e histórico da comunidade LGBTQIA+.",
+                    "10. Twin Peaks: Dois morros que oferecem a melhor vista panorâmica da cidade (se não tiver neblina)."
+                ],
+
+                gastronomia: [
+                    "1. Clam Chowder no Sourdough: Sopa de mariscos cremosa servida dentro de um pão azedo (típico) redondo.",
+                    "2. Dungeness Crab: O caranguejo gigante local, cozido na hora no porto.",
+                    "3. Mission Burrito: Um burrito gigante (arroz, feijão, carne) inventado no bairro Mission.",
+                    "4. Chocolate Ghirardelli: A fábrica original virou uma loja de sorvetes na praça.",
+                    "5. Irish Coffee: Dizem que foi introduzido nos EUA pelo 'Buena Vista Cafe'.",
+                    "6. Dim Sum: Café da manhã chinês com dezenas de potinhos de vapor, o melhor fora da China.",
+                    "7. Cioppino: Ensopado de frutos do mar criado por pescadores italianos de SF.",
+                    "8. Vinhos da Califórnia: Napa e Sonoma ficam a 1h, então os vinhos na cidade são ótimos.",
+                    "9. Padarias Artesanais: O pão 'Sourdough' (fermentação natural) é religião lá (Tartine Bakery).",
+                    "10. In-N-Out Burger: O clássico fast-food da Califórnia (barato e bom)."
+                ],
+
+                religiao: [
+                    "1. Mission Dolores: A construção mais antiga da cidade (1776), uma missão católica espanhola.",
+                    "2. Grace Cathedral: Catedral gótica imponente em Nob Hill, famosa pelos labirintos de meditação.",
+                    "3. Budismo: A influência asiática trouxe muitos templos budistas importantes.",
+                    "4. Diversidade: SF é um refúgio para todas as crenças e movimentos espirituais alternativos.",
+                    "5. Glide Memorial Church: Famosa por seu coral gospel e ativismo social.",
+                    "6. Satanismo: Curiosamente, a 'Igreja de Satã' foi fundada lá nos anos 60 (é mais filosófica/ateísta).",
+                    "7. Templo de Tin How: Templo taoísta antigo em Chinatown.",
+                    "8. Espiritualidade New Age: Muito forte na cultura californiana.",
+                    "9. Judaísmo: Comunidade histórica e ativa.",
+                    "10. Summer of Love: O movimento hippie dos anos 60 trouxe uma onda de espiritualidade livre."
+                ],
+
+                curiosidades: [
+                    "1. Karl, the Fog: A neblina é tão constante que tem nome (Karl) e Instagram próprio.",
+                    "2. Terremoto de 1906: Destruiu 80% da cidade (mais pelo fogo que pelo tremor). A cidade se reergueu rápido.",
+                    "3. Biscoito da Sorte: Não é da China! Foi inventado em São Francisco por uma família japonesa.",
+                    "4. Jeans Levi's: Levi Strauss criou o jeans lá para os mineradores da Corrida do Ouro.",
+                    "5. Cemitérios Proibidos: Quase não há cemitérios em SF (o terreno é muito caro). Os mortos foram movidos para a cidade vizinha, Colma.",
+                    "6. Íngreme: A Filbert Street tem 31% de inclinação. Carros estacionam com a roda virada para a calçada por lei.",
+                    "7. Beatles: O último show completo dos Beatles foi no Candlestick Park em SF.",
+                    "8. Bandeira LGBT: Foi criada lá pelo artista Gilbert Baker em 1978.",
+                    "9. Internet: É o coração do boom da tecnologia (Twitter, Uber, Airbnb nasceram ou têm sede lá).",
+                    "10. Ouro: A cidade explodiu em 1849 ('49ers') com a descoberta de ouro na região."
+                ],
+
+                eventos_estacoes: [
+                    "1. SF Pride (Junho): Uma das maiores paradas do orgulho LGBTQIA+ do mundo.",
+                    "2. Fleet Week (Outubro): Show aéreo com os Blue Angels voando baixo sobre a baía.",
+                    "3. Chinese New Year (Fev): O maior desfile fora da Ásia.",
+                    "4. Bay to Breakers (Maio): Uma corrida de rua maluca onde as pessoas vão fantasiadas (ou peladas).",
+                    "5. Outside Lands (Agosto): Festival de música gigante no Golden Gate Park.",
+                    "6. Verão (Jul-Ago): Frio e neblina ('June Gloom'). Leve casaco.",
+                    "7. Outono (Set-Out): O verdadeiro verão. Dias limpos e quentes.",
+                    "8. Inverno: Chuvoso, mas não neva.",
+                    "9. Folsom Street Fair (Setembro): Feira de couro e fetiche (aviso: conteúdo explícito na rua).",
+                    "10. Iluminação da Golden Gate: À noite ela não é tão iluminada, mas a Bay Bridge tem um show de luzes LED lindo."
+                ],
+
+                info_gerais: [
+                    "1. CARRO = PERIGO: SF vive uma epidemia de 'Bipping' (quebrar vidro de carro para roubar malas). NUNCA deixe NADA dentro do carro, nem por 5 minutos.",
+                    "2. Clima em Camadas: De manhã faz 12ºC, meio-dia 20ºC, tarde 10ºC com vento. O segredo é vestir camadas (cebola).",
+                    "3. Moradores de Rua: O bairro 'Tenderloin' e partes do 'SOMA' têm muitos usuários de droga a céu aberto. Evite andar a pé nessas ruas específicas.",
+                    "4. Gorjeta: 18% a 22% é o padrão. Menos que isso é considerado rude.",
+                    "5. Clipper Card: O cartão para usar metrô (BART) e ônibus (Muni). Dá para por no celular.",
+                    "6. Ladeiras: Use calçados confortáveis. Você vai subir morro o dia todo.",
+                    "7. Alcatraz: Reserve com 3 MESES de antecedência. Esgota muito rápido.",
+                    "8. Banheiros: Difíceis de achar na rua. Use de museus, hotéis ou Starbucks (com código).",
+                    "9. Água: A água da torneira vem de Yosemite e é considerada uma das melhores do mundo. Pode beber.",
+                    "10. Sacolas: Cobra-se por sacolas em todas as lojas (lei ambiental)."
+                ],
+
+                antes_de_ir: [
+                    "1. Reserve Alcatraz: É sério, entre no site oficial agora se quiser ir.",
+                    "2. Não alugue carro (se possível): Só alugue no dia de sair da cidade (para ir a Yosemite ou Los Angeles). Dentro de SF, carro é um estorvo caro.",
+                    "3. Casaco Corta-Vento: Item obrigatório na mala, mesmo em julho.",
+                    "4. Adaptador: Tomada americana (pino chato).",
+                    "5. App Muni/BART: Baixe para ver horários de transporte.",
+                    "6. Seguro Viagem: Cobertura alta (mínimo US$ 60k).",
+                    "7. Documentos: Tenha cópia do passaporte e visto.",
+                    "8. Cartão Nomad/Wise: Aceitos em tudo.",
+                    "9. Powerbank: O frio e o GPS consomem bateria.",
+                    "10. Mapa Offline: Baixe o mapa da cidade no Google Maps."
+                ],
+
+                numeros: [
+                    "1. 911 (Emergência Geral).",
+                    "2. 311 (Serviços da cidade não emergenciais).",
+                    "3. Consulado do Brasil em SF: +1 (415) 981-8170 (300 California St).",
+                    "4. Aeroporto SFO (Internacional).",
+                    "5. Aeroporto OAK (Oakland - do outro lado da ponte, às vezes mais barato).",
+                    "6. Zuckerberg San Francisco General Hospital (Emergência).",
+                    "7. BART Police: (510) 464-7000.",
+                    "8. Táxi: Yellow Cab (415) 333-3333 (Mas Uber/Lyft dominam).",
+                    "9. Centro de Visitantes: No Moscone Center.",
+                    "10. Farmácias: CVS e Walgreens (tem em toda esquina)."
+                ],
+
+                riscos: [
+                    "1. Arrombamento de Carro: É o crime nº 1. Vidros quebrados são comuns nas zonas turísticas (Alamo Square, Twin Peaks).",
+                    "2. Tenderloin: Evite este bairro à noite. É o epicentro da crise de opioides.",
+                    "3. Vento Gelado: Hipotermia leve pega turistas desprevenidos de shortinho na Golden Gate.",
+                    "4. Fezes na Rua: Infelizmente, devido à crise de moradia, é preciso olhar onde pisa em algumas áreas do centro.",
+                    "5. Terremotos: Ocorrem, mas a maioria é imperceptível. Se tremer, proteja-se embaixo de mesa.",
+                    "6. Furto de Bicicleta: Se alugar, use cadeado robusto.",
+                    "7. Preço da Comida: Restaurantes cobram taxas extras ('SF Mandate') para saúde dos funcionários.",
+                    "8. Transporte à Noite: O BART é seguro de dia, mas pode ser esquisito tarde da noite.",
+                    "9. Golpes de Monges: Falsos monges pedindo doação perto da Union Square.",
+                    "10. Maconha: O cheiro é onipresente, mas fumar em locais fechados ou perto de escolas é proibido."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Os Clássicos (2 Dias)",
+                        texto: [
+                            "Dia 1: Bondinho (Cable Car), Fisherman's Wharf, Pier 39 e tour noturno em Alcatraz.",
+                            "Dia 2: Golden Gate Bridge (mirantes), Palace of Fine Arts e Lombard Street."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Vibe Local (4 Dias)",
+                        texto: [
+                            "Dias 1-2: Siga o roteiro curto.",
+                            "Dia 3: Painted Ladies, bairro Castro e Dolores Park (piquenique).",
+                            "Dia 4: Ferry Building (comida), Chinatown e Union Square (compras)."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Bay Area Completa (6 Dias)",
+                        texto: [
+                            "Dias 1-4: Siga o roteiro médio.",
+                            "Dia 5: Bate-volta a Sausalito (de ferry) e Muir Woods (floresta de sequoias gigantes).",
+                            "Dia 6: Bate-volta ao Vale do Silício (Apple Park, Google, Stanford) ou Napa Valley (Vinhos)."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/us/san-francisco.pt-br.html", 
+                    passeio: "https://www.cityexperiences.com/san-francisco/city-cruises/alcatraz/", // Site oficial Alcatraz
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
         ],
           "México": [
     {
@@ -11626,7 +13010,189 @@ veredicto: {
                     seguro: "https://www.segurospromo.com.br" 
                 }
             }
-        ]
+        ],
+        "Emirados Árabes Unidos": [
+        {
+            name: "Dubai",
+            imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Dubai%2C_United_Arab_Emirates_%28Unsplash_suv4vuJsH6g%29.jpg/960px-Dubai%2C_United_Arab_Emirates_%28Unsplash_suv4vuJsH6g%29.jpg",
+            tags: ["Luxo", "Futuro", "Deserto"],
+            mapa: "https://goo.gl/maps/dubai",
+            clima: "Desértico. Verão (Mai-Set) é INSUPORTÁVEL (40ºC-50ºC). Inverno (Nov-Mar) é delicioso (20ºC-25ºC).",
+            
+            // === DADOS DO VEREDICTO ===
+            veredicto: {
+                melhor_epoca: "Novembro a Março (Inverno). É a única época que dá para andar na rua.",
+                ideal_para: [
+                    "Fãs de Arquitetura (Os prédios mais altos e estranhos do mundo)",
+                    "Compradores de Luxo (O maior shopping do mundo está aqui)",
+                    "Famílias (Parques aquáticos e temáticos incríveis)",
+                    "Casais em Lua de Mel (Jantares no deserto e hotéis 7 estrelas)"
+                ],
+                nao_ideal_para: [
+                    "Quem odeia calor (No verão, você não sai do ar condicionado)",
+                    "Mochileiros 'Low Cost' (É possível economizar, mas o foco da cidade é gastar)",
+                    "Quem busca história antiga (A cidade é nova, quase tudo tem menos de 50 anos)"
+                ],
+                perfis: [
+                    { icone: "ri-building-4-fill", nome: "Arranha-céus" },
+                    { icone: "ri-vip-diamond-fill", nome: "Luxo" },
+                    { icone: "ri-cactus-fill", nome: "Deserto" },
+                    { icone: "ri-shopping-cart-fill", nome: "Shopping" }
+                ]
+            },
+            // =================================
+
+            pontos_turisticos: [
+                "1. Burj Khalifa: O prédio mais alto do mundo. A vista do 'At the Top' é obrigatória (reserve antes!).",
+                "2. Dubai Mall: O maior shopping do mundo. Tem aquário gigante, pista de patinação e cachoeira dentro.",
+                "3. Fonte de Dubai: Show das águas dançantes em frente ao Burj Khalifa (Grátis, a cada 30min à noite).",
+                "4. Desert Safari: Passeio de 4x4 nas dunas com jantar beduíno e show de fogo.",
+                "5. Palm Jumeirah: A ilha artificial em forma de palmeira. Veja do observatório 'The View'.",
+                "6. Museu do Futuro: O prédio mais bonito do mundo, em forma de anel prateado com caligrafia árabe.",
+                "7. Dubai Marina: Bairro moderno com canal artificial, cheio de iates e restaurantes (The Walk).",
+                "8. Global Village: Um parque gigante com pavilhões de vários países, comidas e shows (só abre no inverno).",
+                "9. Gold Souk e Spice Souk: Os mercados tradicionais de ouro e especiarias na parte velha (Deira).",
+                "10. Dubai Frame: A maior moldura do mundo, que mostra a Dubai velha de um lado e a nova do outro."
+            ],
+
+            gastronomia: [
+                "1. Tâmaras: O doce do deserto. As tâmaras recheadas com amêndoas ou cobertas de chocolate (Bateel) são de luxo.",
+                "2. Shawarma: O churrasco grego local, barato e delicioso nas ruas.",
+                "3. Carne de Camelo: Para os corajosos. Tem hambúrguer e até leite de camelo.",
+                "4. Hummus e Pão Árabe: Entrada padrão em qualquer lugar.",
+                "5. Machboos: Arroz temperado com carne ou peixe (parece um biryani).",
+                "6. Karak Chai: Chá forte com leite e especiarias, muito popular e barato.",
+                "7. Luqaimat: Bolinhos fritos doces com calda de tâmaras (sobremesa típica).",
+                "8. Brunches de Sexta/Sábado: Tradição dos expatriados. Buffets ilimitados com bebida alcoólica em hotéis.",
+                "9. Café Árabe: Servido com cardamomo e açafrão.",
+                "10. Ouro Comestível: Em lugares turísticos (como Burj Al Arab), servem café com folhas de ouro 24k."
+            ],
+
+            religiao: [
+                "1. Islã: É a religião oficial e dita as leis. Respeite os costumes.",
+                "2. Chamada para a Oração: Você ouvirá o 'Adhan' tocando nos alto-falantes 5 vezes ao dia. É hipnotizante.",
+                "3. Mesquita de Jumeirah: Uma das poucas abertas a não-muçulmanos para visitas guiadas.",
+                "4. Ramadan: O mês sagrado. Comer e beber em público durante o dia é proibido (embora hotéis tolerem turistas).",
+                "5. Vestimenta: Em shoppings e ruas, cubra ombros e joelhos (homens e mulheres). Em hotéis e praias, biquíni é ok.",
+                "6. Álcool: Muçulmanos não bebem. Turistas só podem beber em hotéis e bares licenciados (não se bebe na rua!).",
+                "7. Demonstração de Afeto: Beijar na boca em público é ofensa grave. Andar de mãos dadas é o limite.",
+                "8. Tolerância: Dubai é muito internacional e tolerante, mas não abuse.",
+                "9. Sexta-feira: É o dia sagrado (como o domingo cristão), mas o fim de semana mudou para Sábado-Domingo recentemente.",
+                "10. Abu Dhabi: A Grande Mesquita Sheikh Zayed fica na cidade vizinha e é um templo deslumbrante."
+            ],
+
+            curiosidades: [
+                "1. Polícia de Luxo: A frota da polícia tem Ferrari, Lamborghini e Bugatti (para alcançar os carros rápidos dos locais).",
+                "2. Ar Condicionado: Até os pontos de ônibus são fechados e têm ar condicionado.",
+                "3. Ministério da Felicidade: O governo tem um ministro focado em tornar o povo feliz.",
+                "4. Placa de Carro: Quanto menos dígitos na placa, mais rico e importante é o dono (placa de 1 dígito = realeza).",
+                "5. Fim de Semana: Recentemente mudaram o fim de semana para Sábado e Domingo (para alinhar com o ocidente). Antes era Sex-Sáb.",
+                "6. 85% Estrangeiros: A maioria da população não é local (são indianos, paquistaneses, filipinos e ocidentais).",
+                "7. Chuva Artificial: Eles usam aviões e drones para fazer chover ('Cloud Seeding') no verão.",
+                "8. ATM de Ouro: Existem caixas eletrônicos que sacam barras de ouro em vez de dinheiro.",
+                "9. Metrô Vip: O metrô tem vagão 'Gold Class' (mais caro) e vagão só para mulheres e crianças.",
+                "10. Falcões: A falconaria é esporte nacional. Falcões têm passaporte próprio e viajam na cabine do avião."
+            ],
+
+            eventos_estacoes: [
+                "1. Dubai Shopping Festival (Dez/Jan): A cidade inteira entra em liquidação e tem shows.",
+                "2. Réveillon: A queima de fogos no Burj Khalifa é mundialmente famosa (e lotada).",
+                "3. Verão (Jun-Ago): Calor mortal. A vida acontece dentro dos shoppings. Preços de hotéis despencam.",
+                "4. Inverno (Nov-Abr): Clima de praia perfeito.",
+                "5. Ramadan (Data varia, segue a lua): A cidade fica quieta de dia e ganha vida à noite (Iftar).",
+                "6. Dubai World Cup (Março): A corrida de cavalos mais rica do mundo.",
+                "7. Gitex (Outubro): Feira de tecnologia gigante.",
+                "8. Art Dubai (Março): Feira de arte internacional.",
+                "9. Food Festival (Fev/Mar): Eventos gastronômicos.",
+                "10. National Day (2 de Dezembro): Feriado patriótico com paradas e fogos."
+            ],
+
+            info_gerais: [
+                "1. Metrô: É limpo, automático (sem motorista) e passa pelos principais pontos turísticos. Compre o cartão 'Nol Card'.",
+                "2. Táxi: São baratos e seguros (cor creme). Uber também funciona bem.",
+                "3. Bebida Alcoólica: Não vende em mercado comum. Só em 'Liquor Stores' (precisa de licença) ou bares de hotel/restaurantes licenciados.",
+                "4. WhatsApp: Chamadas de voz/vídeo pelo WhatsApp são BLOQUEADAS. Texto funciona. Use Zoom ou Botim para ligar.",
+                "5. Tomada: Tipo G (Reino Unido). Leve adaptador.",
+                "6. Vestuário: Leve um xale/lenço na bolsa. O ar condicionado é gelado e serve para cobrir ombros se exigido.",
+                "7. Segurança: É uma das cidades mais seguras do mundo. Furtos são raríssimos.",
+                "8. Gorjeta: Não é obrigatória, mas 10% é apreciado.",
+                "9. Taxa de Turismo: Hotéis cobram uma taxa 'Dirham Tourism Fee' por noite, paga no check-in.",
+                "10. Fuso Horário: +7h em relação ao Brasil."
+            ],
+
+            antes_de_ir: [
+                "1. Reserve Burj Khalifa: Os horários do pôr do sol esgotam semanas antes.",
+                "2. VPN: Baixe no celular se quiser fazer chamadas de vídeo ou acessar sites bloqueados.",
+                "3. Roupas Modestas: Não leve só mini-saia e decote. Respeite a cultura local para evitar olhares tortos.",
+                "4. Remédios: Alguns remédios comuns no Brasil (com codeína ou tarja preta) são proibidos lá. Leve receita em inglês.",
+                "5. Dinheiro: Leve Dólares e troque por Dirhams lá (casas de câmbio no shopping têm boa cotação).",
+                "6. Seguro Viagem: Obrigatório ter cobertura médica.",
+                "7. Chip de Celular: No aeroporto, a imigração às vezes dá um chip grátis com um pouco de dados (verifique a promoção vigente).",
+                "8. Final de Semana: Lembre-se que sexta-feira é dia de oração, algumas coisas abrem mais tarde.",
+                "9. Sol: Protetor solar e óculos escuros são vitais, o reflexo na areia/vidros é forte.",
+                "10. Bate-volta Abu Dhabi: Vale a pena reservar um dia para ir à capital (1h30 de carro)."
+            ],
+
+            numeros: [
+                "1. 999 (Polícia).",
+                "2. 998 (Ambulância).",
+                "3. 997 (Bombeiros).",
+                "4. 800 900 (Dubai Tourism - Ajuda ao turista).",
+                "5. Consulado do Brasil em Dubai: +971 4 397 2555.",
+                "6. RTA (Transporte/Táxi): 800 9090.",
+                "7. Aeroporto Internacional de Dubai (DXB).",
+                "8. Rashid Hospital (Emergência pública referência).",
+                "9. American Hospital Dubai (Particular de ponta).",
+                "10. Al Ameen (Denúncias anônimas): 800 4888."
+            ],
+
+            riscos: [
+                "1. Calor Extremo: Insolação é séria no verão. Hidrate-se.",
+                "2. Leis Rígidas: Xingar alguém no trânsito, mostrar dedo do meio ou brigar pode dar prisão/deportação.",
+                "3. Drogas: Tolerância ZERO. Nem farelo na mala, nem no sangue. Penas duríssimas.",
+                "4. Álcool na Rua: Beber na rua ou estar visivelmente bêbado em público dá cadeia.",
+                "5. Fotos: Não tire fotos de pessoas locais (especialmente mulheres) sem permissão. É crime.",
+                "6. Demonstração de Afeto: Beijos e abraços excessivos em público chamam a polícia.",
+                "7. Golpes de Ouro: Cuidado ao comprar ouro na rua fora das lojas certificadas (é raro, mas acontece).",
+                "8. Trânsito: Eles dirigem rápido e colam na traseira. Cuidado ao alugar carro.",
+                "9. Dívida: Não pagar conta de hotel/cartão é crime e você é impedido de sair do país.",
+                "10. Redes Sociais: Cuidado com o que posta criticando o país ou religião. Crimes cibernéticos são levados a sério."
+            ],
+
+            roteiros: {
+                "curto": {
+                    titulo: "Essencial Dubai (3 Dias)",
+                    texto: [
+                        "Dia 1: Dubai Mall, Burj Khalifa (topo) e Show das Fontes.",
+                        "Dia 2: Dubai Antiga (Souks de Ouro/Especiarias) e travessia de barco (Abra). Tarde no Frame.",
+                        "Dia 3: Desert Safari (tarde/noite) nas dunas."
+                    ]
+                },
+                "medio": {
+                    titulo: "Dubai Moderno (5 Dias)",
+                    texto: [
+                        "Dias 1-3: Siga o roteiro curto.",
+                        "Dia 4: Palm Jumeirah (The View), Aquário Atlantis e Marina Walk à noite.",
+                        "Dia 5: Museu do Futuro e Praia (JBR ou Kite Beach)."
+                    ]
+                },
+                "longo": {
+                    titulo: "Emirados Completo (7 Dias)",
+                    texto: [
+                        "Dias 1-5: Siga o roteiro médio.",
+                        "Dia 6: Bate-volta a Abu Dhabi (Mesquita Sheikh Zayed e Louvre Abu Dhabi).",
+                        "Dia 7: Compras no Outlet Village ou parque de diversões (Motiongate/Ferrari World)."
+                    ]
+                },
+            },
+
+            links: {
+                hotel: "https://www.booking.com/city/ae/dubai.pt-br.html", 
+                passeio: "https://www.visitdubai.com/pt", 
+                seguro: "https://www.segurospromo.com.br" 
+            },
+        },
+    ],
     },
     "Europa": {
         "Portugal": [
@@ -13819,3 +15385,75 @@ function getAllDestinationsFlatSafe() {
     return all;
 }
 
+// ==========================================
+// WIDGET DE CONVERSÃO DE MOEDAS (REAL TIME)
+// ==========================================
+
+let currentRates = {}; // Armazena as cotações baixadas
+let isRatesLoaded = false;
+
+// Função para abrir/fechar o widget
+function toggleCurrencyWidget() {
+    const modal = document.getElementById('currencyModal');
+    const isHidden = modal.classList.contains('hidden');
+    
+    if (isHidden) {
+        modal.classList.remove('hidden');
+        if (!isRatesLoaded) {
+            fetchRates(); // Baixa as cotações só na primeira vez que abre
+        }
+    } else {
+        modal.classList.add('hidden');
+    }
+}
+
+// Consome a AwesomeAPI
+async function fetchRates() {
+    const label = document.getElementById('rateLabel');
+    label.innerHTML = '<i class="ri-loader-4-line ri-spin"></i> Atualizando valores...';
+
+    // Lista de pares para buscar (Moeda-BRL)
+    const pairs = "USD-BRL,EUR-BRL,GBP-BRL,ARS-BRL,CLP-BRL,UYU-BRL,COP-BRL,PEN-BRL,MXN-BRL,JPY-BRL,AED-BRL,CAD-BRL";
+
+    try {
+        const response = await fetch(`https://economia.awesomeapi.com.br/last/${pairs}`);
+        const data = await response.json();
+
+        // Processa os dados para um formato simples
+        // A API retorna algo como "USDBRL": { "bid": "5.05" }
+        Object.keys(data).forEach(key => {
+            const currencyCode = data[key].code; // Ex: USD
+            currentRates[currencyCode] = parseFloat(data[key].bid);
+        });
+
+        isRatesLoaded = true;
+        label.innerHTML = '<i class="ri-check-double-line"></i> Cotação atualizada agora';
+        convertCurrency(); // Recalcula se já tiver número digitado
+
+    } catch (error) {
+        console.error("Erro no conversor:", error);
+        label.innerText = "Erro ao buscar taxas. Tente mais tarde.";
+    }
+}
+
+// Realiza o cálculo
+function convertCurrency() {
+    const amount = parseFloat(document.getElementById('convAmount').value);
+    const currency = document.getElementById('convCurrency').value;
+    const resultSpan = document.getElementById('convResult');
+    
+    // Se não tiver valor ou cotação, zera
+    if (!amount || isNaN(amount) || !currentRates[currency]) {
+        resultSpan.innerText = "R$ 0,00";
+        return;
+    }
+
+    const rate = currentRates[currency];
+    const total = amount * rate;
+
+    // Formata para Real Brasileiro
+    resultSpan.innerText = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    
+    // Mostra a taxa unitária no rodapé para referência
+    document.getElementById('rateLabel').innerText = `1 ${currency} = R$ ${rate.toFixed(2)}`;
+}

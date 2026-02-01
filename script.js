@@ -17012,33 +17012,12 @@ function toggleWidgetPanel() {
     
     if (isHidden) {
         panel.classList.remove('hidden');
-        // Se o painel está sendo aberto, carrega as cotações e a citação do dia
+        // Se o painel está sendo aberto, carrega as cotações
         if (!isRatesLoaded) {
             fetchRates(); 
         }
-        getQuote(); // Carrega a citação do dia
     } else {
         panel.classList.add('hidden');
-    }
-}
-
-// Função para buscar citação do dia
-async function getQuote() {
-    const quoteText = document.getElementById('quoteText');
-    const quoteAuthor = document.getElementById('quoteAuthor');
-    
-    // Não busca de novo se já tiver uma citação (exceto a de 'Carregando...')
-    if (quoteText.innerText !== "Carregando...") return;
-
-    try {
-        const response = await fetch('https://api.quotable.io/random?language=pt');
-        if (!response.ok) throw new Error('Failed to fetch');
-        const data = await response.json();
-        quoteText.innerText = `“${data.content}”`;
-        quoteAuthor.innerText = `— ${data.author}`;
-    } catch (error) {
-        quoteText.innerText = "Não foi possível carregar a citação do dia.";
-        console.error("Quote widget error:", error);
     }
 }
 

@@ -1734,3 +1734,18 @@ c:\Users\Ola\Music\valadãoworldtour\style.css
 .top-bar-widgets .widget-btn i {
     font-size: 1.4rem; /* Um pouco maior para o ícone de apps */
 }
+
+/* RESPONSIVIDADE PARA O PAINEL DE WIDGETS */
+@media (max-width: 768px) {
+    .widget-panel {
+        flex-direction: column; /* Empilha os widgets verticalmente */
+        right: 20px; /* Mais espaço nas laterais */
+        width: calc(100% - 40px); /* Ocupa quase toda a largura */
+        align-items: center; /* Centraliza os widgets empilhados */
+    }
+
+    .widget-panel .widget-modal {
+        width: 100%; /* Cada widget ocupa a largura total do painel */
+        max-width: 320px; /* Mantém uma largura máxima razoável */
+    }
+}

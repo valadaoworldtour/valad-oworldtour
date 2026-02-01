@@ -1753,11 +1753,11 @@ c:\Users\Ola\Music\valadãoworldtour\style.css
 /* --- NOVO MENU FAB (Floating Action Button) --- */
 .fab-container {
     position: fixed;
-    bottom: 30px;
+    top: 20px;
     right: 30px;
     z-index: 1500;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -1775,7 +1775,7 @@ c:\Users\Ola\Music\valadãoworldtour\style.css
     cursor: pointer;
     box-shadow: 0 5px 20px rgba(0, 102, 255, 0.4);
     transition: transform 0.3s ease;
-    margin-top: 15px; /* Espaço para o primeiro botão de opção */
+    margin-bottom: 15px; /* Espaço para o primeiro botão de opção */
 }
 
 .fab-main:hover {
@@ -1784,14 +1784,14 @@ c:\Users\Ola\Music\valadãoworldtour\style.css
 
 .fab-options {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     gap: 15px;
     list-style: none;
     padding: 0;
     margin: 0;
     transition: all 0.3s ease-out;
-    transform: scale(0.9) translateY(10px);
+    transform: scale(0.9) translateY(-10px);
     opacity: 0;
     pointer-events: none;
 }
@@ -1848,7 +1848,7 @@ c:\Users\Ola\Music\valadãoworldtour\style.css
 /* Ajusta o posicionamento do widget da cotação */
 #currency-widget {
     position: fixed;
-    bottom: 100px;
+    top: 100px;
     right: 100px;
     z-index: 1400; /* Abaixo do menu FAB */
 }

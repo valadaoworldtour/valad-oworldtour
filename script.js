@@ -17200,13 +17200,13 @@ function initMap() {
         attribution: '© Google Maps'
     });
 
-    // Adiciona a camada Híbrida (Satélite + Ruas) como padrão
-    googleHybrid.addTo(map);
+    // Adiciona a camada de Ruas como padrão
+    googleStreets.addTo(map);
 
-    // Adiciona controle para o usuário trocar entre Satélite e Mapa
+    // Adiciona controle para o usuário trocar entre Mapa e Satélite
     const baseMaps = {
-        "Satélite (Google)": googleHybrid,
-        "Mapa (Google)": googleStreets
+        "Mapa (Google)": googleStreets,
+        "Satélite (Google)": googleHybrid
     };
     L.control.layers(baseMaps, null, { position: 'topright' }).addTo(map);
 

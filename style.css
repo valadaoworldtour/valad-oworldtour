@@ -1,5 +1,3 @@
-
-
 :root {
     /* --- PALETA "DAYTIME NEON" (OCEANO CRISTALINO) --- */
     --bg-deep: #f0f8ff; /* Branco Gelo / AliceBlue */
@@ -218,7 +216,7 @@ body {
 .sidebar-footer { text-align: center; font-size: 0.7rem; color: var(--text-muted); padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.05); letter-spacing: 3px; }
 
 /* --- MAIN CONTENT (Conteúdo Principal) --- */
-.main-content { flex: 1; padding: 40px; overflow-y: auto; position: relative; }
+.main-content { flex: 1; padding: 40px; overflow-y: auto; position: relative; display: flex; flex-direction: column; }
 
 .header-content h1 { 
     font-family: var(--font-head); font-size: 2.5rem; margin-bottom: 5px; 
@@ -227,14 +225,20 @@ body {
 }
 .header-content p { color: var(--text-muted); font-size: 1.1rem; font-weight: 600; }
 
-.cities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; padding-bottom: 50px; }
+.content-wrapper { position: relative; flex: 1; min-height: 600px; }
+
+.cities-grid { 
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; 
+    margin-top: 20px; padding-bottom: 50px; position: relative; z-index: 2; 
+    pointer-events: none; 
+}
 
 
 .city-card:nth-child(2) { animation-delay: 1s; } .city-card:nth-child(3) { animation-delay: 2s; }
 @keyframes oceanFloat { 0% { transform: translateY(0px); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0px); } }
 
 .city-card {
-    background: rgba(255, 255, 255, 0.85); /* Vidro mais translúcido */
+    background: rgba(255, 255, 255, 0.95); /* Vidro mais opaco para leitura */
     backdrop-filter: blur(15px) saturate(180%); /* Desfoque de alta tecnologia */
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 20px;
@@ -247,6 +251,7 @@ body {
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     /* Sombra inicial suave azulada */
     box-shadow: 0 10px 30px -10px rgba(0, 196, 230, 0.3);
+    pointer-events: auto;
 }
 
 /* Efeito de Scanner passando (Linha de luz) */
@@ -293,7 +298,7 @@ body {
 .card-content p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; font-weight: 500; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .view-btn { margin-top: 15px; color: var(--neon-blue); font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 5px; }
 
-.empty-state { grid-column: 1 / -1; text-align: center; color: var(--text-muted); padding: 60px; }
+.empty-state { grid-column: 1 / -1; text-align: center; color: var(--text-muted); padding: 60px; pointer-events: auto; background: rgba(255,255,255,0.9); border-radius: 20px; backdrop-filter: blur(10px); }
 .empty-state i { font-size: 4rem; display: block; margin-bottom: 10px; color: var(--neon-cyan); animation: heartbeat 4s infinite; }
 
 /* --- MODAL TELA CHEIA --- */
@@ -1512,4 +1517,220 @@ body {
 .rate-info { 
     text-align: center; margin-top: 15px; font-size: 0.7rem; color: #9aaabb; 
     display: flex; align-items: center; justify-content: center; gap: 5px;
+}
+
+/* --- MAPA MUNDI INTERATIVO --- */
+.map-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    margin-bottom: 0;
+    position: absolute;
+    top: 0; left: 0;
+    border: 1px solid rgba(0, 196, 230, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 30, 54, 0.1);
+    background: #fff;
+    z-index: 0; /* Garante que fique abaixo do menu/modal */
+}
+
+#worldMap {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.map-overlay-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    z-index: 400; /* Acima do mapa Leaflet */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    pointer-events: none;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.map-overlay-info i {
+    color: var(--neon-cyan);
+    font-size: 1.2rem;
+}
+
+/* Customização dos Popups do Leaflet */
+.leaflet-popup-content-wrapper {
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    padding: 0;
+    overflow: hidden;
+}
+.leaflet-popup-content {
+    margin: 0;
+    width: 260px !important;
+}
+.pin-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.pin-card:hover {
+    background: #f0f8ff;
+}
+.pin-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.pin-info h4 {
+    font-family: var(--font-head);
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    color: var(--text-main);
+}
+.pin-info span {
+    font-size: 0.75rem;
+    color: var(--neon-blue);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+c:\Users\Ola\Music\valadãoworldtour\style.css
+
+
+
+/* --- WIDGET COTAÇÃO DO DIA (Novo) --- */
+.top-bar-widgets {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.widget-btn {
+    background: transparent;
+    border: 2px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.widget-btn:hover {
+    background: var(--neon-cyan);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.widget-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 320px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,30,54, 0.15);
+    z-index: 1000;
+    overflow: hidden;
+    border: 1px solid rgba(0, 196, 230, 0.2);
+    transform-origin: top right;
+    animation: popIn 0.3s ease-out;
+}
+
+.widget-modal.hidden {
+    display: none;
+}
+
+.widget-header {
+    background: linear-gradient(90deg, #001e36, #003050);
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.widget-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-head);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.widget-title i {
+    color: var(--neon-cyan);
+}
+
+.widget-body {
+    padding: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.quote-text {
+    font-style: italic;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    border-left: 3px solid var(--neon-cyan);
+    padding-left: 15px;
+}
+
+.quote-author {
+    display: block;
+    text-align: right;
+    font-weight: 700;
+    color: var(--text-main);
+    font-family: var(--font-head);
+}
+
+/* --- PAINEL DE WIDGETS (NOVO) --- */
+.widget-panel {
+    position: absolute;
+    top: 90px; /* Abaixo da top-bar */
+    right: 40px;
+    z-index: 1000;
+    display: flex;
+    gap: 20px;
+    transform-origin: top right;
+    animation: popIn 0.3s ease-out;
+}
+
+.widget-panel.hidden {
+    display: none !important;
+}
+
+/* Ajuste para os widgets dentro do painel */
+.widget-panel .widget-modal {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 300px; /* Largura fixa para cada widget */
+    box-shadow: 0 10px 30px rgba(0,30,54, 0.1);
+    /* Herda a maior parte dos estilos de .widget-modal já existente */
+}
+
+/* Garante que o corpo do widget dentro do painel seja branco */
+.widget-panel .widget-body {
+    background: #fff;
+}
+
+/* Ajuste para o botão da Top Bar */
+.top-bar-widgets .widget-btn i {
+    font-size: 1.4rem; /* Um pouco maior para o ícone de apps */
 }

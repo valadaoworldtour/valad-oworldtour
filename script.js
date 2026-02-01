@@ -16352,6 +16352,7 @@ function updateVerdict(cidade) {
 function init() { 
     renderSidebar();
     fixSidebarLayout();
+    //   initRightSidebar();
 }
 
 function fixSidebarLayout() {
@@ -16378,6 +16379,7 @@ function fixSidebarLayout() {
     `;
     document.head.appendChild(style);
 }
+
 
 function renderSidebar() {
     const menu = document.getElementById('sidebarMenu');
@@ -17000,26 +17002,54 @@ function getAllDestinationsFlatSafe() {
 }
 
 // ==========================================
+// WIDGETS PANEL (NOVO E UNIFICADO)
+// ==========================================
+function toggleWidgetPanel() {
+    const panel = document.getElementById('widget-panel');
+    if (!panel) return;
+
+    const isHidden = panel.classList.contains('hidden');
+    
+    if (isHidden) {
+        panel.classList.remove('hidden');
+        // Se o painel está sendo aberto, carrega as cotações e a citação do dia
+        if (!isRatesLoaded) {
+            fetchRates(); 
+        }
+        getQuote(); // Carrega a citação do dia
+    } else {
+        panel.classList.add('hidden');
+    }
+}
+
+// Função para buscar citação do dia
+async function getQuote() {
+    const quoteText = document.getElementById('quoteText');
+    const quoteAuthor = document.getElementById('quoteAuthor');
+    
+    // Não busca de novo se já tiver uma citação (exceto a de 'Carregando...')
+    if (quoteText.innerText !== "Carregando...") return;
+
+    try {
+        const response = await fetch('https://api.quotable.io/random?language=pt');
+        if (!response.ok) throw new Error('Failed to fetch');
+        const data = await response.json();
+        quoteText.innerText = `“${data.content}”`;
+        quoteAuthor.innerText = `— ${data.author}`;
+    } catch (error) {
+        quoteText.innerText = "Não foi possível carregar a citação do dia.";
+        console.error("Quote widget error:", error);
+    }
+}
+
+
+// ==========================================
 // WIDGET DE CONVERSÃO DE MOEDAS (REAL TIME)
 // ==========================================
 
 let currentRates = {}; // Armazena as cotações baixadas
 let isRatesLoaded = false;
 
-// Função para abrir/fechar o widget
-function toggleCurrencyWidget() {
-    const modal = document.getElementById('currencyModal');
-    const isHidden = modal.classList.contains('hidden');
-    
-    if (isHidden) {
-        modal.classList.remove('hidden');
-        if (!isRatesLoaded) {
-            fetchRates(); // Baixa as cotações só na primeira vez que abre
-        }
-    } else {
-        modal.classList.add('hidden');
-    }
-}
 
 // Consome a AwesomeAPI
 async function fetchRates() {
@@ -17071,3 +17101,172 @@ function convertCurrency() {
     // Mostra a taxa unitária no rodapé para referência
     document.getElementById('rateLabel').innerText = `1 ${currency} = R$ ${rate.toFixed(2)}`;
 }
+// ======================================================
+// SISTEMA DE MAPA INTERATIVO (LEAFLET.JS) - ATUALIZADO
+// ======================================================
+
+// 1. Torna a função GLOBAL para que o HTML dentro do mapa consiga acessá-la
+window.openMapCity = function(cityName) {
+    console.log("Tentando abrir:", cityName); // Para debug
+
+    let foundCity = null;
+
+    // Busca a cidade no seu banco de dados aninhado (worldData)
+    // Verifica se worldData existe
+    if (typeof worldData === 'undefined') {
+        console.error("Erro: worldData não foi encontrado.");
+        return;
+    }
+
+    Object.keys(worldData).forEach(cat => {
+        Object.keys(worldData[cat]).forEach(sub => {
+            const city = worldData[cat][sub].find(c => c.name === cityName);
+            if (city) foundCity = city;
+        });
+    });
+
+    if (foundCity) {
+        currentCity = foundCity; // Atualiza variável global
+        openCityModal(foundCity); // Abre o modal
+    } else {
+        console.warn("Cidade não encontrada nos dados:", cityName);
+    }
+};
+
+const cityCoordinates = {
+    "Torre Eiffel": [48.8584, 2.2945],
+    "Cristo Redentor": [-22.9519, -43.2105],
+    "Coliseu": [41.8902, 12.4922],
+    "Estátua da Liberdade": [40.6892, -74.0445],
+    "Taj Mahal": [27.1751, 78.0421],
+    "Machu Picchu": [-13.1631, -72.5450],
+    "Grande Muralha da China": [40.4319, 116.5704],
+    "Cidade Proibida": [39.9163, 116.3972],
+    "Petra": [30.3285, 35.4444],
+    "Chichén Itzá": [20.6843, -88.5678],
+    "Sydney Opera House": [-33.8568, 151.2153],
+    "Sagrada Família": [41.4036, 2.1744],
+    "Stonehenge": [51.1789, -1.8262],
+    "Niagara Falls": [43.0962, -79.0377],
+    "Monte Fuji": [35.3606, 138.7274],
+    "Dubai": [25.1972, 55.2744],
+    "Londres": [51.5074, -0.1278],
+    "Paris": [48.8566, 2.3522],
+    "Nova York": [40.7128, -74.0060],
+    "Rio de Janeiro": [-22.9068, -43.1729],
+    "Tóquio": [35.6762, 139.6503],
+    "Angkor Wat": [13.4125, 103.8670],
+    "Pirâmides de Gizé": [29.9792, 31.1342],
+    "Buenos Aires": [-34.6037, -58.3816],
+    "Santiago": [-33.4489, -70.6693],
+    "Cartagena": [10.3910, -75.4794],
+    "Bogotá": [4.7110, -74.0721],
+    "Lima": [-12.0464, -77.0428],
+    "Cusco": [-13.5320, -71.9675],
+    "Fernando de Noronha": [-3.8577, -32.4278],
+    "Foz do Iguaçu": [-25.5469, -54.5882],
+    "Florianópolis": [-27.5954, -48.5480],
+    "Salvador": [-12.9777, -38.5016],
+    "Jericoacoara": [-2.7933, -40.5136],
+    "Lençóis Maranhenses": [-2.4859, -43.1284],
+    "Gramado": [-29.3746, -50.8764],
+    "Maragogi": [-9.0122, -35.2226],
+    "Ouro Preto": [-20.3856, -43.5035],
+    "Bonito": [-21.1215, -56.4819],
+    "Jalapão": [-10.5686, -46.8856],
+    "Capitólio": [-20.6148, -46.0504],
+    "Chapada dos Veadeiros": [-14.1336, -47.5216],
+    "Inhotim": [-20.1246, -44.2202],
+    "Ilhabela": [-23.7781, -45.3577],
+    "Paraty": [-23.2221, -44.7190],
+    "Tulum": [20.2114, -87.4654],
+    "Ushuaia": [-54.8019, -68.3030],
+    "Deserto do Atacama": [-22.9087, -68.1997],
+    "Salar de Uyuni": [-20.1338, -67.4891]
+};
+
+let map; 
+
+function initMap() {
+    if (!document.getElementById('worldMap')) return;
+
+    map = L.map('worldMap', {
+        zoomControl: false,
+        scrollWheelZoom: false 
+    }).setView([20, -10], 2);
+
+    // --- CAMADAS DO GOOGLE MAPS (Melhor qualidade e interativo) ---
+    const googleStreets = L.tileLayer('https://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+        maxZoom: 20,
+        subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
+        attribution: '© Google Maps'
+    });
+
+    const googleHybrid = L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
+        maxZoom: 20,
+        subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
+        attribution: '© Google Maps'
+    });
+
+    // Adiciona a camada Híbrida (Satélite + Ruas) como padrão
+    googleHybrid.addTo(map);
+
+    // Adiciona controle para o usuário trocar entre Satélite e Mapa
+    const baseMaps = {
+        "Satélite (Google)": googleHybrid,
+        "Mapa (Google)": googleStreets
+    };
+    L.control.layers(baseMaps, null, { position: 'topright' }).addTo(map);
+
+    L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+    const neonIcon = L.divIcon({
+        className: 'custom-pin',
+        html: `<div style="
+            background-color: var(--neon-cyan);
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 10px var(--neon-cyan);
+            "></div>`,
+        iconSize: [15, 15],
+        iconAnchor: [7, 7]
+    });
+
+    Object.keys(worldData).forEach(continente => {
+        Object.keys(worldData[continente]).forEach(sub => {
+            const destinos = worldData[continente][sub];
+            
+            destinos.forEach(destino => {
+                const coords = cityCoordinates[destino.name];
+                
+                if (coords) {
+                    const marker = L.marker(coords, { icon: neonIcon }).addTo(map);
+                    
+                    // Correção Importante: Protegendo o nome com aspas simples escapadas
+                    // e chamando a função window.openMapCity
+                    const safeName = destino.name.replace(/'/g, "\\'"); 
+
+                    const popupContent = `
+                        <div class="pin-card" onclick="window.openMapCity('${safeName}')">
+                            <img src="${destino.imagem || 'https://via.placeholder.com/60'}" class="pin-img">
+                            <div class="pin-info">
+                                <h4>${destino.name}</h4>
+                                <span>${sub} <i class="ri-arrow-right-line"></i></span>
+                            </div>
+                        </div>
+                    `;
+                    
+                    marker.bindPopup(popupContent);
+                }
+            });
+        });
+    });
+}
+
+// Inicialização
+document.addEventListener('DOMContentLoaded', () => {
+    if(typeof init === 'function') init(); 
+    initMap();
+});

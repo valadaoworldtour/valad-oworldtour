@@ -14,6 +14,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 <body>
 
@@ -74,18 +77,85 @@
         <main class="main-content">
             <header class="top-bar">
                 <div class="header-content">
-                    <h1 id="pageTitle">Centro de Comando</h1>
-                    <p id="pageSubtitle">Selecione um país no radar ou use a busca para iniciar.</p>
+                    <h1 id="pageTitle">Explore o Mundo</h1>
+                    <p id="pageSubtitle">Selecione um destino no mapa ou na lista abaixo.</p>
+                </div>
+                <div class="top-bar-widgets">
+                    <button class="widget-btn" onclick="toggleWidgetPanel()" title="Abrir Widgets">
+                        <i class="ri-apps-line"></i>
+                    </button>
                 </div>
             </header>
 
-            <div class="content-wrapper">
-                <div id="mainDisplay" class="cities-grid">
-                    <div class="empty-state">
-                        <i class="ri-compass-discover-line"></i>
-                        <h2>Aguardando Coordenadas</h2>
-                        <p>Escolha um continente no menu lateral ou digite na busca.</p>
+            <div id="widget-panel" class="widget-panel hidden">
+                <div id="quote-widget" class="widget-modal">
+                    <div class="widget-header">
+                        <div class="widget-title">
+                            <i class="ri-double-quotes-l"></i>
+                            <span>Citação do Dia</span>
+                        </div>
+                        <button class="close-widget" onclick="toggleWidgetPanel()"><i class="ri-close-line"></i></button>
                     </div>
+                    <div class="widget-body">
+                        <blockquote class="quote-text" id="quoteText">
+                            Carregando...
+                        </blockquote>
+                        <cite class="quote-author" id="quoteAuthor"></cite>
+                    </div>
+                </div>
+
+                <div class="widget-modal">
+                    <div class="widget-header">
+                        <div class="widget-title">
+                            <i class="ri-exchange-dollar-line"></i>
+                            <span>Cotação Hoje</span>
+                        </div>
+                        <button class="close-widget" onclick="toggleWidgetPanel()"><i class="ri-close-line"></i></button>
+                    </div>
+                    <div class="widget-body">
+                        <div class="input-group">
+                            <label>Valor do Gasto</label>
+                            <input type="number" id="convAmount" placeholder="Ex: 50.00" oninput="convertCurrency()">
+                        </div>
+        
+                        <div class="input-group">
+                            <label>Moeda do País</label>
+                            <select id="convCurrency" onchange="convertCurrency()">
+                                <option value="USD" selected>🇺🇸 Dólar Americano (USD)</option>
+                                <option value="EUR">🇪🇺 Euro (EUR)</option>
+                                <option value="GBP">🇬🇧 Libra Esterlina (GBP)</option>
+                                <option value="ARS">🇦🇷 Peso Argentino (ARS)</option>
+                                <option value="CLP">🇨🇱 Peso Chileno (CLP)</option>
+                                <option value="UYU">🇺🇾 Peso Uruguaio (UYU)</option>
+                                <option value="COP">🇨🇴 Peso Colombiano (COP)</option>
+                                <option value="PEN">🇵🇪 Sol Peruano (PEN)</option>
+                                <option value="MXN">🇲🇽 Peso Mexicano (MXN)</option>
+                                <option value="JPY">🇯🇵 Iene Japonês (JPY)</option>
+                                <option value="AED">🇦🇪 Dirham (AED)</option>
+                            </select>
+                        </div>
+        
+                        <div class="result-box">
+                            <small>Custo em Reais:</small>
+                            <span id="convResult">R$ 0,00</span>
+                        </div>
+        
+                        <div class="rate-info">
+                            <i class="ri-refresh-line"></i> <span id="rateLabel">Carregando taxas...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-wrapper">
+                <div id="map-container" class="map-box">
+                    <div id="worldMap"></div>
+                    <div class="map-overlay-info">
+                        <i class="ri-hand-coin-line"></i> Clique nos pinos para ver detalhes
+                    </div>
+                </div>
+
+                <div id="mainDisplay" class="cities-grid">
                 </div>
             </div>
         </main>
@@ -278,56 +348,6 @@
         </div>
     </div>
 
-    <div class="currency-widget-container">
-        <button class="currency-float-btn" onclick="toggleCurrencyWidget()" title="Converter Moedas">
-            <i class="ri-money-dollar-circle-line"></i>
-        </button>
-
-        <div class="currency-modal hidden" id="currencyModal">
-            <div class="currency-header">
-                <div class="header-title">
-                    <i class="ri-exchange-dollar-line"></i>
-                    <span>Cotação Hoje</span>
-                </div>
-                <button class="close-widget" onclick="toggleCurrencyWidget()"><i class="ri-close-line"></i></button>
-            </div>
-            
-            <div class="currency-body">
-                <div class="input-group">
-                    <label>Valor do Gasto</label>
-                    <input type="number" id="convAmount" placeholder="Ex: 50.00" oninput="convertCurrency()">
-                </div>
-
-                <div class="input-group">
-                    <label>Moeda do País</label>
-                    <select id="convCurrency" onchange="convertCurrency()">
-                        <option value="USD" selected>🇺🇸 Dólar Americano (USD)</option>
-                        <option value="EUR">🇪🇺 Euro (EUR)</option>
-                        <option value="GBP">🇬🇧 Libra Esterlina (GBP)</option>
-                        <option value="ARS">🇦🇷 Peso Argentino (ARS)</option>
-                        <option value="CLP">🇨🇱 Peso Chileno (CLP)</option>
-                        <option value="UYU">🇺🇾 Peso Uruguaio (UYU)</option>
-                        <option value="COP">🇨🇴 Peso Colombiano (COP)</option>
-                        <option value="PEN">🇵🇪 Sol Peruano (PEN)</option>
-                        <option value="MXN">🇲🇽 Peso Mexicano (MXN)</option>
-                        <option value="JPY">🇯🇵 Iene Japonês (JPY)</option>
-                        <option value="AED">🇦🇪 Dirham (AED)</option>
-                    </select>
-                </div>
-
-                <div class="result-box">
-                    <small>Custo em Reais:</small>
-                    <span id="convResult">R$ 0,00</span>
-                </div>
-
-                <div class="rate-info">
-                    <i class="ri-refresh-line"></i> <span id="rateLabel">Carregando taxas...</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>
-}

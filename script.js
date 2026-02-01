@@ -25,6 +25,18 @@ const countryFlags = {
     "República Tcheca": "cz",
     "Holanda": "nl"
 };
+
+const categoryEmojis = {
+    "Monumento": "🗽",
+    "Sítio": "🗿",
+    "Parque": "🌲",
+    "Arquitetura": "🏛️",
+    "Ícone Urbano": "🏙️",
+    "Templo": "⛩️",
+    "Maravilha Natural": "🌊",
+    "Patrimônio Mundial": "🌍",
+    "Montanha": "🏔️" // Adicionado
+};
 // --- CONFIGURAÇÃO GLOBAL ---
 
 const defaultImage = "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop";
@@ -466,6 +478,36 @@ const realCostData = {
             idioma: "Português"
         }
     },
+    "Jericoacoara": {
+        comida: "R$ 60 – R$ 180", // Restaurantes turísticos são caros, mas há PFs simples
+        hospedagem: "R$ 350 – R$ 1.000", // Alta demanda o ano todo
+        transporte: "R$ 100 – R$ 300", // O custo alto é o transfer 4x4 (Jardineira) e Buggy
+        atracoes: "R$ 150 – R$ 400",   // Passeios Lado Leste e Lado Oeste (por pessoa ou buggy fechado)
+        checklist: {
+            passaporte: "Não (RG ou CNH)",
+            visto: "Nenhum",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado (Passeios de buggy têm risco)",
+            tomada: "220V (Padrão Ceará)",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
+    },
+    "Fernando de Noronha": {
+        comida: "R$ 100 – R$ 300", // Tudo vem de barco/avião, é muito caro. Uma água custa R$ 15.
+        hospedagem: "R$ 800 – R$ 3.000", // Pousadas domiciliares são as "baratas". As de luxo passam de R$ 5k.
+        transporte: "R$ 400 – R$ 600", // Diária de Buggy. O ônibus custa ~R$ 5,00. Táxi é tabelado e caro.
+        atracoes: "R$ 350 – R$ 600",   // TPA (Taxa por dia) + Ingresso do Parque (R$ 178 BR / R$ 358 Gringo)
+        checklist: {
+            passaporte: "Não (RG ou CNH)",
+            visto: "Nenhum",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Altamente Recomendado (Não há UTI de alta complexidade na ilha)",
+            tomada: "220V (Padrão BR)",
+            moeda: "Real (R$)",
+            idioma: "Português"
+        }
+    },
     "Buenos Aires": {
         comida: "R$ 90 – R$ 180",
         hospedagem: "R$ 180 – R$ 450",
@@ -689,6 +731,36 @@ const realCostData = {
             tomada: "110V (Tipo A/B - Dois pinos chatos | Leve adaptador)",
             moeda: "Dólar Americano (USD)",
             idioma: "Inglês"
+        }
+    },
+    "Chicago": {
+        comida: "R$ 60 – R$ 250", // De Hot Dog na rua a jantar Deep Dish Pizza
+        hospedagem: "R$ 600 – R$ 1.500", // Hotéis no Loop/River North são caros
+        transporte: "R$ 25 – R$ 80", // O metrô (L train) é ícone e barato. Uber varia.
+        atracoes: "R$ 150 – R$ 400",   // Subir na Willis Tower ou Cruzeiro Arquitetônico é caro
+        checklist: {
+            passaporte: "Obrigatório (Válido)",
+            visto: "Obrigatório (Visto Americano B1/B2)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Essencial (Saúde nos EUA é caríssima)",
+            tomada: "110V (Tipo A/B - Dois pinos chatos | Leve adaptador)",
+            moeda: "Dólar Americano (USD)",
+            idioma: "Inglês"
+        }
+    },
+    "Toronto": {
+        comida: "R$ 80 – R$ 250", // Cidade cara. Restaurantes étnicos (Chinatown) são mais baratos.
+        hospedagem: "R$ 600 – R$ 1.800", // Hotéis no centro (Downtown) são caríssimos.
+        transporte: "R$ 15 – R$ 50", // Metrô/Bonde (TTC) custa $3.35 CAD. O passe diário vale a pena.
+        atracoes: "R$ 150 – R$ 400",   // CN Tower (~$45 CAD) e Museus são caros.
+        checklist: {
+            passaporte: "Obrigatório (Validade +6 meses)",
+            visto: "Obrigatório (Visto Canadense ou eTA se tiver Visto Americano válido/Visto Canadense anterior)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Essencial (Saúde no Canadá é pública para eles, mas CARÍSSIMA para turista)",
+            tomada: "110V (Tipo A/B - Dois pinos chatos | OBRIGATÓRIO adaptador se seu aparelho for de 3 pinos)",
+            moeda: "Dólar Canadense (CAD)",
+            idioma: "Inglês (e Francês nas embalagens, mas ninguém fala francês na rua em Toronto)"
         }
     },
     "Tóquio": {
@@ -961,6 +1033,21 @@ const realCostData = {
             idioma: "Inglês"
         }
     },
+    "Torres del Paine": {
+        comida: "R$ 80 – R$ 250", // Comida dentro do parque (refúgios) é caríssima. Em Puerto Natales é médio.
+        hospedagem: "R$ 150 – R$ 1.500", // Camping pago (~R$ 150) até Hotéis de luxo (Explora/Las Torres).
+        transporte: "R$ 100 – R$ 200", // Ônibus ida e volta de Puerto Natales + Transfer interno.
+        atracoes: "R$ 180 – R$ 250",   // Entrada do Parque Nacional (CONAF) para estrangeiros (~35 USD).
+        checklist: {
+            passaporte: "Não (RG em bom estado e com menos de 10 anos serve)",
+            visto: "Nenhum",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Essencial (Resgate em áreas remotas e trilhas é complexo)",
+            tomada: "220V (Tipo L - Três pinos redondos alinhados | Leve adaptador universal)",
+            moeda: "Peso Chileno (CLP) - Leve dinheiro vivo para o parque",
+            idioma: "Espanhol"
+        }
+    },
     "Ilhabela": {
         comida: "R$ 80 – R$ 200",
         hospedagem: "R$ 250 – R$ 700",
@@ -1096,6 +1183,36 @@ const realCostData = {
             idioma: "Árabe (Inglês básico em áreas turísticas)"
         }
     },
+    "Petra": {
+        comida: "R$ 50 – R$ 150", // A cidade de apoio (Wadi Musa) tem opções baratas e caras
+        hospedagem: "R$ 200 – R$ 800", // De hostels a hotéis de luxo na porta do parque
+        transporte: "R$ 20 – R$ 100", // Táxis locais. Dentro de Petra, anda-se a pé (ou burro/camelo - pago)
+        atracoes: "R$ 400 – R$ 600",   // O ingresso é CARO (50 Dinares ~R$ 400). O 'Jordan Pass' compensa muito.
+        checklist: {
+            passaporte: "Obrigatório (Validade +6 meses)",
+            visto: "Obrigatório (Compre o 'Jordan Pass' online antes: inclui visto + entrada em Petra)",
+            vacinas: "Febre Amarela (Recomendada)",
+            seguro: "Essencial (Deserto, calor e trilhas)",
+            tomada: "230V (Tipos C, D, F, G, J - Leve adaptador universal, a mistura é grande)",
+            moeda: "Dinar Jordaniano (JOD) - É uma moeda fortíssima (vale mais que Euro/Dólar!)",
+            idioma: "Árabe (Inglês é falado no turismo)"
+        }
+    },
+    "Chichén Itzá": {
+        comida: "R$ 50 – R$ 150", // Buffet livre perto das ruínas ou comida em Valladolid
+        hospedagem: "R$ 250 – R$ 800", // Hotéis em Valladolid ou Piste (cidades base)
+        transporte: "R$ 40 – R$ 150", // Ônibus ADO (saindo de Cancun/Tulum) ou aluguel de carro
+        atracoes: "R$ 200 – R$ 250",   // Ingresso para estrangeiros (~614 MXN) + Guia opcional
+        checklist: {
+            passaporte: "Obrigatório (Validade +6 meses)",
+            visto: "Obrigatório (Visto Físico Mexicano ou Visto Válido EUA/Canadá/Schengen)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Recomendado (Calor extremo e intoxicação alimentar)",
+            tomada: "110V (Tipo A/B - Dois pinos chatos | Igual EUA)",
+            moeda: "Peso Mexicano (MXN) - Leve dinheiro vivo, a bilheteria às vezes falha o cartão",
+            idioma: "Espanhol (Inglês nas áreas turísticas e Maia entre locais)"
+        }
+    },
     "Sydney Opera House": {
         comida: "R$ 80 – R$ 250", // Sydney é uma cidade cara para comer
         hospedagem: "R$ 600 – R$ 1.800", // Hotéis no porto (Circular Quay) são caríssimos
@@ -1139,6 +1256,21 @@ const realCostData = {
             tomada: "110V (Tipo A/B - Dois pinos chatos | OBRIGATÓRIO adaptador)",
             moeda: "Dólar Canadense (CAD) ou Americano (USD) - Aceitam ambos na fronteira, mas o troco varia",
             idioma: "Inglês (Lado Canadense e Americano)"
+        }
+    },
+    "Monte Fuji": {
+        comida: "R$ 40 – R$ 150", // Comida de loja de conveniência é barata; Refúgios na montanha são caros
+        hospedagem: "R$ 300 – R$ 1.200", // Hotéis no Lago Kawaguchiko ou refúgios (Mountain Huts)
+        transporte: "R$ 80 – R$ 200", // Ônibus de Tóquio para a 5ª Estação
+        atracoes: "R$ 30 – R$ 100",   // Taxa de conservação (pedágio para subir) é barata (~1000 Ienes)
+        checklist: {
+            passaporte: "Obrigatório (Validade +6 meses)",
+            visto: "Isento (Brasileiros não precisam mais de visto para turismo de curta duração - verifique regra atual)",
+            vacinas: "Nenhuma obrigatória",
+            seguro: "Essencial (Resgate em montanha custa uma fortuna)",
+            tomada: "100V (Tipo A - Dois pinos chatos | Atenção: É 100V, não 110V!)",
+            moeda: "Iene Japonês (JPY) - Leve DINHEIRO VIVO, a montanha não aceita cartão",
+            idioma: "Japonês (Inglês básico nas áreas turísticas)"
         }
     },
 };
@@ -2554,6 +2686,367 @@ const worldData = {
                 seguro: "https://www.segurospromo.com.br" 
             },
         },
+        {
+            name: "Petra",
+            imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Al_Khazneh_Petra_edit_2.jpg/500px-Al_Khazneh_Petra_edit_2.jpg",
+            tags: ["História", "Maravilha do Mundo", "Deserto"],
+            mapa: "https://goo.gl/maps/petra",
+            clima: "Desértico. Verão (Jun-Ago) escaldante. Inverno (Dez-Fev) muito frio (pode nevar!). Primavera/Outono ideais.",
+            
+            // === DADOS DO VEREDICTO ===
+            veredicto: {
+                melhor_epoca: "Março a Maio (Primavera) ou Setembro a Novembro (Outono). Temperaturas agradáveis para caminhar 15km.",
+                ideal_para: [
+                    "Aventureiros (É uma cidade inteira para explorar, não só um prédio)",
+                    "Fãs de Cinema (Indiana Jones e a Última Cruzada)",
+                    "Fotógrafos (As cores das pedras mudam com o sol)",
+                    "Caminhantes (Prepare as pernas, são muitos degraus)"
+                ],
+                nao_ideal_para: [
+                    "Quem tem mobilidade reduzida (O terreno é areia e pedra, carruagens são desconfortáveis)",
+                    "Quem tem pressa (Não dá para ver tudo em 2 horas)",
+                    "Quem odeia poeira (Você vai voltar marrom de areia)"
+                ],
+                perfis: [
+                    { icone: "ri-ancient-pavilion-fill", nome: "Arqueologia" },
+                    { icone: "ri-footprint-fill", nome: "Trilha" },
+                    { icone: "ri-movie-2-fill", nome: "Cenário" },
+                    { icone: "ri-camera-fill", nome: "Fotografia" }
+                ]
+            },
+            // =================================
+
+            pontos_turisticos: [
+                "1. O Tesouro (Al-Khazneh): O cartão-postal que você vê assim que sai do desfiladeiro. Magnífico.",
+                "2. O Siq: O cânion estreito e sinuoso de 1.2km que leva até o Tesouro. Caminhada mágica.",
+                "3. O Monastério (Ad Deir): O 'irmão maior' do Tesouro. Fica no topo da montanha (800 degraus). A vista compensa tudo.",
+                "4. High Place of Sacrifice: Um altar no topo de outra montanha com vista panorâmica da cidade rosa.",
+                "5. Tumbas Reais: Fachadas gigantescas escavadas na rocha, brilham ao pôr do sol.",
+                "6. Teatro Nabateu: Um teatro romano esculpido direto na pedra para 8.000 pessoas.",
+                "7. Little Petra (Siq al-Barid): Uma 'mini Petra' a 10km de distância, entrada grátis e menos cheia.",
+                "8. Rua das Colunatas: A antiga rua principal da cidade romana/nabateia.",
+                "9. Mirante do Tesouro: Aquele lugar alto para tirar a foto de cima (os beduínos cobram para te guiar até lá).",
+                "10. Wadi Musa: A cidade moderna que fica na porta do parque, onde estão os hotéis e restaurantes."
+            ],
+
+            gastronomia: [
+                "1. Mansaf: O prato nacional da Jordânia. Cordeiro cozido em iogurte seco (Jameed) com arroz e pão. Come-se com a mão (direita)!",
+                "2. Zarb: O churrasco beduíno. Carne e vegetais enterrados na areia com carvão por horas.",
+                "3. Chá Beduíno: Chá preto com sálvia (maramieh) e muito açúcar. Oferecem em toda loja.",
+                "4. Maqluba: 'De cabeça para baixo'. Arroz, frango e vegetais cozidos na panela e virados no prato.",
+                "5. Falafel e Hummus: O café da manhã padrão.",
+                "6. Limonada com Hortelã: A bebida mais refrescante para o calor do deserto (Limonana).",
+                "7. Kunafa: Sobremesa de queijo quente com calda doce e pistache.",
+                "8. Galayet Bandora: Ensopado de tomate com alho e pimenta, servido com pão.",
+                "9. Shrak: O pão fininho feito na chapa (saj) pelos beduínos.",
+                "10. Romã: O suco de romã espremido na hora é comum na trilha."
+            ],
+
+            religiao: [
+                "1. Islã: A religião oficial da Jordânia. Ouve-se o chamado para a oração ecoando nas montanhas.",
+                "2. Nabateus: Os construtores de Petra eram pagãos e adoravam deuses como Dushara e Al-Uzza.",
+                "3. Cristianismo: Petra tem igrejas bizantinas com mosaicos preservados (era cristã antes do Islã).",
+                "4. Monte de Aarão: O túmulo do irmão de Moisés fica no pico mais alto da região (local sagrado para judeus, cristãos e muçulmanos).",
+                "5. Hospitalidade: O valor sagrado do deserto. Negar água ou abrigo é pecado cultural.",
+                "6. Moisés: A cidade vizinha chama-se Wadi Musa (Vale de Moisés), onde ele teria batido na pedra para sair água.",
+                "7. Tolerância: A Jordânia é um dos países árabes mais abertos e pacíficos.",
+                "8. Djinns: Os blocos de pedra na entrada do Siq são chamados 'Blocos dos Djinns' (espíritos).",
+                "9. Beduínos: Muitos ainda vivem nas cavernas de Petra e misturam tradições antigas com o Islã.",
+                "10. Call to Prayer: É mágico ouvir o Adhan reverberando nas paredes do cânion."
+            ],
+
+            curiosidades: [
+                "1. Cidade Rosa: Petra é chamada assim pela cor do arenito, que muda de rosa para vermelho e laranja durante o dia.",
+                "2. Perdida: Ficou 'perdida' para o mundo ocidental por séculos, até um explorador suíço se disfarçar de árabe e redescobri-la em 1812.",
+                "3. Indiana Jones: O filme 'A Última Cruzada' foi gravado lá. O Tesouro era a entrada do templo do Graal.",
+                "4. Apenas Fachada: O Tesouro não tem nada dentro (só uma sala quadrada vazia). Era um mausoléu, não um banco.",
+                "5. Engenharia Hidráulica: Os nabateus eram gênios da água. Criaram represas e canais para sobreviver no deserto e evitar enchentes.",
+                "6. Terremotos: Destruíram metade da cidade antiga e forçaram o abandono.",
+                "7. Beduínos do Jack Sparrow: Muitos beduínos usam maquiagem preta no olho (kohl) para proteger do sol e poeira.",
+                "8. Transformers: O filme 'A Vingança dos Derrotados' também gravou cenas lá.",
+                "9. 85% Enterrada: Arqueólogos estimam que a maior parte de Petra ainda está embaixo da areia.",
+                "10. Jordan Pass: Se você comprar esse passe antes de viajar, isenta a taxa de visto (40 JOD) e inclui Petra. Vale MUITO a pena."
+            ],
+
+            eventos_estacoes: [
+                "1. Petra by Night: Segundas, quartas e quintas. O Siq e o Tesouro são iluminados por 1.500 velas. É mágico (mas lotado).",
+                "2. Maratona de Petra: Correr no deserto e entre as ruínas.",
+                "3. Primavera (Mar-Mai): Deserto florido (sim, nascem flores) e temperatura perfeita.",
+                "4. Outono (Set-Nov): A melhor luz para fotos.",
+                "5. Inverno: Pode ser brutal. Venta muito e chove (o que causa enchentes perigosas no Siq).",
+                "6. Verão: Calor de 40ºC. Comece o passeio às 6h da manhã para não derreter.",
+                "7. Ramadan: Horários mudam, guias podem estar cansados (jejum), mas o jantar é festivo.",
+                "8. Festival de Jerash: Acontece no norte, mas movimenta o turismo no país todo.",
+                "9. Ano Novo: Festas nos hotéis de Wadi Musa.",
+                "10. Chuvas Relâmpago: Se chover forte, o parque fecha imediatamente por risco de inundação no cânion."
+            ],
+
+            info_gerais: [
+                "1. Jordan Pass: COMPRE ONLINE ANTES. É a dica de ouro. Economiza uns R$ 300.",
+                "2. Sapatos: Tênis de trilha ou bota. O terreno é irregular. Chinelo nem pensar.",
+                "3. Burros e Camelos: Os donos dos animais podem ser agressivos vendendo o passeio. Se não quiser, diga 'La, Shukran' (Não, obrigado) firme e continue andando.",
+                "4. Água: Leve muita. Lá dentro é caro.",
+                "5. Banheiros: Existem banheiros químicos e alguns de alvenaria dentro do parque (razoáveis).",
+                "6. Wi-Fi: Tem sinal fraco em alguns pontos, mas o 4G da Zain ou Orange funciona bem.",
+                "7. Caminhada: Do centro de visitantes até o Tesouro são 2km. Do Tesouro ao Monastério são mais uns 4km (com subida). Prepare-se para andar 15km no dia.",
+                "8. Guias: Não é obrigatório contratar guia lá dentro, mas ajuda a entender a história.",
+                "9. Vendedores: Vendem prata, moedas antigas (falsas) e souvenirs. Negocie sempre.",
+                "10. Golpes: 'Free ride' (carona grátis) a cavalo está incluída no ingresso, mas no final cobram uma gorjeta (tip) absurda. Melhor ir a pé."
+            ],
+
+            antes_de_ir: [
+                "1. Compre o Jordan Pass: Imprima ou leve no celular.",
+                "2. Assista Indiana Jones: Para entrar no clima.",
+                "3. Roupas: Camadas. De manhã é frio, meio-dia é quente.",
+                "4. Chapéu e Lenço: Proteja a cabeça do sol.",
+                "5. Protetor Labial: O ar é muito seco.",
+                "6. Dinheiro Vivo: Leve Dinares. Cartão não passa nas barracas de chá lá dentro.",
+                "7. Chegue Cedo: O parque abre às 6h. Estar no Tesouro às 6h30 sem ninguém é impagável.",
+                "8. Joelhos: Apesar de turístico, é um país muçulmano. Evite shorts muito curtos para evitar olhares.",
+                "9. Powerbank: Você vai tirar 500 fotos.",
+                "10. Condicionamento: Se for subir ao Monastério, faça esteira antes da viagem."
+            ],
+
+            numeros: [
+                "1. 911 (Emergência Geral na Jordânia).",
+                "2. +962 (Código do país).",
+                "3. Police Tourist Petra: Ficam no Centro de Visitantes.",
+                "4. Embaixada do Brasil em Amã: +962 6 592 3941.",
+                "5. Hospital Queen Rania (Wadi Musa): Atendimento médico próximo.",
+                "6. JETT Bus: Ônibus oficial que faz Amã-Petra.",
+                "7. Jordan Pass Support: Contato no site oficial.",
+                "8. Táxi em Wadi Musa: Combine o preço antes (não usam taxímetro).",
+                "9. Centro de Visitantes: (03) 215 6060.",
+                "10. Farmácias: Várias em Wadi Musa."
+            ],
+
+            riscos: [
+                "1. Desidratação: Você esquece de beber água com a paisagem.",
+                "2. Animais: Burros e camelos podem morder ou derrubar. E o tratamento deles nem sempre é ético (evite usar).",
+                "3. Enchentes (Flash Floods): No inverno, se chover, corra para lugares altos. A água desce o Siq como um rio violento.",
+                "4. Golpes de 'Romance': O famoso 'Bezwadi' (Love Rat). Beduínos que seduzem turistas ocidentais prometendo amor eterno em troca de dinheiro/visto. É muito comum.",
+                "5. Escorregões: As pedras são lisas e a areia escorrega.",
+                "6. Insolação: Use chapéu.",
+                "7. Preços Abusivos: Uma coca-cola lá dentro pode custar 5x mais.",
+                "8. Crianças Vendendo: Não dê dinheiro, incentive a escola.",
+                "9. Mirantes Perigosos: Para tirar 'aquela' foto do alto, não chegue na beira do precipício. Não tem grade.",
+                "10. Poeira: Proteja sua câmera, a areia fina entra na lente."
+            ],
+
+            roteiros: {
+                "curto": {
+                    titulo: "O Clássico (1 Dia)",
+                    texto: [
+                        "06:30: Entrada pelo Siq até o Tesouro.",
+                        "09:00: Rua das Fachadas e Teatro.",
+                        "11:00: Tumbas Reais.",
+                        "13:00: Almoço e retorno (cerca de 8km de caminhada)."
+                    ]
+                },
+                "medio": {
+                    titulo: "O Desafio do Monastério (1 Dia puxado)",
+                    texto: [
+                        "Manhã: Roteiro curto rápido.",
+                        "Tarde: Subir os 800 degraus até o Monastério (Ad Deir).",
+                        "Retorno: Voltar tudo (total de 15km a 18km). Cansativo, mas vale a pena."
+                    ]
+                },
+                "longo": {
+                    titulo: "Explorador Profundo (2 Dias)",
+                    texto: [
+                        "Dia 1: Siq, Tesouro e subida ao High Place of Sacrifice.",
+                        "Dia 2: Entrar pelos 'fundos' (Little Petra) fazendo a trilha até o Monastério e descendo para o Tesouro (caminho inverso, menos subida)."
+                    ]
+                },
+            },
+
+            links: {
+                hotel: "https://www.booking.com/city/jo/wadi-musa.pt-br.html", 
+                passeio: "https://www.jordanpass.jo/", // Site oficial do Jordan Pass
+                seguro: "https://www.segurospromo.com.br" 
+            },
+        },
+        {
+            name: "Chichén Itzá",
+            imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Chichen_Itza-18_%28cropped%29.jpg/960px-Chichen_Itza-18_%28cropped%29.jpg",
+            tags: ["Maravilha do Mundo", "Maias", "Arqueologia"],
+            mapa: "https://goo.gl/maps/chichenitza",
+            clima: "Tropical. Quente e úmido o ano todo. O calor é EXTREMO no meio do dia, com pouca sombra.",
+            
+            // === DADOS DO VEREDICTO ===
+            veredicto: {
+                melhor_epoca: "Novembro a Março (Menos chuva e calor 'suportável'). Evite os Equinócios (21 Mar/Set) se não gostar de multidões insanas.",
+                ideal_para: [
+                    "Amantes de História (O centro político e econômico da civilização Maia)",
+                    "Místicos e Esotéricos (Energia cósmica e astronomia antiga)",
+                    "Caçadores de Maravilhas (Uma das 7 Novas Maravilhas do Mundo)",
+                    "Fotógrafos (A simetria de 'El Castillo' é perfeita)"
+                ],
+                nao_ideal_para: [
+                    "Quem odeia vendedores (O caminho é um corredor polonês de vendedores de souvenir gritando)",
+                    "Quem quer subir na pirâmide (É estritamente PROIBIDO subir desde 2006)",
+                    "Quem tem pressão baixa (O calor e o sol na cabeça derrubam muitos turistas)"
+                ],
+                perfis: [
+                    { icone: "ri-ancient-pavilion-fill", nome: "Maia" },
+                    { icone: "ri-sun-fill", nome: "Sol" },
+                    { icone: "ri-magic-line", nome: "Mistério" },
+                    { icone: "ri-camera-fill", nome: "Ícone" }
+                ]
+            },
+            // =================================
+
+            pontos_turisticos: [
+                "1. El Castillo (Pirâmide de Kukulcán): O ícone. Um calendário de pedra gigante com 365 degraus.",
+                "2. Cenote Sagrado: Um poço natural gigante onde eram feitos sacrifícios humanos e de objetos preciosos.",
+                "3. O Grande Jogo de Bola (Juego de Pelota): O maior campo de esporte da Mesoamérica. A acústica é perfeita.",
+                "4. Templo dos Guerreiros: Famoso pelas 'Mil Colunas' na frente.",
+                "5. El Caracol (Observatório): Onde os astrônomos maias estudavam as estrelas e previam o futuro.",
+                "6. Tzompantli (Muro das Caveiras): Uma plataforma com relevos de crânios (onde expunham cabeças de inimigos).",
+                "7. Las Monjas: Um complexo de edifícios governamentais com a arquitetura Puuc detalhada.",
+                "8. Cenote Ik Kil: Fica fora do parque (a 3km), mas é parada obrigatória para nadar depois da visita.",
+                "9. Valladolid: Cidade colonial vizinha, colorida e charmosa, base ideal para a visita.",
+                "10. Show Noturno (Noches de Kukulkán): Projeção de luzes na pirâmide à noite (ingresso separado)."
+            ],
+
+            gastronomia: [
+                "1. Cochinita Pibil: Carne de porco marinada em urucum e laranja azeda, assada em forno de terra. O prato de Yucatán.",
+                "2. Sopa de Lima: Sopa de frango com limão local e tiras de tortilha frita. Refrescante e leve.",
+                "3. Panuchos: Tortilhas recheadas com feijão preto e cobertas com peru ou frango.",
+                "4. Papadzules: Tortilhas com ovo cozido e molho de semente de abóbora (verde).",
+                "5. Poc Chuc: Carne de porco grelhada com cebola e laranja.",
+                "6. Marquesitas: Crepe crocante enrolado com queijo bola e Nutella (sobremesa de rua).",
+                "7. Xtabentún: Licor maia feito de mel e anis. Digestivo doce e forte.",
+                "8. Água de Chaya: Suco feito com uma folha local (espinafre maia) e limão/abacaxi.",
+                "9. Longaniza de Valladolid: Linguiça defumada típica da cidade vizinha.",
+                "10. Relleno Negro: Peru cozido em um molho preto de pimentas queimadas."
+            ],
+
+            religiao: [
+                "1. Kukulcán: A Serpente Emplumada. O deus principal que 'desce' a pirâmide nos equinócios.",
+                "2. Chac Mool: A figura deitada que segura um prato na barriga (para receber corações em sacrifício).",
+                "3. Chaac: O deus da chuva. Tem narizes longos e curvos nas fachadas dos prédios.",
+                "4. Cenote como Portal: Para os maias, os cenotes eram a entrada para o Xibalba (submundo).",
+                "5. Astronomia Sagrada: A religião era baseada nos ciclos do sol, lua e Vênus.",
+                "6. Sacrifícios: Eram oferendas aos deuses para garantir chuva e colheita.",
+                "7. Jogo de Bola Ritual: O jogo não era esporte, era um ritual onde o capitão (vencedor ou perdedor?) era sacrificado.",
+                "8. Árvore Ceiba: A árvore sagrada que conecta o céu, a terra e o submundo.",
+                "9. Jaguar: Animal sagrado, símbolo de poder e da noite.",
+                "10. Equinócio: O fenômeno da sombra da serpente descendo a escada é o momento sagrado de fertilidade."
+            ],
+
+            curiosidades: [
+                "1. O Aplauso do Quetzal: Se você bater palmas na frente da pirâmide, o eco imita o canto do pássaro Quetzal.",
+                "2. Calendário Gigante: A pirâmide tem 91 degraus em cada um dos 4 lados + 1 plataforma no topo = 365 (dias do ano).",
+                "3. Terreno Privado: Até 2010, o terreno de Chichén Itzá era propriedade privada de uma família (os Barbachano). O governo comprou.",
+                "4. A Serpente Desce: Nos equinócios, a luz do sol cria a ilusão de uma cobra descendo a pirâmide.",
+                "5. Acústica do Jogo: No campo de bola, você pode sussurrar de um lado e ouvir do outro (a 150m de distância).",
+                "6. Pirâmide dentro da Pirâmide: Dentro de El Castillo existe outra pirâmide menor com um trono de jaguar vermelho.",
+                "7. Não pode subir: A proibição veio após uma turista americana cair e morrer em 2006 (e para preservação).",
+                "8. Duas Cidades: Chichén tem uma parte 'Maia Clássica' e uma parte 'Tolteca' (invasores do centro do México).",
+                "9. Cenote Profundo: O Cenote Sagrado tem 60m de diâmetro e muitos ossos foram encontrados no fundo.",
+                "10. Patrimônio: É Patrimônio da UNESCO desde 1988."
+            ],
+
+            eventos_estacoes: [
+                "1. Equinócio de Primavera (21 Março): Milhares de pessoas (vestidas de branco) vão ver a serpente descer.",
+                "2. Equinócio de Outono (21 Setembro): O mesmo fenômeno, geralmente com menos gente que na primavera.",
+                "3. Solstícios: Também há alinhamentos solares interessantes (metade luz, metade sombra).",
+                "4. Hanal Pixán (Dia dos Mortos Maia): Em novembro, a região celebra com altares e comida (Mucbipollo).",
+                "5. Noches de Kukulkán: Show de luz e som noturno (diário, exceto segunda).",
+                "6. Carnaval de Mérida: Festa grande na capital do estado (perto).",
+                "7. Temporada de Furacões (Ago-Out): Risco baixo no interior, mas existe. Chuvas fortes.",
+                "8. Inverno (Dez-Jan): Clima mais fresco, mas a água dos cenotes fica fria.",
+                "9. Aniversário de Valladolid: Festas na cidade vizinha.",
+                "10. Alta Temporada: Natal e Páscoa são os picos de lotação."
+            ],
+
+            info_gerais: [
+                "1. Ingressos: Paga-se duas taxas (Federal INAH + Estadual CULTUR). O total é cerca de 614 MXN para estrangeiros.",
+                "2. Domingo Grátis: Apenas para mexicanos e residentes. Para turista, é o PIOR dia (lotado).",
+                "3. Vendedores: O sítio é tomado por vendedores de 'artesanato maia' (muito 'Made in China'). O som do apito de jaguar é constante.",
+                "4. Água: Leve muita água. Lá dentro é caro e o calor é de deserto.",
+                "5. Sombrinha: Levar um guarda-chuva para sol é normal e recomendado.",
+                "6. Banheiros: Só tem na entrada. Dentro do sítio não tem. Vá antes de entrar.",
+                "7. Guarda-Volumes: Tem na entrada para malas grandes.",
+                "8. Chegue Cedo: O parque abre às 8h. Chegue 7h45 para tirar fotos sem ninguém e fugir do sol.",
+                "9. Cartão x Dinheiro: A máquina de cartão da bilheteria vive 'quebrada'. Leve Pesos em espécie.",
+                "10. Fuso Horário: Quintana Roo (Cancun) e Yucatán (Chichén) às vezes têm fusos diferentes. Cheque a hora!"
+            ],
+
+            antes_de_ir: [
+                "1. Visto Físico: Atenção! Brasileiros precisam de visto físico no passaporte (ou visto EUA/Canadá válido). Autorização eletrônica não vale mais.",
+                "2. Compre Online?: O site oficial é confuso. É mais seguro chegar cedo e comprar na hora ou ir com tour.",
+                "3. Cenote Ik Kil: Geralmente os tours param lá. É lindo, mas lotado. Tente o Cenote Oxman se estiver de carro.",
+                "4. Roupas: Tênis confortável (muita terra), chapéu e roupas leves.",
+                "5. Repelente: Tem mosquitos na área de selva.",
+                "6. Guia: Contratar um guia na entrada vale a pena para entender a astronomia (negocie o preço).",
+                "7. Dinheiro Trocado: Para comprar água e souvenirs baratos.",
+                "8. GoPro: Pode usar, mas tripés e estabilizadores profissionais pagam taxa extra.",
+                "9. Protetor Solar: O sol de Yucatán não perdoa.",
+                "10. Respeito: Não suba nas ruínas menores mesmo que não tenha corda. Respeite o patrimônio."
+            ],
+
+            numeros: [
+                "1. 911 (Emergência Geral no México).",
+                "2. 078 (Ángeles Verdes - Ajuda na estrada).",
+                "3. Consulado do Brasil no México: +52 55 5283-3400.",
+                "4. Bilheteria Chichén Itzá: +52 985 851 0137.",
+                "5. Terminal ADO Valladolid: +52 985 856 3448.",
+                "6. Hospital Geral de Valladolid: Emergência médica mais próxima.",
+                "7. Aeroporto de Merida (MID): O mais próximo (1h30).",
+                "8. Aeroporto de Cancun (CUN): A 2h30 de distância.",
+                "9. Polícia Turística: Presença no sítio.",
+                "10. Táxi Valladolid: +52 985 856 2122."
+            ],
+
+            riscos: [
+                "1. Insolação: É o risco número 1. O calor chega a 40ºC com sensação de 50ºC. Hidrate-se.",
+                "2. Golpes de Vendedores: '1 dólar!' eles gritam. Quando você chega, é 1 dólar 'o imã pequeno', o resto é caro.",
+                "3. Estradas (Topes): Se for dirigir, cuidado com os 'topes' (lombadas) nas vilas. São montanhas de concreto não sinalizadas.",
+                "4. Golpe do Posto de Gasolina: Confira se a bomba foi zerada e pague em dinheiro trocado. Golpe do cartão clonado é comum.",
+                "5. Guias Falsos: Na estrada, pessoas param seu carro dizendo que o 'parking está lotado' para vender tour caro. Ignore e vá até a entrada oficial.",
+                "6. Comida de Rua: Cuidado com molhos (salsas) que ficam no sol. A 'Vingança de Montezuma' (diarreia) é real.",
+                "7. Desidratação: Beba água engarrafada e bebidas isotônicas.",
+                "8. Iguanas: Não tente pegar nas iguanas, elas mordem.",
+                "9. Preços em Dólar: Pagar em dólar no sítio tem uma cotação péssima. Use Pesos.",
+                "10. Subir na Pirâmide: Se tentar subir, será preso pela polícia federal e multado em milhares de dólares. Não tente."
+            ],
+
+            roteiros: {
+                "curto": {
+                    titulo: "O Essencial (4 Horas)",
+                    texto: [
+                        "08:00: Chegada e fotos em El Castillo (Pirâmide).",
+                        "09:00: Jogo de Bola e Templo dos Guerreiros.",
+                        "10:00: Cenote Sagrado e Observatório.",
+                        "12:00: Saída para almoçar e nadar no Cenote Ik Kil."
+                    ]
+                },
+                "medio": {
+                    titulo: "Chichén + Valladolid (1 Dia)",
+                    texto: [
+                        "Manhã: Visita completa às ruínas (chegando cedo).",
+                        "Tarde: Almoço em Valladolid (La Casona) e visita à praça central e Catedral.",
+                        "Fim de Tarde: Nadar no Cenote Zaci (no centro da cidade)."
+                    ]
+                },
+                "longo": {
+                    titulo: "Imersão Maia (2 Dias)",
+                    texto: [
+                        "Dia 1: Chichén Itzá com guia privado e Cenote Ik Kil.",
+                        "Noite: Dormir em um hotel na entrada do parque (Mayaland) e ver o show de luzes.",
+                        "Dia 2: Visitar as Grutas de Balankanché e as ruínas de Ek Balam (onde pode subir na pirâmide)."
+                    ]
+                },
+            },
+
+            links: {
+                hotel: "https://www.booking.com/city/mx/chichen-itza.pt-br.html", 
+                passeio: "https://www.inah.gob.mx/zonas/146-zona-arqueologica-de-chichen-itza", 
+                seguro: "https://www.segurospromo.com.br" 
+            },
+        }
     ],
     "Patrimônio Mundial": [
         {
@@ -3077,7 +3570,189 @@ const worldData = {
                 passeio: "https://www.nps.gov/yell/planyourvisit/index.htm", 
                 seguro: "https://www.segurospromo.com.br" 
             },
-        }
+        },
+        {
+            name: "Torres del Paine",
+            imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Torres_del_Paine%2C_Laguna_Azul_09.jpg/960px-Torres_del_Paine%2C_Laguna_Azul_09.jpg",
+            tags: ["Patagônia", "Trekking", "Natureza"],
+            mapa: "https://goo.gl/maps/torresdelpaine",
+            clima: "Patagônico. Imprevisível. Você pode ter as 4 estações no mesmo dia. Vento fortíssimo é constante. Verão é fresco (15ºC).",
+            
+            // === DADOS DO VEREDICTO ===
+            veredicto: {
+                melhor_epoca: "Dezembro a Março (Verão). Dias longos (escurece às 22h) e menos frio, mas venta muito. Inverno muitas trilhas fecham.",
+                ideal_para: [
+                    "Trilheiros (O Circuito W e o Circuito O são lendários)",
+                    "Amantes de Fotografia (As paisagens são dramáticas)",
+                    "Aventureiros de Luxo (Existem hotéis incríveis dentro do parque)",
+                    "Quem busca desconexão (Sinal de celular é quase inexistente)"
+                ],
+                nao_ideal_para: [
+                    "Quem odeia vento (O vento patagônico pode derrubar uma pessoa)",
+                    "Quem busca conforto urbano (Dentro do parque é tudo rústico ou muito caro)",
+                    "Quem não gosta de caminhar (As melhores vistas exigem esforço físico)"
+                ],
+                perfis: [
+                    { icone: "ri-footprint-fill", nome: "Trekking" },
+                    { icone: "ri-landscape-fill", nome: "Paisagem" },
+                    { icone: "ri-windy-line", nome: "Vento" },
+                    { icone: "ri-camera-fill", nome: "Fotografia" }
+                ]
+            },
+            // =================================
+
+            pontos_turisticos: [
+                "1. Base das Torres: A trilha mais famosa (e difícil). Sobe-se até a lagoa aos pés das três torres de granito.",
+                "2. Los Cuernos: As montanhas com pontas pretas e corpo claro, ícones do parque. Vistos do Lago Nordenskjöld.",
+                "3. Glaciar Grey: Uma geleira imensa que faz parte do Campo de Gelo Sul. Pode-se ver de barco ou trilha.",
+                "4. Lago Pehoé: Um lago de cor azul turquesa leitosa incrível. A vista do hotel Explora é clássica.",
+                "5. Salto Grande: Uma cachoeira poderosa que conecta dois lagos. Acesso fácil (caminhada curta).",
+                "6. Valle del Francés: O coração do Circuito W. Um vale cercado de montanhas e geleiras que fazem barulho de trovão.",
+                "7. Lago Grey: Onde chegam os icebergs azuis que se desprendem da geleira.",
+                "8. Mirador Condor: Uma subida curta mas íngreme que dá uma vista 360º dos lagos.",
+                "9. Cueva del Milodón: Fica no caminho (fora do parque). Caverna onde acharam restos de um bicho preguiça gigante pré-histórico.",
+                "10. Laguna Amarga: A entrada do parque onde muitas vezes se veem flamingos."
+            ],
+
+            gastronomia: [
+                "1. Cordeiro Patagônico (Cordero al Palo): Assado inteiro no espeto em fogo de chão. O prato nº 1 da região.",
+                "2. Calafate Sour: O Pisco Sour feito com a frutinha local (Calafate). Diz a lenda: quem come Calafate, volta à Patagônia.",
+                "3. Centolla: O caranguejo gigante real (King Crab), servido em Puerto Natales.",
+                "4. Guanaco: Carne de caça local (raro, mas alguns lugares servem).",
+                "5. Salmão Chileno: Fresco e barato na região.",
+                "6. Sopas e Cremes: Comida essencial para esquentar depois das trilhas (creme de abóbora é comum).",
+                "7. Comida de Refúgio: Massas, arroz e carne. Simples, calórica e cara (porque tudo chega de barco/cavalo).",
+                "8. Chocolate Quente: Para combater o vento gelado.",
+                "9. Cerveja Austral: A cerveja da Patagônia chilena.",
+                "10. Lanche de Trilha: Frutas secas e chocolate são a base da dieta durante o dia."
+            ],
+
+            religiao: [
+                "1. Natureza Sagrada: Para os turistas, a montanha é o templo.",
+                "2. Mitologia Tehuelche: Os indígenas originais viam espíritos na natureza. 'Paine' significa 'Azul' na língua deles.",
+                "3. O Vento: É quase uma entidade viva e respeitada (ou temida).",
+                "4. Gauchito Gil: Santos populares argentinos/chilenos comuns nas estradas.",
+                "5. Silêncio: A imensidão do parque provoca uma experiência espiritual de pequenez humana.",
+                "6. Apachetas: Montes de pedras feitos por caminhantes (embora o parque peça para NÃO fazer, pois altera o ecossistema).",
+                "7. Lendas do Calafate: Histórias de amor indígenas explicam a origem da planta.",
+                "8. Respeito ao Fogo: Depois de incêndios causados por turistas que destruíram hectares, o fogo é tabu. Acender fogo fora da área permitida é 'pecado mortal' (e crime, dá cadeia).",
+                "9. Cemitérios Antigos: Existem vestígios de enterros indígenas na região.",
+                "10. Igrejas em Natales: Puerto Natales tem igrejas católicas de madeira charmosas."
+            ],
+
+            curiosidades: [
+                "1. Proibido Fogo: Um turista israelense queimou parte do parque em 2011 sem querer (papel higiênico). Hoje, acender fogo em lugar proibido dá prisão e expulsão do país.",
+                "2. O Vento: Pode chegar a 120km/h. Às vezes os ônibus não conseguem abrir o bagageiro ou pessoas têm que andar agachadas.",
+                "3. Pumas: O parque tem uma das maiores concentrações de pumas do mundo. Eles evitam humanos, mas estão lá.",
+                "4. W e O: 'W' é a trilha de 4-5 dias (formato W). 'O' é a volta completa no maciço (7-9 dias).",
+                "5. Guanacos: Você verá centenas desses 'lhamas' selvagens na entrada do parque.",
+                "6. Água Pura: Você pode beber água direto dos riachos (nas áreas altas). É água de degelo puríssima.",
+                "7. Reservas Obrigatórias: Para dormir nos campings do parque, você PRECISA reservar meses antes. Se não tiver reserva, não entra na trilha.",
+                "8. Amanhecer Vermelho: As torres ficam vermelhas por alguns minutos quando o sol nasce. É o momento mágico.",
+                "9. Distância: Fica a 2.500km de Santiago (tem que voar para Punta Arenas e pegar ônibus, ou voar para Puerto Natales no verão).",
+                "10. Fronteira: Fica perto de El Calafate (Argentina), permitindo combinar as duas viagens."
+            ],
+
+            eventos_estacoes: [
+                "1. Patagonian International Marathon (Setembro): Corrida dentro do parque. Cenário incrível.",
+                "2. Ultra Paine (Setembro): Ultramaratona de trilha.",
+                "3. Verão (Dez-Mar): Alta temporada. Trilhas cheias, refúgios lotados, dias com 17 horas de luz.",
+                "4. Outono (Abr-Mai): As árvores (Lengas) ficam vermelhas. A paisagem mais bonita, mas começa a esfriar muito.",
+                "5. Inverno (Jun-Ago): Neve, muito frio, dias curtos. O Circuito W fecha parcialmente e o O fecha totalmente. Só vá com guia.",
+                "6. Primavera (Set-Nov): Vento mais forte do ano, flores nascendo.",
+                "7. Temporada de Pumas: No inverno/primavera é mais fácil avistar pumas pois eles descem das montanhas.",
+                "8. Aniversário de Puerto Natales (Maio): Desfiles e festas na cidade base.",
+                "9. Festivais de Tosquia: Eventos rurais nas estâncias de ovelhas ao redor.",
+                "10. Fechamento das Trilhas: Fique atento às datas de abertura dos circuitos (geralmente Outubro a Abril)."
+            ],
+
+            info_gerais: [
+                "1. Ingressos CONAF: Compre online no site 'Pases Parques Nacionales'. Não vende na porta. O ingresso é válido por 3 dias consecutivos.",
+                "2. Reserve Campings: Existem duas empresas (Las Torres e Vertice). Você tem que coordenar as datas entre elas para fazer o circuito. É um quebra-cabeça.",
+                "3. Puerto Natales: É a cidade base. Você dorme lá e vai pro parque (1h30 de ônibus) ou inicia a trilha de lá.",
+                "4. Internet: No parque NÃO tem sinal de celular. Nos refúgios, o Wi-Fi é pago e caríssimo (tipo 10 dólares a hora).",
+                "5. Bastões de Caminhada: Salvam seus joelhos. Alugue em Puerto Natales.",
+                "6. Roupas: Camadas, camadas, camadas. Primeira pele, fleece, pluma e ANORAK (impermeável/corta-vento).",
+                "7. Lixo: Traga todo o seu lixo de volta. Não deixe nada.",
+                "8. Dinheiro: Leve Pesos Chilenos para o catamarã (Pudeto-Pehoé) que só aceita dinheiro.",
+                "9. PDI: Guarde o papelzinho da imigração (PDI) que recebe ao entrar no Chile. Hotéis pedem para isentar o imposto IVA (19%).",
+                "10. Tomada: Tipo L (três pinos em linha) é o padrão italiano/chileno."
+            ],
+
+            antes_de_ir: [
+                "1. Treine Pernas: Subir até a base das torres é puxado (8h ida e volta, subida íngreme).",
+                "2. Seguro Específico: Verifique se seu seguro cobre 'trekking' ou 'esportes de aventura'.",
+                "3. Mapas Offline: Baixe o Maps.me ou mapa da área. GPS funciona, internet não.",
+                "4. Comida: Compre lanches e comida em Puerto Natales (supermercado Unimarc). Dentro do parque é 5x mais caro.",
+                "5. Powerbank: O frio drena a bateria.",
+                "6. Reservas Impressas: Tenha as reservas dos campings impressas ou salvas no celular (bateria!).",
+                "7. Protetor Labial: O vento racha a boca no primeiro dia.",
+                "8. Óculos de Sol: O buraco na camada de ozônio fica bem em cima da Patagônia. O UV é extremo.",
+                "9. Mochila Cargueira: Se for fazer o W, leve o mínimo de peso.",
+                "10. Check no Clima: Use o site 'Windguru' para ver a previsão do vento."
+            ],
+
+            numeros: [
+                "1. 133 (Carabineros - Polícia).",
+                "2. 131 (Ambulância).",
+                "3. 132 (Bombeiros).",
+                "4. CONAF (Administração do Parque): +56 61 223 8581.",
+                "5. Hospital de Puerto Natales: +56 61 241 1563.",
+                "6. Rodoviária Puerto Natales: O hub de transporte.",
+                "7. Catamarã Hielos Patagónicos (Lago Pehoé): Transporte chave dentro do parque.",
+                "8. Taxis em Natales: Preço fixo dentro da cidade.",
+                "9. Aeroporto Puerto Natales (PNT) ou Punta Arenas (PUQ).",
+                "10. Socorro em Montanha: Avise os guarda-parques (Rangers) em qualquer emergência."
+            ],
+
+            riscos: [
+                "1. Hipotermia: Ocorre mesmo no verão se você se molhar e ventar.",
+                "2. Torções: O terreno é cheio de raízes e pedras. Cuidado com o tornozelo.",
+                "3. Perder-se: As trilhas principais são bem marcadas, mas se sair delas na neblina, é perigoso.",
+                "4. Pumas: Se vir um, não corra. Faça-se parecer grande e recue devagar. (Ataques são raríssimos).",
+                "5. Vento nas Pedras: Nos passos de montanha, o vento pode te desequilibrar.",
+                "6. Ratos: Evite deixar comida na barraca (roedores buscam comida). Atenção ao Hantavírus (raro, mas presente em áreas rurais).",
+                "7. Queimaduras: Sol + Vento + Reflexo no gelo.",
+                "8. Joelhos: A descida da Base das Torres destrói joelhos sem preparo.",
+                "9. Fogo: Nunca, jamais acenda fogo ou fume fora das áreas demarcadas.",
+                "10. Exaustão: Não tente fazer o percurso mais rápido do que seu corpo aguenta."
+            ],
+
+            roteiros: {
+                "curto": {
+                    titulo: "Full Day Paine (1 Dia)",
+                    texto: [
+                        "Manhã: Saída de ônibus de Puerto Natales. Mirantes principais (Nordenskjöld, Cuernos).",
+                        "Tarde: Caminhada curta ao Salto Grande ou Praia do Lago Grey.",
+                        "Noite: Retorno a Natales."
+                    ]
+                },
+                "medio": {
+                    titulo: "Base das Torres + Navegação (2-3 Dias)",
+                    texto: [
+                        "Dia 1: Trekking até a Base das Torres (8h, difícil). Dormir no parque ou voltar.",
+                        "Dia 2: Navegação ao Glaciar Grey ou passeio de carro pelos mirantes."
+                    ]
+                },
+                "longo": {
+                    titulo: "O Circuito W (4-5 Dias)",
+                    texto: [
+                        "Dia 1: Base das Torres.",
+                        "Dia 2: Trekking para Los Cuernos.",
+                        "Dia 3: Valle del Francés.",
+                        "Dia 4: Paine Grande e Glaciar Grey.",
+                        "Dia 5: Catamarã de volta e ônibus."
+                    ]
+                },
+            },
+
+            links: {
+                hotel: "https://www.booking.com/region/cl/magallanes.pt-br.html", 
+                passeio: "https://www.pasesparques.cl/", // Site oficial para comprar entrada
+                seguro: "https://www.segurospromo.com.br" 
+            },
+        },
+    
     ],
     Arquitetura: [
         {
@@ -3984,6 +4659,186 @@ const worldData = {
             links: {
                 hotel: "https://www.booking.com/city/ca/niagara-falls.pt-br.html", 
                 passeio: "https://www.niagaraparks.com/", // Site oficial dos parques
+                seguro: "https://www.segurospromo.com.br" 
+            },
+        },
+    ],
+    "Montanha": [
+        {
+            name: "Monte Fuji",
+            imagem: "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?q=80&w=2070&auto=format&fit=crop",
+            tags: ["Vulcão", "Japão", "Trilha"],
+            mapa: "https://goo.gl/maps/fuji",
+            clima: "Alpino. No pé (lagos) é temperado. No cume é GÉLIDO o ano todo (abaixo de zero mesmo no verão).",
+            
+            // === DADOS DO VEREDICTO ===
+            veredicto: {
+                melhor_epoca: "Julho a Setembro (Única época permitida para escalar até o topo). Para apenas VER a montanha de longe: Inverno (visibilidade melhor).",
+                ideal_para: [
+                    "Trilheiros e Peregrinos (Subir até o topo ver o nascer do sol 'Goraiko')",
+                    "Fotógrafos (A vista do Pagode Chureito com o Fuji ao fundo é clássica)",
+                    "Aventureiros (É o ponto mais alto do Japão, 3.776m)",
+                    "Espiritualistas (A montanha é uma deusa xintoísta)"
+                ],
+                nao_ideal_para: [
+                    "Quem tem problemas cardíacos ou respiratórios (O ar é rarefeito no topo)",
+                    "Quem odeia multidões (A trilha Yoshida parece um formigueiro humano no verão)",
+                    "Quem acha que é um passeio no parque (É uma subida extenuante de 6 a 8 horas)"
+                ],
+                perfis: [
+                    { icone: "ri-landscape-fill", nome: "Ícone" },
+                    { icone: "ri-footprint-fill", nome: "Trekking" },
+                    { icone: "ri-camera-lens-fill", nome: "Paisagem" },
+                    { icone: "ri-fire-fill", nome: "Vulcão" }
+                ]
+            },
+            // =================================
+
+            pontos_turisticos: [
+                "1. O Cume (Crater): A cratera do vulcão. Chegar lá para ver o nascer do sol é o objetivo de todos.",
+                "2. 5ª Estação (Fuji Subaru Line): O ponto mais alto onde chegam ônibus e carros. Tem lojas, santuários e restaurantes.",
+                "3. Lago Kawaguchiko: A base da montanha. Onde ficam os hotéis (Ryokans) com vista para o Fuji refletido na água.",
+                "4. Pagode Chureito: Aquele templo vermelho famoso com o Fuji ao fundo (tem que subir 400 degraus).",
+                "5. Oshino Hakkai: Uma vila turística com 8 lagoas de água puríssima do degelo do vulcão.",
+                "6. Aokigahara (Mar de Árvores): A floresta densa na base da montanha (famosa por lendas sombrias e cavernas de gelo).",
+                "7. Fuji-Q Highland: Parque de diversões na base com as montanhas-russas mais íngremes do mundo.",
+                "8. Santuário Fujisan Sengen: O templo principal na base onde os peregrinos rezavam antes de subir.",
+                "9. Gotemba Premium Outlets: O maior shopping a céu aberto do Japão, com vista para o vulcão.",
+                "10. Shibazakura Festival: Em maio, campos de flores rosa (musgo) com o Fuji ao fundo."
+            ],
+
+            gastronomia: [
+                "1. Hoto Noodles: O prato típico da região. Um macarrão achatado cozido em sopa de missô com abóbora. Delicioso e sustenta.",
+                "2. Curry Rice: A comida padrão nos refúgios (Mountain Huts). Simples, quente e dá energia.",
+                "3. Água do Fuji: A água da torneira na região é mineral e puríssima. Beba à vontade.",
+                "4. Fuji Melon Pan: Um pão doce em formato de vulcão vendido na 5ª Estação.",
+                "5. Carne de Cavalo (Basashi): Iguaria crua (sashimi) comum na região de Yamanashi.",
+                "6. Tempura de Legumes: Vegetais locais fritos.",
+                "7. Lámen: Nada melhor que um lámen quente depois de descer a montanha.",
+                "8. Uvas e Pêssegos: A região é o pomar do Japão. As frutas são caras e perfeitas.",
+                "9. Sake Local: Feito com a água da montanha.",
+                "10. Cup Noodles: Sim, lá no topo, um copo de macarrão instantâneo custa caro, mas é a melhor coisa do mundo no frio."
+            ],
+
+            religiao: [
+                "1. Xintoísmo: O Monte Fuji é considerado um 'Kami' (espírito/deus) e habitação da deusa Konohanasakuya-hime.",
+                "2. Montanha Sagrada: Subir o Fuji não é esporte, é um ato de purificação espiritual.",
+                "3. Torii no Topo: Existe um portal sagrado e um santuário xintoísta (Kusushi) na borda da cratera.",
+                "4. Seita Fuji-ko: No período Edo, existia uma religião inteira dedicada a adorar a montanha.",
+                "5. Peregrinação: Antigamente, mulheres eram proibidas de subir. Hoje é aberto a todos.",
+                "6. Oração ao Sol: O ato de ver o sol nascer no topo é chamado 'Goraiko' e é reverenciado.",
+                "7. Pedras Empilhadas: Você verá muitas pilhas de pedras (cairns) feitas por peregrinos.",
+                "8. Respeito: Não se deve levar pedras de lembrança nem jogar lixo (ofensa aos deuses).",
+                "9. Sorte: Sonhar com o Monte Fuji na primeira noite do ano é o maior sinal de sorte no Japão.",
+                "10. Propriedade Divina: Do nível 8 para cima, a montanha não pertence ao governo, mas ao Grande Santuário Fujisan Hongu Sengen."
+            ],
+
+            curiosidades: [
+                "1. Propriedade Privada: O topo do Monte Fuji é território privado de um templo xintoísta, não é terra pública.",
+                "2. Vulcão Ativo: Ele está adormecido desde 1707, mas tecnicamente ainda é ativo e monitorado 24h.",
+                "3. Três em Um: O Fuji é composto por 3 vulcões um em cima do outro (Komitake, Ko-Fuji e Shin-Fuji).",
+                "4. Vending Machines: Existem máquinas de refrigerante no cume! (Mas o preço é 4x o normal).",
+                "5. Wi-Fi: Sim, tem Wi-Fi grátis em vários pontos da trilha e no topo.",
+                "6. Casamento: Você pode se casar no santuário do topo (se tiver fôlego para subir de vestido).",
+                "7. Simetria: É famoso por sua forma cônica quase perfeita.",
+                "8. Selos de Madeira: Os peregrinos compram um cajado de madeira e vão queimando selos (carimbos) em cada estação até o topo.",
+                "9. Banheiros Bio: Os banheiros na montanha são pagos (moeda de 200 ienes) e ecológicos.",
+                "10. Bulldog: Winston Churchill chamou o Fuji de 'curioso', o que ofendeu os japoneses."
+            ],
+
+            eventos_estacoes: [
+                "1. Abertura da Temporada (1º de Julho): Cerimônia religiosa que abre as trilhas.",
+                "2. Yoshida Fire Festival (Fim de Agosto): Festival do Fogo na base para acalmar o vulcão e marcar o fim da temporada.",
+                "3. Shibazakura (Abril/Maio): Festival das flores rosa (Phlox) aos pés da montanha.",
+                "4. Maratona do Monte Fuji (Novembro): Corrida ao redor dos lagos.",
+                "5. Verão (Jul-Set): Única época sem neve na trilha. É quando 300 mil pessoas sobem.",
+                "6. Inverno (Dez-Fev): A montanha fica com o cume branco clássico ('Chapéu de Neve'). Visibilidade perfeita, mas impossível subir.",
+                "7. Outono (Out-Nov): As folhas vermelhas (Momiji) em Kawaguchiko criam molduras lindas para fotos.",
+                "8. Primavera (Mar-Abr): Cerejeiras (Sakura) com o Fuji ao fundo.",
+                "9. Hanabi (Fogos): Festivais de fogos de artifício no lago no verão e inverno.",
+                "10. Golden Week (Maio): A região lota de turistas japoneses."
+            ],
+
+            info_gerais: [
+                "1. Mal da Montanha: Você vai de 0 a 3.776m muito rápido. Dor de cabeça e náusea são comuns. Compre oxigênio em lata na 5ª estação.",
+                "2. Dinheiro Vivo (CASH): Nas montanhas (banheiros, comida, água) SÓ aceitam moedas e notas. Cartão não passa.",
+                "3. Reserva de Huts: Se quiser dormir na montanha para ver o sol nascer, reserve os refúgios meses antes. É proibido acampar.",
+                "4. Bala Bullet Climb: Subir e descer direto sem dormir é perigoso e desaconselhado (risco alto de passar mal).",
+                "5. Lixo: Não há lixeiras. Todo o lixo que você produz (embalagens, garrafas) deve voltar com você na mochila.",
+                "6. Frio: Mesmo no verão, no topo faz 0ºC. Leve luvas, gorro e corta-vento.",
+                "7. Calçado: Bota de trilha é essencial. A descida é feita em cinza vulcânica escorregadia.",
+                "8. Banheiros Pagos: Leve muitas moedas de 100 ienes.",
+                "9. Tatuagem: Nos Onsen (termas) dos hotéis na base, tatuagens geralmente são proibidas (cubra ou procure 'tatoo friendly').",
+                "10. Transporte: Ônibus sai direto de Shinjuku (Tóquio) para a 5ª Estação (mais prático que trem)."
+            ],
+
+            antes_de_ir: [
+                "1. Treine: Não subestime. É uma subida íngreme e constante. Faça cardio antes da viagem.",
+                "2. Reserve o Ônibus: O 'Highway Bus' de Shinjuku lota na temporada.",
+                "3. Compre o Cajado: O 'Kongo-zue' é a melhor lembrança. Você carimba ele subindo.",
+                "4. Lanterna de Cabeça (Headlamp): Essencial se for subir de madrugada para ver o nascer do sol.",
+                "5. Moedas: Junte moedas de 100 ienes para os banheiros.",
+                "6. Roupa em Camadas: Você começa suando de camiseta e termina tremendo de casaco.",
+                "7. Água: Leve pelo menos 2L. Comprar lá em cima custa R$ 20 a garrafa.",
+                "8. Protetor Solar: O UV na altitude é brutal.",
+                "9. Verifique o Clima: Se tiver tufão ou raio, não suba. É morte certa.",
+                "10. Respeito: É um local sagrado. Não grite ou faça bagunça."
+            ],
+
+            numeros: [
+                "1. 110 (Polícia).",
+                "2. 119 (Bombeiros e Ambulância).",
+                "3. Mt. Fuji 5th Station Info: 0555-72-2121.",
+                "4. Embaixada do Brasil em Tóquio: +81 3-3404-5211.",
+                "5. Fujiyoshida City Hospital: Hospital mais próximo na base.",
+                "6. Taxi Kawaguchiko: 0555-72-1234.",
+                "7. Japan Travel Hotline: 050-3816-2787 (Inglês).",
+                "8. Previsão do Tempo: Verifique 'Snow Japan' ou JMA.",
+                "9. Yamap (App): Ótimo para mapas de trilha no Japão.",
+                "10. Highway Bus Terminal (Shinjuku): Onde pega o ônibus."
+            ],
+
+            riscos: [
+                "1. Hipotermia: Ocorre mesmo no verão se chover e ventar. A roupa molhada congela.",
+                "2. Mal da Altitude: Se sentir tontura forte, DESÇA. Não insista.",
+                "3. Queda de Pedras: Na trilha de subida e descida, pedras podem rolar. Fique atento.",
+                "4. Desidratação: O ar seco engana a sede.",
+                "5. Perder-se na Descida: A trilha de descida bifurca (uma vai para Yoshida, outra para Subashiri). Muita gente pega a errada e vai parar em outra cidade.",
+                "6. Erupção: (Muito improvável, mas possível). Há sirenes de alerta.",
+                "7. Ursos: Na floresta da base existem ursos negros asiáticos (tocar sino ajuda a afastar).",
+                "8. Multidões: O engarrafamento humano na trilha pode causar empurra-empurra no escuro.",
+                "9. Tufões: Cancelam ônibus e fecham a montanha.",
+                "10. Escuridão: Sem lanterna, a descida noturna é impossível."
+            ],
+
+            roteiros: {
+                "curto": {
+                    titulo: "Vistas e Lagos (1 Dia)",
+                    texto: [
+                        "Manhã: Ônibus de Tóquio para o Lago Kawaguchiko. Fotos no Pagode Chureito.",
+                        "Tarde: Passeio de barco no lago e subida no teleférico Kachi Kachi. Retorno a Tóquio."
+                    ]
+                },
+                "medio": {
+                    titulo: "A Escalada Clássica (2 Dias)",
+                    texto: [
+                        "Dia 1: Chegar à 5ª Estação, almoçar e começar a subir às 13h. Chegar no Refúgio (8ª estação) às 17h, jantar e dormir.",
+                        "Dia 2: Acordar à 1h da manhã, subir até o topo para o nascer do sol (4h30). Descer (4h de descida) e relaxar no Onsen na base."
+                    ]
+                },
+                "longo": {
+                    titulo: "Fuji + Hakone (3 Dias)",
+                    texto: [
+                        "Dia 1: Região dos 5 Lagos (Kawaguchiko, Oshino Hakkai). Dormir em Ryokan.",
+                        "Dia 2: Ida para Hakone (Owakudani - ovos pretos) e vista do Fuji pelo Lago Ashi (navio pirata).",
+                        "Dia 3: Gotemba Outlet ou Fuji-Q Highland (Parque)."
+                    ]
+                },
+            },
+
+            links: {
+                hotel: "https://www.booking.com/landmark/jp/mount-fuji.pt-br.html", 
+                passeio: "https://www.fujisan-climb.jp/en/", // Site oficial da escalada
                 seguro: "https://www.segurospromo.com.br" 
             },
         },
@@ -9689,6 +10544,369 @@ veredicto: {
                     seguro: "https://www.segurospromo.com.br" 
                 },
             },
+            {
+                name: "Jericoacoara",
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Anderps_067.JPG/960px-Anderps_067.JPG",
+                tags: ["Praia", "Dunas", "Kitesurf"],
+                mapa: "https://goo.gl/maps/jericoacoara",
+                clima: "Tropical Semiárido. Venta MUITO (bom para kite) de Agosto a Dezembro. Chuvas de Março a Maio.",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Julho a Janeiro (Sol garantido e ventos fortes). Fevereiro a Maio chove e as lagoas enchem.",
+                    ideal_para: [
+                        "Kitesurfistas e Windsurfistas (É a meca mundial dos ventos)",
+                        "Casais (Pousadas charmosas e jantar à luz de velas)",
+                        "Jovens (A vida noturna nas ruas de areia é agitada)",
+                        "Amantes de Natureza (Dunas, lagoas e mangues)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem tem dificuldade de locomoção (NÃO existe asfalto, é tudo areia fofa)",
+                        "Quem odeia vento na cara (O vento é constante e leva areia)",
+                        "Quem busca acesso fácil (A viagem de Fortaleza até lá é longa e balança)"
+                    ],
+                    perfis: [
+                        { icone: "ri-windy-fill", nome: "Vento/Kite" },
+                        { icone: "ri-sun-fill", nome: "Sol" },
+                        { icone: "ri-cactus-fill", nome: "Rústico" },
+                        { icone: "ri-moon-clear-fill", nome: "Vida Noturna" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Pedra Furada: O cartão-postal. Uma rocha com um buraco no meio esculpido pelo mar. Vá na maré baixa.",
+                    "2. Lagoa do Paraíso: Aquela das redes dentro da água azul-turquesa. Tem beach clubs famosos (Alchymist).",
+                    "3. Duna do Pôr do Sol: O ritual diário de subir a duna gigante ao lado da vila para ver o sol cair no mar.",
+                    "4. Buraco Azul: Uma lagoa artificial (de escavação) que encheu de água azul neon devido ao calcário. Virou febre.",
+                    "5. Árvore da Preguiça: Uma árvore deitada devido à força do vento constante.",
+                    "6. Passeio Lado Leste: Passa pela Árvore da Preguiça, Praia do Preá e Lagoa do Paraíso.",
+                    "7. Passeio Lado Oeste: Passa pelo Mangue Seco, Guriú (cavalos marinhos) e Tatajuba (dunas e tirolesa).",
+                    "8. Praia da Malhada: Praia preferida dos surfistas e mais tranquila, ao lado da vila.",
+                    "9. Centrinho de Jeri: Ruas de areia sem postes de luz (só a luz das lojas), charme total.",
+                    "10. Tatajuba: Um vilarejo soterrado pela areia e reconstruído. As lagoas lá são ótimas."
+                ],
+
+                gastronomia: [
+                    "1. Torta de Banana: Doce típico vendido por ambulantes na praia e nas ruas.",
+                    "2. Peixe na Telha: Pargo ou Robalo fresco assado.",
+                    "3. Camarão no Abacaxi: Clássico tropical servido nos restaurantes da praia.",
+                    "4. Tapioca: Recheada com carne de sol ou queijo coalho.",
+                    "5. Dadinho de Tapioca: Petisco onipresente.",
+                    "6. Lagosta: Em épocas permitidas, é mais barata que no sudeste.",
+                    "7. Caipirinha de Seriguela: Fruta local deliciosa.",
+                    "8. Sorvete de Rapadura: Sabor exótico e regional.",
+                    "9. Crepioca: Mistura de crepe com tapioca.",
+                    "10. Pastel de Arraia: Comum nas barracas de praia."
+                ],
+
+                religiao: [
+                    "1. Igreja Nossa Senhora do Rosário de Fátima: Uma igrejinha de pedra linda, construída pelos moradores.",
+                    "2. Misticismo: Jeri atrai muita gente ligada a energias, yoga e meditação.",
+                    "3. Natureza Sagrada: O respeito pelas dunas e pelo mar é quase religioso para os locais.",
+                    "4. Festas de Santo: Procissões simples acontecem nas datas litúrgicas.",
+                    "5. Iemanjá: O Réveillon na praia tem muitas oferendas.",
+                    "6. Capoeira: Rodas de capoeira na praia ao pôr do sol misturam esporte e espiritualidade.",
+                    "7. Benzedeiras: Cultura do sertão cearense.",
+                    "8. Lendas: Histórias de cidades encantadas soterradas pelas dunas.",
+                    "9. Ecumenismo: A vila recebe o mundo todo, há muita tolerância.",
+                    "10. Pôr do Sol: O momento em que todos param e aplaudem o sol é um ritual diário."
+                ],
+
+                curiosidades: [
+                    "1. Sem Iluminação Pública: As ruas não têm postes de luz para não ofuscar a luz da lua e das estrelas. A fiação é subterrânea.",
+                    "2. Areia em Tudo: Não leve salto alto ou sapato fechado. Você vai andar na areia fofa 100% do tempo, inclusive dentro das lojas.",
+                    "3. Parque Nacional: Jeri fica dentro de um parque protegido, por isso não pode construir prédios altos.",
+                    "4. Taxa de Turismo: Paga-se uma taxa diária por pessoa para entrar na vila (sustentabilidade).",
+                    "5. Acesso: Carro comum não chega. Tem que deixar em Jijoca e pegar uma 'Jardineira' (caminhonete 4x4) ou ter um 4x4 próprio.",
+                    "6. Washington Post: O jornal americano elegeu Jeri uma das praias mais bonitas do mundo nos anos 90, o que explodiu o turismo.",
+                    "7. Cavalos Marinhos: No passeio do Guriú, barqueiros levam para ver cavalos marinhos no mangue.",
+                    "8. Ventos Alísios: A posição geográfica faz ventar o ano todo, perfeito para Kite.",
+                    "9. Enterrada: A antiga vila de Tatajuba foi engolida pelas dunas móveis.",
+                    "10. Aeroporto Próprio: Agora tem o Aeroporto de Jericoacoara (JJD) na cidade vizinha (Cruz), facilitando muito."
+                ],
+
+                eventos_estacoes: [
+                    "1. Réveillon John John: Uma das festas de virada de ano mais caras e famosas do Brasil (5 dias de festa).",
+                    "2. Carnaval: A vila lota, bloquinhos na areia.",
+                    "3. Temporada de Kite (Ago-Dez): O céu fica colorido de pipas. Campeonatos mundiais acontecem aqui.",
+                    "4. Festival de Gastronomia: Ocorre em algumas épocas, valorizando o tempero local.",
+                    "5. Inverno (Mar-Mai): É a época da chuva. As lagoas enchem, mas o sol aparece menos. Preços caem.",
+                    "6. Verão (Dez-Fev): Sol forte, vila cheia, balada todo dia.",
+                    "7. Feriados: Sempre lotado. Reserve pousada com meses de antecedência.",
+                    "8. Pôr do Sol Diário: O 'evento' gratuito que ninguém perde.",
+                    "9. Forró: Às quartas e sábados, o forró tradicional pega fogo.",
+                    "10. Luau: Festas espontâneas na praia em noites de lua cheia."
+                ],
+
+                info_gerais: [
+                    "1. Taxa de Turismo: Pague antecipado no site da Prefeitura de Jijoca para evitar fila na entrada. Guarde o comprovante!",
+                    "2. Transporte: Não tente ir de carro de passeio (fWD) até a vila. Vai atolar. Deixe no estacionamento em Jijoca.",
+                    "3. Dinheiro: Tem caixa eletrônico e lotérica, mas o sinal cai. Leve dinheiro vivo, alguns passeios de buggy preferem.",
+                    "4. Calçados: Chinelo é o único calçado necessário. Tênis só se for correr.",
+                    "5. Malas: Evite malas de rodinha. Arrastar rodinha na areia fofa por 500 metros até a pousada é um inferno. Use mochila.",
+                    "6. Internet: Wi-Fi das pousadas é ok, 4G oscila.",
+                    "7. Voltagem: 220V.",
+                    "8. Saúde: Tem uma UPA 24h (Unidade de Pronto Atendimento), mas casos graves vão para Sobral ou Fortaleza (longe).",
+                    "9. Protetor Solar: O vento engana, mas o sol queima muito.",
+                    "10. Buggy: Só contrate credenciados. Acidentes nas dunas são perigosos."
+                ],
+
+                antes_de_ir: [
+                    "1. Pague a Taxa: Gere o boleto da Taxa de Turismo Sustentável online.",
+                    "2. Transfer: Se chegar por Fortaleza, são 4h a 5h de viagem. Contrate um 4x4 compartilhado ou ônibus 'Fretcar'.",
+                    "3. Mochila: Troque a mala rígida por mochila ou mala de mão fácil de carregar.",
+                    "4. Óculos de Sol: O reflexo na areia branca incomoda.",
+                    "5. Repelente: Tem mosquito, principalmente perto do mangue.",
+                    "6. Roupas: Leve roupas leves e de secagem rápida. Nada de roupa social.",
+                    "7. Dinheiro: Saque antes de ir para garantir.",
+                    "8. Hidratação: O clima seco e vento desidratam.",
+                    "9. Lua: Tente ir na lua cheia ou nova (marés influenciam a Pedra Furada e beleza das lagoas).",
+                    "10. Baterias: Leve powerbank, os passeios duram o dia todo."
+                ],
+
+                numeros: [
+                    "1. 190 (Polícia Militar).",
+                    "2. UPA Jericoacoara: (88) 98126-7756 (Atendimento emergencial na vila).",
+                    "3. (88) 3669-1133 (Prefeitura Jijoca).",
+                    "4. 193 (Bombeiros - base mais próxima em Marco/CE).",
+                    "5. Aeroporto de Jeri (JJD): Em Cruz, a 30km da vila.",
+                    "6. Aeroporto de Fortaleza (FOR): A 300km.",
+                    "7. Fretcar (Ônibus): Empresa oficial que faz o trajeto Fortaleza-Jeri.",
+                    "8. Associação dos Bugueiros: Peça indicação na pousada.",
+                    "9. Delegacia de Polícia Civil: Em Jijoca.",
+                    "10. Farmácias: Existem várias na rua principal."
+                ],
+
+                riscos: [
+                    "1. Insolação: O vento mascara o calor. Use boné.",
+                    "2. Atolamento: Turistas que tentam entrar de carro na areia sempre atolam e pagam caro para rebocar.",
+                    "3. Acidentes de Buggy: Peça para o motorista ir 'sem emoção' se estiver inseguro. Dunas cortadas são perigosas.",
+                    "4. Afogamento: Cuidado nas lagoas fundas se não souber nadar (use colete).",
+                    "5. Arraias: Na praia da Malhada, ande arrastando o pé para não pisar em arraias na areia.",
+                    "6. Bicho de Pé: Como se anda descalço e tem animais (jumentos/cavalos), pode acontecer. Use chinelo.",
+                    "7. Furto: Na praia ou na duna do pôr do sol, cuide do celular.",
+                    "8. Kitesurf: Cuidado ao nadar em áreas de kite. As linhas cortam e a prancha machuca.",
+                    "9. Balada: Cuidado com bebidas batizadas ('Boa Noite Cinderela') em festas aglomeradas.",
+                    "10. Vidro na Areia: Atenção onde pisa na volta das festas."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Essencial Jeri (3 Dias)",
+                        texto: [
+                            "Dia 1: Chegada, Check-in e Duna do Pôr do Sol.",
+                            "Dia 2: Passeio de Buggy Lado Leste (Pedra Furada, Árvore da Preguiça, Lagoa do Paraíso).",
+                            "Dia 3: Manhã na Praia da Malhada e retorno."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Lagoas e Dunas (5 Dias)",
+                        texto: [
+                            "Dias 1-2: Siga o roteiro curto.",
+                            "Dia 3: Passeio de Buggy Lado Oeste (Cavalos Marinhos, Mangue Seco, Tatajuba).",
+                            "Dia 4: Dia relax no Beach Club Alchymist (Lagoa do Paraíso) ou Buraco Azul.",
+                            "Dia 5: Caminhada até a Pedra Furada pela manhã (maré baixa) e compras."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Vibe Completa (7 Dias)",
+                        texto: [
+                            "Dias 1-5: Siga o roteiro médio.",
+                            "Dia 6: Aula de Kitesurf ou Windsurf no Preá.",
+                            "Dia 7: Dia livre para curtir a vila, massagem e açaí."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/br/jericoacoara.pt-br.html", 
+                    passeio: "https://www.jijocadejericoacoara.ce.gov.br/", // Site para taxa de turismo
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
+            {
+                name: "Fernando de Noronha",
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/EDUARDO_MURUCI_-_BAIA_DOS_PORCOS-%28recorte%29.jpg/960px-EDUARDO_MURUCI_-_BAIA_DOS_PORCOS-%28recorte%29.jpg",
+                tags: ["Paraíso", "Mergulho", "Exclusivo"],
+                mapa: "https://goo.gl/maps/noronha",
+                clima: "Tropical. Calor o ano todo. Chuvas de Abril a Julho. Mar calmo (Set-Out). Ondas/Surf (Dez-Mar).",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Setembro e Outubro (Mar piscina, melhor visibilidade). Evite Abril a Junho se não gosta de chuva.",
+                    ideal_para: [
+                        "Mergulhadores (Um dos melhores pontos do mundo)",
+                        "Amantes de Natureza (Santuário de vida marinha)",
+                        "Casais em Lua de Mel (Pousadas charmosas e exclusividade)",
+                        "Surfistas (Temporada de 'Swell' no verão)"
+                    ],
+                    nao_ideal_para: [
+                        "Orçamento Apertado (É o destino mais caro do Brasil)",
+                        "Quem busca Resort All-Inclusive (O luxo aqui é rústico e pé no chão)",
+                        "Quem tem dificuldade de locomoção (Trilhas em pedra, escadarias íngremes)",
+                        "Quem não gosta de regras (A ilha tem muitas proibições ambientais)"
+                    ],
+                    perfis: [
+                        { icone: "ri-anchor-fill", nome: "Mergulho" },
+                        { icone: "ri-money-dollar-circle-fill", nome: "Luxo Caro" },
+                        { icone: "ri-leaf-fill", nome: "Ecológico" },
+                        { icone: "ri-heart-fill", nome: "Romântico" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Baía do Sancho: Eleita várias vezes a praia mais bonita do mundo. Acesso por escada vertical na fenda da rocha ou barco.",
+                    "2. Baía dos Porcos: A vista clássica do Morro Dois Irmãos. Ótima para snorkel, mas não tem areia para deitar.",
+                    "3. Praia do Sueste: Onde se nada com tartarugas gigantes e tubarões no raso (obrigatório colete).",
+                    "4. Praia do Leão: A maior concentração de desova de tartarugas. Mar agitado, lindo visual.",
+                    "5. Buraco do Galego: Piscina natural nas pedras da Praia do Cachorro (famosa no Instagram).",
+                    "6. Praia da Conceição: O 'point' do pôr do sol, futevôlei e barzinhos pé na areia.",
+                    "7. Mirante do Boldró: O local clássico para ver o pôr do sol com o Morro Dois Irmãos ao fundo.",
+                    "8. Praia do Atalaia: Um berçário marinho. Acesso restrito e controlado (precisa agendar e não pode usar protetor solar).",
+                    "9. Cacimba do Padre: Praia das ondas gigantes (Hawaii brasileiro) e base do Dois Irmãos.",
+                    "10. Capela de São Pedro: Vista linda do porto e local dos casamentos famosos."
+                ],
+
+                gastronomia: [
+                    "1. Bolinho de Tubarão (Tubalhau): No Museu do Tubarão. Feito com carne de tubarão legalizada (ou cação).",
+                    "2. Peixe na Folha de Bananeira: Clássico das pousadas, geralmente peixe Meca ou Cavala.",
+                    "3. Festival Gastronômico do Zé Maria: O buffet mais famoso da ilha (e caríssimo), acontece às quartas e sábados.",
+                    "4. Mergulhão: Restaurante com a melhor vista para o Pico e comida sofisticada.",
+                    "5. Açaí e Tapioca: Lanches mais acessíveis no centrinho da Vila dos Remédios.",
+                    "6. Frutos do Mar Frescos: Tudo é pescado ali. Lagosta e polvo são excelentes.",
+                    "7. Varanda: Restaurante premiado, o 'favorito' de quem visita sempre.",
+                    "8. Cacimba Bistrô: Famoso pelo Pastel de Lagosta.",
+                    "9. Xica da Silva: Comida brasileira reconfortante e muito elogiada.",
+                    "10. Bar do Meio: O bar mais badalado para drinks no pôr do sol (entre a Conceição e o Meio)."
+                ],
+
+                religiao: [
+                    "1. Igreja de Nossa Senhora dos Remédios: Patrimônio histórico do século XVIII, domina a paisagem da vila.",
+                    "2. Capela de São Pedro dos Pescadores: Pequena, branca e azul, no alto do porto.",
+                    "3. Natureza Divina: A 'religião' local é a preservação. Desrespeitar a natureza é sacrilégio.",
+                    "4. Lendas: A lenda da 'Alamoa', uma mulher fantasma que seduzia os presos (Noronha já foi presídio).",
+                    "5. Festas de Santo: A festa de São Pedro (junho) tem procissão marítima (Barqueata).",
+                    "6. Espiritualidade: Muitos buscam a ilha para reconexão e retiros de yoga.",
+                    "7. Iemanjá: Forte culto nas viradas de ano.",
+                    "8. Cruzeiro: Cruz de madeira na frente da igreja matriz.",
+                    "9. Forte dos Remédios: Local carregado de história e sofrimento dos antigos presos, hoje ponto turístico.",
+                    "10. Simplicidade: A comunidade local é muito unida e de fé simples."
+                ],
+
+                curiosidades: [
+                    "1. DUAS Taxas: Você paga para entrar na ilha (TPA - Governo) E para entrar nas praias (PARNAMAR - EcoNoronha). Prepare o bolso.",
+                    "2. Fuso Horário: Noronha tem fuso próprio (+1h em relação a Brasília).",
+                    "3. Presídio: Foi colônia penal até 1942. O presídio explodiu misteriosamente (dizem que foi para esconder condições desumanas).",
+                    "4. Parto Proibido: Grávidas não podem dar à luz na ilha (não tem estrutura de risco). Aos 7 meses, são enviadas para Recife.",
+                    "5. Tubarões: Tem muito tubarão (Lixa e Limão). Ataques são raríssimos, mas não tente pegar neles.",
+                    "6. Água: Não tem nascente doce suficiente. A água da torneira vem de dessalinização e é cara/escassa.",
+                    "7. Carros: É proibido levar carro de fora. A frota é controlada. O Buggy é o rei.",
+                    "8. Internet: É horrível. Mesmo o 4G é lento. Wi-Fi de pousada mal carrega foto.",
+                    "9. Menor BR: A ilha abriga a BR-363, a segunda menor rodovia federal do Brasil (7km).",
+                    "10. Visitantes Limitados: Há um limite de pessoas que podem dormir na ilha por noite."
+                ],
+
+                eventos_estacoes: [
+                    "1. Réveillon: Um dos mais famosos do país (festa do Zé Maria). Ingressos custam milhares de reais.",
+                    "2. Swell (Dez-Mar): Temporada de ondas grandes, campeonatos de surf e ilha cheia de surfistas.",
+                    "3. Maratona de Noronha (Dezembro): Corrida de rua no paraíso.",
+                    "4. Baixa Temporada (Abr-Jun): Preços caem um pouco por causa da chuva.",
+                    "5. Festival Gastronômico (Agosto): Evento na Pousada Zé Maria.",
+                    "6. Tartarugas (Dez-Mai): Temporada de desova (algumas praias fecham à noite).",
+                    "7. Barqueata de São Pedro (29 Jun): Procissão de barcos.",
+                    "8. Aniversário da Ilha (Agosto): Shows na praça.",
+                    "9. Lua Cheia: Os luaus espontâneos na Praia da Conceição.",
+                    "10. Refestival: Festival de música sustentável."
+                ],
+
+                info_gerais: [
+                    "1. PAGUE ANTES: Pague a TPA (Taxa de Preservação) online antes de ir. A fila no aeroporto para quem não pagou é gigante.",
+                    "2. Ingresso do Parque: Compre o ingresso da EcoNoronha (válido por 10 dias). Sem ele, você não entra no Sancho, Sueste ou Leão.",
+                    "3. Buggy: Alugar buggy é legal, mas caro (~R$ 500/dia + gasolina a R$ 10/litro). O ônibus passa em toda a BR e custa R$ 5.",
+                    "4. Colete Salva-Vidas: Obrigatório na Praia do Sueste (pode alugar lá).",
+                    "5. Plástico Zero: É proibido entrar na ilha com plásticos descartáveis (copos, garrafinhas de água mineral < 500ml). Leve seu squeeze.",
+                    "6. Água: Compre galão de 5L no mercado e encha sua garrafa. Comprar garrafinha toda hora quebra o orçamento.",
+                    "7. Mergulho: Se nunca mergulhou, faça o 'Batismo'. A visibilidade chega a 50 metros.",
+                    "8. Trilha Atalaia: Tem que agendar no ICMBio presencialmente. As vagas somem em minutos.",
+                    "9. Taxis: Têm preço tabelado. Peça a tabela na pousada.",
+                    "10. Hospital: Só tem o Hospital São Lucas (básico). Casos graves exigem salvamento aéreo (seguro é vital)."
+                ],
+
+                antes_de_ir: [
+                    "1. TPA Online: Entre no site oficial de Noronha e pague a taxa. Imprima o boleto/QR Code.",
+                    "2. Carteirinha Parque: Compre no site da PARNAMAR/EcoNoronha. Você retira o cartão físico lá ou usa o app.",
+                    "3. Snorkel Próprio: Alugar custa R$ 20-40 por dia. Levar o seu (máscara, snorkel e nadadeira) economiza muito.",
+                    "4. Dinheiro Vivo: O sinal de cartão cai. Leve espécie para emergências.",
+                    "5. Protetor Solar: Leve muito. Lá custa o dobro.",
+                    "6. Remédios: A farmácia da ilha é cara e limitada.",
+                    "7. Tênis: Para a trilha do Sancho e Atalaia.",
+                    "8. CNH: Se for alugar buggy, é obrigatória.",
+                    "9. GoPro: O lugar mais fotogênico embaixo d'água do Brasil.",
+                    "10. Reserva de Jantar: Os restaurantes famosos (Mergulhão, Cacimba) lotam. Reserve dias antes."
+                ],
+
+                numeros: [
+                    "1. (81) 3619-1352 (Hospital São Lucas).",
+                    "2. 190 (Polícia Militar).",
+                    "3. (81) 3619-0810 (Delegacia).",
+                    "4. (81) 3619-1171 (Aeroporto).",
+                    "5. ICMBio Noronha: (81) 3619-1174.",
+                    "6. Associação de Bugueiros: (81) 3619-1142.",
+                    "7. Conselho Distrital (Administração): (81) 3619-0900.",
+                    "8. Porto de Santo Antônio: (81) 3619-1313.",
+                    "9. Taxi Noronha: (81) 3619-1314.",
+                    "10. Centro de Visitantes (ICMBio): Na Vila do Boldró."
+                ],
+
+                riscos: [
+                    "1. Afogamento: O mar muda rápido. Respeite as bandeiras vermelhas, especialmente no Leão e Cacimba.",
+                    "2. Pedras: Na Baía dos Porcos, as pedras vulcânicas cortam o pé. Use sapatilha.",
+                    "3. Multas Ambientais: Tocar em tartaruga, pisar em coral ou alimentar animais dá multa federal pesada.",
+                    "4. Mabuya: Um lagarto (tipo calango) invasor que está em todo lugar. Eles entram na bolsa e comem sua comida. Não deixe a bolsa aberta.",
+                    "5. Escadas do Sancho: Não é para quem tem vertigem ou problemas cardíacos. É uma fenda estreita.",
+                    "6. Desidratação: O sol é muito forte e venta muito.",
+                    "7. Acidente de Buggy: Muitos turistas inexperientes capotam ou batem. Dirija devagar.",
+                    "8. Preço Surpresa: Pergunte o preço antes de tudo. 'Preço de ilha' assusta.",
+                    "9. Golpes de Acomodação: Reserve em sites confiáveis. Tem gente vendendo casa que não existe.",
+                    "10. Tubarões: No Sueste e Porto é comum ver. Não tente cercar o animal para foto."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "O Essencial (3 Dias)",
+                        texto: [
+                            "Dia 1: Ilha Tour (passeio de dia inteiro de buggy para conhecer tudo). Pôr do sol no Boldró.",
+                            "Dia 2: Manhã no Sancho (a mais bonita) e Baía dos Porcos. Tarde no Sueste (snorkel).",
+                            "Dia 3: Passeio de Barco (ver golfinhos) e Praia da Conceição."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Mergulho e Trilhas (5 Dias)",
+                        texto: [
+                            "Dias 1-3: Siga o roteiro curto.",
+                            "Dia 4: Mergulho de cilindro (Porto) ou batismo. Tarde na Cacimba do Padre.",
+                            "Dia 5: Trilha do Atalaia (se conseguir vaga) ou Buraco do Galego."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Vida de Ilhéu (7 Dias)",
+                        texto: [
+                            "Dias 1-5: Siga o roteiro médio.",
+                            "Dia 6: Praia do Leão (passar o dia, levar lanche).",
+                            "Dia 7: Manhã livre para compras e almoço no Museu do Tubarão."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/br/fernando-de-noronha.pt-br.html", 
+                    passeio: "https://www.parnanoronha.com.br/", // Site oficial dos ingressos
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
+            
 
         ],
         "Argentina": [
@@ -12451,7 +13669,367 @@ veredicto: {
                     seguro: "https://www.segurospromo.com.br" 
                 },
             },
+            {
+                name: "Chicago",
+                imagem: "https://images.unsplash.com/photo-1494522855154-9297ac14b55f?q=80&w=2070&auto=format&fit=crop",
+                tags: ["Arquitetura", "Pizza", "Vento"],
+                mapa: "https://goo.gl/maps/chicago",
+                clima: "Continental. Verão quente e úmido. Inverno BRUTAL, com vento gélido e muita neve.",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Maio a Setembro (Quando a cidade 'descongela' e os festivais de rua acontecem).",
+                    ideal_para: [
+                        "Amantes de Arquitetura (O berço dos arranha-céus modernos)",
+                        "Foodies (A cena gastronômica é rival de NY, mas mais barata)",
+                        "Fãs de Blues e Jazz (Bares históricos lendários)",
+                        "Caminhantes Urbanos (O Riverwalk e a orla do lago são planos e lindos)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem odeia frio (O inverno aqui não é brincadeira, o vento corta a pele)",
+                        "Quem busca praia tropical (Tem praias no lago, mas a água é gelada)",
+                        "Quem tem medo de altura (As principais atrações envolvem pisos de vidro no 100º andar)"
+                    ],
+                    perfis: [
+                        { icone: "ri-building-line", nome: "Arquitetura" },
+                        { icone: "ri-music-2-fill", nome: "Blues/Jazz" },
+                        { icone: "ri-restaurant-fill", nome: "Comida" },
+                        { icone: "ri-windy-line", nome: "Vento" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Cloud Gate (The Bean): O feijão prateado no Millennium Park. Foto obrigatória.",
+                    "2. Willis Tower (Skydeck): Suba no 103º andar e pise na caixa de vidro suspensa para fora do prédio.",
+                    "3. Art Institute of Chicago: Um dos melhores museus do mundo (quadros famosos de Van Gogh e Hopper).",
+                    "4. Chicago Riverwalk: Calçadão na beira do rio, cheio de bares e caiaques.",
+                    "5. Navy Pier: Píer turístico com roda-gigante, cinema e restaurantes (muito cheio, mas clássico).",
+                    "6. Cruzeiro de Arquitetura: O MELHOR passeio da cidade. Um barco pelo rio explicando os prédios.",
+                    "7. Magnificent Mile: A avenida das compras (Michigan Ave), linda no Natal.",
+                    "8. Wrigley Field: O estádio de beisebol histórico dos Cubs, cercado de bares animados (Wrigleyville).",
+                    "9. 360 Chicago (John Hancock): Outro observatório, mas este tem o 'Tilt' (janela que inclina você para baixo).",
+                    "10. Lincoln Park Zoo: Zoológico gratuito dentro de um parque lindo."
+                ],
+
+                gastronomia: [
+                    "1. Deep Dish Pizza: A pizza estilo torta, com muito queijo e molho por cima. (Giordano's ou Lou Malnati's).",
+                    "2. Chicago-Style Hot Dog: Pão com semente de papoula, salsicha bovina, picles, pimenta e SEM KETCHUP (é ofensa pedir ketchup).",
+                    "3. Italian Beef: Sanduíche de carne assada fatiada fina, mergulhado no molho (peça 'dipped').",
+                    "4. Garrett Popcorn: Pipoca mistura de caramelo e queijo (Chicago Mix). O cheiro está na rua toda.",
+                    "5. Steakhouse: A cidade tem uma tradição forte de churrascarias clássicas.",
+                    "6. Rainbow Cone: Sorvete com 5 fatias de sabores diferentes empilhadas.",
+                    "7. Donuts: A cena de donuts artesanais é fortíssima (Stan's Donuts, Doughnut Vault).",
+                    "8. Jibarito: Sanduíche onde o pão é substituído por banana da terra frita (herança porto-riquenha).",
+                    "9. Pierogi: Forte influência polonesa na cidade.",
+                    "10. Malört: Um licor local amargo que todo turista é desafiado a provar (tem gosto de 'moeda velha', dizem)."
+                ],
+
+                religiao: [
+                    "1. Bahá'í House of Worship: O único templo Bahá'í da América do Norte fica ao norte da cidade. Arquitetura divina.",
+                    "2. Blues como Religião: Domingo de manhã muitos vão ao 'Gospel Brunch' no House of Blues.",
+                    "3. Holy Name Cathedral: Catedral católica gótica reconstruída após o Grande Incêndio.",
+                    "4. Diversidade: Chicago tem uma das maiores comunidades polonesas (católica) e muçulmanas dos EUA.",
+                    "5. St. Patrick's Day: A celebração irlandesa é levada tão a sério que tingem o rio inteiro de verde fluorescente.",
+                    "6. Moody Church: Igreja histórica evangélica famosa.",
+                    "7. Templos Maçônicos: O Masonic Temple já foi o prédio mais alto da cidade.",
+                    "8. Gangsters e Fé: Al Capone frequentava igrejas locais (e funerais).",
+                    "9. Arquitetura Sagrada: O 'Chicago Temple Building' é uma igreja dentro de um arranha-céu.",
+                    "10. Fourth Presbyterian Church: Igreja linda no meio da agitação da Mag Mile."
+                ],
+
+                curiosidades: [
+                    "1. O Rio ao Contrário: Engenheiros reverteram o fluxo do Rio Chicago para não poluir o lago (água potável). Uma obra insana.",
+                    "2. Grande Incêndio de 1871: Destruiu tudo, mas permitiu que arquitetos reconstruíssem a cidade inventando o arranha-céu.",
+                    "3. Gotham City: Chicago é a Gotham dos filmes do Batman (Cavaleiro das Trevas foi filmado lá).",
+                    "4. Rota 66: A famosa estrada começa oficialmente em Chicago (tem placa na Adams St).",
+                    "5. Windy City: O apelido não é só pelo vento, mas também pelos políticos 'cheios de ar quente' (faladores) do passado.",
+                    "6. Playboy: Hugh Hefner fundou a revista em Chicago (a Mansão Playboy original era lá).",
+                    "7. Átomo: A primeira reação nuclear controlada do mundo aconteceu embaixo da arquibancada da Universidade de Chicago.",
+                    "8. Lollapalooza: O festival gigante acontece todo ano no Grant Park.",
+                    "9. Batman: O prédio do Wayne Enterprises é o Chicago Board of Trade.",
+                    "10. Ketchup Proibido: Em barracas de Hot Dog raiz, se você pedir ketchup, eles te mandam embora."
+                ],
+
+                eventos_estacoes: [
+                    "1. St. Patrick's Day (Março): O rio verde e festas insanas.",
+                    "2. Lollapalooza (Agosto): 4 dias de música no meio da cidade.",
+                    "3. Taste of Chicago (Julho): O maior festival de comida do mundo.",
+                    "4. Chicago Marathon (Outubro): Uma das 'majors' mundiais.",
+                    "5. Air and Water Show (Agosto): Aviões caça voando baixo na praia.",
+                    "6. Christkindlmarket (Dezembro): Mercado de Natal alemão famoso na Daley Plaza.",
+                    "7. Verão (Jun-Ago): Praia no lago, cinema ao ar livre e todos na rua.",
+                    "8. Inverno (Jan-Mar): A cidade hiberna. Use os túneis subterrâneos (Pedway).",
+                    "9. Chicago Jazz Festival (Setembro): Gratuito no parque.",
+                    "10. Halloween: A cidade tem fama de assombrada e leva a data a sério."
+                ],
+
+                info_gerais: [
+                    "1. Metrô 'L': O trem elevado é seguro e te leva do aeroporto (O'Hare) ao centro (Loop) por $5. Não precisa de táxi.",
+                    "2. Vento: No inverno, o vento que vem do lago dói. Cubra o rosto.",
+                    "3. Segurança: O centro (Loop/River North) é seguro. Evite as áreas distantes do 'South Side' e 'West Side' à noite (bairros violentos).",
+                    "4. Gorjeta: 20% é o padrão. Menos que isso é mal visto.",
+                    "5. Pedway: Um sistema de túneis subterrâneos que liga prédios no centro. Salvação no inverno.",
+                    "6. Taxas: O imposto de vendas é alto (~10.25%).",
+                    "7. CityPASS: Vale a pena se for em 3+ atrações pagas.",
+                    "8. Água: Pode beber da torneira, é de ótima qualidade (do lago).",
+                    "9. Aeroportos: O'Hare (ORD) é gigante e longe. Midway (MDW) é menor e mais perto.",
+                    "10. Bicicleta: O sistema Divvy Bikes é ótimo para andar na orla do lago (Lakefront Trail)."
+                ],
+
+                antes_de_ir: [
+                    "1. Reserve Skydeck: Se quiser ir no pôr do sol, compre semanas antes.",
+                    "2. Casaco Pesado: Se for entre Novembro e Março, traga sua roupa mais pesada. O frio é pior que NY.",
+                    "3. Tênis de Caminhada: A cidade é plana e perfeita para andar.",
+                    "4. Seguro Viagem: Obrigatório para sua paz de espírito.",
+                    "5. Adaptador: Tomada americana.",
+                    "6. Powerbank: O frio descarrega a bateria do celular rápido.",
+                    "7. Documentos: Passaporte sempre à mão (às vezes pedem ID para entrar em bares).",
+                    "8. App Ventra: Baixe para usar o transporte público no celular.",
+                    "9. Filme: Assista 'Curtindo a Vida Adoidado' (Ferris Bueller) para ver os pontos turísticos.",
+                    "10. Estômago: Prepare-se para comer muito. As porções são enormes."
+                ],
+
+                numeros: [
+                    "1. 911 (Emergência Geral).",
+                    "2. 311 (Serviços não emergenciais).",
+                    "3. Consulado do Brasil em Chicago: +1 (312) 464-0244.",
+                    "4. Northwestern Memorial Hospital (Melhor hospital do centro).",
+                    "5. CTA (Transporte): 1-888-YOUR-CTA.",
+                    "6. Aeroporto O'Hare (ORD).",
+                    "7. Aeroporto Midway (MDW).",
+                    "8. Táxi Checker Cab: (312) 243-2537.",
+                    "9. Polícia (Non-emergency): 312-746-6000.",
+                    "10. CVS/Walgreens: Farmácias em toda esquina."
+                ],
+
+                riscos: [
+                    "1. Frio Extremo: Hipotermia é risco real no inverno. Não subestime o vento.",
+                    "2. Bairros Perigosos: Chicago tem taxas de crime altas, mas são localizadas em bairros onde turista não vai. Fique no centro/norte.",
+                    "3. Golpes de CD: Na Michigan Ave, caras tentam te dar um CD de rap 'grátis' e depois intimidam por dinheiro. Não pegue.",
+                    "4. Gelo na Calçada: Escorregar no gelo preto é a causa nº 1 de acidentes no inverno.",
+                    "5. Metrô à Noite: O vagão vazio pode ter usuários de drogas/sem-teto. Fique no primeiro vagão (do motorista).",
+                    "6. Preço do Uber: Do aeroporto pode ser caro. O trem (Blue Line) é muito mais barato e confiável no trânsito.",
+                    "7. Vento na Torre: Às vezes o Skydeck fecha a varanda se ventar demais.",
+                    "8. Roubo de Celular: Cuidado em festivais como Lollapalooza.",
+                    "9. Gaivotas: Na praia, elas roubam seu lanche.",
+                    "10. Ingressos Falsos: Compre tickets de esporte apenas em sites oficiais (StubHub/Ticketmaster)."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Ícones do Loop (2 Dias)",
+                        texto: [
+                            "Dia 1: Millennium Park (Bean), Art Institute e subir na Willis Tower à noite.",
+                            "Dia 2: Cruzeiro de Arquitetura pelo rio, almoço Deep Dish Pizza e caminhada na Magnificent Mile."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Cultura e Vistas (4 Dias)",
+                        texto: [
+                            "Dias 1-2: Siga o roteiro curto.",
+                            "Dia 3: Museum Campus (Aquário Shedd e Planetário Adler) com a melhor vista do skyline.",
+                            "Dia 4: Bairro Wicker Park (hipster/brechós) e noite de Jazz no Green Mill."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Chicago Completa (6 Dias)",
+                        texto: [
+                            "Dias 1-4: Siga o roteiro médio.",
+                            "Dia 5: Jogo de Beisebol no Wrigley Field (ou tour no estádio) e Lincoln Park Zoo.",
+                            "Dia 6: Oak Street Beach (praia) e compras/despedida."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/us/chicago.pt-br.html", 
+                    passeio: "https://www.citypass.com/chicago", 
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
         ],
+        "Canadá": [
+        {
+            name: "Toronto",
+            imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/CC_2022-06-18_193-Pano_%28cropped%29_01.jpg/1280px-CC_2022-06-18_193-Pano_%28cropped%29_01.jpg",
+            tags: ["Metrópole", "Cultura", "CN Tower"],
+            mapa: "https://goo.gl/maps/toronto",
+            clima: "Continental Úmido. Verão (Jun-Ago) quente e úmido. Inverno (Dez-Mar) muito frio (-10ºC a -20ºC) com neve e vento.",
+            
+            // === DADOS DO VEREDICTO ===
+            veredicto: {
+                melhor_epoca: "Maio a Outubro. O verão é vibrante com muitos festivais de rua. O inverno é só para quem gosta de frio extremo.",
+                ideal_para: [
+                    "Amantes de Cidades Grandes (É a 'Nova York' mais limpa e segura)",
+                    "Foodies (A cidade mais multicultural do mundo tem comida de TODO lugar)",
+                    "Famílias (Aquário, Zoológico e Ilhas de Toronto)",
+                    "Fãs de Esportes (Raptors, Blue Jays e Maple Leafs)"
+                ],
+                nao_ideal_para: [
+                    "Quem odeia frio (No inverno, a cidade hiberna ou vive no subsolo)",
+                    "Quem busca natureza selvagem imediata (É uma selva de pedra, a natureza fica a 2h de carro)",
+                    "Orçamento curto (Taxas e gorjetas encarecem tudo)"
+                ],
+                perfis: [
+                    { icone: "ri-building-4-fill", nome: "Metrópole" },
+                    { icone: "ri-restaurant-2-fill", nome: "Gastronomia" },
+                    { icone: "ri-earth-fill", nome: "Multicultural" },
+                    { icone: "ri-shopping-bag-3-fill", nome: "Compras" }
+                ]
+            },
+            // =================================
+
+            pontos_turisticos: [
+                "1. CN Tower: O ícone da cidade. Suba para ver a vista (e ande no chão de vidro).",
+                "2. Ripley's Aquarium: Fica na base da torre. Incrível túnel com tubarões.",
+                "3. Toronto Islands: Pegue a balsa (ferry) para ver o skyline mais bonito da cidade e fazer piquenique.",
+                "4. Distillery District: Bairro histórico de tijolinhos, cheio de galerias, cafés e o Mercado de Natal (em dez).",
+                "5. St. Lawrence Market: Eleito um dos melhores mercados de comida do mundo. Prove o Peameal Bacon.",
+                "6. Casa Loma: Um castelo 'de verdade' no meio da cidade (cenário de X-Men).",
+                "7. Royal Ontario Museum (ROM): Famoso pela arquitetura 'cristal' saindo do prédio antigo. Ótimo acervo.",
+                "8. Kensington Market: Bairro boêmio, hippie e vintage. Ótimo para brechós e comidas de rua.",
+                "9. Dundas Square: A 'Times Square' de Toronto (menor, mas cheia de telões).",
+                "10. High Park: O Central Park deles. Na primavera, as cerejeiras (Sakuras) florescem."
+            ],
+
+            gastronomia: [
+                "1. Peameal Bacon Sandwich: Sanduíche de lombo canadense curado. O melhor é no Carousel Bakery (St. Lawrence Market).",
+                "2. Poutine: Batata frita, queijo coalho e molho gravy. Prove no 'Smoke's Poutinerie'.",
+                "3. BeaverTails: O doce clássico (massa frita formato rabo de castor).",
+                "4. Tim Hortons: O café do povo. Peça um 'Double Double' (café com 2 açúcares e 2 cremes) e Timbits.",
+                "5. Comida Asiática: A Chinatown de Toronto é gigante e autêntica (Dim Sum no Rol San).",
+                "6. Caesar: O drink canadense (tipo Bloody Mary, mas com suco de tomate e molusco - Clamato).",
+                "7. Street Meat: Cachorro-quente de rua vendido nos carrinhos. É uma instituição local.",
+                "8. Icewine: Vinho de sobremesa doce, orgulho nacional.",
+                "9. Jamaican Patties: Pasteis jamaicanos picantes, muito comuns nas estações de metrô.",
+                "10. Ketchup Chips: Batata Lay's sabor Ketchup (só existe no Canadá)."
+            ],
+
+            religiao: [
+                "1. Multiculturalismo: Toronto é considerada a cidade mais multicultural do mundo. Você encontra templos de TODAS as religiões.",
+                "2. St. Michael's Cathedral: Catedral católica imponente no centro.",
+                "3. Templo Hindu BAPS Shri Swaminarayan: Uma obra prima de mármore branco (fica afastado, em Etobicoke), parece o Taj Mahal.",
+                "4. Aga Khan Museum: Museu e centro dedicado à arte e cultura islâmica (arquitetura moderna linda).",
+                "5. Sinagogas: A comunidade judaica é forte, especialmente ao norte (Bathurst St).",
+                "6. Igrejas Históricas: A 'Church Street' tem várias igrejas antigas preservadas.",
+                "7. Hare Krishna: Comuns nas ruas no verão, cantando e dançando.",
+                "8. Sikhismo: Muitos imigrantes indianos usam turbante e a religião é muito visível.",
+                "9. Ateísmo/Secularismo: A maioria da população jovem é secular.",
+                "10. Respeito: A tolerância religiosa é lei e cultura na cidade."
+            ],
+
+            curiosidades: [
+                "1. The PATH: A maior cidade subterrânea do mundo. 30km de túneis ligando prédios e metrô para ninguém passar frio no inverno.",
+                "2. Yonge Street: Já foi considerada a rua mais longa do mundo (começa no lago e vai até quase o norte do país).",
+                "3. Hollywood do Norte: Muitos filmes que se passam em 'Nova York' são gravados em Toronto (é mais barato e limpo).",
+                "4. Racoon (Guaxinim): É o animal não-oficial da cidade. Eles são inteligentes, abrem latas de lixo e estão em todo lugar à noite.",
+                "5. Torre Torta?: A CN Tower foi a estrutura mais alta do mundo por 30 anos (até o Burj Khalifa).",
+                "6. Ilhas sem Carro: As Toronto Islands são a maior comunidade urbana sem carros da América do Norte.",
+                "7. 50% Estrangeiros: Metade da população de Toronto nasceu fora do Canadá.",
+                "8. Blue Jays: O único time de beisebol canadense na liga americana (MLB).",
+                "9. Lake Ontario: O lago é tão grande que parece mar, não dá para ver o outro lado.",
+                "10. Drake: O rapper é o embaixador não-oficial da cidade (ele chama Toronto de 'The 6ix')."
+            ],
+
+            eventos_estacoes: [
+                "1. TIFF (Toronto International Film Festival - Setembro): As ruas enchem de celebridades de Hollywood.",
+                "2. Caribana (Agosto): O maior carnaval caribenho da América do Norte.",
+                "3. Pride Parade (Junho): Uma das maiores paradas LGBTQIA+ do mundo.",
+                "4. CNE (Canadian National Exhibition - Agosto): Feira gigante de fim de verão com comidas bizarras e parque de diversões.",
+                "5. Inverno (Dez-Mar): Patinação no gelo na praça da Prefeitura (Nathan Phillips Square).",
+                "6. Verão (Jun-Set): Pátios (mesas na calçada) lotados e festivais de rua todo fim de semana.",
+                "7. Nuit Blanche (Outubro): Arte de rua a noite toda.",
+                "8. Santa Claus Parade (Novembro): Parada de Natal tradicional.",
+                "9. Cherry Blossoms (Maio): As cerejeiras florescem no High Park.",
+                "10. Victoria Day (Maio): Feriado que marca o início não-oficial do verão (fogos)."
+            ],
+
+            info_gerais: [
+                "1. Gorjeta (Tip): OBRIGATÓRIA. Mínimo de 15% a 18% em restaurantes. As maquininhas já sugerem 18%, 20%, 25%.",
+                "2. Preço + Taxa: O preço na etiqueta NUNCA é o final. Adicione 13% de imposto (HST) no caixa.",
+                "3. TTC (Transporte): O bonde (Streetcar) é lento no trânsito. O metrô é rápido (formato de U). Use o cartão PRESTO.",
+                "4. PATH: Baixe um mapa se for usar o subterrâneo. É um labirinto e o GPS não funciona lá embaixo.",
+                "5. Bebida Alcoólica: Não vende em supermercado comum. Só na 'LCBO' ou 'The Beer Store'. Beber na rua (parque/praia) é tecnicamente proibido (multa), mas tolerado se for discreto.",
+                "6. Maconha: Legalizada. Existem lojas (Dispensaries) em toda esquina, parecem lojas da Apple. O cheiro na rua é forte.",
+                "7. Segurança: Muito segura para uma metrópole, mas evite a área de Sherbourne/Dundas à noite (moradores de rua/crise de opióides).",
+                "8. Pedestres: Respeite o sinal. Carros param para pedestres, mas bondes não param rápido.",
+                "9. Tomada: Leve adaptador.",
+                "10. Água: Pode beber da torneira em qualquer lugar."
+            ],
+
+            antes_de_ir: [
+                "1. Visto/eTA: Verifique com atenção. Se você tem visto americano, o eTA é barato ($7 CAD) e sai rápido. Se não, o visto canadense demora.",
+                "2. Seguro Viagem: Não brinque. Uma consulta simples custa $500 CAD.",
+                "3. Roupas de Inverno: Se for entre Nov-Mar, o casaco brasileiro não aguenta. Compre um lá ou use camadas térmicas (Uniqlo/Decathlon).",
+                "4. Sapatos Confortáveis: Toronto é uma cidade de caminhada.",
+                "5. Adaptador: Padrão americano.",
+                "6. Cartão Global: Nomad/Wise funcionam perfeitamente.",
+                "7. CityPASS: Se for na CN Tower, Aquário e Casa Loma, o passe economiza uns 40%.",
+                "8. Previsão do Tempo: Muda rápido. Tenha sempre um guarda-chuva ou capa.",
+                "9. Niagara Falls: Reserve um dia para o bate-volta (1h30 de ônibus/trem).",
+                "10. Ingressos CN Tower: Reserve o horário do pôr do sol."
+            ],
+
+            numeros: [
+                "1. 911 (Emergência Geral).",
+                "2. 311 (Serviços da cidade).",
+                "3. Consulado do Brasil em Toronto: +1 (416) 922-2503 (Fica na Bloor St).",
+                "4. Toronto General Hospital (Emergência referência na University Ave).",
+                "5. TTC Customer Service (Transporte): 416-393-4636.",
+                "6. Táxi Beck Taxi: 416-751-5555 (Laranja e verde).",
+                "7. Aeroporto Pearson (YYZ).",
+                "8. Aeroporto Billy Bishop (YTZ) - Ilha (voos curtos).",
+                "9. Union Station (Trens/Ônibus GO).",
+                "10. Farmácias: Shoppers Drug Mart (tem em toda esquina)."
+            ],
+
+            riscos: [
+                "1. Frio Extremo: No inverno, o risco de congelamento (frostbite) em pele exposta é real em minutos. Use luvas e gorro.",
+                "2. Mendicância Agressiva: Em áreas como Yonge/Dundas, alguns pedintes podem gritar. Apenas ignore e continue andando.",
+                "3. Ciclistas: Cuidado ao abrir a porta do táxi ou Uber. As ciclovias são movimentadas.",
+                "4. Guaxinins: Não tente fazer carinho. Eles mordem e podem ter raiva.",
+                "5. Preço do Uber: Em dias de chuva/neve ou shows, o preço dinâmico triplica.",
+                "6. Obras: A cidade tem duas estações: Inverno e Construção. Obras atrapalham o trânsito sempre.",
+                "7. Furto de Bicicleta: Muito comum.",
+                "8. Esquecer Gorjeta: O garçom vai te cobrar na saída se você esquecer. É culturalmente ofensivo não dar.",
+                "9. Gelo Preto (Black Ice): No inverno, o gelo na calçada fica invisível e escorrega muito.",
+                "10. Aluguel de Carro: O trânsito na rodovia 401 é um dos piores da América do Norte. Evite dirigir em Toronto."
+            ],
+
+            roteiros: {
+                "curto": {
+                    titulo: "Downtown Clássico (2 Dias)",
+                    texto: [
+                        "Dia 1: CN Tower, Ripley's Aquarium e cerveja na Steam Whistle Brewery. Pôr do sol na beira do lago.",
+                        "Dia 2: St. Lawrence Market (almoço), Distillery District e Eaton Centre (compras)."
+                    ]
+                },
+                "medio": {
+                    titulo: "Cultura e Ilhas (4 Dias)",
+                    texto: [
+                        "Dias 1-2: Siga o roteiro curto.",
+                        "Dia 3: Balsa para Toronto Islands (alugue bike lá) e Chinatown/Kensington Market à tarde.",
+                        "Dia 4: Museu Real de Ontário (ROM) e Yorkville (bairro chique)."
+                    ]
+                },
+                "longo": {
+                    titulo: "Toronto + Niagara (6 Dias)",
+                    texto: [
+                        "Dias 1-4: Siga o roteiro médio.",
+                        "Dia 5: Bate-volta para Niagara Falls (Cataratas) e Niagara-on-the-Lake (Vinhos).",
+                        "Dia 6: Casa Loma pela manhã e Queen West (lojas descoladas) à tarde."
+                    ]
+                },
+            },
+
+            links: {
+                hotel: "https://www.booking.com/city/ca/toronto.pt-br.html", 
+                passeio: "https://www.citypass.com/toronto", 
+                seguro: "https://www.segurospromo.com.br" 
+            },
+        },
+    ],
           "México": [
     {
         name: "Cancun",
@@ -14819,8 +16397,16 @@ function renderSidebar() {
         Object.keys(paises).forEach(pais => {
             const btnPais = document.createElement('button');
             btnPais.className = 'country-btn';
-            const code = countryFlags[pais] || 'unknown';
-            const flagHTML = code !== 'unknown' ? `<img src="https://flagcdn.com/w40/${code}.png" class="flag-icon">` : `<i class="ri-flag-line"></i>`;
+            
+            let flagHTML;
+            if (countryFlags[pais]) {
+                flagHTML = `<img src="https://flagcdn.com/w40/${countryFlags[pais]}.png" class="flag-icon">`;
+            } else if (categoryEmojis[pais]) {
+                flagHTML = `<span style="font-size: 1.2rem; width: 22px; display: inline-block; text-align: center;">${categoryEmojis[pais]}</span>`;
+            } else {
+                flagHTML = `<i class="ri-flag-line"></i>`;
+            }
+
             btnPais.innerHTML = `${flagHTML} <span>${pais}</span>`;
             btnPais.onclick = () => loadCities(pais, paises[pais]);
             countryList.appendChild(btnPais);

@@ -16537,6 +16537,7 @@ function openModal(cidade, imagemUrl) {
         </div>
     `;
     
+    document.querySelector('.fab-container').style.display = 'none';
     modal.classList.add('active');
 }
 
@@ -16622,7 +16623,10 @@ function formatList(data) {
     return `<p>${data}</p>`;
 }
 
-function closeModal() { modal.classList.remove('active'); }
+function closeModal() {
+    modal.classList.remove('active');
+    document.querySelector('.fab-container').style.display = 'flex';
+}
 modal.onclick = (e) => { if (e.target === modal) closeModal(); };
 
 // --- SISTEMA DE BUSCA GLOBAL ---
@@ -17110,16 +17114,24 @@ window.openMapCity = function(cityName) {
         return;
     }
 
-    Object.keys(worldData).forEach(cat => {
-        Object.keys(worldData[cat]).forEach(sub => {
+    // Usando loops for...of para poder usar 'break'
+    for (const cat of Object.keys(worldData)) {
+        for (const sub of Object.keys(worldData[cat])) {
             const city = worldData[cat][sub].find(c => c.name === cityName);
-            if (city) foundCity = city;
-        });
-    });
+            if (city) {
+                foundCity = city;
+                break; // Encontrou a cidade, sai do loop interno
+            }
+        }
+        if (foundCity) {
+            break; // Encontrou a cidade, sai do loop externo
+        }
+    }
 
     if (foundCity) {
+        console.log("Cidade encontrada:", JSON.stringify(foundCity, null, 2));
         currentCity = foundCity; // Atualiza variável global
-        openCityModal(foundCity); // Abre o modal
+        openModal(foundCity, foundCity.imagem); // Abre o modal
     } else {
         console.warn("Cidade não encontrada nos dados:", cityName);
     }

@@ -17002,22 +17002,35 @@ function getAllDestinationsFlatSafe() {
 }
 
 // ==========================================
-// WIDGETS PANEL (NOVO E UNIFICADO)
+// WIDGETS E NOVO MENU FAB
 // ==========================================
-function toggleWidgetPanel() {
-    const panel = document.getElementById('widget-panel');
-    if (!panel) return;
 
-    const isHidden = panel.classList.contains('hidden');
-    
-    if (isHidden) {
-        panel.classList.remove('hidden');
-        // Se o painel está sendo aberto, carrega as cotações
+function toggleFabMenu() {
+    const fabContainer = document.querySelector('.fab-container');
+    if (fabContainer) {
+        fabContainer.classList.toggle('active');
+    }
+}
+
+function openCurrencyWidget() {
+    const currencyWidget = document.getElementById('currency-widget');
+    if (currencyWidget) {
+        currencyWidget.classList.remove('hidden');
         if (!isRatesLoaded) {
-            fetchRates(); 
+            fetchRates();
         }
-    } else {
-        panel.classList.add('hidden');
+    }
+    // Fecha o menu FAB ao abrir um widget
+    const fabContainer = document.querySelector('.fab-container');
+    if (fabContainer && fabContainer.classList.contains('active')) {
+        fabContainer.classList.remove('active');
+    }
+}
+
+function closeCurrencyWidget() {
+    const currencyWidget = document.getElementById('currency-widget');
+    if (currencyWidget) {
+        currencyWidget.classList.add('hidden');
     }
 }
 

@@ -35,7 +35,14 @@ const categoryEmojis = {
     "Templo": "⛩️",
     "Maravilha Natural": "🌊",
     "Patrimônio Mundial": "🌍",
-    "Montanha": "🏔️" // Adicionado
+    "Montanha": "🏔️",
+    
+    // Regiões do Brasil
+    "Sul": "🧉",          // Chimarrão
+    "Nordeste": "☀️",     // Sol e Calor
+    "Sudeste": "🌇",      // Grandes Cidades
+    "Norte": "🌳",        // Floresta/Amazônia
+    "Centro Oeste": "🐆"  // Pantanal/Natureza
 };
 // --- CONFIGURAÇÃO GLOBAL ---
 
@@ -1276,7 +1283,6090 @@ const realCostData = {
 };
 
 /* BANCO DE DADOS COMPLETO */
-const worldData = {
+const worldData = { 
+     "Brasil": {
+        "Sul": [
+             {
+                name: "Gramado",
+                imagem: "https://www.melhoresdestinos.com.br/wp-content/uploads/2019/02/passagens-aereas-gramado-capa2019-01.jpg",
+                tags: ["Romance", "Frio", "Chocolate"],
+                mapa: "https://goo.gl/maps/gramado",
+                clima: "Temperado. Invernos rigorosos (pode gear) e verões amenos.",
+                
+                // Adicione dentro do objeto de Gramado (após 'clima' e antes de 'pontos_turisticos')
+veredicto: {
+    melhor_epoca: "Junho a Agosto (Inverno/Fondue) ou Novembro a Janeiro (Natal Luz). Março é mais tranquilo.",
+    ideal_para: [
+        "Casais em lua de mel ou busca de romance",
+        "Famílias com crianças (Snowland, Mini Mundo, Florybal)",
+        "Amantes de gastronomia (Café colonial, Galeto e Fondue)",
+        "Quem busca charme europeu e segurança total"
+    ],
+    nao_ideal_para: [
+        "Viajantes com orçamento 'mochilão' (tudo é cobrado e caro)",
+        "Quem busca vida noturna agitada de baladas (a cidade dorme cedo)",
+        "Quem prefere trilhas selvagens e isolamento (turismo massificado)"
+    ],
+    perfis: [
+        { icone: "ri-hearts-fill", nome: "Romântico" },
+        { icone: "ri-bear-smile-fill", nome: "Família" },
+        { icone: "ri-goblet-fill", nome: "Gastrô" },
+        { icone: "ri-vip-diamond-fill", nome: "Luxo" }
+    ]
+},
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Lago Negro: O cartão-postal da cidade. Caminhe ao redor, ande de pedalinho e aprecie as hortênsias.",
+                    "2. Mini Mundo: Um parque a céu aberto com réplicas fiéis de prédios do mundo todo, 24x menores que o real.",
+                    "3. Snowland: O primeiro parque de neve indoor das Américas. Esqui, patinação e neve de verdade o ano todo.",
+                    "4. Rua Coberta: O charme do centro. Restaurantes, lojas e eventos protegidos por um telhado de vidro.",
+                    "5. Igreja Matriz São Pedro: Famosa por sua arquitetura em pedra basalto e os 12 apóstolos na frente.",
+                    "6. Fonte do Amor Eterno: Inspirada na Pont des Arts de Paris, onde casais prendem cadeados com seus nomes.",
+                    "7. Rua Torta: Uma ladeira sinuosa e florida (Rua Emílio Sorgetz) perfeita para fotos divertidas.",
+                    "8. Mundo a Vapor: Um museu interativo sobre a era das máquinas, com a famosa fachada do trem pendurado.",
+                    "9. Fábricas de Chocolate: Visitar a Prawer ou Florybal para ver a produção artesanal é obrigatório.",
+                    "10. Pórticos de Gramado: As entradas da cidade (via Nova Petrópolis ou Taquara) são lindas construções bávaras."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Sequência de Fondue: O clássico da serra. Queijo, Carne (na pedra) e Chocolate, tudo à vontade.",
+                    "2. Café Colonial: Uma refeição que vale por três. Mesas fartas com pães, bolos, tortas, frios e bebidas.",
+                    "3. Galeto ao Primo Canto: Franguinho assado na brasa, servido com polenta, massas e salada de maionese.",
+                    "4. Chocolate Artesanal: O melhor do Brasil. Chocolate quente cremoso no frio é lei.",
+                    "5. Culinária Alemã: Experimente o Joelho de Porco (Eisbein) com chucrute e batatas.",
+                    "6. Massas Italianas: A herança italiana é forte, com rodízios de massas e risotos incríveis.",
+                    "7. Apfelstrudel: Torta de maçã tradicional, servida quente com nata ou sorvete de creme.",
+                    "8. Cuca: Um bolo típico alemão com farofa doce em cima, recheado de frutas ou doce de leite.",
+                    "9. Churrasco Gaúcho: As churrascarias de luxo em Gramado oferecem cortes nobres e serviço impecável.",
+                    "10. Truta: Peixe de água doce muito comum na região, geralmente servido com molho de amêndoas."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Sem Semáforos: Gramado praticamente não tem semáforos. Os motoristas param religiosamente na faixa.",
+                    "2. Natal Luz: É um dos maiores eventos natalinos do mundo, durando mais de 3 meses.",
+                    "3. Kikito: O troféu do Festival de Cinema de Gramado é o 'Oscar' brasileiro, e tem uma estátua dele na cidade.",
+                    "4. Hortênsias: São o símbolo da região, florescendo e colorindo as estradas de azul na primavera/verão.",
+                    "5. Neve no Brasil: É uma das poucas cidades brasileiras onde há chance real de nevar no inverno.",
+                    "6. Colonização: A cidade é uma mistura única das culturas alemã, italiana e portuguesa.",
+                    "7. Sem Fios: No centro, toda a fiação elétrica é subterrânea, deixando a paisagem limpa e bonita.",
+                    "8. Gramado Zoo: Um zoológico que só tem animais da fauna brasileira e foca no bem-estar animal (sem jaulas).",
+                    "9. Cidade Jardim: A prefeitura investe pesado em paisagismo, trocando as flores de acordo com a estação.",
+                    "10. Arquitetura Bavára: O estilo enxaimel é lei em muitas construções para manter a estética europeia."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Igreja Matriz São Pedro: O coração católico da cidade, construída com 78 mil pedras de basalto.",
+                    "2. Igreja do Relógio: Templo luterano no alto de uma colina, com uma vista linda e hortênsias ao redor.",
+                    "3. Caminho da Cruz: Uma Via Sacra ao ar livre perto da Igreja Matriz.",
+                    "4. Gruta N. Sra. de Lourdes: Um local de silêncio e oração encravado na natureza.",
+                    "5. Capela Santa Rita de Cássia: Pequena e histórica, ideal para momentos de reflexão.",
+                    "6. Herança Luterana: A forte imigração alemã trouxe o protestantismo, que convive bem com o catolicismo.",
+                    "7. Tapetes de Corpus Christi: A comunidade enfeita as ruas com serragem colorida e flores.",
+                    "8. Procissão de Ramos: Evento tradicional que movimenta a cidade antes da Páscoa.",
+                    "9. Sino Eletrônico: Os sinos da Igreja Matriz tocam melodias famosas em horários pontuais.",
+                    "10. Festas de Padroeiros: As comunidades do interior (linhas) fazem festas com muita comida e música típica."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Natal Luz (Out-Jan): Shows, desfiles e luzes transformam a cidade na casa do Papai Noel.",
+                    "2. Festival de Cinema (Agosto): O tapete vermelho mais famoso do Brasil, com celebridades e filmes inéditos.",
+                    "3. Páscoa em Gramado (Mar/Abr): Decoração temática de chocolate e paradas lúdicas na avenida.",
+                    "4. Festa da Colônia (Abril/Maio): Celebração das raízes alemãs e italianas com muita comida típica barata.",
+                    "5. Inverno (Jun-Ago): Alta temporada. Frio, neblina, lareira e vinhos. Prepare o bolso.",
+                    "6. Primavera (Set-Nov): A época das hortênsias. A cidade fica azul e rosa. Clima agradável.",
+                    "7. Festival de Cultura e Gastronomia (Setembro): Chefs renomados criam pratos de rua sofisticados.",
+                    "8. Gramado in Concert (Fevereiro): Festival internacional de música clássica.",
+                    "9. Outono (Mar-Jun): O 'veranico' de maio traz dias quentes e noites frias. As árvores plátanos ficam alaranjadas.",
+                    "10. Vindima (Fev-Mar): Época da colheita da uva, com festas nas vinícolas da região."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Voltagem: 220V (Atenção! A maioria do Brasil é 110V/127V).",
+                    "2. DDD: 54.",
+                    "3. Aeroportos: Salgado Filho (Porto Alegre - 2h de viagem) ou Caxias do Sul (45min, mas com neblina).",
+                    "4. Uber/99: Funcionam bem na cidade e para ir até Canela.",
+                    "5. Bustour: Ônibus turístico de dois andares (Hop-on Hop-off) que conecta Gramado e Canela.",
+                    "6. Clima: Pode fazer 30ºC de dia e 10ºC à noite no mesmo dia. O tempo muda rápido.",
+                    "7. Segurança: Uma das cidades mais seguras do Brasil. Pode andar na rua à noite tranquilamente.",
+                    "8. Moeda: Real (BRL). Aceita-se cartão em tudo.",
+                    "9. Taxa de Turismo: Hotéis cobram uma pequena taxa diária (opcional, mas comum) para manutenção da cidade.",
+                    "10. Internet: 4G/5G funcionam bem no centro, mas oscilam nas áreas rurais (Linhas)."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Reservas: Restaurantes famosos de Fondue têm filas de espera de 2h. Reserve antes.",
+                    "2. Natal Luz: Compre os ingressos dos shows pagos (Nativitaten, Grande Desfile) meses antes.",
+                    "3. Roupas: Leve casaco SEMPRE. Mesmo no verão, a noite pode esfriar na serra.",
+                    "4. Carro ou Transfer?: Carro dá liberdade, mas estacionar no centro é caro e difícil. Uber sai mais barato.",
+                    "5. Canela: A cidade vizinha é colada (7km). Visite a Catedral de Pedra e o Parque do Caracol.",
+                    "6. Pedágios: Se vier de carro de Porto Alegre, prepare-se para pedágios na rota.",
+                    "7. Neblina: A serra costuma ter neblina densa à noite. Cuidado redobrado na estrada.",
+                    "8. Alta Temporada: Julho, Novembro e Dezembro são meses caros e lotados.",
+                    "9. Calçados: Você vai andar muito. Esqueça salto alto nas ruas de paralelepípedo.",
+                    "10. Chocolate: Deixe espaço na mala para trazer chocolates. É impossível resistir."
+                ],
+                // --- NOVO: NÚMEROS IMPORTANTES (GRAMADO) ---
+                numeros: [
+                    "1. 190 (Brigada Militar): Emergência policial (no Rio Grande do Sul a PM chama-se Brigada).",
+                    "2. (54) 3286-0200 (Hospital Arcanjo São Miguel): O principal hospital da cidade (atende urgências 24h).",
+                    "3. 192 (SAMU): Ambulância para emergências médicas graves.",
+                    "4. 193 (Bombeiros): Incêndios e resgates.",
+                    "5. (54) 3286-9533 (Secretaria de Turismo): Informações oficiais e apoio ao visitante.",
+                    "6. (54) 3286-1070 (Rodoviária de Gramado): Informações sobre horários de ônibus intermunicipais.",
+                    "7. (54) 3295-1795 (Delegacia de Polícia Civil): Para registrar ocorrências e perda de documentos.",
+                    "8. 191 (Polícia Rodoviária Federal): Emergências na estrada (Rota Romântica) vindo de Porto Alegre.",
+                    "9. 156 (Fala Cidadão): Prefeitura de Gramado (dúvidas sobre a cidade e trânsito).",
+                    "10. (54) 3286-8800 (Rádio Táxi Gramado): Serviço de transporte seguro 24 horas."
+                ],
+                // --- NOVO: RISCOS E ERROS (GRAMADO) ---
+                riscos: [
+                    "1. Subestimar o Frio: A umidade da serra faz a sensação térmica ser muito menor que o termômetro. Leve casaco pesado mesmo se a previsão for 10ºC.",
+                    "2. Filas de Fondue: Em alta temporada (julho), chegar num restaurante famoso sem reserva às 20h significa esperar 2 horas na rua gelada. Reserve!",
+                    "3. Neblina na Estrada: A subida da serra à noite ou de manhã cedo costuma ter neblina (cerração) zero visibilidade. Dirija com muito cuidado.",
+                    "4. Voltagem Errada: Gramado é 220V (diferente de Porto Alegre que é 110V). Cuidado para não queimar secadores e chapinhas.",
+                    "5. Estacionamento no Centro: É caro e difícil de achar. O sistema rotativo tem fiscais rigorosos. Use Uber ou estacione mais longe.",
+                    "6. Fondue Muito Barato: Desconfie de promoções agressivas na rua (ex: R$ 39,90). Geralmente a qualidade do queijo e chocolate é baixa.",
+                    "7. Natal Luz em Cima da Hora: Os ingressos para os grandes shows esgotam meses antes. Não deixe para comprar na bilheteria na hora.",
+                    "8. Achar que Neva Sempre: Neve é um fenômeno raro. Não viaje com a certeza absoluta de ver neve para não se frustrar (mas geada é comum!).",
+                    "9. Chocolate 'Pega Turista': Existem dezenas de marcas. Prove antes de comprar caixas grandes. Algumas têm mais gordura hidrogenada que cacau.",
+                    "10. Uber na Chuva: Quando chove ou acaba um show do Natal Luz, conseguir um Uber pode demorar muito. Tenha o telefone de um Rádio Táxi salvo."
+                ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (O Charme do Centro): Comece na Av. Borges de Medeiros, Rua Coberta e Igreja São Pedro. Tarde no Lago Negro (pedalinho). Jantar: Sequência de Fondue obrigatória.",
+                            "Dia 2 (Clássicos): Manhã no Mini Mundo. Tarde: Visite uma Fábrica de Chocolate (Florybal ou Prawer) e tire foto no Pórtico de entrada.",
+                            "Dica Extra: Se der tempo, uma passada rápida na Catedral de Pedra em Canela (7km ao lado)."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Aventura na Neve): Dia dedicado ao Snowland (roupa térmica inclusa) ou Acquamotion (águas termais), dependendo do seu estilo.",
+                            "Dia 4 (Explorando Canela): Bondinhos Aéreos (Cascata do Caracol) e Skyglass (plataforma de vidro). Almoço em Canela. Fim de tarde no Castelinho Caracol.",
+                            "Dia 5 (Vistas Incríveis): Olivas de Gramado (pôr do sol com piquenique e música) ou Le Jardin (Parque de Lavanda)."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Uva e Vinho): Bate-volta para Bento Gonçalves. Passeio de Maria Fumaça e visita às vinícolas do Vale dos Vinhedos (Miolo ou Casa Valduga).",
+                            "Dia 7 (Raízes): Nova Petrópolis (Labirinto Verde e Praça das Flores). Almoço alemão tradicional.",
+                            "Dia 8 (Gula Final): Manhã de compras na Rua Coberta e despedida com um Café Colonial farto (Bela Vista ou Coelho)."
+                        ]
+                    }
+                },
+                // SEUS LINKS DE AFILIADO (ID 304142)
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-644910&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/gramado/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+              {
+                name: "Foz do Iguaçu",
+                tags: ["Natureza", "Aventura", "Fronteira"],
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Sunset_over_Iguazu2.jpg/960px-Sunset_over_Iguazu2.jpg",
+                mapa: "https://goo.gl/maps/foz",
+                clima: "Subtropical. Verões quentes e invernos amenos (mas pode fazer frio!).",
+                // Adicione dentro do objeto de Foz do Iguaçu
+veredicto: {
+    melhor_epoca: "Abril a Junho ou Setembro a Novembro (Clima agradável). Verão é muito quente, mas as quedas estão com volume máximo.",
+    ideal_para: [
+        "Amantes da natureza e ecoturismo (Cataratas e Parque das Aves)",
+        "Quem busca compras e eletrônicos baratos (Ciudad del Este - Paraguai)",
+        "Curiosos por engenharia gigante (Usina de Itaipu)",
+        "Jantares internacionais (Puerto Iguazú - Argentina)"
+    ],
+    nao_ideal_para: [
+        "Quem tem mobilidade muito reduzida (muita caminhada nas trilhas)",
+        "Quem não suporta calor úmido extremo (Dezembro/Janeiro é sufocante)",
+        "Quem odeia aglomeração e caos urbano (na parte de compras no Paraguai)"
+    ],
+    perfis: [
+        { icone: "ri-plant-fill", nome: "Natureza" },
+        { icone: "ri-shopping-bag-3-fill", nome: "Compras" },
+        { icone: "ri-group-fill", nome: "Família" },
+        { icone: "ri-earth-fill", nome: "Fronteira" }
+    ]
+},
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Cataratas do Iguaçu (Brasil): A vista panorâmica mais bonita. A trilha leva até a 'Garganta do Diabo'.",
+                    "2. Parque das Aves: O maior viveiro de aves da América Latina. Tucanos e araras voam sobre sua cabeça.",
+                    "3. Itaipu Binacional: Visita à maior usina geradora de energia do mundo. O tour panorâmico é grandioso.",
+                    "4. Marco das Três Fronteiras: O encontro mágico entre Brasil, Argentina e Paraguai, com show de luzes ao pôr do sol.",
+                    "5. Macuco Safari: Aventura radical de barco que sobe o rio e entra debaixo das quedas d'água (molha muito!).",
+                    "6. Cataratas (Lado Argentino): Outra perspectiva. Trilhas mais longas e passarelas que ficam em cima das quedas.",
+                    "7. Templo Budista Chen Tien: Um pedaço da Ásia no Paraná. Jardins zen e mais de 120 estátuas.",
+                    "8. Dreamland (Museu de Cera): Diversão para família com réplicas perfeitas de famosos e cenários de filmes.",
+                    "9. Yup Star (Roda Gigante): Uma das maiores da América Latina, com vista para os 3 países.",
+                    "10. Mesquita Omar Ibn Al-Khattab: Uma construção belíssima que mostra a força da comunidade árabe na cidade."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Pirá de Foz: O prato típico oficial. Peixe surubim com molho de gengibre e purê de mandioca.",
+                    "2. Churrasco (Brasil e Argentina): A região tem carnes de elite. O 'Bife de Chorizo' argentino é obrigatório.",
+                    "3. Shawarma: Devido à grande colônia árabe, é o lanche de rua mais popular (pão sírio recheado).",
+                    "4. Chipa Paraguaia: O 'pão de queijo' do Paraguai, feito com polvilho e queijo, em formato de ferradura.",
+                    "5. Peixes do Rio Paraná: Dourado e Pacu assados na brasa são clássicos da região.",
+                    "6. Comida Árabe Autêntica: Restaurantes libaneses de altíssimo nível, com homus, kibe cru e esfihas.",
+                    "7. Doce de Leite Argentino: Em Puerto Iguazú, é item obrigatório de compra e sobremesa.",
+                    "8. Empanadas Argentinas: Pastel de forno com recheios variados (carne cortada na faca é a melhor).",
+                    "9. Tereré: Bebida típica gelada de erva-mate, muito consumida devido ao calor.",
+                    "10. Jantar Show (Rafain): Churrascaria famosa que serve jantar com show de danças latino-americanas."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Tríplice Fronteira: É um dos poucos lugares do mundo onde você pode estar em 3 países no mesmo dia.",
+                    "2. Volume de Água: As Cataratas têm o maior fluxo médio de água do mundo (1.5 milhão de litros por segundo).",
+                    "3. Energia Gigante: A energia gerada por Itaipu poderia abastecer o mundo inteiro por 2 dias.",
+                    "4. Lenda Indígena: Diz a lenda que as quedas foram criadas por uma serpente gigante (M'Boi) furiosa de amor.",
+                    "5. Comunidade Árabe: Foz tem a 2ª maior comunidade árabe do Brasil, perdendo apenas para SP.",
+                    "6. Sete Maravilhas: As Cataratas foram eleitas uma das 7 Maravilhas Naturais do Mundo.",
+                    "7. Ponte da Amizade: É a fronteira mais movimentada do Brasil (milhares de pessoas cruzam para o Paraguai todo dia).",
+                    "8. Cidade Cosmopolita: Mais de 80 etnias vivem em harmonia na cidade.",
+                    "9. Parque Nacional: É Patrimônio Natural da Humanidade pela UNESCO.",
+                    "10. Quatis Ladrões: Cuidado com os quatis no parque! Eles abrem zíperes de mochilas para roubar comida."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Diversidade Única: Católicos, Muçulmanos, Budistas e Espíritas convivem em paz exemplar.",
+                    "2. Mesquita Omar Ibn Al-Khattab: Uma das maiores do Brasil. O interior tem arabescos incríveis (precisa usar véu).",
+                    "3. Templo Budista Chen Tien: Fica no alto de uma colina com vista para o Paraguai. Tem um Buda de 7 metros.",
+                    "4. Catedral São João Batista: O padroeiro da cidade. A festa junina da catedral é famosa.",
+                    "5. Comunidade Islâmica: É comum ver mulheres de hijab e ouvir o chamado para oração na região da Mesquita.",
+                    "6. Capela da Nossa Senhora de Caacupé: Padroeira do Paraguai, muito venerada na fronteira.",
+                    "7. Lendas Guaranis: A cultura indígena local é forte e preservada nas histórias das tribos.",
+                    "8. Igrejas Evangélicas: Grande crescimento e presença nos bairros.",
+                    "9. Centro de Cultura Árabe: Promove aulas de língua e culinária para integrar a comunidade.",
+                    "10. Natal de Águas e Luzes: Evento ecumênico que une a cidade no final do ano."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Verão (Dez-Mar): Calor intenso (35ºC+) e chuvas rápidas. As cataratas ficam com vazão máxima (barrentas).",
+                    "2. Inverno (Jun-Ago): Ameno a frio (10ºC-20ºC). Água mais limpa e definida nas quedas. Ótimo para caminhar.",
+                    "3. Natal de Águas e Luzes (Dez): Decoração linda na cidade e na Usina de Itaipu.",
+                    "4. Black Friday (Nov): O comércio do Paraguai faz promoções gigantescas.",
+                    "5. Meia Maratona das Cataratas: Corrida famosa que passa dentro do Parque Nacional.",
+                    "6. Primavera (Set-Nov): Clima agradável e o parque cheio de borboletas.",
+                    "7. Festival de Turismo das Cataratas (Jun): Grande evento de negócios do setor.",
+                    "8. Outono (Mar-Jun): Considerada por muitos a melhor época (menos calor, menos chuva).",
+                    "9. Feriados: A cidade lota. Reserve hotel com antecedência.",
+                    "10. Vazão das Águas: Varia o ano todo. Na seca as quedas ficam definidas; na cheia, vira um 'mar' de água."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Voltagem: 110V/127V (Diferente de muitas cidades do sul que são 220V).",
+                    "2. Moeda: Real (BR), Peso (AR), Guarani (PY) e Dólar (US) são aceitos em quase todo lugar.",
+                    "3. Documentos: RG (menos de 10 anos) ou Passaporte para cruzar fronteiras. CNH vale só para dirigir (não serve para imigração em alguns casos).",
+                    "4. DDD: 45.",
+                    "5. Aeroporto: IGU (Foz do Iguaçu). Tem também o de Puerto Iguazú (IGR) na Argentina.",
+                    "6. Compras Paraguai: Cota de isenção é US$ 500 via terrestre (sujeito a mudança, verifique).",
+                    "7. Transporte: Uber funciona bem no Brasil. Para cruzar fronteira, melhor usar táxi, transfer ou ônibus internacional.",
+                    "8. Carta Verde: Seguro obrigatório para dirigir carro brasileiro na Argentina ou Paraguai.",
+                    "9. Clima: Úmido. A sensação térmica no verão é de 'sauna'.",
+                    "10. Idioma: Português, mas o 'Portunhol' é a língua não-oficial da fronteira."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Capa de Chuva: Leve de casa. No parque custa o triplo e você VAI se molhar na passarela.",
+                    "2. Paraguai: Vá de manhã cedo (7h) para evitar filas na ponte e calor. Cuide da bolsa nas ruas cheias.",
+                    "3. Lado Argentino: Reserve um dia inteiro. É maior que o lado brasileiro e exige muita caminhada.",
+                    "4. Protetor e Repelente: O parque é mata fechada. Tem sol forte e insetos.",
+                    "5. Roupas: Tênis confortável é obrigatório. Roupas que secam rápido (Dri-fit) ajudam.",
+                    "6. Câmbio: Não troque dinheiro no aeroporto. Casas de câmbio no centro têm cotação melhor.",
+                    "7. Itaipu: O passeio 'Circuito Especial' entra dentro da usina (exige calça comprida e sapato fechado).",
+                    "8. Quatis: Não coma nada nas trilhas das Cataratas. Os quatis sentem cheiro e atacam em bando.",
+                    "9. Duty Free: O Duty Free da Argentina (antes da aduana) é lindo e climatizado, vale o passeio.",
+                    "10. Vacina: Tenha a vacina de Febre Amarela em dia (recomendado para áreas de mata)."
+                ],
+                // --- NOVO: NÚMEROS IMPORTANTES (FOZ DO IGUAÇU) ---
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergência e segurança pública geral.",
+                    "2. (45) 2105-8135 (Polícia Turística): Batalhão especializado no atendimento ao visitante (PMPR).",
+                    "3. 192 (SAMU): Urgências médicas, mal súbito e acidentes.",
+                    "4. 193 (Bombeiros/SIATE): Resgate de traumas e incêndios.",
+                    "5. 0800 045 1516 (Teletur): Central de informações turísticas 24h gratuita.",
+                    "6. (45) 3576-5700 (Polícia Federal): Dúvidas sobre imigração, fronteiras e passaportes.",
+                    "7. (45) 3521-4200 (Aeroporto IGU): Informações sobre voos e achados e perdidos.",
+                    "8. (45) 3522-2590 (Rodoviária Internacional): Ônibus para o Brasil, Paraguai e Argentina.",
+                    "9. (45) 3521-1951 (Hospital Municipal): O Padre Germano Lauck é a referência pública de emergência.",
+                    "10. (45) 3522-1315 (Aduana/Receita Federal): Informações sobre cotas de compras e impostos na Ponte da Amizade."
+                ],
+                // --- NOVO: RISCOS E ERROS (FOZ DO IGUAÇU) ---
+                riscos: [
+                    "1. 'Guias' de Rua no Paraguai: Ao cruzar a ponte, homens vão te abordar oferecendo ajuda ou estacionamento. IGNORE. Eles ganham comissão para te levar em lojas ruins.",
+                    "2. Quatis nas Cataratas: Eles parecem fofos, mas são agressivos e mordem se sentirem cheiro de comida. Não abra lanches nas trilhas, eles atacam em bando.",
+                    "3. Eletrônicos na Rua: Nunca compre pen drives, perfumes ou celulares de ambulantes na rua em Ciudad del Este. São 100% falsificados ou golpe (caixa vazia).",
+                    "4. Molhar Eletrônicos: Na passarela da Garganta do Diabo, o spray de água é violento. Se seu celular não for à prova d'água, use capinha ou vai perder o aparelho.",
+                    "5. Cota de Compras: A cota é de US$ 500 via terrestre. Se passar disso, declare! A fiscalização na aduana brasileira é frequente e a multa é alta.",
+                    "6. Táxi x Uber na Fronteira: Uber brasileiro não pode cruzar a fronteira (o seguro não cobre). Para ir ao Paraguai/Argentina, use ônibus internacional, táxi ou transfer.",
+                    "7. Documento Vencido: RG com mais de 10 anos ou em mau estado é barrado na imigração da Argentina. Leve Passaporte ou RG novo.",
+                    "8. Lojas sem Garantia: No Paraguai, teste o produto NA LOJA antes de sair. A garantia 'soy yo' não existe. Exija testar na hora.",
+                    "9. Câmbio no Aeroporto: A cotação dentro do aeroporto é péssima. Troque o mínimo possível e deixe para trocar o resto nas casas de câmbio da cidade.",
+                    "10. Macuco Safari: Se tiver problemas de coluna ou estiver grávida, evite. O barco bate muito na água e a aventura é radical de verdade."
+                ],
+                // --- NOVO: ROTEIRO AUTOMÁTICO (FOZ DO IGUAÇU) ---
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Obrigatório): Manhã nas Cataratas Brasileiras (trilha + almoço no Porto Canoas). Tarde no Parque das Aves (logo na frente). Noite: Marco das 3 Fronteiras (show e pôr do sol).",
+                            "Dia 2 (Compras e Energia): Manhã de compras no Paraguai (vá cedo, volte 13h). Tarde na Usina de Itaipu (Panorâmica). Noite: Jantar árabe ou Churrascaria Rafain."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Lado Argentino): Dedique o dia todo às Cataratas Argentinas. É muita caminhada. Jante em Puerto Iguazú (Bife de Chorizo).",
+                            "Dia 4 (Aventura): Macuco Safari (barco nas cataratas) pela manhã. Tarde livre para piscina do hotel ou Museu de Cera (se tiver crianças).",
+                            "Dia 5 (Cultura): Templo Budista e Mesquita pela manhã. Almoço no Rafaian (costelão). Tarde relax no Blue Park ou compras no Duty Free (AR)."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Exploração): Kattamaram (passeio de barco no lago de Itaipu ao pôr do sol) ou Refúgio Biológico Bela Vista.",
+                            "Dia 7 (Compras VIP): Dia focado em compras de luxo no Duty Free Puerto Iguazú e vinhos nas vinotecas argentinas.",
+                            "Dia 8 (Natureza Secreta): Aguaray Eco Esportes (canoagem e trilha) ou Cachoeiras Secretas de Foz."
+                        ]
+                    }
+                },
+            
+                // SEUS LINKS DE AFILIADO (ID 304142)
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-643449&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/foz-do-iguacu/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+              {
+                name: "Florianópolis",
+                // FOTO: Ponte Hercílio Luz (Wikimedia - Link Estável)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Morro_da_Cruz%2C_Florian%C3%B3polis_-_SC%2C_Brazil_-_panoramio_%28cropped%29.jpg/1280px-Morro_da_Cruz%2C_Florian%C3%B3polis_-_SC%2C_Brazil_-_panoramio_%28cropped%29.jpg",
+                tags: ["Praia", "Ilha da Magia", "Surf"],
+                mapa: "https://goo.gl/maps/floripa",
+                clima: "Subtropical Úmido. Verões quentes (e chuvosos) e invernos amenos com vento sul gelado.",
+                // Adicione dentro do objeto de Florianópolis
+veredicto: {
+    melhor_epoca: "Março e Abril (O 'Veranico' tem sol, água agradável e menos trânsito). Dezembro/Janeiro é o auge do agito, mas o trânsito é intenso.",
+    ideal_para: [
+        "Amantes de praia (são 42 oficiais, uma para cada gosto)",
+        "Surfistas e praticantes de esportes ao ar livre (Sandboard, Kitesurf)",
+        "Vida noturna agitada (Beach Clubs de Jurerê e bares da Lagoa)",
+        "Gastronomia de frutos do mar (Rota das Ostras no Ribeirão da Ilha)"
+    ],
+    nao_ideal_para: [
+        "Quem tem fobia de trânsito parado (as filas no verão são lendárias)",
+        "Quem espera água morna o ano todo (a água é mais fria que no Nordeste)",
+        "Quem depende exclusivamente de ônibus (as distâncias são longas e demoradas)"
+    ],
+    perfis: [
+        { icone: "ri-sun-fill", nome: "Praia" },
+        { icone: "ri-surfboard-fill", nome: "Surf/Vibe" },
+        { icone: "ri-goblet-fill", nome: "Agito" },
+        { icone: "ri-restaurant-2-fill", nome: "Gastrô" }
+    ]
+},
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Ponte Hercílio Luz: O ícone da cidade. Atravesse a pé no pôr do sol para uma vista incrível.",
+                    "2. Ilha do Campeche: O 'Caribe Brasileiro'. Águas cristalinas e areia branca (acesso só de barco).",
+                    "3. Lagoa da Conceição: O coração da ilha. Esportes náuticos, dunas de areia e vida noturna agitada.",
+                    "4. Jurerê Internacional: O bairro do luxo, mansões sem muros, carrões e baladas famosas (beach clubs).",
+                    "5. Santo Antônio de Lisboa: Bairro histórico açoriano, com arquitetura colonial e pôr do sol imperdível.",
+                    "6. Praia da Joaquina: Famosa mundialmente pelas dunas (sandboard) e ondas perfeitas para o surf.",
+                    "7. Centro Histórico: Mercado Público, a Figueira Centenária e a Catedral Metropolitana.",
+                    "8. Mirante do Morro da Cruz: A melhor vista panorâmica da ilha e do continente.",
+                    "9. Praia Mole: O point da juventude, surfistas e da comunidade LGBT+. Clima descontraído.",
+                    "10. Projeto Tamar: Na Barra da Lagoa, um centro de visitação focado na preservação das tartarugas marinhas."
+                ],
+
+                // TOP 10 GASTRONOMIA (Cidade Criativa da UNESCO)
+                gastronomia: [
+                    "1. Ostras: Floripa é a capital nacional da ostra. Prove gratinada ou in natura no Ribeirão da Ilha.",
+                    "2. Sequência de Camarão: Vários pratos de camarão (frito, ao bafo, milanesa) servidos de uma vez.",
+                    "3. Tainha Assada: No inverno, é o prato rei. A pesca da tainha é tradição cultural.",
+                    "4. Pirão de Peixe: Acompanhamento obrigatório da culinária 'manezinha' (nativa).",
+                    "5. Pastel de Berbigão: Clássico do Mercado Público. Berbigão é um molusco típico da região.",
+                    "6. Café Colonial: Muito comum nas áreas de colonização alemã próximas, mas forte na ilha também.",
+                    "7. Cervejas Artesanais: A região é um polo cervejeiro premiado mundialmente.",
+                    "8. Anchova Grelhada: Peixe saboroso e muito comum nos restaurantes pé na areia.",
+                    "9. Cucas e Pães: Herança dos colonizadores, encontradas em padarias tradicionais.",
+                    "10. Alta Gastronomia: A cidade explodiu com restaurantes de chefs renomados nos últimos anos."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Ilha da Magia: Lendas dizem que bruxas habitavam a ilha e davam festas nas pedras de Itaguaçu.",
+                    "2. 42 Praias?: Dizem que são 42, mas os nativos garantem que passa de 100 se contar as pequenas baías.",
+                    "3. Manezinho da Ilha: É como se chama quem nasce em Floripa. Eles têm um sotaque rápido e único.",
+                    "4. Bernunça: Um bicho folclórico (parece um dragão) que engole crianças nas festas do Boi de Mamão.",
+                    "5. Gustavo Kuerten (Guga): O maior tenista do Brasil nasceu e mora aqui.",
+                    "6. Ponte Fechada: A Hercílio Luz ficou 28 anos interditada por risco de queda antes de reabrir em 2019.",
+                    "7. Duas Cidades: Floripa tem uma parte na Ilha (maioria) e uma parte no Continente.",
+                    "8. Renda de Bilro: Tradição trazida pelos Açores, ainda feita por rendeiras na Lagoa e Ribeirão.",
+                    "9. Garapuvu: É a árvore símbolo da cidade, usada antigamente para fazer canoas de um tronco só.",
+                    "10. Ostravaganza: A cidade produz mais de 90% das ostras consumidas no Brasil."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Festa do Divino: A maior tradição açoriana. Cortejos imperiais e muita comida grátis nas comunidades.",
+                    "2. Catedral Metropolitana: No ponto mais alto do centro, belíssima arquitetura colonial.",
+                    "3. Procissão do Senhor dos Passos: Uma das maiores manifestações religiosas do sul do país.",
+                    "4. Bruxaria e Misticismo: Franklin Cascaes registrou as lendas de bruxas que permeiam a cultura local.",
+                    "5. Igrejas de Ribeirão da Ilha: Pequenas capelas de frente para o mar, preservadas desde o séc XVIII.",
+                    "6. Iemanjá: O réveillon na ilha é marcado por muitas oferendas ao mar.",
+                    "7. Boi de Mamão: Teatro folclórico de rua, mistura de dança e música, amado pelas crianças.",
+                    "8. Diversidade: A ilha atrai pessoas do mundo todo, criando um ambiente de tolerância religiosa.",
+                    "9. Espiritismo: Forte presença de centros e obras sociais na região.",
+                    "10. Capelas de Santo Antônio: O santo casamenteiro é muito venerado nos bairros históricos."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Verão (Dez-Mar): A cidade lota. Praias cheias, festas em Jurerê e muito trânsito (Fila).",
+                    "2. Carnaval: As escolas de samba desfilam na passarela e o 'Bloco dos Sujos' toma o centro.",
+                    "3. Ironman Brasil (Maio): A maior prova de triathlon da América Latina acontece em Jurerê.",
+                    "4. Fenaostra (Set/Out): Festa Nacional da Ostra, com muita gastronomia e shows.",
+                    "5. Inverno (Jun-Ago): Época da Tainha. Praias vazias, dias lindos de céu azul, mas água gelada.",
+                    "6. Réveillon: O show de fogos na Ponte Hercílio Luz e na Beira-Mar Norte é espetacular.",
+                    "7. Maratona de Floripa (Ago): Corrida plana e rápida que atrai corredores do país todo.",
+                    "8. Planeta Atlântida: Festival de música gigante que ocorre no verão (próximo à ilha).",
+                    "9. Primavera (Set-Nov): Época de avistar baleias-francas no sul da ilha.",
+                    "10. Vento Sul: Fenômeno meteorológico que limpa o céu, esfria a temperatura e arrepia o mar."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Voltagem: 220V (Atenção! Maioria dos secadores de SP/RJ vai queimar aqui).",
+                    "2. DDD: 48.",
+                    "3. Aeroporto: FLN (Florianópolis). O novo terminal é moderno e eficiente.",
+                    "4. Transporte: Uber funciona bem. Ônibus são integrados por terminais (TICEN, TIRIO, etc).",
+                    "5. Trânsito: No verão, o trânsito para as praias (Norte e Sul) é caótico. Saia cedo.",
+                    "6. Segurança: Capital mais segura do Brasil, mas não descuide de celulares na praia.",
+                    "7. Água do Mar: É fria! Mesmo no verão, a corrente das Malvinas deixa a água refrescante.",
+                    "8. Norte vs Sul: Norte (águas quentes, calmas, luxo); Sul (águas frias, rústico, natureza); Leste (ondas, surf).",
+                    "9. Moeda: Real (BRL). Aceita cartão em tudo, até no vendedor de queijo coalho na areia.",
+                    "10. Custo: Jurerê é caríssimo. Outras praias têm preços justos. Pesquise antes de sentar."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Planeje o Trânsito: Em alta temporada, escolha uma região (Norte ou Sul) e fique nela para não perder horas na fila.",
+                    "2. Vento Sul: Se ventar Sul, a praia fica ruim. Vá para o norte da ilha ou passeios culturais.",
+                    "3. Ilha do Campeche: Tem cota diária de visitantes. Reserve o barco com antecedência.",
+                    "4. Ponte Hercílio Luz: Atravesse a pé. É grátis e a vista é linda, especialmente no fim de tarde.",
+                    "5. Uber no Aeroporto: Tem local específico para embarque (piso inferior).",
+                    "6. Trilhas: A ilha tem trilhas incríveis (Lagoinha do Leste é a mais famosa/difícil). Leve água.",
+                    "7. Praias Impróprias: Confira o relatório de balneabilidade (especialmente Canasvieiras e Ingleses) antes de entrar.",
+                    "8. Protetor Solar: O sol do sul queima muito, mesmo com vento fresco.",
+                    "9. Dinheiro: Leve espécie para pagar estacionamentos e vendedores de praia (o sinal de máquina pode falhar).",
+                    "10. Deixe Limpo: O manezinho cuida muito da natureza. Leve seu lixo embora da praia."
+                ],
+                // --- NOVO: NÚMEROS IMPORTANTES (FLORIANÓPOLIS) ---
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergência, segurança pública e policiamento nas praias.",
+                    "2. (48) 3665-5700 (DPTUR): Delegacia de Proteção ao Turista (atendimento especializado).",
+                    "3. 192 (SAMU): Urgências médicas, mal súbito e acidentes.",
+                    "4. 193 (Bombeiros / Salva-Vidas): Incêndios e, principalmente, afogamentos ou resgates no mar/trilhas.",
+                    "5. (48) 3331-4000 (Aeroporto Hercílio Luz): Informações de voos e achados e perdidos.",
+                    "6. (48) 3212-3035 (Rodoviária Rita Maria): Informações sobre ônibus para outras cidades/estados.",
+                    "7. 153 (Guarda Municipal): Trânsito e apoio ao cidadão na ilha.",
+                    "8. (48) 3251-9000 (Hospital Celso Ramos): Principal hospital de emergência (trauma) no centro da cidade.",
+                    "9. (48) 3025-6868 (Consórcio Fênix): Horários e linhas dos ônibus urbanos (TICEN, TIRIO, etc).",
+                    "10. 199 (Defesa Civil): Para emergências em dias de chuva forte (deslizamentos ou alagamentos)."
+                ],
+                // --- NOVO: RISCOS E ERROS (FLORIANÓPOLIS) ---
+                riscos: [
+                    "1. Fila de Trânsito: O erro nº 1. No verão, cruzar a ilha (Centro -> Norte ou Lagoa) pode levar 3 horas. Escolha um lado da ilha e fique nele.",
+                    "2. Vento Sul: O 'Vento Sul' estraga a praia (esfria e joga areia). Se ventar sul, fuja para o Norte da ilha ou passeios fechados.",
+                    "3. Água Imprópria (Vírus): No pico da temporada, praias movimentadas (Canasvieiras/Ingleses) podem ficar impróprias. Consulte o site do IMA (Balneabilidade) antes de entrar.",
+                    "4. Choque Térmico: Não espere água quentinha do Nordeste. A água é gelada (corrente das Malvinas). Entre devagar para evitar cãibras.",
+                    "5. Preços de Jurerê: Sentar em um Beach Club sem perguntar o preço antes pode custar uma fortuna. Uma água pode custar R$ 15 e uma porção R$ 200.",
+                    "6. Trilhas de Chinelo: A trilha da Lagoinha do Leste é difícil e íngreme. Turistas de chinelo frequentemente torcem o pé e precisam de resgate.",
+                    "7. Furto em Carros: Ao estacionar nas praias (especialmente Joaquina e Mole), NUNCA deixe mochilas ou eletrônicos visíveis dentro do carro.",
+                    "8. Golpe do Aluguel: Cuidado com casas de temporada incríveis e baratas no OLX/Facebook. O golpe do aluguel falso explode no verão.",
+                    "9. Uber Cancelando: Com o trânsito parado, motoristas cancelam muito. Em dias de chuva ou horários de pico, é difícil conseguir carro.",
+                    "10. Tainha 'Falsa': Na época da tainha, alguns restaurantes vendem tainha congelada do ano passado como fresca. Pergunte se é 'pesca do dia'."
+                ],
+                // --- NOVO: ROTEIRO AUTOMÁTICO (FLORIPA) ---
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Cartões-Postais): Manhã no Centro (Mercado Público + Praça XV). Tarde na Lagoa da Conceição (mirante) e Joaquina (dunas). Pôr do sol na Ponte Hercílio Luz.",
+                            "Dia 2 (Norte ou Sul): Escolha um lado para não perder tempo no trânsito. Norte: Jurerê Internacional e Forte São José. OU Sul: Ilha do Campeche (reserve antes) e Ribeirão da Ilha."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (História e Gastronomia): Santo Antônio de Lisboa (caminhada e almoço). Tarde em Sambaqui (pôr do sol mais bonito).",
+                            "Dia 4 (Natureza): Trilha da Lagoinha do Leste (se tiver fôlego) ou Praia do Matadeiro + Armação.",
+                            "Dia 5 (Família/Relax): Projeto Tamar na Barra da Lagoa. Almoço na Costa da Lagoa (vá de barquinho, é lindo)."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Bate-volta): Guarda do Embaú (rio encontrando o mar) ou Bombinhas (mergulho).",
+                            "Dia 7 (Aventura): Mergulho na Ilha do Arvoredo ou Sandboard nas dunas da Joaquina.",
+                            "Dia 8 (Despedida): Café da manhã colonial e compras de artesanato no centro."
+                        ]
+                    }
+                },
+                // SEUS LINKS DE AFILIADO (ID 304142)
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-643260&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/florianopolis/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+              {
+                name: "Porto Alegre",
+                // FOTO: Usina do Gasômetro no Pôr do Sol (Wikimedia - Link Estável)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/IBPA_17398_-_Vista_a%C3%A9rea_da_Orla_Moacyr_Scliar%2C_na_capital._O_-_2018-10-02_-_Luciano_Lanes-PMPA_%28cropped%29.jpg/1280px-IBPA_17398_-_Vista_a%C3%A9rea_da_Orla_Moacyr_Scliar%2C_na_capital._O_-_2018-10-02_-_Luciano_Lanes-PMPA_%28cropped%29.jpg",
+                tags: ["Cultura Gaúcha", "Churrasco", "Parques"],
+                mapa: "https://goo.gl/maps/portoalegre",
+                clima: "Subtropical. Verão muito quente (abafado) e Inverno rigoroso e úmido.",
+                // Adicione dentro do objeto de Porto Alegre
+veredicto: {
+    melhor_epoca: "Março a Maio (Outono) ou Outubro/Novembro (Primavera). O inverno é úmido e frio. Setembro é especial pelo Acampamento Farroupilha (cultura gaúcha).",
+    ideal_para: [
+        "Carnívoros e amantes de churrasco (as melhores churrascarias do país)",
+        "Apreciadores de um pôr do sol inesquecível (na revitalizada Orla do Guaíba)",
+        "Roteiro cultural urbano (Casa de Cultura Mario Quintana, Fundação Iberê)",
+        "Passeios tranquilos em parques (Redenção aos domingos é obrigatório)"
+    ],
+    nao_ideal_para: [
+        "Quem busca praias de mar azul (a cidade é banhada pelo Lago Guaíba)",
+        "Quem detesta oscilação térmica (é comum fazer as 4 estações no mesmo dia)",
+        "Quem espera uma cidade turística pequena (é uma metrópole de negócios e serviços)"
+    ],
+    perfis: [
+        { icone: "ri-fire-fill", nome: "Churrasco" },
+        { icone: "ri-sun-fill", nome: "Pôr do Sol" },
+        { icone: "ri-museum-fill", nome: "Cultura" },
+        { icone: "ri-tree-fill", nome: "Parques" }
+    ]
+},
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Orla do Guaíba: O ponto de encontro oficial. Calçadão revitalizado, perfeito para ver o pôr do sol (o mais bonito do mundo).",
+                    "2. Parque da Redenção (Farroupilha): Aos domingos, o Brique da Redenção (feira de antiguidades e artesanato) é obrigatório.",
+                    "3. Mercado Público: O coração gastronômico. Compre erva-mate, charque e almoce no Gambrinus ou Naval.",
+                    "4. Casa de Cultura Mario Quintana: O antigo Hotel Majestic onde viveu o poeta. O jardim no terraço tem uma vista linda.",
+                    "5. Fundação Iberê Camargo: Um prédio arquitetônico premiado (Álvaro Siza) na beira do rio, focado em arte moderna.",
+                    "6. Estátua do Laçador: O símbolo do gaúcho pilchado, fica na entrada da cidade (perto do aeroporto).",
+                    "7. Arena do Grêmio / Beira-Rio (Inter): Visitar os estádios da dupla Grenal é sagrado para quem ama futebol.",
+                    "8. Rua Gonçalo de Carvalho: Apelidada de 'A Rua Mais Bonita do Mundo', formou um túnel verde incrível com as árvores.",
+                    "9. Moinhos de Vento (Parcão): O bairro nobre e seu parque, cercado de cafés chiques e gente bonita.",
+                    "10. Santander Cultural: Um cofre antigo que virou centro cultural no Centro Histórico, arquitetura deslumbrante."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Churrasco Gaúcho: O verdadeiro. Costela na vala ou rodízio de espeto corrido. É religião.",
+                    "2. Xis Gaúcho: Não é hambúrguer! É um sanduíche prensado gigante (tamanho de um prato). Prove o Xis Coração ou Xis Tudo.",
+                    "3. Chimarrão: Não é comida, mas é o 'alimento' social. Compartilhar a cuia é sinal de amizade.",
+                    "4. Arroz Carreteiro: Feito com charque (carne seca) e tempero verde. Simples e delicioso.",
+                    "5. Tainha na Taquara: Peixe assado no bambu, muito comum na época da Festa do Peixe.",
+                    "6. Sagu com Creme: A sobremesa clássica da casa de vó. Bolinhas de vinho tinto com creme de baunilha.",
+                    "7. Cachorro-Quente do Rosário: Pão cacetinho (francês), salsicha, molho vermelho e muito tempero verde.",
+                    "8. Costelão 12 Horas: Assado lentamente até a carne desmanchar do osso.",
+                    "9. Cuca: Um bolo de origem alemã com farofa doce em cima, herança da colonização.",
+                    "10. Café Colonial: Mesas fartas com pães, frios e bolos, muito comum nos arredores da capital."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Voltagem Traiçoeira: Porto Alegre é 110V (127V), mas o resto do Rio Grande do Sul é 220V. Cuidado!",
+                    "2. Pôr do Sol: Os porto-alegrenses aplaudem o pôr do sol no Guaíba. É um ritual local.",
+                    "3. Gre-Nal: A rivalidade entre Grêmio e Internacional divide a cidade (e as famílias) ao meio.",
+                    "4. Vocabulário Próprio: Cacetinho (pão francês), Sinaleira (semáforo), Lomba (ladeira), Bergamota (mexerica).",
+                    "5. Feira do Livro: A maior a céu aberto da América Latina, acontece na Praça da Alfândega.",
+                    "6. Capital mais fria: É a capital estadual mais fria do Brasil (em sensação térmica e umidade).",
+                    "7. Mais Árvores: É uma das cidades mais arborizadas do país (túneis verdes).",
+                    "8. Ronaldinho Gaúcho: O craque nasceu e começou a carreira aqui (no Grêmio).",
+                    "9. Revolução Farroupilha: A guerra contra o Império (1835-1845) é celebrada com orgulho todo 20 de setembro.",
+                    "10. Usina: O prédio da Usina do Gasômetro gerava energia a carvão, hoje é centro cultural."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Catedral Metropolitana: Inspirada na Renascença italiana, com uma cúpula gigante no centro.",
+                    "2. Nossa Senhora dos Navegantes: A maior festa religiosa da cidade (2 de fevereiro), sincretizada com Iemanjá.",
+                    "3. Batuque e Umbanda: O RS tem a maior proporção de terreiros e praticantes de religiões afro do Brasil.",
+                    "4. Lutheranismo: Forte presença de igrejas luteranas devido à colonização alemã.",
+                    "5. Igreja das Dores: A mais antiga da cidade, com uma escadaria famosa e lendas de maldição.",
+                    "6. Tradicionalismo (CTG): O 'culto' às tradições gaúchas é quase uma religião cívica (bombacha, cavalo, lenço).",
+                    "7. Santuário Santa Rita: Local de peregrinação na zona sul.",
+                    "8. Templo Positivista: Raro no mundo, reflete a filosofia que influenciou a bandeira do Brasil ('Ordem e Progresso').",
+                    "9. Elis Regina: A maior cantora do Brasil nasceu aqui e é venerada culturalmente.",
+                    "10. Laçador: A estátua representa Paixão Côrtes, folclorista que serviu de modelo para o gaúcho ideal."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Semana Farroupilha (Setembro): O Acampamento Farroupilha monta uma 'cidade' de madeira no parque. Churrasco 24h por dia.",
+                    "2. Feira do Livro (Out/Nov): A praça enche de bancas. É tradição comprar livro e comer 'Xis' depois.",
+                    "3. Porto Verão Alegre (Janeiro): Festival de teatro e comédia para animar o verão vazio.",
+                    "4. Festa de Navegantes (Fevereiro): Procissão fluvial e terrestre que para a cidade.",
+                    "5. Inverno (Jun-Ago): Frio de verdade. Use casaco pesado, cachecol e botas. A cidade fica elegante (e cinza).",
+                    "6. Expointer (Agosto/Setembro): A maior feira agropecuária da América Latina (acontece na vizinha Esteio).",
+                    "7. Verão (Dez-Mar): A cidade esvazia (todos vão para o litoral). O calor é sufocante.",
+                    "8. South Summit (Março): Um dos maiores eventos de inovação e startups do mundo acontece no Cais Mauá.",
+                    "9. Bienal do Mercosul: Grande evento de arte contemporânea que usa vários espaços da cidade.",
+                    "10. Clássico Gre-Nal: Quando tem jogo, a cidade para. Evite andar perto do estádio com a cor do time rival."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Voltagem: 110V/127V. (Atenção: Gramado e Canela são 220V. Porto Alegre é 110V).",
+                    "2. DDD: 51.",
+                    "3. Aeroporto: Salgado Filho (POA). O principal do estado.",
+                    "4. Transporte: Uber funciona bem. Ônibus (Carris) cobre tudo, e tem os Lotação (micro-ônibus vermelhos mais caros e rápidos).",
+                    "5. Segurança: O Centro Histórico à noite é perigoso. Evite andar a pé com celular exposto.",
+                    "6. Clima: 'De forno a freezer'. Pode fazer 30ºC e 10ºC no mesmo dia. Traga roupas para tudo.",
+                    "7. Moeda: Real (BRL).",
+                    "8. Gentileza: O gaúcho pode parecer grosso pelo jeito de falar direto, mas é muito hospitaleiro.",
+                    "9. Água: Potável, mas muitos preferem mineral. A água do Guaíba não é para banho!",
+                    "10. Rodoviária: Fica na entrada da cidade, fácil acesso para ir a Gramado ou litoral."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Roupas: Se for no inverno, traga casaco pesado MESMO. A umidade faz o frio doer nos ossos.",
+                    "2. Chimarrão: Se te oferecerem, aceite. Não mexa na bomba (canudo) e beba até fazer o ronco no final.",
+                    "3. Voltagem: Verifique a chave do seu secador. POA é 110V, mas hotéis podem ter tomadas 220V identificadas.",
+                    "4. Domingo: O porto-alegrense vai para a Orla ou Redenção. O trânsito nessas áreas fica lento.",
+                    "5. Xis: Um Xis alimenta duas pessoas com fome moderada. É gigante.",
+                    "6. Mosquito: No verão, perto do rio, tem muito mosquito. Repelente ajuda.",
+                    "7. Centro: Visite o Mercado Público e museus de dia. À noite, prefira a Cidade Baixa ou Moinhos.",
+                    "8. Cidade Baixa (CB): É o bairro boêmio, dos bares e baladas alternativos.",
+                    "9. Moinhos de Vento: É o bairro chique, dos restaurantes caros e lojas de grife.",
+                    "10. Uber no Aeroporto: Tem andar específico para chamar (siga as placas)."
+                ],
+
+                // --- NOVO: NÚMEROS IMPORTANTES (PORTO ALEGRE) ---
+                numeros: [
+                    "1. 190 (Brigada Militar): Emergência policial. No RS, a PM chama-se Brigada.",
+                    "2. (51) 3288-2668 (Delegacia do Turista): Atendimento especializado para quem visita a cidade.",
+                    "3. 192 (SAMU): Urgências médicas e acidentes na rua.",
+                    "4. 193 (Bombeiros): Incêndios e resgates.",
+                    "5. (51) 3289-8000 (HPS - Pronto Socorro): O Hospital de Pronto Socorro (municipal) é referência em traumas.",
+                    "6. 118 (EPTC): Para emergências de trânsito, acidentes sem vítima ou bloqueios.",
+                    "7. 156 (Fala Porto Alegre): Informações da prefeitura, linhas de ônibus e serviços.",
+                    "8. (51) 3358-2000 (Aeroporto Salgado Filho): Informações de voos e terminal.",
+                    "9. (51) 3210-0101 (Rodoviária de POA): Informações sobre ônibus para interior e Mercosul.",
+                    "10. 199 (Defesa Civil): Em caso de cheias do Guaíba ou temporais severos."
+                ],
+                // --- NOVO: RISCOS E ERROS (PORTO ALEGRE) ---
+                riscos: [
+                    "1. Centro Histórico à Noite: De dia é o coração da cultura, mas após as 19h e aos domingos fica deserto e perigoso. Evite andar a pé sozinho perto do Mercado Público à noite.",
+                    "2. Camisa de Time (Gre-Nal): A rivalidade é séria. Evite usar camisa do Grêmio perto do Beira-Rio ou do Inter perto da Arena em dias de jogo. Na dúvida, não use cores de times.",
+                    "3. Voltagem 110V: Porto Alegre é 110V (127V), mas Gramado e o interior são 220V. Se você levar seu secador de POA para a Serra, vai queimar. Fique atento!",
+                    "4. Banho no Guaíba: A Orla é linda para ver o pôr do sol, mas a água em muitos pontos é imprópria para banho. Não entre, a menos que haja sinalização explícita de balneabilidade.",
+                    "5. Achar que Gramado é Perto: Gramado fica a 2h de carro (com trânsito bom). Não planeje 'jantar em Gramado' e voltar para dormir em POA na mesma noite, é cansativo e perigoso com neblina.",
+                    "6. Parque da Redenção à Noite: O parque é maravilhoso de dia, mas evite atravessá-lo após o pôr do sol. A iluminação é precária em alguns pontos e há risco de assaltos.",
+                    "7. Mosquitos na Orla: No verão, o final da tarde na beira do rio tem muito mosquito. Leve repelente se for assistir ao pôr do sol.",
+                    "8. Lotação x Ônibus: O transporte 'Lotação' (micro-ônibus vermelho) é excelente e tem ar-condicionado, mas custa bem mais que o ônibus comum. Não entre achando que é o mesmo preço.",
+                    "9. Pardais (Radares): A fiscalização eletrônica é rigorosa (geralmente 60km/h). Cuidado nas Avenidas Ipiranga e Beira-Rio, a multa chega mesmo.",
+                    "10. 'Friagem' e Rinite: A mudança de temperatura é brutal (pode variar 15ºC no mesmo dia). Quem tem rinite ou asma sofre muito. Traga sempre um casaco e remédios de alergia."
+                ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Centro e Orla): Manhã no Centro Histórico (Mercado Público, Santander Cultural e MARGS). Almoço no Mercado. Fim de tarde: Pôr do sol na Orla do Guaíba (Usina do Gasômetro).",
+                            "Dia 2 (Cultura): Manhã no Parque da Redenção (se for domingo, tem o Brique). Tarde: Casa de Cultura Mario Quintana (tome um café no jardim do terraço)."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Arte e Rio): Fundação Iberê Camargo (arquitetura incrível). Tarde: Passeio de barco (Cisne Branco ou Noiva do Caí) pelas ilhas do Guaíba.",
+                            "Dia 4 (Sofisticação): Bairro Moinhos de Vento. Caminhada no Parcão e almoço na Rua Padre Chagas. Noite: Churrascaria tradicional (Barranco ou Giovanaz).",
+                            "Dia 5 (Paixão Nacional): Tour no estádio da Arena do Grêmio ou Beira-Rio (Inter). Tarde na orla de Ipanema (Zona Sul) para um clima de praia de rio."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Ciência ou Fé): Museu da PUCRS (interativo e incrível para crianças) OU Bate-volta ao Templo Budista de Três Coroas.",
+                            "Dia 7 (Raiz): Almoço em um CTG (Centro de Tradições Gaúchas) e noite boêmia na Cidade Baixa (bares alternativos). Despedida com um Xis Gaúcho."
+                        ]
+                    }
+                },
+                // SEUS LINKS DE AFILIADO (ID 304142)
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-663673&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/porto-alegre/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+            {
+                name: "Curitiba",
+                // FOTO: Jardim Botânico (Estufa) - Clássica (Wikimedia)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Estufa_principal_do_Jardim_Bot%C3%A2nico_de_Curitiba_02_%28cropped%29.jpg/500px-Estufa_principal_do_Jardim_Bot%C3%A2nico_de_Curitiba_02_%28cropped%29.jpg",
+                tags: ["Parques", "Frio", "Organização"],
+                mapa: "https://goo.gl/maps/curitiba",
+                clima: "Subtropical Úmido. O tempo muda rápido: pode fazer sol, chover e gear no mesmo dia. Traga casaco sempre.",
+                // Adicione dentro do objeto de Curitiba
+veredicto: {
+    melhor_epoca: "Março a Maio (Outono agradável) ou Setembro a Novembro (Primavera florida). O inverno é rigoroso para os padrões brasileiros e o verão costuma ser chuvoso.",
+    ideal_para: [
+        "Amantes de parques e áreas verdes impecáveis (Jardim Botânico, Tanguá)",
+        "Quem busca organização urbana, limpeza e transporte eficiente",
+        "Turismo cultural e arquitetônico (Museu Oscar Niemeyer, Ópera de Arame)",
+        "Gulosos por culinária italiana e cafés coloniais (Bairro Santa Felicidade)"
+    ],
+    nao_ideal_para: [
+        "Quem detesta dias nublados, cinzas e chuva (o apelido 'Churitiba' é real)",
+        "Quem busca calor tropical constante e praias (a cidade é fria e fica no planalto)",
+        "Quem espera agito de rua desordenado (a cidade é mais contida que Rio/Salvador)"
+    ],
+    perfis: [
+        { icone: "ri-leaf-fill", nome: "Ecológico" },
+        { icone: "ri-building-2-fill", nome: "Urbano" },
+        { icone: "ri-cup-fill", nome: "Frio/Café" },
+        { icone: "ri-camera-lens-fill", nome: "Fotos" }
+    ]
+},
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Jardim Botânico: O cartão-postal. A estufa de vidro estilo Art Nouveau e os jardins franceses são lindos.",
+                    "2. Ópera de Arame: Um teatro construído em estrutura tubular e vidro sobre um lago. Visual único.",
+                    "3. Parque Tanguá: Antiga pedreira desativada que virou um parque deslumbrante. O pôr do sol no mirante é obrigatório.",
+                    "4. Museu Oscar Niemeyer (MON): Conhecido como 'Museu do Olho'. Arquitetura futurista e grandes exposições de arte.",
+                    "5. Feira do Largo da Ordem: Aos domingos de manhã. Gigantesca, tem artesanato, antiguidades e o famoso pastel de feira.",
+                    "6. Torre Panorâmica: Vista 360º da cidade. Dá para entender o planejamento urbano lá de cima.",
+                    "7. Bosque do Alemão: Tem a trilha de João e Maria e uma vista linda da cidade. Ótimo para crianças.",
+                    "8. Santa Felicidade: O bairro italiano gastronômico. Restaurantes gigantes (como o Madalosso) servem rodízio de massas e frango.",
+                    "9. Parque Barigui: A 'praia' do curitibano. Capivaras vivem livres no lago e as pessoas fazem churrasco nos quiosques.",
+                    "10. Unilivre (Universidade Livre do Meio Ambiente): Uma rampa de madeira em espiral no meio da mata. Lugar de paz e arquitetura sustentável."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Carne de Onça: Patrimônio da cidade. Não é onça! É carne bovina crua super temperada sobre broa preta (tipo um steak tartare rústico).",
+                    "2. Pinhão: No inverno (maio-julho), come-se pinhão cozido em todo lugar. É a semente da araucária.",
+                    "3. Barreado: Prato típico do litoral (Morretes), mas muito consumido na capital. Carne cozida por horas até desmanchar, comida com farinha e banana.",
+                    "4. Pierogi: Pastel cozido de origem polonesa, geralmente recheado de batata e requeijão com molho de nata.",
+                    "5. Frango com Polenta: Clássico de Santa Felicidade. A polenta frita e o frango a passarinho são servidos à vontade.",
+                    "6. Quentão de Vinho: No inverno, é a bebida oficial das feiras. Feito com vinho tinto, gengibre e especiarias (e às vezes marshmallow).",
+                    "7. Submarino: Famoso no 'Bar do Alemão'. Um chopp com uma canequinha de Steinhäger mergulhada dentro. Você pode levar a canequinha de brinde.",
+                    "8. Café Colonial: Herança dos imigrantes. Mesas fartas com tortas, pães, geléias e frios à tarde.",
+                    "9. Chucrute e Eisbein: Joelho de porco com repolho fermentado, influência forte da colonização alemã.",
+                    "10. Pastel de Feira: Na feira do Largo da Ordem, o pastel é gigante e super recheado."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. É Vina, não Salsicha: Se pedir cachorro-quente com 'salsicha', vão te corrigir. Em Curitiba chama-se Vina (do alemão Wiener).",
+                    "2. Penal: Estojo escolar aqui chama-se 'Penal'.",
+                    "3. Capivaras: Elas são as donas dos parques. São fofas, mas são animais selvagens. Não tente fazer carinho!",
+                    "4. Capital Mais Fria: É considerada a capital mais fria do Brasil. Geada é comum no inverno.",
+                    "5. Oil Man: Uma lenda urbana real. Um homem que anda de sunga e coberto de óleo pela cidade, mesmo no frio.",
+                    "6. Tubos de Ônibus: As estações de ônibus parecem tubos futuristas. Você paga antes de entrar para agilizar o embarque.",
+                    "7. Cidade Sorriso?: Curitibano tem fama de fechado. Dizem que não falam com estranhos no elevador, mas são educados se você pedir ajuda.",
+                    "8. Reciclagem: A cultura de separar o lixo ('Lixo que não é Lixo') é muito forte e antiga na cidade.",
+                    "9. Rua 24 Horas: Foi a primeira rua coberta a funcionar 24h no Brasil (hoje não é mais 100% 24h, mas a arquitetura segue linda).",
+                    "10. Palácio Avenida: No Natal, crianças cantam nas janelas desse prédio histórico. É um espetáculo emocionante."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Bosque do Papa: Memorial da imigração polonesa, com casas de madeira originais montadas sem pregos. O Papa João Paulo II visitou.",
+                    "2. Catedral Basílica Menor: Na Praça Tiradentes (marco zero). Estilo neogótico imponente.",
+                    "3. Mesquita Imam Ali: Uma bela mesquita com cúpula e minaretes no centro cívico, aberta à visitação guiada.",
+                    "4. Memorial Ucraniano: Fica no Parque Tingui. Tem uma réplica de uma igreja ortodoxa de madeira com cúpula dourada lindíssima.",
+                    "5. Ordem Rosacruz: O Templo das Musas e o portal egípcio são impressionantes e misteriosos.",
+                    "6. Santuário Nossa Senhora do Perpétuo Socorro: As novenas de quarta-feira reúnem multidões o dia todo.",
+                    "7. Praça do Japão: Homenagem à imigração japonesa, com lago de carpas, cerejeiras e casa de chá.",
+                    "8. Museu do Holocausto: O primeiro do Brasil. Pequeno, mas extremamente tocante e educativo.",
+                    "9. Igrejas Luteranas: Muitas igrejas de estilo gótico alemão espalhadas pela cidade.",
+                    "10. Solar do Rosário: Centro cultural no coração histórico, focado em artes plásticas."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Natal de Curitiba (Dezembro): A cidade vira luz pura. O coral do Palácio Avenida e as decorações nos parques são famosos no país.",
+                    "2. Festival de Teatro (Março): Um dos maiores festivais de teatro da América Latina. A cidade respira arte, com peças na rua e nos palcos.",
+                    "3. Inverno (Jun-Ago): É frio de verdade (pode chegar a 0ºC ou menos). É a época charmosa de comer pinhão e usar casaco de lã.",
+                    "4. Feira de Inverno (Praças): Barraquinhas vendendo artesanato de lã e quentão nas praças Santos Andrade e Osório.",
+                    "5. Oficina de Música (Janeiro): Cursos e shows de música erudita e popular (MPB) pela cidade toda.",
+                    "6. Florada das Cerejeiras (Julho): Na Praça do Japão e Jardim Botânico, as árvores ficam rosas. Dura poucos dias.",
+                    "7. Primavera (Set-Nov): Os parques ficam floridos, mas o tempo é instável (chuva e sol no mesmo dia).",
+                    "8. Carnaval Zombie Walk: No carnaval, o destaque não é o samba, mas a marcha de zumbis que reúne milhares de pessoas.",
+                    "9. Verão (Dez-Mar): Dias quentes, mas noites frescas. Chove bastante no final da tarde.",
+                    "10. Restaurant Week: Acontece duas vezes ao ano, ótimo para comer em restaurantes caros por preço fixo."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Voltagem: 110V (127V). Atenção, pois o litoral e o interior costumam ser 220V, mas Curitiba é 110V.",
+                    "2. DDD: 41.",
+                    "3. Aeroporto: Afonso Pena (CWB). Fica na cidade vizinha (São José dos Pinhais), a 30min do centro.",
+                    "4. Linha Turismo: O ônibus de dois andares que passa em 26 pontos turísticos. Paga-se um valor e pode descer e subir 4 vezes.",
+                    "5. Rodoferroviária: Moderna e organizada. Tem ônibus para todo o Brasil e o trem para Morretes.",
+                    "6. Uber/99: Funciona muito bem e é mais barato que a Linha Turismo se você estiver em 3 ou 4 pessoas.",
+                    "7. Clima: 'Cebola'. Você sai de casaco, tira ao meio-dia, põe de novo à tarde e põe um mais pesado à noite.",
+                    "8. Segurança: O Centro Histórico à noite exige cuidado. Batel e Água Verde são mais tranquilos.",
+                    "9. Trânsito: A 'Faixa Exclusiva' de ônibus é sagrada. Se dirigir, nunca invada a canaleta, a multa é certa.",
+                    "10. Água: Potável e de boa qualidade."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Mala Inteligente: Traga camiseta, casaco leve E casaco pesado. Você vai usar os três no mesmo dia.",
+                    "2. Linha Turismo: Se tiver só 1 dia, é a melhor opção. Sente no andar de cima (lado direito) para as melhores vistas.",
+                    "3. Domingo de Manhã: Reserve para a Feira do Largo da Ordem. Vá cedo (9h) para evitar a multidão das 11h.",
+                    "4. Segunda-Feira: Quase todos os museus e parques (como o Tanguá e o MON) fecham ou abrem mais tarde para manutenção. Confira antes.",
+                    "5. Trem de Morretes: O passeio de trem pela Serra do Mar é lindo. Compre o bilhete com antecedência e sente do lado esquerdo na ida.",
+                    "6. Pôr do Sol: O melhor é no Parque Tanguá ou na Praça das Nações (alto da XV).",
+                    "7. Batel: É o bairro da vida noturna chique e dos restaurantes caros.",
+                    "8. Rua 24h: Boa para uma passada rápida ou almoço, mas não tem mais o agito da madrugada de antigamente.",
+                    "9. Hotel: Ficar no Centro é prático, mas o Batel é mais bonito e seguro à noite.",
+                    "10. Respeite a Fila: O curitibano respeita muito a fila do ônibus. Não tente furar."
+                ],
+
+                // --- NOVO: NÚMEROS IMPORTANTES (CURITIBA) ---
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergência e segurança.",
+                    "2. (41) 3326-3600 (DPTUR): Delegacia de Proteção ao Turista (atendimento especializado).",
+                    "3. 192 (SAMU): Urgências médicas de saúde.",
+                    "4. 193 (Bombeiros/SIATE): Resgate de trauma e acidentes de trânsito.",
+                    "5. 156 (Central da Prefeitura): Informações sobre ônibus, turismo e serviços municipais (funciona muito bem).",
+                    "6. (41) 3381-1515 (Aeroporto Afonso Pena): Informações de voos e achados e perdidos.",
+                    "7. (41) 3320-3000 (Rodoferroviária): Informações sobre ônibus estaduais e interestaduais.",
+                    "8. (41) 3240-1103 (Hospital do Trabalhador): Referência em trauma e emergências.",
+                    "9. 118 (Trânsito): Para reportar acidentes sem vítima ou semáforos estragados.",
+                    "10. 0800 41 1512 (Copel): Emergência de energia elétrica (queda de luz ou fios soltos)."
+                ],
+
+                // --- NOVO: RISCOS E ERROS (CURITIBA) ---
+                riscos: [
+                    "1. As 4 Estações: O maior erro é sair do hotel de manhã só de camiseta porque está sol. Às 16h vai esfriar bruscamente. Leve sempre um agasalho na mochila.",
+                    "2. Centro à Noite: A região da Praça Tiradentes, Rua XV e Paço da Liberdade fica deserta e perigosa após as 20h. Há muitos moradores de rua e risco de assalto. Use Uber.",
+                    "3. Radares de Trânsito: Curitiba tem fiscalização eletrônica rigorosa (50km/h ou 60km/h). Os radares muitas vezes não são visíveis. Respeite o limite ou a multa chega.",
+                    "4. Canaleta de Ônibus: Se estiver dirigindo, NUNCA entre na pista exclusiva dos ônibus expressos (canaleta). É infração gravíssima e risco de acidente fatal.",
+                    "5. Furtos na Feira do Largo: A feira de domingo é lotada. Mochilas para frente e cuidado com o celular no bolso de trás. Batedores de carteira aproveitam o 'empurra-empurra'.",
+                    "6. Capivaras com Carrapatos: Elas são lindas, mas transmitem o carrapato-estrela (Febre Maculosa). Admire de longe e evite sentar na grama onde elas pastam.",
+                    "7. Vento Encanado: O centro da cidade tem 'corredores de vento' entre os prédios que deixam a sensação térmica muito baixa. Cachecol ajuda muito.",
+                    "8. Uber no Aeroporto: O Aeroporto fica em São José dos Pinhais. O Uber para Curitiba é tranquilo, mas em horários de pico pode ficar caro (dinâmico).",
+                    "9. Horário de Ônibus: O sistema é bom, mas domingo os ônibus demoram muito. Use o app 'Curitiba 156' para ver o horário real e não ficar 40 min no tubo.",
+                    "10. Ciclovias: Cuidado ao caminhar nas calçadas compartilhadas (vermelhas). Ciclistas passam rápido. Pedestre na calçada, bicicleta na ciclovia."
+                ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Cartões-Postais): Comece no Jardim Botânico (Estufa de vidro). Almoço em Santa Felicidade (Madalosso). Tarde na Ópera de Arame e pôr do sol no Parque Tanguá.",
+                            "Dia 2 (Cultura e Vista): Manhã no Museu Oscar Niemeyer (Museu do Olho). Suba na Torre Panorâmica. Fim de tarde no Largo da Ordem (Centro Histórico)."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Serra do Mar): O passeio mais famoso. Desça de Trem para Morretes pela Serra Verde Express (paisagem linda). Coma Barreado lá e volte de van/ônibus pela Estrada da Graciosa.",
+                            "Dia 4 (Parques): Pegue a Linha Turismo (ônibus de 2 andares) e pare no Parque Barigui (capivaras!) e Bosque do Papa.",
+                            "Dia 5 (Lado B): Mercado Municipal (café da manhã). Tarde no Unilivre (Universidade Livre do Meio Ambiente) - arquitetura incrível na mata."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Arenitos): Bate-volta para o Parque Estadual de Vila Velha (Ponta Grossa). Veja as formações rochosas milenares.",
+                            "Dia 7 (Praia e Trem): Se for verão, estique até a Ilha do Mel (pegue o trem até Paranaguá e depois o barco).",
+                            "Dia 8 (Relax): Brunch no Batel (bairro chique) e compras no Shopping Pátio Batel ou Feirinha do Largo (se for domingo)."
+                        ]
+                    }
+                },
+
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-639714&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/curitiba/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+             // --- BALNEÁRIO CAMBORIÚ (BRASIL) ---
+            {
+                name: "Balneário Camboriú",
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Balne%C3%A1rio_Cambori%C3%BA_from_Unipraias_Park_2023-04-02.jpg/960px-Balne%C3%A1rio_Cambori%C3%BA_from_Unipraias_Park_2023-04-02.jpg",
+                tags: ["Arranha-céus", "Vida Noturna", "Luxo"],
+                mapa: "https://goo.gl/maps/balneariocamboriu",
+                clima: "Subtropical. Verões quentes e agitados, Invernos amenos e ventosos.",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Março e Abril (Ainda faz calor, mas a cidade não está entupida). O Réveillon é incrível, mas o trânsito para.",
+                    ideal_para: [
+                        "Jovens e Baladeiros (algumas das melhores baladas do mundo estão aqui)",
+                        "Fãs de Arquitetura (os prédios mais altos do Brasil)",
+                        "Famílias (muitas atrações pagas como aquário e roda gigante)",
+                        "Quem gosta de agito urbano na praia"
+                    ],
+                    nao_ideal_para: [
+                        "Quem busca praias desertas e selvagens (a Praia Central é urbana)",
+                        "Quem odeia sombra na areia (os prédios fazem sombra à tarde)",
+                        "Orçamento apertado em Janeiro (tudo fica muito caro)"
+                    ],
+                    perfis: [
+                        { icone: "ri-building-2-fill", nome: "Dubai BR" },
+                        { icone: "ri-music-2-fill", nome: "Festas" },
+                        { icone: "ri-shopping-bag-fill", nome: "Compras" },
+                        { icone: "ri-car-fill", nome: "Supercarros" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Parque Unipraias: Bondinho aéreo que liga a praia central à praia de Laranjeiras, passando pela mata.",
+                    "2. FG Big Wheel: A roda-gigante estaiada com vista incrível do skyline e do mar.",
+                    "3. Oceanic Aquarium: Um aquário moderno com túnel de vidro e muitas espécies.",
+                    "4. Praia de Laranjeiras: Águas calmas e muitos restaurantes, acessível por barco ou bondinho.",
+                    "5. Molhe da Barra Sul: O lugar clássico para tirar foto com os arranha-céus ao fundo.",
+                    "6. Cristo Luz: Um monumento similar ao Redentor, mas segura um canhão de luz que muda de cor.",
+                    "7. Avenida Atlântica: O calçadão para caminhar, ver carros de luxo e gente bonita.",
+                    "8. Praia Brava: Na divisa com Itajaí, é o point do surf, gente descolada e beach clubs chiques.",
+                    "9. Classic Car Show: Museu de carros antigos e bar temático americano.",
+                    "10. Morro do Careca: Vista panorâmica incrível e ponto de salto de parapente."
+                ],
+
+                gastronomia: [
+                    "1. Sequência de Camarão: Prato típico da região, servido em Laranjeiras.",
+                    "2. Churrasco: Grandes churrascarias de alto padrão na beira-mar.",
+                    "3. Passeio San Miguel: Um boulevard gastronômico charmoso com várias opções (pizza, sushi, vinhos).",
+                    "4. Churros da Praia: Clássico de fim de tarde na areia.",
+                    "5. Frutos do Mar: Frescos e sofisticados nos restaurantes da Barra Sul.",
+                    "6. Cozinha Internacional: A cidade tem ótimos italianos e japoneses.",
+                    "7. Café Colonial: Herança alemã da região, mesas fartas de bolos e pães.",
+                    "8. Milho Verde: Com manteiga, nas barracas numeradas da orla.",
+                    "9. Drinks Elaborados: Os bares da orla competem nos coquetéis.",
+                    "10. Hambúrguer Gourmet: A cena de burgers na cidade é fortíssima."
+                ],
+
+                religiao: [
+                    "1. Igreja Matriz Santa Inês: Tem um formato curioso que lembra um chapéu de palha ou barco.",
+                    "2. Capela de Santo Amaro: Uma construção histórica simples e preservada no Bairro da Barra.",
+                    "3. Cristo Luz: Embora turístico, é um símbolo de proteção sobre a cidade.",
+                    "4. Diversidade: Igrejas evangélicas grandes e modernas estão presentes.",
+                    "5. Iemanjá: Na virada do ano, muitas oferendas são feitas no mar.",
+                    "6. Igrejinha da Barra: A primeira igreja da cidade, patrimônio histórico.",
+                    "7. Paz no Alto: O Morro do Careca é usado por muitos para meditação.",
+                    "8. Procissão de Navegantes: Tradição na região vizinha que influencia a cidade.",
+                    "9. Eventos Gospel: A cidade sedia grandes congressos religiosos.",
+                    "10. Cruz: O complexo do Cristo Luz tem símbolos católicos."
+                ],
+
+                curiosidades: [
+                    "1. A Sombra: Devido à altura dos prédios, a Praia Central fica com sombra a partir das 15h/16h.",
+                    "2. Alargamento: A faixa de areia foi triplicada recentemente para tentar diminuir o problema da sombra.",
+                    "3. Prédios Mais Altos: BC abriga 7 dos 10 prédios mais altos do Brasil (incluindo o One Tower).",
+                    "4. Neymar: O jogador tem uma cobertura quadriplex num dos prédios da orla.",
+                    "5. Dubai Brasileira: Apelido dado pela arquitetura e ostentação.",
+                    "6. Supercarros: É comum ver Ferraris e Lamborghinis desfilando na Atlântica.",
+                    "7. Menor Município: É um dos menores de SC em área territorial, tudo é vertical.",
+                    "8. Bondindinho: O transporte coletivo é feito por caminhões adaptados abertos.",
+                    "9. Segurança: Apesar de urbana, é considerada uma das cidades mais seguras do Brasil.",
+                    "10. 1 milhão: A população salta de 150 mil para mais de 1 milhão no verão."
+                ],
+
+                eventos_estacoes: [
+                    "1. Réveillon: O show de fogos é um dos maiores do país, perdendo apenas para Copacabana.",
+                    "2. Carnaval: Blocos de rua e festas privadas gigantes nos clubes (Green Valley).",
+                    "3. Temporada de Verão (Dez-Fev): A cidade não dorme, trânsito intenso 24h.",
+                    "4. Páscoa: Decoração temática linda nas praças.",
+                    "5. Festival da Canção: Evento cultural tradicional.",
+                    "6. Maratonas: A orla plana atrai muitas corridas de rua no outono/inverno.",
+                    "7. Inverno (Jun-Ago): A cidade acalma, bom para gastronomia e vinho.",
+                    "8. Balneário Fashion Show: Eventos de moda nos shoppings.",
+                    "9. Flower Power: Festa hippie chic que ocorre na região.",
+                    "10. Oktoberfest: Muita gente fica em BC e vai para Blumenau (1h de carro) em Outubro."
+                ],
+
+                info_gerais: [
+                    "1. Voltagem: 220V (Cuidado!).",
+                    "2. Aeroporto: Navegantes (NVT) é o mais próximo, você pega uma balsa ou Uber para chegar em BC.",
+                    "3. Trânsito: A cidade tem poucas avenidas principais. No verão, tudo trava.",
+                    "4. Estacionamento: Caríssimo e difícil de achar. Vá de Uber.",
+                    "5. Praia Imprópria: Às vezes, pontos da Praia Central ficam impróprios para banho. Confira as placas.",
+                    "6. Segurança: Monitorada por câmeras, policiamento ostensivo.",
+                    "7. Comércio: Lojas de rua ficam abertas até tarde na temporada.",
+                    "8. Beto Carrero: Fica na cidade vizinha (Penha), a 40 min de carro.",
+                    "9. Baladas: A região da Barra Sul e Praia Brava concentra a vida noturna.",
+                    "10. Uber: Funciona muito bem, mas tem preço dinâmico alto no verão."
+                ],
+
+                antes_de_ir: [
+                    "1. Reserve Hotel: Se for no verão, reserve com 6 meses de antecedência ou pagará uma fortuna.",
+                    "2. Aeroporto de Navegantes: É melhor que descer em Florianópolis (que fica a 1h30 sem trânsito).",
+                    "3. Sombra na Areia: Se gosta de sol até tarde, vá para a praia de manhã cedo ou vá para Laranjeiras/Brava.",
+                    "4. Trânsito na Osvaldo Reis: A estrada para a Praia Brava/Itajaí engarrafa muito às 18h.",
+                    "5. Roupa de Balada: O dress code das festas aqui é alto nível. Capriche no look.",
+                    "6. Dinheiro: Aceitam cartão em tudo, até ambulantes.",
+                    "7. Balsa: Se vier do aeroporto de Navegantes, a travessia de balsa é rápida e prática.",
+                    "8. Crianças: O Oceanic Aquarium e a Aventura Jurássica são paradas obrigatórias.",
+                    "9. Alargamento: A areia da praia central é mais grossa e de tombo (afunda rápido) após a obra. Cuidado.",
+                    "10. Luxo: Não se assuste com os preços de garrafas de água ou cerveja em beach clubs."
+                ],
+
+                numeros: [
+                    "1. 190 (Polícia Militar).",
+                    "2. 193 (Bombeiros).",
+                    "3. 192 (SAMU).",
+                    "4. (47) 3267-7011 (Secretaria de Turismo).",
+                    "5. Guarda Municipal: 153 (Muito ativa na cidade).",
+                    "6. Rodoviária de BC: (47) 3367-2901.",
+                    "7. Hospital Ruth Cardoso: (47) 3169-3700.",
+                    "8. Aeroporto de Navegantes: (47) 3342-9200.",
+                    "9. Bondindinho (Transporte): Circula pela Atlântica e Av. Brasil.",
+                    "10. Ponto de Táxi Central: (47) 3367-0245."
+                ],
+
+                riscos: [
+                    "1. Trânsito Travado: No Réveillon, você pode levar 4 horas para andar 5km.",
+                    "2. Preços de Temporada: Restaurantes aumentam preços no verão.",
+                    "3. Mar Agitado: A praia de tombo pode ser perigosa para crianças desatentas.",
+                    "4. Furto de Celular: Em grandes aglomerações (Réveillon/Carnaval), cuide do bolso.",
+                    "5. Bebida Batizada: Cuidado aceitar bebidas de estranhos nas baladas.",
+                    "6. Insolação: O mormaço queima muito.",
+                    "7. Golpes de Aluguel: Cuidado ao alugar apê por redes sociais sem verificar.",
+                    "8. Multas de Trânsito: A fiscalização é rigorosa com estacionamento proibido.",
+                    "9. Ressaca do Mar: Às vezes o mar sobe e invade a avenida (raro, mas acontece).",
+                    "10. Barulho: Se seu hotel for na Av. Atlântica, o barulho dos carros vai até de madrugada."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Luxo e Altura (2 Dias)",
+                        texto: [
+                            "Dia 1: Parque Unipraias + Praia de Laranjeiras + Noite na Barra Sul.",
+                            "Dia 2: Big Wheel (Roda Gigante) + Caminhada no Molhe + Jantar no Passeio San Miguel."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Diversão Total (4 Dias)",
+                        texto: [
+                            "Dias 1-2: Roteiro Curto.",
+                            "Dia 3: Bate-volta ao Beto Carrero World (Penha).",
+                            "Dia 4: Oceanic Aquarium + Tarde na Praia Brava (Beach Club)."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Vida de Patrão (6 Dias)",
+                        texto: [
+                            "Dias 1-4: Roteiro Médio.",
+                            "Dia 5: Aluguel de Lancha ou Passeio de Barco Pirata.",
+                            "Dia 6: Compras e dia relax no Cristo Luz para ver o pôr do sol."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/br/balneario-camboriu.pt-br.html", 
+                    passeio: "https://www.unipraias.com.br/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
+        ],
+         "Sudeste": [
+             {
+                name: "Rio de Janeiro",
+                imagem: "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=2070&auto=format&fit=crop",
+                tags: ["Praia", "Cartão Postal", "Agito"],
+                mapa: "https://goo.gl/maps/rio",
+                clima: "Tropical Atlântico. Verão 40ºC e Inverno ameno.",
+                
+                // === NOVO: DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Abril a Junho (Outono) ou Setembro a Novembro (Primavera). Evite Janeiro (Calor extremo).",
+                    ideal_para: [
+                        "Quem ama natureza misturada com cidade grande",
+                        "Viajantes que buscam vida noturna agitada",
+                        "Turistas que gostam de história e cultura",
+                        "Fotógrafos (paisagens dramáticas)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem busca silêncio absoluto e isolamento",
+                        "Quem se estressa facilmente com trânsito",
+                        "Pessoas sensíveis a calor extremo (no verão)"
+                    ],
+                    perfis: [
+                        { icone: "ri-hearts-fill", nome: "Casal" },
+                        { icone: "ri-user-star-fill", nome: "Solo" },
+                        { icone: "ri-group-fill", nome: "Jovens" },
+                        { icone: "ri-camera-fill", nome: "Fotos" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Cristo Redentor: Uma das 7 Maravilhas. Compre ingresso antecipado do trem.",
+                    "2. Pão de Açúcar: Suba no final da tarde para ver o pôr do sol mais lindo do mundo.",
+                    "3. Copacabana & Ipanema: Caminhe no calçadão e aplauda o sol no Arpoador.",
+                    "4. Escadaria Selarón: A obra de arte a céu aberto mais famosa da Lapa.",
+                    "5. Jardim Botânico: Palmeiras imperiais e muita paz no meio da cidade.",
+                    "6. Museu do Amanhã: Arquitetura futurista na Zona Portuária (Porto Maravilha).",
+                    "7. Maracanã: O templo do futebol. O tour é obrigatório para quem ama esportes.",
+                    "8. Parque Lage: Café da manhã em um palacete histórico aos pés do Corcovado.",
+                    "9. Santa Teresa: O bairro boêmio com bondinho amarelo e ateliês de arte.",
+                    "10. Pedra da Gávea: A trilha mais cobiçada para fotos radicais (exige preparo)."
+                ],
+
+                gastronomia: [
+                    "1. Feijoada Completa: Sextas e sábados são os dias oficiais da feijoada com samba.",
+                    "2. Biscoito Globo e Mate: O lanche praiano patrimônio cultural (Salgado ou Doce).",
+                    "3. Caipirinha: Nos quiosques da orla, feita com frutas frescas.",
+                    "4. Podrão da Lapa: Sanduíche de rua com tudo dentro para fechar a noite.",
+                    "5. Açaí: O combustível do carioca, servido com granola e banana.",
+                    "6. Filé à Oswaldo Aranha: Filé com muito alho frito, arroz e farofa.",
+                    "7. Bolinho de Feijoada: Petisco genial criado nos botecos cariocas.",
+                    "8. Camarão no Espeto: Clássico da praia (compre em barracas fixas).",
+                    "9. Joelho: Salgado de queijo e presunto (conhecido como italiano em SP).",
+                    "10. Sopa Leão Veloso: Caldo de frutos do mar histórico."
+                ],
+
+                religiao: [
+                    "1. Cristo Redentor: O maior símbolo do Cristianismo no Brasil, de braços abertos sobre a Guanabara.",
+                    "2. São Jorge (O Santo Guerreiro): É imensamente popular no Rio. Dia 23 de abril é feriado estadual e tem festas gigantes.",
+                    "3. Sincretismo Religioso: O Rio é o berço da mistura. Muitos católicos também frequentam centros espíritas ou de umbanda.",
+                    "4. Candomblé e Umbanda: Religiões de matriz africana têm raízes profundas na cultura carioca (ex: roupas brancas na sexta-feira).",
+                    "5. Festa de Iemanjá: No Réveillon, é tradição quase obrigatória pular 7 ondas e jogar flores ao mar para a Rainha do Mar.",
+                    "6. Catedral Metropolitana: Um cone gigante e moderno no centro, inspirado nas pirâmides maias, diferente de tudo que você já viu.",
+                    "7. Igreja da Penha: Famosa pelos seus 382 degraus esculpidos na pedra, onde fiéis sobem de joelhos pagando promessas.",
+                    "8. Mosteiro de São Bento: Um oásis de silêncio no centro. O interior é todo folheado a ouro e tem missas com Canto Gregoriano.",
+                    "9. O Samba como Religião: As quadras das Escolas de Samba são chamadas de 'Terreiros' e tratadas com respeito sagrado pela comunidade.",
+                    "10. Templo da Humanidade: O Rio abriga o único templo Positivista do mundo que segue preservado (Religião da Humanidade)."
+                ],
+
+                curiosidades: [
+                    "1. Céu Mais Azul: O Rio tem o céu considerado o mais azul do mundo por cientistas.",
+                    "2. Capital Europeia: Foi a única capital europeia fora da Europa (1808).",
+                    "3. Floresta Urbana: A Tijuca é a maior floresta urbana replantada do mundo.",
+                    "4. Carioca: O nome vem do Tupi 'Casa do homem branco'.",
+                    "5. Carnaval: O Cordão da Bola Preta arrasta mais de 1 milhão de pessoas.",
+                    "6. Rock in Rio: Nasceu aqui em 1985 e é o maior festival do mundo.",
+                    "7. Ponte Rio-Niterói: Maior ponte de concreto do hemisfério sul (13km).",
+                    "8. Oscar Niemeyer: Projetou o Sambódromo em tempo recorde.",
+                    "9. Capital Federal: Foi a capital do Brasil até 1960.",
+                    "10. Bossa Nova: Nasceu nos apartamentos de Copacabana e Ipanema."
+                ],
+
+                eventos_estacoes: [
+                    "1. Verão (Dez-Mar): Calor de 40ºC, praias lotadas e vida noturna intensa.",
+                    "2. Inverno (Jun-Set): Ameno (20ºC), pouca chuva, ideal para passear.",
+                    "3. Réveillon de Copacabana: A maior festa de Ano Novo do planeta.",
+                    "4. Carnaval (Sambódromo): O desfile oficial das escolas de samba.",
+                    "5. Carnaval de Rua: Blocos gratuitos por toda a cidade em Fevereiro.",
+                    "6. Rock in Rio: Acontece a cada 2 anos (Setembro/Outubro).",
+                    "7. Primavera (Set-Dez): Cidade florida, perfeita para o Jardim Botânico.",
+                    "8. Bienal do Livro: Grande evento cultural no Riocentro.",
+                    "9. Festas Juninas: A Feira de São Cristóvão tem a melhor festa nordestina.",
+                    "10. Temporada de Baleias: No inverno, é possível avistar baleias na costa."
+                ],
+
+                info_gerais: [
+                    "1. Moeda: Real Brasileiro (BRL).",
+                    "2. Voltagem: 110v / 127v (Atenção! Diferente da maioria do Brasil).",
+                    "3. Tomada: Tipo N (3 pinos, padrão brasileiro).",
+                    "4. DDD: 21.",
+                    "5. População: Aprox. 6.7 milhões de habitantes.",
+                    "6. Gentílico: Quem nasce na cidade é Carioca; no estado é Fluminense.",
+                    "7. Aeroportos: Galeão (GIG - Internacional) e Santos Dumont (SDU - Centro).",
+                    "8. Água: Evite beber da torneira. Prefira mineral.",
+                    "9. Uber/Táxi: Funcionam muito bem. Evite táxis sem taxímetro.",
+                    "10. Gorjeta: 10% é o padrão em restaurantes (opcional)."
+                ],
+
+                antes_de_ir: [
+                    "1. Segurança no Centro: Evite andar com correntes de ouro, relógios caros ou celular na mão em áreas movimentadas do Centro e Lapa.",
+                    "2. Ingressos Antecipados: Compre o trem do Corcovado e o Bondinho do Pão de Açúcar online. As filas na hora são imensas.",
+                    "3. Transporte Seguro: O Metrô Rio é excelente, seguro e limpo. Uber também funciona muito bem. Evite ônibus à noite se não conhecer o trajeto.",
+                    "4. O Sol Queima: Mesmo nublado, o sol do Rio é forte. Protetor solar é item de sobrevivência, não vaidade.",
+                    "5. Aeroportos: O Santos Dumont (SDU) fica no centro (lindo pouso). O Galeão (GIG) é longe (internacional). Calcule o tempo de deslocamento.",
+                    "6. Voltagem 110V: Atenção! Diferente de muitas cidades do Brasil (que são 220V), o Rio é 110V/127V. Cuidado com secadores e chapinhas.",
+                    "7. Água da Bica: Evite beber água da torneira ou de filtros duvidosos. O calor exige hidratação, mas prefira água mineral lacrada.",
+                    "8. Vestimenta: O carioca é super informal. Chinelo e bermuda são aceitos em quase todos os lugares (exceto repartições públicas e locais de luxo).",
+                    "9. Praia à Noite: Evite ficar na areia da praia em trechos escuros ou desertos durante a madrugada.",
+                    "10. Natureza: Se for fazer trilhas, leve água, vá em grupo e respeite os animais (não alimente os micos, por mais fofos que sejam)."
+                ],
+
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergências imediatas, assaltos ou perigo iminente.",
+                    "2. (21) 2332-2924 (DEAT): Delegacia Especial de Apoio ao Turismo. Fica no Leblon, atendimento bilíngue.",
+                    "3. 192 (SAMU): Ambulância para urgências médicas e acidentes na rua.",
+                    "4. 193 (Bombeiros): Incêndios, resgates e acidentes de trânsito com vítimas.",
+                    "5. 1746 (Prefeitura do Rio): Canal direto para reclamações de serviços urbanos e informações.",
+                    "6. (21) 3004-6050 (Aeroporto Galeão): Informações sobre voos internacionais e achados e perdidos.",
+                    "7. (21) 3814-7500 (Aeroporto Santos Dumont): Informações sobre voos domésticos e serviços.",
+                    "8. 180 (Central da Mulher): Denúncias e apoio em casos de violência contra a mulher.",
+                    "9. 151 (Procon): Para denunciar preços abusivos ou problemas graves com estabelecimentos.",
+                    "10. 191 (Polícia Rodoviária): Emergências se você estiver nas estradas federais chegando ou saindo do Rio."
+                ],
+
+                riscos: [
+                    "1. Gangue da Bicicleta: No Centro e Copacabana, evite usar o celular na borda da calçada. Eles passam de bike e puxam.",
+                    "2. Praias à Noite: Não fique na areia de Copacabana ou Ipanema de madrugada. É escuro e alvo fácil para assaltos.",
+                    "3. Golpe da Caipirinha: Em quiosques, pergunte o preço ANTES. Eles oferecem 'prova grátis' e cobram R$ 50 depois.",
+                    "4. Centro no Domingo: Evite a região da Candelária e Centro Financeiro no fim de semana. Fica deserto e perigoso.",
+                    "5. GPS na Favela: Cuidado ao usar Waze/Google Maps na Linha Vermelha ou Amarela. Não entre em ruas desconhecidas para cortar caminho.",
+                    "6. Táxi sem Taxímetro: Recuse táxis que querem cobrar preço fechado 'no grito'. Exija o taxímetro ou use Uber.",
+                    "7. Trilhas Sozinho: Não faça trilhas desertas (como a do Morro da Urca ou Corcovado) sozinho e com equipamentos caros.",
+                    "8. Cambistas: Nunca compre ingressos de desconhecidos na porta do Maracanã ou Bondinho. São quase sempre falsos.",
+                    "9. Pedintes Agressivos: Na Lapa, alguns vendedores de balas podem ser agressivos se você negar. Seja firme, mas educado e siga andando.",
+                    "10. Maré Alta: Respeite a bandeira vermelha. O mar do Rio tem correntes de retorno que puxam até nadadores experientes."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Clássico): Comece cedo no Cristo Redentor (trem). Almoce em Copacabana. Final de tarde no Pão de Açúcar para o pôr do sol.",
+                            "Dia 1 (Noite): Jantar e drinks em Ipanema (Rua Garcia d'Ávila).",
+                            "Dia 2 (Vibe Carioca): Manhã no Forte de Copacabana (Confeitaria Colombo). Tarde na praia (Posto 9 ou 10). Fim de tarde no Arpoador."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dia 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (História e Boemia): Centro Histórico (Museu do Amanhã + Mural Kobra). Almoço na Confeitaria Colombo (Centro). Tarde em Santa Teresa (Bondinho) e noite na Lapa (Rio Scenarium).",
+                            "Dia 4 (Natureza): Jardim Botânico + Parque Lage (café da manhã). Tarde na Lagoa Rodrigo de Freitas (pedalinho ou bike).",
+                            "Dia 5 (Lado B): Prainha e Grumari (praias selvagens na zona oeste) se estiver de carro. Ou trilha da Pedra Bonita (fácil e vista incrível)."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Serra ou Mar): Bate-volta para Arraial do Cabo (Caribe Brasileiro) ou Petrópolis (Imperial). Escolha um!",
+                            "Dia 7 (Esporte e Visual): Trilha da Pedra da Gávea (para fortes) ou Voo de Asa Delta em São Conrado.",
+                            "Dia 8 (Despedida): Compras no Barra Shopping ou dia relax na praia do Leblon."
+                        ]
+                        
+                    },
+                },
+                
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-666610&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/rio-de-janeiro/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+                
+            },
+             {
+                name: "São Paulo",
+               imagem: "https://images.unsplash.com/photo-1543059080-f9b1272213d5?q=80&w=2069&auto=format&fit=crop",
+                tags: ["Urbano", "Gastronomia", "Cultura"],
+                mapa: "https://goo.gl/maps/saopaulo",
+                clima: "Subtropical. Conhecida como 'Terra da Garoa', mas o tempo muda rápido.",
+                veredicto: {
+                    melhor_epoca: "Abril a Agosto (Outono/Inverno). Menos chuva, clima mais ameno. Evite o verão (enchentes).",
+                    ideal_para: [
+                        "Amantes de alta gastronomia (melhores restaurantes do país)",
+                        "Quem busca vida cultural intensa (teatros, museus)",
+                        "Fãs de vida noturna e baladas underground",
+                        "Compras de luxo (Oscar Freire) ou pechinchas (25 de Março)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem busca contato intenso com a natureza e praias",
+                        "Pessoas que odeiam trânsito e poluição visual",
+                        "Quem prefere cidades silenciosas e lentas"
+                    ],
+                    perfis: [
+                        { icone: "ri-restaurant-fill", nome: "Foodie" },
+                        { icone: "ri-building-4-fill", nome: "Urbano" },
+                        { icone: "ri-briefcase-fill", nome: "Business" },
+                        { icone: "ri-artboard-fill", nome: "Cultura" }
+                    ]
+                },
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Avenida Paulista: O coração financeiro e cultural. Aos domingos fecha para carros e vira um parque.",
+                    "2. Parque Ibirapuera: O 'Central Park' paulistano. Perfeito para caminhar, ver museus e arquitetura de Niemeyer.",
+                    "3. Beco do Batman: Uma galeria de grafite a céu aberto na Vila Madalena, o bairro mais boêmio.",
+                    "4. Mercado Municipal (Mercadão): Templo da gastronomia. Famoso pelas frutas exóticas e sanduíches gigantes.",
+                    "5. Pinacoteca do Estado: O museu mais antigo da cidade, com arquitetura incrível e acervo brasileiro impecável.",
+                    "6. Bairro da Liberdade: O maior reduto japonês fora do Japão. Lanternas vermelhas, comida asiática e karaokês.",
+                    "7. Catedral da Sé: Uma das cinco maiores igrejas neogóticas do mundo, marco zero da cidade.",
+                    "8. MASP: O Museu de Arte de São Paulo, famoso pelo seu vão livre gigante na Paulista.",
+                    "9. Farol Santander: A melhor vista panorâmica do centro histórico (antigo prédio do Banespa).",
+                    "10. Estação da Luz e Museu da Língua Portuguesa: História e arquitetura deslumbrante no centro."
+                ],
+
+                // TOP 10 GASTRONOMIA (Capital Mundial da Gastronomia)
+                gastronomia: [
+                    "1. Pizza Paulistana: Dizem ser a melhor do mundo. Massa média, borda alta e muito recheio.",
+                    "2. Sanduíche de Mortadela: O clássico do Mercadão, com 300g de mortadela Ceratti.",
+                    "3. Pastel de Feira: Acompanhado de caldo de cana. É uma instituição sagrada em SP.",
+                    "4. Virado à Paulista: O prato oficial do estado (arroz, tutu de feijão, bisteca, ovo, couve e banana).",
+                    "5. Coxinha: A rainha dos salgados. As das padarias 24h são lendárias.",
+                    "6. Comida Japonesa (Liberdade): Sushis e lámens autênticos, muitas vezes melhores que no Japão.",
+                    "7. Padarias Artesanais: O paulistano ama 'pão na chapa com média' no café da manhã.",
+                    "8. Cantinas Italianas: No Bixiga, massas frescas e fartas servidas com música ao vivo.",
+                    "9. Hambúrguer Gourmet: SP vive uma febre de hamburguerias artesanais de altíssimo nível.",
+                    "10. Alta Gastronomia: A cidade concentra a maioria dos restaurantes com estrelas Michelin do Brasil."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Maior do Hemisfério: É a maior cidade do Hemisfério Sul e das Américas.",
+                    "2. Cidade que não dorme: Existem padarias, academias e mercados abertos 24h por dia.",
+                    "3. Helicópteros: Tem a maior frota de helicópteros urbanos do mundo (vence Nova York).",
+                    "4. Japão Brasileiro: Tem a maior população de japoneses fora do Japão.",
+                    "5. Pizza Gigante: Consome-se mais de 1 milhão de pizzas por dia na cidade.",
+                    "6. Diversidade: É possível ouvir mais de 70 idiomas diferentes caminhando pelo centro.",
+                    "7. Terra da Garoa: O apelido vem do chuvisco constante que era comum décadas atrás.",
+                    "8. Arranha-céus: Possui mais de 6.000 prédios com mais de 10 andares.",
+                    "9. Metrô Lotado: A estação Sé é uma das mais movimentadas do mundo nos horários de pico.",
+                    "10. Café: A riqueza da cidade foi construída historicamente sobre a exportação de café."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Catedral da Sé: O maior templo católico da cidade, com criptas subterrâneas visitáveis.",
+                    "2. Templo de Salomão: Uma réplica gigantesca do templo bíblico, sede da Igreja Universal.",
+                    "3. Mesquita Brasil: A primeira mesquita construída na América Latina (Cambuci).",
+                    "4. Templo Zu Lai: O maior templo budista da América Latina (fica na região metropolitana).",
+                    "5. Sinagogas de Higienópolis: O bairro concentra uma grande e tradicional comunidade judaica.",
+                    "6. Mosteiro de São Bento: Famoso pelas missas com Canto Gregoriano e pelos pães dos monges.",
+                    "7. Diversidade Protestante: Igrejas evangélicas de todas as denominações em cada esquina.",
+                    "8. Espiritismo: Forte presença de centros espíritas kardecistas.",
+                    "9. Religiões Afro: Umbanda e Candomblé têm forte representatividade cultural.",
+                    "10. Igreja Ortodoxa: Belíssimas igrejas da comunidade russa e armênia próximas ao Paraíso."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Fórmula 1 (GP Brasil): Acontece em Interlagos (Nov), atraindo turistas do mundo todo.",
+                    "2. Lollapalooza: Festival de música gigante no Autódromo (Março/Abril).",
+                    "3. Parada do Orgulho LGBT+: A maior do mundo, lota a Avenida Paulista (Junho).",
+                    "4. Virada Cultural: 24 horas de shows gratuitos espalhados pela cidade.",
+                    "5. Bienal de Arte: Acontece a cada 2 anos no Ibirapuera, referência mundial.",
+                    "6. São Paulo Fashion Week: O maior evento de moda da América Latina.",
+                    "7. Carnaval de Rua: Cresceu muito e hoje rivaliza com Rio e Salvador em tamanho.",
+                    "8. Mostra Internacional de Cinema: Para os amantes da sétima arte (Outubro).",
+                    "9. Natal na Paulista: Decoração de luzes e shows gratuitos em Dezembro.",
+                    "10. Restaurant Week: Festivais gastronômicos com preços promocionais ocorrem duas vezes ao ano."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. DDD: 11.",
+                    "2. Voltagem: 110V (mas hotéis costumam ter 220V, sempre cheque a tomada).",
+                    "3. População: Mais de 12 milhões (cidade) e 22 milhões (Grande SP).",
+                    "4. Aeroportos: Guarulhos (GRU - Internacional/Longe) e Congonhas (CGH - Doméstico/Centro).",
+                    "5. Trânsito: Famoso pelos engarrafamentos. Evite horários de pico (8h e 18h).",
+                    "6. Metrô: Limpo, seguro e eficiente, mas não cobre a cidade toda.",
+                    "7. Moeda: Real (BRL). Cartão é aceito até pelo vendedor ambulante.",
+                    "8. Água: Potável, mas com gosto de cloro. Prefira filtro ou mineral.",
+                    "9. Uber: Essencial para se locomover fora da rota do metrô.",
+                    "10. Clima: 'Quatro estações em um dia'. Saia sempre com guarda-chuva e casaco."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Bilhete Único/TOP: Compre o cartão de transporte nas estações para integrar metrô e ônibus.",
+                    "2. Segurança: Cuidado com o 'gangue da bicicleta' na Paulista e Centro. Não use celular na borda da calçada.",
+                    "3. Reservas: Restaurantes famosos têm filas de horas. Reserve com antecedência.",
+                    "4. Aeroporto GRU: Fica em outra cidade (Guarulhos). Saia com 3h ou 4h de antecedência devido ao trânsito.",
+                    "5. Museus Grátis: Quase todos os museus têm um dia de entrada gratuita (geralmente terça ou quarta).",
+                    "6. Paulista Aberta: Aos domingos, a Av. Paulista é só para pedestres. Melhor dia para visitar.",
+                    "7. Roupas: O estilo é urbano e casual, mas leve um casaco leve mesmo no verão.",
+                    "8. Aplicativos: Baixe o 'Moovit' para transporte e 'iFood' para delivery (funciona 24h).",
+                    "9. Hospedagem: Ficar perto de uma estação de metrô (Linha Verde ou Amarela) facilita a vida.",
+                    "10. Finais de Semana: A cidade fica mais vazia e o trânsito flui bem melhor (exceto áreas de balada)."
+                ],
+                // --- NOVO: NÚMEROS IMPORTANTES (SÃO PAULO) ---
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergência policial, assaltos ou situações de risco.",
+                    "2. (11) 3120-4500 (DEATUR): Delegacia Especializada no Atendimento ao Turista.",
+                    "3. 192 (SAMU): Ambulância pública para acidentes e emergências médicas.",
+                    "4. 193 (Bombeiros): Incêndios, resgates e acidentes com vítimas presas.",
+                    "5. 156 (Prefeitura de SP): Informações sobre ônibus, trânsito e serviços municipais.",
+                    "6. 199 (Defesa Civil): Para casos de alagamentos ou desabamentos em chuvas fortes.",
+                    "7. (11) 2445-2945 (Aeroporto Guarulhos - GRU): Informações de voos e achados e perdidos.",
+                    "8. (11) 5090-9000 (Aeroporto Congonhas - CGH): Informações do aeroporto central.",
+                    "9. 180 (Central da Mulher): Denúncias e apoio em casos de violência.",
+                    "10. 0800 770 7722 (Metrô SP): Informações sobre linhas, estações e objetos perdidos."
+                ],
+                // --- NOVO: RISCOS E ERROS (SÃO PAULO) ---
+                riscos: [
+                    "1. Gangue da Bike (Paulista): Na Av. Paulista, NUNCA use o celular na beira da calçada. Eles passam de bicicleta e arrancam da mão em segundos.",
+                    "2. Vidro Aberto no Trânsito: Em engarrafamentos ou semáforos, mantenha os vidros fechados. Assaltantes quebram o vidro para pegar o celular no painel.",
+                    "3. Golpe do Tinder: Cuidado extremo ao marcar encontros por apps. O 'Golpe do Amor' (sequestro relâmpago) aumentou muito em SP.",
+                    "4. Centro Histórico (Sé/República): A região da Praça da Sé e arredores é muito perigosa devido ao alto número de usuários de drogas e furtos. Evite.",
+                    "5. Cracolândia: O fluxo de usuários muda de lugar no centro (Santa Ifigênia/Campos Elíseos). Se ver aglomeração na rua, dê meia volta imediatamente.",
+                    "6. Pix na Rua: Evite andar com o app do banco principal no celular de rua. Tenha um celular 'do ladrão' ou limite de Pix baixo.",
+                    "7. Falso Entregador: Motoqueiros com mochila de iFood abordam pedestres ou carros parados. Fique atento a motos com duas pessoas.",
+                    "8. Golpe da Maquininha (Táxi/Ambulante): Confira sempre o valor no visor antes de aproximar o cartão. Eles digitam um valor maior ou trocam o cartão.",
+                    "9. Vila Madalena à Noite: Bairro boêmio seguro, mas na saída das baladas, fique atento ao esperar Uber na calçada escura.",
+                    "10. Trânsito na Chuva: SP para quando chove. Não marque voos ou compromissos com horário justo em dias de tempestade, você vai perder."
+                ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (O Clássico): Comece na Av. Paulista (MASP, Sesc, Japan House). Almoce por lá. Tarde no Parque Ibirapuera. Jantar: Uma pizza paulistana tradicional.",
+                            "Dia 2 (Centro Histórico): Farol Santander (vista), Pátio do Colégio e o famoso sanduíche de mortadela no Mercadão Municipal.",
+                            "Dica Extra: Se sobrar tempo, dê um pulo no Beco do Batman (Vila Madalena) para fotos incríveis."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Cultura e Luz): Estação da Luz, Museu da Língua Portuguesa e Pinacoteca (almoce no café da Pina). Tarde no Bairro da Liberdade (compras e comida asiática).",
+                            "Dia 4 (Lado B e Boemia): Manhã no Museu do Futebol (Pacaembu). Tarde de compras na Oscar Freire ou 25 de Março (opostos!). Noite na Vila Madalena (bares).",
+                            "Dia 5 (Gastronomia): Almoço no Eataly ou em uma cantina do Bixiga. Tarde no MIS (Museu da Imagem e do Som) ou Instituto Moreira Salles."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Bate-volta Vinho): Roteiro do Vinho em São Roque (1h de SP). Almoço italiano e degustação em vinícolas.",
+                            "Dia 7 (Bate-volta Arte ou Praia): Visite Embu das Artes (domingo é melhor) para artesanato OU desça a serra para Santos (Museu do Café e orla).",
+                            "Dia 8 (Descanso Urbano): Brunch em uma padaria artesanal (Padoca do Maní ou similar) e tarde tranquila no Parque Villa-Lobos."
+                        ]
+                    }
+                },
+                // SEUS LINKS DE AFILIADO (ID 304142)
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-671824&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/sao-paulo/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+                {
+                name: "Campos do Jordão",
+                // FOTO: Vila Capivari (Wikimedia)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Rua_Djalma_Forjaz%2C_Campos_do_Jord%C3%A3o%2C_SP.jpg/960px-Rua_Djalma_Forjaz%2C_Campos_do_Jord%C3%A3o%2C_SP.jpg",
+                tags: ["Inverno", "Romance", "Montanha"],
+                mapa: "https://goo.gl/maps/camposdojordao",
+                clima: "Tropical de Altitude. É a cidade mais alta do Brasil. Inverno gela (pode chegar a -2ºC) e verão é fresco.",
+                // Adicione dentro do objeto de Campos do Jordão
+veredicto: {
+    melhor_epoca: "Junho a Agosto (Inverno/Festival). É o auge do glamour e do frio, mas prepare o bolso. Abril e Maio são ótimos para pegar frio sem pagar preços de alta temporada.",
+    ideal_para: [
+        "Casais em busca de romance (lareira, vinho e fondue)",
+        "Famílias com crianças (Tarundu, Parque da Floresta Encantada)",
+        "Apreciadores de cervejas artesanais (Baden Baden) e chocolate",
+        "Quem curte o clima de serra e arquitetura europeia ('Suíça Brasileira')"
+    ],
+    nao_ideal_para: [
+        "Viajantes com orçamento muito apertado (hospedagem e alimentação são caros)",
+        "Quem odeia trânsito parado (no inverno, o bairro Capivari trava)",
+        "Quem busca calor ou agito de rua despojado (o foco é ver e ser visto)"
+    ],
+    perfis: [
+        { icone: "ri-hearts-fill", nome: "Romance" },
+        { icone: "ri-cup-fill", nome: "Frio/Choc" },
+        { icone: "ri-vip-diamond-fill", nome: "Luxo" },
+        { icone: "ri-beer-fill", nome: "Cerveja" }
+    ]
+},
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Vila Capivari: O centrinho turístico. Arquitetura europeia, restaurantes, lojas de grife e a famosa Cervejaria Baden Baden.",
+                    "2. Parque Amantikir: Jardins que falam. Um paisagismo incrível com labirintos de arbustos e flores do mundo todo.",
+                    "3. Horto Florestal: Natureza pura. Trilhas, lagos, tirolesa e muito ar puro longe do agito da cidade.",
+                    "4. Morro do Elefante: Suba de teleférico (o antigo de cadeirinha ou o novo fechado) para ver a vista clássica da cidade.",
+                    "5. Palácio Boa Vista: A residência de inverno do governador. Tem um acervo de arte incrível (Tarsila do Amaral) e visita guiada.",
+                    "6. Museu Felícia Leirner: Esculturas gigantes de bronze a céu aberto num jardim lindo. O pôr do sol aqui é emocionante.",
+                    "7. Pico do Itapeva: Fica tecnicamente em Pindamonhangaba, mas o acesso é por Campos. Dá para ver 15 cidades do Vale do Paraíba lá de cima.",
+                    "8. Ducha de Prata: Uma canalização de cachoeiras artificiais com decks de madeira. Clássico para fotos (e compras de malhas).",
+                    "9. Tarundu: Centro de lazer com patinação no gelo, hipismo e atividades radicais. Ótimo para crianças.",
+                    "10. Portal da Cidade: A entrada clássica estilo 'Alpes Suíços'. Parada obrigatória para a foto de chegada."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Fondue: O rei da cidade. Queijo, Carne e Chocolate. No Capivari tem rodízios (sequência) em cada esquina.",
+                    "2. Truta: O peixe da região. Servida grelhada com molho de alcaparras ou amêndoas. Fresquíssima.",
+                    "3. Pinhão: Símbolo da cidade. Come-se cozido, em farofas, em pratos sofisticados ou até em sorvete.",
+                    "4. Chocolate Artesanal: Existem dezenas de fábricas (Araucária, Spinassi). O chocolate quente cremoso é lei.",
+                    "5. Cerveja Baden Baden: A cervejaria nasceu aqui. Visite a fábrica ou tome um chopp no bar oficial do Capivari.",
+                    "6. Comida Alemã: Joelho de porco (Eisbein) e salsichões (Wurst) são muito comuns nos restaurantes.",
+                    "7. Pastelão do Maluf: Um pastel gigante (quase uma refeição) muito famoso no centro turístico.",
+                    "8. Café Colonial: Mesas fartas à tarde com pães, geleias, bolos e frios.",
+                    "9. Fondue de Coxinha: Invenção recente que virou febre. Um balde de queijo derretido para mergulhar coxinhas.",
+                    "10. Raclette: Queijo derretido na hora sobre batatas e frios. Prato suíço muito servido no inverno."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Cidade Mais Alta: É o núcleo urbano mais alto do Brasil, a 1.628 metros de altitude.",
+                    "2. Suíça Brasileira: Ganhou o apelido pelo clima e arquitetura (embora o estilo enxaimel seja muitas vezes 'fake' decorativo).",
+                    "3. Cura da Tuberculose: Antes do turismo, a cidade era um sanatório gigante devido ao ar puro que ajudava na cura.",
+                    "4. Festival de Inverno: É o maior evento de música erudita da América Latina (acontece em julho).",
+                    "5. Plátanos: As árvores que perdem as folhas no outono (ficam laranjas) são plátanos importados para dar ar europeu.",
+                    "6. Trânsito de SP: Em feriados, o trânsito no Capivari é tão intenso que parece a Av. Paulista na hora do rush.",
+                    "7. Bondinho: Existe um trem turístico que cruza a cidade (e vai até Santo Antônio do Pinhal).",
+                    "8. Araucárias: A árvore símbolo está ameaçada, mas Campos ainda preserva grandes matas dela.",
+                    "9. Preços: É considerada uma das cidades mais caras do Brasil para turismo na alta temporada.",
+                    "10. Estrada de Ferro: A ferrovia foi construída para subir os doentes de tuberculose, não para turistas."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Mosteiro de São João: Lar das monjas beneditinas. Elas cantam Canto Gregoriano todos os dias às 17h45 (lindo demais).",
+                    "2. Igreja de São Benedito: A igreja do Capivari. Pequena, charmosa e disputadíssima para casamentos.",
+                    "3. Auditório Cláudio Santoro: A casa do Festival de Inverno. Acústica perfeita no meio da mata.",
+                    "4. Casa da Xilogravura: O único museu do Brasil dedicado apenas a essa arte (gravura em madeira).",
+                    "5. Palácio Boa Vista: Além de sede do governo, é um museu de arte sacra e modernista (tem quadros valiosos).",
+                    "6. Capela de São Pedro Apóstolo: Fica dentro do Palácio, projetada por Paulo Mendes da Rocha.",
+                    "7. Comunidade Espiritual: A cidade atrai muitos retiros de yoga e meditação devido à altitude e silêncio.",
+                    "8. Lendas da Mantiqueira: Histórias de luzes misteriosas e povos antigos da serra.",
+                    "9. Artesanato em Lã: As malharias são parte da cultura local (e da economia).",
+                    "10. Festa da Cerejeira: A colônia japonesa celebra a florada das Sakuras (julho/agosto) com muita cultura nipônica."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Festival de Inverno (Julho): A cidade lota. Concertos gratuitos na praça e pagos no auditório. Preços triplicam.",
+                    "2. Festa da Cerejeira (Jul/Ago): No Parque das Cerejeiras. Comida japonesa e árvores rosas floridas.",
+                    "3. Natal dos Sonhos (Dez): A decoração de Natal de Campos é famosa, com desfiles e Papai Noel. A cidade fica mágica.",
+                    "4. Outono (Abr-Jun): Para muitos, a melhor época. Frio, folhas caindo, céu azul e preços médios.",
+                    "5. Temporada do Pinhão (Maio): Os restaurantes criam pratos especiais com pinhão.",
+                    "6. Verão (Dez-Mar): Chove bastante à tarde, mas é quando as hortênsias estão floridas e lindas.",
+                    "7. Feriados Prolongados: A cidade sempre enche. Se quiser paz, evite Corpus Christi e Carnaval.",
+                    "8. Primavera (Set-Nov): O Parque Amantikir fica no auge das flores.",
+                    "9. Temporada de Malhas (Maio-Jul): As feiras de malha ficam lotadas de gente comprando roupa de frio.",
+                    "10. Reveillon: Tranquilo, focado em ceias em família e hotéis. Não tem grandes festas de rua como na praia."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Voltagem: 127V (110V). Diferente de outras cidades de serra que podem ser 220V. Confira sempre.",
+                    "2. DDD: 12.",
+                    "3. Acesso: Pela Rodovia Floriano Rodrigues Pinheiro (SP-123). Estrada sinuosa, mas excelente e linda.",
+                    "4. Pedágio: Tem pedágio na subida da serra e é caro.",
+                    "5. Uber: Funciona bem, mas em alta temporada o preço dispara (dinâmico) e o trânsito trava.",
+                    "6. Estacionamento: No Capivari, estacionar na rua é Zona Azul digital (caro) e estacionamentos privados custam uma fortuna.",
+                    "7. Clima: À noite sempre esfria, mesmo no verão. Traga casaco leve sempre.",
+                    "8. Moeda: Real (BRL). Cartão aceito em 100% dos lugares.",
+                    "9. Hospedagem: Ficar no Capivari é prático (faz tudo a pé) mas caro. Ficar longe é barato, mas depende de carro.",
+                    "10. Neblina: Comum na serra ao cair da tarde. Redobre a atenção dirigindo."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Mala de Frio: Traga botas, cachecol e casaco pesado se vier entre maio e agosto. O frio dói.",
+                    "2. Reserve Restaurantes: No jantar de sexta e sábado, filas de espera passam de 2 horas no Capivari. Reserve.",
+                    "3. Não suba a serra sexta à noite: O trânsito na SP-123 para. Tente subir sexta de manhã ou sábado de madrugada.",
+                    "4. Economize na Comida: Restaurantes no Capivari são caros. Em Abernéssia (bairro comercial) come-se bem pela metade do preço.",
+                    "5. Amantikir Cedo: Vá assim que abrir (9h). Depois das 11h, vira fila para tirar foto.",
+                    "6. Malhas: Compre malhas no bairro 'Abernéssia' ou na entrada da cidade. No Capivari é preço de grife.",
+                    "7. Lareira: Se o hotel tem lareira, pergunte se a lenha é cobrada à parte (geralmente é).",
+                    "8. Hidratação: A altitude e o frio ressecam a pele e lábios. Leve manteiga de cacau.",
+                    "9. Chocolate Quente: O do 'Montanhês' é o mais famoso (e denso). Vale a caloria.",
+                    "10. Pôr do Sol: O Museu Felícia Leirner tem o pôr do sol mais bonito, com música clássica de fundo às vezes."
+                ],
+
+                // --- NOVO: NÚMEROS IMPORTANTES (CAMPOS DO JORDÃO) ---
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergência e segurança.",
+                    "2. 193 (Bombeiros): Resgate em trilhas, acidentes e incêndios (comum em mata seca no inverno).",
+                    "3. 192 (SAMU): Urgência médica e ambulância.",
+                    "4. (12) 3662-1904 (Hospital Municipal): O Complexo Municipal de Saúde é o atendimento público.",
+                    "5. (12) 3664-3524 (Rodoviária): Informações sobre ônibus (Pássaro Marron) para SP e Vale.",
+                    "6. 153 (Guarda Civil): Apoio ao turista e trânsito municipal.",
+                    "7. (12) 3663-1235 (Portal de Entrada): Centro de Informações Turísticas.",
+                    "8. 199 (Defesa Civil): Para deslizamentos em época de chuva de verão.",
+                    "9. (12) 3662-5400 (Delegacia de Polícia): Para registrar furtos ou perda de documentos.",
+                    "10. 0800 055 5510 (DER): Emergência nas rodovias estaduais de acesso (SP-123)."
+                ],
+
+                // --- NOVO: RISCOS E ERROS (CAMPOS DO JORDÃO) ---
+                riscos: [
+                    "1. Preços 'Suíços': Em Julho, tudo custa o triplo. Um fondue para dois pode passar de R$ 400. Pesquise o cardápio na porta antes de entrar.",
+                    "2. Trânsito no Capivari: Entrar de carro no centrinho sábado à noite é pedir para ficar preso 1h em 500 metros. Estacione longe e vá a pé.",
+                    "3. Neblina na Serra: A neblina desce rápido e a visibilidade zera na rodovia. Não pare no acostamento (é perigoso). Reduza e siga as faixas.",
+                    "4. 'Couvert' Artístico: Quase todo restaurante tem música ao vivo e cobra caro por pessoa. Pergunte se é obrigatório ou se tem área sem música.",
+                    "5. Golpe do Aluguel: Casas de temporada falsas ou muito diferentes da foto são comuns no inverno. Use plataformas confiáveis (Airbnb/Booking) e desconfie de PIX direto.",
+                    "6. Calçadas Escorregadias: No inverno, o orvalho congela ou cria limo. Cuidado ao andar nas calçadas de pedra, escorrega muito.",
+                    "7. Quatis no Horto: Eles são fofos, mas roubam comida e mordem. Não tente alimentar nem fazer carinho.",
+                    "8. Frio na Sombra: Ao sol é agradável, na sombra é gelado. O erro é sair sem casaco porque viu sol. Você vai passar frio.",
+                    "9. Compras por Impulso: O chocolate e a malha no centro turístico são muito mais caros. Pesquise no bairro Abernéssia ou Portal.",
+                    "10. Hospedagem sem Aquecedor: Erro fatal. Verifique se o hotel tem aquecedor ou lençol térmico. O isolamento das casas no Brasil é ruim e faz muito frio dentro do quarto."
+                ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (O Clássico): Manhã no Parque Amantikir (chegue cedo). Almoço no Capivari (Baden Baden). Tarde: Teleférico e Morro do Elefante. Noite: Fondue.",
+                            "Dia 2 (Vista e Chocolate): Pico do Itapeva (vista do vale). Visita a uma fábrica de chocolate (Araucária ou Spinassi). Tarde: Ducha de Prata e fotos no Portal."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Natureza e Arte): Manhã no Horto Florestal (trilhas leves). Almoço no restaurante do parque. Fim de tarde: Museu Felícia Leirner (esculturas e o pôr do sol mais bonito).",
+                            "Dia 4 (Cultura): Palácio Boa Vista (residência de inverno). Café no Sans Souci. Noite: Pizza ou truta no bairro Jaguaribe (mais barato que Capivari).",
+                            "Dia 5 (Diversão): Dia no Tarundu (patinação, tirolesa) se tiver crianças, ou Parque das Cerejeiras (se for época) + Cervejaria local."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Bate-volta Vizinho): Santo Antônio do Pinhal. Visite o Pico Agudo e a estação de trem Eugênio Lefèvre. Almoço rural.",
+                            "Dia 7 (Compras e Malhas): Dia de compras no bairro Abernéssia (muito mais barato que o centro turístico) e Galeria das Malhas.",
+                            "Dia 8 (Slow Travel): Café colonial demorado pela manhã e tarde livre para curtir a lareira do hotel ou o Bondinho Urbano."
+                        ]
+                    }
+                },
+
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-634788&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/campos-do-jordao/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+              {
+                name: "Búzios",
+                // FOTO: Orla Bardot ou Rua das Pedras (Wikimedia)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Buzios_11_2006_03.JPG/960px-Buzios_11_2006_03.JPG",
+                tags: ["Praias", "Luxo", "Gastronomia"],
+                mapa: "https://goo.gl/maps/buzios",
+                clima: "Tropical Seco. Chove menos que no Rio de Janeiro. Venta bastante. A água do mar é fria o ano todo.",
+                // Adicione dentro do objeto de Búzios
+veredicto: {
+    melhor_epoca: "Abril e Maio ou Setembro a Novembro (Clima ótimo e cidade mais vazia). O verão (Dez-Fev) é lotado, caro e o trânsito para. Setembro costuma ventar bastante.",
+    ideal_para: [
+        "Quem busca charme e sofisticação (o estilo 'Saint-Tropez brasileira')",
+        "Casais (pousadas boutique e jantares românticos na Rua das Pedras)",
+        "Amantes de praias variadas (tem de surf em Geribá a piscina na Ferradura)",
+        "Vida noturna de alto nível (beach clubs e baladas famosas)"
+    ],
+    nao_ideal_para: [
+        "Quem tem dificuldade de locomoção (a Rua das Pedras é terrível para cadeirantes, saltos ou carrinhos de bebê)",
+        "Viajantes com orçamento muito curto (alimentação e hospedagem são valorizadas)",
+        "Quem não tem paciência para trânsito (na alta temporada, cruzar a cidade pode levar horas)"
+    ],
+    perfis: [
+        { icone: "ri-hearts-fill", nome: "Charme" },
+        { icone: "ri-sun-fill", nome: "Praia" },
+        { icone: "ri-goblet-fill", nome: "Night" },
+        { icone: "ri-vip-diamond-fill", nome: "Sofisticado" }
+    ]
+},
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Rua das Pedras: O coração da cidade. Lojas de grife, restaurantes e bares badalados. O charme acontece à noite.",
+                    "2. Orla Bardot: A continuação da Rua das Pedras na beira do mar. Tem a estátua da Brigitte Bardot e os barcos de pesca.",
+                    "3. Praia de Geribá: A praia dos jovens e do surf. Extensa, areia branca e muita gente bonita. O Fishbone é o point do fim de tarde.",
+                    "4. Praia da Ferradura: Formato de 'U', mar sem ondas, parece uma lagoa. Perfeita para famílias, caiaque e stand-up paddle.",
+                    "5. Azeda e Azedinha: Acesso por uma escadaria de madeira ou táxi-boat. Pequenas, charmosas e com água cristalina.",
+                    "6. Praia de João Fernandes: A preferida dos argentinos. Água transparente, peixinhos visíveis e muitos hotéis/restaurantes na encosta.",
+                    "7. Praia Brava: Mar agitado e visual selvagem. É onde ficam os Beach Clubs mais luxuosos (Silk, Rocka).",
+                    "8. Porto da Barra (Manguinhos): O melhor lugar para ver o pôr do sol. Um complexo gastronômico na beira do cais com restaurantes incríveis.",
+                    "9. Praia da Tartaruga: Água mais quente (ou menos fria) e verde. Ótima para mergulho livre e ver tartarugas.",
+                    "10. Mirante do Forno: Uma vista panorâmica espetacular da região. Pouca gente vai, mas rende a melhor foto."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Crepe do Chez Michou: Um clássico da Rua das Pedras há décadas. O ambiente é barulhento e divertido.",
+                    "2. Gastronomia do Porto da Barra: Jantar no cais de Manguinhos vendo o pôr do sol é obrigatório. Restaurantes de frutos do mar e italianos.",
+                    "3. Rocka Beach Lounge: Na Praia Brava. Comida sofisticada com pé na areia e colchões para deitar.",
+                    "4. Pizza Quadrada: Vários locais vendem pizza por metro ou quadrada, típica da região.",
+                    "5. Peixe com Banana: Prato caiçara muito comum nos restaurantes locais.",
+                    "6. O Barco: Restaurante tradicional na Orla Bardot, especializado em moquecas e peixes frescos.",
+                    "7. Sorvete na Rua das Pedras: Caminhar tomando um gelato italiano (Sorvete Mil Frutas ou Itália) é tradição.",
+                    "8. Empanadas Argentinas: Devido à enorme comunidade argentina em Búzios, as empanadas são autênticas.",
+                    "9. Frutos do Mar na Telha: Servido em muitos quiosques de João Fernandes.",
+                    "10. Caipirinha de Frutas Tropicais: Kiwi, Maracujá e Frutas Vermelhas são as mais pedidas nos quiosques."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Brigitte Bardot: A atriz francesa 'descobriu' Búzios nos anos 60 quando era só uma vila de pescadores. Ela colocou a cidade no mapa mundial.",
+                    "2. 23 Praias: A península é pequena, mas tem 23 praias com características totalmente diferentes (umas com onda, outras piscinas).",
+                    "3. Vento Constante: Búzios venta muito, o que atrai praticantes de Kitesurf e Windsurf (principalmente na Rasa e Manguinhos).",
+                    "4. Invasão Argentina: É chamada de 'Búzios Aires'. Muitos argentinos moram e têm negócios lá. O espanhol é a segunda língua.",
+                    "5. Ressurgência: Fenômeno oceanográfico que faz as águas profundas e geladas da Antártida subirem aqui. Por isso a água é trincando de fria.",
+                    "6. Sem Prédios: Uma lei proíbe construções altas. Isso mantém o charme de vila com telhados coloniais.",
+                    "7. Rua das Pedras: As pedras 'pés-de-moleque' são originais e irregulares. Salto alto aqui é impossível (e perigoso).",
+                    "8. Três Castelos: A formação rochosa da Ponta da Lagoinha parece ruínas de castelos e tem piscinas naturais secretas.",
+                    "9. Nudismo: A praia Olho de Boi é naturista. O acesso é por trilha saindo da Praia Brava.",
+                    "10. Mick Jagger: O vocalista dos Stones também passou por lá nos anos 70 e tem uma música supostamente inspirada na cidade."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Igreja de Sant'Ana: Padroeira da cidade. A igrejinha fica num morro entre a Armação e os Ossos. Vista linda.",
+                    "2. Capela de Santa Rita de Cássia: No cais de Manguinhos. Pequena e histórica.",
+                    "3. Festa de Sant'Ana (Julho): Procissão marítima onde os barcos dos pescadores são decorados.",
+                    "4. Quilombo da Rasa: Uma comunidade remanescente de quilombo que preserva a cultura afro-brasileira na entrada da cidade.",
+                    "5. Arte na Rua: A Orla Bardot é cheia de esculturas de bronze (Brigitte, Os Pescadores, Juscelino Kubitschek).",
+                    "6. Cine Bardot: Um cinema pequeno e charmoso que exibe filmes cult e sedia o Festival de Cinema de Búzios.",
+                    "7. Artesanato Local: Na Praça Santos Dumont tem uma feirinha de artesanato diária à noite.",
+                    "8. Galerias de Arte: A Rua das Pedras tem várias galerias com obras de artistas plásticos renomados.",
+                    "9. Pesca Artesanal: Ainda é possível ver os pescadores chegando com as redes na Praia da Armação pela manhã.",
+                    "10. Festival de Jazz e Blues: Evento anual que espalha palcos pela cidade com música de graça."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Verão (Dez-Mar): Cidade lotada, trânsito parado, vida noturna intensa. Água fria refresca o calor.",
+                    "2. Inverno (Jun-Set): Melhor época gastronômica (Festival Gastronômico). Água muito gelada, mas dias de céu azul.",
+                    "3. Reveillon: Um dos mais caros do Brasil. Festas privadas custam R$ 3.000+ o ingresso.",
+                    "4. Búzios Jazz Festival (Julho): Shows de jazz nas ruas e praças.",
+                    "5. Degusta Búzios (Agosto/Out): Festival onde os restaurantes montam barracas na rua com pratos pequenos a preços populares.",
+                    "6. Feriadões: A entrada da cidade trava. O trajeto de 10km pode levar 2 horas.",
+                    "7. Vento Sudoeste: Quando entra esse vento, o mar fica mexido e a temperatura cai. Atenção à previsão.",
+                    "8. Março/Abril: O 'segredo'. Água mais clara, cidade vazia e preços de baixa temporada.",
+                    "9. XC Búzios: Prova de maratona aquática e corrida que movimenta a cidade.",
+                    "10. Pride Búzios: Parada LGBTQIA+ que acontece geralmente em setembro/outubro."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Transporte: Carro é útil para ir de uma praia a outra, mas estacionar é caro e difícil (Zona Azul 'Búzios Digital'). Uber funciona bem.",
+                    "2. Trolley: Um caminhão aberto turístico que percorre 12 praias. Ótimo para o primeiro dia para conhecer tudo.",
+                    "3. Táxi-Boat: O meio mais divertido de se locomover. Barquinhos que levam de uma praia a outra (ex: Ossos -> Azeda).",
+                    "4. Preços: Búzios é caro. Comida e bebida têm preços de Rio de Janeiro ou mais altos.",
+                    "5. Água Fria: Esteja avisado. A água varia de 18ºC a 21ºC. É revigorante, mas choca na primeira entrada.",
+                    "6. Voltagem: 110V. A maioria dos hotéis oferece secador.",
+                    "7. Pôr do Sol: O espetáculo diário. O sol se põe no mar na Orla Bardot e Porto da Barra.",
+                    "8. Caminhada: As distâncias enganam. De Geribá até a Rua das Pedras são 4km (longe para ir a pé).",
+                    "9. Segurança: Considerada segura para caminhar à noite no centro e orlas. Cuidado com pertences na areia.",
+                    "10. Aeroporto: O de Búzios (BZC) recebe poucos voos privados. O turista comum chega pelo Galeão (Rio) e pega transfer (2h30 de viagem)."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Calçado: Leve rasteirinha ou tênis. Esqueça salto alto para a Rua das Pedras ou vai torcer o pé.",
+                    "2. Trânsito na Chegada: Se for feriado, saia do Rio de madrugada. Se sair às 10h da manhã, vai pegar 5 horas de engarrafamento.",
+                    "3. Zona Azul: Baixe o app 'Búzios Digital' para pagar estacionamento na rua. Os fiscais multam rápido.",
+                    "4. Vento: Leve um casaco corta-vento ou pashmina. À noite venta frio, mesmo no verão.",
+                    "5. Praias com Sombra: Azeda e João Fernandes têm pouca areia e enchem rápido. Chegue cedo.",
+                    "6. Cadeira de Praia: Em Geribá e João Fernandes, se sentar na cadeira da barraca, prepare-se para consumação mínima ou aluguel caro.",
+                    "7. Arraial do Cabo: Reserve um dia para ir a Arraial. Fica a 40min e a água é azul caribe (mas ainda mais gelada).",
+                    "8. Tartaruga no Fim de Tarde: O pôr do sol na Praia da Tartaruga é lindo e a água é a menos fria da cidade.",
+                    "9. Dinheiro: Leve um pouco de espécie para os táxi-boats e vendedores de mate/milho.",
+                    "10. Mergulho: Se gosta, faça o 'Batismo' em João Fernandes. A vida marinha é rica."
+                ],
+
+                // --- NOVO: NÚMEROS IMPORTANTES (BÚZIOS) ---
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergência.",
+                    "2. 199 (Guarda Municipal): Muito atuante no trânsito e centro.",
+                    "3. 193 (Bombeiros): Resgate no mar.",
+                    "4. (22) 2623-1000 (Hospital Municipal Rodolpho Perissé): Principal emergência pública.",
+                    "5. (22) 2623-2093 (Delegacia de Turismo): Atendimento especializado.",
+                    "6. (22) 2620-8080 (Rodoviária de Búzios): Ônibus 1001 para o Rio.",
+                    "7. 192 (SAMU): Ambulância.",
+                    "8. (22) 2623-6447 (Informações Turísticas): Pórtico de entrada.",
+                    "9. (22) 2623-1300 (Prefeitura): Geral.",
+                    "10. Táxi Boat (Associação): Geralmente ficam nos píeres dos Ossos e Centro."
+                ],
+
+                // --- NOVO: RISCOS E ERROS (BÚZIOS) ---
+                riscos: [
+                    "1. O Choque Térmico: O ERRO Nº 1. Achar que a água é 'quentinha' como no Nordeste. É gelada! Entre devagar para não ter cãibra.",
+                    "2. Salto Alto nas Pedras: Você vai ver turistas tropeçando na Rua das Pedras. Não seja essa pessoa. Use rasteirinha.",
+                    "3. Trânsito da Estrada da Usina: Em feriados, o trecho entre a entrada da cidade e o centro para totalmente. Tenha paciência ou alugue bicicleta.",
+                    "4. Consumação Mínima Abusiva: Algumas barracas (principalmente em João Fernandes) exigem consumação altíssima para sentar. Pergunte ANTES.",
+                    "5. Ouriços: Nas pedras laterais das praias (Ferradura/Tartaruga) têm muitos ouriços. Cuidado ao pisar.",
+                    "6. Bebida e Direção: A Lei Seca na saída de Búzios é frequente e rigorosa. Se beber, vá de Uber.",
+                    "7. Preço do Uber Dinâmico: Na saída de festas (Privilège/Silk), o Uber pode custar R$ 100 por trechos curtos. Combine táxi antes se possível.",
+                    "8. Insolação com Vento: O vento constante mascara o calor do sol. Você queima sem sentir. O índice UV é alto.",
+                    "9. Água Viva: Às vezes aparecem correntes de água viva (mães d'água). Se ver bandeira roxa ou avisos, não entre.",
+                    "10. Furtos na Areia: Em Geribá lotada, não deixe celular na canga e vá para o mar. Ocorrem furtos de oportunidade."
+                ],
+
+                // --- NOVO: ROTEIRO AUTOMÁTICO (BÚZIOS) ---
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (O Clássico): Manhã nas praias Azeda e Azedinha (vá de táxi-boat saindo do centro). Almoço na Orla Bardot. Fim de tarde: Estátua da Brigitte Bardot e Rua das Pedras à noite.",
+                            "Dia 2 (Escolha seu Vibe): Se quer agito/surf: Praia de Geribá. Se quer calmaria/família: Praia da Ferradura. Pôr do sol no Porto da Barra (Manguinhos)."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Águas Cristalinas): Praia de João Fernandes e João Fernandinho. Ótimo para snorkel. Almoço nos restaurantes com vista para o mar ali mesmo.",
+                            "Dia 4 (Passeio Geral): Passeio de Trolley (caminhão aberto) que passa por 12 praias e mirantes ou passeio de Escuna/Catamarã.",
+                            "Dia 5 (Chic & Wild): Praia Brava. É mais selvagem, mas tem os Beach Clubs mais chiques (Silk, Rocka). Se sobrar tempo, Olho de Boi (nudismo) fica ali perto."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Caribe Vizinho): Bate-volta OBRIGATÓRIO para Arraial do Cabo (40 min de carro). As praias lá são ainda mais azuis (Pontal do Atalaia).",
+                            "Dia 7 (Natureza): Praia da Tartaruga (água quente e verde). Alugue um caiaque.",
+                            "Dia 8 (Despedida): Café da manhã no Chez Michou (crepe) e últimas compras nas butiques da Rua das Pedras."
+                        ]
+                    }
+                },
+
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-626938&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/buzios/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+              {
+    name: "Belo Horizonte",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Panorama_Mineir%C3%A3o_Pampulha_%28cropped%29.jpg/1280px-Panorama_Mineir%C3%A3o_Pampulha_%28cropped%29.jpg",
+    tags: ["Gastronomia", "Cultura", "Arquitetura"],
+    mapa: "https://goo.gl/maps/bhz",
+    clima: "Tropical de Altitude. Clima ameno e agradável na maior parte do ano.",
+    // Adicione dentro do objeto de Belo Horizonte
+veredicto: {
+    melhor_epoca: "Abril a Setembro (Outono/Inverno). É a época seca e agradável, ideal para os botecos ao ar livre. O verão (Dez-Mar) costuma ser quente e chuvoso.",
+    ideal_para: [
+        "Amantes da gastronomia raiz (é a Capital Mundial dos Botecos)",
+        "Quem busca turismo cultural (Circuito Liberdade e a genial Pampulha)",
+        "Base para visitar Inhotim (o maior museu a céu aberto do mundo, em Brumadinho)",
+        "Gulosos por queijos, doces e cachaças (Mercado Central é o paraíso)"
+    ],
+    nao_ideal_para: [
+        "Quem busca praia e mar (mas tem cachoeiras próximas e o 'mar de morros')",
+        "Quem odeia ladeiras e caminhar subindo morro (a topografia é acidentada)",
+        "Quem prefere silêncio total à noite (a vida boêmia nas calçadas é intensa)"
+    ],
+    perfis: [
+        { icone: "ri-goblet-fill", nome: "Boteco/Gastrô" },
+        { icone: "ri-artboard-fill", nome: "Cultura/Arte" },
+        { icone: "ri-group-fill", nome: "Social" },
+        { icone: "ri-shopping-basket-fill", nome: "Mercado" }
+    ]
+},
+    pontos_turisticos: [
+        "1. Praça da Liberdade: O coração cultural, cercada por museus em prédios históricos e arquitetura neoclássica e moderna.",
+        "2. Conjunto Moderno da Pampulha: Patrimônio da UNESCO. Inclui a Igreja de São Francisco de Assis (Niemeyer) e a Casa do Baile.",
+        "3. Mercado Central: Eleito um dos melhores do mundo. Ótimo para provar queijos, doces e o famoso fígado com jiló.",
+        "4. Estádio Mineirão: O Gigante da Pampulha. Visite o Museu Brasileiro do Futebol e faça o tour pelos bastidores.",
+        "5. Mirante das Mangabeiras: Uma das vistas mais completas da cidade, no pé da Serra do Curral.",
+        "6. Parque Municipal Américo Renné Giannetti: Um oásis verde no hipercentro, com lagos e muita sombra.",
+        "7. Centro de Arte Contemporânea Inhotim: Embora fique em Brumadinho (60km), é parada obrigatória para quem visita BH.",
+        "8. Savassi: Bairro famoso pelos bares, livrarias e vida noturna agitada.",
+        "9. Museu de Artes e Ofícios: Localizado na Praça da Estação, conta a história do trabalho no Brasil.",
+        "10. Memorial Minas Gerais Vale: Um museu interativo na Praça da Liberdade que revive a história mineira."
+    ],
+
+    gastronomia: [
+        "1. Pão de Queijo: O melhor do mundo está aqui. Prove recheado ou tradicional.",
+        "2. Feijão Tropeiro: O prato clássico, especialmente o servido no Mineirão.",
+        "3. Frango com Quiabo: Um ícone da comida mineira caseira.",
+        "4. Fígado com Jiló: O petisco mais famoso do Mercado Central.",
+        "5. Doce de Leite e Queijo Minas: A dupla perfeita ('Romeu e Julieta' mineiro).",
+        "6. Cervejas Artesanais: BH é um dos maiores polos produtores do Brasil (bairro Jardim Canadá).",
+        "7. Leitão à Pururuca: Carne de porco suculenta e pele crocante.",
+        "8. Vaca Atolada: Costela bovina cozida com mandioca até derreter.",
+        "9. Ora-pro-nóbis: Planta nutritiva muito usada em refogados e pratos regionais.",
+        "10. Café Mineiro: Cafeterias de especialidade dominam a região com grãos do Sul de Minas."
+    ],
+
+    religiao: [
+        "1. Igreja de São Francisco de Assis (Pampulha): Obra de Niemeyer com painéis de Portinari, ícone da arquitetura moderna.",
+        "2. Catedral Nossa Senhora da Boa Viagem: Padroeira da cidade, em estilo neogótico.",
+        "3. Santuário Estadual da Piedade: Localizado em Caeté (perto de BH), no topo da serra, com vista deslumbrante.",
+        "4. Basílica de Lourdes: Uma das igrejas mais imponentes e tradicionais do bairro de Lourdes.",
+        "5. Sincretismo Cultural: As festas de congado e as guardas de Moçambique são expressões fortes da fé afro-mineira.",
+        "6. Igreja de São José: No centro da cidade, com belíssimos murais interiores.",
+        "7. Mosteiro de Macaúbas: Mosteiro histórico de clausura feminina localizado em Santa Luzia.",
+        "8. Centro Espírita: Minas Gerais tem uma tradição espírita muito forte (berço de Chico Xavier).",
+        "9. Comunidade Evangélica: Grande presença de igrejas históricas e contemporâneas em toda a capital.",
+        "10. Caminho religioso da Estrada Real: BH integra diversas rotas de peregrinação histórica."
+    ],
+
+    curiosidades: [
+        "1. Capital dos Botecos: BH tem a maior quantidade de bares por habitante no Brasil.",
+        "2. Cidade Planejada: Foi a primeira cidade brasileira moderna planejada (inaugurada em 1897).",
+        "3. Horizonte Sem Mar: A Serra do Curral é o 'mar' dos mineiros e o símbolo da cidade.",
+        "4. Sotaque Mineiro: Conhecido por 'comer' sílabas e usar o 'uai' e 'trem' para quase tudo.",
+        "5. Niemeyer: Antes de Brasília, Oscar Niemeyer deixou sua marca na Pampulha, a convite de JK.",
+        "6. Sem Semáforos no Centro?: O traçado original visava fluidez, mas o crescimento superou o plano.",
+        "7. Mercado Global: O Mercado Central é frequentemente listado entre os melhores mercados do planeta.",
+        "8. Clima: BH está a 852m de altitude, o que garante noites frescas mesmo no verão.",
+        "9. Berço do Rock/Metal: Bandas como Sepultura e Skank nasceram no cenário musical de BH.",
+        "10. Uai: A origem da expressão é incerta, mas é o DNA da comunicação mineira."
+    ],
+
+    eventos_estacoes: [
+        "1. Carnaval de BH: Cresceu meteoricamente e hoje é um dos melhores carnavais de rua do país.",
+        "2. Comida di Buteco: Festival gastronômico que elege os melhores petiscos da cidade (Abril/Maio).",
+        "3. Inverno (Jun-Ago): Época seca e fria, ideal para caldos e festivais de jazz na serra.",
+        "4. Natal: A Praça da Liberdade ganha iluminação espetacular e apresentações de corais.",
+        "5. Festival Internacional de Teatro (FIT): Bienal que traz grupos do mundo todo para a capital.",
+        "6. Arraial de Belo Horizonte (Junho): Uma das maiores festas juninas da capital.",
+        "7. Festival Sarará: Grande evento de música brasileira que acontece na Esplanada do Mineirão.",
+        "8. Primavera: A cidade fica colorida com os ipês amarelos e roxos espalhados pelas avenidas.",
+        "9. BH Stock Car: Evento de corrida que utiliza as vias ao redor do Mineirão.",
+        "10. Verão (Dez-Mar): Estação chuvosa com calor moderado."
+    ],
+
+    info_gerais: [
+        "1. Moeda: Real Brasileiro (BRL).",
+        "2. Voltagem: 127v (110v).",
+        "3. Tomada: Tipo N (3 pinos).",
+        "4. DDD: 31.",
+        "5. População: Aprox. 2.3 milhões (cidade) e 6 milhões (região metropolitana).",
+        "6. Gentílico: Belo-horizontino.",
+        "7. Aeroportos: Confins (CNF - Internacional) e Pampulha (PLU - Regional).",
+        "8. Água: Beba mineral. A água da torneira não é recomendada para consumo direto.",
+        "9. Uber/99: Funcionam perfeitamente e são a melhor forma de se deslocar.",
+        "10. Gorjeta: 10% a 13% inclusos na conta (opcional)."
+    ],
+
+    antes_de_ir: [
+        "1. Ladeiras: BH é muito morrada. Use calçados confortáveis se pretender caminhar.",
+        "2. Aeroporto de Confins: Fica a 40km do centro. Calcule pelo menos 1h de trajeto.",
+        "3. Inhotim: Reserve pelo menos um dia inteiro. Compre o ingresso online.",
+        "4. Mercado Central no Domingo: Fecha cedo (13h). Vá de manhã para aproveitar.",
+        "5. Segurança no Hipercentro: Atenção redobrada com pertences perto da Rodoviária.",
+        "6. Transporte Público: O metrô é limitado. O sistema de ônibus MOVE é eficiente.",
+        "7. Roupas: Traga um agasalho mesmo no verão, as noites podem ser frescas.",
+        "8. Reservas: Restaurantes famosos na Savassi costumam ter fila no fim de semana.",
+        "9. Estacionamento: Usa o sistema digital Faixa Azul.",
+        "10. Hospitalidade: O mineiro é gentil. Peça dicas de botecos aos locais."
+    ],
+
+    numeros: [
+        "1. 190 (Polícia Militar): Emergências e segurança.",
+        "2. (31) 3270-4500 (Delegacia do Turista): Próxima à Rodoviária.",
+        "3. 192 (SAMU): Emergência médica.",
+        "4. 193 (Bombeiros): Incêndios e resgates.",
+        "5. (31) 3277-4102 (Rodoviária de BH): Informações sobre ônibus.",
+        "6. (31) 3689-2000 (Aeroporto de Confins): Informações sobre voos.",
+        "7. 156 (Prefeitura de BH): Serviços municipais.",
+        "8. (31) 3224-4633 (Hospital João XXIII): Referência em urgência.",
+        "9. 118 (BHTrans): Trânsito e ônibus.",
+        "10. (31) 3236-7400 (Belotur): Informações turísticas oficiais."
+    ],
+
+    riscos: [
+        "1. Alagamentos: No verão, algumas avenidas (como Vilarinho) sofrem com enchentes rápidas. Evite em temporais.",
+        "2. Celular no Centro: Furtos por descuido ocorrem no centro comercial.",
+        "3. GPS em Vias Rápidas: Atenção ao entrar em bairros desconhecidos.",
+        "4. Balada na Savassi: Fique atento ao esperar transporte de madrugada na calçada.",
+        "5. Golpes de Taxi: Use aplicativos ou táxis oficiais identificados.",
+        "6. Pão de Queijo Frio: Procure locais com fornadas constantes.",
+        "7. Inhotim na Segunda: O museu não abre às segundas (exceto feriados).",
+        "8. Anel Rodoviário: Via perigosa com tráfego intenso de caminhões.",
+        "9. Moradores de Rua: Presença marcante no hipercentro; mantenha a atenção.",
+        "10. Bebida no Sol: O sol de BH queima muito. Hidrate-se bem."
+    ],
+
+    roteiros: {
+        "curto": {
+            titulo: "Roteiro Express (1 a 2 Dias)",
+            texto: [
+                "Dia 1 (Cultura e Centro): Mercado Central, Circuito Praça da Liberdade e jantar na Savassi.",
+                "Dia 2 (Pampulha): Igrejinha, Museu de Arte e pôr do sol no Mirante das Mangabeiras."
+            ]
+        },
+        "medio": {
+            titulo: "Roteiro Essencial (3 a 5 Dias)",
+            texto: [
+                "Dias 1 e 2: Siga o Roteiro Express acima.",
+                "Dia 3 (Inhotim): Dia inteiro no maior museu a céu aberto do mundo em Brumadinho.",
+                "Dia 4 (História): Praça da Estação, Museu de Artes e Ofícios e Parque Municipal.",
+                "Dia 5 (Boemia): Estádio Mineirão e happy hour no Bairro Santa Tereza."
+            ]
+        },
+        "longo": {
+            titulo: "Roteiro Completo (7+ Dias)",
+            texto: [
+                "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                "Dia 6 (Cidades Históricas): Bate-volta para Ouro Preto e Mariana.",
+                "Dia 7 (Natureza): Cachoeiras na Serra do Cipó.",
+                "Dia 8 (Despedida): Compras finais no Mercado Central."
+            ]
+        }
+    },
+
+    links: {
+        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-629471&aid=304142",
+        passeio: "https://www.civitatis.com/br/belo-horizonte/",
+        seguro: "https://www.segurospromo.com.br"
+    }
+},
+ {
+    name: "Ubatuba",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/c/ca/Praia_do_Estaleiro_-_Ubatuba.png",
+    tags: ["Surfe", "Natureza", "Praias"],
+    mapa: "https://goo.gl/maps/ubatuba",
+    clima: "Tropical Litorâneo. Quente e úmido, conhecida carinhosamente como 'Ubatuba-chuva' pela frequência das precipitações.",
+    // Adicione dentro do objeto de Ubatuba
+veredicto: {
+    melhor_epoca: "Maio a Agosto (Inverno seco). O apelido 'Ubachuva' é real: no verão chove quase todo dia. Se quer sol garantido e céu azul, vá no inverno (mas a água é gelada).",
+    ideal_para: [
+        "Surfistas (é a capital do Surf em SP, com ondas lendárias em Itamambuca)",
+        "Amantes de natureza intocada (Mata Atlântica densa, trilhas e cachoeiras)",
+        "Quem busca variedade (são mais de 100 praias, da calmaria ao mar bravo)",
+        "Passeios de barco para ilhas paradisíacas (Ilha Anchieta e Prumirim)"
+    ],
+    nao_ideal_para: [
+        "Quem tem alergia a insetos (os 'borrachudos' são vorazes, repelente é lei)",
+        "Quem não tem paciência para trânsito (na temporada, a Rio-Santos trava totalmente)",
+        "Quem desanima com previsão de chuva (aqui o tempo vira em minutos)"
+    ],
+    perfis: [
+        { icone: "ri-surfboard-fill", nome: "Surf" },
+        { icone: "ri-tree-fill", nome: "Ecoturismo" },
+        { icone: "ri-drop-fill", nome: "Natureza" },
+        { icone: "ri-group-fill", nome: "Família" }
+    ]
+},
+    pontos_turisticos: [
+        "1. Ilha das Couves: Águas cristalinas ideais para snorkel; acesso controlado por barcos partindo de Picinguaba.",
+        "2. Projeto TAMAR: Centro de conservação de tartarugas marinhas, parada educativa obrigatória no centro.",
+        "3. Aquário de Ubatuba: Um dos melhores do país, com tanque de toque e pinguinário.",
+        "4. Praia de Itamambuca: Palco de campeonatos internacionais de surfe e natureza preservada.",
+        "5. Trilha das Sete Praias: Caminhada clássica que passa por praias desertas como a do Cedro e Bonete.",
+        "6. Ilha Anchieta: Parque Estadual com ruínas de um antigo presídio e trilhas ecológicas.",
+        "7. Praia do Português: Pequena enseada paradisíaca escondida ao lado da Praia de Felix.",
+        "8. Cachoeira do Prumirim: Quedas d'água que deságuam próximas à praia, formando um cenário único.",
+        "9. Rua Guarani: O centro gastronômico e comercial da cidade, perfeita para caminhar à noite.",
+        "10. Praia da Lagoinha: Mar calmo, ideal para famílias e ponto de partida para a Trilha das Sete Praias."
+    ],
+
+    gastronomia: [
+        "1. Azul Marinho: Peixe cozido com banana verde, prato caiçara mais tradicional da região.",
+        "2. Casquinha de Siri: Entrada clássica servida na maioria dos quiosques e restaurantes.",
+        "3. Frutos do Mar na Brasa: Peixes frescos como tainha e sororoca grelhados na hora.",
+        "4. Arroz com Mariscos: Prato rico em sabores do oceano, comum em restaurantes da orla.",
+        "5. Sorvetes de Frutas Nativas: Procure por sabores como cambuci e cupuaçu.",
+        "6. Peixe na Telha: Preparado lentamente com molho de camarão e temperos locais.",
+        "7. Lula à Dorê: Petisco crocante indispensável para quem curte a praia.",
+        "8. Pastel de Camarão: Famoso nas feirinhas e barracas de rua no centro.",
+        "9. Café Caiçara: Geralmente servido com bolo de milho ou paçoca de pinhão nas comunidades.",
+        "10. Cervejas Artesanais: Ubatuba possui microcervejarias locais com rótulos inspirados no mar."
+    ],
+
+    religiao: [
+        "1. Igreja Exaltação da Santa Cruz: Matriz histórica no centro, marco da fundação da cidade.",
+        "2. Festa de São Pedro Pescador: Grande evento em junho com a tradicional benção das embarcações.",
+        "3. Capela de São Francisco: Localizada na Praia da Almada, cenário de festas comunitárias.",
+        "4. Comunidades Quilombolas e Indígenas: Mantêm ritos ancestrais e sincretismo religioso forte.",
+        "5. Procissões Marítimas: Comuns em datas festivas católicas, com barcos decorados.",
+        "6. Centros Espíritas: Presença de grupos dedicados ao estudo e caridade na região central.",
+        "7. Templos Evangélicos: Diversas denominações espalhadas por todos os bairros da cidade.",
+        "8. Presença de Comunidades de Yoga: Muitas focadas em espiritualidade oriental e meditação na natureza.",
+        "9. Gruta que Chora: Local na Praia da Sununga envolto em lendas religiosas e místicas locais.",
+        "10. Folia de Reis: Tradição folclórica e religiosa mantida por grupos da zona norte."
+    ],
+
+    curiosidades: [
+        "1. Capital do Surfe: Oficialmente reconhecida como a capital do surfe no estado de São Paulo.",
+        "2. Ubatuba-Chuva: Apelido carinhoso devido à alta pluviosidade da Serra do Mar.",
+        "3. Trópico de Capricórnio: A linha imaginária atravessa a cidade, marcada por um monumento na BR-101.",
+        "4. 102 Praias: A cidade se orgulha de ter mais de uma centena de praias catalogadas.",
+        "5. Presídio da Ilha Anchieta: Local de uma das maiores rebeliões prisionais da história do Brasil.",
+        "6. Fauna e Flora: Localizada no coração de uma das áreas mais preservadas de Mata Atlântica.",
+        "7. Canoa Caiçara: Ubatuba ainda preserva a fabricação de canoas de um só tronco (voga).",
+        "8. Proximidade com Paraty: Fica a apenas 70km da cidade histórica fluminense.",
+        "9. Observação de Baleias: Entre junho e agosto, é possível avistar baleias jubarte passando pela costa.",
+        "10. Morro do Corcovado: Um dos picos mais altos da região, com trilha desafiadora e vista 360º."
+    ],
+
+    eventos_estacoes: [
+        "1. Verão (Dez-Mar): Alta temporada, águas quentes e cidade extremamente badalada.",
+        "2. Festival do Camarão (Junho/Julho): Grande evento gastronômico no centro da cidade.",
+        "3. Inverno (Jun-Ago): Época de ondas grandes para o surfe e céu limpo (menos chuva).",
+        "4. Ubatuba Jazz Festival: Evento cultural que atrai músicos de renome no outono.",
+        "5. Provas de Natação em Águas Abertas: Travessias famosas que ocorrem em várias praias.",
+        "6. Primavera: Ideal para trilhas e observação de aves (birdwatching).",
+        "7. Corrida de Canoa Caiçara: Competição tradicional que mantém viva a cultura local.",
+        "8. Natal Iluminado: O centro histórico ganha luzes e apresentações de corais.",
+        "9. Outono: Considerada a melhor época para visitar (menos lotação e clima firme).",
+        "10. Etapas de Campeonatos de Surfe: Ocorrem principalmente em Itamambuca e Praia Grande."
+    ],
+
+    info_gerais: [
+        "1. Moeda: Real (BRL).",
+        "2. Voltagem: 127v (maioria).",
+        "3. Tomada: Tipo N (3 pinos).",
+        "4. DDD: 12.",
+        "5. População: Aprox. 93 mil habitantes (triplica na temporada).",
+        "6. Acesso: Rodovias Oswaldo Cruz ou Tamoios.",
+        "7. Pedágio: Não há pedágios dentro da cidade, apenas nas rodovias de acesso.",
+        "8. Estacionamento: Zona Azul digital obrigatória na maioria das praias.",
+        "9. Saúde: Santa Casa de Ubatuba é a principal unidade de urgência.",
+        "10. Transporte: Ônibus circulares ligam as praias do Norte ao Sul."
+    ],
+
+    antes_de_ir: [
+        "1. Borrachudos: Leve repelente (de preferência à base de citronela ou óleo mineral) para trilhas e praias do norte.",
+        "2. Previsão do Tempo: Sempre confira a chuva; o tempo em Ubatuba muda muito rápido.",
+        "3. Lotação: Em feriados, o trânsito na BR-101 (Rio-Santos) pode ser crítico.",
+        "4. Abastecimento: Postos de gasolina são raros nas extremidades (Norte e Sul); abasteça no centro.",
+        "5. Taxa Ambiental: Verifique se a TPA (Taxa de Preservação Ambiental) está ativa para veículos.",
+        "6. Respeite as Correntes: Algumas praias como a Praia Grande e Tombo são perigosas para banho.",
+        "7. Compras: O centro é o melhor lugar para itens de praia e artesanato.",
+        "8. Ilha das Couves: Reserve com antecedência, pois há limite diário de visitantes.",
+        "9. Calçados: Para as trilhas das 7 praias, use tênis com boa aderência.",
+        "10. Dinheiro: Leve um pouco em espécie; alguns quiosques em praias isoladas podem ter sinal de cartão instável."
+    ],
+
+    numeros: [
+        "1. 190 (Polícia Militar): Emergências.",
+        "2. (12) 3834-1000 (Prefeitura): Informações gerais.",
+        "3. 192 (SAMU): Emergência médica.",
+        "4. 193 (Bombeiros): Resgates e salvamento marítimo.",
+        "5. (12) 3832-1333 (Rodoviária): Informações de passagens.",
+        "6. (12) 3833-2050 (Santa Casa): Hospital.",
+        "7. (12) 3832-1150 (CIT - Centro de Informações Turísticas).",
+        "8. 153 (Guarda Civil Municipal).",
+        "9. (12) 3832-6202 (Delegacia de Polícia).",
+        "10. (12) 3832-7043 (Capitania dos Portos)."
+    ],
+
+    riscos: [
+        "1. Afogamentos: Atenção redobrada em praias de tombo e mar aberto.",
+        "2. Animais Peçonhentos: Em trilhas fechadas, atenção a cobras e aranhas.",
+        "3. Alagamentos: Chuvas intensas podem causar queda de barreiras na Rio-Santos.",
+        "4. Carros na Areia: É proibido e passível de multa pesada.",
+        "5. Correntezas: Não nade em canais de rios que deságuam no mar.",
+        "6. Furto em Veículos: Evite deixar objetos de valor à mostra em carros estacionados perto de trilhas.",
+        "7. Rochas Escorregadias: Muito cuidado ao caminhar em costões rochosos.",
+        "8. Sol: O mormaço de Ubatuba queima tanto quanto o sol forte; use proteção.",
+        "9. Maré: Fique atento à subida da maré ao atravessar rios em trilhas.",
+        "10. Ingestão de Água: Evite engolir água do mar ou rios próximos à zona urbana."
+    ],
+
+    roteiros: {
+        "curto": {
+            titulo: "Ubatuba Express (2 Dias)",
+            texto: [
+                "Dia 1: Projeto TAMAR, Aquário e pôr do sol na Praia do Itaguá.",
+                "Dia 2: Praia do Felix e Praia do Português (Norte) ou Ilha das Couves."
+            ]
+        },
+        "medio": {
+            titulo: "O Melhor de Uba (4 Dias)",
+            texto: [
+                "Dias 1 e 2: Siga o roteiro de 2 dias.",
+                "Dia 3: Trilha das Sete Praias (partindo da Lagoinha) até a Praia da Fortaleza.",
+                "Dia 4: Litoral Sul: Praia do Lázaro e Gruta que Chora na Sununga."
+            ]
+        },
+        "longo": {
+            titulo: "Paraíso Caiçara (7+ Dias)",
+            texto: [
+                "Dias 1 a 4: Siga o roteiro de 4 dias.",
+                "Dia 5: Passeio de escuna para a Ilha Anchieta.",
+                "Dia 6: Cachoeira e Praia do Prumirim.",
+                "Dia 7: Dia de surfe ou relax na Praia de Itamambuca."
+            ]
+        }
+    },
+
+    links: {
+        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-639014&aid=304142",
+        passeio: "https://www.civitatis.com/br/ubatuba/",
+        seguro: "https://www.segurospromo.com.br"
+    }
+},
+{
+    name: "Vitória",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/-2016-11-05_ao_13-_Vit%C3%B3ria_94_Romerito_Pontes_%2830875449812%29_%28cropped%29.jpg/1280px--2016-11-05_ao_13-_Vit%C3%B3ria_94_Romerito_Pontes_%2830875449812%29_%28cropped%29.jpg",
+    tags: ["Praias", "Gastronomia", "Ilha"],
+    mapa: "https://goo.gl/maps/vitoria",
+    clima: "Tropical Litorâneo. Quente e úmido no verão, ameno no inverno. Venta bastante (Nordeste).",
+    // Adicione dentro do objeto de Vitória
+veredicto: {
+    melhor_epoca: "Abril a Setembro (Menos chuva e clima ameno). O verão é quente e úmido. No inverno, aproveite para combinar com as Montanhas Capixabas (Domingos Martins) que ficam perto.",
+    ideal_para: [
+        "Amantes de frutos do mar (a regra é clara: 'Moqueca é capixaba, o resto é peixada')",
+        "Quem busca qualidade de vida e uma capital organizada, limpa e segura",
+        "Famílias com crianças (Praça da Ciência, Projeto Tamar e calçadão de Camburi)",
+        "Turismo Religioso (o Convento da Penha, na vizinha Vila Velha, é imperdível)"
+    ],
+    nao_ideal_para: [
+        "Quem busca mar azul turquesa na cidade (a água é mais escura; para praias cristalinas, suba para o Norte do estado)",
+        "Quem espera vida noturna caótica e interminável (o ritmo aqui é mais tranquilo)",
+        "Quem não tem paciência para pontes (o trânsito na Terceira Ponte nos horários de pico é intenso)"
+    ],
+    perfis: [
+        { icone: "ri-restaurant-2-fill", nome: "Moqueca" },
+        { icone: "ri-building-4-fill", nome: "Urbano/Zen" },
+        { icone: "ri-star-smile-fill", nome: "Família" },
+        { icone: "ri-anchor-fill", nome: "Náutico" }
+    ]
+},
+    pontos_turisticos: [
+        "1. Convento da Penha: O cartão-postal do ES. Fica na vizinha Vila Velha, mas a vista de (e para) Vitória é obrigatória.",
+        "2. Ilha das Caieiras: Bairro histórico de pescadores, polo gastronômico famoso pelas desfiadeiras de siri.",
+        "3. Parque da Pedra da Cebola: Parque urbano com uma formação rochosa curiosa que lembra uma cebola.",
+        "4. Praia de Camburi: A principal orla da cidade, ótima para esportes, caminhadas e quiosques.",
+        "5. Galpão das Paneleiras de Goiabeiras: Onde são feitas as autênticas panelas de barro (Patrimônio Cultural).",
+        "6. Praça do Papa: Área nobre com vista para a baía, cruz comemorativa e o Projeto Tamar.",
+        "7. Curva da Jurema: Praia de águas calmas e visual bonito, ao lado do Shopping Vitória.",
+        "8. Palácio Anchieta: Sede do governo estadual, construção jesuítica histórica aberta a visitação.",
+        "9. Catedral Metropolitana de Vitória: Imponente construção neogótica no centro da cidade.",
+        "10. Centro Histórico: Inclui a Escadaria Maria Ortiz, o Theatro Carlos Gomes e casarões antigos."
+    ],
+
+    gastronomia: [
+        "1. Moqueca Capixaba: A estrela local. Diferente da baiana, não leva dendê nem leite de coco. O sabor vem do coentro, urucum e da panela de barro.",
+        "2. Torta Capixaba: Prato tradicional da Semana Santa, mistura bacalhau, palmito, siri, camarão e sururu.",
+        "3. Caranguejo: Ir aos 'caranguejais' (bares especializados) é um ritual de fim de semana.",
+        "4. Muma de Siri: Um pirão ou ensopado delicioso feito com a carne do siri.",
+        "5. Peroá Frito: Peixe típico servido inteiro e frito nos quiosques, geralmente com aipim e vinagrete.",
+        "6. Panela de Barro: Não se come a panela, mas a comida TEM que ser feita nela para ser autêntica.",
+        "7. Casquinha de Siri: Entrada clássica servida em conchas.",
+        "8. Doces de Banana: A região produz muitos derivados da fruta.",
+        "9. Café Arábica: O Espírito Santo é um grande produtor de cafés especiais (região serrana próxima).",
+        "10. Bobó de Camarão: Versão capixaba, mais leve que a nordestina."
+    ],
+
+    religiao: [
+        "1. Festa da Penha: O terceiro maior evento religioso mariano do Brasil, reunindo milhões de fiéis.",
+        "2. Convento da Penha: Santuário histórico fundado em 1558 no topo de um penhasco de 154 metros.",
+        "3. Catedral Metropolitana: Dedicada a Nossa Senhora da Vitória.",
+        "4. Igreja do Rosário: Uma das mais antigas, localizada na Prainha (Vila Velha) e centro histórico.",
+        "5. Santuário de Santo Antônio: Basílica imponente dedicada ao santo casamenteiro.",
+        "6. Igrejas Históricas do Centro: Capela de Santa Luzia (a construção mais antiga da cidade).",
+        "7. Caminhos da Fé: Rotas de peregrinação que ligam Vitória ao santuário de Anchieta (sul do estado).",
+        "8. Comunidades Evangélicas: Grande presença de igrejas batistas e presbiterianas históricas.",
+        "9. Centros Espíritas: Movimento forte e organizado na capital.",
+        "10. Sincretismo: Presença de religiões de matriz africana, com festas para Iemanjá nas praias."
+    ],
+
+    curiosidades: [
+        "1. Moqueca é Capixaba...: O resto é peixada. Esse é o lema oficial (e orgulhoso) do estado.",
+        "2. Capital Ilha: Vitória é uma ilha (Ilha do Mel), ligada ao continente por várias pontes.",
+        "3. Terceira Ponte: A principal ligação com Vila Velha é uma das pontes mais altas do Brasil.",
+        "4. Paneleiras: O ofício das paneleiras de Goiabeiras foi o primeiro bem cultural registrado como Patrimônio Imaterial pelo IPHAN.",
+        "5. Qualidade de Vida: Frequentemente listada entre as melhores capitais para se viver no Brasil (alto IDH).",
+        "6. Cidade Limpa: Conhecida por ter ruas muito limpas e bem cuidadas.",
+        "7. Manguezal Urbano: Possui a maior área de manguezal urbano da América Latina (Estação Ecológica Ilha do Lameirão).",
+        "8. Terceira Mais Antiga: Fundada em 1551, é a terceira capital mais antiga do Brasil (atrás de Recife e Salvador).",
+        "9. Marlin Azul: O Espírito Santo é capital mundial da pesca do Marlin Azul.",
+        "10. Aeroporto: O antigo aeroporto era famoso por ser minúsculo; o novo é moderno e funcional."
+    ],
+
+    eventos_estacoes: [
+        "1. Verão (Dez-Mar): Praias lotadas, shows na areia e muito calor.",
+        "2. Festa da Penha (Abril): O maior evento do estado, com romarias gigantescas.",
+        "3. Festival de Torta Capixaba (Semana Santa): Feira gastronômica na Ilha das Caieiras.",
+        "4. Inverno (Jun-Ago): Clima ameno, ideal para subir a serra (Domingos Martins fica a 40min).",
+        "5. Vitória Jazz e Blues: Festival de música instrumental.",
+        "6. Vital (Carnaval fora de época): Já foi um dos maiores do país e está retornando.",
+        "7. Festival de Cinema de Vitória: Importante evento audiovisual.",
+        "8. Temporada das Baleias (Jun-Nov): É possível avistar Jubartes na costa capixaba.",
+        "9. Aniversário de Vitória (Setembro): Shows e eventos comemorativos.",
+        "10. Réveillon: Queima de fogos na Praia de Camburi."
+    ],
+
+    info_gerais: [
+        "1. Moeda: Real (BRL).",
+        "2. Voltagem: 127v.",
+        "3. Tomada: Tipo N (3 pinos).",
+        "4. DDD: 27.",
+        "5. População: Aprox. 370 mil habitantes (mas a Grande Vitória tem quase 2 milhões).",
+        "6. Aeroporto: Eurico de Aguiar Salles (VIX).",
+        "7. Transporte: Sistema Transcol (ônibus) integra Vitória, Vila Velha, Serra e Cariacica.",
+        "8. Segurança: Zonas turísticas são tranquilas, mas evite o centro velho à noite.",
+        "9. Uber/99: Funcionam muito bem em toda a região metropolitana.",
+        "10. Distâncias: Tudo é muito perto. Você cruza a cidade em 20 minutos fora do pico."
+    ],
+
+    antes_de_ir: [
+        "1. Vila Velha: Considere visitar. O Convento e a Praia da Costa ficam lá, basta cruzar a ponte.",
+        "2. Vento Sul: Quando venta sul, a temperatura cai e o mar fica agitado.",
+        "3. Panela de Barro: Se for comprar, vá à Associação das Paneleiras em Goiabeiras. É mais barato e autêntico.",
+        "4. Serra Capixaba: Se tiver tempo, visite a Pedra Azul (frio europeu) a apenas 1h30 da capital.",
+        "5. Trânsito na Ponte: Evite a Terceira Ponte nos horários de pico (7h-9h e 17h-19h).",
+        "6. Praias Próprias: Verifique a balneabilidade das praias de Vitória; às vezes Camburi tem trechos impróprios.",
+        "7. Trem da Vale: É de Vitória que sai o trem de passageiros para Minas Gerais (Belo Horizonte).",
+        "8. Roupas: Leves e casuais. O capixaba é bem despojado.",
+        "9. Domingo no Centro: O centro fica deserto aos domingos; prefira as praias ou parques.",
+        "10. Culinária: Não saia sem provar a Moqueca. É uma ofensa local."
+    ],
+
+    numeros: [
+        "1. 190 (Polícia Militar).",
+        "2. (27) 3235-6300 (Aeroporto de Vitória).",
+        "3. 192 (SAMU).",
+        "4. 193 (Bombeiros).",
+        "5. (27) 3322-1836 (Rodoviária de Vitória).",
+        "6. 156 (Fala Vitória - Prefeitura).",
+        "7. (27) 3324-1549 (Delegacia de Turismo).",
+        "8. (27) 3636-1033 (Hospital Estadual de Urgência).",
+        "9. 0800 039 0318 (Disque-Silêncio).",
+        "10. (27) 3235-2900 (Projeto Tamar)."
+    ],
+
+    riscos: [
+        "1. Insolação: O sol é forte mesmo com vento; proteja-se.",
+        "2. Centro à Noite: Ruas vazias e mal iluminadas podem ser perigosas.",
+        "3. Pedras nos Costões: Cuidado ao tirar fotos nas pedras, elas escorregam.",
+        "4. Correnteza: Praias de tombo (como algumas partes da Costa em Vila Velha) são perigosas.",
+        "5. Ciclovia: Respeite a faixa de pedestre na orla; bicicletas passam rápido.",
+        "6. Raios: No verão, tempestades elétricas são comuns no fim da tarde.",
+        "7. Furto de Celular: Atenção na areia da praia em dias muito cheios.",
+        "8. Água Viva: Ocorrências ocasionais no verão.",
+        "9. Trânsito: Motoristas capixabas às vezes correm; atenção ao atravessar.",
+        "10. Golpes de Aluguel: Cuidado com aluguéis de temporada muito baratos na internet."
+    ],
+
+    roteiros: {
+        "curto": {
+            titulo: "Vitória Express (2 Dias)",
+            texto: [
+                "Dia 1: Convento da Penha (manhã) e moqueca na Ilha das Caieiras (almoço). Pôr do sol na Curva da Jurema.",
+                "Dia 2: Praia de Camburi, Galpão das Paneleiras e Triângulo das Bermudas (noite)."
+            ]
+        },
+        "medio": {
+            titulo: "Capixaba da Gema (4 Dias)",
+            texto: [
+                "Dias 1 e 2: Siga o roteiro de 2 dias.",
+                "Dia 3: Centro Histórico (Palácio Anchieta e Catedral) e Parque da Pedra da Cebola.",
+                "Dia 4: Dia de praia na Ilha do Boi ou passeio de escuna pela baía."
+            ]
+        },
+        "longo": {
+            titulo: "Mar e Montanha (7+ Dias)",
+            texto: [
+                "Dias 1 a 4: Siga o roteiro de 4 dias.",
+                "Dia 5: Bate-volta para Guarapari (Praias famosas).",
+                "Dia 6: Subida para a região serrana (Domingos Martins/Pedra Azul).",
+                "Dia 7: Visita ao Museu da Vale e compras na Praia do Canto."
+            ]
+        },
+    },
+
+    links: {
+        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-679230&aid=304142",
+        passeio: "https://www.civitatis.com/br/vitoria/",
+        seguro: "https://www.segurospromo.com.br"
+    }
+},
+{
+    name: "Cabo Frio",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Cabo_Frio_-_vista_a%C3%A9rea.jpg/960px-Cabo_Frio_-_vista_a%C3%A9rea.jpg",
+    tags: ["Praia", "Família", "Mergulho"],
+    mapa: "https://goo.gl/maps/cabofrio",
+    clima: "Tropical Litorâneo. Vento constante e sol forte. Água gelada.",
+
+    // === DADOS DO VEREDICTO ===
+    veredicto: {
+        melhor_epoca: "Março a Maio (Outono) ou Setembro a Novembro (Primavera). Evite Janeiro e Carnaval (Cidade lotada e trânsito parado).",
+        ideal_para: [
+            "Famílias com crianças (Praia do Forte tem boa estrutura)",
+            "Mergulhadores (devido à visibilidade da água)",
+            "Compradores de Moda Praia (preços de fábrica)",
+            "Quem busca praias de areia branca e fina como talco"
+        ],
+        nao_ideal_para: [
+            "Quem odeia água gelada (fenômeno da ressurgência)",
+            "Quem não gosta de vento (venta muito o ano todo)",
+            "Quem busca sossego absoluto na alta temporada"
+        ],
+        perfis: [
+            { icone: "ri-group-fill", nome: "Família" },
+            { icone: "ri-drop-fill", nome: "Mergulho" },
+            { icone: "ri-t-shirt-air-fill", nome: "Compras" },
+            { icone: "ri-sun-fill", nome: "Praia" }
+        ]
+    },
+    // =================================
+
+    pontos_turisticos: [
+        "1. Praia do Forte: O cartão postal. Areia branca, águas cristalinas e calçadão movimentado.",
+        "2. Forte São Mateus: Construção histórica do séc. XVII na ponta da praia, com vista incrível.",
+        "3. Ilha do Japonês: Um santuário de águas rasas e calmas dentro da lagoa. Acesso de barco ou a pé (maré baixa).",
+        "4. Bairro da Passagem: O centro histórico, com ruas de paralelepípedo, casarões coloniais e ótimos restaurantes.",
+        "5. Rua dos Biquínis: O maior shopping a céu aberto de moda praia da América Latina.",
+        "6. Praia das Conchas: Praia em formato de concha, ótima para famílias e com quiosques rústicos.",
+        "7. Praia do Peró: Vizinha das Conchas, extensa, limpa e com selo Bandeira Azul de qualidade.",
+        "8. Morro da Guia: Mirante com uma capela no topo e vista 360º da cidade e da lagoa.",
+        "9. Praia das Dunas: Continuação da Praia do Forte, mas com ondas mais fortes e cercada por dunas brancas.",
+        "10. Canal do Itajuru: Onde ficam os barcos turísticos e um calçadão agradável para caminhar."
+    ],
+
+    gastronomia: [
+        "1. Peixe com Banana: Prato típico da região caiçara, servido em quase todos os quiosques.",
+        "2. Camarão na Moranga: Clássico dos restaurantes mais sofisticados do Bairro da Passagem.",
+        "3. Bolinho de Bacalhau: Petisco obrigatório no Boulevard Canal.",
+        "4. Açaí: Muito consumido nas praias e lanchonetes após o sol.",
+        "5. Pastel de Camarão: Gigante e bem recheado, encontrado na orla da Praia do Forte.",
+        "6. Lula à Dorê: Aperitivo perfeito para acompanhar uma cerveja gelada à beira-mar.",
+        "7. Restaurantes da Passagem: Gastronomia internacional (italiana, portuguesa) em ambiente charmoso.",
+        "8. Picolé de Frutas: Vendedores ambulantes na areia são tradição.",
+        "9. Moqueca Capixaba: Devido à proximidade com ES, muitos lugares servem a versão sem dendê.",
+        "10. Frutos do Mar Frescos: Compre direto no Mercado de Peixe para fazer em casa se estiver em aluguel."
+    ],
+
+    religiao: [
+        "1. Igreja de São Benedito: No Bairro da Passagem, construída em 1761 para os escravos.",
+        "2. Matriz de Nossa Senhora da Assunção: A igreja principal no centro, de 1666, estilo jesuítico.",
+        "3. Convento de Nossa Senhora dos Anjos: Um marco da arquitetura franciscana, hoje museu de arte sacra.",
+        "4. Capela do Morro da Guia: Pequena capela dedicada a N.S. da Guia no ponto mais alto da cidade.",
+        "5. Festas de Padroeira: Agosto é o mês de Nossa Senhora da Assunção, com procissões e quermesses.",
+        "6. Diversidade: Forte presença de igrejas evangélicas e centros espíritas na região urbana.",
+        "7. Iemanjá: No Ano Novo, oferendas são entregues na Praia do Forte.",
+        "8. Capela de São Mateus: Dentro do Forte, uma das mais antigas do Brasil.",
+        "9. Procissão Marítima: Evento tradicional onde barcos enfeitados percorrem o Canal do Itajuru.",
+        "10. Turismo Religioso: A cidade faz parte de rotas de peregrinação histórica da Região dos Lagos."
+    ],
+
+    curiosidades: [
+        "1. Ressurgência: Fenômeno que traz águas profundas do oceano para a superfície, tornando o mar rico em nutrientes e muito gelado.",
+        "2. Areia Fria: A areia de Cabo Frio não esquenta muito, mesmo sob sol forte, devido à composição de corais.",
+        "3. 7ª Cidade Mais Antiga: Fundada em 1615, tem muita história colonial.",
+        "4. Pau-Brasil: A região foi alvo de contrabandistas franceses no início da colonização pela madeira.",
+        "5. Capital da Moda Praia: Produz milhões de peças por ano distribuídas para todo o Brasil.",
+        "6. Salinas: Já foi um dos maiores produtores de sal do país (ainda existem as Salinas Perinas).",
+        "7. Ventos Alísios: A cidade é uma das melhores do mundo para a prática de Iatismo e Kitesurf.",
+        "8. Bandeira Azul: A Praia do Peró possui certificação internacional de qualidade ambiental.",
+        "9. Ponte Feliciano Sodré: Inaugurada em 1926, liga o centro à Gamboa.",
+        "10. Vizinha Famosa: Fica a apenas 25 min de Arraial do Cabo e 40 min de Búzios."
+    ],
+
+    eventos_estacoes: [
+        "1. Verão (Dez-Mar): Cidade lotada, trânsito intenso, sol forte e águas geladas refrescantes.",
+        "2. Réveillon: A segunda maior queima de fogos do estado (Praia do Forte), só perde para Copacabana.",
+        "3. Cabo Frio Folia: Carnaval fora de época (micareta) que costuma ocorrer na cidade.",
+        "4. Carnaval: Blocos de rua arrastam multidões e a orla fica intransitável de carro.",
+        "5. Inverno (Jun-Set): Melhor época para quem gosta de sossego e preços baixos. Água continua fria.",
+        "6. Festival Sabores de Cabo Frio: Evento gastronômico anual (geralmente Setembro) com pratos exclusivos.",
+        "7. Semana Santa: Movimento intenso, mas mais familiar que o Carnaval.",
+        "8. Festival de Surf: Competições nas Dunas e Praia do Forte devido às ondas.",
+        "9. Corpus Christi: Tapetes de sal coloridos são confeccionados nas ruas principais.",
+        "10. Primavera: Ventos fortes, ideal para campeonatos de vela e kitesurf."
+    ],
+
+    info_gerais: [
+        "1. Moeda: Real Brasileiro (BRL).",
+        "2. Voltagem: 110V é o padrão, mas verifique sempre (alguns hotéis têm 220V).",
+        "3. Tomada: Tipo N (3 pinos).",
+        "4. DDD: 22.",
+        "5. Distância do Rio: Aprox. 150km (2h30 sem trânsito).",
+        "6. Aeroporto: Cabo Frio (CFB) recebe voos diretos de BH e conexões, mas a maioria usa o do Rio.",
+        "7. Uber/Táxi: Funcionam bem, mas no verão o Uber pode demorar e ficar caro (dinâmico).",
+        "8. Água: Imprópria para beber da torneira. Use mineral.",
+        "9. Estradas: Acesso pela Via Lagos (pedágio caro, mas estrada boa).",
+        "10. Saúde: Hospital Central de Emergência e UPA no Parque Burle."
+    ],
+
+    antes_de_ir: [
+        "1. Água Gelada: Esteja preparado. A água pode chegar a 12ºC em dias de ressurgência forte.",
+        "2. Vento: Leve um casaco corta-vento mesmo no verão para a noite, pois a brisa é constante.",
+        "3. Sol Engana: O vento disfarça o calor, mas o sol queima muito. Use protetor solar sempre.",
+        "4. Trânsito na Chegada: Sextas-feiras e vésperas de feriado a entrada da cidade engarrafa.",
+        "5. Roupas: Estilo praiano total. Chinelo e bermuda em qualquer lugar.",
+        "6. Dinheiro: A maioria aceita cartão/PIX, mas leve dinheiro para vendedores de praia e passeios de barco.",
+        "7. Hospedagem: Se não tiver carro, fique no Centro ou perto da Praia do Forte para fazer tudo a pé.",
+        "8. Segurança: Evite andar com correntes e celulares caros à mostra no calçadão à noite em dias vazios.",
+        "9. Reserva: Restaurantes na Passagem lotam cedo no jantar em alta temporada.",
+        "10. Arraial do Cabo: Se for visitar a vizinha, saia muito cedo (7h da manhã) para conseguir estacionar."
+    ],
+
+    numeros: [
+        "1. 190 (Polícia Militar): Emergências e segurança.",
+        "2. 193 (Bombeiros): Resgate e afogamentos.",
+        "3. 199 (Defesa Civil): Em caso de tempestades fortes.",
+        "4. (22) 2645-5666 (Hospital Central): Emergências médicas.",
+        "5. 192 (SAMU): Ambulância.",
+        "6. (22) 2647-2121 (Rodoviária): Informações sobre ônibus.",
+        "7. 153 (Guarda Municipal): Trânsito e ordem urbana.",
+        "8. (22) 2643-0145 (Aeroporto): Informações de voos.",
+        "9. (22) 2647-6228 (Turismo): Centro de informações turísticas.",
+        "10. 191 (Polícia Rodoviária): Para quem vem pela estrada."
+    ],
+
+    riscos: [
+        "1. Correnteza: Respeite as bandeiras vermelhas. O mar na Praia do Forte tem cavas perigosas.",
+        "2. Insolação: O vento fresco faz você esquecer de repassar o protetor.",
+        "3. Furto na Areia: Em dias lotados, não deixe bolsas sozinhas na areia ao entrar na água.",
+        "4. Trânsito: Atravessar a ponte para a Gamboa/Rua dos Biquínis pode levar horas no verão.",
+        "5. Ouriços: Cuidado ao pisar nas pedras perto do Forte e na Ilha do Japonês.",
+        "6. Preços de Temporada: Alguns quiosques cobram valores abusivos no verão. Pergunte antes.",
+        "7. Golpes de Aluguel: Cuidado com casas de temporada falsas na internet. Verifique reviews.",
+        "8. Vendedores Insistentes: Na praia, a abordagem é constante. Diga 'não, obrigado' com firmeza.",
+        "9. Água Viva: Ocorrem ocasionalmente. Se for queimado, use vinagre (postos de salva-vidas costumam ter).",
+        "10. Bebida e Mar: A combinação não dá certo, o mar de Cabo Frio exige atenção física."
+    ],
+
+    roteiros: {
+        "curto": {
+            titulo: "Fim de Semana (2 Dias)",
+            texto: [
+                "Dia 1: Manhã na Praia do Forte + Visita ao Forte São Mateus. Almoço na orla. Tarde de compras na Rua dos Biquínis.",
+                "Dia 1 (Noite): Jantar e música ao vivo no Bairro da Passagem.",
+                "Dia 2: Manhã na Ilha do Japonês (vá cedo na maré baixa). Tarde na Praia das Conchas."
+            ]
+        },
+        "medio": {
+            titulo: "Férias Curtas (4 Dias)",
+            texto: [
+                "Dias 1 e 2: Siga o roteiro curto acima.",
+                "Dia 3: Passeio de barco pelo Canal, passando pela Ilha do Farol e Gruta Azul (muitos saem de Arraial, mas há saídas de Cabo Frio também).",
+                "Dia 4: Dia relaxante na Praia do Peró (menos cheia). Final de tarde vendo o pôr do sol no Morro da Guia."
+            ]
+        },
+        "longo": {
+            titulo: "Imersão Região dos Lagos (7 Dias)",
+            texto: [
+                "Dias 1 a 4: Siga o roteiro médio acima.",
+                "Dia 5: Bate-volta em Arraial do Cabo (Pontal do Atalaia e Praia do Forno).",
+                "Dia 6: Bate-volta em Búzios (Rua das Pedras e Praia da Ferradura).",
+                "Dia 7: Despedida com caminhada nas Dunas e almoço de frutos do mar no Mercado de Peixe."
+            ]
+        },
+    },
+
+    links: {
+        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-632942", 
+        passeio: "https://www.civitatis.com/br/cabo-frio/", 
+        seguro: "https://www.segurospromo.com.br" 
+    },
+},
+ 
+            {
+                name: "Ilhabela",
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Sunset_View_-_Ilhabela.jpg/1280px-Sunset_View_-_Ilhabela.jpg",
+                tags: ["Praia", "Natureza", "Vela"],
+                mapa: "https://goo.gl/maps/ilhabela",
+                clima: "Tropical Litorâneo. Quente e úmido. Chuvas frequentes no verão.",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Abril e Maio (Menos chuva e temperatura agradável). O verão chove muito e a fila da balsa é longa.",
+                    ideal_para: [
+                        "Amantes de natureza selvagem (85% da ilha é parque preservado)",
+                        "Velejadores e praticantes de Kitesurf (Capital da Vela)",
+                        "Casais (pousadas charmosas e restaurantes românticos)",
+                        "Aventureiros (trilhas para praias isoladas como Bonete)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem tem alergia grave a picadas de insetos (os borrachudos não perdoam)",
+                        "Quem busca agito urbano intenso (o foco aqui é praia e natureza)",
+                        "Quem não tem paciência com trânsito (a fila da balsa pode levar horas)"
+                    ],
+                    perfis: [
+                        { icone: "ri-sailboat-fill", nome: "Vela" },
+                        { icone: "ri-leaf-fill", nome: "Natureza" },
+                        { icone: "ri-bug-fill", nome: "Aventura" }, // Ícone alusivo à mata/insetos
+                        { icone: "ri-hearts-fill", nome: "Romance" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Praia de Castelhanos: Acessível apenas por 4x4, barco ou trilha. Uma das mais selvagens e bonitas.",
+                    "2. Centro Histórico (Vila): Charme colonial, lojinhas, píer e ótimos restaurantes.",
+                    "3. Praia do Bonete: Uma comunidade caiçara isolada. O acesso é por uma trilha de 12km ou barco (maré permitindo).",
+                    "4. Praia do Curral: A mais badalada. Areia cheia, música alta, bares de luxo e pôr do sol incrível.",
+                    "5. Cachoeira do Gato: Uma queda d'água impressionante acessível pela trilha de Castelhanos.",
+                    "6. Praia do Jabaquara: Uma das mais preservadas do norte, acessível de carro (estrada de terra).",
+                    "7. Ilha das Cabras: Santuário ecológico marinho, o melhor ponto para mergulho e snorkel.",
+                    "8. Praia da Feiticeira: Tranquila, familiar e com um antigo engenho de cana.",
+                    "9. Pico do Baepi: Para quem aguenta subir, a vista lá de cima abrange todo o canal de São Sebastião.",
+                    "10. Praia do Perequê: Central, ótima para esportes, ciclovia e ver o movimento."
+                ],
+
+                gastronomia: [
+                    "1. Camarão na Moranga: Prato clássico servido em quase todos os restaurantes da ilha.",
+                    "2. Peixe com Banana: A mistura do doce da banana da terra com o peixe fresco local.",
+                    "3. Casquinha de Siri: A entrada obrigatória nos quiosques à beira-mar.",
+                    "4. Lula Recheada: Muito comum devido à pesca local.",
+                    "5. Caipirinha de Folha de Mexerica: Uma variação aromática e deliciosa da bebida nacional.",
+                    "6. Sorvetes Artesanais: Na Vila, há sorveterias famosas com sabores de frutas locais.",
+                    "7. Frutos do Mar: Polvo, mariscos e ostras são sempre frescos.",
+                    "8. Bistrôs da Vila: A gastronomia internacional é forte no centro histórico.",
+                    "9. Açaí: Para repor as energias depois da praia.",
+                    "10. Borrachudo (Drink): Alguns bares servem drinks vermelhos brincando com o nome do mosquito."
+                ],
+
+                religiao: [
+                    "1. Igreja Nossa Senhora D'Ajuda: Padroeira da cidade, uma construção colonial linda no topo da escadaria da Vila.",
+                    "2. Lendas Caiçaras: A espiritualidade local é misturada com lendas de piratas e tesouros escondidos.",
+                    "3. Capela de São Pedro: Nas comunidades isoladas (como Bonete), a fé no santo pescador é vital.",
+                    "4. Festas de Padroeiros: As comunidades tradicionais fazem festas com procissões marítimas.",
+                    "5. Natureza Mística: Muitos buscam a ilha para retiros de yoga e conexão espiritual na mata.",
+                    "6. Cruz do Pico do Baepi: Um marco de fé no ponto alto da ilha.",
+                    "7. Congada de Ilhabela: Manifestação cultural e religiosa de herança africana, muito forte na festa de São Benedito.",
+                    "8. Igrejas Evangélicas: Presentes nos bairros residenciais.",
+                    "9. Benzideiras: Em bairros mais antigos, a tradição das rezadeiras ainda resiste.",
+                    "10. Naufrágios: Existe um respeito quase religioso pelos mortos nos centenas de navios afundados ao redor da ilha."
+                ],
+
+                curiosidades: [
+                    "1. Capital da Vela: Sedia a 'Semana Internacional de Vela', maior evento do tipo na América Latina.",
+                    "2. Borrachudos: A ilha tem o mosquito 'Simulídeo'. Ele não pica, ele morde (e coça por dias).",
+                    "3. Lendas de Piratas: Dizem que o pirata Thomas Cavendish escondeu tesouros aqui no século XVI.",
+                    "4. Cemitério de Navios: A costa de Ilhabela tem mais de 100 naufrágios registrados (o 'Triângulo das Bermudas' brasileiro).",
+                    "5. 85% Preservada: A maior parte da ilha é Parque Estadual, onde não se pode construir.",
+                    "6. Cachoeiras: Dizem que a ilha tem 365 cachoeiras (uma para cada dia do ano), mas é exagero (são cerca de 30 visitáveis).",
+                    "7. Toca do Polvo: Um abrigo natural em Castelhanos que teria sido usado por piratas.",
+                    "8. Balsa: É o único acesso para carros. Em feriados, a fila pode chegar a 4 ou 5 horas.",
+                    "9. Engenhos: No passado, a ilha foi uma grande produtora de cana-de-açúcar e cachaça.",
+                    "10. Trilha do Bonete: Eleita pelo jornal The Guardian como uma das 10 praias mais bonitas do Brasil."
+                ],
+
+                eventos_estacoes: [
+                    "1. Semana de Vela (Julho): A cidade lota de velejadores, festas e gente bonita. Preços sobem.",
+                    "2. Festival do Camarão (Agosto): Ocorre na Vila, com pratos especiais a preços promocionais.",
+                    "3. X-Terra (Maio): Etapa do circuito de Triathlon cross-country e corridas de trilha.",
+                    "4. Verão (Dez-Mar): Calor, chuva, trânsito e praias lotadas. A balsa é um teste de paciência.",
+                    "5. Inverno (Jun-Ago): Clima seco, dias lindos e noites frias. Ótimo para trilhas e comer bem.",
+                    "6. Réveillon: Festas famosas em beach clubs (DPNY, Sea Club) com ingressos caríssimos.",
+                    "7. Festival de Jazz (Outubro): Shows de música instrumental na praça da Vila.",
+                    "8. Kitesurf (Set-Nov): Temporada dos ventos fortes no canal, céu colorido de pipas.",
+                    "9. Carnaval: Blocos de rua na Vila e desfiles.",
+                    "10. Birdwatching (Primavera): Observadores de aves vêm ver espécies endêmicas da Mata Atlântica."
+                ],
+
+                info_gerais: [
+                    "1. Voltagem: 220V (Cuidado! A maioria das cidades de SP é 110V, mas Ilhabela é 220V).",
+                    "2. DDD: 12.",
+                    "3. Balsa: Paga-se apenas na ida (São Sebastião -> Ilhabela). Pedestres não pagam.",
+                    "4. Hora Marcada: Vale muito a pena agendar a balsa pelo site (é mais caro, mas fura a fila).",
+                    "5. Transporte: Existe ônibus que percorre a avenida principal (norte-sul) e 'aquabus'.",
+                    "6. Carro 4x4: Essencial se quiser ir para Castelhanos por conta própria (carros baixos atolam ou são proibidos).",
+                    "7. Bancos: Tem agências na Vila e no Perequê, mas leve dinheiro para praias isoladas.",
+                    "8. Sinal de Celular: Vivo pega bem. Outras operadoras falham no lado sul e leste (Castelhanos).",
+                    "9. Água: Beba mineral. A água da ilha é captada na serra, mas o tratamento varia.",
+                    "10. Taxa Ambiental: Cobra-se uma TPA (Taxa de Preservação) para entrar na ilha (placa do carro)."
+                ],
+
+                antes_de_ir: [
+                    "1. Repelente Citronela: O repelente comum NÃO funciona contra borrachudos. Compre o 'Citroilha' ou similar lá mesmo. Passe a cada 2h.",
+                    "2. Complexo B: Começar a tomar vitamina B12 dias antes ajuda a diminuir a atração dos mosquitos (dica local).",
+                    "3. Agende a Balsa: Se for feriado ou sexta à tarde, agende a 'Hora Marcada' no site do DH (Departamento Hidroviário).",
+                    "4. Óleo de Bebê: Moradores usam óleo corporal (tipo Johnson's) nas pernas. O borrachudo escorrega e não pica (mas mela).",
+                    "5. Dinheiro em Espécie: Em praias como Bonete ou Castelhanos, a maquininha de cartão pode não ter sinal.",
+                    "6. Abasteça Antes: O combustível na ilha é mais caro que no continente (São Sebastião). Encha o tanque antes da balsa.",
+                    "7. Trânsito na Ilha: Só existe uma avenida principal. Se engarrafar, não tem rota de fuga. Tenha paciência.",
+                    "8. Tênis Velho: Se for fazer trilhas, leve um tênis que possa sujar de lama vermelha.",
+                    "9. Kit Praia: Muitas praias não têm quiosque ou cobram caro. Levar cooler e cadeira ajuda a economizar.",
+                    "10. Cuidado com Waze: Não confie cegamente. Ele pode te mandar para trilhas de 4x4 achando que é rua."
+                ],
+
+                numeros: [
+                    "1. 190 (Polícia Militar).",
+                    "2. 193 (Bombeiros e Resgate).",
+                    "3. 192 (SAMU).",
+                    "4. (12) 3896-9200 (Hospital Mário Covas): O único hospital público da ilha.",
+                    "5. 0800 77 33 711 (DERSA/Balsa): Informações sobre a fila e operação da balsa.",
+                    "6. (12) 3896-9400 (Prefeitura/Turismo).",
+                    "7. 199 (Defesa Civil): Para deslizamentos em chuvas fortes.",
+                    "8. (12) 3896-1266 (Delegacia de Polícia).",
+                    "9. Ponto de Táxi da Balsa: (12) 3895-8334.",
+                    "10. Parque Estadual de Ilhabela: (12) 3896-2585."
+                ],
+
+                riscos: [
+                    "1. Picadas de Borrachudo: Se você é alérgico, a perna pode inchar muito. Leve antialérgico (consulte médico). Eles atacam no nascer e pôr do sol.",
+                    "2. Fila da Balsa: O maior estresse. Pode levar 30 minutos ou 5 horas. Monitore as câmeras online antes de descer a serra.",
+                    "3. Pedras Escorregadias: Nas cachoeiras, o limo é traiçoeiro. Cuidado redobrado ao andar nas pedras molhadas.",
+                    "4. Marés: Em trilhas costeiras (como a do Bonete), a maré alta pode bloquear trechos.",
+                    "5. Estrada de Castelhanos: Se chover, a estrada de terra vira sabão. Carros sem 4x4 ficam atolados e o resgate é caríssimo.",
+                    "6. Correnteza: Praias de tombo (como Bonete e Castelhanos) têm correntes fortes. Respeite o mar aberto.",
+                    "7. Preços: Ilhabela é um destino caro (padrão 'Ilha da Fantasia'). Pergunte o preço antes de consumir.",
+                    "8. Ouriços: Nas áreas de pedra (Ilha das Cabras), use sapatilha para não pisar em espinhos.",
+                    "9. Ventos Súbitos: O canal canaliza vento. Se estiver de caiaque ou SUP, cuidado para não ser empurrado para o meio do mar.",
+                    "10. Roubos em Carros: Não deixe mochilas visíveis no carro estacionado em trilhas isoladas."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Fim de Semana (2 Dias)",
+                        texto: [
+                            "Dia 1: Chegada e Centro Histórico (Vila). Almoço e tarde na Praia do Curral (pôr do sol).",
+                            "Dia 2: Passeio de escuna ou lancha para Praia da Fome e Jabaquara. Noite na pizzaria no Perequê."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Aventura 4x4 (4 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o roteiro curto.",
+                            "Dia 3: Passeio de Jipe (4x4) para a Praia de Castelhanos (atravessando o parque). Volta de barco parando nas praias.",
+                            "Dia 4: Ilha das Cabras (mergulho) e tarde tranquila na Praia da Feiticeira."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Ilha Completa (7 Dias)",
+                        texto: [
+                            "Dias 1 a 4: Siga o roteiro médio.",
+                            "Dia 5: Trilha ou barco para o Bonete (passe o dia ou durma lá uma noite).",
+                            "Dia 6: Cachoeiras (Toca, Gato ou Três Tombos).",
+                            "Dia 7: Ciclovia da orla (alugue uma bike) e despedida no Saco da Capela."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/br/ilhabela.pt-br.html", 
+                    passeio: "https://www.civitatis.com/br/ilhabela/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
+             {
+                name: "Olímpia",
+                // Trocamos a foto para uma de Parque Aquático/Piscina para não parecer litoral
+                imagem: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=2070&auto=format&fit=crop",
+                tags: ["Parques Aquáticos", "Interior SP", "Termas"],
+                mapa: "https://goo.gl/maps/olimpia",
+                clima: "Tropical de Interior. Verão quente e chuvoso. Inverno seco e agradável (água quente).",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Abril a Junho e Agosto a Novembro (Foge da chuva de verão e da lotação de férias).",
+                    ideal_para: [
+                        "Famílias com crianças (A 'Disney' brasileira das águas)",
+                        "Idosos (Piscinas termais relaxantes)",
+                        "Grupos de amigos (Diversão nos brinquedos radicais)",
+                        "Quem gosta de calor e piscina"
+                    ],
+                    nao_ideal_para: [
+                        "Quem busca praia de verdade (É interior, só tem praia artificial)",
+                        "Quem odeia filas (Na alta temporada, são inevitáveis)",
+                        "Quem procura turismo cultural profundo (O foco aqui é 100% lazer aquático)"
+                    ],
+                    perfis: [
+                        { icone: "ri-drop-fill", nome: "Água Termal" },
+                        { icone: "ri-emotion-happy-fill", nome: "Diversão" },
+                        { icone: "ri-sun-fill", nome: "Sol Caipira" },
+                        { icone: "ri-group-fill", nome: "Família" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Thermas dos Laranjais: O principal atrativo. Um dos maiores parques aquáticos do mundo, com montanha-russa de água e praia artificial.",
+                    "2. Hot Beach: O segundo grande parque da cidade. Mais moderno, 'pé na areia' (artificial) e focado em relaxamento.",
+                    "3. Vale dos Dinossauros: Parque temático com réplicas gigantes de dinossauros que se movem.",
+                    "4. Museu do Folclore: Olímpia é a Capital Nacional do Folclore. O museu preserva essa história rica.",
+                    "5. Dreamland Museu de Cera: Estátuas de famosos e personagens para fotos.",
+                    "6. Praia do Mirante: Uma praia artificial pública (checar se está em funcionamento).",
+                    "7. Orionverso: Parque de realidade virtual imersiva recém-inaugurado.",
+                    "8. Iquegami Supermercados: Famoso entre turistas pelas promoções, virou ponto de parada.",
+                    "9. Avenida Aurora Forti Neves: Onde fica o agito noturno, bares e restaurantes da cidade.",
+                    "10. Pit Stop da Neve: Bar de gelo para experimentar temperaturas negativas no calor do interior."
+                ],
+
+                gastronomia: [
+                    "1. Pamonha: A região é forte produtora de milho e as pamonhas de estrada são clássicas.",
+                    "2. Buffet de Resort: A maioria dos turistas come nos hotéis (pensão completa) que oferecem buffets variados.",
+                    "3. Comida Caipira: Restaurantes rurais com fogão a lenha (leitoa, feijão gordo, polenta).",
+                    "4. Pizza: Ótimas pizzarias na avenida principal atendem os turistas à noite.",
+                    "5. Pastel de Feira: Tradição local de domingo de manhã.",
+                    "6. Suco de Laranja: A região é o cinturão da laranja em SP.",
+                    "7. Churrasco: Churrascarias de estrada são comuns na rodovia Assis Chateaubriand.",
+                    "8. Sorvetes Artesanais: Essenciais para aguentar o calor da cidade.",
+                    "9. Lanches de Trailer: O 'podrão' do interior é caprichado e barato.",
+                    "10. Empadão: Salgado típico nas lanchonetes locais."
+                ],
+
+                religiao: [
+                    "1. Igreja Matriz de São João Batista: O centro da fé católica na praça principal.",
+                    "2. Folclore Religioso: Festas de Santos Reis e Congadas são manifestações de fé muito fortes e tradicionais.",
+                    "3. Igrejas Evangélicas: Diversas denominações presentes nos bairros.",
+                    "4. Turismo Religioso: Rota de passagem para quem vai a Aparecida ou Barretos.",
+                    "5. Benzedeiras: Cultura tradicional do interior ainda presente.",
+                    "6. Festas de Padroeiros: Quermesses movimentam a comunidade local.",
+                    "7. Santuário N. Sra. Aparecida: Local de devoção na cidade.",
+                    "8. Renovação Carismática: Eventos frequentes.",
+                    "9. Capelas Rurais: Charme e fé nas estradas de terra ao redor da cidade.",
+                    "10. Sincretismo: O folclore local mistura elementos católicos, africanos e indígenas."
+                ],
+
+                curiosidades: [
+                    "1. Petróleo que virou Água: Nos anos 50, a Petrobras furou o chão buscando petróleo e achou o Aquífero Guarani (água quente).",
+                    "2. Capital do Folclore: Sedia o FEFOL todo mês de agosto, o maior festival do gênero no país.",
+                    "3. Água Quente Natural: A água não é aquecida artificialmente, ela já sai quente da terra.",
+                    "4. Recordista: O Thermas dos Laranjais frequentemente aparece no Top 5 parques aquáticos do mundo.",
+                    "5. População Flutuante: A cidade tem ~55 mil habitantes, mas recebe milhões de turistas/ano.",
+                    "6. 'Orlando Brasileira': Apelido dado pela quantidade de hotéis e atrações temáticas surgindo.",
+                    "7. Surf no Interior: Tem piscina de surf profissional dentro do parque.",
+                    "8. Dinheiro de Plástico: Nos parques, usa-se cartão pré-pago à prova d'água para consumo.",
+                    "9. Expansão Imobiliária: A cidade virou um canteiro de obras de resorts gigantes.",
+                    "10. Trânsito: Em feriados, a cidadezinha trava com o fluxo de carros."
+                ],
+
+                eventos_estacoes: [
+                    "1. FEFOL (Festival do Folclore - Agosto): O evento cultural mais importante, com grupos do país todo e entrada franca.",
+                    "2. Alta Temporada (Jan/Jul): Férias escolares = Lotação máxima e preços altos.",
+                    "3. Verão (Dez-Mar): Calor intenso e pancadas de chuva diárias.",
+                    "4. Inverno (Jun-Ago): Seco e dias bonitos. Melhor época para aproveitar a água quente sem o sol queimar tanto.",
+                    "5. Réveillon: Festas nos resorts e parques.",
+                    "6. Carnaval: Voltado para família, com marchinhas e shows.",
+                    "7. Corpus Christi: Feriado que costuma lotar a cidade.",
+                    "8. Thermas Rock: Eventos musicais ocasionais dentro do parque.",
+                    "9. Black Friday: Promoções de hospedagem e ingressos.",
+                    "10. Baixa Temporada: Maio, Junho (exceto Corpus Christi), Setembro."
+                ],
+
+                info_gerais: [
+                    "1. Ingressos: Compre online ou em agências na cidade (na portaria é mais caro).",
+                    "2. Voltagem: 127V (Cuidado se você for de cidades 220V).",
+                    "3. Sapatilha Náutica: O chão quente queima o pé e escorrega. Item essencial.",
+                    "4. Armários: Pagos à parte nos parques. Leve pouca coisa.",
+                    "5. Aeroporto: O mais próximo é São José do Rio Preto (50km).",
+                    "6. Uber: Funciona bem, mas tem alta demanda na saída dos parques.",
+                    "7. Regras de Comida: Não entra comida/bebida nos parques (revistam bolsas).",
+                    "8. Protetor Solar: O sol do interior é forte, use mesmo nublado.",
+                    "9. Hidratação: A água quente desidrata sem você perceber. Beba água.",
+                    "10. Crianças: Use a pulseira de identificação fornecida na entrada."
+                ],
+
+                antes_de_ir: [
+                    "1. Planeje os Parques: O Thermas é enorme e cansativo (muita caminhada). O Hot Beach é relax.",
+                    "2. Capa de Celular: Compre a impermeável para tirar fotos na água.",
+                    "3. Toalhas: A maioria dos hotéis cobra taxa para toalha de piscina. Leve a sua de casa.",
+                    "4. Documentos Kids: Leve RG/Certidão para o hotel (obrigatório).",
+                    "5. Farmacinha: Leve remédio para dor de ouvido (comum em crianças na água) e dor muscular.",
+                    "6. Roupas UV: Camisetas de lycra protegem do sol e evitam assaduras nos tobogãs.",
+                    "7. Dinheiro: Leve um pouco, mas os parques usam sistema de cartão pré-pago.",
+                    "8. Jantar: Se não tiver janta no hotel, saia cedo (19h30) para evitar filas na avenida.",
+                    "9. Carro: Ar-condicionado revisado é vital na estrada.",
+                    "10. Paciência: As filas nos brinquedos fazem parte da experiência."
+                ],
+
+                numeros: [
+                    "1. (17) 3279-3500 (Thermas dos Laranjais).",
+                    "2. (17) 3279-1009 (Hot Beach).",
+                    "3. 192 (SAMU).",
+                    "4. (17) 3279-8752 (UPA Olímpia).",
+                    "5. (17) 3281-6420 (Rodoviária).",
+                    "6. 190 (Polícia Militar).",
+                    "7. (17) 3281-2222 (Táxi).",
+                    "8. (17) 3211-1000 (Aeroporto Rio Preto).",
+                    "9. 193 (Bombeiros).",
+                    "10. (17) 3280-6294 (Secretaria de Turismo)."
+                ],
+
+                riscos: [
+                    "1. Insolação: O erro nº 1 dos turistas. O sol queima muito.",
+                    "2. Acidentes em Brinquedos: Não desrespeite as regras de segurança dos tobogãs.",
+                    "3. Furtos: Não deixe celulares e carteiras sozinhos nas espreguiçadeiras.",
+                    "4. Piso Molhado: Crianças correndo em volta da piscina escorregam e se machucam.",
+                    "5. Crianças Perdidas: Marque ponto de encontro, os parques são labirintos.",
+                    "6. Otite: Dor de ouvido por entrada de água.",
+                    "7. Golpes de Aluguel: Cuidado com casas muito baratas na internet.",
+                    "8. Venda de Cotas: Vendedores de resort abordam na rua insistentemente.",
+                    "9. Trânsito na Estrada: Rodovias de pista simples requerem atenção.",
+                    "10. Intoxicação Alimentar: Cuidado com o que come fora dos estabelecimentos confiáveis."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Fim de Semana (2 Dias)",
+                        texto: [
+                            "Sábado: Thermas dos Laranjais (foque nos brinquedos principais).",
+                            "Domingo: Hot Beach (manhã relaxante) e retorno após o almoço."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Feriadão (3-4 Dias)",
+                        texto: [
+                            "Dia 1: Chegada e piscina do hotel.",
+                            "Dia 2: Thermas dos Laranjais (Dia Radical).",
+                            "Dia 3: Thermas (Dia Família/Praia) ou Vale dos Dinossauros.",
+                            "Dia 4: Compras no centrinho e retorno."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Férias de Verão (5 Dias)",
+                        texto: [
+                            "Dias 1-3: Alternar parques aquáticos.",
+                            "Dia 4: Atrações Secas (Museu de Cera, Dinos, Realidade Virtual).",
+                            "Dia 5: Descanso no resort e Museu do Folclore."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/br/olimpia.pt-br.html", 
+                    passeio: "https://www.termas.com.br/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
+
+          ],
+          "Nordeste": [ 
+               {
+                name: "Salvador",
+                // FOTO: Pelourinho (Wikimedia - Link Estável e Clássico)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Entardecer_elevedor_lacerda.jpg/960px-Entardecer_elevedor_lacerda.jpg",
+                tags: ["História", "Axé", "Praia"],
+                mapa: "https://goo.gl/maps/salvador",
+                clima: "Tropical Quente. Sol o ano todo, com chuvas de Abril a Junho. Vento constante.",
+                // Adicione dentro do objeto de Salvador
+veredicto: {
+    melhor_epoca: "Setembro a Março (Época seca e festiva). Evite Abril e Maio (Chuvas torrenciais). O Carnaval (Fev/Mar) é uma experiência à parte.",
+    ideal_para: [
+        "Imersão profunda na cultura e história afro-brasileira (Pelourinho)",
+        "Amantes de música e festas de rua (Axé, Olodum, Ensaios de Verão)",
+        "Quem busca gastronomia com personalidade forte (Acarajé, Dendê)",
+        "Praias urbanas com água morna o ano todo (Porto da Barra)"
+    ],
+    nao_ideal_para: [
+        "Quem busca silêncio e ordem (a cidade é vibrante, barulhenta e caótica)",
+        "Pessoas com estômago sensível a temperos fortes (o dendê não perdoa)",
+        "Quem se incomoda com abordagens constantes de vendedores na rua"
+    ],
+    perfis: [
+        { icone: "ri-bank-fill", nome: "História" },
+        { icone: "ri-music-2-fill", nome: "Axé/Festa" },
+        { icone: "ri-fire-fill", nome: "Gastrô" },
+        { icone: "ri-sun-fill", nome: "Praia" }
+    ]
+},
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Pelourinho: O centro histórico, patrimônio da UNESCO. Casas coloridas, igrejas e o som do Olodum.",
+                    "2. Elevador Lacerda: O primeiro elevador urbano do mundo. Liga a Cidade Alta à Cidade Baixa (vista incrível).",
+                    "3. Farol da Barra: O lugar clássico para ver o pôr do sol. Abriga o Museu Náutico.",
+                    "4. Igreja do Bonfim: Onde se amarram as fitinhas. A grade colorida é a foto mais tradicional da Bahia.",
+                    "5. Mercado Modelo: Artesanato, capoeira e cultura na Cidade Baixa, em frente ao mar.",
+                    "6. Igreja de São Francisco: Conhecida como 'Igreja de Ouro'. O interior é coberto por toneladas de ouro barroco.",
+                    "7. Praia do Porto da Barra: Eleita uma das melhores do mundo. Águas calmas e cristalinas dentro da cidade.",
+                    "8. Casa do Rio Vermelho: A antiga casa onde moraram Jorge Amado e Zélia Gattai. Emocionante e linda.",
+                    "9. Ponta de Humaitá: Um visual panorâmico da Baía de Todos os Santos, perfeito para o fim de tarde.",
+                    "10. Dique do Tororó: Um lago no meio da cidade com estátuas gigantes dos Orixás flutuando na água."
+                ],
+
+                // TOP 10 GASTRONOMIA (Acarajé é Lei!)
+                gastronomia: [
+                    "1. Acarajé: Bolinho de feijão fradinho frito no dendê. Peça 'quente' (com pimenta) ou 'frio' (sem).",
+                    "2. Moqueca Baiana: Feita com azeite de dendê, leite de coco e coentro. A de camarão é a favorita.",
+                    "3. Vatapá: Creme amarelo feito de pão, camarão seco e amendoim. Acompanha o acarajé ou pratos.",
+                    "4. Cocada: Branca (tradicional) ou Preta (queimada). Vendida em tabuleiros pelas baianas.",
+                    "5. Bobó de Camarão: Creme de mandioca (aipim) com camarão e dendê. Super cremoso.",
+                    "6. Sorvete da Ribeira: Sorveteria histórica (1931) com sabores de frutas tropicais exóticas.",
+                    "7. Lambreta: Molusco típico servido em bares, geralmente cozido no vapor.",
+                    "8. Caruru: Quiabo cortadinho com camarão seco e dendê. Comida de santo e de festa.",
+                    "9. Cravinho: Bebida típica do Pelourinho (cachaça com cravo e mel). Forte e saborosa.",
+                    "10. Pãozinho Delícia: Um pão super macio com queijo, típico das festas de aniversário baianas."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Primeira Capital: Salvador foi a primeira capital do Brasil (de 1549 a 1763).",
+                    "2. Roma Negra: É a cidade com maior população negra fora da África, pulsando cultura afro em tudo.",
+                    "3. 365 Igrejas?: Diz a lenda que a Bahia tem uma igreja para cada dia do ano (na verdade, são quase 400).",
+                    "4. Elevador de Transporte: O Lacerda não é turístico, é transporte público real (custa centavos).",
+                    "5. Carnaval: É o maior carnaval de rua do planeta (Guinness Book), com trios elétricos gigantes.",
+                    "6. Michael Jackson: O rei do pop gravou o clipe de 'They Don't Care About Us' no Pelourinho com o Olodum.",
+                    "7. Baía Gigante: A Baía de Todos os Santos é a segunda maior do mundo (cabe o Rio de Janeiro dentro).",
+                    "8. Capoeira: A arte marcial disfarçada de dança nasceu aqui como resistência dos escravizados.",
+                    "9. Irmã Dulce: A primeira santa brasileira viveu e fez sua obra de caridade em Salvador.",
+                    "10. Axé Music: Gênero musical que nasceu aqui nos anos 80, misturando frevo, reggae e percussão."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Sincretismo: A mistura única. Senhor do Bonfim é associado a Oxalá; Santa Bárbara a Iansã.",
+                    "2. Candomblé: A religião de matriz africana é fortíssima. Respeite os Terreiros e as roupas brancas na sexta.",
+                    "3. Lavagem do Bonfim: Uma festa religiosa onde baianas lavam as escadarias da igreja com água de cheiro.",
+                    "4. Festa de Iemanjá (02/Fev): Milhares de pessoas levam flores e presentes para o mar no Rio Vermelho.",
+                    "5. Baianas de Acarajé: O ofício das baianas é considerado Patrimônio Imaterial do Brasil.",
+                    "6. Missa do Rosário dos Pretos: Uma missa católica no Pelourinho que usa atabaques e ritmos africanos.",
+                    "7. Orixás: As estátuas no Dique do Tororó representam as divindades africanas que protegem a cidade.",
+                    "8. Fitinhas do Bonfim: Tradição de amarrar no pulso com 3 nós (3 pedidos). Só rompe quando o pedido realiza.",
+                    "9. Terça da Benção: Festa tradicional no Pelourinho às terças-feiras, após a missa.",
+                    "10. Santa Dulce dos Pobres: O santuário da santa brasileira é local de muita peregrinação e fé."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Carnaval (Fev/Mar): A cidade para. Circuitos Barra-Ondina e Campo Grande arrastam multidões.",
+                    "2. Verão (Dez-Mar): A cidade ferve. Ensaios de verão, festas de largo e muito sol.",
+                    "3. Festa de Iemanjá (2 de Fevereiro): A maior celebração pública do Candomblé.",
+                    "4. Lavagem do Bonfim (Janeiro): Cortejo de 8km com muita fé e festa profana misturadas.",
+                    "5. Festival de Verão (Janeiro): Um dos maiores festivais de música do Brasil.",
+                    "6. Santa Bárbara (4 de Dezembro): Abre o calendário de festas populares com muito caruru (comida).",
+                    "7. Ensaio do Olodum: Acontece no Pelourinho (terças e domingos). Energia surreal.",
+                    "8. São João (Junho): Embora a festa maior seja no interior, o Pelourinho fica todo decorado e com forró.",
+                    "9. Inverno (Maio-Julho): É a época chuvosa. Pode chover dias seguidos, atrapalhando a praia.",
+                    "10. Dia do Samba (2 de Dezembro): Festas gratuitas celebram o ritmo que nasceu na Bahia."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Voltagem: 127V (110V). Diferente de outras capitais do Nordeste que são 220V. Confira sempre!",
+                    "2. DDD: 71.",
+                    "3. Soteropolitano: É quem nasce em Salvador (vem do grego 'Soteropolis' - Cidade do Salvador).",
+                    "4. Aeroporto: SSA (Deputado Luís Eduardo Magalhães). Tem metrô ligando ao centro.",
+                    "5. Metrô: Limpo e moderno, liga o Aeroporto até a Lapa (perto do centro histórico).",
+                    "6. Trânsito: Intenso nos horários de pico. Uber funciona bem, mas evite em dias de grandes festas.",
+                    "7. Segurança: Exige atenção redobrada. Não ande com celular na mão ou correntes de ouro na rua.",
+                    "8. Topografia: A cidade é dividida em Cidade Alta (histórica/residencial) e Cidade Baixa (comércio/porto).",
+                    "9. Ritmo: 'Sorria, você está na Bahia'. O ritmo aqui é mais lento e relaxado (Balanço da rede).",
+                    "10. Hospitalidade: O baiano é conhecido por ser um dos povos mais acolhedores do mundo."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Assédio de Vendedores: No Pelourinho, vendedores de 'fitinha' e pintura corporal são insistentes. Diga 'não, obrigado' firme.",
+                    "2. Golpe da Fitinha: Se alguém tentar amarrar uma fita no seu braço 'de presente', recuse. Eles vão cobrar caro depois.",
+                    "3. Uber x Táxi: Uber costuma ser mais barato e seguro para turistas.",
+                    "4. Protetor Solar: O sol da Bahia é implacável. Use chapéu e hidrate-se (água de coco).",
+                    "5. Roupas Leves: O calor é úmido. Tecidos naturais (algodão/linho) são os melhores.",
+                    "6. Pimenta: Se não está acostumado, NUNCA peça acarajé 'quente'. A pimenta baiana é muito forte.",
+                    "7. Terça-Feira: É um dia agitado no Pelourinho (Terça da Benção). Ótimo dia para visitar.",
+                    "8. Elevador Lacerda: Custa centavos. Tenha moedas trocadas para facilitar.",
+                    "9. Praia no Centro: O Porto da Barra é lindo, mas lota muito no fim de semana. Vá dia de semana.",
+                    "10. Respeito: Ao entrar em igrejas ou terreiros, vista-se adequadamente (evite trajes de banho)."
+                ],
+                // --- NOVO: NÚMEROS IMPORTANTES (SALVADOR) ---
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergência policial, assaltos ou situações de perigo iminente.",
+                    "2. (71) 3116-6817 (DELTUR): Delegacia de Proteção ao Turista. Fica no Pelourinho, essencial para quem visita o centro histórico.",
+                    "3. 192 (SAMU): Ambulância para urgências médicas na rua ou residência.",
+                    "4. 193 (Bombeiros): Incêndios, resgates e acidentes com vítimas presas nas ferragens.",
+                    "5. 118 (Transalvador): Emergências de trânsito, acidentes sem vítima ou denúncia de estacionamento irregular.",
+                    "6. (71) 3204-1000 (Aeroporto de Salvador): Informações sobre voos e o metrô que liga ao aeroporto.",
+                    "7. (71) 3616-8300 (Rodoviária): Informações sobre ônibus para o interior da Bahia e outros estados.",
+                    "8. (71) 3117-5600 (HGE - Hospital Geral do Estado): A maior referência pública para traumas e emergências graves.",
+                    "9. 156 (Fala Salvador): Canal da Prefeitura para reclamar de serviços, limpeza urbana ou barulho.",
+                    "10. (71) 3235-0000 (Elevador Lacerda/Transporte): Informações turísticas e de mobilidade na Cidade Alta/Baixa."
+                ],
+                // --- NOVO: RISCOS E ERROS (SALVADOR) ---
+                riscos: [
+                    "1. 'Pintura' no Pelourinho: Cuidado com rapazes que chegam pintando seu braço dizendo ser 'presente'. Eles vão cobrar R$ 50 de forma intimidada depois. Recuse firme.",
+                    "2. Fita do Bonfim 'Amarrada': Nunca deixe ninguém amarrar uma fita no seu braço 'de graça'. É a isca para pedir dinheiro ou vender algo. Pegue a fita na igreja.",
+                    "3. Celular no Carnaval/Festas: Em aglomerações (como no Porto da Barra ou festas de largo), use doleira. Furtos de celular do bolso são extremamente comuns.",
+                    "4. Corrente de Ouro: Evite ostentar joias, relógios caros ou correntes de ouro no Centro Histórico e Cidade Baixa. Chama muita atenção.",
+                    "5. Acarajé 'Quente': Se você não é baiano, NUNCA peça acarajé 'quente' (com muita pimenta). A pimenta baiana é fortíssima e pode estragar seu dia (e estômago).",
+                    "6. Ruas Desertas no Pelourinho: O Pelourinho é seguro nas ruas principais policiadas. Evite entrar em becos laterais vazios, principalmente à noite.",
+                    "7. Tabuleiros sem Higiene: Observe a limpeza da baiana de acarajé. Evite tabuleiros sujos ou em locais duvidosos para não ter infecção alimentar.",
+                    "8. Taxista no Aeroporto: Ao desembarcar, muitos taxistas abordam no saguão cobrando preço fechado caro. Use o metrô (que sai do aeroporto) ou Uber.",
+                    "9. Mar Aberto: Algumas praias (como Jaguaribe ou trechos de Stella Maris) têm ondas fortes e buracos. Se beber, não entre no mar.",
+                    "10. Elevador Lacerda à Noite: A região da Cidade Baixa (Comércio) fica muito deserta e perigosa após o horário comercial. Evite andar a pé por ali à noite."
+                ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (História Viva): Pelourinho (Fundação Casa de Jorge Amado e Igreja de São Francisco). Desça o Elevador Lacerda. Mercado Modelo. Pôr do sol no Farol da Barra.",
+                            "Dia 2 (Fé e Praia): Igreja do Bonfim (amarre a fitinha). Almoço na Pedra Furada. Tarde na praia do Porto da Barra (água calma).",
+                            "Dica: Coma um Acarajé da Cira ou da Dinha no Rio Vermelho à noite."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Cultura Afro): Museu Afro-Brasileiro e Casa do Carnaval. Almoço no Santo Antônio Além do Carmo (vista linda da baía).",
+                            "Dia 4 (Praias do Norte): Dia de praia em Stella Maris ou Flamengo (barracas com estrutura, como a do Lôro).",
+                            "Dia 5 (Boemia Literária): Casa do Rio Vermelho (memorial Jorge Amado). Noite no Largo da Mariquita (Rio Vermelho) para comer e beber."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Bate-volta Tartarugas): Vá até a Praia do Forte (Litoral Norte). Visite o Projeto Tamar e o Castelo Garcia D'Ávila.",
+                            "Dia 7 (Navegar): Passeio de escuna pela Baía de Todos os Santos (Ilha dos Frades e Itaparica).",
+                            "Dia 8 (Relax): Sorveteria da Ribeira e Ponta do Humaitá para o último pôr do sol."
+                        ]
+                    }
+                },
+                
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-667953&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/salvador/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+              {
+                name: "Recife",
+                // FOTO: Marco Zero e Parque das Esculturas (Wikimedia - Link Estável)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Praia_do_Pina_-_Recife%2C_Pernambuco%2C_Brasil_%28cropped%29.jpg/1280px-Praia_do_Pina_-_Recife%2C_Pernambuco%2C_Brasil_%28cropped%29.jpg",
+                tags: ["História", "Gastronomia", "Praia"],
+                mapa: "https://goo.gl/maps/recife",
+                clima: "Tropical Úmido. Sol e calor o ano todo. Chuvas intensas entre Maio e Julho.",
+                // Adicione dentro do objeto de Recife
+veredicto: {
+    melhor_epoca: "Setembro a Fevereiro (Muito sol). Evite Maio a Julho (Chuvas fortes). O Carnaval é o maior e mais democrático de rua do mundo.",
+    ideal_para: [
+        "Mergulho cultural profundo (Frevo, Maracatu, Bonecos Gigantes)",
+        "Turismo Histórico (Recife Antigo e a vizinha Olinda)",
+        "Gulosos (Bolo de Rolo, Cartola e cozinha pernambucana de ponta)",
+        "Base para praias paradisíacas próximas (Porto de Galinhas, Carneiros)"
+    ],
+    nao_ideal_para: [
+        "Quem quer nadar despreocupado na praia urbana (risco de tubarão em Boa Viagem - respeite as placas)",
+        "Quem busca isolamento absoluto (é uma metrópole vibrante e densa)",
+        "Caminhadas noturnas em áreas desertas do centro (requer atenção)"
+    ],
+    perfis: [
+        { icone: "ri-music-fill", nome: "Cultura" },
+        { icone: "ri-goblet-fill", nome: "Gastrô" },
+        { icone: "ri-bank-fill", nome: "História" },
+        { icone: "ri-sun-fill", nome: "Sol" }
+    ]
+},
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Recife Antigo (Marco Zero): O coração da cidade. Tire a clássica foto na rosa dos ventos e pegue o barquinho para as esculturas.",
+                    "2. Instituto Ricardo Brennand: Eleito várias vezes o melhor museu da América do Sul. Um castelo com coleção de armas brancas e arte.",
+                    "3. Oficina Francisco Brennand: Um templo de cerâmica e arte a céu aberto, misterioso e deslumbrante.",
+                    "4. Praia de Boa Viagem: A orla urbana mais famosa. Caminhe no calçadão, tome água de coco, mas respeite as placas de tubarão.",
+                    "5. Embaixada dos Bonecos Gigantes: Fica na Rua do Bom Jesus (eleita a 3ª mais bonita do mundo). Veja os bonecos de perto.",
+                    "6. Paço do Frevo: Museu interativo dedicado ao ritmo patrimônio da humanidade. Colorido e vibrante.",
+                    "7. Capela Dourada: O auge do barroco. Do chão ao teto, tudo é coberto de ouro. Impactante.",
+                    "8. Sinagoga Kahal Zur Israel: A primeira sinagoga das Américas (séc XVII), herança dos judeus holandeses.",
+                    "9. Catamarã no Rio Capibaribe: Passeio de barco que passa por baixo das pontes e mostra a cidade de outro ângulo.",
+                    "10. Olinda (Vizinha): Basta subir a ladeira. O Centro Histórico de Olinda é Patrimônio da UNESCO e tem a vista mais linda da Sé."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Bolo de Rolo: Não é rocambole! É patrimônio de Pernambuco. Camadas finíssimas de massa e goiabada.",
+                    "2. Cartola: A sobremesa mais famosa. Banana frita, queijo manteiga assado, açúcar e canela.",
+                    "3. Caldinho: Na praia ou no bar, é obrigatório. De feijão, camarão ou peixe, servido no copinho.",
+                    "4. Carne de Sol com Queijo Coalho: Clássico nordestino, servido com macaxeira frita ou cozida.",
+                    "5. Bolo Souza Leão: Um bolo cremoso (parece pudim) feito de massa de mandioca e ovos, receita de engenho.",
+                    "6. Tapioca: No Alto da Sé (em Olinda) é a melhor do mundo, feita na hora pelas tapioqueiras tradicionais.",
+                    "7. Arrumadinho: Prato com feijão verde, farofa, vinagrete e carne de sol (ou charque) picadinha.",
+                    "8. Peixada Pernambucana: Cozido de peixe com leite de coco e legumes, servido com pirão.",
+                    "9. Buchada de Bode: Para os fortes. Prato típico do sertão, mas muito encontrado nos mercados da capital.",
+                    "10. Cerveja Artesanal: O Recife Antigo é um polo de cervejarias locais premiadas (ex: Ekäut, Babylon)."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Veneza Brasileira: A cidade é cortada por rios e dezenas de pontes que ligam as ilhas do centro.",
+                    "2. Tubarões: Devido a um desequilíbrio ambiental e correntes, a praia de Boa Viagem tem risco real de ataque. Respeite as placas!",
+                    "3. Holandeses: Recife foi capital do 'Brasil Holandês' (1630-1654), governada por Maurício de Nassau.",
+                    "4. Galo da Madrugada: É o maior bloco de carnaval do mundo, arrastando 2 milhões de pessoas no sábado de Zé Pereira.",
+                    "5. Manguebeat: Movimento cultural dos anos 90 (Chico Science) que misturou rock com maracatu.",
+                    "6. Prédio Mais Alto: O Recife tem alguns dos prédios mais altos do Brasil fora de Balneário Camboriú.",
+                    "7. Judaísmo: A cidade abrigou a primeira comunidade judaica organizada das Américas.",
+                    "8. Assombrações: Dizem que Recife é a cidade mais mal-assombrada do Brasil (lendas da Emparedada, Perna Cabeluda).",
+                    "9. Frevo: É o único ritmo que se dança com uma sombrinha (usada antigamente como arma de defesa e ataque).",
+                    "10. Rivalidade: Pernambucano tem um orgulho imenso. Dizem que lá tudo é 'o maior do mundo em linha reta'."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Sinagoga Kahal Zur Israel: Marco zero do judaísmo no continente, hoje é um museu emocionante.",
+                    "2. Pátio de São Pedro: Cercado de casas coloniais e a imponente Catedral de São Pedro dos Clérigos.",
+                    "3. Maracatu: Cortejo real de origem afro-brasileira. O som dos tambores (alfaias) treme o chão.",
+                    "4. Capela Dourada: Pertence à Ordem Terceira de São Francisco. É o maior exemplo de arte sacra da cidade.",
+                    "5. Festa do Morro (N. Sra. da Conceição): Em dezembro, multidões sobem o Morro da Conceição vestidas de azul e branco.",
+                    "6. Frevo: Mais que dança, é a alma do carnaval pernambucano. Patrimônio Imaterial da Humanidade.",
+                    "7. Bonecos Gigantes: Tradição que veio da Europa, mas ganhou cara própria em Olinda (o 'Homem da Meia-Noite' é sagrado).",
+                    "8. Basílica da Penha: No centro comercial, uma igreja belíssima onde as pessoas pedem bençãos rápidas.",
+                    "9. Terreiros: A presença do Xangô do Recife (religião afro) é fortíssima e respeitada.",
+                    "10. Paixão de Cristo: A maior encenação ao ar livre do mundo acontece em Nova Jerusalém (brejo), perto de Recife."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Carnaval (Fev/Mar): Multicultural. Frevo no Recife Antigo e ladeiras de Olinda. Não tem cordão, é tudo misturado.",
+                    "2. São João (Junho): A capital tem festa, mas o foco vai para o interior (Caruaru). Muita comida de milho.",
+                    "3. Inverno (Maio-Julho): É a estação da chuva. Chove pesado e pode alagar ruas. O calor diminui um pouco.",
+                    "4. Abril Pro Rock: Festival de música independente que mantém viva a cena rock/manguebeat.",
+                    "5. Fenearte (Julho): A maior feira de artesanato da América Latina. Imperdível para comprar arte popular.",
+                    "6. Rec-Beat: Festival alternativo que acontece durante o carnaval no Cais da Alfândega.",
+                    "7. Regata Recife-Noronha (Setembro): Evento náutico tradicional que parte rumo ao paraíso de Noronha.",
+                    "8. Verão (Dez-Mar): Sol forte, mar azul (na maré baixa) e cidade cheia de turistas.",
+                    "9. Aniversário do Recife (12 de Março): Shows e bolo gigante (literalmente) na praça.",
+                    "10. O Maior Cozido do Mundo: Festas de bairro que tentam quebrar recordes de comida gigante são comuns."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Voltagem: 220V. Cuidado, pois Salvador é 110V, mas Recife é 220V!",
+                    "2. DDD: 81.",
+                    "3. Aeroporto: REC (Guararapes/Gilberto Freyre). Moderno e dentro da área urbana (perto de Boa Viagem).",
+                    "4. Maré: A praia de Boa Viagem muda muito. Na maré baixa formam-se piscinas naturais nos recifes.",
+                    "5. Tubarão: NÃO entre no mar além do joelho, especialmente na maré alta ou se a água estiver turva. É sério.",
+                    "6. Trânsito: O trânsito do Recife é considerado um dos piores do Brasil. Evite horários de pico.",
+                    "7. Metrô: Existe, mas atende mais a periferia e rodoviária. Para turismo, Uber é melhor.",
+                    "8. Rodoviária: TIP (Terminal Integrado de Passageiros). Fica muito longe do centro, vá de metrô ou Uber.",
+                    "9. Segurança: O Recife Antigo é policiado, mas evite ruas desertas no centro (Santo Antônio/São José) à noite.",
+                    "10. Táxi: Convencionais são confiáveis e usam taxímetro. No aeroporto, há táxis especiais tabelados."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Tábua de Marés: Consulte todo dia. Praia só vale a pena na maré baixa (0.0 a 0.4). Na alta, a onda bate na pedra.",
+                    "2. Recife x Olinda: Hospede-se em Boa Viagem (conforto/praia) e vá passar o dia em Olinda. Ou fique em Olinda para viver a arte.",
+                    "3. Instituto Brennand: Reserve uma tarde inteira (13h às 17h). É longe e enorme. O pôr do sol lá é lindo.",
+                    "4. Domingo no Antigo: Aos domingos, o Recife Antigo fecha para carros e vira um parque com feirinha. Melhor dia.",
+                    "5. Catamarã: Faça o passeio das 16h para pegar o pôr do sol e o acender das luzes da cidade.",
+                    "6. Cuidado com Celular: No carnaval ou locais cheios, use doleira. Furtos são comuns.",
+                    "7. Uber no Aeroporto: Tem um local específico para embarque (piso superior ou sinalizado).",
+                    "8. Protetor Solar: O sol de Pernambuco 'queima com força'.",
+                    "9. Compras: A Feirinha de Boa Viagem (tarde/noite) é ótima para souvenirs e comida.",
+                    "10. Beba Água de Coco: É barata e tem em todo lugar na orla."
+                ],
+
+                // --- NOVO: NÚMEROS IMPORTANTES (RECIFE) ---
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergência e segurança pública.",
+                    "2. (81) 3184-3438 (Delegacia do Turista): Atendimento especializado, fica no Recife Antigo (Praça do Arsenal).",
+                    "3. 192 (SAMU): Emergências médicas e acidentes.",
+                    "4. 193 (Bombeiros): Incêndios e resgates (inclusive em áreas de praia não supervisionadas).",
+                    "5. (81) 3322-4188 (Aeroporto dos Guararapes): Informações de voos e setor de achados e perdidos.",
+                    "6. (81) 3452-9800 (TIP - Rodoviária): Informações sobre ônibus intermunicipais e interestaduais.",
+                    "7. 0800 081 1078 (CTTU - Trânsito): Para reportar acidentes sem vítimas ou semáforos quebrados.",
+                    "8. (81) 3181-7000 (Hospital da Restauração): O maior hospital público de trauma e emergência do Norte/Nordeste.",
+                    "9. (81) 3355-0199 (Centro de Atendimento ao Turista): Informações turísticas e mapas.",
+                    "10. 190 (CIODS): Centro Integrado de Defesa Social, coordena todas as forças de segurança."
+                ],
+                // --- NOVO: RISCOS E ERROS (RECIFE) ---
+                riscos: [
+                    "1. Tubarões em Boa Viagem: NÃO é lenda urbana. Respeite as placas. Só entre no mar na maré baixa e protegido pelos arrecifes. Nunca nade em mar aberto ali.",
+                    "2. Falsos Guias em Olinda: Ao chegar no Alto da Sé, rapazes vão pular na frente do carro ou te seguir insistindo para serem guias. Seja firme no 'NÃO' e continue andando.",
+                    "3. Maré Alta nas Piscinas: Ir a Porto de Galinhas ou Carneiros na maré alta é jogar dinheiro fora. As piscinas naturais somem. Consulte a Tábua de Marés (tem que estar abaixo de 0.5).",
+                    "4. Recife Antigo Deserto: O bairro é lindo e seguro de quinta a domingo. Segunda e terça à noite costuma ficar deserto e perigoso. Evite ruas escuras.",
+                    "5. Celular no Galo: No Carnaval (Galo da Madrugada) ou em blocos cheios, celular na mão é perda certa. Use doleira por dentro da roupa.",
+                    "6. Ouriços do Mar: Ao andar nos arrecifes (pedras), use chinelo ou sapatilha de neoprene. Pisar em um ouriço dói muito e estraga a viagem.",
+                    "7. Trânsito para Porto de Galinhas: Sair do Recife para Porto de Galinhas sexta à tarde ou sábado de manhã leva horas. Saia de madrugada ou em horários alternativos.",
+                    "8. Metrô: O metrô do Recife não é muito turístico e pode ser perigoso/lotado em horários de pico. Prefira Uber ou Táxi para se deslocar entre as atrações.",
+                    "9. Sol de 'Rachar': O índice UV em Pernambuco é extremo. Protetor solar não é cosmético, é item de sobrevivência, ou você terá insolação no primeiro dia.",
+                    "10. Flanelinhas Agressivos: Em dias de festa ou no centro, guardadores de carro podem cobrar adiantado e caro. Tente estacionar em locais privados ou ruas movimentadas."
+                ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Recife Antigo): Marco Zero, Rua do Bom Jesus (Sinagoga) e Paço do Frevo. Almoço nos Armazéns do Porto. Fim de tarde: Passeio de Catamarã pelo rio (imperdível).",
+                            "Dia 2 (Olinda): Vá para a cidade vizinha. Suba o Alto da Sé (Tapioca com vista), Mosteiro de São Bento e caminhe pelas ladeiras coloridas."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Os Brennand): Manhã no Instituto Ricardo Brennand (Castelo de armas incrível). Tarde na Oficina Francisco Brennand (esculturas misteriosas). Vá de Uber.",
+                            "Dia 4 (Praia Urbana): Manhã na Praia de Boa Viagem (fique nas piscinas naturais protegidas, nada de fundo!). Tarde no Shopping RioMar (vista do terraço).",
+                            "Dia 5 (Litoral Norte): Bate-volta para a Ilha de Itamaracá. Visite o Forte Orange e atravesse de barquinho para a Coroa do Avião."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Litoral Sul): Bate-volta para o Cabo de Santo Agostinho (Praia de Calhetas e Banho de Argila).",
+                            "Dia 7 (Paraíso Vizinho): Bate-volta para a Praia dos Carneiros (Igrejinha verde).",
+                            "Dia 8 (Raiz): Mercado de São José (artesanato barato) e Casa da Cultura (antiga prisão que virou centro comercial)."
+                        ]
+                    }
+                },
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-665565&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/recife/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+          
+            {
+                name: "Fortaleza",
+                // FOTO: Beira Mar e Espigão (Wikimedia)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/7/73/Fortaleza%2C_Brazil_%284%29_%28cropped%29.jpg",
+                tags: ["Sol", "Praias", "Humor"],
+                mapa: "https://goo.gl/maps/fortaleza",
+                clima: "Tropical. Calor o ano todo (28ºC a 32ºC) e vento constante. Chuvas rápidas entre fev-mai.",
+                // Adicione dentro do objeto de Fortaleza
+veredicto: {
+    melhor_epoca: "Julho a Dezembro (Sol garantido e ventos fortes). Evite Março a Maio se não quiser pegar a estação chuvosa. Agosto a Novembro é o paraíso do Kitesurf.",
+    ideal_para: [
+        "Famílias e adictos em adrenalina (Beach Park é parada obrigatória)",
+        "Amantes de caranguejo (a tradição da 'Quinta do Caranguejo' é sagrada)",
+        "Praticantes de Kitesurf e Windsurf (os ventos são perfeitos)",
+        "Quem busca base para explorar praias vizinhas (Cumbuco, Canoa Quebrada)"
+    ],
+    nao_ideal_para: [
+        "Quem espera nadar em qualquer praia urbana (alguns trechos podem ser impróprios)",
+        "Quem se incomoda com vento constante (na orla venta muito o tempo todo)",
+        "Caminhadas despreocupadas em áreas desertas à noite (segurança requer atenção)"
+    ],
+    perfis: [
+        { icone: "ri-sun-fill", nome: "Sol/Vento" },
+        { icone: "ri-bear-smile-fill", nome: "Diversão" },
+        { icone: "ri-restaurant-line", nome: "Caranguejo" },
+        { icone: "ri-water-flash-fill", nome: "Kitesurf" }
+    ]
+},
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Praia do Futuro: A melhor praia urbana para banho, famosa pelas megabarracas (Crocobeach, Chico do Caranguejo) com piscinas e shows.",
+                    "2. Avenida Beira Mar: O calçadão clássico. Ótimo para caminhar no fim da tarde, ver a Feirinha de Artesanato e o pôr do sol.",
+                    "3. Beach Park: Fica na vizinha Aquiraz (20km). O maior parque aquático da América Latina. O toboágua 'Insano' (41m) é para os corajosos.",
+                    "4. Mercado Central: Um paraíso de 4 andares para comprar redes, bordados, castanhas e cachaça. Pechinche!",
+                    "5. Dragão do Mar: Centro cultural com arquitetura moderna, museus, cinema e o Planetário. A noite ao redor é agitada.",
+                    "6. Theatro José de Alencar: Uma joia da arquitetura Art Nouveau com vitrais coloridos. Faça a visita guiada.",
+                    "7. Ponte dos Ingleses (Metálica): Lugar clássico para ver o pôr do sol e os golfinhos (se der sorte). (Verifique se a reforma acabou).",
+                    "8. Praia de Iracema: Onde fica a Estátua de Iracema. A praia não é boa para banho, mas é o coração boêmio e histórico.",
+                    "9. Museu da Cachaça (iPark): Fica em Maranguape (perto). Passeio histórico pela Ypióca com arvorismo e pedalinho.",
+                    "10. Catedral Metropolitana: Uma igreja imensa em estilo gótico-romano, a terceira maior do Brasil."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Caranguejo (Quinta-feira): É lei. Quinta à noite é dia de comer caranguejo (toc-toc) nas barracas da Praia do Futuro.",
+                    "2. Baião de Dois: Arroz e feijão de corda misturados, com queijo coalho e cheiro verde. Acompanha carne de sol.",
+                    "3. Carne de Sol com Macaxeira: A carne seca ao sol (super macia) servida com mandioca frita ou cozida.",
+                    "4. Peixada Cearense: Cozido de peixe com legumes, ovos cozidos e pirão. Leve e saboroso.",
+                    "5. Tapioca: No Centro das Tapioqueiras (Messejana) tem os melhores recheios (carne de sol com nata é o clássico).",
+                    "6. Panelada: Prato forte (bucho e tripas de boi) consumido tradicionalmente no Mercado São Sebastião para curar ressaca.",
+                    "7. Camarão no Alho e Óleo: Nas praias, os vendedores passam com baldes de camarão frito na hora. (Cuidado com a higiene).",
+                    "8. Castanha de Caju: O Ceará é o maior produtor. Compre no Mercado Central (a torrada com sal é viciante).",
+                    "9. Paçoca de Carne Seca: Carne de sol desfiada e socada no pilão com farinha e cebola roxa.",
+                    "10. Sorvete de Rapadura: Ou de frutas regionais (cajá, graviola, sapoti). A sorveteria 50 Sabores é a mais famosa."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Terra do Humor: O Ceará exporta humoristas (Tom Cavalcante, Renato Aragão). Shows de humor acontecem toda noite nos restaurantes.",
+                    "2. Cabeça Chata?: O cearense brinca com a própria 'cabeça chata'. É um povo extremamente hospitaleiro e resiliente.",
+                    "3. Vento Forte: Fortaleza é um dos melhores lugares do mundo para Kitesurf e Windsurf devido aos ventos alísios constantes.",
+                    "4. Não tem Horário de Verão: O sol nasce às 5h30 e se põe às 17h30 o ano todo. Aproveite o dia cedo!",
+                    "5. 'Aí Dentu': Expressão multiuso cearense. Pode ser negação, xingamento ou brincadeira, dependendo da entonação.",
+                    "6. Rendeiras: A renda de bilro é uma arte passada de mãe para filha. Em Aquiraz, há o Centro das Rendeiras.",
+                    "7. Verde Mares: O mar de Fortaleza é conhecido pelo tom verde esmeralda único.",
+                    "8. Padaria Espiritual: Foi um movimento literário (e não uma padaria) que agitou a cultura da cidade no século XIX.",
+                    "9. O Ceará aboliu a escravidão antes: Foi a primeira província a libertar os escravos (1884), 4 anos antes da Lei Áurea.",
+                    "10. Internet do Brasil: Fortaleza é onde chegam os cabos de fibra óptica submarinos que conectam o Brasil à Europa e África."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Estátua de Padre Cícero: Fica em Juazeiro do Norte (interior), mas a devoção ao 'Padim Ciço' está em todo lugar em Fortaleza.",
+                    "2. Procissão de São Pedro: Em junho, os pescadores saem com seus barcos enfeitados no mar do Mucuripe.",
+                    "3. Maracatu Cearense: Diferente do pernambucano, o ritmo é mais cadenciado e usam o 'negrume' (pintura preta) no rosto.",
+                    "4. Forró Pé de Serra: A cultura do forró é sagrada. Casas como o 'Kukukaya' tocam o ritmo autêntico.",
+                    "5. Artesanato de Barro: As garrafinhas de areia colorida (ciclogravura) são a lembrancinha número 1.",
+                    "6. Catedral Metropolitana: Tem capacidade para 5.000 pessoas e lembra a Catedral de Colônia (Alemanha).",
+                    "7. Iemanjá: A festa de 15 de agosto na Praia do Futuro reúne milhares de fiéis de umbanda e candomblé.",
+                    "8. São José: O padroeiro do Ceará. Diz a lenda que se chover no dia dele (19 de março), a colheita do ano será boa.",
+                    "9. Museu da Cultura Cearense: No Dragão do Mar, explica a vida do vaqueiro e a seca.",
+                    "10. Literatura de Cordel: Folhetos com rimas e xilogravuras vendidos nas feiras e mercados."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Fortal (Julho): O maior carnaval fora de época do Brasil. A cidade para e os hotéis lotam.",
+                    "2. São João (Junho): Festas juninas gigantescas, com quadrilhas profissionais que parecem escolas de samba.",
+                    "3. Réveillon: A festa no Aterro da Praia de Iracema é a segunda maior do Brasil (só perde para Copacabana).",
+                    "4. Alta Temporada (Dez-Jan/Jul): Muito sol, cidade cheia, preços altos e muito vento.",
+                    "5. Estação das Chuvas (Fev-Mai): Chove rápido e forte, depois abre sol. É a época mais barata.",
+                    "6. Temporada dos Ventos (Ago-Nov): O auge para quem pratica Kitesurf e Windsurf.",
+                    "7. Festival de Jazz e Blues (Carnaval): Acontece em Guaramiranga (serra), mas movimenta músicos em Fortaleza também.",
+                    "8. Ceará Music (Varia): Festival de pop rock que costuma atrair grandes bandas nacionais.",
+                    "9. Canoa Quebrada (Bate-volta): Passeio obrigatório para ver as falésias vermelhas (melhor na maré baixa).",
+                    "10. Quinta do Caranguejo (Semanal): Toda quinta-feira o evento é gastronômico e musical nas barracas."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Voltagem: 220V. Cuidado, pois a maioria do Brasil é 110V ou misto, mas lá é tudo 220V.",
+                    "2. DDD: 85.",
+                    "3. Aeroporto: Pinto Martins (FOR). Moderno e ampliado recentemente.",
+                    "4. Uber/99: Funciona muito bem e é barato. Evite táxis na porta de hotéis sem taxímetro.",
+                    "5. Água: Beba apenas água mineral. O calor exige hidratação constante.",
+                    "6. Sol: O índice UV é extremo (perto da linha do Equador). Protetor solar fator 50 é o mínimo.",
+                    "7. Roupas: Leves, de algodão ou linho. Jeans é tortura. À noite venta, mas não faz frio.",
+                    "8. Trânsito: O trânsito no final da tarde na Beira Mar e na saída para as praias pode ser pesado.",
+                    "9. Segurança: Evite andar com correntes de ouro ou celular na mão no calçadão.",
+                    "10. Gorjeta: 10% é padrão. Músicos nos restaurantes cobram 'couvert artístico' (R$ 10 a R$ 20)."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Reserve Beach Park: Compre o ingresso online antecipado, é mais barato que na bilheteria.",
+                    "2. Tábua de Marés: Para visitar piscinas naturais ou Canoa Quebrada, a maré precisa estar BAIXA. Consulte antes de ir.",
+                    "3. Não alugue carro só para ficar na cidade: Uber resolve tudo. Alugue só se for para Jericoacoara ou praias distantes.",
+                    "4. Jericoacoara é Longe: São 4h a 5h de viagem (300km). Não tente fazer bate-volta de 1 dia, é cansativo demais.",
+                    "5. Feirinha da Beira Mar: Começa às 17h. É o melhor lugar para comprar lembrancinhas, mas pesquise preços.",
+                    "6. Barracas da Praia do Futuro: Algumas cobram entrada ou consumação mínima nas áreas VIP (lounges). Pergunte antes.",
+                    "7. Hidratação: Compre água no supermercado (garrafas de 1,5L) para deixar no hotel. No frigobar é caro.",
+                    "8. Show de Humor: Reserve mesa. O 'Lupus Bier' e o 'Beira Mar Grill' são os mais tradicionais.",
+                    "9. Segunda-Feira: O Dragão do Mar e muitos museus fecham. Use a segunda para praia ou compras.",
+                    "10. Vento: O vento levanta saias e vestidos leves. Mulheres preferem shortinhos por baixo."
+                ],
+
+                // --- NOVO: NÚMEROS IMPORTANTES (FORTALEZA) ---
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergência e assaltos.",
+                    "2. (85) 3101-2488 (DEPROTUR): Delegacia de Proteção ao Turista (Fica na Rua Costa Barros).",
+                    "3. 192 (SAMU): Ambulância e emergência médica.",
+                    "4. 193 (Bombeiros): Afogamentos e resgate.",
+                    "5. (85) 3392-1030 (Aeroporto): Informações de voos.",
+                    "6. 191 (Polícia Rodoviária): Para emergências nas estradas (BR-116, acesso às praias).",
+                    "7. (85) 3101-5353 (Hospital Geral - HGF): Grande hospital público de referência.",
+                    "8. (85) 3452-6900 (Rodoviária): Terminal São Tomé.",
+                    "9. 156 (AMC - Trânsito): Para reportar acidentes de trânsito sem vítimas.",
+                    "10. 0800 285 0196 (Enel): Emergência de falta de luz."
+                ],
+
+                // --- NOVO: RISCOS E ERROS (FORTALEZA) ---
+                riscos: [
+                    "1. Praia do Futuro (Correnteza): O mar é violento e tem muitos buracos. Só entre onde houver salva-vidas e bandeira verde/amarela. Afogamentos são comuns.",
+                    "2. Assaltos na Beira Mar: Embora policiada, a orla tem furtos rápidos (bicicleta/corrida) de celulares e correntes. Não dê bobeira tirando selfies na borda da calçada.",
+                    "3. Centro e Iracema à Noite: O Centro histórico e o entorno do Dragão do Mar podem ficar desertos e perigosos de madrugada. Use Uber de porta a porta.",
+                    "4. Golpe do Camarão: Na praia, vendedores oferecem 'prova grátis' e depois cobram o prato inteiro. Pergunte o preço antes de tocar na comida.",
+                    "5. Jeri de Carro Comum: Não tente ir até a vila de Jericoacoara com seu carro alugado (sedan/hatch). Você vai atolar na areia. Precisa de 4x4 ou Jardineira.",
+                    "6. Insolação: O sol do Ceará não perdoa. Turistas desavisados vão parar no hospital com queimaduras de 2º grau no primeiro dia. Reaplique protetor a cada 2h.",
+                    "7. Águas Vivas (Caravelas): Em certas épocas, aparecem caravelas na areia (parecem balões roxos). Não toque, a queimadura é química e grave.",
+                    "8. Trânsito de Quinta: Na quinta-feira do caranguejo, a Av. Santos Dumont e acessos à Praia do Futuro travam. Saia cedo (19h) ou vá de Uber.",
+                    "9. Flanelinhas: Em locais de show ou praias lotadas, guardadores cobram caro adiantado. Tente parar em estacionamento fechado ou oficial.",
+                    "10. Guia Credenciado: Em passeios de buggy (Cumbuco/Canoa), exija bugueiro credenciado ('com emoção ou sem emoção'). Bugueiros piratas causam acidentes."
+                ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Clássico): Manhã no Mercado Central (artesanato). Almoço na Praia do Futuro (barracas gigantes como Crocobeach). Fim de tarde na Feirinha da Beira-Mar.",
+                            "Dia 2 (Cultura e História): Centro Dragão do Mar. Caminhada no Espigão do Náutico para ver o pôr do sol. Noite: Show de Humor (tradição local)."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Adrenalina): Dia inteiro no Beach Park (Aquiraz). É caro, mas é o melhor parque aquático da América Latina.",
+                            "Dia 4 (Falésias): Bate-volta para Morro Branco e Praia das Fontes. O Labirinto das Falésias (areias coloridas) é cenário de novela.",
+                            "Dia 5 (Dunas): Bate-volta para Cumbuco. Passeio de Buggy 'com emoção' e esquibunda nas dunas. Almoço na beira da lagoa."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Litoral Leste): Canoa Quebrada. Veja o símbolo da Lua e Estrela nas falésias e almoce na rua Broadway.",
+                            "Dia 7 (Litoral Oeste): Lagoinha. Uma das praias mais bonitas do estado, formato de meia-lua e coqueiros a perder de vista.",
+                            "Dia 8 (Despedida): Compras na Av. Monsenhor Tabosa e última caranguejada à noite."
+                        ]
+                    }
+                },
+
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-643662&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/fortaleza/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+        
+            {
+                name: "Porto de Galinhas",
+                // FOTO: Piscinas Naturais e Jangadas (Wikimedia)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Piscinas_Naturais.tif/lossy-page1-1800px-Piscinas_Naturais.tif.jpg",
+                tags: ["Piscinas Naturais", "Mergulho", "Romance"],
+                mapa: "https://goo.gl/maps/portodegalinhas",
+                clima: "Tropical. Sol o ano todo. Chuvas concentradas entre maio e julho. A água é sempre morna (28ºC).",
+                // Adicione dentro do objeto de Porto de Galinhas
+veredicto: {
+    melhor_epoca: "Setembro a Março (Sol firme). Dica Vital: Consulte a Tábua de Marés! Vá na Lua Cheia ou Nova para pegar a maré baixa (piscinas naturais). Evite Abril a Julho (Chuva).",
+    ideal_para: [
+        "Famílias com crianças (águas mornas, sem ondas e piscinas naturais)",
+        "Amantes de snorkeling e vida marinha (os peixes comem na mão)",
+        "Quem busca resorts pé na areia com estrutura completa",
+        "Passeios de Buggy 'Ponta a Ponta' (de Muro Alto a Maracaípe)"
+    ],
+    nao_ideal_para: [
+        "Surfistas na praia principal da vila (vá para Maracaípe, ao lado, para ondas)",
+        "Quem busca praias desertas e selvagens no centrinho (é muito lotado)",
+        "Quem se irrita com abordagem constante de vendedores e jangadeiros"
+    ],
+    perfis: [
+        { icone: "ri-sun-fill", nome: "Praia" },
+        { icone: "ri-star-smile-fill", nome: "Família" },
+        { icone: "ri-drop-fill", nome: "Mergulho" },
+        { icone: "ri-hotel-fill", nome: "Resort" }
+    ]
+},
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Piscinas Naturais: O cartão-postal. Vá de jangada na maré baixa para nadar com os peixinhos coloridos.",
+                    "2. Pontal de Maracaípe: O encontro do rio com o mar. O pôr do sol aqui é o mais famoso da região.",
+                    "3. Praia de Muro Alto: Um 'piscinão' gigante protegido por uma barreira de corais. Águas paradas, perfeitas para crianças e caiaque.",
+                    "4. Passeio de Buggy (Ponta a Ponta): Percorre todas as praias, de Muro Alto até Maracaípe. Obrigatório para entender a geografia.",
+                    "5. Projeto Hippocampus: Um centro de preservação de cavalos-marinhos. Você vê eles de pertinho nos aquários.",
+                    "6. Vila de Porto: O centrinho cheio de lojas de artesanato, as famosas estátuas de galinhas e restaurantes.",
+                    "7. Praia de Maracaípe: O point do surf. Ondas fortes e campeonatos mundiais. Ótimo para sentar num bar e ver o mar.",
+                    "8. Praia de Calhetas: Fica no município vizinho (Cabo), mas é passeio clássico. Praia pequena em formato de coração com tirolesa.",
+                    "9. Ilha de Santo Aleixo: Passeio de barco imperdível. Uma ilha vulcânica paradisíaca que parece cenário de filme.",
+                    "10. Voo de Paramotor: Sobrevoar as piscinas naturais dá uma dimensão real da beleza dos recifes de corais."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Beijupirá: O restaurante mais famoso (e caro) da vila. Peixes com molhos de frutas locais. Experiência gastronômica.",
+                    "2. Peixe na Telha: Filé de peixe com molho servido borbulhando dentro de uma telha de barro.",
+                    "3. Bolo de Rolo: Patrimônio de Pernambuco. Camadas finíssimas de massa e goiabada derretida. Leve de lembrança.",
+                    "4. Cartola: Banana frita, queijo manteiga (ou coalho), açúcar e canela. A sobremesa oficial.",
+                    "5. Camarão no Abacaxi: Clássico servido nos restaurantes à beira-mar (como o Barcaxeira).",
+                    "6. Agulhinha Frita: Peixinho pequeno frito inteiro, crocante como batata frita. Petisco perfeito na praia.",
+                    "7. Tapioca da Vila: Nas ruas do centro, as tapioqueiras fazem na hora com muito coco fresco.",
+                    "8. Caldinho de Feijão/Peixe: Na areia da praia, os vendedores passam com garrafas térmicas. É viciante.",
+                    "9. Lagosta: Por ser vila de pescadores, é possível comer lagosta fresca por preços melhores que nas capitais.",
+                    "10. Arrumadinho: Carne de sol, feijão verde, farofa e vinagrete. Almoço forte para dar sustância."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Nome Sombrio: O nome 'Porto de Galinhas' era um código do tráfico de escravos. 'Tem galinha nova no porto' significava que chegaram escravos ilegalmente.",
+                    "2. Galinhas Esculpidas: As galinhas espalhadas pela cidade são obra do artista Gilberto Carcará. Elas usam óculos, biquíni e fantasias.",
+                    "3. Piscinas Temporárias: As piscinas naturais só existem na maré baixa. Na maré alta, elas somem e o mar bate nas pedras.",
+                    "4. Muro Alto: Tem esse nome por causa do paredão de areia e coqueiros de 3 metros que cerca a praia.",
+                    "5. Cavalos-Marinhos: O manguezal de Maracaípe é um berçário natural. O passeio de jangada lá leva para vê-los no habitat (sem tocar!).",
+                    "6. Maracaípe: Significa 'Rio dos Maracás' (chocalhos indígenas) em Tupi.",
+                    "7. Destino de Mel: É um dos destinos mais procurados por casais em lua de mel no Brasil.",
+                    "8. Proibido Alimentar: É estritamente proibido dar comida aos peixes nas piscinas (eles adoecem).",
+                    "9. Ipojuca: Porto de Galinhas não é cidade, é um distrito do município de Ipojuca.",
+                    "10. Coqueirais: A região já foi dominada por engenhos de açúcar, mas hoje os coqueiros reinam na paisagem."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Convento de Santo Cristo: Fica no centro de Ipojuca (cidade). Uma relíquia histórica com uma imagem sagrada que veio de Portugal.",
+                    "2. Artesanato de Galinhas: As galinhas de cabaça ou cerâmica são a identidade cultural local.",
+                    "3. Gilberto Carcará: O ateliê do artista que criou a identidade visual da vila é visitável.",
+                    "4. Capela de São Benedito: A igrejinha famosa na Praia dos Carneiros (vizinha) é cartão postal religioso da região.",
+                    "5. Forró Pé de Serra: A cultura nordestina é forte. À noite, bares no centro tocam forró autêntico.",
+                    "6. Xilogravura: A arte de J. Borges (famoso xilogravurista pernambucano) é vendida nas lojas de souvenirs.",
+                    "7. Pesca Artesanal: A cultura da jangada é passada de pai para filho e sustenta muitas famílias.",
+                    "8. Maracatu: Grupos locais se apresentam na vila em épocas festivas.",
+                    "9. Festa de Nossa Senhora do Desterro: Padroeira da região, com procissões tradicionais.",
+                    "10. Renda Renascença: Trabalho manual delicadíssimo típico de Pernambuco, encontrado nas lojas chiques."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Verão (Dez-Mar): A vila ferve. Sol forte, água clara, preços altos e filas para a jangada.",
+                    "2. Inverno (Maio-Jul): Chove. E quando chove, a água das piscinas turva e perde a beleza. Evite se possível.",
+                    "3. Festival Gastronômico (Novembro): Os restaurantes criam pratos exclusivos com desconto (Porto Gastrô).",
+                    "4. Festa da Galinha (Outubro/Novembro): Shows populares e trio elétrico em Ipojuca.",
+                    "5. Ano Novo: A vila fica intransitável de tanta gente. As festas nos hotéis são luxuosas.",
+                    "6. Maré Baixa (Lua Cheia/Nova): As melhores épocas do mês. Nas luas Crescente/Minguante a maré não baixa tanto (maré morta).",
+                    "7. Nordeste Surf (Varia): Campeonatos de surf em Maracaípe atraem gente bonita e festas na praia.",
+                    "8. Jazz Porto (Setembro): Festival de Jazz e Blues que traz música de qualidade para a vila.",
+                    "9. Tartarugas (Set-Mar): Época de desova. Às vezes o projeto Ecoassociados libera filhotes ao mar (lindo de ver).",
+                    "10. Baixa Temporada (Abril/Agosto): Preços despencam. Se pegar dias de sol, é o melhor custo-benefício."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Voltagem: 220V. Cuidado com eletrônicos de 110V.",
+                    "2. DDD: 81.",
+                    "3. Aeroporto: O mais próximo é Recife (REC), a 60km (cerca de 1h a 1h30 de carro).",
+                    "4. Transfer: É a melhor forma de chegar. Uber pode sair caro ou cancelar. Ônibus (Vera Cruz) é barato mas demora.",
+                    "5. Tábua de Marés: É a Bíblia de Porto de Galinhas. Baixe o app ou consulte o Google. Passeios só na maré baixa (0.0 a 0.5).",
+                    "6. Pulseira: Para descer nas piscinas naturais, precisa pegar uma pulseira gratuita na praça (controle de fluxo).",
+                    "7. Moeda: Real (BRL). Leve dinheiro vivo para jangadeiros e vendedores de praia.",
+                    "8. Caminhar: No centro (Vila), carro é proibido. Faz-se tudo a pé.",
+                    "9. Segurança: Tranquilo para turistas, mas evite ruas escuras fora da vila tarde da noite.",
+                    "10. Internet: 4G funciona bem na vila, mas falha em praias mais afastadas como Muro Alto."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Chinelo nas Pedras: NUNCA ande nos arrecifes descalço. Os ouriços do mar estão escondidos e pisar neles acaba com a viagem.",
+                    "2. Consulte a Maré: Se a maré baixa for às 9h da manhã, chegue às 8h. A piscina natural só dura umas 2 horas.",
+                    "3. Lua Cheia ou Nova: São as semanas de 'Maré Viva', quando a água seca mais e as piscinas ficam mais bonitas.",
+                    "4. Buggy Ponta a Ponta: Faça no primeiro dia para conhecer tudo e escolher sua praia favorita para voltar depois.",
+                    "5. Muro Alto com Criança: É a melhor praia para quem tem filhos. Sem ondas, parece uma lagoa.",
+                    "6. Pôr do Sol no Pontal: Vá ver o pôr do sol em Maracaípe, mas leve repelente. O mangue tem maruim.",
+                    "7. Não compre coral: É crime ambiental e incentiva a destruição dos recifes.",
+                    "8. Fotos Subaquáticas: Os jangadeiros oferecem fotos com peixes (pagas à parte). Negocie o preço antes.",
+                    "9. Carneiros: Vale o bate-volta (1h de viagem). É uma das praias mais lindas do Brasil.",
+                    "10. Evite Finais de Semana: O pessoal de Recife desce em peso. As praias ficam lotadas. Dia de semana é o paraíso."
+                ],
+
+                // --- NOVO: NÚMEROS IMPORTANTES (PORTO DE GALINHAS) ---
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergência e segurança na vila.",
+                    "2. (81) 3552-1480 (Delegacia de Ipojuca): Para ocorrências policiais.",
+                    "3. (81) 3561-1937 (UPA Ipojuca): Unidade de Pronto Atendimento 24h mais próxima.",
+                    "4. 193 (Bombeiros/Salva-Vidas): Afogamentos (atenção às correntes) e resgates.",
+                    "5. (81) 3552-1476 (Posto de Saúde de Porto): Para atendimentos simples na própria vila.",
+                    "6. (81) 3322-4188 (Aeroporto Recife): Informações de voos.",
+                    "7. (81) 3552-1262 (Associação dos Jangadeiros): Informações oficiais sobre os passeios de jangada.",
+                    "8. 192 (SAMU): Ambulância de emergência.",
+                    "9. (81) 3552-2274 (Centro de Informações Turísticas): Apoio ao visitante na entrada da vila.",
+                    "10. (81) 3452-9800 (Rodoviária de Recife): Para quem vai de ônibus de linha."
+                ],
+
+                // --- NOVO: RISCOS E ERROS (PORTO DE GALINHAS) ---
+                riscos: [
+                    "1. Maré Errada: O ERRO Nº 1. Ir às piscinas na maré alta (acima de 0.6) é jogar dinheiro fora. A água fica turva e as piscinas somem. Consulte a Tábua de Marés.",
+                    "2. Pisar em Ouriços: Os arrecifes estão cheios de ouriços pretos nos buracos. Se pisar, o espinho entra, infecciona e dói muito. Use chinelo ou sapatilha de neoprene (aquashoes).",
+                    "3. Guias Falsos na Estrada: Na rodovia chegando em Porto, homens de bicicleta pulam na frente do carro oferecendo 'atalho' ou 'estacionamento'. IGNORE. Eles te levam para lugares caros e longe.",
+                    "4. Consumação em Muro Alto: As barracas em Muro Alto cobram consumação mínima alta ou aluguel de mesa caro. Pergunte o preço antes de sentar.",
+                    "5. Jangada Pirata: Compre o ingresso da jangada no guichê oficial da Associação (na praça). Não pague direto a estranhos na areia.",
+                    "6. Correntes de Retorno: Em praias de tombo (como Cupe ou Maracaípe), a corrente puxa forte. Se não sabe nadar, não passe da cintura.",
+                    "7. Protetor Solar na Piscina: Passar protetor e entrar na água logo em seguida solta óleo e mata os corais. Passe 30 min antes ou use roupas UV.",
+                    "8. Bugueiro Credenciado: Só faça passeios com bugueiros credenciados (placa vermelha/cadastro). Buggy pirata não tem seguro em caso de acidente.",
+                    "9. Trânsito de Retorno: Voltar para Recife no domingo à tarde pode levar 3 horas engarrafado. Saia cedo ou bem tarde.",
+                    "10. Vendedores Insistentes: Na praia principal, o assédio de vendedores é intenso. Um 'não, obrigado' firme resolve, mas eles cansam."
+                ],
+                // COLE O ROTEIRO ABAIXO:
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (O Básico Perfeito): Manhã nas Piscinas Naturais (consulte a maré!). Tarde: Passeio de Buggy 'Ponta a Ponta' (conhece Muro Alto, Cupe e Maracaípe). Pôr do sol no Pontal de Maracaípe.",
+                            "Dia 2 (Relax): Manhã na Praia de Muro Alto (o piscinão sem ondas). Tarde: Caminhada na Vila, compras de artesanato (galinhas) e jantar no Beijupirá ou Barcaxeira."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Carneiros): Bate-volta para a Praia dos Carneiros (é perto). Faça o passeio de catamarã, banho de argila e veja a igrejinha verde.",
+                            "Dia 4 (Natureza): Passeio de Jangada no Manguezal (ver cavalos-marinhos) e tarde na praia do Cupe (no bar do Pontal do Cupe que é tranquilo).",
+                            "Dia 5 (Aventura): Mergulho de cilindro nas piscinas (batismo) ou passeio para a Ilha de Santo Aleixo (cenário de filme)."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (História): Bate-volta para Recife e Olinda (Recife Antigo + Ladeiras de Olinda). É cansativo, mas vale a pena.",
+                            "Dia 7 (Litoral Sul): Calhetas e Cabo de Santo Agostinho. A praia de Calhetas é pequena e linda, com tirolesa.",
+                            "Dia 8 (Despedida): Dia livre para repetir sua praia favorita (provavelmente Muro Alto ou a piscininha da Vila) e últimas compras."
+                        ]
+                    }
+                },
+
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-662973&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/porto-de-galinhas/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+            {
+                name: "Porto Seguro",
+                // FOTO: Centro Histórico ou Praia (Wikimedia)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Porto_Seguro.1.jpg/960px-Porto_Seguro.1.jpg",
+                tags: ["Praias", "História", "Festas"],
+                mapa: "https://goo.gl/maps/portoseguro",
+                clima: "Tropical quente. Sol o ano todo. Chuvas rápidas podem ocorrer, mas o 'verão eterno' é real.",
+                // Adicione dentro do objeto de Porto Seguro
+veredicto: {
+    melhor_epoca: "Agosto a Março (Sol firme). Evite Abril e Maio (Chuvas). Atenção: Julho e Outubro a cidade é invadida por excursões de formatura. O Carnaval é gigante.",
+    ideal_para: [
+        "Quem ama agito, axé e megabarracas de praia (Axé Moi, Toa Toa)",
+        "Viajantes com orçamento controlado (é mais barato que Trancoso e Arraial)",
+        "Turismo Histórico (Rota do Descobrimento e o charmoso Centro Histórico)",
+        "Solteiros e grupos de amigos em busca de paquera"
+    ],
+    nao_ideal_para: [
+        "Quem busca praias silenciosas e desertas (as praias centrais têm som alto e lambaeróbica)",
+        "Quem procura luxo e sofisticação exclusiva (neste caso, siga para a vizinha Trancoso)",
+        "Quem se irrita com vendedores e multidões na Passarela do Álcool"
+    ],
+    perfis: [
+        { icone: "ri-music-2-fill", nome: "Festa/Axé" },
+        { icone: "ri-history-line", nome: "História" },
+        { icone: "ri-wallet-3-fill", nome: "Econômico" },
+        { icone: "ri-group-fill", nome: "Jovens" }
+    ]
+},
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Centro Histórico (Cidade Alta): Onde o Brasil começou. Visite o Marco do Descobrimento, a Igreja N.S. da Pena e o Farol. Vista linda do mar.",
+                    "2. Praia de Taperapuã: O agito. Onde ficam as mega barracas (Axé Moi, Toa Toa) com shows de dança e lambaeróbica o dia todo.",
+                    "3. Passarela do Descobrimento (Álcool): À noite, é o point. Barracas de drinks ('Capeta'), artesanato e restaurantes. Jantar e comprinhas.",
+                    "4. Arraial d'Ajuda: Atravesse a balsa. O centrinho (Rua do Mucugê) é charmoso e as praias (Pitinga, Parracho) são lindas.",
+                    "5. Trancoso: A vila chique e rústica. O 'Quadrado' (gramado com a igrejinha e casinhas coloridas) é cartão-postal mundial.",
+                    "6. Praia do Espelho (Curuipe): Eleita uma das mais bonitas do Brasil. Falésias, corais e piscinas naturais. Vá na maré baixa.",
+                    "7. Coroa Vermelha: Onde foi rezada a primeira missa. Mar calmo (sem ondas), ideal para crianças e idosos. Tem uma feira indígena grande.",
+                    "8. Recife de Fora: Parque Marinho em alto mar. Vai de escuna na maré baixa para mergulhar com peixes nos corais.",
+                    "9. Caraíva: Vila de pescadores onde não entra carro (chão de areia) e o rio encontra o mar. Um paraíso isolado (bate-volta cansativo, melhor dormir lá).",
+                    "10. Eco Parque Arraial d'Ajuda: Parque aquático integrado à natureza em Arraial. Ótimo para família."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Moqueca Baiana: Com dendê, leite de coco e coentro. Acompanha pirão e farofa. Obrigatória.",
+                    "2. Capeta: O drink símbolo da Passarela. Leva vodka, guaraná em pó, leite condensado e frutas. Cuidado, é doce mas derruba!",
+                    "3. Acarajé: Bolinho de feijão frito no dendê. Tem em toda esquina. Peça 'frio' (sem pimenta) se não for acostumado.",
+                    "4. Tapioca da Passarela: Recheios generosos doces e salgados. Jantar barato e clássico.",
+                    "5. Peixe na Telha: Peixe assado servido na telha de barro, mantém o calor e o sabor.",
+                    "6. Bobó de Camarão: Creme de mandioca com camarão e dendê. Cremoso e forte.",
+                    "7. Lambreta: Um molusco (parece marisco) servido cozido no caldo. Dizem que cura ressaca.",
+                    "8. Cocada: As baianas vendem no tabuleiro. Branca, queimada, com maracujá... todas boas.",
+                    "9. Chocolate de Origem: A região produz muito cacau. Prove os chocolates artesanais locais.",
+                    "10. Sorvete de Coquinho: Feito da fruta local, muito refrescante no calor."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. 1500: Cabral chegou aqui, mas a primeira missa foi em Coroa Vermelha (cidade vizinha Santa Cruz Cabrália), embora tudo seja 'Porto Seguro' para o turista.",
+                    "2. Lambada: O ritmo explodiu aqui nos anos 80/90 antes de ganhar o mundo. A dança ainda é forte nas barracas.",
+                    "3. Tombado: O Centro Histórico é Patrimônio Histórico Nacional desde 1968. Não pode mudar as fachadas.",
+                    "4. Monte Pascoal: É possível ver o monte (que os portugueses avistaram) em dias claros a partir de alguns pontos da costa.",
+                    "5. Pataxós: A presença indígena é forte. Muitos vendem artesanato e têm reservas que podem ser visitadas (Reserva da Jaqueira).",
+                    "6. Pau-Brasil: Ainda existem árvores de Pau-Brasil preservadas na Estação Veracel.",
+                    "7. Trancoso 'Hipster': Era uma vila de pescadores desconhecida até os anos 70, descoberta pelos 'biribandos' (hippies). Hoje recebe celebridades internacionais.",
+                    "8. Buraco da Veia: Apelido carinhoso de uma praia em Arraial d'Ajuda, protegida por arrecifes.",
+                    "9. Axé Music: Porto Seguro foi o berço que popularizou o Axé para o resto do Brasil nos anos 90.",
+                    "10. Balsa: A balsa Porto-Arraial funciona 24h e cruza o Rio Buranhém. A vista do pôr do sol nela é linda."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Igreja Nossa Senhora da Pena: Padroeira da cidade (pena de caneta/escrita, e não de dó). Fica no Centro Histórico (1535).",
+                    "2. Igreja do Quadrado (Trancoso): São João Batista. Pequena, branca, de costas para o mar. Cenário de casamentos famosos.",
+                    "3. Primeira Missa: A cruz simbólica em Coroa Vermelha marca o local da celebração de 1500.",
+                    "4. Sincretismo: O Candomblé é forte. Respeite as oferendas que vir nas praias ou encruzilhadas.",
+                    "5. Igreja Nossa Senhora d'Ajuda: Em Arraial. Tem uma fonte de 'água milagrosa' nos fundos e a sala dos milagres.",
+                    "6. Festas Juninas: O São João elétrico em Porto Seguro é gigante.",
+                    "7. Festa de Iemanjá (2 de Fev): Procissão marítima linda em Arraial e Trancoso.",
+                    "8. Capela de São Benedito: Ao lado das ruínas da primeira escola jesuíta do Brasil.",
+                    "9. Rituais Pataxós: Na Reserva da Jaqueira, é possível participar de rituais de purificação e danças sagradas.",
+                    "10. Cemitério Bizantino: No pé da ladeira do Centro Histórico, tem túmulos antigos e curiosos."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Verão (Dez-Mar): Cidade lotada, trânsito na balsa, festas todo dia. Preços altos.",
+                    "2. Carnaval: Um dos maiores do Brasil. Trios elétricos na Passarela.",
+                    "3. Carnaporto: Começa na Quarta-feira de Cinzas (quando o resto do Brasil para). A festa continua na Arena Axé Moi.",
+                    "4. Julho (Férias): Lota de famílias e grupos de formatura de colégio. Clima bom, chove pouco.",
+                    "5. Baleias Jubarte (Jul-Out): Elas vêm para o mar da Bahia procriar. Tem passeio de barco para avistamento.",
+                    "6. Baixa Temporada (Mai-Jun/Ago-Nov): Preços ótimos, cidade tranquila, mas risco de chuvas passageiras.",
+                    "7. São João (Junho): Festa junina com forró pé de serra e elétrico.",
+                    "8. Réveillon: Festas pagas caríssimas (principalmente em Trancoso) e festa popular na Passarela.",
+                    "9. Semana do Saco Cheio (Out): Outubro lota de estudantes universitários.",
+                    "10. Maré Baixa (Lua Cheia/Nova): As melhores semanas para visitar, pois formam as piscinas naturais."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Aeroporto: BPS (Porto Seguro). Fica perto do centro (5 min de Uber).",
+                    "2. Balsa: Para ir a Arraial/Trancoso. Pedestres pagam barato, carros pagam mais e pegam fila. De madrugada é mais caro.",
+                    "3. Voltagem: 220V. Cuidado com secadores e chapinhas.",
+                    "4. Transporte: Uber funciona bem em Porto e Arraial. Em Trancoso é mais difícil. Em Caraíva, só carroça ou a pé.",
+                    "5. Tábua de Marés: O guia da sua viagem. Maré 0.0 a 0.5 = Piscinas Naturais. Maré acima de 0.8 = Praia normal.",
+                    "6. Estradas: Para Trancoso/Caraíva tem trechos de terra. Se chover, atola carro comum. Vá de transfer ou 4x4.",
+                    "7. Segurança: Zonas turísticas são policiadas. Evite ruas escuras fora do centro à noite.",
+                    "8. Dinheiro: Leve espécie para Trancoso, Caraíva e feirinhas. O sinal de máquina de cartão falha nas praias afastadas.",
+                    "9. Água: Muito calor = desidratação. Água de coco é barata e tem em todo lugar.",
+                    "10. Consumação: Barracas de praia famosas não cobram entrada, mas exigem consumação mínima ou cobram aluguel de cadeira."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Golpes de Rua: Não aceite 'presentes' na rua (fitinhas, degustação). É isca para te venderem time-sharing (cotas de resort) ou cobrar caro depois.",
+                    "2. Hospedagem: Se quer agito, fique em Taperapuã. Se quer charme, Arraial. Se quer luxo rústico, Trancoso. Se quer economia e história, Centro.",
+                    "3. Protetor Solar: O sol da Bahia queima diferente. O vento fresco engana.",
+                    "4. Transfer x Carro: Se for ficar só em Porto/Arraial, Uber resolve. Se for para Trancoso/Espelho, melhor alugar carro ou fechar passeio.",
+                    "5. Maré: Baixe um app de 'Tábua de Marés' e programe os passeios de piscina natural (Recife de Fora/Espelho) no horário mais baixo do dia.",
+                    "6. Balsa a pé: Se estiver hospedado em Porto e quiser jantar em Arraial, atravesse a balsa a pé e pegue uma van do outro lado. Economiza tempo e dinheiro.",
+                    "7. Repelente: Tem mosquito, principalmente nas praias com muito verde (Espelho/Caraíva).",
+                    "8. Cuidado com o Coco: Em praias desertas, não fique debaixo de coqueiros carregados. Um coco na cabeça é acidente grave.",
+                    "9. Lixo: Muitas praias são áreas de preservação. Traga seu lixo de volta.",
+                    "10. Ritmo Baiano: O serviço pode ser mais lento que no Sul/Sudeste. Relaxe, você está na Bahia. Não tenha pressa."
+                ],
+
+                // --- NOVO: NÚMEROS IMPORTANTES (PORTO SEGURO) ---
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergência.",
+                    "2. 192 (SAMU): Ambulância.",
+                    "3. 193 (Bombeiros): Resgate.",
+                    "4. (73) 3288-1880 (Aeroporto): Informações de voos.",
+                    "5. (73) 3288-3907 (Delegacia do Turista - DELTUR): Apoio ao visitante.",
+                    "6. (73) 3288-2516 (Balsa): Informações sobre travessia.",
+                    "7. (73) 3288-4665 (Rodoviária): Ônibus intermunicipais.",
+                    "8. (73) 3288-5183 (Hospital Luís Eduardo Magalhães): Hospital público de referência.",
+                    "9. 199 (Defesa Civil): Chuvas fortes.",
+                    "10. (73) 3012-4217 (UPA): Unidade de Pronto Atendimento."
+                ],
+
+                // --- NOVO: RISCOS E ERROS (PORTO SEGURO) ---
+                riscos: [
+                    "1. O Golpe da 'Fitinha Grátis': O ERRO Nº 1. Vendedores colocam a fitinha no seu braço ou dão uma 'amostra grátis' de algo e depois exigem dinheiro ou te seguram por 1 hora tentando vender cota de hotel. Diga NÃO firme e não pare.",
+                    "2. Maré Alta no Espelho: Ir para a Praia do Espelho na maré alta é jogar dinheiro fora. As piscinas somem e a praia fica comum. Consulte a tábua!",
+                    "3. Bebida Batizada: Na balada ou passarela, cuidado com copos abertos. O 'Boa Noite Cinderela' existe.",
+                    "4. Beber e Nadar: O mar de Taperapuã é fundo logo no começo (praia de tombo em alguns pontos). Álcool e mar não combinam.",
+                    "5. Estrada de Trancoso: Tentar ir de carro baixo (Gol/Onix) para Trancoso em dia de chuva. Você VAI atolar. Vá pelo asfalto (volta maior) ou use transfer 4x4.",
+                    "6. Preços em Trancoso: Comer no Quadrado custa preço de restaurante de luxo em SP. Olhe o cardápio antes de sentar.",
+                    "7. Ouriço do Mar: Nos recifes (piscinas naturais), cuidado onde pisa. Espinho de ouriço dói muito e infecciona. Use sapatilha aquática (Crocs/Papete).",
+                    "8. Balsa na Volta: Domingo à tarde, a fila da balsa para voltar de Arraial para Porto pode levar 2 horas.",
+                    "9. Sol da Ressaca: Dormir na praia depois de beber. A insolação é garantida e severa.",
+                    "10. Van Clandestina: Use as vans oficiais que saem da balsa. Cuidado com transporte pirata."
+                ],
+
+                // --- NOVO: ROTEIRO AUTOMÁTICO (PORTO SEGURO) ---
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Agito e Clássico): Manhã na Praia de Taperapuã (Barracas Axé Moi ou Toa Toa). Tarde: Centro Histórico (Cidade Alta) para ver o Marco do Descobrimento e o farol. Noite: Passarela do Álcool.",
+                            "Dia 2 (Relax): Coroa Vermelha (onde foi a 1ª missa). Águas calmas e feirinha indígena. Almoço por lá (barraca do Macuco)."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Arraial d'Ajuda): Pegue a balsa. Vá para a Praia do Mucugê ou Pitinga. Fim de tarde na Rua do Mucugê (a rua mais charmosa do Brasil).",
+                            "Dia 4 (Natureza): Recife de Fora (piscinas naturais). Consulte a tábua de marés! Tarde livre em Taperapuã.",
+                            "Dia 5 (Trancoso): Bate-volta OBRIGATÓRIO. Conheça o Quadrado de Trancoso (igrejinha) e desça para a Praia dos Nativos ou Coqueiros."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (A Praia Perfeita): Bate-volta para a Praia do Espelho (Curuipe). É eleita frequentemente uma das mais bonitas do Brasil. Vá na maré baixa.",
+                            "Dia 7 (Raiz): Caraíva. É longe (estrada de terra), mas o encontro do rio com o mar e as ruas de areia são mágicos.",
+                            "Dia 8 (Diversão): Arraial d'Ajuda Eco Parque (toboáguas) ou Parque Marinho da Coroa Alta."
+                        ]
+                    }
+                },
+
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-663243&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/porto-seguro/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+          
+            {
+                name: "Natal",
+                // FOTO: Ponta Negra e Morro do Careca
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Alex_Regis_Morro_do_Careca_Ponta_Negra_Natal_RN_%2840261556354%29.jpg/960px-Alex_Regis_Morro_do_Careca_Ponta_Negra_Natal_RN_%2840261556354%29.jpg",
+                tags: ["Dunas", "Praias", "Sol"],
+                mapa: "https://goo.gl/maps/natal",
+                clima: "Tropical. Sol 300 dias por ano. Venta bastante (a 'Noiva do Sol'). Chuvas concentradas entre Abril e Julho.",
+                // Adicione dentro do objeto de Natal
+veredicto: {
+    melhor_epoca: "Setembro a Fevereiro (Sol garantido). A 'Cidade do Sol' tem luz o ano todo, mas de Abril a Julho é a estação chuvosa. Março é quente e úmido.",
+    ideal_para: [
+        "Aventureiros (o passeio de Buggy 'com emoção' em Genipabu é obrigatório)",
+        "Quem busca base para paraísos vizinhos (Pipa e São Miguel do Gostoso)",
+        "Famílias com crianças (águas mornas e atrações como o Maior Cajueiro)",
+        "Quem ama sol intenso e vento constante (ótimo para respirar ar puro)"
+    ],
+    nao_ideal_para: [
+        "Quem detesta areia e vento (venta muito o tempo todo)",
+        "Quem busca vida cultural urbana agitada (o foco total é praia e natureza)",
+        "Quem tem medo de altura ou velocidade (as dunas podem ser intimidantes para alguns)"
+    ],
+    perfis: [
+        { icone: "ri-sun-fill", nome: "Sol" },
+        { icone: "ri-roadster-fill", nome: "Buggy" },
+        { icone: "ri-windy-fill", nome: "Natureza" },
+        { icone: "ri-star-smile-fill", nome: "Família" }
+    ]
+},
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Praia de Ponta Negra e Morro do Careca: O cartão-postal. A praia urbana mais famosa. O Morro é área de preservação (não pode subir), mas a foto é obrigatória.",
+                    "2. Dunas de Genipabu: O passeio de Buggy mais famoso do Brasil. Escolha 'com emoção'. Inclui skibunda, aerobunda e os dromedários.",
+                    "3. O Maior Cajueiro do Mundo: Fica em Pirangi. É uma árvore única que cobre uma área de 8.500m². Impressionante.",
+                    "4. Parrachos de Maracajaú: As 'Maldivas' brasileiras. Piscinas naturais (corais) a 7km da costa. Mergulho com peixinhos (consulte a tábua de marés!).",
+                    "5. Forte dos Reis Magos: Onde a cidade começou. Uma fortaleza em formato de estrela no encontro do rio com o mar.",
+                    "6. Praia da Pipa (Bate-volta): A 80km de Natal. Falésias, golfinhos e uma vila charmosa. O ideal é dormir lá, mas o bate-volta é muito comum.",
+                    "7. Barreira do Inferno: Centro de Lançamento de Foguetes. Tem um museu aeroespacial muito legal para visitar na rota do Litoral Sul.",
+                    "8. Lagoa de Arituba: Águas calmas e doces, ideal para relaxar, andar de pedalinho e comer peixe frito.",
+                    "9. Centro de Turismo (Antiga Casa de Detenção): Ótimo para comprar artesanato, renda de bilro e ver o Forró com Turista (às quintas).",
+                    "10. Aquário Natal: Na Redinha. Tem tubarões, pinguins e você pode até tocar em alguns animais (tanque de toque)."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Ginga com Tapioca: Patrimônio imaterial. Um peixinho pequeno frito servido dentro da tapioca. Clássico do Mercado da Redinha.",
+                    "2. Camarão Potiguar: Natal é a terra do camarão. Prove o 'Camarão Internacional' (cremoso com arroz e batata palha) no restaurante Camarões.",
+                    "3. Carne de Sol com Macaxeira: A carne de sol do Nordeste é diferente (mais úmida). Acompanha pirão de queijo ou macaxeira frita.",
+                    "4. Cartola: Sobremesa de banana frita, queijo coalho derretido, açúcar e canela. Divina.",
+                    "5. Paçoca de Pilão: Carne de sol desfiada e socada no pilão com farinha e cebola. Não é doce!",
+                    "6. Baião de Dois: Arroz, feijão verde, queijo coalho e nata. Cremoso e forte.",
+                    "7. Caranguejo: Nos quiosques da praia, o 'Chico' (caranguejo) é muito pedido.",
+                    "8. Suco de Mangaba: Fruta típica da região, leitosa e azedinha. Muito refrescante.",
+                    "9. Peixe na Telha: Peixe cozido ou assado servido na telha de barro.",
+                    "10. Bolo de Rolo: Embora seja pernambucano, é muito comum e delicioso em Natal (camadas finíssimas de bolo e goiabada)."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Esquina do Continente: É um dos pontos das Américas mais próximos da África e Europa. Por isso foi base estratégica dos EUA na 2ª Guerra Mundial.",
+                    "2. Forró For All?: Uma lenda diz que o nome 'Forró' veio das festas americanas na base aérea que eram 'For All' (para todos). Historiadores debatem, mas a lenda ficou.",
+                    "3. Ar Mais Puro: A NASA já considerou o ar de Natal como o mais puro das Américas, graças aos ventos alísios que vêm do mar.",
+                    "4. Potiguar: Quem nasce no RN é Potiguar, que em tupi significa 'Comedor de Camarão'.",
+                    "5. Cidade Espacial: A Barreira do Inferno foi a primeira base de lançamento de foguetes da América do Sul (1965).",
+                    "6. Noiva do Sol: O sol nasce muito cedo (as 4h30 - 5h da manhã já está claro) e se põe cedo (17h30). Aproveite o dia!",
+                    "7. Dunas Móveis: As dunas de Genipabu mudam de lugar e formato com o vento. A paisagem nunca é a mesma.",
+                    "8. Chiclete com Banana: A banda famosa começou a fazer sucesso nos carnavais fora de época de Natal (Carnatal).",
+                    "9. Cajueiro Mutante: O Maior Cajueiro cresce devido a uma anomalia genética; os galhos tocam o chão, criam raízes e sobem de novo.",
+                    "10. Ponte Newton Navarro: Uma ponte estaiada gigante que liga a Zona Norte. A vista do pôr do sol lá de cima (ou debaixo dela) é linda."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Reis Magos: A cidade se chama Natal porque foi fundada em 25 de dezembro. A relação com os Reis Magos (Santos Reis) é forte.",
+                    "2. Catedral Metropolitana: Uma arquitetura moderna e diferente, em formato trapezoidal.",
+                    "3. Estátua dos Reis Magos: Um pórtico enorme na entrada da cidade (BR-101) com as estátuas dos três reis.",
+                    "4. Festa de Santos Reis (Janeiro): É o feriado municipal mais importante depois do Natal.",
+                    "5. Igreja do Galo: No centro histórico (Cidade Alta), uma das mais antigas, barroca.",
+                    "6. Mártires de Cunhaú e Uruaçu: Santos brasileiros canonizados pelo Papa, vítimas de invasões holandesas. O santuário é muito visitado.",
+                    "7. Artesanato de Bilro: As rendeiras fazem trabalhos incríveis na praia ou centros de artesanato.",
+                    "8. Boi de Reis: Folclore local colorido, parecido com o Bumba-meu-boi.",
+                    "9. Candomblé: Presença forte de terreiros e festas de Iemanjá nas praias.",
+                    "10. Capela de São Pedro: Frequentada pelos pescadores na Redinha."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Carnatal (Dezembro): O maior carnaval fora de época do Brasil. Trios elétricos ao redor do estádio Arena das Dunas.",
+                    "2. Verão (Dez-Mar): Alta temporada. Sol forte, ventos constantes. Reserve buggy com antecedência.",
+                    "3. Inverno (Abr-Jul): É a estação das chuvas ('Inverno' no Nordeste é chuva, não frio). Preços caem pela metade.",
+                    "4. Agosto a Novembro: Melhor época! Venta muito (bom para Kitesurf), chove pouco e preços são médios.",
+                    "5. Festa Junina (São João): Natal tem o 'São João de Natal' com shows grandes na Arena das Dunas.",
+                    "6. Natal em Natal (Dezembro): Festival de música e luzes que celebra o aniversário da cidade.",
+                    "7. FENACAM: Feira Nacional do Camarão. Evento de negócios, mas movimenta a gastronomia.",
+                    "8. Réveillon: Queima de fogos na Ponte Newton Navarro e em Ponta Negra.",
+                    "9. Maré Baixa: Essencial consultar para ir aos Parrachos (Maracajaú/Perobas). Se a maré for alta, não tem passeio.",
+                    "10. Temporada de Buggy: O ano todo, mas no verão as dunas ficam lotadas de turistas."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Aeroporto (NAT): Fica em São Gonçalo do Amarante, longe pra caramba (40km / 1h do centro). O Uber dá uns R$ 80-100.",
+                    "2. 220V: A voltagem é 220V. Cuidado com eletrônicos.",
+                    "3. Buggy Credenciado: Só ande com bugueiros credenciados (placa vermelha ou adesivo da SETUR). É questão de vida ou morte nas dunas.",
+                    "4. Tábua de Marés: Baixe um app. Piscinas naturais só aparecem na maré baixa (0.0 a 0.5 é o ideal).",
+                    "5. Sol: O sol é cruel. Use protetor fator 50+. O vento fresco mascara a queimadura.",
+                    "6. Água: Evite beber da torneira. O índice de salinidade pode ser alto em algumas áreas.",
+                    "7. Uber: Funciona muito bem em Ponta Negra e Centro. Para Litoral Norte/Sul, melhor fechar passeio ou alugar carro.",
+                    "8. Via Costeira: A avenida dos hotéis resorts. É linda, mas não tem nada para fazer a pé (só mar e hotel). Precisa de carro para ir jantar.",
+                    "9. DDD: 84.",
+                    "10. Gorjeta: Os garçons esperam os 10%. Em barracas de praia, verifique se já está incluído."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Maracajaú vs Perobas: Maracajaú é mais fundo (mergulho), Perobas é mais raso (água na cintura, caribe). Escolha seu perfil.",
+                    "2. Não suba o Morro: Subir o Morro do Careca é proibido e dá multa ambiental. Respeite.",
+                    "3. Buggy 'Com Emoção': Se você não tem problemas de coluna, peça 'com emoção'. Sem emoção é só um passeio de táxi na areia.",
+                    "4. Restaurante Camarões: É turístico? Sim. Vale a pena? Muito. A fila é grande, chegue cedo (11h30 ou 18h30).",
+                    "5. Pipa: Tente passar pelo menos uma noite em Pipa. O bate-volta é cansativo e você perde a noite na vila, que é o melhor.",
+                    "6. Óculos Escuros no Buggy: A areia voa muito no rosto. Óculos são proteção, não só estilo.",
+                    "7. Litoral Norte vs Sul: Norte = Dunas e Buggy (Genipabu). Sul = Falésias e Golfinhos (Pipa/Tabatinga). Faça os dois em dias diferentes.",
+                    "8. Vento: Mulheres, evitem vestidos muito soltos nos passeios de falésia. O vento levanta tudo.",
+                    "9. Cajueiro: Paga-se uma entrada barata. Leve dinheiro trocado.",
+                    "10. Protetor Solar nas Costas: No buggy, você fica exposto o tempo todo. Passe muito protetor nas costas e orelhas."
+                ],
+
+                // --- NÚMEROS IMPORTANTES (NATAL) ---
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergência.",
+                    "2. 192 (SAMU): Ambulância.",
+                    "3. (84) 3232-7404 (Delegacia do Turista - DEATUR): Fica na Praia do Meio.",
+                    "4. (84) 3343-4177 (Aeroporto Internacional): Informações de voos.",
+                    "5. 193 (Bombeiros): Resgate e busca.",
+                    "6. (84) 3232-2525 (Rodoviária): Ônibus para Pipa/Recife.",
+                    "7. (84) 3232-6000 (Hospital Walfredo Gurgel): Maior hospital público.",
+                    "8. (84) 98138-0676 (Sindicato dos Bugueiros): Para checar credenciais.",
+                    "9. 199 (Defesa Civil): Chuvas e deslizamentos.",
+                    "10. (84) 3211-0000 (Rádio Táxi): Opção além do Uber."
+                ],
+
+                // --- RISCOS E ERROS (NATAL) ---
+                riscos: [
+                    "1. Bugueiro Pirata: O MAIOR RISCO. Bugueiros não credenciados não sabem as rotas seguras nas dunas. Já ocorreram acidentes fatais. Exija a credencial.",
+                    "2. Maré nos Parrachos: Comprar o passeio para Maracajaú sem olhar a maré. Se estiver alta (acima de 0.6), você vai ver água turva e não vai dar pé. Dinheiro jogado fora.",
+                    "3. Andar na Areia à Noite: Ponta Negra é segura no calçadão movimentado. Não vá para as partes escuras ou areia deserta à noite (assaltos).",
+                    "4. 'Amostra Grátis' de Castanha: No mercado, prove, mas pergunte o preço antes de pedir o pacote. Às vezes cobram preços abusivos na hora de pesar.",
+                    "5. Correnteza: O mar de Natal (exceto onde tem arrecifes) é forte. Respeite as bandeiras vermelhas dos salva-vidas.",
+                    "6. Insolação no Buggy: O vento engana e você não sente que está queimando. No fim do dia, vem a febre. Hidrate-se e cubra-se.",
+                    "7. Falésias Instáveis: Na praia de Pipa e litoral sul, mantenha distância das falésias. Deslizamentos acontecem. Respeite as placas de perigo.",
+                    "8. Táxi no Aeroporto: Os táxis comuns cobram tarifa de outra cidade (São Gonçalo). Uber ou Transfer compartilhado costumam ser mais baratos.",
+                    "9. Lagosta Barata Demais: Na praia, desconfie de lagosta muito barata. Pode ser fora de época (congelada velha) ou nem ser lagosta.",
+                    "10. Esquecer a CNH: Se for alugar carro para ir a Pipa, as blitze na estrada são frequentes (Lei Seca rigorosa)."
+                ],
+
+                // --- ROTEIROS AUTOMÁTICOS (NATAL) ---
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (O Clássico): Manhã: Passeio de Buggy Litoral Norte (Genipabu) 'com emoção'. Tarde: Visita ao Forte dos Reis Magos e pôr do sol no Potengi. Noite: Jantar em Ponta Negra.",
+                            "Dia 2 (Litoral Sul): Manhã: Maior Cajueiro do Mundo e banho na Praia de Cotovelo. Tarde: Relaxe em Ponta Negra olhando o Morro do Careca. Noite: Ginga com Tapioca."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Caribe Potiguar): Bate-volta aos Parrachos de Maracajaú ou Perobas (depende da maré). Mergulho nos corais.",
+                            "Dia 4 (Pipa): Passe o dia na Praia da Pipa. Veja os golfinhos na Baía dos Golfinhos e almoce na vila. (Se puder, durma lá).",
+                            "Dia 5 (Relax e Compras): Manhã na Lagoa de Arituba ou Carcará. Tarde: Compras no Centro de Turismo (artesanato)."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Mergulho Profundo): Galinhos. É longe (170km), mas é um paraíso de salinas e dunas intocadas. Um dos lugares mais bonitos do estado.",
+                            "Dia 7 (Cultura e História): Centro Histórico (Igrejas), Barreira do Inferno e Aquário Natal.",
+                            "Dia 8 (Despedida): Repita sua praia favorita ou vá ao restaurante Camarões para o almoço de despedida."
+                        ]
+                    }
+                },
+
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-656860&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/natal/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+            {
+                name: "Maceió",
+                // FOTO: Ponta Verde ou Pajuçara (Wikimedia/Unsplash)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Ponta_Verde_Lighthouse_landscape_-_Macei%C3%B3%2C_Brazil_%28edited%29.jpg/960px-Ponta_Verde_Lighthouse_landscape_-_Macei%C3%B3%2C_Brazil_%28edited%29.jpg",
+                tags: ["Caribe Brasileiro", "Piscinas Naturais", "Praias"],
+                mapa: "https://goo.gl/maps/maceio",
+                clima: "Tropical Quente. A cor do mar é mais bonita entre Setembro e Março. Abril a Julho chove mais e a água pode turvar.",
+                // Adicione dentro do objeto de Maceió
+veredicto: {
+    melhor_epoca: "Setembro a Março (Época seca). É quando o mar fica 'azul Caribe'. Evite Maio a Julho: chove muito e a água pode ficar turva (marrom) devido aos rios.",
+    ideal_para: [
+        "Quem busca a cor de mar mais bonita do Brasil (o apelido 'Caribe Brasileiro' é real)",
+        "Famílias e casais (águas mornas, sem ondas e piscinas naturais na cidade)",
+        "Gulosos (a orla tem as melhores tapioqueiras e restaurantes de frutos do mar)",
+        "Base estratégica para 'Bate-Volta' (Maragogi, Gunga, Francês e Milagres)"
+    ],
+    nao_ideal_para: [
+        "Quem busca vida noturna frenética até o amanhecer (a orla é animada, mas a cidade dorme relativamente cedo)",
+        "Quem visita no auge do inverno esperando mar azul (se chover, a cor muda drasticamente)",
+        "Quem se irrita com abordagem de vendedores (nas praias urbanas é intenso)"
+    ],
+    perfis: [
+        { icone: "ri-drop-fill", nome: "Caribe BR" },
+        { icone: "ri-hearts-fill", nome: "Romance" },
+        { icone: "ri-restaurant-2-fill", nome: "Gastrô" },
+        { icone: "ri-anchor-fill", nome: "Passeios" }
+    ]
+},
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Praia de Pajuçara: Onde saem as jangadas para as piscinas naturais. Água morna, sem ondas e feirinha de artesanato.",
+                    "2. Ponta Verde: A orla mais bonita do Brasil. Tem o letreiro 'Eu Amo Maceió' e o Farol da Ponta Verde (dá para ir a pé na maré seca).",
+                    "3. Praia do Gunga: Fica no município vizinho (Roteiro). Tem o famoso mirante de coqueiros sem fim e as falésias coloridas (passeio de buggy).",
+                    "4. Praia do Francês: Em Marechal Deodoro. Um lado tem barreira de corais (piscina), o outro tem ondas fortes (surf).",
+                    "5. Maragogi (Bate-volta): O 'Caribe Brasileiro' oficial. Fica a 2h de Maceió. O passeio às Galés (piscinas) é imperdível, mas só na maré baixa.",
+                    "6. Ipioca (Hibiscus Beach Club): Uma praia deserta e paradisíaca com um clube de praia de luxo (day-use). Ideal para relaxar.",
+                    "7. Barra de São Miguel: Praia protegida por arrecifes, parece uma lagoa gigante. Ótima para andar de lancha ou kayak.",
+                    "8. Mirante de São Gonçalo: No centro da cidade, oferece uma vista panorâmica do porto e do mar.",
+                    "9. Pavilhão do Artesanato: Na Pajuçara. O melhor lugar para comprar renda filé (típica) e lembrancinhas.",
+                    "10. Catedral Metropolitana: No centro. Arquitetura neoclássica bonita, com vitrais e altares preservados."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Chiclete de Camarão: Prato inventado aqui (Restaurante Imperador dos Camarões). Camarão ao molho de queijos que 'estica' como chiclete.",
+                    "2. Sururu: Um molusco (parece marisco) típico das lagoas de Alagoas. O caldinho de sururu com leite de coco é afrodisíaco (dizem).",
+                    "3. Tapioca da Orla: As tapioqueiras de Maceió são patrimônio. A massa é fina e crocante. Recheio de carne de sol com queijo coalho é o clássico.",
+                    "4. Carne de Sol com Nata: Muito comum no café da manhã ou almoço.",
+                    "5. Bolo de Rolo (versão alagoana): Embora seja de PE, aqui é muito forte e servido com queijo do reino.",
+                    "6. Peixada Alagoana: Cozido de peixe com legumes, ovos cozidos e pirão. Leve e saboroso.",
+                    "7. Arroz de Polvo: O polvo do litoral alagoano é muito macio.",
+                    "8. Cocada de Massagueira: Na volta do Francês, pare em Massagueira. É o maior pólo gastronômico de doces caseiros.",
+                    "9. Passaporte: O 'cachorro-quente' de Maceió. Leva carne moída temperada, salsicha, queijo e maionese caseira. O 'Passaporte do Gaúcho' é famoso.",
+                    "10. Suco de Mangaba ou Cajá: As frutas da estação são deliciosas."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. A Orla Mais Bonita: A orla urbana de Maceió é considerada a mais bonita e bem cuidada do Brasil, com coqueiros e calçadão largo.",
+                    "2. Ma-çay-ó: O nome vem do tupi e significa 'O que tapa o alagadiço', referindo-se aos rios e lagoas da região.",
+                    "3. Paraíso das Águas: Alagoas tem a segunda maior barreira de corais do mundo (só perde para a Austrália e a barreira da Mesoamérica?), o que garante o mar calmo.",
+                    "4. Marechal Deodoro: A primeira capital de Alagoas e terra onde nasceu o proclamador da República fica colada em Maceió.",
+                    "5. Gogó da Ema: Um coqueiro torto lendário que parecia um pescoço de ema. Ele caiu, mas virou símbolo da cidade.",
+                    "6. Renda Filé: Um tipo de bordado colorido e vazado que só existe em Alagoas. É Patrimônio Imaterial.",
+                    "7. Zumbi dos Palmares: O maior quilombo das Américas (Quilombo dos Palmares) ficava em Alagoas, na Serra da Barriga.",
+                    "8. Farol no Mar: O Farol da Ponta Verde fica literalmente dentro da água. Na maré baixa (0.0), você caminha até a base dele.",
+                    "9. Braskem: Uma curiosidade triste. Bairros inteiros (Pinheiro/Mutange) afundaram devido à mineração de sal-gema e hoje são bairros fantasmas.",
+                    "10. Caribe?: A cor da água (azul turquesa/verde esmeralda) se deve ao fundo de areia branca e calcário, igual ao Caribe."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Iemanjá: A festa de 8 de Dezembro (N.S. da Conceição) e Iemanjá lota a orla de Pajuçara com oferendas.",
+                    "2. Igreja de Nossa Senhora do Rosário dos Pretos: Construída no século 19 por irmandades negras.",
+                    "3. Igreja dos Martírios: Tem uma fachada de azulejos portugueses belíssima no centro.",
+                    "4. Guerreiro: Uma dança folclórica típica de Alagoas, colorida e cheia de fitas (mistura de Reisado com Caboclinho).",
+                    "5. Mirante de São Gonçalo: Tem uma capela histórica lá em cima.",
+                    "6. Artesanato do Pontal da Barra: O bairro onde as rendeiras ficam sentadas na porta de casa fazendo o Filé.",
+                    "7. São João: Maceió tem um dos maiores festejos juninos do litoral.",
+                    "8. Pastoral: A religiosidade católica é forte no interior e reflete na capital.",
+                    "9. Xangô de Alagoas: O estado foi palco de uma perseguição histórica aos terreiros em 1912 (Quebra de Xangô), hoje lembrada com respeito e retomada.",
+                    "10. Capelinha de Jaraguá: Uma igreja histórica no bairro boêmio de Jaraguá."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Verão (Dez-Mar): A água fica num azul neon inacreditável. Cidade cheia, preços altos.",
+                    "2. Inverno (Abr-Ago): Chove bastante ('Inverno' no Nordeste é chuva). A água pode ficar 'barrenta' perto dos rios.",
+                    "3. São João (Junho): Festas gigantes no bairro de Jaraguá e Benedito Bentes.",
+                    "4. Maceió Fest: O carnaval fora de época (se ocorrer no ano).",
+                    "5. Réveillon: As festas privadas de Réveillon (Mil Sorrisos, Celebration) são as maiores e mais caras do Brasil.",
+                    "6. Festival do Bumba Meu Boi: Acontece anualmente celebrando a cultura popular.",
+                    "7. Agosto: Mês das ventanias, bom para Kitesurf.",
+                    "8. Setembro a Novembro: A melhor época 'Custo-Benefício'. Sol, mar azul e preços médios.",
+                    "9. Maré Baixa (Lua Cheia/Nova): É quando os passeios para as piscinas (Pajuçara/Maragogi) valem a pena.",
+                    "10. Feriados: A cidade lota de turistas regionais (PE, BA, SE)."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Aeroporto (MCZ): Fica em Rio Largo, bem longe da orla (45-60 min). Uber custa uns R$ 70-90.",
+                    "2. Tábua de Marés: É a bíblia de Maceió. Passeio de piscina natural na maré alta (acima de 0.6) é dinheiro jogado fora.",
+                    "3. Uber: Funciona muito bem e é barato para circular entre as praias urbanas (Pajuçara-Ponta Verde-Jatiúca).",
+                    "4. Segurança: A orla turística é bem policiada. Evite o centro à noite e bairros periféricos.",
+                    "5. Voltagem: 220V.",
+                    "6. Sol: Nasce às 5h e se põe às 17h30. Acorde cedo para aproveitar.",
+                    "7. Algas (Sargaço): Em algumas épocas, a maré traz algas para a areia. Cheira forte, mas é natural.",
+                    "8. Jangadas: O passeio de Pajuçara é tabelado e feito pela associação. Seguro e organizado.",
+                    "9. Day-Use: Muitos beach clubs (Hibiscus, Lopana, Kanoa) cobram entrada ou consumação mínima alta.",
+                    "10. Água da Torneira: Não beba. Compre mineral."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Maragogi ou Milagres?: Maragogi é mais lotada e turística. São Miguel dos Milagres é mais rústica, vazia e chique. Escolha seu estilo.",
+                    "2. Língua Suja: Após chuvas fortes, verifique a balneabilidade. Algumas 'línguas' (canais de drenagem) na orla podem sujar a praia urbana.",
+                    "3. Caminho de Moisés: Em Maragogi (Barra Grande), na maré seca, abre um caminho de areia mar adentro. Cuidado para a maré não subir e te ilhar.",
+                    "4. Francês: O lado esquerdo é piscina (família), o direito é surf (perigoso). Fique no esquerdo se não sabe nadar bem.",
+                    "5. Cadeira de Praia: Na orla, se sentar, paga (ou consome). Pergunte o valor da cadeira ANTES de sentar.",
+                    "6. Protetor Solar: O reflexo do sol na areia branca queima em dobro.",
+                    "7. Bate-volta Maragogi: É cansativo (2h30 pra ir, 2h30 pra voltar). Se puder, durma lá 1 noite.",
+                    "8. Domingo na Orla: A avenida da orla fecha para carros no domingo (Rua de Lazer). Ótimo para caminhar.",
+                    "9. Restaurantes: Jatiúca é o bairro gastronômico. Ponta Verde é o bairro dos hotéis.",
+                    "10. Cânions do São Francisco: Fica a 4h de Maceió (Piranhas/Xingó). É lindo, mas precisa de 2 dias (pernoite) para valer a pena."
+                ],
+
+                // --- NÚMEROS IMPORTANTES (MACEIÓ) ---
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergência.",
+                    "2. 192 (SAMU): Ambulância.",
+                    "3. (82) 3315-3000 (Aeroporto Zumbi dos Palmares): Informações.",
+                    "4. (82) 3312-5850 (Delegacia do Turista): Na orla de Pajuçara (ou perto).",
+                    "5. 193 (Bombeiros): Resgate no mar.",
+                    "6. (82) 3221-4615 (Rodoviária): Ônibus interestaduais.",
+                    "7. (82) 3315-6700 (HGE - Hospital Geral): Emergência pública.",
+                    "8. (82) 3336-2300 (Associação dos Jangadeiros): Pajuçara.",
+                    "9. 199 (Defesa Civil): Chuvas.",
+                    "10. SMTT (Trânsito): 118."
+                ],
+
+                // --- RISCOS E ERROS (MACEIÓ) ---
+                riscos: [
+                    "1. Maré Alta em Maragogi: O ERRO CLÁSSICO. Ir para Maragogi na maré alta ou lua 'morta'. A água não fica tão clara e não dá pé nas piscinas. Consulte a tábua!",
+                    "2. 'Línguas Negras': Em dias de muita chuva, os canais de água pluvial podem levar sujeira para o mar das praias urbanas (Pajuçara/Ponta Verde). Evite tomar banho logo na saída desses canais.",
+                    "3. Assédio de Vendedores: Na orla, a abordagem para vender passeio, óculos e comida é intensa. Diga 'não, obrigado' e não dê papo se não quiser comprar.",
+                    "4. Ouriços: Nas piscinas naturais e recifes (Francês/Ipioca), cuidado onde pisa. Tem ouriços pretos que furam o pé. Use sapatilha aquática.",
+                    "5. Bairro do Pinheiro: Evite alugar Airbnb nos bairros afetados pelo afundamento (Pinheiro, Mutange, Bom Parto). São áreas de risco interditadas.",
+                    "6. Estrada para Maragogi: A AL-101 Norte é linda, mas tem trechos sinuosos e às vezes esburacados. Cuidado ao dirigir à noite.",
+                    "7. Insolação: O vento constante faz você esquecer o sol. Use chapéu.",
+                    "8. Golpe da Lagosta: Na praia, vendem 'lagosta' que na verdade é lagostim ou está estragada. Coma em restaurante.",
+                    "9. Correnteza no Francês: O lado direito da Praia do Francês (o das ondas) tem correnteza forte. Não se arrisque se não for surfista.",
+                    "10. Preço do Táxi: Táxi do aeroporto é tabelado e caro. Uber costuma ser metade do preço."
+                ],
+
+                // --- ROTEIROS AUTOMÁTICOS (MACEIÓ) ---
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (O Cartão Postal): Manhã: Passeio de Jangada em Pajuçara (na maré baixa!). Tarde: Caminhada na orla de Ponta Verde até o Farol. Foto no letreiro. Noite: Chiclete de Camarão.",
+                            "Dia 2 (Litoral Sul): Dia de praia no Francês (lado esquerdo) ou Barra de São Miguel. Almoço em Massagueira na volta."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (O Caribe): Bate-volta para Maragogi ou São Miguel dos Milagres (saia às 5h da manhã!). Passeio de lancha nas piscinas.",
+                            "Dia 4 (Falésias): Praia do Gunga. Vá de buggy até as falésias coloridas e tome banho na lagoa.",
+                            "Dia 5 (Relax VIP): Day-use no Hibiscus Beach Club em Ipioca ou Capitão Nikolas. Praia deserta e estrutura de luxo."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Sertão - Opcional): Bate-volta (cansativo) ou pernoite nos Cânions do Xingó (Rio São Francisco). Passeio de catamarã inesquecível.",
+                            "Dia 7 (História e Renda): Visite o centro histórico de Marechal Deodoro e o bairro das rendeiras no Pontal da Barra.",
+                            "Dia 8 (Despedida): Compre castanhas e bolo de rolo no Mercado e despeça-se do mar em Ponta Verde."
+                        ]
+                    }
+                },
+
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-653066&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/maceio/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+            {
+    name: "João Pessoa",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Waterfront_panoramic_of_Jo%C3%A3o_Pessoa_%28PB%29.jpg/2560px-Waterfront_panoramic_of_Jo%C3%A3o_Pessoa_%28PB%29.jpg",
+    tags: ["Praias", "Tranquilidade", "História"],
+    mapa: "https://goo.gl/maps/joaopessoa",
+    clima: "Tropical Úmido. Sol constante e brisa agradável, com chuvas entre abril e julho.",
+    // Adicione dentro do objeto de João Pessoa
+veredicto: {
+    melhor_epoca: "Setembro a Março (Mar esmeralda e muito sol). Janeiro é movimentado. Evite Abril a Julho se quiser fugir da chuva. Dica: A cidade acorda com as galinhas (o sol nasce às 4h30)!",
+    ideal_para: [
+        "Quem busca a capital mais tranquila, verde e segura do Nordeste",
+        "Famílias e terceira idade (orla organizada, plana e sem prédios altos na areia)",
+        "Viajantes que querem economizar (ótimo custo-benefício em comida/hospedagem)",
+        "Madrugadores (o dia começa antes das 5h da manhã e rende muito)"
+    ],
+    nao_ideal_para: [
+        "Quem busca vida noturna frenética até o amanhecer (a orla fica vazia cedo)",
+        "Quem gosta de dormir até tarde (o sol nasce muito cedo e o comércio fecha cedo)",
+        "Quem espera mar agitado nas praias urbanas (a maioria é protegida por recifes)"
+    ],
+    perfis: [
+        { icone: "ri-leaf-fill", nome: "Zen/Paz" },
+        { icone: "ri-home-heart-fill", nome: "Família" },
+        { icone: "ri-wallet-3-fill", nome: "Econômico" },
+        { icone: "ri-sun-fill", nome: "Sol/Mar" }
+    ]
+},
+    pontos_turisticos: [
+        "1. Farol do Cabo Branco: Simboliza o ponto mais oriental das Américas (Ponta do Seixas).",
+        "2. Pôr do Sol na Praia do Jacaré: Onde o Bolero de Ravel é tocado diariamente ao saxofone no rio.",
+        "3. Centro Cultural São Francisco: Um dos mais importantes complexos barrocos do Brasil.",
+        "4. Piscinas Naturais de Picãozinho: Recifes de corais acessíveis por catamarã na maré baixa.",
+        "5. Estação Cabo Branco: Obra de Oscar Niemeyer dedicada à ciência, cultura e artes.",
+        "6. Praia de Tambaú e Cabo Branco: As principais orlas urbanas, excelentes para caminhadas.",
+        "7. Ilha de Areia Vermelha: Banco de areia avermelhada que surge no meio do mar na maré baixa.",
+        "8. Parque Solon de Lucena: Lagoa central cercada por palmeiras imperiais, ícone da cidade.",
+        "9. Mercado de Artesanato Paraibano: Melhor lugar para comprar redes, rendas e arte local.",
+        "10. Praia do Coqueirinho: Localizada no litoral sul, considerada uma das mais bonitas do estado."
+    ],
+
+    gastronomia: [
+        "1. Rubacão: Prato típico com arroz, feijão, queijo coalho e carne de sol cremosa.",
+        "2. Carne de Sol com Nata: Carne macia servida com creme de leite fresco e macaxeira.",
+        "3. Peixe à Belle Meunière: Comum nos restaurantes da orla com frutos do mar frescos.",
+        "4. Buchada de Bode: Iguaria tradicional do sertão muito apreciada na capital.",
+        "5. Arroz de Leite: Acompanhamento clássico para carnes assadas.",
+        "6. Tapioca de Tambaú: Visite as barracas de tapioca com recheios variados.",
+        "7. Bolo de Rolo: Embora de origem vizinha, é muito tradicional e consumido na Paraíba.",
+        "8. Queijo Coalho na Brasa: Petisco indispensável nas praias e feiras.",
+        "9. Cuscuz Nordestino: Base da alimentação local, servido do café à janta.",
+        "10. Frutos do Mar: Lagostas, camarões e caranguejos com preços muito acessíveis."
+    ],
+
+    religiao: [
+        "1. Igreja de Nossa Senhora da Guia: Famosa por sua fachada em pedra calcária trabalhada.",
+        "2. Mosteiro de São Bento: Um dos monumentos mais antigos, com arquitetura sóbria e bela.",
+        "3. Catedral Basílica de Nossa Senhora das Neves: Sede da arquidiocese da Paraíba.",
+        "4. Romaria da Penha: Milhares de fiéis caminham 14km anualmente em devoção à santa.",
+        "5. Igreja da Misericórdia: Local histórico de grande importância para a caridade na colônia.",
+        "6. Capela de Nossa Senhora da Penha: Construção à beira-mar que atrai peregrinos.",
+        "7. Festas Juninas: O caráter religioso de São João é fortíssimo em toda a cidade.",
+        "8. Centros Espíritas: A cidade possui uma comunidade atuante com foco em caridade.",
+        "9. Terreiros de Umbanda e Jurema: A Jurema Sagrada é uma tradição espiritual nativa da região.",
+        "10. Igrejas Evangélicas: Presença marcante com templos históricos e modernos."
+    ],
+
+    curiosidades: [
+        "1. Porta do Sol: É aqui que o sol nasce primeiro em todas as Américas.",
+        "2. Terceira Mais Antiga: João Pessoa foi fundada em 1585.",
+        "3. Cidade Verde: Frequentemente citada como uma das cidades mais arborizadas do mundo.",
+        "4. Sem Prédios Altos: Na orla, leis ambientais proíbem prédios com mais de 3 ou 4 andares.",
+        "5. Nome da Cidade: Homenagem a um político paraibano assassinado em 1930; o nome original era Filipeia.",
+        "6. Rio Sanhauá: Foi às margens deste rio que a cidade nasceu, e não no mar.",
+        "7. Ciclovias: A orla de Cabo Branco é fechada para carros todas as manhãs para lazer.",
+        "8. Maré: A vida na cidade gira em torno da tábua de marés; passeios dependem da maré baixa.",
+        "9. Tranquilidade: É conhecida como a capital mais calma e barata do Nordeste.",
+        "10. Sotaque Paraibano: Marcado pelo uso do 'vixe' e uma musicalidade única."
+    ],
+
+    eventos_estacoes: [
+        "1. São João de João Pessoa (Junho): Grandes shows e quadrilhas na Lagoa.",
+        "2. Extremo Cultural (Janeiro): Shows gratuitos de grandes artistas nacionais na praia.",
+        "3. Folia de Rua (Pré-Carnaval): Blocos tradicionais como o 'Muriçocas do Miramar'.",
+        "4. Aniversário da Cidade (5 de Agosto): Festas religiosas e culturais por toda a capital.",
+        "5. Verão (Dez-Março): Época de águas mais cristalinas e cidade cheia de turistas.",
+        "6. Festival de Música Clássica (Novembro): Concertos gratuitos em igrejas históricas.",
+        "7. Inverno (Maio-Julho): Período de chuvas; a temperatura cai levemente mas continua morna.",
+        "8. Natal na Lagoa: Decoração especial e espetáculos de luzes no centro.",
+        "9. Virada de Ano: Queima de fogos e shows nas areias de Tambaú.",
+        "10. Paixão de Cristo: Encenada no adro do Centro Cultural São Francisco."
+    ],
+
+    info_gerais: [
+        "1. Moeda: Real (BRL).",
+        "2. Voltagem: 220v.",
+        "3. Tomada: Tipo N (3 pinos).",
+        "4. DDD: 83.",
+        "5. População: Aprox. 830 mil habitantes.",
+        "6. Gentílico: Pessoense.",
+        "7. Aeroporto: Castro Pinto (JPA).",
+        "8. Água: Beba mineral; a da torneira é tratada mas não recomendada para consumo direto.",
+        "9. Transporte: Aplicativos (Uber/99) funcionam muito bem; a cidade é compacta.",
+        "10. Segurança: Uma das capitais mais seguras do Nordeste, mas evite o centro à noite."
+    ],
+
+    antes_de_ir: [
+        "1. Tábua de Marés: Verifique SEMPRE antes de agendar passeios como Picãozinho ou Areia Vermelha.",
+        "2. Localização: O aeroporto fica na cidade vizinha (Bayeux), cerca de 25-30 min de Tambaú.",
+        "3. Sol: O sol nasce por volta das 5h da manhã e se põe às 17h. Aproveite o dia cedo.",
+        "4. Litoral Sul: Reserve um dia para alugar um carro ou buggy e conhecer as praias do sul (Conde).",
+        "5. Horários do Centro: O centro histórico é mais movimentado durante o dia; à noite prefira a orla.",
+        "6. Roupas: Leves e frescas o ano todo; traga apenas um casaco fino para locais com ar condicionado.",
+        "7. Arroz de Leite: Não estranhe o arroz 'papa', é uma delícia regional.",
+        "8. Hospedagem: Ficar em Tambaú ou Cabo Branco garante que você faça quase tudo a pé.",
+        "9. Banhos de Mar: Verifique a balneabilidade, mas a maioria das praias urbanas é própria.",
+        "10. Silêncio: A cidade dorme cedo em comparação com Recife ou Natal."
+    ],
+
+    numeros: [
+        "1. 190 (Polícia Militar): Emergências.",
+        "2. (83) 3232-1205 (Aeroporto): Informações.",
+        "3. 192 (SAMU): Emergência médica.",
+        "4. 193 (Bombeiros): Resgates.",
+        "5. (83) 3214-8000 (Hospital de Trauma): Referência em urgência.",
+        "6. (83) 3218-4615 (Delegacia do Turista): Localizada em Tambaú.",
+        "7. 118 (Semob): Trânsito e transporte.",
+        "8. (83) 3218-1105 (Terminal Rodoviário): Ônibus interestaduais.",
+        "9. 156 (Prefeitura): Serviços municipais.",
+        "10. (83) 3214-8300 (PBTur): Órgão oficial de turismo."
+    ],
+
+    riscos: [
+        "1. Correntes de Retorno: Algumas áreas de Cabo Branco têm buracos; nade onde houver salva-vidas.",
+        "2. Sol Forte: O índice UV é altíssimo; reaplique protetor solar a cada 2 horas.",
+        "3. Centro à Noite: Ruas desertas fora da área turística podem ser perigosas para caminhadas.",
+        "4. Caranguejo: Se não tiver costume, peça ajuda para abrir para evitar pequenos cortes.",
+        "5. Maré Alta Súbita: Não se distancie muito da costa em bancos de areia sem monitorar a subida da maré.",
+        "6. Chuvas de Inverno: Podem causar alagamentos pontuais em avenidas principais.",
+        "7. Vendedores de Passeio: Procure empresas credenciadas na orla para garantir segurança.",
+        "8. Ouriços: Comuns em áreas de recifes; use sapatilhas de neoprene se for caminhar nos corais.",
+        "9. Trânsito na Epitácio Pessoa: Principal avenida da cidade, pode ficar lenta nos horários de pico.",
+        "10. Hidratação: O calor constante exige beber muita água mineral."
+    ],
+
+    roteiros: {
+        "curto": {
+            titulo: "Jampa Express (2 Dias)",
+            texto: [
+                "Dia 1: Orla de Tambaú/Cabo Branco, Farol do Cabo Branco e Pôr do Sol no Jacaré.",
+                "Dia 2: Piscinas Naturais de Picãozinho (maré baixa) e Centro Histórico à tarde."
+            ]
+        },
+        "medio": {
+            titulo: "Paraíba Essencial (4 Dias)",
+            texto: [
+                "Dias 1 e 2: Siga o roteiro de 2 dias.",
+                "Dia 3: Litoral Sul (Praia de Coqueirinho e Tambaba - opção de nudismo ou não).",
+                "Dia 4: Ilha de Areia Vermelha e final de tarde na Lagoa Solon de Lucena."
+            ]
+        },
+        "longo": {
+            titulo: "Experiência Paraibana (7+ Dias)",
+            texto: [
+                "Dias 1 a 4: Siga o roteiro de 4 dias.",
+                "Dia 5: Litoral Norte (Cabedelo e Fortaleza de Santa Catarina).",
+                "Dia 6: Bate-volta para Campina Grande ou Lajedo de Pai Mateus (Sertão).",
+                "Dia 7: Compras no Mercado de Artesanato e descanso na Praia do Bessa."
+            ]
+        }
+    },
+
+                 links: {
+                      hotel: "https://www.booking.com/searchresults.pt-br.html?city=-649321&aid=304142",
+                      passeio: "https://www.civitatis.com/br/joao-pessoa/",
+                       seguro: "https://www.segurospromo.com.br"
+                }
+            },
+           
+{
+    name: "Aracaju",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/d/db/Avenida_Hermes_Fontes_Aracaju_SE.jpg",
+    tags: ["Praias", "Cultura", "Tranquilidade"],
+    mapa: "https://goo.gl/maps/aracaju",
+    clima: "Tropical Litorâneo. Quente o ano todo, com brisa constante. Chuvas mais frequentes entre abril e julho.",
+    // Adicione dentro do objeto de Aracaju
+veredicto: {
+    melhor_epoca: "Setembro a Março (Sol e Vento). Junho é imperdível para quem ama São João (o 'Forró Caju' é gigante). Evite Abril a Julho (Chuva).",
+    ideal_para: [
+        "Quem busca a orla urbana mais bonita, segura e estruturada do Brasil (Atalaia)",
+        "Amantes de Caranguejo (a Passarela do Caranguejo é um templo gastronômico)",
+        "Famílias com crianças (Mundo Maravilhoso da Criança, Oceanário, Lagos)",
+        "Quem quer fugir do turismo de massa e preços altos das vizinhas famosas"
+    ],
+    nao_ideal_para: [
+        "Quem busca mar azul turquesa (as águas são turvas/marrons devido aos rios, embora limpas)",
+        "Quem procura agito cosmopolita 24h (é uma capital com ritmo acolhedor de interior)",
+        "Surfistas radicais (o mar na maioria da orla urbana é mais calmo/plano)"
+    ],
+    perfis: [
+        { icone: "ri-restaurant-line", nome: "Caranguejo" },
+        { icone: "ri-home-smile-fill", nome: "Família" },
+        { icone: "ri-music-2-fill", nome: "Forró" },
+        { icone: "ri-wallet-3-fill", nome: "Custo/Ben." }
+    ]
+},
+    pontos_turisticos: [
+        "1. Orla de Atalaia: Considerada a orla mais bonita e estruturada do Brasil, com lagos, quadras e a Passarela do Caranguejo.",
+        "2. Croa do Goré: Um banco de areia no meio do rio Vaza-Barris acessível apenas na maré baixa. Um paraíso.",
+        "3. Museu da Gente Sergipana: Um dos museus mais interativos e tecnológicos do país, celebrando a cultura nordestina.",
+        "4. Oceanário de Aracaju: Mantido pelo Projeto Tamar, tem formato de tartaruga gigante e mostra a vida marinha local.",
+        "5. Ilha dos Namorados: Geralmente visitada no mesmo passeio da Croa do Goré, com redes flutuantes.",
+        "6. Mercados Centrais (Thales Ferraz e Antônio Franco): Artesanato, literatura de cordel e castanhas.",
+        "7. Colina de Santo Antônio: O ponto onde a cidade nasceu, com uma igreja histórica e vista panorâmica.",
+        "8. Parque da Sementeira: Grande área verde no meio da cidade, ideal para piqueniques e caminhadas.",
+        "9. Praia de Aruana: Mais tranquila que Atalaia, com barracas de praia excelentes e boa comida.",
+        "10. Ponte do Imperador: Um marco histórico no centro, construído para receber Dom Pedro II."
+    ],
+
+    gastronomia: [
+        "1. Caranguejo: O ícone da cidade. Quebrar caranguejo na Passarela é obrigatório.",
+        "2. Moqueca de Camarão: Diferente da baiana, é mais leve, valorizando o sabor do fruto do mar.",
+        "3. Mangaba: Fruta nativa de Sergipe. O sorvete e o suco de mangaba são divinos.",
+        "4. Aratu: Um crustáceo pequeno e saboroso, geralmente servido na palha de bananeira ou em moquecas.",
+        "5. Caju: A fruta é aproveitada integralmente, desde o suco até doces e castanhas frescas.",
+        "6. Pirão de Leite: Acompanhamento comum para carnes de sol e peixes.",
+        "7. Carne de Sol com Pirão de Aipim: Um clássico do sertão que desceu para o litoral.",
+        "8. Amendoim Cozido: Vendido em toda esquina e nas praias, é o petisco oficial.",
+        "9. Beiju (Tapioca): Feito com coco fresco, queijo coalho e manteiga de garrafa.",
+        "10. Suco de Umbu: Fruta azedinha típica da caatinga, muito refrescante."
+    ],
+
+    religiao: [
+        "1. Igreja de Santo Antônio: No alto da colina, marco zero da cidade.",
+        "2. Catedral Metropolitana: Localizada no centro, com arquitetura imponente.",
+        "3. Festa de São João: Sergipe se intitula o 'País do Forró'. A festa religiosa e cultural é massiva em junho.",
+        "4. Lavagem das Escadarias: Sincretismo religioso forte nas festas de Nosso Senhor do Bonfim.",
+        "5. Procissão de Bom Jesus dos Navegantes: Tradicional cortejo fluvial no estuário do Rio Sergipe.",
+        "6. Religiões de Matriz Africana: O Candomblé e a Umbanda têm forte presença e respeito na cultura local.",
+        "7. Igreja de São Judas Tadeu: Conhecida como a igreja dos estudantes e causas impossíveis.",
+        "8. Santuário Nossa Senhora Aparecida: No bairro Bugio, atrai multidões em outubro.",
+        "9. Peregrinação a Divina Pastora: Embora fora da capital (40km), mobiliza muitos aracajuanos.",
+        "10. Tolerância: A cidade é conhecida pelo convívio pacífico entre diversas crenças."
+    ],
+
+    curiosidades: [
+        "1. Cidade Planejada: Aracaju foi uma das primeiras cidades planejadas do Brasil (tabuleiro de xadrez).",
+        "2. Nome Tupi: Significa 'Cajueiro dos Papagaios' (Ará = Papagaio, Caju = Cajueiro).",
+        "3. Orla Perfeita: A Orla de Atalaia tem 6km de extensão e infraestrutura impecável.",
+        "4. Qualidade de Vida: Famosa pelos hábitos saudáveis da população e ciclovias planas.",
+        "5. Projeto Tamar: O primeiro oceanário do Nordeste fica aqui.",
+        "6. Limpeza: Frequentemente elogiada como uma das capitais mais limpas do Nordeste.",
+        "7. Cajus Gigantes: Existem réplicas gigantes de cajus espalhadas pela cidade para fotos.",
+        "8. Rio e Mar: A cidade é cortada por rios (Sergipe, Vaza-Barris) e pelo mar.",
+        "9. Forró Caju: Um dos maiores eventos juninos do Brasil, com shows gratuitos gigantescos.",
+        "10. Preços: É considerada uma das capitais mais baratas para o turista no Brasil."
+    ],
+
+    eventos_estacoes: [
+        "1. Forró Caju (Junho): O auge da cidade. A praça de eventos dos mercados fica lotada.",
+        "2. Pré-Caju (Novembro): Uma das maiores prévias carnavalescas do país.",
+        "3. Verão (Dez-Mar): Sol forte, mar morno e barracas de praia movimentadas.",
+        "4. Vila do Natal Iluminado: O centro e os parques ganham decorações de luzes premiadas nacionalmente.",
+        "5. Festival do Caranguejo: Evento gastronômico que celebra o prato típico.",
+        "6. Aniversário da Cidade (17 de Março): Shows e eventos cívicos.",
+        "7. Inverno (Maio-Julho): É a estação chuvosa, mas o forró esquenta a cidade.",
+        "8. Motociclismo: Encontros de motociclistas são comuns na orla.",
+        "9. Réveillon: Queima de fogos tranquila e familiar na Orla de Atalaia.",
+        "10. Festas de Padroeiros: Ocorrem em vários bairros ao longo do ano."
+    ],
+
+    info_gerais: [
+        "1. Moeda: Real (BRL).",
+        "2. Voltagem: 127v (maioria), mas hotéis podem ter 220v. Cheque sempre.",
+        "3. Tomada: Tipo N (3 pinos).",
+        "4. DDD: 79.",
+        "5. População: Aprox. 670 mil habitantes.",
+        "6. Gentílico: Aracajuano.",
+        "7. Aeroporto: Santa Maria (AJU) - Pequeno e muito próximo da zona hoteleira.",
+        "8. Transporte: Uber e táxi são baratos devido às curtas distâncias.",
+        "9. Água: Consuma água mineral.",
+        "10. Segurança: A zona turística (Atalaia) é bem policiada e segura."
+    ],
+
+    antes_de_ir: [
+        "1. Tábua de Marés: Essencial para visitar a Croa do Goré. Vá na maré baixa.",
+        "2. Vento: Venta muito em Aracaju, o que ameniza o calor, mas cuidado com o guarda-sol voando.",
+        "3. Segunda-feira: Museus (incluindo o da Gente Sergipana) fecham às segundas.",
+        "4. Aluguel de Carro: Não é estritamente necessário se ficar na Orla, Uber atende bem.",
+        "5. Cânion do Xingó: Fica no sertão (3h a 4h de viagem). Reserve um dia inteiro ou pernoite lá (Canindé de São Francisco).",
+        "6. Caranguejo: Comer caranguejo é um ritual lento (toc-toc). Não vá com pressa.",
+        "7. Protetor Solar: O sol de Sergipe é intenso.",
+        "8. Hospedagem: Ficar na Orla de Atalaia é a melhor opção para turismo.",
+        "9. Trânsito: Muito tranquilo comparado a outras capitais.",
+        "10. Hospitalidade: O sergipano é muito acolhedor e gosta de conversar."
+    ],
+
+    numeros: [
+        "1. 190 (Polícia Militar).",
+        "2. (79) 3212-8500 (Aeroporto).",
+        "3. 192 (SAMU).",
+        "4. 193 (Bombeiros).",
+        "5. (79) 3259-2848 (Rodoviária Nova).",
+        "6. (79) 3214-5487 (Delegacia do Turista).",
+        "7. 118 (SMTT - Trânsito).",
+        "8. (79) 3216-2600 (Hospital de Urgência de Sergipe - HUSE).",
+        "9. (79) 3179-1915 (Museu da Gente Sergipana).",
+        "10. (79) 3226-8300 (Centro de Turismo)."
+    ],
+
+    riscos: [
+        "1. Mar Agitado: Algumas partes da praia de Atalaia têm ondas fortes; prefira Aruana para banho.",
+        "2. Águas Vivas: Ocorrem sazonalmente (verão); observe as bandeiras roxas se houver.",
+        "3. Sol: Queimaduras solares são o problema nº 1 dos turistas.",
+        "4. Centro à Noite: Evite circular a pé no centro comercial após o fechamento das lojas.",
+        "5. Rodovias para o Sertão: Se for dirigir até Xingó, atenção aos animais na pista.",
+        "6. Golpes de Passeio: Contrate catamarãs para Croa do Goré em locais oficiais (Orla Pôr do Sol).",
+        "7. Hidratação: O vento mascara a desidratação; beba água.",
+        "8. Ouriços: Cuidado ao caminhar em áreas de pedras na maré baixa.",
+        "9. Cuidado com Crianças: A Orla é enorme, mantenha as crianças por perto.",
+        "10. Preços na Areia: Pergunte o preço antes de consumir, embora abusos sejam raros."
+    ],
+
+    roteiros: {
+        "curto": {
+            titulo: "Aracaju Express (2 Dias)",
+            texto: [
+                "Dia 1: Orla de Atalaia, Oceanário e Passarela do Caranguejo à noite.",
+                "Dia 2: Manhã na Croa do Goré (Catamarã) e tarde no Museu da Gente Sergipana."
+            ]
+        },
+        "medio": {
+            titulo: "Belezas Sergipanas (4 Dias)",
+            texto: [
+                "Dias 1 e 2: Siga o roteiro de 2 dias.",
+                "Dia 3: Praia de Aruana (barracas de praia) e Pôr do Sol na Orla do Mosqueiro.",
+                "Dia 4: Mercados Centrais, Colina de Santo Antônio e compras de artesanato."
+            ]
+        },
+        "longo": {
+            titulo: "Sergipe Completo (7+ Dias)",
+            texto: [
+                "Dias 1 a 4: Siga o roteiro de 4 dias.",
+                "Dia 5: Bate-volta para a cidade histórica de São Cristóvão (4ª mais antiga do Brasil).",
+                "Dia 6: Bate-volta (longo) para os Cânions do Xingó no Rio São Francisco.",
+                "Dia 7: Praia do Saco (Litoral Sul) e Lagoa dos Tambaquis."
+            ]
+        },
+    },
+
+    links: {
+        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-625487&aid=304142",
+        passeio: "https://www.civitatis.com/br/aracaju/",
+        seguro: "https://www.segurospromo.com.br"
+    }
+},
+ {
+                name: "Itacaré",
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/MARCIO_FILHO_ITACARE_CIDADE_ITACARE_BAHIA_%2840933336562%29.jpg/960px-MARCIO_FILHO_ITACARE_CIDADE_ITACARE_BAHIA_%2840933336562%29.jpg",
+                tags: ["Surf", "Praia", "Cacau"],
+                mapa: "https://goo.gl/maps/itacare",
+                clima: "Tropical Úmido. Sol e chuva se alternam o ano todo. Verão é quente e agitado.",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Setembro a Novembro (Menos chuva e cidade mais tranquila). O verão é lotado e animado.",
+                    ideal_para: [
+                        "Surfistas (ondas famosas internacionalmente)",
+                        "Jovens e Solteiros (a vida noturna na Rua da Pituba é intensa)",
+                        "Amantes de Ecoturismo (trilhas na mata e cachoeiras)",
+                        "Apreciadores de Chocolate (região cacaueira)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem tem dificuldade de locomoção (muitas ladeiras e trilhas)",
+                        "Quem odeia insetos (é uma cidade cercada de mata fechada)",
+                        "Quem busca resorts 'pé na areia' estilo Caribe (aqui o estilo é rústico-chique)"
+                    ],
+                    perfis: [
+                        { icone: "ri-surf-line", nome: "Surf" },
+                        { icone: "ri-plant-fill", nome: "Natureza" },
+                        { icone: "ri-beer-fill", nome: "Agito" }, 
+                        { icone: "ri-sun-fill", nome: "Praia" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Prainha: Cartão-postal da cidade. Acesso por trilha de 40min ou guia. Visual selvagem inesquecível.",
+                    "2. Praia da Tiririca: O point do surf. Ondas fortes, gente jovem e campeonatos frequentes.",
+                    "3. Rua da Pituba: Onde tudo acontece à noite. Restaurantes, bares, música ao vivo e artesanato.",
+                    "4. Itacarezinho: Praia longa (3.5km), com estrutura de restaurante e coqueirais a perder de vista.",
+                    "5. Praia de Jeribucaçu: Acesso por trilha passando por mangue. O encontro do rio com o mar é lindo.",
+                    "6. Cachoeira do Tijuípe: Acesso fácil, ótima para banho e ideal para famílias.",
+                    "7. Praia do Resende: Pequena, charmosa e com gramado e coqueiros. Ótima para relaxar perto do centro.",
+                    "8. Mirante do Xaréu: O local clássico para assistir ao pôr do sol no mar.",
+                    "9. Praia da Engenhoca: A preferida dos surfistas de longboard e iniciantes. Trilha fácil.",
+                    "10. Rio de Contas: Passeios de canoa ou lancha para ver o manguezal e cachoeira do Cleandro."
+                ],
+
+                gastronomia: [
+                    "1. Moqueca Baiana: Com dendê e leite de coco fresco, imperdível em qualquer restaurante local.",
+                    "2. Chocolate de Origem: Itacaré está na Costa do Cacau. Prove o chocolate produzido nas fazendas vizinhas.",
+                    "3. Suco de Cacau: Refrescante, doce e muito diferente do chocolate. Vende-se a polpa ou o cacau in natura.",
+                    "4. Tapioca: No café da manhã ou jantar, recheada com queijo coalho e banana.",
+                    "5. Acarajé: Nas barracas de rua no final da tarde, tradição baiana.",
+                    "6. Peixe na Folha de Bananeira: Preparo indígena/caiçara comum na região.",
+                    "7. Bobó de Camarão: Cremoso e intenso.",
+                    "8. Pizza na Pituba: A rua principal tem ótimas pizzarias rústicas.",
+                    "9. Caipirinha de Cacau ou Biribiri: Frutas locais que dão drinks exóticos.",
+                    "10. Bares de Praia: Petiscos como isca de peixe e macaxeira frita."
+                ],
+
+                religiao: [
+                    "1. Igreja de São Miguel Arcanjo: Construção jesuíta de 1723, a mais antiga e importante da cidade.",
+                    "2. Candomblé: Forte presença na Bahia, com terreiros e festas tradicionais na região.",
+                    "3. Lavagem da Escadaria: Festividade sincrética que une catolicismo e religiões de matriz africana.",
+                    "4. Festas Juninas: São João é celebrado com muita fé e forró na cidade.",
+                    "5. Lendas do Rio de Contas: Histórias de pescadores sobre espíritos das águas.",
+                    "6. Capoeira: Mais que esporte, é uma filosofia espiritual e cultural muito forte em Itacaré.",
+                    "7. Igrejas Evangélicas: Presentes nos bairros residenciais.",
+                    "8. Misticismo e Yoga: Muitos retiros espirituais se instalam aqui pela energia da natureza.",
+                    "9. Benzedeiras: Tradição antiga ainda viva entre os nativos mais velhos.",
+                    "10. Festa de São Miguel (Setembro): Padroeiro da cidade, com procissão e festa profana."
+                ],
+
+                curiosidades: [
+                    "1. Coronéis do Cacau: A cidade foi porto de escoamento de cacau e já foi muito rica. Entrou em decadência com a 'vassoura-de-bruxa' (praga) e renasceu com o turismo.",
+                    "2. Cenário de Novela: Foi cenário de 'Renascer' (versão antiga e trechos da nova) e filmes.",
+                    "3. Surf Town: É considerada o Havaí Baiano pela constância das ondas.",
+                    "4. Mata Atlântica: É uma das poucas áreas do Nordeste onde a mata atlântica chega quase até o mar.",
+                    "5. Acesso Difícil: Até 1998, a estrada era de terra batida muito ruim, o que preservou a cidade do turismo de massa por anos.",
+                    "6. Capoeira: Tem uma das rodas de capoeira mais respeitadas da Bahia.",
+                    "7. Taboquinhas: Um distrito de Itacaré onde se faz rafting, famoso por ser mais 'raiz'.",
+                    "8. Chocolates Premiados: O cacau da região hoje é 'fino', usado em chocolates gourmet mundialmente.",
+                    "9. Forró: Não importa se é Bahia, o forró pé-de-serra toca alto quase toda noite.",
+                    "10. Arquitetura: Os casarões do centro são herança da era de ouro do cacau."
+                ],
+
+                eventos_estacoes: [
+                    "1. Réveillon: Um dos mais famosos (e caros) do Brasil. Festas privadas gigantescas.",
+                    "2. Carnaval: Blocos de rua tradicionais e 'caretas' (mascarados que assustam as crianças).",
+                    "3. Festival de Surf (Outubro): Etapas do mundial ou nacional costumam ocorrer na Tiririca.",
+                    "4. Festival Gastronômico (Julho/Agosto): Pratos especiais usando ingredientes locais como cacau e dendê.",
+                    "5. São João (Junho): A cidade se enfeita e tem muito forró na praça.",
+                    "6. Verão (Dez-Fev): Cidade lotada, trânsito lento, preços altos e muito sol.",
+                    "7. Inverno (Jun-Ago): Chuvas frequentes ('Inverno Baiano'), mas o mar continua morno.",
+                    "8. Temporada das Baleias (Jul-Out): Baleias Jubarte podem ser vistas na costa em passeios de barco.",
+                    "9. Dia de Iemanjá (2 de Fevereiro): Oferendas no mar, partindo da Praia da Concha.",
+                    "10. Baixa Temporada (Maio/Setembro): Melhor época para quem quer paz e preços baixos."
+                ],
+
+                info_gerais: [
+                    "1. Voltagem: 127V (Cuidado, boa parte do Nordeste é 220V, mas Itacaré costuma ser 127V).",
+                    "2. DDD: 73.",
+                    "3. Bancos: Tem Banco do Brasil, Bradesco e Lotérica. Caixas 24h às vezes faltam dinheiro em feriados.",
+                    "4. Internet: Boa no centro e pousadas, mas falha nas praias mais afastadas (Prainha, Jeribucaçu).",
+                    "5. Água: Não beba da torneira em hipótese alguma.",
+                    "6. Transporte: Não precisa de carro para as praias urbanas (Resende, Tiririca, Concha). Para as rurais, precisa.",
+                    "7. Mototáxi: É o meio de transporte oficial e mais rápido da cidade.",
+                    "8. Estradas: A BA-001 (que vem de Ilhéus) é asfaltada e bonita, mas sinuosa.",
+                    "9. Aeroporto: O mais próximo é Ilhéus (IOS), a 70km de distância.",
+                    "10. Taxas: Algumas praias (Itacarezinho) cobram estacionamento caro se entrar de carro."
+                ],
+
+                antes_de_ir: [
+                    "1. Dinheiro Vivo: Leve sempre um pouco. Algumas barracas de trilha e guias não aceitam cartão.",
+                    "2. Tênis ou Papete: Para as trilhas (Prainha e Jeribucaçu). Chinelo escorrega e arrebenta.",
+                    "3. Repelente: Essencial. Tem mosquito, maruim e mutuca nas áreas de mata.",
+                    "4. Protetor Solar: O sol da Bahia queima mesmo nublado.",
+                    "5. Marés: Verifique a tábua de marés. Na maré baixa, praias como a Concha ficam piscinas; na alta, somem.",
+                    "6. Guias: Para Prainha, se for a primeira vez, contrate um guia ou vá com grupos. A trilha tem bifurcações.",
+                    "7. Transfer: Agende seu transfer de Ilhéus com antecedência se não for alugar carro.",
+                    "8. Roupas Leves: Faz calor o ano todo. Esqueça casacos pesados, traga no máximo um corta-vento para chuva.",
+                    "9. Mochila Estanque: Se for fazer passeios de barco ou cachoeira, protege o celular.",
+                    "10. Respeite os Nativos: A cultura local é forte. Peça licença ao entrar e tirar fotos de pessoas."
+                ],
+
+                numeros: [
+                    "1. 190 (Polícia Militar).",
+                    "2. 192 (SAMU).",
+                    "3. (73) 3251-2195 (Delegacia).",
+                    "4. Fundação Hospitalar de Itacaré: Atendimento básico de emergência.",
+                    "5. (73) 3251-3108 (Secretaria de Turismo).",
+                    "6. Ponto de Táxi Rodoviária: Pergunte no local, varia muito.",
+                    "7. Aeroporto de Ilhéus: (73) 3234-4000 (Base para informações de voo).",
+                    "8. Associação de Guias: Geralmente tem quiosque no centro.",
+                    "9. Farmácias: Várias na Rua Pituba e arredores.",
+                    "10. Bombeiros: A base mais próxima costuma ser Ilhéus, cuidado redobrado."
+                ],
+
+                riscos: [
+                    "1. Correnteza: Praias como Tiririca e Itacarezinho têm correntes de retorno fortes. Se não surfa, cuidado.",
+                    "2. Trilhas Escorregadias: Depois de chuva, o barro fica liso. Risco de torção.",
+                    "3. Furtos na Praia: Não deixe coisas sozinhas na areia enquanto entra no mar, especialmente em praias cheias.",
+                    "4. Coco: Não fique deitado bem embaixo de coqueiros carregados.",
+                    "5. Estradas à Noite: A estrada Ilhéus-Itacaré é escura e tem animais na pista. Evite dirigir de madrugada.",
+                    "6. Assédio: Vendedores ambulantes e guias podem ser insistentes. Um 'não, obrigado' firme resolve.",
+                    "7. Águas Vivas: Ocorrem em certas épocas. Se ver na areia, não toque.",
+                    "8. Pedras: Na Praia da Concha e costões, as pedras têm cracas que cortam o pé.",
+                    "9. Bebida Adulterada: Em festas muito cheias, cuide do seu copo.",
+                    "10. Golpe do Passeio Barato: Desconfie de preços muito abaixo da tabela. O barato sai caro (barco ruim, sem colete)."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Essencial (3 Dias)",
+                        texto: [
+                            "Dia 1: Praias Urbanas (Resende, Tiririca, Costa) e pôr do sol na Ponta do Xaréu. Noite na Pituba.",
+                            "Dia 2: Trilha da Prainha (manhã) e tarde na Praia da Ribeira (arborismo opcional).",
+                            "Dia 3: Praia da Concha (mar calmo, stand-up paddle) e compras de cacau no centro."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Explorador (5 Dias)",
+                        texto: [
+                            "Dias 1 a 3: Siga o roteiro curto.",
+                            "Dia 4: Passeio '4 Praias' (Itacarezinho, Engenhoca, Havaizinho, Camboinha) - trilha leve.",
+                            "Dia 5: Cachoeira do Tijuípe e tarde relaxando em algum Beach Club."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Imersão Total (7 Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o roteiro médio.",
+                            "Dia 6: Passeio de barco/canoa pelo Rio de Contas até a Cachoeira do Cleandro.",
+                            "Dia 7: Trilha de Jeribucaçu (passa por mangue e praia linda) e despedida com moqueca."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/br/itacare.pt-br.html", 
+                    passeio: "https://www.tripadvisor.com.br/Attractions-g303270-Activities-Itacare_State_of_Bahia.html", 
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
+           
+            {
+                name: "Maragogi",
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Praia_de_Barra_Grande.jpg/960px-Praia_de_Barra_Grande.jpg",
+                tags: ["Praia", "Caribe Brasileiro", "Mergulho"],
+                mapa: "https://goo.gl/maps/maragogi",
+                clima: "Tropical. Sol o ano todo. Chuvas concentradas entre Abril e Julho (água pode turvar).",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Outubro a Janeiro (Mar mais transparente e menos chuva). Evite o inverno se quiser o 'azul caribe'.",
+                    ideal_para: [
+                        "Amantes de Praia (Água morna, calma e azul-turquesa)",
+                        "Famílias com crianças (Mar sem ondas na maré baixa)",
+                        "Casais (Pousadas charmosas e clima romântico)",
+                        "Fotógrafos (O Caminho de Moisés e os corais são surreais)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem busca agito noturno (A cidade dorme cedo, é bem parada à noite)",
+                        "Surfistas (O mar é uma piscina)",
+                        "Quem não gosta de acordar cedo (Os passeios dependem da maré, às vezes às 5h da manhã)"
+                    ],
+                    perfis: [
+                        { icone: "ri-anchor-fill", nome: "Mar" },
+                        { icone: "ri-sun-fill", nome: "Sol" },
+                        { icone: "ri-camera-lens-fill", nome: "Paisagem" },
+                        { icone: "ri-user-heart-fill", nome: "Relax" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Galés de Maragogi: As piscinas naturais principais. Só vá na maré baixa (0.0 a 0.6).",
+                    "2. Caminho de Moisés (Barra Grande): Um banco de areia que abre mar adentro na maré baixa. Imperdível.",
+                    "3. Praia de Antunes: A mais famosa e bonita. Água azul neon e coqueiros inclinados.",
+                    "4. Passeio de Buggy: Percorre o litoral norte (Burgalhau, Barra Grande, Antunes, Xaréu).",
+                    "5. Praia de Xaréu: Ótima para banho, menos lotada que Antunes.",
+                    "6. Ponta de Mangue: Praia de águas mornas e esverdeadas, quase na divisa com PE.",
+                    "7. Piscinas de Taocas e Barra Grande: Alternativas às Galés principais (menos cheias e mais preservadas).",
+                    "8. Mirante do Cruzeiro: A vista panorâmica da cidade e do mar.",
+                    "9. Ruínas de São Bento: No litoral sul, história e bolo de goma.",
+                    "10. Japaratinga: Cidade vizinha (ao sul) que vale o bate-volta ou esticada."
+                ],
+
+                gastronomia: [
+                    "1. Bolo de Goma: O 'sequilho' de Maragogi. Feito de manteiga e coco, derrete na boca. Compre na fábrica da Tia Marlene.",
+                    "2. Lagosta: Prato típico e farto na região.",
+                    "3. Peixada: Com leite de coco e dendê.",
+                    "4. Tapioca: Clássico nordestino no café da manhã ou jantar.",
+                    "5. Sururu: Molusco pequeno servido ao coco ou no caldo.",
+                    "6. Camarão no Coco: Servido dentro do coco verde.",
+                    "7. Carne de Sol com Macaxeira: Para quem cansar de frutos do mar.",
+                    "8. Sorvete de Graviola: Fruta comum na região.",
+                    "9. Água de Coco: Barata e fresca em qualquer quiosque.",
+                    "10. Caipifruta: De cajá, seriguela ou pitanga."
+                ],
+
+                religiao: [
+                    "1. Igreja de Santo Antônio: Padroeiro da cidade. A igreja fica na orla principal.",
+                    "2. Ruínas da Igreja de São Bento: Um mosteiro antigo inacabado à beira-mar.",
+                    "3. Festas de Padroeiro: Junho tem procissões e quermesses.",
+                    "4. Iemanjá: Oferendas no mar são comuns no Réveillon e 2 de Fevereiro.",
+                    "5. Fé dos Pescadores: As jangadas costumam ter nomes de santos para proteção no mar.",
+                    "6. Capelinhas de Praia: Comuns em propriedades privadas e pousadas.",
+                    "7. Igrejas Evangélicas: Presentes nos bairros residenciais.",
+                    "8. Cruzeiro: O alto do morro tem uma cruz que protege a cidade.",
+                    "9. Benzimentos: Tradição antiga contra 'mau-olhado' ainda existe.",
+                    "10. Misticismo das Marés: O povo local vive regido pela lua e pela maré."
+                ],
+
+                curiosidades: [
+                    "1. Tábua de Marés: É a Bíblia de Maragogi. Se a maré estiver alta (acima de 0.6), NÃO tem piscina natural. Planeje a viagem pela lua (Lua Cheia e Nova = Maré Baixa).",
+                    "2. APA Costa dos Corais: É a maior área de proteção ambiental marinha do Brasil.",
+                    "3. Caribe Brasileiro: O apelido pegou por causa da cor da água, que lembra muito Cancun.",
+                    "4. Gatos de Praia: Na praia de Antunes, muitos gatos vivem nos coqueirais e interagem com turistas.",
+                    "5. Salinas Maragogi: Um dos resorts all-inclusive mais premiados da América do Sul fica aqui.",
+                    "6. Bolacha Maragogi: O bolo de goma é tão famoso que é exportado para outros estados.",
+                    "7. Sem Ondas: A barreira de corais segura o mar, formando uma lagoa gigante.",
+                    "8. Buggy Credenciado: Só bugueiros credenciados (colete colorido) podem rodar nas praias.",
+                    "9. Divisa: Fica exatamente no meio do caminho entre Maceió e Recife (130km para cada lado).",
+                    "10. Peixinhos: Eles vêm comer na mão (mas evite alimentar com pão, faz mal)."
+                ],
+
+                eventos_estacoes: [
+                    "1. Festival da Lagosta (Setembro): Pratos especiais com desconto nos restaurantes.",
+                    "2. Réveillon: A cidade lota. Algumas festas privadas famosas (como Réveillon Mil Sorrisos) acontecem perto.",
+                    "3. Carnaval: Blocos de rua tradicionais e muita gente na praia.",
+                    "4. Verão (Dez-Mar): Água quente, sol forte e cidade cheia.",
+                    "5. Inverno (Mai-Ago): Chove. Se chover muito, a água fica turva ('barrenta') por causa dos rios.",
+                    "6. São João: Comemorado com forró e milho, mas menos intenso que no interior.",
+                    "7. Maré Viva (Luas Cheia/Nova): Quinzenalmente, a maré seca muito e formam-se as piscinas.",
+                    "8. Maré Morta (Luas Crescente/Minguante): A maré não seca tanto, ruim para passeios.",
+                    "9. Feriados: A cidade sempre lota de turistas de Maceió e Recife.",
+                    "10. Baixa Temporada: Abril, Maio, Agosto (preços bons, mas risco de chuva)."
+                ],
+
+                info_gerais: [
+                    "1. Tábua de Marés (DE NOVO): Consulte antes de ir. Maré 0.0 a 0.5 é excelente. 0.6 é aceitável. Acima de 0.7, não vá às Galés.",
+                    "2. Voltagem: 220V. Se levar secador 110V, vai queimar.",
+                    "3. Dinheiro: Leve espécie para pagar a travessia de barco menor ou comprar coco na areia.",
+                    "4. Aeroporto: Você pode descer em Maceió (MCZ) ou Recife (REC). A distância é quase a mesma (~2h30 de carro).",
+                    "5. Protetor Solar: O sol reflete na areia branca e na água. Queima muito.",
+                    "6. Sapatilha de Neoprene: Essencial para não cortar o pé nos corais ou pisar em ouriços.",
+                    "7. Transfer: O Uber é difícil para longas distâncias. Contrate transfer ou alugue carro.",
+                    "8. Centro x Praias: O centro de Maragogi é feio e tem praia urbana comum. As praias bonitas (Antunes, Barra Grande) ficam ao norte (5-10km). Fique hospedado lá se puder.",
+                    "9. Água: Beba mineral.",
+                    "10. Internet: 4G funciona bem, mas falha em praias isoladas."
+                ],
+
+                antes_de_ir: [
+                    "1. OLHE A LUA: Marque a viagem na Lua Cheia ou Lua Nova (maré baixa de manhã).",
+                    "2. Reserve o Passeio: As Galés têm limite de visitantes por dia (cota ambiental). Reserve antes.",
+                    "3. Snorkel: Se tiver o seu, leve. Os alugados são muito usados.",
+                    "4. Câmera Subaquática: GoPro ou capinha de celular é obrigatório.",
+                    "5. Carro: Vale a pena alugar para ir nas praias vizinhas (Japaratinga, São Miguel dos Milagres).",
+                    "6. Repelente: Tem pernilongo à noite.",
+                    "7. Roupas UV: Proteção solar é vital.",
+                    "8. Dinheiro Trocado: Para gorjetas e ambulantes.",
+                    "9. Horário dos Passeios: Muda todo dia conforme a maré. Esteja disposto a acordar 4h da manhã se necessário.",
+                    "10. Paciência com o Atendimento: O ritmo do litoral é 'devagar'. Relaxe."
+                ],
+
+              numeros: [
+                    "1. 190 (Polícia Militar).",
+                    "2. 192 (SAMU).",
+                    "3. (82) 3296-1657 (Delegacia Civil - 92º DP).",
+                    "4. (82) 3296-1406 (UPA 24h Maragogi - Santo Antônio).",
+                    "5. (82) 98164-3813 (Secretaria de Turismo / Prefeitura - Zap).",
+                    "6. (82) 3036-5200 (Aeroporto Maceió) / (81) 3464-4188 (Aeroporto Recife).",
+                    "7. 0800 009 7325 (Real Alagoas - Ônibus).",
+                    "8. (82) 3296-1206 (Prefeitura Geral).",
+                    "9. Associação de Bugueiros: Não tem telefone fixo, agende na recepção da sua pousada (é mais seguro).",
+                    "10. Bancos: BB, Caixa e Bradesco (Centro de Maragogi)."
+                ],
+
+                riscos: [
+                    "1. Ouriços do Mar: Eles ficam nas pedras. Se pisar, dói muito e infecciona. Olhe onde pisa.",
+                    "2. Corais Cortantes: Não suba nos corais (é proibido e corta).",
+                    "3. Queimadura Solar: O índice UV é extremo.",
+                    "4. Maré Enchendo: No Caminho de Moisés, a maré sobe rápido. Se você for muito longe, pode ter que voltar nadando. Cuidado!",
+                    "5. Águas Vivas: Ocorrem em certas épocas.",
+                    "6. Passeios Piratas: Barqueiros sem licença que levam a lugares sem peixe. Exija credencial.",
+                    "7. Preços de Praia: Barracas famosas cobram caro. Pergunte o preço antes.",
+                    "8. Trânsito na AL-101: Estrada pista simples, sinuosa e às vezes esburacada.",
+                    "9. Furto na Areia: Não deixe coisas sozinhas no Caminho de Moisés.",
+                    "10. Desidratação: Beba água de coco constante."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Bate-volta ou 2 Dias",
+                        texto: [
+                            "Dia 1: Passeio às Galés (na hora da maré baixa) + Tarde na Praia de Antunes.",
+                            "Dia 2: Passeio de Buggy pelo litoral Norte (Barra Grande/Caminho de Moisés)."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Relax Caribe (4 Dias)",
+                        texto: [
+                            "Dias 1-2: Siga o roteiro curto.",
+                            "Dia 3: Bate-volta a Japaratinga (balsa) e Mirante do Aruanã.",
+                            "Dia 4: Dia livre em um Beach Club (como o Barra Mar ou Pontal) ou Praia de Xaréu."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Costa dos Corais (6-7 Dias)",
+                        texto: [
+                            "Dias 1-4: Roteiro médio.",
+                            "Dia 5: Bate-volta a São Miguel dos Milagres (Praia do Patacho).",
+                            "Dia 6: Praia de Carneiros (PE) - fica a 1h de distância.",
+                            "Dia 7: Compras de artesanato e bolo de goma no centro."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/br/maragogi.pt-br.html", 
+                    passeio: "https://www.tripadvisor.com.br/Attractions-g303340-Activities-Maragogi_State_of_Alagoas.html", 
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
+            {
+                name: "Jericoacoara",
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Anderps_067.JPG/960px-Anderps_067.JPG",
+                tags: ["Praia", "Dunas", "Kitesurf"],
+                mapa: "https://goo.gl/maps/jericoacoara",
+                clima: "Tropical Semiárido. Venta MUITO (bom para kite) de Agosto a Dezembro. Chuvas de Março a Maio.",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Julho a Janeiro (Sol garantido e ventos fortes). Fevereiro a Maio chove e as lagoas enchem.",
+                    ideal_para: [
+                        "Kitesurfistas e Windsurfistas (É a meca mundial dos ventos)",
+                        "Casais (Pousadas charmosas e jantar à luz de velas)",
+                        "Jovens (A vida noturna nas ruas de areia é agitada)",
+                        "Amantes de Natureza (Dunas, lagoas e mangues)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem tem dificuldade de locomoção (NÃO existe asfalto, é tudo areia fofa)",
+                        "Quem odeia vento na cara (O vento é constante e leva areia)",
+                        "Quem busca acesso fácil (A viagem de Fortaleza até lá é longa e balança)"
+                    ],
+                    perfis: [
+                        { icone: "ri-windy-fill", nome: "Vento/Kite" },
+                        { icone: "ri-sun-fill", nome: "Sol" },
+                        { icone: "ri-cactus-fill", nome: "Rústico" },
+                        { icone: "ri-moon-clear-fill", nome: "Vida Noturna" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Pedra Furada: O cartão-postal. Uma rocha com um buraco no meio esculpido pelo mar. Vá na maré baixa.",
+                    "2. Lagoa do Paraíso: Aquela das redes dentro da água azul-turquesa. Tem beach clubs famosos (Alchymist).",
+                    "3. Duna do Pôr do Sol: O ritual diário de subir a duna gigante ao lado da vila para ver o sol cair no mar.",
+                    "4. Buraco Azul: Uma lagoa artificial (de escavação) que encheu de água azul neon devido ao calcário. Virou febre.",
+                    "5. Árvore da Preguiça: Uma árvore deitada devido à força do vento constante.",
+                    "6. Passeio Lado Leste: Passa pela Árvore da Preguiça, Praia do Preá e Lagoa do Paraíso.",
+                    "7. Passeio Lado Oeste: Passa pelo Mangue Seco, Guriú (cavalos marinhos) e Tatajuba (dunas e tirolesa).",
+                    "8. Praia da Malhada: Praia preferida dos surfistas e mais tranquila, ao lado da vila.",
+                    "9. Centrinho de Jeri: Ruas de areia sem postes de luz (só a luz das lojas), charme total.",
+                    "10. Tatajuba: Um vilarejo soterrado pela areia e reconstruído. As lagoas lá são ótimas."
+                ],
+
+                gastronomia: [
+                    "1. Torta de Banana: Doce típico vendido por ambulantes na praia e nas ruas.",
+                    "2. Peixe na Telha: Pargo ou Robalo fresco assado.",
+                    "3. Camarão no Abacaxi: Clássico tropical servido nos restaurantes da praia.",
+                    "4. Tapioca: Recheada com carne de sol ou queijo coalho.",
+                    "5. Dadinho de Tapioca: Petisco onipresente.",
+                    "6. Lagosta: Em épocas permitidas, é mais barata que no sudeste.",
+                    "7. Caipirinha de Seriguela: Fruta local deliciosa.",
+                    "8. Sorvete de Rapadura: Sabor exótico e regional.",
+                    "9. Crepioca: Mistura de crepe com tapioca.",
+                    "10. Pastel de Arraia: Comum nas barracas de praia."
+                ],
+
+                religiao: [
+                    "1. Igreja Nossa Senhora do Rosário de Fátima: Uma igrejinha de pedra linda, construída pelos moradores.",
+                    "2. Misticismo: Jeri atrai muita gente ligada a energias, yoga e meditação.",
+                    "3. Natureza Sagrada: O respeito pelas dunas e pelo mar é quase religioso para os locais.",
+                    "4. Festas de Santo: Procissões simples acontecem nas datas litúrgicas.",
+                    "5. Iemanjá: O Réveillon na praia tem muitas oferendas.",
+                    "6. Capoeira: Rodas de capoeira na praia ao pôr do sol misturam esporte e espiritualidade.",
+                    "7. Benzedeiras: Cultura do sertão cearense.",
+                    "8. Lendas: Histórias de cidades encantadas soterradas pelas dunas.",
+                    "9. Ecumenismo: A vila recebe o mundo todo, há muita tolerância.",
+                    "10. Pôr do Sol: O momento em que todos param e aplaudem o sol é um ritual diário."
+                ],
+
+                curiosidades: [
+                    "1. Sem Iluminação Pública: As ruas não têm postes de luz para não ofuscar a luz da lua e das estrelas. A fiação é subterrânea.",
+                    "2. Areia em Tudo: Não leve salto alto ou sapato fechado. Você vai andar na areia fofa 100% do tempo, inclusive dentro das lojas.",
+                    "3. Parque Nacional: Jeri fica dentro de um parque protegido, por isso não pode construir prédios altos.",
+                    "4. Taxa de Turismo: Paga-se uma taxa diária por pessoa para entrar na vila (sustentabilidade).",
+                    "5. Acesso: Carro comum não chega. Tem que deixar em Jijoca e pegar uma 'Jardineira' (caminhonete 4x4) ou ter um 4x4 próprio.",
+                    "6. Washington Post: O jornal americano elegeu Jeri uma das praias mais bonitas do mundo nos anos 90, o que explodiu o turismo.",
+                    "7. Cavalos Marinhos: No passeio do Guriú, barqueiros levam para ver cavalos marinhos no mangue.",
+                    "8. Ventos Alísios: A posição geográfica faz ventar o ano todo, perfeito para Kite.",
+                    "9. Enterrada: A antiga vila de Tatajuba foi engolida pelas dunas móveis.",
+                    "10. Aeroporto Próprio: Agora tem o Aeroporto de Jericoacoara (JJD) na cidade vizinha (Cruz), facilitando muito."
+                ],
+
+                eventos_estacoes: [
+                    "1. Réveillon John John: Uma das festas de virada de ano mais caras e famosas do Brasil (5 dias de festa).",
+                    "2. Carnaval: A vila lota, bloquinhos na areia.",
+                    "3. Temporada de Kite (Ago-Dez): O céu fica colorido de pipas. Campeonatos mundiais acontecem aqui.",
+                    "4. Festival de Gastronomia: Ocorre em algumas épocas, valorizando o tempero local.",
+                    "5. Inverno (Mar-Mai): É a época da chuva. As lagoas enchem, mas o sol aparece menos. Preços caem.",
+                    "6. Verão (Dez-Fev): Sol forte, vila cheia, balada todo dia.",
+                    "7. Feriados: Sempre lotado. Reserve pousada com meses de antecedência.",
+                    "8. Pôr do Sol Diário: O 'evento' gratuito que ninguém perde.",
+                    "9. Forró: Às quartas e sábados, o forró tradicional pega fogo.",
+                    "10. Luau: Festas espontâneas na praia em noites de lua cheia."
+                ],
+
+                info_gerais: [
+                    "1. Taxa de Turismo: Pague antecipado no site da Prefeitura de Jijoca para evitar fila na entrada. Guarde o comprovante!",
+                    "2. Transporte: Não tente ir de carro de passeio (fWD) até a vila. Vai atolar. Deixe no estacionamento em Jijoca.",
+                    "3. Dinheiro: Tem caixa eletrônico e lotérica, mas o sinal cai. Leve dinheiro vivo, alguns passeios de buggy preferem.",
+                    "4. Calçados: Chinelo é o único calçado necessário. Tênis só se for correr.",
+                    "5. Malas: Evite malas de rodinha. Arrastar rodinha na areia fofa por 500 metros até a pousada é um inferno. Use mochila.",
+                    "6. Internet: Wi-Fi das pousadas é ok, 4G oscila.",
+                    "7. Voltagem: 220V.",
+                    "8. Saúde: Tem uma UPA 24h (Unidade de Pronto Atendimento), mas casos graves vão para Sobral ou Fortaleza (longe).",
+                    "9. Protetor Solar: O vento engana, mas o sol queima muito.",
+                    "10. Buggy: Só contrate credenciados. Acidentes nas dunas são perigosos."
+                ],
+
+                antes_de_ir: [
+                    "1. Pague a Taxa: Gere o boleto da Taxa de Turismo Sustentável online.",
+                    "2. Transfer: Se chegar por Fortaleza, são 4h a 5h de viagem. Contrate um 4x4 compartilhado ou ônibus 'Fretcar'.",
+                    "3. Mochila: Troque a mala rígida por mochila ou mala de mão fácil de carregar.",
+                    "4. Óculos de Sol: O reflexo na areia branca incomoda.",
+                    "5. Repelente: Tem mosquito, principalmente perto do mangue.",
+                    "6. Roupas: Leve roupas leves e de secagem rápida. Nada de roupa social.",
+                    "7. Dinheiro: Saque antes de ir para garantir.",
+                    "8. Hidratação: O clima seco e vento desidratam.",
+                    "9. Lua: Tente ir na lua cheia ou nova (marés influenciam a Pedra Furada e beleza das lagoas).",
+                    "10. Baterias: Leve powerbank, os passeios duram o dia todo."
+                ],
+
+                numeros: [
+                    "1. 190 (Polícia Militar).",
+                    "2. UPA Jericoacoara: (88) 98126-7756 (Atendimento emergencial na vila).",
+                    "3. (88) 3669-1133 (Prefeitura Jijoca).",
+                    "4. 193 (Bombeiros - base mais próxima em Marco/CE).",
+                    "5. Aeroporto de Jeri (JJD): Em Cruz, a 30km da vila.",
+                    "6. Aeroporto de Fortaleza (FOR): A 300km.",
+                    "7. Fretcar (Ônibus): Empresa oficial que faz o trajeto Fortaleza-Jeri.",
+                    "8. Associação dos Bugueiros: Peça indicação na pousada.",
+                    "9. Delegacia de Polícia Civil: Em Jijoca.",
+                    "10. Farmácias: Existem várias na rua principal."
+                ],
+
+                riscos: [
+                    "1. Insolação: O vento mascara o calor. Use boné.",
+                    "2. Atolamento: Turistas que tentam entrar de carro na areia sempre atolam e pagam caro para rebocar.",
+                    "3. Acidentes de Buggy: Peça para o motorista ir 'sem emoção' se estiver inseguro. Dunas cortadas são perigosas.",
+                    "4. Afogamento: Cuidado nas lagoas fundas se não souber nadar (use colete).",
+                    "5. Arraias: Na praia da Malhada, ande arrastando o pé para não pisar em arraias na areia.",
+                    "6. Bicho de Pé: Como se anda descalço e tem animais (jumentos/cavalos), pode acontecer. Use chinelo.",
+                    "7. Furto: Na praia ou na duna do pôr do sol, cuide do celular.",
+                    "8. Kitesurf: Cuidado ao nadar em áreas de kite. As linhas cortam e a prancha machuca.",
+                    "9. Balada: Cuidado com bebidas batizadas ('Boa Noite Cinderela') em festas aglomeradas.",
+                    "10. Vidro na Areia: Atenção onde pisa na volta das festas."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Essencial Jeri (3 Dias)",
+                        texto: [
+                            "Dia 1: Chegada, Check-in e Duna do Pôr do Sol.",
+                            "Dia 2: Passeio de Buggy Lado Leste (Pedra Furada, Árvore da Preguiça, Lagoa do Paraíso).",
+                            "Dia 3: Manhã na Praia da Malhada e retorno."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Lagoas e Dunas (5 Dias)",
+                        texto: [
+                            "Dias 1-2: Siga o roteiro curto.",
+                            "Dia 3: Passeio de Buggy Lado Oeste (Cavalos Marinhos, Mangue Seco, Tatajuba).",
+                            "Dia 4: Dia relax no Beach Club Alchymist (Lagoa do Paraíso) ou Buraco Azul.",
+                            "Dia 5: Caminhada até a Pedra Furada pela manhã (maré baixa) e compras."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Vibe Completa (7 Dias)",
+                        texto: [
+                            "Dias 1-5: Siga o roteiro médio.",
+                            "Dia 6: Aula de Kitesurf ou Windsurf no Preá.",
+                            "Dia 7: Dia livre para curtir a vila, massagem e açaí."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/br/jericoacoara.pt-br.html", 
+                    passeio: "https://www.jijocadejericoacoara.ce.gov.br/", // Site para taxa de turismo
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
+            {
+                name: "Fernando de Noronha",
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/EDUARDO_MURUCI_-_BAIA_DOS_PORCOS-%28recorte%29.jpg/960px-EDUARDO_MURUCI_-_BAIA_DOS_PORCOS-%28recorte%29.jpg",
+                tags: ["Paraíso", "Mergulho", "Exclusivo"],
+                mapa: "https://goo.gl/maps/noronha",
+                clima: "Tropical. Calor o ano todo. Chuvas de Abril a Julho. Mar calmo (Set-Out). Ondas/Surf (Dez-Mar).",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Setembro e Outubro (Mar piscina, melhor visibilidade). Evite Abril a Junho se não gosta de chuva.",
+                    ideal_para: [
+                        "Mergulhadores (Um dos melhores pontos do mundo)",
+                        "Amantes de Natureza (Santuário de vida marinha)",
+                        "Casais em Lua de Mel (Pousadas charmosas e exclusividade)",
+                        "Surfistas (Temporada de 'Swell' no verão)"
+                    ],
+                    nao_ideal_para: [
+                        "Orçamento Apertado (É o destino mais caro do Brasil)",
+                        "Quem busca Resort All-Inclusive (O luxo aqui é rústico e pé no chão)",
+                        "Quem tem dificuldade de locomoção (Trilhas em pedra, escadarias íngremes)",
+                        "Quem não gosta de regras (A ilha tem muitas proibições ambientais)"
+                    ],
+                    perfis: [
+                        { icone: "ri-anchor-fill", nome: "Mergulho" },
+                        { icone: "ri-money-dollar-circle-fill", nome: "Luxo Caro" },
+                        { icone: "ri-leaf-fill", nome: "Ecológico" },
+                        { icone: "ri-heart-fill", nome: "Romântico" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Baía do Sancho: Eleita várias vezes a praia mais bonita do mundo. Acesso por escada vertical na fenda da rocha ou barco.",
+                    "2. Baía dos Porcos: A vista clássica do Morro Dois Irmãos. Ótima para snorkel, mas não tem areia para deitar.",
+                    "3. Praia do Sueste: Onde se nada com tartarugas gigantes e tubarões no raso (obrigatório colete).",
+                    "4. Praia do Leão: A maior concentração de desova de tartarugas. Mar agitado, lindo visual.",
+                    "5. Buraco do Galego: Piscina natural nas pedras da Praia do Cachorro (famosa no Instagram).",
+                    "6. Praia da Conceição: O 'point' do pôr do sol, futevôlei e barzinhos pé na areia.",
+                    "7. Mirante do Boldró: O local clássico para ver o pôr do sol com o Morro Dois Irmãos ao fundo.",
+                    "8. Praia do Atalaia: Um berçário marinho. Acesso restrito e controlado (precisa agendar e não pode usar protetor solar).",
+                    "9. Cacimba do Padre: Praia das ondas gigantes (Hawaii brasileiro) e base do Dois Irmãos.",
+                    "10. Capela de São Pedro: Vista linda do porto e local dos casamentos famosos."
+                ],
+
+                gastronomia: [
+                    "1. Bolinho de Tubarão (Tubalhau): No Museu do Tubarão. Feito com carne de tubarão legalizada (ou cação).",
+                    "2. Peixe na Folha de Bananeira: Clássico das pousadas, geralmente peixe Meca ou Cavala.",
+                    "3. Festival Gastronômico do Zé Maria: O buffet mais famoso da ilha (e caríssimo), acontece às quartas e sábados.",
+                    "4. Mergulhão: Restaurante com a melhor vista para o Pico e comida sofisticada.",
+                    "5. Açaí e Tapioca: Lanches mais acessíveis no centrinho da Vila dos Remédios.",
+                    "6. Frutos do Mar Frescos: Tudo é pescado ali. Lagosta e polvo são excelentes.",
+                    "7. Varanda: Restaurante premiado, o 'favorito' de quem visita sempre.",
+                    "8. Cacimba Bistrô: Famoso pelo Pastel de Lagosta.",
+                    "9. Xica da Silva: Comida brasileira reconfortante e muito elogiada.",
+                    "10. Bar do Meio: O bar mais badalado para drinks no pôr do sol (entre a Conceição e o Meio)."
+                ],
+
+                religiao: [
+                    "1. Igreja de Nossa Senhora dos Remédios: Patrimônio histórico do século XVIII, domina a paisagem da vila.",
+                    "2. Capela de São Pedro dos Pescadores: Pequena, branca e azul, no alto do porto.",
+                    "3. Natureza Divina: A 'religião' local é a preservação. Desrespeitar a natureza é sacrilégio.",
+                    "4. Lendas: A lenda da 'Alamoa', uma mulher fantasma que seduzia os presos (Noronha já foi presídio).",
+                    "5. Festas de Santo: A festa de São Pedro (junho) tem procissão marítima (Barqueata).",
+                    "6. Espiritualidade: Muitos buscam a ilha para reconexão e retiros de yoga.",
+                    "7. Iemanjá: Forte culto nas viradas de ano.",
+                    "8. Cruzeiro: Cruz de madeira na frente da igreja matriz.",
+                    "9. Forte dos Remédios: Local carregado de história e sofrimento dos antigos presos, hoje ponto turístico.",
+                    "10. Simplicidade: A comunidade local é muito unida e de fé simples."
+                ],
+
+                curiosidades: [
+                    "1. DUAS Taxas: Você paga para entrar na ilha (TPA - Governo) E para entrar nas praias (PARNAMAR - EcoNoronha). Prepare o bolso.",
+                    "2. Fuso Horário: Noronha tem fuso próprio (+1h em relação a Brasília).",
+                    "3. Presídio: Foi colônia penal até 1942. O presídio explodiu misteriosamente (dizem que foi para esconder condições desumanas).",
+                    "4. Parto Proibido: Grávidas não podem dar à luz na ilha (não tem estrutura de risco). Aos 7 meses, são enviadas para Recife.",
+                    "5. Tubarões: Tem muito tubarão (Lixa e Limão). Ataques são raríssimos, mas não tente pegar neles.",
+                    "6. Água: Não tem nascente doce suficiente. A água da torneira vem de dessalinização e é cara/escassa.",
+                    "7. Carros: É proibido levar carro de fora. A frota é controlada. O Buggy é o rei.",
+                    "8. Internet: É horrível. Mesmo o 4G é lento. Wi-Fi de pousada mal carrega foto.",
+                    "9. Menor BR: A ilha abriga a BR-363, a segunda menor rodovia federal do Brasil (7km).",
+                    "10. Visitantes Limitados: Há um limite de pessoas que podem dormir na ilha por noite."
+                ],
+
+                eventos_estacoes: [
+                    "1. Réveillon: Um dos mais famosos do país (festa do Zé Maria). Ingressos custam milhares de reais.",
+                    "2. Swell (Dez-Mar): Temporada de ondas grandes, campeonatos de surf e ilha cheia de surfistas.",
+                    "3. Maratona de Noronha (Dezembro): Corrida de rua no paraíso.",
+                    "4. Baixa Temporada (Abr-Jun): Preços caem um pouco por causa da chuva.",
+                    "5. Festival Gastronômico (Agosto): Evento na Pousada Zé Maria.",
+                    "6. Tartarugas (Dez-Mai): Temporada de desova (algumas praias fecham à noite).",
+                    "7. Barqueata de São Pedro (29 Jun): Procissão de barcos.",
+                    "8. Aniversário da Ilha (Agosto): Shows na praça.",
+                    "9. Lua Cheia: Os luaus espontâneos na Praia da Conceição.",
+                    "10. Refestival: Festival de música sustentável."
+                ],
+
+                info_gerais: [
+                    "1. PAGUE ANTES: Pague a TPA (Taxa de Preservação) online antes de ir. A fila no aeroporto para quem não pagou é gigante.",
+                    "2. Ingresso do Parque: Compre o ingresso da EcoNoronha (válido por 10 dias). Sem ele, você não entra no Sancho, Sueste ou Leão.",
+                    "3. Buggy: Alugar buggy é legal, mas caro (~R$ 500/dia + gasolina a R$ 10/litro). O ônibus passa em toda a BR e custa R$ 5.",
+                    "4. Colete Salva-Vidas: Obrigatório na Praia do Sueste (pode alugar lá).",
+                    "5. Plástico Zero: É proibido entrar na ilha com plásticos descartáveis (copos, garrafinhas de água mineral < 500ml). Leve seu squeeze.",
+                    "6. Água: Compre galão de 5L no mercado e encha sua garrafa. Comprar garrafinha toda hora quebra o orçamento.",
+                    "7. Mergulho: Se nunca mergulhou, faça o 'Batismo'. A visibilidade chega a 50 metros.",
+                    "8. Trilha Atalaia: Tem que agendar no ICMBio presencialmente. As vagas somem em minutos.",
+                    "9. Taxis: Têm preço tabelado. Peça a tabela na pousada.",
+                    "10. Hospital: Só tem o Hospital São Lucas (básico). Casos graves exigem salvamento aéreo (seguro é vital)."
+                ],
+
+                antes_de_ir: [
+                    "1. TPA Online: Entre no site oficial de Noronha e pague a taxa. Imprima o boleto/QR Code.",
+                    "2. Carteirinha Parque: Compre no site da PARNAMAR/EcoNoronha. Você retira o cartão físico lá ou usa o app.",
+                    "3. Snorkel Próprio: Alugar custa R$ 20-40 por dia. Levar o seu (máscara, snorkel e nadadeira) economiza muito.",
+                    "4. Dinheiro Vivo: O sinal de cartão cai. Leve espécie para emergências.",
+                    "5. Protetor Solar: Leve muito. Lá custa o dobro.",
+                    "6. Remédios: A farmácia da ilha é cara e limitada.",
+                    "7. Tênis: Para a trilha do Sancho e Atalaia.",
+                    "8. CNH: Se for alugar buggy, é obrigatória.",
+                    "9. GoPro: O lugar mais fotogênico embaixo d'água do Brasil.",
+                    "10. Reserva de Jantar: Os restaurantes famosos (Mergulhão, Cacimba) lotam. Reserve dias antes."
+                ],
+
+                numeros: [
+                    "1. (81) 3619-1352 (Hospital São Lucas).",
+                    "2. 190 (Polícia Militar).",
+                    "3. (81) 3619-0810 (Delegacia).",
+                    "4. (81) 3619-1171 (Aeroporto).",
+                    "5. ICMBio Noronha: (81) 3619-1174.",
+                    "6. Associação de Bugueiros: (81) 3619-1142.",
+                    "7. Conselho Distrital (Administração): (81) 3619-0900.",
+                    "8. Porto de Santo Antônio: (81) 3619-1313.",
+                    "9. Taxi Noronha: (81) 3619-1314.",
+                    "10. Centro de Visitantes (ICMBio): Na Vila do Boldró."
+                ],
+
+                riscos: [
+                    "1. Afogamento: O mar muda rápido. Respeite as bandeiras vermelhas, especialmente no Leão e Cacimba.",
+                    "2. Pedras: Na Baía dos Porcos, as pedras vulcânicas cortam o pé. Use sapatilha.",
+                    "3. Multas Ambientais: Tocar em tartaruga, pisar em coral ou alimentar animais dá multa federal pesada.",
+                    "4. Mabuya: Um lagarto (tipo calango) invasor que está em todo lugar. Eles entram na bolsa e comem sua comida. Não deixe a bolsa aberta.",
+                    "5. Escadas do Sancho: Não é para quem tem vertigem ou problemas cardíacos. É uma fenda estreita.",
+                    "6. Desidratação: O sol é muito forte e venta muito.",
+                    "7. Acidente de Buggy: Muitos turistas inexperientes capotam ou batem. Dirija devagar.",
+                    "8. Preço Surpresa: Pergunte o preço antes de tudo. 'Preço de ilha' assusta.",
+                    "9. Golpes de Acomodação: Reserve em sites confiáveis. Tem gente vendendo casa que não existe.",
+                    "10. Tubarões: No Sueste e Porto é comum ver. Não tente cercar o animal para foto."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "O Essencial (3 Dias)",
+                        texto: [
+                            "Dia 1: Ilha Tour (passeio de dia inteiro de buggy para conhecer tudo). Pôr do sol no Boldró.",
+                            "Dia 2: Manhã no Sancho (a mais bonita) e Baía dos Porcos. Tarde no Sueste (snorkel).",
+                            "Dia 3: Passeio de Barco (ver golfinhos) e Praia da Conceição."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Mergulho e Trilhas (5 Dias)",
+                        texto: [
+                            "Dias 1-3: Siga o roteiro curto.",
+                            "Dia 4: Mergulho de cilindro (Porto) ou batismo. Tarde na Cacimba do Padre.",
+                            "Dia 5: Trilha do Atalaia (se conseguir vaga) ou Buraco do Galego."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Vida de Ilhéu (7 Dias)",
+                        texto: [
+                            "Dias 1-5: Siga o roteiro médio.",
+                            "Dia 6: Praia do Leão (passar o dia, levar lanche).",
+                            "Dia 7: Manhã livre para compras e almoço no Museu do Tubarão."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/br/fernando-de-noronha.pt-br.html", 
+                    passeio: "https://www.parnanoronha.com.br/", // Site oficial dos ingressos
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
+            
+          ],
+          "Centro Oeste": [
+               {
+                name: "Brasília",
+                // FOTO: Congresso Nacional (Wikimedia - Link Estável)
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Congresso_Nacional_do_Brasil_em_noite_de_lua_cheia.jpg/960px-Congresso_Nacional_do_Brasil_em_noite_de_lua_cheia.jpg",
+                tags: ["Arquitetura", "História", "Política"],
+                mapa: "https://goo.gl/maps/brasilia",
+                clima: "Tropical de Altitude. Seca extrema no inverno (Jun-Set) e chuvas no verão.",
+                // Adicione dentro do objeto de Brasília
+veredicto: {
+    melhor_epoca: "Maio a Setembro (Época da Seca). O céu é o mais bonito e os Ipês florescem (Ago/Set), mas a umidade é de deserto. Evite o verão se quiser fugir da chuva.",
+    ideal_para: [
+        "Fãs de arquitetura modernista e design (O maior museu a céu aberto de Niemeyer)",
+        "Turismo Cívico e Histórico (Congresso, Planalto, Praça dos Três Poderes)",
+        "Quem busca pores do sol espetaculares (Pontão do Lago Sul ou Ermida)",
+        "Místicos e esotéricos (Templo da Boa Vontade, proximidade com Chapada)"
+    ],
+    nao_ideal_para: [
+        "Quem gosta de fazer tudo a pé (a cidade foi feita para carros, as escalas são monumentais)",
+        "Quem busca vida noturna de rua aglomerada estilo Lapa/Vila Madalena",
+        "Pessoas que sofrem muito com tempo seco (leve soro fisiológico)"
+    ],
+    perfis: [
+        { icone: "ri-building-2-fill", nome: "Arquit." },
+        { icone: "ri-government-fill", nome: "Cívico" },
+        { icone: "ri-camera-lens-fill", nome: "Foto" },
+        { icone: "ri-leaf-fill", nome: "Zen" }
+    ]
+},
+                // TOP 10 PONTOS TURÍSTICOS
+                pontos_turisticos: [
+                    "1. Praça dos Três Poderes: O centro das decisões do país. Veja o Congresso, o Planalto e o STF de perto.",
+                    "2. Catedral Metropolitana: Obra-prima de Niemeyer. Por fora parece pequena, por dentro é grandiosa e colorida.",
+                    "3. Pontão do Lago Sul: O 'mar' de Brasília. Calçadão na beira do lago, cheio de restaurantes e clima de praia.",
+                    "4. Ponte JK: Uma das pontes mais bonitas do mundo, premiada arquitetonicamente. Linda iluminada à noite.",
+                    "5. Torre de TV: Suba no mirante para ver o formato de 'avião' da cidade. Tem uma feira de artesanato ótima embaixo.",
+                    "6. Parque da Cidade: Um dos maiores parques urbanos do mundo (maior que o Central Park). Perfeito para bicicletas.",
+                    "7. Memorial JK: O museu onde descansa Juscelino Kubitschek. Arquitetura e história emocionantes.",
+                    "8. Palácio da Alvorada: Residência oficial do presidente. É possível ver as emas no gramado e a arquitetura flutuante.",
+                    "9. Santuário Dom Bosco: A igreja 'azul'. Composta por milhares de vitrais em 12 tons de azul. Hipnotizante.",
+                    "10. Banco Central (Museu de Valores): Veja a maior pepita de ouro do Brasil e entre numa caixa-forte gigante."
+                ],
+
+                // TOP 10 GASTRONOMIA
+                gastronomia: [
+                    "1. Pizza Dom Bosco: Patrimônio da cidade. Fatia dupla (queijo e molho) que se come dobrada no guardanapo.",
+                    "2. Pastel da Viçosa: Eleito várias vezes o melhor pastel de feira do Brasil (na Rodoviária ou feiras).",
+                    "3. Restaurantes do Pontão: Gastronomia variada com vista para o Lago Paranoá (ideal para pôr do sol).",
+                    "4. Frutas do Cerrado: Sorvetes de Cagaita, Pequi, Mangaba e Baru. Sabores que você só acha aqui.",
+                    "5. Arroz com Pequi: Prato goiano muito amado na capital (atenção: não morda o caroço do pequi!).",
+                    "6. Alta Gastronomia: A cidade tem chefs renomados e restaurantes internacionais na Asa Sul e Norte.",
+                    "7. Cachorro-Quente da 105 Sul: Os 'dogueiros' de Brasília são famosos pelas pastas de alho e molhos.",
+                    "8. Feira da Torre: Comida típica de todo o Brasil (Acarajé, Pamonha, Tacacá) num só lugar.",
+                    "9. Cafés Especiais: Brasília vive um boom de cafeterias artesanais de altíssimo nível.",
+                    "10. Pão de Queijo do Mercadinho: Tradicional nas padarias das quadras residenciais."
+                ],
+
+                // TOP 10 CURIOSIDADES
+                curiosidades: [
+                    "1. Formato de Avião: A cidade foi desenhada no formato de um avião (ou borboleta). Asa Sul e Asa Norte.",
+                    "2. Sem Esquinas: Brasília quase não tem esquinas tradicionais, e sim curvas e 'tesourinhas' (retornos).",
+                    "3. 1000 Dias: A cidade foi construída do zero no meio do cerrado em apenas 1000 dias.",
+                    "4. Lago Artificial: O Lago Paranoá foi criado para aumentar a umidade. Tem o tamanho de uma baía.",
+                    "5. Endereços Loucos: SQS 302, CLN 405... Parece código, mas é um sistema de coordenadas lógico.",
+                    "6. Misticismo: Dizem que a cidade foi construída sobre uma grande jazida de cristais, atraindo místicos.",
+                    "7. Patrimônio Cultural: É a maior área tombada do mundo pela UNESCO como Patrimônio Cultural da Humanidade.",
+                    "8. Rock Brasília: Nos anos 80, foi o berço do rock nacional (Legião Urbana, Capital Inicial).",
+                    "9. Céu de Brasília: Considerado o 'mar' do brasiliense. O horizonte é infinito e o pôr do sol, espetacular.",
+                    "10. Semáforos: Nas tesourinhas e eixões não há semáforos, o trânsito flui (ou deveria fluir) direto."
+                ],
+
+                // TOP 10 CULTURA & RELIGIÃO
+                religiao: [
+                    "1. Templo da LBV: Uma pirâmide de 7 faces aberta à visitação, com uma sala de meditação egípcia.",
+                    "2. Catedral Metropolitana: Ecumênica e aberta. A entrada é por um túnel escuro para sair na luz da nave.",
+                    "3. Vale do Amanhecer: Uma comunidade religiosa esotérica famosa mundialmente pelas roupas e rituais coloridos.",
+                    "4. Santuário Dom Bosco: Impressionante jogo de luzes azuis. Padroeiro da cidade (ele sonhou com Brasília em 1883).",
+                    "5. Igrejinha (N. Sra. de Fátima): A primeira igreja construída, desenhada por Niemeyer com azulejos de Athos Bulcão.",
+                    "6. Templo Shin Budista: Um pedaço do Japão no cerrado, com arquitetura tradicional e feiras anuais.",
+                    "7. Mesquita de Brasília: Centro Islâmico na Asa Norte, arquitetura árabe clássica.",
+                    "8. Ermida Dom Bosco: Uma capela à beira do lago com uma das vistas mais bonitas do pôr do sol.",
+                    "9. Misticismo: A cidade atrai muitos grupos espiritualistas, ufólogos e esotéricos devido à 'energia'.",
+                    "10. Diversidade: Pessoas de todo o Brasil vivem aqui, criando uma mistura religiosa única."
+                ],
+
+                // TOP 10 EVENTOS E ESTAÇÕES
+                eventos_estacoes: [
+                    "1. Seca (Jun-Set): Umidade desce a 10% (nível deserto). O céu fica azulão, mas o nariz sangra. Hidrate-se!",
+                    "2. Florada dos Ipês: Entre julho e setembro, a cidade fica colorida (Roxo, Amarelo, Branco e Rosa). É lindo.",
+                    "3. 7 de Setembro: O desfile da Independência na Esplanada é o maior evento cívico do país.",
+                    "4. Na Praia (Jul-Set): Um festival gigante que cria uma praia artificial com shows nacionais à beira do lago.",
+                    "5. Chuvas (Out-Abr): Chove forte, as áreas verdes explodem de vida e o calor diminui.",
+                    "6. Natal Monumental: A Torre de TV e a Esplanada ganham iluminação especial.",
+                    "7. Festival de Cinema: Um dos mais antigos e respeitados do cinema brasileiro.",
+                    "8. Porão do Rock: Festival de música pesado que mantém viva a tradição roqueira da cidade.",
+                    "9. Aniversário de Brasília (21 de Abril): Shows e festas na Esplanada dos Ministérios.",
+                    "10. Eixão do Lazer: Aos domingos e feriados, a avenida principal fecha para carros e vira parque."
+                ],
+
+                // TOP 10 INFO GERAIS
+                info_gerais: [
+                    "1. Voltagem: 220V. Atenção, pois a maioria do Brasil é 110V. Aparelhos podem queimar!",
+                    "2. DDD: 61.",
+                    "3. Candango: Nome dado aos pioneiros que construíram a cidade (e usado para quem nasce lá).",
+                    "4. Aeroporto: BSB (Presidente JK). Um dos maiores e mais modernos hubs do país.",
+                    "5. Transporte: Dependente de carro. O metrô é limitado (só uma linha em Y). Uber é essencial.",
+                    "6. Setores: Tudo é setorizado. Setor de Hotéis, Setor de Clubes, Setor de Embaixadas, etc.",
+                    "7. Segurança: O Plano Piloto (centro) é seguro, mas evite áreas desertas à noite.",
+                    "8. Custo de Vida: Alto. Alimentação e hospedagem costumam ser mais caros que a média.",
+                    "9. Clima: O 'Deserto' brasileiro. Traga soro fisiológico e muito hidratante labial.",
+                    "10. Fim de Semana: A cidade esvazia politicamente e os locais vão para o Lago ou parques."
+                ],
+
+                // TOP 10 DICAS ANTES DE IR
+                antes_de_ir: [
+                    "1. Beba Água: A secura não é brincadeira. Você vai sentir sede e pele seca em 1 hora.",
+                    "2. Hidratante: Traga manteiga de cacau e hidratante corporal. O ar condicionado dos hotéis piora a secura.",
+                    "3. Fim de Semana: A cidade é ótima no fim de semana (sem trânsito político e hotéis mais baratos).",
+                    "4. Roupa: De dia é quente, à noite venta frio (no inverno). Traga um casaco leve.",
+                    "5. Visita ao Congresso: É gratuita, mas precisa agendar no site deles. Vale muito a pena.",
+                    "6. Pôr do Sol: Reserve um fim de tarde para o Pontão ou Ermida Dom Bosco. É sagrado.",
+                    "7. Aluguel de Carro: Facilita muito. As distâncias são longas e as avenidas largas.",
+                    "8. Fique no Plano: Hospede-se nos Setores Hoteleiros (SHN ou SHS) para ficar perto de tudo.",
+                    "9. Tesourinhas: Se dirigir, cuidado nos retornos (tesourinhas). A preferência é de quem está na tesourinha!",
+                    "10. Documentos: Para entrar nos prédios públicos (Congresso, Planalto), bermuda e chinelo são proibidos."
+                ],
+                // --- NOVO: NÚMEROS IMPORTANTES (BRASÍLIA) ---
+                numeros: [
+                    "1. 190 (Polícia Militar): Emergência e segurança nas superquadras e pontos turísticos.",
+                    "2. (61) 3207-4856 (DEATUR): Delegacia de Atendimento ao Turista (fica no Aeroporto JK).",
+                    "3. 192 (SAMU): Urgências médicas e ambulância.",
+                    "4. 193 (Bombeiros): Incêndios, acidentes de trânsito e resgates.",
+                    "5. (61) 3364-9000 (Aeroporto JK): Informações de voos internacionais/nacionais e achados e perdidos.",
+                    "6. 156 (Governo do DF): Central de atendimento para transporte, limpeza e serviços públicos.",
+                    "7. (61) 3550-8900 (Hospital de Base): O maior hospital público de emergência e trauma do Centro-Oeste.",
+                    "8. (61) 3234-2185 (Rodoviária Interestadual): Ônibus para Goiânia e outros estados (fica na saída da cidade).",
+                    "9. (61) 3353-7373 (Metrô DF): Informações sobre as linhas Verde e Laranja.",
+                    "10. 191 (Polícia Rodoviária Federal): Emergências nas BRs que ligam o DF ao entorno (saídas da cidade)."
+                ],
+                // --- NOVO: RISCOS E ERROS (BRASÍLIA) ---
+                riscos: [
+                    "1. A Seca do Deserto: Entre agosto e setembro, a umidade cai para 10%. O nariz sangra e a pele racha. Tenha sempre soro fisiológico e hidratante na mochila.",
+                    "2. Ilusão da Esplanada: Não tente andar do Congresso até a Torre de TV a pé achando que é perto. São quilômetros de sol na cabeça sem sombra. Use Uber ou ônibus.",
+                    "3. Atravessar o Eixão: NUNCA tente atravessar as pistas largas do Eixão correndo. Os carros passam a 80km/h e não param. Use as passagens subterrâneas (mas com cuidado à noite).",
+                    "4. Setor Comercial Sul à Noite: De dia é movimentado, à noite vira local de tráfico e prostituição. Evite transitar a pé ali ou perto da Rodoviária do Plano Piloto após as 19h.",
+                    "5. As Tesourinhas: Se alugar carro, cuidado. As entradas e saídas (tesourinhas) confundem o GPS e motoristas novatos. Se errar uma, vai andar 5km para voltar.",
+                    "6. Capivaras e Carrapatos: Na orla do Lago Paranoá, não chegue muito perto das capivaras e evite sentar na grama alta devido ao risco de carrapatos (Febre Maculosa).",
+                    "7. Cidade Fantasma no Fim de Semana: Brasília setoriza tudo. Restaurantes em áreas comerciais ou bancárias podem fechar no fim de semana. Cheque o horário antes de ir.",
+                    "8. Norte x Sul: Entenda a lógica (Asa Sul e Asa Norte). Se você confundir SQS (Sul) com SQN (Norte), vai parar a 15km de distância do seu destino.",
+                    "9. Manifestações na Esplanada: Em dias de protesto político, a Esplanada dos Ministérios é fechada e o trânsito para. Fique de olho no noticiário se for visitar o Congresso.",
+                    "10. Amplitude Térmica: No inverno, faz muito calor de dia e 10ºC à noite. Se sair de manhã para voltar só à noite, leve casaco ou vai passar frio."
+                ],
+                // --- NOVO: ROTEIRO AUTOMÁTICO (BRASÍLIA) ---
+                roteiros: {
+                    "curto": {
+                        titulo: "Roteiro Express (1 a 2 Dias)",
+                        texto: [
+                            "Dia 1 (Cívico): Manhã na Catedral e Esplanada. Visita guiada ao Congresso. Almoço no Pontão do Lago Sul. Pôr do sol na Ermida Dom Bosco.",
+                            "Dia 2 (Juscelino): Memorial JK pela manhã. Subida na Torre de TV (vista). Tarde: Igrejinha da 308 Sul e Quadra Modelo (para entender como vivem os locais)."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Roteiro Essencial (3 a 5 Dias)",
+                        texto: [
+                            "Dias 1 e 2: Siga o Roteiro Express acima.",
+                            "Dia 3 (Arquitetura e Arte): Palácio do Itamaraty (agende!) e CCBB. Almoço na Asa Sul (gastronomia).",
+                            "Dia 4 (Natureza e Místico): Templo da LBV e Parque da Cidade. Tarde relax no Calçadão da Asa Norte (alugue um caiaque).",
+                            "Dia 5 (Lado B): Santuário Dom Bosco (o azul) e Feira da Torre de TV para comprar pastel e artesanato."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Roteiro Completo (7+ Dias)",
+                        texto: [
+                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
+                            "Dia 6 (Cachoeira): Bate-volta para Pirenópolis-GO (cidade colonial linda com cachoeiras) ou Salto do Itiquira (uma queda d'água gigante perto de Formosa).",
+                            "Dia 7 (Chapada): Se tiver disposição, estique até a Chapada dos Veadeiros (Alto Paraíso) e fique uma noite lá.",
+                            "Dia 8 (Despedida): Café da manhã na Torre de TV Digital (Flor do Cerrado) e últimas compras."
+                        ]
+                    }
+                },
+                // SEUS LINKS DE AFILIADO
+                links: {
+                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-631243&aid=304142", 
+                    passeio: "https://www.civitatis.com/br/brasilia/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                }
+            },
+            {
+    name: "Bonito",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Abismo_Anhumas%2C_Bonito%2C_MS.JPG/960px-Abismo_Anhumas%2C_Bonito%2C_MS.JPG",
+    tags: ["Ecoturismo", "Flutuação", "Aventura"],
+    mapa: "https://goo.gl/maps/bonito",
+    clima: "Tropical. Verão chuvoso (cachoeiras cheias) e Inverno seco (águas cristalinas).",
+
+    // === DADOS DO VEREDICTO ===
+    veredicto: {
+        melhor_epoca: "Maio a Agosto (Inverno/Seca). É quando as águas estão mais cristalinas e os peixes mais visíveis. Dezembro a Março chove e a água pode turvar, mas as cachoeiras estão cheias.",
+        ideal_para: [
+            "Amantes de Ecoturismo (é o melhor destino organizado do Brasil)",
+            "Famílias com crianças (as flutuações são calmas e seguras)",
+            "Mergulhadores (Abismo Anhumas e Lagoa Misteriosa são lendários)",
+            "Quem busca conexão profunda com a natureza e animais"
+        ],
+        nao_ideal_para: [
+            "Quem viaja sem planejamento (é OBRIGATÓRIO reservar passeios com antecedência pelo sistema de Voucher Único)",
+            "Orçamentos muito apertados (os passeios são tabelados e caros)",
+            "Quem busca vida noturna agitada (a cidade dorme cedo para acordar cedo)"
+        ],
+        perfis: [
+            { icone: "ri-drop-fill", nome: "Flutuação" },
+            { icone: "ri-plant-fill", nome: "Natureza" },
+            { icone: "ri-bear-smile-fill", nome: "Animais" },
+            { icone: "ri-flashlight-fill", nome: "Cavernas" }
+        ]
+    },
+    // =================================
+
+    pontos_turisticos: [
+        "1. Gruta do Lago Azul: O cartão-postal. Uma caverna imensa com um lago azul profundo surreal.",
+        "2. Rio da Prata: Uma das melhores flutuações. Parece que você está dentro de um aquário gigante.",
+        "3. Rio Sucuri: Considerado uma das águas mais cristalinas do planeta. Flutuação leve e relaxante.",
+        "4. Buraco das Araras: Uma dolina gigantesca onde dezenas de araras vermelhas vivem e voam. Espetáculo visual.",
+        "5. Abismo Anhumas: Aventura radical. Rapel de 72m para entrar numa caverna com lago subterrâneo.",
+        "6. Boca da Onça: A cachoeira mais alta do estado (156m) e trilhas incríveis.",
+        "7. Balneário Municipal: O 'piscinão' natural da cidade. Cheio de peixes e entrada mais acessível.",
+        "8. Lagoa Misteriosa: Uma caverna inundada de profundidade desconhecida. Água azul turquesa impressionante.",
+        "9. Estância Mimosa: Trilha de cachoeiras com almoço de fazenda típico.",
+        "10. Projeto Jiboia: Palestra educativa e interativa para perder o medo e tirar foto com as cobras."
+    ],
+
+    gastronomia: [
+        "1. Carne de Jacaré: O prato exótico mais famoso. Tem gosto de frango com textura de peixe.",
+        "2. Pacu Assado: Peixe local delicioso, geralmente servido com farofa de banana.",
+        "3. Pintado a Urucum: Filé de peixe com molho de urucum, tomate e creme de leite.",
+        "4. Caldo de Piranha: Dizem ser afrodisíaco e dá muita energia.",
+        "5. Guavira: Fruta símbolo do MS. Prove em sucos, sorvetes ou na caipirinha.",
+        "6. Tereré: A bebida oficial. Mate gelado servido na guampa (chifre).",
+        "7. Chico Balanceado: Doce de banana caramelizada com creme e merengue.",
+        "8. Palmito de Guariroba: Um palmito mais amargo, típico do cerrado.",
+        "9. Arroz Carreteiro: Herança das comitivas pantaneiras.",
+        "10. Pastel de Jacaré: Ótimo petisco para provar a carne sem gastar muito num prato principal."
+    ],
+
+    religiao: [
+        "1. Capela da Sagrada Família: Pequena e charmosa, no centro da cidade.",
+        "2. Natureza Sagrada: A espiritualidade em Bonito é muito ligada à preservação e conexão com a Terra.",
+        "3. Gruta de São Miguel: Embora turística, tem uma energia mística forte nas formações geológicas.",
+        "4. Festa de São Pedro: Padroeiro da cidade (29 de Junho), com a tradicional Cavalgada.",
+        "5. Sincretismo: Presença de tradições indígenas misturadas com o cristianismo rural.",
+        "6. Igrejas Evangélicas: Diversas denominações presentes no centro urbano.",
+        "7. Rituais de Benção: Algumas fazendas antigas ainda mantêm rituais de benção das águas.",
+        "8. Turismo Contemplativo: Muitos visitantes relatam experiências espirituais ao flutuar nos rios silenciosos.",
+        "9. Lendas Locais: Histórias sobre os guardiões das cavernas e rios (folclore).",
+        "10. Cruz do Peão: Monumentos simples em estradas rurais lembrando a fé do homem do campo."
+    ],
+
+    curiosidades: [
+        "1. Voucher Único: O sistema pioneiro no mundo que controla o número de visitantes. Você não entra em nada sem agência.",
+        "2. Calcário: O solo rico em calcário age como um filtro natural, deixando a água transparente.",
+        "3. Proibido Protetor: Em passeios como Rio da Prata e Sucuri, é proibido usar filtro solar e repelente para não contaminar a água.",
+        "4. Capital do Ecoturismo: Já foi eleito inúmeras vezes o melhor destino de ecoturismo do Brasil.",
+        "5. Sem Cloro: As piscinas dos hotéis muitas vezes usam água natural, sem produtos químicos.",
+        "6. Cobras: Sim, existem sucuris nos rios. Elas são tímidas e raramente atacam humanos (respeite a distância).",
+        "7. Gruta Fechada: O Lago Azul já foi aberto para mergulho, hoje é só contemplação para preservação.",
+        "8. Fuso Horário: MS tem 1 hora a menos que Brasília (fique atento!).",
+        "9. Pantanal Vizinho: Muita gente combina Bonito com Pantanal (ficam próximos).",
+        "10. Água da Torneira: É muito calcária (pesada). Evite beber muito se não estiver acostumado."
+    ],
+
+    eventos_estacoes: [
+        "1. Festival de Inverno (Julho): O maior evento cultural, com shows nacionais, teatro e arte na praça.",
+        "2. Verão (Dez-Mar): Chuvas frequentes. Cachoeiras caudalosas, mas rios podem turvar.",
+        "3. Inverno (Mai-Ago): Seca. Melhor visibilidade subaquática e noites frias.",
+        "4. Piracema (Out-Fev): Época de reprodução dos peixes. A pesca é proibida, mas vê-los nos rios é incrível.",
+        "5. Semana Santa: Cidade lotada, preços sobem.",
+        "6. Primavera: Início da floração dos Ipês (amarelos, brancos e roxos).",
+        "7. Festa de São Pedro: Desfiles a cavalo e quermesses em Junho.",
+        "8. Bonito Blues & Jazz: Festival de música que ocorre esporadicamente.",
+        "9. Lobo Guará Bike Adventure: Evento de ciclismo de aventura.",
+        "10. Observação de Aves: Setembro é ótimo para birdwatching."
+    ],
+
+    info_gerais: [
+        "1. Moeda: Real Brasileiro (BRL).",
+        "2. Voltagem: 110V/127V na maioria, mas alguns hotéis usam 220V. Leve adaptador universal.",
+        "3. Tomada: Tipo N (3 pinos).",
+        "4. DDD: 67.",
+        "5. Fuso Horário: -1 hora em relação a Brasília (GMT-4).",
+        "6. Aeroporto: Aeroporto Regional de Bonito (BYO) - voos limitados. Ou Campo Grande (CGR) + 4h de van.",
+        "7. Transporte Local: Não tem Uber (tem apps locais instáveis). Melhor alugar carro ou usar vans compartilhadas.",
+        "8. Internet: 4G funciona bem no centro, mas cai nas fazendas e passeios.",
+        "9. Bancos: Tem Banco do Brasil, Bradesco, Caixa e Sicredi no centro.",
+        "10. Voucher: É lei municipal. Preços são tabelados, não adianta pechinchar na agência."
+    ],
+
+    antes_de_ir: [
+        "1. Reserve Antes: Se não reservar os passeios com semanas de antecedência, você vai ficar sem ir. É sério.",
+        "2. Aeroporto: Decida se vai pagar mais caro pra descer em Bonito ou economizar descendo em Campo Grande (+4h de estrada).",
+        "3. Câmera Subaquática: Leve GoPro ou compre capinha estanque para o celular. As fotos na água são essenciais.",
+        "4. Tênis Obrigatório: Para a Gruta do Lago Azul e trilhas, é proibido ir de chinelo.",
+        "5. Dinheiro Vivo: Leve um pouco. Algumas fazendas afastadas podem ter problema com máquina de cartão.",
+        "6. Não use Protetor: Nas flutuações é proibido. Use camisa UV de manga longa.",
+        "7. Carro Alugado: Dá muito mais liberdade, pois os passeios ficam distantes uns dos outros.",
+        "8. Frio na Água: A água é gelada (20ºC-22ºC) o ano todo. As roupas de neoprene (inclusas) ajudam, mas se prepare.",
+        "9. Vacina: Febre Amarela é recomendada para áreas rurais do Brasil.",
+        "10. Tempo de Deslocamento: Os passeios demoram. Geralmente só dá pra fazer 1 ou 2 por dia."
+    ],
+
+    numeros: [
+        "1. 190 (Polícia Militar).",
+        "2. 193 (Bombeiros).",
+        "3. (67) 3255-1115 (Hospital Darci João Bigaton).",
+        "4. (67) 3255-1850 (Secretaria de Turismo).",
+        "5. 192 (SAMU).",
+        "6. (67) 3255-3000 (Aeroporto de Bonito).",
+        "7. 153 (Guarda Municipal).",
+        "8. (67) 3255-1351 (Delegacia de Polícia Civil).",
+        "9. 0800 647 0911 (Ouvidoria Turismo).",
+        "10. 191 (Polícia Rodoviária Federal)."
+    ],
+
+    riscos: [
+        "1. Preço Alto: Se não planejar, a conta final assusta. É um dos destinos mais caros do Brasil.",
+        "2. Mosquitos: Borrachudos e pernilongos são vorazes nas fazendas. Repelente (onde permitido) é lei.",
+        "3. Chuva x Visibilidade: Se chover muito na noite anterior, alguns passeios de flutuação são cancelados ou a água fica turva.",
+        "4. Animais Silvestres: Não alimente quatis ou macacos. Eles podem morder e transmitir doenças.",
+        "5. Escadaria da Gruta: A descida da Gruta do Lago Azul é íngreme e escorregadia. Não recomendada para idosos com dificuldade.",
+        "6. Hipotermia Leve: Crianças muito magras podem sentir muito frio na água, mesmo com neoprene.",
+        "7. Estradas de Terra: Se alugar carro 1.0, cuidado. Quando chove, o barro é liso.",
+        "8. Desidratação: O calor de MS é seco e intenso. Beba muita água.",
+        "9. Venda de Vagas: Cuidado com gente vendendo 'vaga' na rua. Só agências credenciadas emitem voucher.",
+        "10. Fuso Horário: Perder o horário do passeio porque esqueceu de atrasar o relógio em 1 hora."
+    ],
+
+    roteiros: {
+        "curto": {
+            titulo: "Essencial (3 Dias)",
+            texto: [
+                "Dia 1: Gruta do Lago Azul (manhã) + Balneário Municipal (tarde para relaxar). Noite no centro.",
+                "Dia 2: Flutuação no Rio Sucuri ou Prata (toma o dia quase todo com almoço).",
+                "Dia 3: Bote no Rio Formoso (aventura leve) e compras de lembrancinhas antes de partir."
+            ]
+        },
+        "medio": {
+            titulo: "Aventura Completa (5 Dias)",
+            texto: [
+                "Dias 1 a 3: Siga o roteiro essencial.",
+                "Dia 4: Buraco das Araras (cedinho ou fim de tarde) + Flutuação na Lagoa Misteriosa (se estiver aberta).",
+                "Dia 5: Cachoeiras da Boca da Onça ou Estância Mimosa (dia de trilha e banho)."
+            ]
+        },
+        "longo": {
+            titulo: "Imersão Total (7 Dias)",
+            texto: [
+                "Dias 1 a 5: Siga o roteiro médio.",
+                "Dia 6: Abismo Anhumas (para corajosos) ou Ceita Corê (fazenda com cachoeiras).",
+                "Dia 7: Projeto Jiboia (noite anterior) e manhã livre para curtir a praça e gastronomia local com calma."
+            ]
+        },
+    },
+
+    links: {
+        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-630656", 
+        passeio: "https://www.civitatis.com/br/bonito/", 
+        seguro: "https://www.segurospromo.com.br" 
+    },
+},
+// --- CALDAS NOVAS (BRASIL) ---
+            {
+                name: "Caldas Novas",
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Piscinas_de_ondas.jpg",
+                tags: ["Águas Termais", "Parques Aquáticos", "Família"],
+                mapa: "https://goo.gl/maps/caldasnovas",
+                clima: "Tropical Semiúmido. Quente o ano todo, mas no inverno as noites são frescas (ideal para banho quente).",
+                
+                // === DADOS DO VEREDICTO ===
+                veredicto: {
+                    melhor_epoca: "Maio a Julho (Inverno). A água quente fica deliciosa com o ventinho frio fora. Janeiro e Julho são lotados (férias escolares).",
+                    ideal_para: [
+                        "Famílias com crianças (o paraíso dos toboáguas)",
+                        "Idosos (as águas têm propriedades terapêuticas relaxantes)",
+                        "Quem quer relaxar na piscina o dia todo (vida de resort)",
+                        "Grupos grandes (é muito comum alugar flats para famílias inteiras)"
+                    ],
+                    nao_ideal_para: [
+                        "Quem odeia calor excessivo (no verão a água quente + sol forte pode baixar a pressão)",
+                        "Quem busca vida noturna agitada (o foco aqui é o dia)",
+                        "Quem prefere praias desertas e silêncio (os parques têm som alto e agito)"
+                    ],
+                    perfis: [
+                        { icone: "ri-drop-fill", nome: "Águas Quentes" },
+                        { icone: "ri-group-fill", nome: "Família" },
+                        { icone: "ri-sun-fill", nome: "Verão" },
+                        { icone: "ri-hotel-bed-fill", nome: "Resorts" }
+                    ]
+                },
+                // =================================
+
+                pontos_turisticos: [
+                    "1. Hot Park (Rio Quente): Fica na cidade vizinha (20min), é o maior e melhor parque, com a 'Praia do Cerrado'.",
+                    "2. Water Park: Parque aquático bem no centro da cidade, ótimo para quem não quer pegar estrada.",
+                    "3. DiRoma Acqua Park: Outro gigante, famoso pelos toboáguas radicais e piscina de ondas.",
+                    "4. Jardim Japonês: Um lugar de paz e história, com construções típicas e natureza preservada.",
+                    "5. Parque Estadual da Serra de Caldas: Trilhas e cachoeiras de água FRIA para refrescar e ver a natureza do cerrado.",
+                    "6. Lagoa Quente de Pirapitinga: Onde as águas nascem com temperaturas de até 50ºC (cozinha-se ovo lá!).",
+                    "7. Monumento das Águas: Cartão-postal na entrada da cidade, rende ótimas fotos.",
+                    "8. Feira do Luar: Tradicional feira noturna com comidas típicas e artesanato.",
+                    "9. Náutico Praia Clube: Fica na beira do Lago Corumbá, oferece passeios de escuna e jet-ski.",
+                    "10. Cachaçaria Vale das Águas: Para conhecer a produção local de cachaça de alambique."
+                ],
+
+                gastronomia: [
+                    "1. Empadão Goiano: A estrela local. Massa podre recheada com tudo (frango, linguiça, guariroba, pequi).",
+                    "2. Pamonha: Salgada (de sal) ou Doce. Em Goiás é sagrada.",
+                    "3. Pequi: O fruto do cerrado. Ame ou odeie, mas tem que provar (cuidado com os espinhos!).",
+                    "4. Peixe na Telha: Filé de peixe com molho, servido borbulhando.",
+                    "5. Galinhada: Arroz com frango caipira, açafrão (cúrcuma) e temperos.",
+                    "6. Sorvete ao Forno: Sobremesa curiosa servida em alguns restaurantes tradicionais.",
+                    "7. Doces em Compota: Figo, mamão, laranja. Vendidos em potes nas feiras.",
+                    "8. Guariroba: Um palmito amargo típico da região, usado em recheios.",
+                    "9. Espetinho com Mandioca: A jantinha clássica de rua.",
+                    "10. Licor de Pequi: Uma forma mais suave de provar o sabor do fruto."
+                ],
+
+                religiao: [
+                    "1. Santuário Nossa Senhora da Salette: Um local lindo, com vista para a cidade e muita paz.",
+                    "2. Igreja Matriz: No centro, construção antiga e simples, coração da fé local.",
+                    "3. Fé nas Águas: Historicamente, muitos visitavam a cidade em busca de cura para reumatismo nas águas.",
+                    "4. Procissões: Na Semana Santa, a cidade para com as tradições católicas.",
+                    "5. Capela do Rio Quente: Pequena capela histórica dentro do complexo do resort.",
+                    "6. Folia de Reis: Tradição muito forte no interior de Goiás em janeiro.",
+                    "7. Estátuas: Há várias estátuas religiosas espalhadas pelas praças.",
+                    "8. Turismo Religioso: A cidade vizinha, Trindade (Pai Eterno), atrai muitos fiéis que esticam até Caldas.",
+                    "9. Casamentos: Muitos casais escolhem os jardins japoneses ou resorts para casar.",
+                    "10. Benzimento: Ainda é comum encontrar benzedeiras tradicionais nos bairros mais antigos."
+                ],
+
+                curiosidades: [
+                    "1. Maior do Mundo: É considerado o maior manancial hidrotermal do mundo.",
+                    "2. Não é Vulcão: Muita gente acha, mas a água esquenta pela geotermia (profundidade), não por vulcão.",
+                    "3. 57 Graus: A água pode sair do solo a temperaturas que queimam a pele.",
+                    "4. Culinária de Rua: Em Goiás, come-se 'Jantinha' (espetinho + feijão tropeiro + mandioca).",
+                    "5. Praia do Cerrado: O Hot Park tem a maior praia artificial de águas quentes correntes do mundo.",
+                    "6. Descoberta: As fontes foram descobertas em 1722 por Bartolomeu Bueno da Silva (filho do Anhanguera).",
+                    "7. Lago Corumbá: Um lago gigante formado por hidrelétrica, usado para esportes náuticos.",
+                    "8. População Flutuante: A cidade tem 90 mil habitantes, mas recebe 4 milhões de turistas por ano.",
+                    "9. Ovos Cozidos: No Poço do Ovo (Lagoa Quente), a água é tão quente que cozinha ovos em minutos.",
+                    "10. Shopping de Biquínis: A cidade tem uma indústria forte de moda praia."
+                ],
+
+                eventos_estacoes: [
+                    "1. Caldas Country (Novembro): Um dos maiores festivais de música sertaneja do Brasil.",
+                    "2. Férias de Julho: A cidade lota, preços sobem e há shows diários nos hotéis.",
+                    "3. Verão Sertanejo (Janeiro): Outro festival gigante de música.",
+                    "4. Carnaval: Voltado para família, mas com blocos de rua e shows.",
+                    "5. Inverno (Jun-Ago): A melhor época. Dias de sol (25ºC) e noites frescas (15ºC).",
+                    "6. Semana Santa: Lotada, reserve com meses de antecedência.",
+                    "7. Festival Gastronômico: Ocorre esporadicamente, celebrando o pequi e milho.",
+                    "8. Natal/Réveillon: Ceias fartas nos resorts e queima de fogos.",
+                    "9. Baixa Temporada (Mai/Jun/Ago/Set): Preços caem pela metade.",
+                    "10. Chuvas (Dez-Mar): Chove forte, mas geralmente são pancadas de verão que passam logo."
+                ],
+
+                info_gerais: [
+                    "1. Voltagem: 220V (Atenção! Diferente de SP/RJ/MG).",
+                    "2. Aeroporto: Tem aeroporto próprio (CLV), mas com poucos voos. Muita gente desce em Goiânia (GYN) e pega transfer (2h).",
+                    "3. Transporte: Carro é bom para ir aos parques afastados. Uber funciona.",
+                    "4. Água da Torneira: Não beba. É termal em muitos lugares e tem minerais em excesso (laxante natural).",
+                    "5. Entrada nos Parques: Hóspedes da rede Rio Quente e DiRoma costumam ter acesso gratuito aos parques da rede.",
+                    "6. Protetor Solar: O sol do cerrado queima mesmo nublado.",
+                    "7. Hidratação: A água quente desidrata o corpo sem você perceber. Beba água.",
+                    "8. DDD: 64.",
+                    "9. Bancos: Tem agências dos principais bancos no centro.",
+                    "10. Cuidado com Piso: O limo (algas) cresce rápido na água quente, deixando o chão liso."
+                ],
+
+                antes_de_ir: [
+                    "1. 220V: Cuidado para não queimar secadores e chapinhas.",
+                    "2. Roupas de Banho: Leve várias. Devido à umidade, elas demoram a secar no quarto.",
+                    "3. Capinha de Celular: Compre aquelas capinhas à prova d'água para tirar foto na piscina.",
+                    "4. Repelente: O cerrado tem mosquitos, principalmente perto do lago e matas.",
+                    "5. Ingressos Online: Comprar antecipado no site dos parques é mais barato que na bilheteria.",
+                    "6. Pressão Baixa: Se você tem pressão baixa, alterne banhos quentes com frios e não fique horas de molho.",
+                    "7. Almoço: Se for ao Hot Park, saiba que não pode entrar com comida. O almoço lá dentro é caro.",
+                    "8. Transfer: Se for de avião para Goiânia, reserve o transfer/ônibus antes.",
+                    "9. Creme de Cabelo: A água termal resseca muito o cabelo (muitos minerais). Hidrate.",
+                    "10. Carteirinha de Estudante: Funciona nos parques para meia entrada."
+                ],
+
+                numeros: [
+                    "1. 190 (Polícia Militar).",
+                    "2. 193 (Bombeiros).",
+                    "3. 192 (SAMU).",
+                    "4. (64) 3454-3500 (Rodoviária).",
+                    "5. (64) 3454-5500 (Aeroporto de Caldas).",
+                    "6. (64) 3453-3091 (Secretaria de Turismo).",
+                    "7. UPA Caldas Novas: Atendimento 24h.",
+                    "8. Hospital Municipal: (64) 3454-3536.",
+                    "9. Táxi/Mototáxi: Pontos na Praça Mestre Orlando.",
+                    "10. Centro de Atendimento ao Turista (entrada da cidade)."
+                ],
+
+                riscos: [
+                    "1. Quedas: Piso molhado e liso é o acidente nº 1.",
+                    "2. Insolação: Ficar na água quente sob o sol engana.",
+                    "3. Preços Abusivos: Em alta temporada, tudo triplica o preço.",
+                    "4. Afogamento: Cuidado com crianças, mesmo em piscinas rasas.",
+                    "5. Roubo em Carros: Não deixe pertences à vista no carro estacionado na rua.",
+                    "6. Venda de Cotas: Vendedores de multipropriedade (cotas de resort) abordam na rua oferecendo brindes. É uma palestra de 2h para tentar te vender algo caro. Cuidado.",
+                    "7. Choque Térmico: Sair da água 40ºC para o ar condicionado forte.",
+                    "8. Otite: Dor de ouvido por ficar muito tempo mergulhado.",
+                    "9. Ressaca: A água quente potencializa o efeito do álcool.",
+                    "10. Estradas: A GO-213 pode ter buracos, dirija com atenção."
+                ],
+
+                roteiros: {
+                    "curto": {
+                        titulo: "Fim de Semana (Relax)",
+                        texto: [
+                            "Dia 1: Chegada e dia inteiro no parque aquático do hotel.",
+                            "Noite 1: Feira do Luar para comer empadão.",
+                            "Dia 2: Manhã no Jardim Japonês e comprinhas de doces antes de ir."
+                        ]
+                    },
+                    "medio": {
+                        titulo: "Clássico (4 Dias)",
+                        texto: [
+                            "Dia 1: Water Park ou DiRoma.",
+                            "Dia 2: Dia inteiro no Hot Park/Praia do Cerrado (bate-volta Rio Quente).",
+                            "Dia 3: Manhã no Parque da Serra (trilha leve) e tarde no Náutico Clube.",
+                            "Dia 4: Relax nas piscinas do hotel e retorno."
+                        ]
+                    },
+                    "longo": {
+                        titulo: "Férias Completas (7 Dias)",
+                        texto: [
+                            "Dias 1-4: Roteiro Clássico.",
+                            "Dia 5: Lagoa Quente de Pirapitinga e Cachaçaria.",
+                            "Dia 6: Dia livre para repetir o parque favorito ou descansar.",
+                            "Dia 7: Compras de moda praia e check-out."
+                        ]
+                    },
+                },
+
+                links: {
+                    hotel: "https://www.booking.com/city/br/caldas-novas.pt-br.html", 
+                    passeio: "https://www.hotpark.com/", 
+                    seguro: "https://www.segurospromo.com.br" 
+                },
+            },
+          
+
+           ],
+           "Norte":[
+{
+    name: "Manaus",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Praia_da_Ponta_Negra_%28Manaus%29.jpg/960px-Praia_da_Ponta_Negra_%28Manaus%29.jpg",
+    tags: ["Natureza", "Gastronomia", "Aventura"],
+    mapa: "https://goo.gl/maps/manaus",
+    clima: "Equatorial. Quente e úmido o ano todo, com chuvas frequentes.",
+    // Adicione dentro do objeto de Manaus
+veredicto: {
+    melhor_epoca: "Junho a Novembro (Verão Amazônico/Seca). Junho/Julho é o auge para ver a floresta alagada (Igapós). Setembro/Outubro surgem as praias de rio. O calor é intenso e úmido o ano todo.",
+    ideal_para: [
+        "Aventureiros e amantes da natureza (Selva, Encontro das Águas, Botos)",
+        "Exploradores gastronômicos (Tambaqui, Pirarucu, Tacacá e frutas exóticas)",
+        "Turismo Cultural e Histórico (Teatro Amazonas e Ciclo da Borracha)",
+        "Experiências imersivas em hotéis de selva ou cruzeiros fluviais"
+    ],
+    nao_ideal_para: [
+        "Quem não suporta calor extremo e umidade alta (é uma sauna a céu aberto)",
+        "Pessoas com fobia intensa de insetos (na selva, eles são os donos)",
+        "Quem espera encontrar praias de água azul turquesa (os rios são negros ou barrentos)"
+    ],
+    perfis: [
+        { icone: "ri-plant-fill", nome: "Selva/Eco" },
+        { icone: "ri-restaurant-2-fill", nome: "Sabores" },
+        { icone: "ri-ship-fill", nome: "Fluvial" },
+        { icone: "ri-history-line", nome: "História" }
+    ]
+},
+    pontos_turisticos: [
+        "1. Teatro Amazonas: Ícone do Ciclo da Borracha, com sua cúpula colorida e interior luxuoso.",
+        "2. Encontro das Águas: Onde o Rio Negro e o Rio Solimões correm lado a lado sem se misturar.",
+        "3. Mercado Municipal Adolpho Lisboa: Inspirado no Les Halles de Paris, ótimo para artesanato e peixes.",
+        "4. MUSA (Museu da Amazônia): Inclui uma torre de observação de 42m acima da copa das árvores.",
+        "5. Praia da Ponta Negra: Principal orla da cidade, com calçadão, anfiteatro e pôr do sol no Rio Negro.",
+        "6. INPA (Bosque da Ciência): Pesquisa científica onde é possível ver peixes-boi e ariranhas.",
+        "7. Palacete Provincial: Conjunto de museus que contam a história militar e artística do Amazonas.",
+        "8. Porto de Manaus: Movimentado e vital, mostra a dinâmica da vida ribeirinha amazônica.",
+        "9. Arquipélago de Anavilhanas: Um dos maiores arquipélagos fluviais do mundo (acesso via Novo Airão).",
+        "10. Centro Cultural Palácio Rio Negro: Antiga sede do governo com arquitetura imponente e jardins."
+    ],
+
+    gastronomia: [
+        "1. Tambaqui Assado: O peixe mais famoso, geralmente servido com farinha de Uarini.",
+        "2. Tacacá: Caldo quente feito com tucupi, jambu (que treme a boca) e camarão.",
+        "3. X-Caboquinho: Sanduíche tradicional com tucumã, queijo coalho e banana frita.",
+        "4. Pirarucu de Casaca: Peixe desfiado com farinha, banana, passas e temperos.",
+        "5. Caldeirada de Peixe: Sopa rica de peixes da região como o Tucunaré.",
+        "6. Frutas Exóticas: Prove o Cupuaçu, Buriti, Bacuri e o verdadeiro Açaí amazônico.",
+        "7. Brigadeiro de Cupuaçu: Uma variação regional deliciosa do doce brasileiro.",
+        "8. Farinha de Uarini: Conhecida como 'farinha ovada', é crocante e única.",
+        "9. Matrinxã na Brasa: Peixe muito saboroso e gorduroso, clássico dos almoços locais.",
+        "10. Suco de Guaraná: O guaraná natural batido com amendoim e castanha."
+    ],
+
+    religiao: [
+        "1. Catedral Metropolitana de Manaus: Localizada no alto de uma colina no centro histórico.",
+        "2. Igreja de São Sebastião: Situada em frente ao Teatro Amazonas, com pinturas italianas.",
+        "3. Igreja de Nossa Senhora da Conceição: Padroeira da cidade, centro das festividades de dezembro.",
+        "4. Sinagoga Beit Yaacov: Importante marco da forte imigração judaica marroquina na região.",
+        "5. Celebrações Ribeirinhas: Procissões fluviais que levam santos padroeiros pelos rios.",
+        "6. Centros de Umbanda e Candomblé: Muito presentes, com forte influência das águas.",
+        "7. Igrejas Evangélicas: Grande presença em bairros periféricos e no centro.",
+        "8. Mesquita de Manaus: Ponto de encontro da comunidade islâmica local.",
+        "9. Festa de Iemanjá: Tradicionalmente celebrada nas margens da Ponta Negra.",
+        "10. Influência Indígena: Espiritualidade ancestral que permeia a cultura local."
+    ],
+
+    curiosidades: [
+        "1. Paris dos Trópicos: Apelido dado durante a riqueza do Ciclo da Borracha.",
+        "2. Rio Negro: É o maior rio de água negra do mundo.",
+        "3. Teatro em Peças: O Teatro Amazonas foi construído com materiais vindos quase todos da Europa.",
+        "4. Fuso Horário: Manaus está 1 hora atrás do horário de Brasília (GMT-4).",
+        "5. Zona Franca: É um importante polo industrial, isento de muitos impostos.",
+        "6. Cidade Flutuante: Existem comunidades inteiras que vivem em casas sobre balsas nos arredores.",
+        "7. Porto Flutuante: O Roadway é projetado para subir e descer conforme o nível do rio.",
+        "8. Biodiversidade Urbana: Não é raro ver preguiças e iguanas em parques no meio da cidade.",
+        "9. Boi-Bumbá: Embora o festival seja em Parintins, Manaus respira a cultura dos Bois Garantido e Caprichoso.",
+        "10. Águas que não se misturam: Fenômeno causado pela diferença de densidade, temperatura e velocidade."
+    ],
+
+    eventos_estacoes: [
+        "1. Festival Amazonas de Ópera (Abril/Maio): Espetáculos mundiais no Teatro Amazonas.",
+        "2. Manaus Passo a Paço (Setembro): Grande festival de artes, música e gastronomia no Centro.",
+        "3. Festival de Parintins (Junho): Embora a 360km, Manaus é a principal porta de saída de barcos.",
+        "4. Festival de Ciranda de Manacapuru (Agosto): Outra festa folclórica vibrante na região metropolitana.",
+        "5. Boi Manaus (Outubro): Celebra o aniversário da cidade com ritmos de toadas.",
+        "6. Réveillon na Ponta Negra: Queima de fogos e shows na beira do Rio Negro.",
+        "7. Época da Cheia (Maio-Julho): Melhor época para ver os igapós (florestas inundadas).",
+        "8. Época da Seca (Setembro-Novembro): Quando surgem as praias de rio de areia branca.",
+        "9. Festival de Cinema do Amazonas: Evento que atrai produtores e diretores para a capital.",
+        "10. Carnaval de Manaus: Famoso pelos desfiles de escolas de samba e blocos de rua."
+    ],
+
+    info_gerais: [
+        "1. Moeda: Real Brasileiro (BRL).",
+        "2. Voltagem: 127v.",
+        "3. Tomada: Tipo N (3 pinos).",
+        "4. DDD: 92.",
+        "5. População: Aprox. 2.1 milhões de habitantes.",
+        "6. Gentílico: Manauara.",
+        "7. Aeroporto: Eduardo Gomes (MAO).",
+        "8. Vacina: Recomendada vacina contra Febre Amarela e uso de repelente.",
+        "9. Transporte: Aplicativos funcionam bem; barcos são o transporte 'rodoviário' da região.",
+        "10. Sol: Use protetor solar fator alto, o sol amazônico é muito forte."
+    ],
+
+    antes_de_ir: [
+        "1. Repelente: Item obrigatório, especialmente para passeios de selva.",
+        "2. Hidratação: O calor é úmido e constante, beba muita água mineral.",
+        "3. Logística: O aeroporto é longe do centro; use Uber ou táxis credenciados.",
+        "4. Passeios de Rio: Sempre verifique se a agência de turismo é credenciada pela EMBRATUR.",
+        "5. Dinheiro em espécie: Leve algum para passeios em comunidades ribeirinhas.",
+        "6. Roupas: Tecidos leves e claros; calça e manga comprida para trilhas na mata.",
+        "7. Ingressos Teatro: Verifique horários de visitação guiada, costumam fechar cedo.",
+        "8. Cheia vs Seca: A paisagem muda drasticamente entre as estações. Escolha o que quer ver.",
+        "9. Malária: Em áreas urbanas o risco é baixo, mas informe-se se for para áreas remotas.",
+        "10. Hospitalidade: O manauara é acolhedor, mas o ritmo da cidade é mais tranquilo que o do Sudeste."
+    ],
+
+    numeros: [
+        "1. 190 (Polícia Militar): Emergências.",
+        "2. (92) 3652-1210 (Aeroporto de Manaus): Informações.",
+        "3. 192 (SAMU): Emergência médica.",
+        "4. 193 (Bombeiros): Resgates.",
+        "5. (92) 3231-1500 (Amazonastur): Informações turísticas.",
+        "6. (92) 2123-5000 (Hospital 28 de Agosto): Urgência e emergência.",
+        "7. (92) 3215-2800 (Delegacia do Turista): Próxima ao Teatro Amazonas.",
+        "8. 118 (IMMU): Trânsito e transporte urbano.",
+        "9. (92) 3622-1330 (Rodoviária de Manaus): Informações de ônibus.",
+        "10. (92) 3232-1768 (Porto de Manaus): Viagens de barco."
+    ],
+
+    riscos: [
+        "1. Insolação: O calor excessivo pode causar mal-estar rápido; use chapéu.",
+        "2. Animais Silvestres: Nunca tente alimentar macacos ou jacarés em passeios.",
+        "3. Segurança no Centro: Evite andar com objetos de valor à mostra em ruas desertas à noite.",
+        "4. Correntes Fluviais: Os rios são profundos e têm correntes fortes; nade apenas em áreas permitidas.",
+        "5. Insetos: Use repelente constantemente para evitar picadas incômodas.",
+        "6. Comida de Rua: Cuidado com a higiene de barracas informais para evitar piriri.",
+        "7. GPS: No rio o sinal falha; sempre tenha um guia ou mapas offline.",
+        "8. Voo de Conexão: O aeroporto de Manaus costuma ter neblina matinal que pode atrasar voos.",
+        "9. Pirataria: Em rotas de barco muito longas e isoladas, há relatos raros; prefira empresas grandes.",
+        "10. Chuvas Súbitas: As 'pancadas' de chuva são fortes e podem alagar vias rapidamente."
+    ],
+
+    roteiros: {
+        "curto": {
+            titulo: "Roteiro Manaus City (2 Dias)",
+            texto: [
+                "Dia 1: Teatro Amazonas, Mercado Adolpho Lisboa e pôr do sol na Ponta Negra.",
+                "Dia 2: Passeio de barco para o Encontro das Águas, Vila de Janauari (Vitória-Régia) e almoço flutuante."
+            ]
+        },
+        "medio": {
+            titulo: "Selva e Cultura (4 Dias)",
+            texto: [
+                "Dias 1 e 2: Siga o roteiro de 2 dias.",
+                "Dia 3: Visita ao MUSA (torre de observação) e INPA (peixes-boi).",
+                "Dia 4: Experiência em uma aldeia indígena e interação (responsável) com botos cor-de-rosa."
+            ]
+        },
+        "longo": {
+            titulo: "Imersão Amazônica (7+ Dias)",
+            texto: [
+                "Dias 1 a 4: Siga o roteiro de 4 dias.",
+                "Dias 5 a 7: Hospedagem em um Jungle Lodge (hotel de selva) para focagem noturna, trilhas e pesca de piranha.",
+                "Bônus: Se for época, estenda a Novo Airão para o Parque Nacional de Anavilhanas."
+            ]
+        }
+    },
+
+    links: {
+        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-634547&aid=304142",
+        passeio: "https://www.civitatis.com/br/manaus/",
+        seguro: "https://www.segurospromo.com.br"
+    }
+},
+           ]
+
+    },
     "Pontos Turísticos Famosos": {
         "Monumento": [
             {
@@ -4845,6070 +10935,7 @@ const worldData = {
     ],
     },
     "América do Sul": {
-        "Brasil": [
-            {
-                name: "Rio de Janeiro",
-                imagem: "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=2070&auto=format&fit=crop",
-                tags: ["Praia", "Cartão Postal", "Agito"],
-                mapa: "https://goo.gl/maps/rio",
-                clima: "Tropical Atlântico. Verão 40ºC e Inverno ameno.",
-                
-                // === NOVO: DADOS DO VEREDICTO ===
-                veredicto: {
-                    melhor_epoca: "Abril a Junho (Outono) ou Setembro a Novembro (Primavera). Evite Janeiro (Calor extremo).",
-                    ideal_para: [
-                        "Quem ama natureza misturada com cidade grande",
-                        "Viajantes que buscam vida noturna agitada",
-                        "Turistas que gostam de história e cultura",
-                        "Fotógrafos (paisagens dramáticas)"
-                    ],
-                    nao_ideal_para: [
-                        "Quem busca silêncio absoluto e isolamento",
-                        "Quem se estressa facilmente com trânsito",
-                        "Pessoas sensíveis a calor extremo (no verão)"
-                    ],
-                    perfis: [
-                        { icone: "ri-hearts-fill", nome: "Casal" },
-                        { icone: "ri-user-star-fill", nome: "Solo" },
-                        { icone: "ri-group-fill", nome: "Jovens" },
-                        { icone: "ri-camera-fill", nome: "Fotos" }
-                    ]
-                },
-                // =================================
 
-                pontos_turisticos: [
-                    "1. Cristo Redentor: Uma das 7 Maravilhas. Compre ingresso antecipado do trem.",
-                    "2. Pão de Açúcar: Suba no final da tarde para ver o pôr do sol mais lindo do mundo.",
-                    "3. Copacabana & Ipanema: Caminhe no calçadão e aplauda o sol no Arpoador.",
-                    "4. Escadaria Selarón: A obra de arte a céu aberto mais famosa da Lapa.",
-                    "5. Jardim Botânico: Palmeiras imperiais e muita paz no meio da cidade.",
-                    "6. Museu do Amanhã: Arquitetura futurista na Zona Portuária (Porto Maravilha).",
-                    "7. Maracanã: O templo do futebol. O tour é obrigatório para quem ama esportes.",
-                    "8. Parque Lage: Café da manhã em um palacete histórico aos pés do Corcovado.",
-                    "9. Santa Teresa: O bairro boêmio com bondinho amarelo e ateliês de arte.",
-                    "10. Pedra da Gávea: A trilha mais cobiçada para fotos radicais (exige preparo)."
-                ],
-
-                gastronomia: [
-                    "1. Feijoada Completa: Sextas e sábados são os dias oficiais da feijoada com samba.",
-                    "2. Biscoito Globo e Mate: O lanche praiano patrimônio cultural (Salgado ou Doce).",
-                    "3. Caipirinha: Nos quiosques da orla, feita com frutas frescas.",
-                    "4. Podrão da Lapa: Sanduíche de rua com tudo dentro para fechar a noite.",
-                    "5. Açaí: O combustível do carioca, servido com granola e banana.",
-                    "6. Filé à Oswaldo Aranha: Filé com muito alho frito, arroz e farofa.",
-                    "7. Bolinho de Feijoada: Petisco genial criado nos botecos cariocas.",
-                    "8. Camarão no Espeto: Clássico da praia (compre em barracas fixas).",
-                    "9. Joelho: Salgado de queijo e presunto (conhecido como italiano em SP).",
-                    "10. Sopa Leão Veloso: Caldo de frutos do mar histórico."
-                ],
-
-                religiao: [
-                    "1. Cristo Redentor: O maior símbolo do Cristianismo no Brasil, de braços abertos sobre a Guanabara.",
-                    "2. São Jorge (O Santo Guerreiro): É imensamente popular no Rio. Dia 23 de abril é feriado estadual e tem festas gigantes.",
-                    "3. Sincretismo Religioso: O Rio é o berço da mistura. Muitos católicos também frequentam centros espíritas ou de umbanda.",
-                    "4. Candomblé e Umbanda: Religiões de matriz africana têm raízes profundas na cultura carioca (ex: roupas brancas na sexta-feira).",
-                    "5. Festa de Iemanjá: No Réveillon, é tradição quase obrigatória pular 7 ondas e jogar flores ao mar para a Rainha do Mar.",
-                    "6. Catedral Metropolitana: Um cone gigante e moderno no centro, inspirado nas pirâmides maias, diferente de tudo que você já viu.",
-                    "7. Igreja da Penha: Famosa pelos seus 382 degraus esculpidos na pedra, onde fiéis sobem de joelhos pagando promessas.",
-                    "8. Mosteiro de São Bento: Um oásis de silêncio no centro. O interior é todo folheado a ouro e tem missas com Canto Gregoriano.",
-                    "9. O Samba como Religião: As quadras das Escolas de Samba são chamadas de 'Terreiros' e tratadas com respeito sagrado pela comunidade.",
-                    "10. Templo da Humanidade: O Rio abriga o único templo Positivista do mundo que segue preservado (Religião da Humanidade)."
-                ],
-
-                curiosidades: [
-                    "1. Céu Mais Azul: O Rio tem o céu considerado o mais azul do mundo por cientistas.",
-                    "2. Capital Europeia: Foi a única capital europeia fora da Europa (1808).",
-                    "3. Floresta Urbana: A Tijuca é a maior floresta urbana replantada do mundo.",
-                    "4. Carioca: O nome vem do Tupi 'Casa do homem branco'.",
-                    "5. Carnaval: O Cordão da Bola Preta arrasta mais de 1 milhão de pessoas.",
-                    "6. Rock in Rio: Nasceu aqui em 1985 e é o maior festival do mundo.",
-                    "7. Ponte Rio-Niterói: Maior ponte de concreto do hemisfério sul (13km).",
-                    "8. Oscar Niemeyer: Projetou o Sambódromo em tempo recorde.",
-                    "9. Capital Federal: Foi a capital do Brasil até 1960.",
-                    "10. Bossa Nova: Nasceu nos apartamentos de Copacabana e Ipanema."
-                ],
-
-                eventos_estacoes: [
-                    "1. Verão (Dez-Mar): Calor de 40ºC, praias lotadas e vida noturna intensa.",
-                    "2. Inverno (Jun-Set): Ameno (20ºC), pouca chuva, ideal para passear.",
-                    "3. Réveillon de Copacabana: A maior festa de Ano Novo do planeta.",
-                    "4. Carnaval (Sambódromo): O desfile oficial das escolas de samba.",
-                    "5. Carnaval de Rua: Blocos gratuitos por toda a cidade em Fevereiro.",
-                    "6. Rock in Rio: Acontece a cada 2 anos (Setembro/Outubro).",
-                    "7. Primavera (Set-Dez): Cidade florida, perfeita para o Jardim Botânico.",
-                    "8. Bienal do Livro: Grande evento cultural no Riocentro.",
-                    "9. Festas Juninas: A Feira de São Cristóvão tem a melhor festa nordestina.",
-                    "10. Temporada de Baleias: No inverno, é possível avistar baleias na costa."
-                ],
-
-                info_gerais: [
-                    "1. Moeda: Real Brasileiro (BRL).",
-                    "2. Voltagem: 110v / 127v (Atenção! Diferente da maioria do Brasil).",
-                    "3. Tomada: Tipo N (3 pinos, padrão brasileiro).",
-                    "4. DDD: 21.",
-                    "5. População: Aprox. 6.7 milhões de habitantes.",
-                    "6. Gentílico: Quem nasce na cidade é Carioca; no estado é Fluminense.",
-                    "7. Aeroportos: Galeão (GIG - Internacional) e Santos Dumont (SDU - Centro).",
-                    "8. Água: Evite beber da torneira. Prefira mineral.",
-                    "9. Uber/Táxi: Funcionam muito bem. Evite táxis sem taxímetro.",
-                    "10. Gorjeta: 10% é o padrão em restaurantes (opcional)."
-                ],
-
-                antes_de_ir: [
-                    "1. Segurança no Centro: Evite andar com correntes de ouro, relógios caros ou celular na mão em áreas movimentadas do Centro e Lapa.",
-                    "2. Ingressos Antecipados: Compre o trem do Corcovado e o Bondinho do Pão de Açúcar online. As filas na hora são imensas.",
-                    "3. Transporte Seguro: O Metrô Rio é excelente, seguro e limpo. Uber também funciona muito bem. Evite ônibus à noite se não conhecer o trajeto.",
-                    "4. O Sol Queima: Mesmo nublado, o sol do Rio é forte. Protetor solar é item de sobrevivência, não vaidade.",
-                    "5. Aeroportos: O Santos Dumont (SDU) fica no centro (lindo pouso). O Galeão (GIG) é longe (internacional). Calcule o tempo de deslocamento.",
-                    "6. Voltagem 110V: Atenção! Diferente de muitas cidades do Brasil (que são 220V), o Rio é 110V/127V. Cuidado com secadores e chapinhas.",
-                    "7. Água da Bica: Evite beber água da torneira ou de filtros duvidosos. O calor exige hidratação, mas prefira água mineral lacrada.",
-                    "8. Vestimenta: O carioca é super informal. Chinelo e bermuda são aceitos em quase todos os lugares (exceto repartições públicas e locais de luxo).",
-                    "9. Praia à Noite: Evite ficar na areia da praia em trechos escuros ou desertos durante a madrugada.",
-                    "10. Natureza: Se for fazer trilhas, leve água, vá em grupo e respeite os animais (não alimente os micos, por mais fofos que sejam)."
-                ],
-
-                numeros: [
-                    "1. 190 (Polícia Militar): Emergências imediatas, assaltos ou perigo iminente.",
-                    "2. (21) 2332-2924 (DEAT): Delegacia Especial de Apoio ao Turismo. Fica no Leblon, atendimento bilíngue.",
-                    "3. 192 (SAMU): Ambulância para urgências médicas e acidentes na rua.",
-                    "4. 193 (Bombeiros): Incêndios, resgates e acidentes de trânsito com vítimas.",
-                    "5. 1746 (Prefeitura do Rio): Canal direto para reclamações de serviços urbanos e informações.",
-                    "6. (21) 3004-6050 (Aeroporto Galeão): Informações sobre voos internacionais e achados e perdidos.",
-                    "7. (21) 3814-7500 (Aeroporto Santos Dumont): Informações sobre voos domésticos e serviços.",
-                    "8. 180 (Central da Mulher): Denúncias e apoio em casos de violência contra a mulher.",
-                    "9. 151 (Procon): Para denunciar preços abusivos ou problemas graves com estabelecimentos.",
-                    "10. 191 (Polícia Rodoviária): Emergências se você estiver nas estradas federais chegando ou saindo do Rio."
-                ],
-
-                riscos: [
-                    "1. Gangue da Bicicleta: No Centro e Copacabana, evite usar o celular na borda da calçada. Eles passam de bike e puxam.",
-                    "2. Praias à Noite: Não fique na areia de Copacabana ou Ipanema de madrugada. É escuro e alvo fácil para assaltos.",
-                    "3. Golpe da Caipirinha: Em quiosques, pergunte o preço ANTES. Eles oferecem 'prova grátis' e cobram R$ 50 depois.",
-                    "4. Centro no Domingo: Evite a região da Candelária e Centro Financeiro no fim de semana. Fica deserto e perigoso.",
-                    "5. GPS na Favela: Cuidado ao usar Waze/Google Maps na Linha Vermelha ou Amarela. Não entre em ruas desconhecidas para cortar caminho.",
-                    "6. Táxi sem Taxímetro: Recuse táxis que querem cobrar preço fechado 'no grito'. Exija o taxímetro ou use Uber.",
-                    "7. Trilhas Sozinho: Não faça trilhas desertas (como a do Morro da Urca ou Corcovado) sozinho e com equipamentos caros.",
-                    "8. Cambistas: Nunca compre ingressos de desconhecidos na porta do Maracanã ou Bondinho. São quase sempre falsos.",
-                    "9. Pedintes Agressivos: Na Lapa, alguns vendedores de balas podem ser agressivos se você negar. Seja firme, mas educado e siga andando.",
-                    "10. Maré Alta: Respeite a bandeira vermelha. O mar do Rio tem correntes de retorno que puxam até nadadores experientes."
-                ],
-
-                roteiros: {
-                    "curto": {
-                        titulo: "Roteiro Express (1 a 2 Dias)",
-                        texto: [
-                            "Dia 1 (Clássico): Comece cedo no Cristo Redentor (trem). Almoce em Copacabana. Final de tarde no Pão de Açúcar para o pôr do sol.",
-                            "Dia 1 (Noite): Jantar e drinks em Ipanema (Rua Garcia d'Ávila).",
-                            "Dia 2 (Vibe Carioca): Manhã no Forte de Copacabana (Confeitaria Colombo). Tarde na praia (Posto 9 ou 10). Fim de tarde no Arpoador."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Roteiro Essencial (3 a 5 Dias)",
-                        texto: [
-                            "Dia 1 e 2: Siga o Roteiro Express acima.",
-                            "Dia 3 (História e Boemia): Centro Histórico (Museu do Amanhã + Mural Kobra). Almoço na Confeitaria Colombo (Centro). Tarde em Santa Teresa (Bondinho) e noite na Lapa (Rio Scenarium).",
-                            "Dia 4 (Natureza): Jardim Botânico + Parque Lage (café da manhã). Tarde na Lagoa Rodrigo de Freitas (pedalinho ou bike).",
-                            "Dia 5 (Lado B): Prainha e Grumari (praias selvagens na zona oeste) se estiver de carro. Ou trilha da Pedra Bonita (fácil e vista incrível)."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Roteiro Completo (7+ Dias)",
-                        texto: [
-                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
-                            "Dia 6 (Serra ou Mar): Bate-volta para Arraial do Cabo (Caribe Brasileiro) ou Petrópolis (Imperial). Escolha um!",
-                            "Dia 7 (Esporte e Visual): Trilha da Pedra da Gávea (para fortes) ou Voo de Asa Delta em São Conrado.",
-                            "Dia 8 (Despedida): Compras no Barra Shopping ou dia relax na praia do Leblon."
-                        ]
-                        
-                    },
-                },
-                
-                links: {
-                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-666610&aid=304142", 
-                    passeio: "https://www.civitatis.com/br/rio-de-janeiro/", 
-                    seguro: "https://www.segurospromo.com.br" 
-                },
-                
-            },
-             {
-                name: "São Paulo",
-               imagem: "https://images.unsplash.com/photo-1543059080-f9b1272213d5?q=80&w=2069&auto=format&fit=crop",
-                tags: ["Urbano", "Gastronomia", "Cultura"],
-                mapa: "https://goo.gl/maps/saopaulo",
-                clima: "Subtropical. Conhecida como 'Terra da Garoa', mas o tempo muda rápido.",
-                veredicto: {
-                    melhor_epoca: "Abril a Agosto (Outono/Inverno). Menos chuva, clima mais ameno. Evite o verão (enchentes).",
-                    ideal_para: [
-                        "Amantes de alta gastronomia (melhores restaurantes do país)",
-                        "Quem busca vida cultural intensa (teatros, museus)",
-                        "Fãs de vida noturna e baladas underground",
-                        "Compras de luxo (Oscar Freire) ou pechinchas (25 de Março)"
-                    ],
-                    nao_ideal_para: [
-                        "Quem busca contato intenso com a natureza e praias",
-                        "Pessoas que odeiam trânsito e poluição visual",
-                        "Quem prefere cidades silenciosas e lentas"
-                    ],
-                    perfis: [
-                        { icone: "ri-restaurant-fill", nome: "Foodie" },
-                        { icone: "ri-building-4-fill", nome: "Urbano" },
-                        { icone: "ri-briefcase-fill", nome: "Business" },
-                        { icone: "ri-artboard-fill", nome: "Cultura" }
-                    ]
-                },
-                // TOP 10 PONTOS TURÍSTICOS
-                pontos_turisticos: [
-                    "1. Avenida Paulista: O coração financeiro e cultural. Aos domingos fecha para carros e vira um parque.",
-                    "2. Parque Ibirapuera: O 'Central Park' paulistano. Perfeito para caminhar, ver museus e arquitetura de Niemeyer.",
-                    "3. Beco do Batman: Uma galeria de grafite a céu aberto na Vila Madalena, o bairro mais boêmio.",
-                    "4. Mercado Municipal (Mercadão): Templo da gastronomia. Famoso pelas frutas exóticas e sanduíches gigantes.",
-                    "5. Pinacoteca do Estado: O museu mais antigo da cidade, com arquitetura incrível e acervo brasileiro impecável.",
-                    "6. Bairro da Liberdade: O maior reduto japonês fora do Japão. Lanternas vermelhas, comida asiática e karaokês.",
-                    "7. Catedral da Sé: Uma das cinco maiores igrejas neogóticas do mundo, marco zero da cidade.",
-                    "8. MASP: O Museu de Arte de São Paulo, famoso pelo seu vão livre gigante na Paulista.",
-                    "9. Farol Santander: A melhor vista panorâmica do centro histórico (antigo prédio do Banespa).",
-                    "10. Estação da Luz e Museu da Língua Portuguesa: História e arquitetura deslumbrante no centro."
-                ],
-
-                // TOP 10 GASTRONOMIA (Capital Mundial da Gastronomia)
-                gastronomia: [
-                    "1. Pizza Paulistana: Dizem ser a melhor do mundo. Massa média, borda alta e muito recheio.",
-                    "2. Sanduíche de Mortadela: O clássico do Mercadão, com 300g de mortadela Ceratti.",
-                    "3. Pastel de Feira: Acompanhado de caldo de cana. É uma instituição sagrada em SP.",
-                    "4. Virado à Paulista: O prato oficial do estado (arroz, tutu de feijão, bisteca, ovo, couve e banana).",
-                    "5. Coxinha: A rainha dos salgados. As das padarias 24h são lendárias.",
-                    "6. Comida Japonesa (Liberdade): Sushis e lámens autênticos, muitas vezes melhores que no Japão.",
-                    "7. Padarias Artesanais: O paulistano ama 'pão na chapa com média' no café da manhã.",
-                    "8. Cantinas Italianas: No Bixiga, massas frescas e fartas servidas com música ao vivo.",
-                    "9. Hambúrguer Gourmet: SP vive uma febre de hamburguerias artesanais de altíssimo nível.",
-                    "10. Alta Gastronomia: A cidade concentra a maioria dos restaurantes com estrelas Michelin do Brasil."
-                ],
-
-                // TOP 10 CURIOSIDADES
-                curiosidades: [
-                    "1. Maior do Hemisfério: É a maior cidade do Hemisfério Sul e das Américas.",
-                    "2. Cidade que não dorme: Existem padarias, academias e mercados abertos 24h por dia.",
-                    "3. Helicópteros: Tem a maior frota de helicópteros urbanos do mundo (vence Nova York).",
-                    "4. Japão Brasileiro: Tem a maior população de japoneses fora do Japão.",
-                    "5. Pizza Gigante: Consome-se mais de 1 milhão de pizzas por dia na cidade.",
-                    "6. Diversidade: É possível ouvir mais de 70 idiomas diferentes caminhando pelo centro.",
-                    "7. Terra da Garoa: O apelido vem do chuvisco constante que era comum décadas atrás.",
-                    "8. Arranha-céus: Possui mais de 6.000 prédios com mais de 10 andares.",
-                    "9. Metrô Lotado: A estação Sé é uma das mais movimentadas do mundo nos horários de pico.",
-                    "10. Café: A riqueza da cidade foi construída historicamente sobre a exportação de café."
-                ],
-
-                // TOP 10 CULTURA & RELIGIÃO
-                religiao: [
-                    "1. Catedral da Sé: O maior templo católico da cidade, com criptas subterrâneas visitáveis.",
-                    "2. Templo de Salomão: Uma réplica gigantesca do templo bíblico, sede da Igreja Universal.",
-                    "3. Mesquita Brasil: A primeira mesquita construída na América Latina (Cambuci).",
-                    "4. Templo Zu Lai: O maior templo budista da América Latina (fica na região metropolitana).",
-                    "5. Sinagogas de Higienópolis: O bairro concentra uma grande e tradicional comunidade judaica.",
-                    "6. Mosteiro de São Bento: Famoso pelas missas com Canto Gregoriano e pelos pães dos monges.",
-                    "7. Diversidade Protestante: Igrejas evangélicas de todas as denominações em cada esquina.",
-                    "8. Espiritismo: Forte presença de centros espíritas kardecistas.",
-                    "9. Religiões Afro: Umbanda e Candomblé têm forte representatividade cultural.",
-                    "10. Igreja Ortodoxa: Belíssimas igrejas da comunidade russa e armênia próximas ao Paraíso."
-                ],
-
-                // TOP 10 EVENTOS E ESTAÇÕES
-                eventos_estacoes: [
-                    "1. Fórmula 1 (GP Brasil): Acontece em Interlagos (Nov), atraindo turistas do mundo todo.",
-                    "2. Lollapalooza: Festival de música gigante no Autódromo (Março/Abril).",
-                    "3. Parada do Orgulho LGBT+: A maior do mundo, lota a Avenida Paulista (Junho).",
-                    "4. Virada Cultural: 24 horas de shows gratuitos espalhados pela cidade.",
-                    "5. Bienal de Arte: Acontece a cada 2 anos no Ibirapuera, referência mundial.",
-                    "6. São Paulo Fashion Week: O maior evento de moda da América Latina.",
-                    "7. Carnaval de Rua: Cresceu muito e hoje rivaliza com Rio e Salvador em tamanho.",
-                    "8. Mostra Internacional de Cinema: Para os amantes da sétima arte (Outubro).",
-                    "9. Natal na Paulista: Decoração de luzes e shows gratuitos em Dezembro.",
-                    "10. Restaurant Week: Festivais gastronômicos com preços promocionais ocorrem duas vezes ao ano."
-                ],
-
-                // TOP 10 INFO GERAIS
-                info_gerais: [
-                    "1. DDD: 11.",
-                    "2. Voltagem: 110V (mas hotéis costumam ter 220V, sempre cheque a tomada).",
-                    "3. População: Mais de 12 milhões (cidade) e 22 milhões (Grande SP).",
-                    "4. Aeroportos: Guarulhos (GRU - Internacional/Longe) e Congonhas (CGH - Doméstico/Centro).",
-                    "5. Trânsito: Famoso pelos engarrafamentos. Evite horários de pico (8h e 18h).",
-                    "6. Metrô: Limpo, seguro e eficiente, mas não cobre a cidade toda.",
-                    "7. Moeda: Real (BRL). Cartão é aceito até pelo vendedor ambulante.",
-                    "8. Água: Potável, mas com gosto de cloro. Prefira filtro ou mineral.",
-                    "9. Uber: Essencial para se locomover fora da rota do metrô.",
-                    "10. Clima: 'Quatro estações em um dia'. Saia sempre com guarda-chuva e casaco."
-                ],
-
-                // TOP 10 DICAS ANTES DE IR
-                antes_de_ir: [
-                    "1. Bilhete Único/TOP: Compre o cartão de transporte nas estações para integrar metrô e ônibus.",
-                    "2. Segurança: Cuidado com o 'gangue da bicicleta' na Paulista e Centro. Não use celular na borda da calçada.",
-                    "3. Reservas: Restaurantes famosos têm filas de horas. Reserve com antecedência.",
-                    "4. Aeroporto GRU: Fica em outra cidade (Guarulhos). Saia com 3h ou 4h de antecedência devido ao trânsito.",
-                    "5. Museus Grátis: Quase todos os museus têm um dia de entrada gratuita (geralmente terça ou quarta).",
-                    "6. Paulista Aberta: Aos domingos, a Av. Paulista é só para pedestres. Melhor dia para visitar.",
-                    "7. Roupas: O estilo é urbano e casual, mas leve um casaco leve mesmo no verão.",
-                    "8. Aplicativos: Baixe o 'Moovit' para transporte e 'iFood' para delivery (funciona 24h).",
-                    "9. Hospedagem: Ficar perto de uma estação de metrô (Linha Verde ou Amarela) facilita a vida.",
-                    "10. Finais de Semana: A cidade fica mais vazia e o trânsito flui bem melhor (exceto áreas de balada)."
-                ],
-                // --- NOVO: NÚMEROS IMPORTANTES (SÃO PAULO) ---
-                numeros: [
-                    "1. 190 (Polícia Militar): Emergência policial, assaltos ou situações de risco.",
-                    "2. (11) 3120-4500 (DEATUR): Delegacia Especializada no Atendimento ao Turista.",
-                    "3. 192 (SAMU): Ambulância pública para acidentes e emergências médicas.",
-                    "4. 193 (Bombeiros): Incêndios, resgates e acidentes com vítimas presas.",
-                    "5. 156 (Prefeitura de SP): Informações sobre ônibus, trânsito e serviços municipais.",
-                    "6. 199 (Defesa Civil): Para casos de alagamentos ou desabamentos em chuvas fortes.",
-                    "7. (11) 2445-2945 (Aeroporto Guarulhos - GRU): Informações de voos e achados e perdidos.",
-                    "8. (11) 5090-9000 (Aeroporto Congonhas - CGH): Informações do aeroporto central.",
-                    "9. 180 (Central da Mulher): Denúncias e apoio em casos de violência.",
-                    "10. 0800 770 7722 (Metrô SP): Informações sobre linhas, estações e objetos perdidos."
-                ],
-                // --- NOVO: RISCOS E ERROS (SÃO PAULO) ---
-                riscos: [
-                    "1. Gangue da Bike (Paulista): Na Av. Paulista, NUNCA use o celular na beira da calçada. Eles passam de bicicleta e arrancam da mão em segundos.",
-                    "2. Vidro Aberto no Trânsito: Em engarrafamentos ou semáforos, mantenha os vidros fechados. Assaltantes quebram o vidro para pegar o celular no painel.",
-                    "3. Golpe do Tinder: Cuidado extremo ao marcar encontros por apps. O 'Golpe do Amor' (sequestro relâmpago) aumentou muito em SP.",
-                    "4. Centro Histórico (Sé/República): A região da Praça da Sé e arredores é muito perigosa devido ao alto número de usuários de drogas e furtos. Evite.",
-                    "5. Cracolândia: O fluxo de usuários muda de lugar no centro (Santa Ifigênia/Campos Elíseos). Se ver aglomeração na rua, dê meia volta imediatamente.",
-                    "6. Pix na Rua: Evite andar com o app do banco principal no celular de rua. Tenha um celular 'do ladrão' ou limite de Pix baixo.",
-                    "7. Falso Entregador: Motoqueiros com mochila de iFood abordam pedestres ou carros parados. Fique atento a motos com duas pessoas.",
-                    "8. Golpe da Maquininha (Táxi/Ambulante): Confira sempre o valor no visor antes de aproximar o cartão. Eles digitam um valor maior ou trocam o cartão.",
-                    "9. Vila Madalena à Noite: Bairro boêmio seguro, mas na saída das baladas, fique atento ao esperar Uber na calçada escura.",
-                    "10. Trânsito na Chuva: SP para quando chove. Não marque voos ou compromissos com horário justo em dias de tempestade, você vai perder."
-                ],
-                // COLE O ROTEIRO ABAIXO:
-                roteiros: {
-                    "curto": {
-                        titulo: "Roteiro Express (1 a 2 Dias)",
-                        texto: [
-                            "Dia 1 (O Clássico): Comece na Av. Paulista (MASP, Sesc, Japan House). Almoce por lá. Tarde no Parque Ibirapuera. Jantar: Uma pizza paulistana tradicional.",
-                            "Dia 2 (Centro Histórico): Farol Santander (vista), Pátio do Colégio e o famoso sanduíche de mortadela no Mercadão Municipal.",
-                            "Dica Extra: Se sobrar tempo, dê um pulo no Beco do Batman (Vila Madalena) para fotos incríveis."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Roteiro Essencial (3 a 5 Dias)",
-                        texto: [
-                            "Dias 1 e 2: Siga o Roteiro Express acima.",
-                            "Dia 3 (Cultura e Luz): Estação da Luz, Museu da Língua Portuguesa e Pinacoteca (almoce no café da Pina). Tarde no Bairro da Liberdade (compras e comida asiática).",
-                            "Dia 4 (Lado B e Boemia): Manhã no Museu do Futebol (Pacaembu). Tarde de compras na Oscar Freire ou 25 de Março (opostos!). Noite na Vila Madalena (bares).",
-                            "Dia 5 (Gastronomia): Almoço no Eataly ou em uma cantina do Bixiga. Tarde no MIS (Museu da Imagem e do Som) ou Instituto Moreira Salles."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Roteiro Completo (7+ Dias)",
-                        texto: [
-                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
-                            "Dia 6 (Bate-volta Vinho): Roteiro do Vinho em São Roque (1h de SP). Almoço italiano e degustação em vinícolas.",
-                            "Dia 7 (Bate-volta Arte ou Praia): Visite Embu das Artes (domingo é melhor) para artesanato OU desça a serra para Santos (Museu do Café e orla).",
-                            "Dia 8 (Descanso Urbano): Brunch em uma padaria artesanal (Padoca do Maní ou similar) e tarde tranquila no Parque Villa-Lobos."
-                        ]
-                    }
-                },
-                // SEUS LINKS DE AFILIADO (ID 304142)
-                links: {
-                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-671824&aid=304142", 
-                    passeio: "https://www.civitatis.com/br/sao-paulo/", 
-                    seguro: "https://www.segurospromo.com.br" 
-                }
-            },
-           {
-                name: "Gramado",
-                imagem: "https://www.melhoresdestinos.com.br/wp-content/uploads/2019/02/passagens-aereas-gramado-capa2019-01.jpg",
-                tags: ["Romance", "Frio", "Chocolate"],
-                mapa: "https://goo.gl/maps/gramado",
-                clima: "Temperado. Invernos rigorosos (pode gear) e verões amenos.",
-                
-                // Adicione dentro do objeto de Gramado (após 'clima' e antes de 'pontos_turisticos')
-veredicto: {
-    melhor_epoca: "Junho a Agosto (Inverno/Fondue) ou Novembro a Janeiro (Natal Luz). Março é mais tranquilo.",
-    ideal_para: [
-        "Casais em lua de mel ou busca de romance",
-        "Famílias com crianças (Snowland, Mini Mundo, Florybal)",
-        "Amantes de gastronomia (Café colonial, Galeto e Fondue)",
-        "Quem busca charme europeu e segurança total"
-    ],
-    nao_ideal_para: [
-        "Viajantes com orçamento 'mochilão' (tudo é cobrado e caro)",
-        "Quem busca vida noturna agitada de baladas (a cidade dorme cedo)",
-        "Quem prefere trilhas selvagens e isolamento (turismo massificado)"
-    ],
-    perfis: [
-        { icone: "ri-hearts-fill", nome: "Romântico" },
-        { icone: "ri-bear-smile-fill", nome: "Família" },
-        { icone: "ri-goblet-fill", nome: "Gastrô" },
-        { icone: "ri-vip-diamond-fill", nome: "Luxo" }
-    ]
-},
-                // TOP 10 PONTOS TURÍSTICOS
-                pontos_turisticos: [
-                    "1. Lago Negro: O cartão-postal da cidade. Caminhe ao redor, ande de pedalinho e aprecie as hortênsias.",
-                    "2. Mini Mundo: Um parque a céu aberto com réplicas fiéis de prédios do mundo todo, 24x menores que o real.",
-                    "3. Snowland: O primeiro parque de neve indoor das Américas. Esqui, patinação e neve de verdade o ano todo.",
-                    "4. Rua Coberta: O charme do centro. Restaurantes, lojas e eventos protegidos por um telhado de vidro.",
-                    "5. Igreja Matriz São Pedro: Famosa por sua arquitetura em pedra basalto e os 12 apóstolos na frente.",
-                    "6. Fonte do Amor Eterno: Inspirada na Pont des Arts de Paris, onde casais prendem cadeados com seus nomes.",
-                    "7. Rua Torta: Uma ladeira sinuosa e florida (Rua Emílio Sorgetz) perfeita para fotos divertidas.",
-                    "8. Mundo a Vapor: Um museu interativo sobre a era das máquinas, com a famosa fachada do trem pendurado.",
-                    "9. Fábricas de Chocolate: Visitar a Prawer ou Florybal para ver a produção artesanal é obrigatório.",
-                    "10. Pórticos de Gramado: As entradas da cidade (via Nova Petrópolis ou Taquara) são lindas construções bávaras."
-                ],
-
-                // TOP 10 GASTRONOMIA
-                gastronomia: [
-                    "1. Sequência de Fondue: O clássico da serra. Queijo, Carne (na pedra) e Chocolate, tudo à vontade.",
-                    "2. Café Colonial: Uma refeição que vale por três. Mesas fartas com pães, bolos, tortas, frios e bebidas.",
-                    "3. Galeto ao Primo Canto: Franguinho assado na brasa, servido com polenta, massas e salada de maionese.",
-                    "4. Chocolate Artesanal: O melhor do Brasil. Chocolate quente cremoso no frio é lei.",
-                    "5. Culinária Alemã: Experimente o Joelho de Porco (Eisbein) com chucrute e batatas.",
-                    "6. Massas Italianas: A herança italiana é forte, com rodízios de massas e risotos incríveis.",
-                    "7. Apfelstrudel: Torta de maçã tradicional, servida quente com nata ou sorvete de creme.",
-                    "8. Cuca: Um bolo típico alemão com farofa doce em cima, recheado de frutas ou doce de leite.",
-                    "9. Churrasco Gaúcho: As churrascarias de luxo em Gramado oferecem cortes nobres e serviço impecável.",
-                    "10. Truta: Peixe de água doce muito comum na região, geralmente servido com molho de amêndoas."
-                ],
-
-                // TOP 10 CURIOSIDADES
-                curiosidades: [
-                    "1. Sem Semáforos: Gramado praticamente não tem semáforos. Os motoristas param religiosamente na faixa.",
-                    "2. Natal Luz: É um dos maiores eventos natalinos do mundo, durando mais de 3 meses.",
-                    "3. Kikito: O troféu do Festival de Cinema de Gramado é o 'Oscar' brasileiro, e tem uma estátua dele na cidade.",
-                    "4. Hortênsias: São o símbolo da região, florescendo e colorindo as estradas de azul na primavera/verão.",
-                    "5. Neve no Brasil: É uma das poucas cidades brasileiras onde há chance real de nevar no inverno.",
-                    "6. Colonização: A cidade é uma mistura única das culturas alemã, italiana e portuguesa.",
-                    "7. Sem Fios: No centro, toda a fiação elétrica é subterrânea, deixando a paisagem limpa e bonita.",
-                    "8. Gramado Zoo: Um zoológico que só tem animais da fauna brasileira e foca no bem-estar animal (sem jaulas).",
-                    "9. Cidade Jardim: A prefeitura investe pesado em paisagismo, trocando as flores de acordo com a estação.",
-                    "10. Arquitetura Bavára: O estilo enxaimel é lei em muitas construções para manter a estética europeia."
-                ],
-
-                // TOP 10 CULTURA & RELIGIÃO
-                religiao: [
-                    "1. Igreja Matriz São Pedro: O coração católico da cidade, construída com 78 mil pedras de basalto.",
-                    "2. Igreja do Relógio: Templo luterano no alto de uma colina, com uma vista linda e hortênsias ao redor.",
-                    "3. Caminho da Cruz: Uma Via Sacra ao ar livre perto da Igreja Matriz.",
-                    "4. Gruta N. Sra. de Lourdes: Um local de silêncio e oração encravado na natureza.",
-                    "5. Capela Santa Rita de Cássia: Pequena e histórica, ideal para momentos de reflexão.",
-                    "6. Herança Luterana: A forte imigração alemã trouxe o protestantismo, que convive bem com o catolicismo.",
-                    "7. Tapetes de Corpus Christi: A comunidade enfeita as ruas com serragem colorida e flores.",
-                    "8. Procissão de Ramos: Evento tradicional que movimenta a cidade antes da Páscoa.",
-                    "9. Sino Eletrônico: Os sinos da Igreja Matriz tocam melodias famosas em horários pontuais.",
-                    "10. Festas de Padroeiros: As comunidades do interior (linhas) fazem festas com muita comida e música típica."
-                ],
-
-                // TOP 10 EVENTOS E ESTAÇÕES
-                eventos_estacoes: [
-                    "1. Natal Luz (Out-Jan): Shows, desfiles e luzes transformam a cidade na casa do Papai Noel.",
-                    "2. Festival de Cinema (Agosto): O tapete vermelho mais famoso do Brasil, com celebridades e filmes inéditos.",
-                    "3. Páscoa em Gramado (Mar/Abr): Decoração temática de chocolate e paradas lúdicas na avenida.",
-                    "4. Festa da Colônia (Abril/Maio): Celebração das raízes alemãs e italianas com muita comida típica barata.",
-                    "5. Inverno (Jun-Ago): Alta temporada. Frio, neblina, lareira e vinhos. Prepare o bolso.",
-                    "6. Primavera (Set-Nov): A época das hortênsias. A cidade fica azul e rosa. Clima agradável.",
-                    "7. Festival de Cultura e Gastronomia (Setembro): Chefs renomados criam pratos de rua sofisticados.",
-                    "8. Gramado in Concert (Fevereiro): Festival internacional de música clássica.",
-                    "9. Outono (Mar-Jun): O 'veranico' de maio traz dias quentes e noites frias. As árvores plátanos ficam alaranjadas.",
-                    "10. Vindima (Fev-Mar): Época da colheita da uva, com festas nas vinícolas da região."
-                ],
-
-                // TOP 10 INFO GERAIS
-                info_gerais: [
-                    "1. Voltagem: 220V (Atenção! A maioria do Brasil é 110V/127V).",
-                    "2. DDD: 54.",
-                    "3. Aeroportos: Salgado Filho (Porto Alegre - 2h de viagem) ou Caxias do Sul (45min, mas com neblina).",
-                    "4. Uber/99: Funcionam bem na cidade e para ir até Canela.",
-                    "5. Bustour: Ônibus turístico de dois andares (Hop-on Hop-off) que conecta Gramado e Canela.",
-                    "6. Clima: Pode fazer 30ºC de dia e 10ºC à noite no mesmo dia. O tempo muda rápido.",
-                    "7. Segurança: Uma das cidades mais seguras do Brasil. Pode andar na rua à noite tranquilamente.",
-                    "8. Moeda: Real (BRL). Aceita-se cartão em tudo.",
-                    "9. Taxa de Turismo: Hotéis cobram uma pequena taxa diária (opcional, mas comum) para manutenção da cidade.",
-                    "10. Internet: 4G/5G funcionam bem no centro, mas oscilam nas áreas rurais (Linhas)."
-                ],
-
-                // TOP 10 DICAS ANTES DE IR
-                antes_de_ir: [
-                    "1. Reservas: Restaurantes famosos de Fondue têm filas de espera de 2h. Reserve antes.",
-                    "2. Natal Luz: Compre os ingressos dos shows pagos (Nativitaten, Grande Desfile) meses antes.",
-                    "3. Roupas: Leve casaco SEMPRE. Mesmo no verão, a noite pode esfriar na serra.",
-                    "4. Carro ou Transfer?: Carro dá liberdade, mas estacionar no centro é caro e difícil. Uber sai mais barato.",
-                    "5. Canela: A cidade vizinha é colada (7km). Visite a Catedral de Pedra e o Parque do Caracol.",
-                    "6. Pedágios: Se vier de carro de Porto Alegre, prepare-se para pedágios na rota.",
-                    "7. Neblina: A serra costuma ter neblina densa à noite. Cuidado redobrado na estrada.",
-                    "8. Alta Temporada: Julho, Novembro e Dezembro são meses caros e lotados.",
-                    "9. Calçados: Você vai andar muito. Esqueça salto alto nas ruas de paralelepípedo.",
-                    "10. Chocolate: Deixe espaço na mala para trazer chocolates. É impossível resistir."
-                ],
-                // --- NOVO: NÚMEROS IMPORTANTES (GRAMADO) ---
-                numeros: [
-                    "1. 190 (Brigada Militar): Emergência policial (no Rio Grande do Sul a PM chama-se Brigada).",
-                    "2. (54) 3286-0200 (Hospital Arcanjo São Miguel): O principal hospital da cidade (atende urgências 24h).",
-                    "3. 192 (SAMU): Ambulância para emergências médicas graves.",
-                    "4. 193 (Bombeiros): Incêndios e resgates.",
-                    "5. (54) 3286-9533 (Secretaria de Turismo): Informações oficiais e apoio ao visitante.",
-                    "6. (54) 3286-1070 (Rodoviária de Gramado): Informações sobre horários de ônibus intermunicipais.",
-                    "7. (54) 3295-1795 (Delegacia de Polícia Civil): Para registrar ocorrências e perda de documentos.",
-                    "8. 191 (Polícia Rodoviária Federal): Emergências na estrada (Rota Romântica) vindo de Porto Alegre.",
-                    "9. 156 (Fala Cidadão): Prefeitura de Gramado (dúvidas sobre a cidade e trânsito).",
-                    "10. (54) 3286-8800 (Rádio Táxi Gramado): Serviço de transporte seguro 24 horas."
-                ],
-                // --- NOVO: RISCOS E ERROS (GRAMADO) ---
-                riscos: [
-                    "1. Subestimar o Frio: A umidade da serra faz a sensação térmica ser muito menor que o termômetro. Leve casaco pesado mesmo se a previsão for 10ºC.",
-                    "2. Filas de Fondue: Em alta temporada (julho), chegar num restaurante famoso sem reserva às 20h significa esperar 2 horas na rua gelada. Reserve!",
-                    "3. Neblina na Estrada: A subida da serra à noite ou de manhã cedo costuma ter neblina (cerração) zero visibilidade. Dirija com muito cuidado.",
-                    "4. Voltagem Errada: Gramado é 220V (diferente de Porto Alegre que é 110V). Cuidado para não queimar secadores e chapinhas.",
-                    "5. Estacionamento no Centro: É caro e difícil de achar. O sistema rotativo tem fiscais rigorosos. Use Uber ou estacione mais longe.",
-                    "6. Fondue Muito Barato: Desconfie de promoções agressivas na rua (ex: R$ 39,90). Geralmente a qualidade do queijo e chocolate é baixa.",
-                    "7. Natal Luz em Cima da Hora: Os ingressos para os grandes shows esgotam meses antes. Não deixe para comprar na bilheteria na hora.",
-                    "8. Achar que Neva Sempre: Neve é um fenômeno raro. Não viaje com a certeza absoluta de ver neve para não se frustrar (mas geada é comum!).",
-                    "9. Chocolate 'Pega Turista': Existem dezenas de marcas. Prove antes de comprar caixas grandes. Algumas têm mais gordura hidrogenada que cacau.",
-                    "10. Uber na Chuva: Quando chove ou acaba um show do Natal Luz, conseguir um Uber pode demorar muito. Tenha o telefone de um Rádio Táxi salvo."
-                ],
-                // COLE O ROTEIRO ABAIXO:
-                roteiros: {
-                    "curto": {
-                        titulo: "Roteiro Express (1 a 2 Dias)",
-                        texto: [
-                            "Dia 1 (O Charme do Centro): Comece na Av. Borges de Medeiros, Rua Coberta e Igreja São Pedro. Tarde no Lago Negro (pedalinho). Jantar: Sequência de Fondue obrigatória.",
-                            "Dia 2 (Clássicos): Manhã no Mini Mundo. Tarde: Visite uma Fábrica de Chocolate (Florybal ou Prawer) e tire foto no Pórtico de entrada.",
-                            "Dica Extra: Se der tempo, uma passada rápida na Catedral de Pedra em Canela (7km ao lado)."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Roteiro Essencial (3 a 5 Dias)",
-                        texto: [
-                            "Dias 1 e 2: Siga o Roteiro Express acima.",
-                            "Dia 3 (Aventura na Neve): Dia dedicado ao Snowland (roupa térmica inclusa) ou Acquamotion (águas termais), dependendo do seu estilo.",
-                            "Dia 4 (Explorando Canela): Bondinhos Aéreos (Cascata do Caracol) e Skyglass (plataforma de vidro). Almoço em Canela. Fim de tarde no Castelinho Caracol.",
-                            "Dia 5 (Vistas Incríveis): Olivas de Gramado (pôr do sol com piquenique e música) ou Le Jardin (Parque de Lavanda)."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Roteiro Completo (7+ Dias)",
-                        texto: [
-                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
-                            "Dia 6 (Uva e Vinho): Bate-volta para Bento Gonçalves. Passeio de Maria Fumaça e visita às vinícolas do Vale dos Vinhedos (Miolo ou Casa Valduga).",
-                            "Dia 7 (Raízes): Nova Petrópolis (Labirinto Verde e Praça das Flores). Almoço alemão tradicional.",
-                            "Dia 8 (Gula Final): Manhã de compras na Rua Coberta e despedida com um Café Colonial farto (Bela Vista ou Coelho)."
-                        ]
-                    }
-                },
-                // SEUS LINKS DE AFILIADO (ID 304142)
-                links: {
-                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-644910&aid=304142", 
-                    passeio: "https://www.civitatis.com/br/gramado/", 
-                    seguro: "https://www.segurospromo.com.br" 
-                }
-            },
-            {
-                name: "Foz do Iguaçu",
-                tags: ["Natureza", "Aventura", "Fronteira"],
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Sunset_over_Iguazu2.jpg/960px-Sunset_over_Iguazu2.jpg",
-                mapa: "https://goo.gl/maps/foz",
-                clima: "Subtropical. Verões quentes e invernos amenos (mas pode fazer frio!).",
-                // Adicione dentro do objeto de Foz do Iguaçu
-veredicto: {
-    melhor_epoca: "Abril a Junho ou Setembro a Novembro (Clima agradável). Verão é muito quente, mas as quedas estão com volume máximo.",
-    ideal_para: [
-        "Amantes da natureza e ecoturismo (Cataratas e Parque das Aves)",
-        "Quem busca compras e eletrônicos baratos (Ciudad del Este - Paraguai)",
-        "Curiosos por engenharia gigante (Usina de Itaipu)",
-        "Jantares internacionais (Puerto Iguazú - Argentina)"
-    ],
-    nao_ideal_para: [
-        "Quem tem mobilidade muito reduzida (muita caminhada nas trilhas)",
-        "Quem não suporta calor úmido extremo (Dezembro/Janeiro é sufocante)",
-        "Quem odeia aglomeração e caos urbano (na parte de compras no Paraguai)"
-    ],
-    perfis: [
-        { icone: "ri-plant-fill", nome: "Natureza" },
-        { icone: "ri-shopping-bag-3-fill", nome: "Compras" },
-        { icone: "ri-group-fill", nome: "Família" },
-        { icone: "ri-earth-fill", nome: "Fronteira" }
-    ]
-},
-                // TOP 10 PONTOS TURÍSTICOS
-                pontos_turisticos: [
-                    "1. Cataratas do Iguaçu (Brasil): A vista panorâmica mais bonita. A trilha leva até a 'Garganta do Diabo'.",
-                    "2. Parque das Aves: O maior viveiro de aves da América Latina. Tucanos e araras voam sobre sua cabeça.",
-                    "3. Itaipu Binacional: Visita à maior usina geradora de energia do mundo. O tour panorâmico é grandioso.",
-                    "4. Marco das Três Fronteiras: O encontro mágico entre Brasil, Argentina e Paraguai, com show de luzes ao pôr do sol.",
-                    "5. Macuco Safari: Aventura radical de barco que sobe o rio e entra debaixo das quedas d'água (molha muito!).",
-                    "6. Cataratas (Lado Argentino): Outra perspectiva. Trilhas mais longas e passarelas que ficam em cima das quedas.",
-                    "7. Templo Budista Chen Tien: Um pedaço da Ásia no Paraná. Jardins zen e mais de 120 estátuas.",
-                    "8. Dreamland (Museu de Cera): Diversão para família com réplicas perfeitas de famosos e cenários de filmes.",
-                    "9. Yup Star (Roda Gigante): Uma das maiores da América Latina, com vista para os 3 países.",
-                    "10. Mesquita Omar Ibn Al-Khattab: Uma construção belíssima que mostra a força da comunidade árabe na cidade."
-                ],
-
-                // TOP 10 GASTRONOMIA
-                gastronomia: [
-                    "1. Pirá de Foz: O prato típico oficial. Peixe surubim com molho de gengibre e purê de mandioca.",
-                    "2. Churrasco (Brasil e Argentina): A região tem carnes de elite. O 'Bife de Chorizo' argentino é obrigatório.",
-                    "3. Shawarma: Devido à grande colônia árabe, é o lanche de rua mais popular (pão sírio recheado).",
-                    "4. Chipa Paraguaia: O 'pão de queijo' do Paraguai, feito com polvilho e queijo, em formato de ferradura.",
-                    "5. Peixes do Rio Paraná: Dourado e Pacu assados na brasa são clássicos da região.",
-                    "6. Comida Árabe Autêntica: Restaurantes libaneses de altíssimo nível, com homus, kibe cru e esfihas.",
-                    "7. Doce de Leite Argentino: Em Puerto Iguazú, é item obrigatório de compra e sobremesa.",
-                    "8. Empanadas Argentinas: Pastel de forno com recheios variados (carne cortada na faca é a melhor).",
-                    "9. Tereré: Bebida típica gelada de erva-mate, muito consumida devido ao calor.",
-                    "10. Jantar Show (Rafain): Churrascaria famosa que serve jantar com show de danças latino-americanas."
-                ],
-
-                // TOP 10 CURIOSIDADES
-                curiosidades: [
-                    "1. Tríplice Fronteira: É um dos poucos lugares do mundo onde você pode estar em 3 países no mesmo dia.",
-                    "2. Volume de Água: As Cataratas têm o maior fluxo médio de água do mundo (1.5 milhão de litros por segundo).",
-                    "3. Energia Gigante: A energia gerada por Itaipu poderia abastecer o mundo inteiro por 2 dias.",
-                    "4. Lenda Indígena: Diz a lenda que as quedas foram criadas por uma serpente gigante (M'Boi) furiosa de amor.",
-                    "5. Comunidade Árabe: Foz tem a 2ª maior comunidade árabe do Brasil, perdendo apenas para SP.",
-                    "6. Sete Maravilhas: As Cataratas foram eleitas uma das 7 Maravilhas Naturais do Mundo.",
-                    "7. Ponte da Amizade: É a fronteira mais movimentada do Brasil (milhares de pessoas cruzam para o Paraguai todo dia).",
-                    "8. Cidade Cosmopolita: Mais de 80 etnias vivem em harmonia na cidade.",
-                    "9. Parque Nacional: É Patrimônio Natural da Humanidade pela UNESCO.",
-                    "10. Quatis Ladrões: Cuidado com os quatis no parque! Eles abrem zíperes de mochilas para roubar comida."
-                ],
-
-                // TOP 10 CULTURA & RELIGIÃO
-                religiao: [
-                    "1. Diversidade Única: Católicos, Muçulmanos, Budistas e Espíritas convivem em paz exemplar.",
-                    "2. Mesquita Omar Ibn Al-Khattab: Uma das maiores do Brasil. O interior tem arabescos incríveis (precisa usar véu).",
-                    "3. Templo Budista Chen Tien: Fica no alto de uma colina com vista para o Paraguai. Tem um Buda de 7 metros.",
-                    "4. Catedral São João Batista: O padroeiro da cidade. A festa junina da catedral é famosa.",
-                    "5. Comunidade Islâmica: É comum ver mulheres de hijab e ouvir o chamado para oração na região da Mesquita.",
-                    "6. Capela da Nossa Senhora de Caacupé: Padroeira do Paraguai, muito venerada na fronteira.",
-                    "7. Lendas Guaranis: A cultura indígena local é forte e preservada nas histórias das tribos.",
-                    "8. Igrejas Evangélicas: Grande crescimento e presença nos bairros.",
-                    "9. Centro de Cultura Árabe: Promove aulas de língua e culinária para integrar a comunidade.",
-                    "10. Natal de Águas e Luzes: Evento ecumênico que une a cidade no final do ano."
-                ],
-
-                // TOP 10 EVENTOS E ESTAÇÕES
-                eventos_estacoes: [
-                    "1. Verão (Dez-Mar): Calor intenso (35ºC+) e chuvas rápidas. As cataratas ficam com vazão máxima (barrentas).",
-                    "2. Inverno (Jun-Ago): Ameno a frio (10ºC-20ºC). Água mais limpa e definida nas quedas. Ótimo para caminhar.",
-                    "3. Natal de Águas e Luzes (Dez): Decoração linda na cidade e na Usina de Itaipu.",
-                    "4. Black Friday (Nov): O comércio do Paraguai faz promoções gigantescas.",
-                    "5. Meia Maratona das Cataratas: Corrida famosa que passa dentro do Parque Nacional.",
-                    "6. Primavera (Set-Nov): Clima agradável e o parque cheio de borboletas.",
-                    "7. Festival de Turismo das Cataratas (Jun): Grande evento de negócios do setor.",
-                    "8. Outono (Mar-Jun): Considerada por muitos a melhor época (menos calor, menos chuva).",
-                    "9. Feriados: A cidade lota. Reserve hotel com antecedência.",
-                    "10. Vazão das Águas: Varia o ano todo. Na seca as quedas ficam definidas; na cheia, vira um 'mar' de água."
-                ],
-
-                // TOP 10 INFO GERAIS
-                info_gerais: [
-                    "1. Voltagem: 110V/127V (Diferente de muitas cidades do sul que são 220V).",
-                    "2. Moeda: Real (BR), Peso (AR), Guarani (PY) e Dólar (US) são aceitos em quase todo lugar.",
-                    "3. Documentos: RG (menos de 10 anos) ou Passaporte para cruzar fronteiras. CNH vale só para dirigir (não serve para imigração em alguns casos).",
-                    "4. DDD: 45.",
-                    "5. Aeroporto: IGU (Foz do Iguaçu). Tem também o de Puerto Iguazú (IGR) na Argentina.",
-                    "6. Compras Paraguai: Cota de isenção é US$ 500 via terrestre (sujeito a mudança, verifique).",
-                    "7. Transporte: Uber funciona bem no Brasil. Para cruzar fronteira, melhor usar táxi, transfer ou ônibus internacional.",
-                    "8. Carta Verde: Seguro obrigatório para dirigir carro brasileiro na Argentina ou Paraguai.",
-                    "9. Clima: Úmido. A sensação térmica no verão é de 'sauna'.",
-                    "10. Idioma: Português, mas o 'Portunhol' é a língua não-oficial da fronteira."
-                ],
-
-                // TOP 10 DICAS ANTES DE IR
-                antes_de_ir: [
-                    "1. Capa de Chuva: Leve de casa. No parque custa o triplo e você VAI se molhar na passarela.",
-                    "2. Paraguai: Vá de manhã cedo (7h) para evitar filas na ponte e calor. Cuide da bolsa nas ruas cheias.",
-                    "3. Lado Argentino: Reserve um dia inteiro. É maior que o lado brasileiro e exige muita caminhada.",
-                    "4. Protetor e Repelente: O parque é mata fechada. Tem sol forte e insetos.",
-                    "5. Roupas: Tênis confortável é obrigatório. Roupas que secam rápido (Dri-fit) ajudam.",
-                    "6. Câmbio: Não troque dinheiro no aeroporto. Casas de câmbio no centro têm cotação melhor.",
-                    "7. Itaipu: O passeio 'Circuito Especial' entra dentro da usina (exige calça comprida e sapato fechado).",
-                    "8. Quatis: Não coma nada nas trilhas das Cataratas. Os quatis sentem cheiro e atacam em bando.",
-                    "9. Duty Free: O Duty Free da Argentina (antes da aduana) é lindo e climatizado, vale o passeio.",
-                    "10. Vacina: Tenha a vacina de Febre Amarela em dia (recomendado para áreas de mata)."
-                ],
-                // --- NOVO: NÚMEROS IMPORTANTES (FOZ DO IGUAÇU) ---
-                numeros: [
-                    "1. 190 (Polícia Militar): Emergência e segurança pública geral.",
-                    "2. (45) 2105-8135 (Polícia Turística): Batalhão especializado no atendimento ao visitante (PMPR).",
-                    "3. 192 (SAMU): Urgências médicas, mal súbito e acidentes.",
-                    "4. 193 (Bombeiros/SIATE): Resgate de traumas e incêndios.",
-                    "5. 0800 045 1516 (Teletur): Central de informações turísticas 24h gratuita.",
-                    "6. (45) 3576-5700 (Polícia Federal): Dúvidas sobre imigração, fronteiras e passaportes.",
-                    "7. (45) 3521-4200 (Aeroporto IGU): Informações sobre voos e achados e perdidos.",
-                    "8. (45) 3522-2590 (Rodoviária Internacional): Ônibus para o Brasil, Paraguai e Argentina.",
-                    "9. (45) 3521-1951 (Hospital Municipal): O Padre Germano Lauck é a referência pública de emergência.",
-                    "10. (45) 3522-1315 (Aduana/Receita Federal): Informações sobre cotas de compras e impostos na Ponte da Amizade."
-                ],
-                // --- NOVO: RISCOS E ERROS (FOZ DO IGUAÇU) ---
-                riscos: [
-                    "1. 'Guias' de Rua no Paraguai: Ao cruzar a ponte, homens vão te abordar oferecendo ajuda ou estacionamento. IGNORE. Eles ganham comissão para te levar em lojas ruins.",
-                    "2. Quatis nas Cataratas: Eles parecem fofos, mas são agressivos e mordem se sentirem cheiro de comida. Não abra lanches nas trilhas, eles atacam em bando.",
-                    "3. Eletrônicos na Rua: Nunca compre pen drives, perfumes ou celulares de ambulantes na rua em Ciudad del Este. São 100% falsificados ou golpe (caixa vazia).",
-                    "4. Molhar Eletrônicos: Na passarela da Garganta do Diabo, o spray de água é violento. Se seu celular não for à prova d'água, use capinha ou vai perder o aparelho.",
-                    "5. Cota de Compras: A cota é de US$ 500 via terrestre. Se passar disso, declare! A fiscalização na aduana brasileira é frequente e a multa é alta.",
-                    "6. Táxi x Uber na Fronteira: Uber brasileiro não pode cruzar a fronteira (o seguro não cobre). Para ir ao Paraguai/Argentina, use ônibus internacional, táxi ou transfer.",
-                    "7. Documento Vencido: RG com mais de 10 anos ou em mau estado é barrado na imigração da Argentina. Leve Passaporte ou RG novo.",
-                    "8. Lojas sem Garantia: No Paraguai, teste o produto NA LOJA antes de sair. A garantia 'soy yo' não existe. Exija testar na hora.",
-                    "9. Câmbio no Aeroporto: A cotação dentro do aeroporto é péssima. Troque o mínimo possível e deixe para trocar o resto nas casas de câmbio da cidade.",
-                    "10. Macuco Safari: Se tiver problemas de coluna ou estiver grávida, evite. O barco bate muito na água e a aventura é radical de verdade."
-                ],
-                // --- NOVO: ROTEIRO AUTOMÁTICO (FOZ DO IGUAÇU) ---
-                roteiros: {
-                    "curto": {
-                        titulo: "Roteiro Express (1 a 2 Dias)",
-                        texto: [
-                            "Dia 1 (Obrigatório): Manhã nas Cataratas Brasileiras (trilha + almoço no Porto Canoas). Tarde no Parque das Aves (logo na frente). Noite: Marco das 3 Fronteiras (show e pôr do sol).",
-                            "Dia 2 (Compras e Energia): Manhã de compras no Paraguai (vá cedo, volte 13h). Tarde na Usina de Itaipu (Panorâmica). Noite: Jantar árabe ou Churrascaria Rafain."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Roteiro Essencial (3 a 5 Dias)",
-                        texto: [
-                            "Dias 1 e 2: Siga o Roteiro Express acima.",
-                            "Dia 3 (Lado Argentino): Dedique o dia todo às Cataratas Argentinas. É muita caminhada. Jante em Puerto Iguazú (Bife de Chorizo).",
-                            "Dia 4 (Aventura): Macuco Safari (barco nas cataratas) pela manhã. Tarde livre para piscina do hotel ou Museu de Cera (se tiver crianças).",
-                            "Dia 5 (Cultura): Templo Budista e Mesquita pela manhã. Almoço no Rafaian (costelão). Tarde relax no Blue Park ou compras no Duty Free (AR)."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Roteiro Completo (7+ Dias)",
-                        texto: [
-                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
-                            "Dia 6 (Exploração): Kattamaram (passeio de barco no lago de Itaipu ao pôr do sol) ou Refúgio Biológico Bela Vista.",
-                            "Dia 7 (Compras VIP): Dia focado em compras de luxo no Duty Free Puerto Iguazú e vinhos nas vinotecas argentinas.",
-                            "Dia 8 (Natureza Secreta): Aguaray Eco Esportes (canoagem e trilha) ou Cachoeiras Secretas de Foz."
-                        ]
-                    }
-                },
-            
-                // SEUS LINKS DE AFILIADO (ID 304142)
-                links: {
-                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-643449&aid=304142", 
-                    passeio: "https://www.civitatis.com/br/foz-do-iguacu/", 
-                    seguro: "https://www.segurospromo.com.br" 
-                }
-            },
-            {
-                name: "Florianópolis",
-                // FOTO: Ponte Hercílio Luz (Wikimedia - Link Estável)
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Morro_da_Cruz%2C_Florian%C3%B3polis_-_SC%2C_Brazil_-_panoramio_%28cropped%29.jpg/1280px-Morro_da_Cruz%2C_Florian%C3%B3polis_-_SC%2C_Brazil_-_panoramio_%28cropped%29.jpg",
-                tags: ["Praia", "Ilha da Magia", "Surf"],
-                mapa: "https://goo.gl/maps/floripa",
-                clima: "Subtropical Úmido. Verões quentes (e chuvosos) e invernos amenos com vento sul gelado.",
-                // Adicione dentro do objeto de Florianópolis
-veredicto: {
-    melhor_epoca: "Março e Abril (O 'Veranico' tem sol, água agradável e menos trânsito). Dezembro/Janeiro é o auge do agito, mas o trânsito é intenso.",
-    ideal_para: [
-        "Amantes de praia (são 42 oficiais, uma para cada gosto)",
-        "Surfistas e praticantes de esportes ao ar livre (Sandboard, Kitesurf)",
-        "Vida noturna agitada (Beach Clubs de Jurerê e bares da Lagoa)",
-        "Gastronomia de frutos do mar (Rota das Ostras no Ribeirão da Ilha)"
-    ],
-    nao_ideal_para: [
-        "Quem tem fobia de trânsito parado (as filas no verão são lendárias)",
-        "Quem espera água morna o ano todo (a água é mais fria que no Nordeste)",
-        "Quem depende exclusivamente de ônibus (as distâncias são longas e demoradas)"
-    ],
-    perfis: [
-        { icone: "ri-sun-fill", nome: "Praia" },
-        { icone: "ri-surfboard-fill", nome: "Surf/Vibe" },
-        { icone: "ri-goblet-fill", nome: "Agito" },
-        { icone: "ri-restaurant-2-fill", nome: "Gastrô" }
-    ]
-},
-                // TOP 10 PONTOS TURÍSTICOS
-                pontos_turisticos: [
-                    "1. Ponte Hercílio Luz: O ícone da cidade. Atravesse a pé no pôr do sol para uma vista incrível.",
-                    "2. Ilha do Campeche: O 'Caribe Brasileiro'. Águas cristalinas e areia branca (acesso só de barco).",
-                    "3. Lagoa da Conceição: O coração da ilha. Esportes náuticos, dunas de areia e vida noturna agitada.",
-                    "4. Jurerê Internacional: O bairro do luxo, mansões sem muros, carrões e baladas famosas (beach clubs).",
-                    "5. Santo Antônio de Lisboa: Bairro histórico açoriano, com arquitetura colonial e pôr do sol imperdível.",
-                    "6. Praia da Joaquina: Famosa mundialmente pelas dunas (sandboard) e ondas perfeitas para o surf.",
-                    "7. Centro Histórico: Mercado Público, a Figueira Centenária e a Catedral Metropolitana.",
-                    "8. Mirante do Morro da Cruz: A melhor vista panorâmica da ilha e do continente.",
-                    "9. Praia Mole: O point da juventude, surfistas e da comunidade LGBT+. Clima descontraído.",
-                    "10. Projeto Tamar: Na Barra da Lagoa, um centro de visitação focado na preservação das tartarugas marinhas."
-                ],
-
-                // TOP 10 GASTRONOMIA (Cidade Criativa da UNESCO)
-                gastronomia: [
-                    "1. Ostras: Floripa é a capital nacional da ostra. Prove gratinada ou in natura no Ribeirão da Ilha.",
-                    "2. Sequência de Camarão: Vários pratos de camarão (frito, ao bafo, milanesa) servidos de uma vez.",
-                    "3. Tainha Assada: No inverno, é o prato rei. A pesca da tainha é tradição cultural.",
-                    "4. Pirão de Peixe: Acompanhamento obrigatório da culinária 'manezinha' (nativa).",
-                    "5. Pastel de Berbigão: Clássico do Mercado Público. Berbigão é um molusco típico da região.",
-                    "6. Café Colonial: Muito comum nas áreas de colonização alemã próximas, mas forte na ilha também.",
-                    "7. Cervejas Artesanais: A região é um polo cervejeiro premiado mundialmente.",
-                    "8. Anchova Grelhada: Peixe saboroso e muito comum nos restaurantes pé na areia.",
-                    "9. Cucas e Pães: Herança dos colonizadores, encontradas em padarias tradicionais.",
-                    "10. Alta Gastronomia: A cidade explodiu com restaurantes de chefs renomados nos últimos anos."
-                ],
-
-                // TOP 10 CURIOSIDADES
-                curiosidades: [
-                    "1. Ilha da Magia: Lendas dizem que bruxas habitavam a ilha e davam festas nas pedras de Itaguaçu.",
-                    "2. 42 Praias?: Dizem que são 42, mas os nativos garantem que passa de 100 se contar as pequenas baías.",
-                    "3. Manezinho da Ilha: É como se chama quem nasce em Floripa. Eles têm um sotaque rápido e único.",
-                    "4. Bernunça: Um bicho folclórico (parece um dragão) que engole crianças nas festas do Boi de Mamão.",
-                    "5. Gustavo Kuerten (Guga): O maior tenista do Brasil nasceu e mora aqui.",
-                    "6. Ponte Fechada: A Hercílio Luz ficou 28 anos interditada por risco de queda antes de reabrir em 2019.",
-                    "7. Duas Cidades: Floripa tem uma parte na Ilha (maioria) e uma parte no Continente.",
-                    "8. Renda de Bilro: Tradição trazida pelos Açores, ainda feita por rendeiras na Lagoa e Ribeirão.",
-                    "9. Garapuvu: É a árvore símbolo da cidade, usada antigamente para fazer canoas de um tronco só.",
-                    "10. Ostravaganza: A cidade produz mais de 90% das ostras consumidas no Brasil."
-                ],
-
-                // TOP 10 CULTURA & RELIGIÃO
-                religiao: [
-                    "1. Festa do Divino: A maior tradição açoriana. Cortejos imperiais e muita comida grátis nas comunidades.",
-                    "2. Catedral Metropolitana: No ponto mais alto do centro, belíssima arquitetura colonial.",
-                    "3. Procissão do Senhor dos Passos: Uma das maiores manifestações religiosas do sul do país.",
-                    "4. Bruxaria e Misticismo: Franklin Cascaes registrou as lendas de bruxas que permeiam a cultura local.",
-                    "5. Igrejas de Ribeirão da Ilha: Pequenas capelas de frente para o mar, preservadas desde o séc XVIII.",
-                    "6. Iemanjá: O réveillon na ilha é marcado por muitas oferendas ao mar.",
-                    "7. Boi de Mamão: Teatro folclórico de rua, mistura de dança e música, amado pelas crianças.",
-                    "8. Diversidade: A ilha atrai pessoas do mundo todo, criando um ambiente de tolerância religiosa.",
-                    "9. Espiritismo: Forte presença de centros e obras sociais na região.",
-                    "10. Capelas de Santo Antônio: O santo casamenteiro é muito venerado nos bairros históricos."
-                ],
-
-                // TOP 10 EVENTOS E ESTAÇÕES
-                eventos_estacoes: [
-                    "1. Verão (Dez-Mar): A cidade lota. Praias cheias, festas em Jurerê e muito trânsito (Fila).",
-                    "2. Carnaval: As escolas de samba desfilam na passarela e o 'Bloco dos Sujos' toma o centro.",
-                    "3. Ironman Brasil (Maio): A maior prova de triathlon da América Latina acontece em Jurerê.",
-                    "4. Fenaostra (Set/Out): Festa Nacional da Ostra, com muita gastronomia e shows.",
-                    "5. Inverno (Jun-Ago): Época da Tainha. Praias vazias, dias lindos de céu azul, mas água gelada.",
-                    "6. Réveillon: O show de fogos na Ponte Hercílio Luz e na Beira-Mar Norte é espetacular.",
-                    "7. Maratona de Floripa (Ago): Corrida plana e rápida que atrai corredores do país todo.",
-                    "8. Planeta Atlântida: Festival de música gigante que ocorre no verão (próximo à ilha).",
-                    "9. Primavera (Set-Nov): Época de avistar baleias-francas no sul da ilha.",
-                    "10. Vento Sul: Fenômeno meteorológico que limpa o céu, esfria a temperatura e arrepia o mar."
-                ],
-
-                // TOP 10 INFO GERAIS
-                info_gerais: [
-                    "1. Voltagem: 220V (Atenção! Maioria dos secadores de SP/RJ vai queimar aqui).",
-                    "2. DDD: 48.",
-                    "3. Aeroporto: FLN (Florianópolis). O novo terminal é moderno e eficiente.",
-                    "4. Transporte: Uber funciona bem. Ônibus são integrados por terminais (TICEN, TIRIO, etc).",
-                    "5. Trânsito: No verão, o trânsito para as praias (Norte e Sul) é caótico. Saia cedo.",
-                    "6. Segurança: Capital mais segura do Brasil, mas não descuide de celulares na praia.",
-                    "7. Água do Mar: É fria! Mesmo no verão, a corrente das Malvinas deixa a água refrescante.",
-                    "8. Norte vs Sul: Norte (águas quentes, calmas, luxo); Sul (águas frias, rústico, natureza); Leste (ondas, surf).",
-                    "9. Moeda: Real (BRL). Aceita cartão em tudo, até no vendedor de queijo coalho na areia.",
-                    "10. Custo: Jurerê é caríssimo. Outras praias têm preços justos. Pesquise antes de sentar."
-                ],
-
-                // TOP 10 DICAS ANTES DE IR
-                antes_de_ir: [
-                    "1. Planeje o Trânsito: Em alta temporada, escolha uma região (Norte ou Sul) e fique nela para não perder horas na fila.",
-                    "2. Vento Sul: Se ventar Sul, a praia fica ruim. Vá para o norte da ilha ou passeios culturais.",
-                    "3. Ilha do Campeche: Tem cota diária de visitantes. Reserve o barco com antecedência.",
-                    "4. Ponte Hercílio Luz: Atravesse a pé. É grátis e a vista é linda, especialmente no fim de tarde.",
-                    "5. Uber no Aeroporto: Tem local específico para embarque (piso inferior).",
-                    "6. Trilhas: A ilha tem trilhas incríveis (Lagoinha do Leste é a mais famosa/difícil). Leve água.",
-                    "7. Praias Impróprias: Confira o relatório de balneabilidade (especialmente Canasvieiras e Ingleses) antes de entrar.",
-                    "8. Protetor Solar: O sol do sul queima muito, mesmo com vento fresco.",
-                    "9. Dinheiro: Leve espécie para pagar estacionamentos e vendedores de praia (o sinal de máquina pode falhar).",
-                    "10. Deixe Limpo: O manezinho cuida muito da natureza. Leve seu lixo embora da praia."
-                ],
-                // --- NOVO: NÚMEROS IMPORTANTES (FLORIANÓPOLIS) ---
-                numeros: [
-                    "1. 190 (Polícia Militar): Emergência, segurança pública e policiamento nas praias.",
-                    "2. (48) 3665-5700 (DPTUR): Delegacia de Proteção ao Turista (atendimento especializado).",
-                    "3. 192 (SAMU): Urgências médicas, mal súbito e acidentes.",
-                    "4. 193 (Bombeiros / Salva-Vidas): Incêndios e, principalmente, afogamentos ou resgates no mar/trilhas.",
-                    "5. (48) 3331-4000 (Aeroporto Hercílio Luz): Informações de voos e achados e perdidos.",
-                    "6. (48) 3212-3035 (Rodoviária Rita Maria): Informações sobre ônibus para outras cidades/estados.",
-                    "7. 153 (Guarda Municipal): Trânsito e apoio ao cidadão na ilha.",
-                    "8. (48) 3251-9000 (Hospital Celso Ramos): Principal hospital de emergência (trauma) no centro da cidade.",
-                    "9. (48) 3025-6868 (Consórcio Fênix): Horários e linhas dos ônibus urbanos (TICEN, TIRIO, etc).",
-                    "10. 199 (Defesa Civil): Para emergências em dias de chuva forte (deslizamentos ou alagamentos)."
-                ],
-                // --- NOVO: RISCOS E ERROS (FLORIANÓPOLIS) ---
-                riscos: [
-                    "1. Fila de Trânsito: O erro nº 1. No verão, cruzar a ilha (Centro -> Norte ou Lagoa) pode levar 3 horas. Escolha um lado da ilha e fique nele.",
-                    "2. Vento Sul: O 'Vento Sul' estraga a praia (esfria e joga areia). Se ventar sul, fuja para o Norte da ilha ou passeios fechados.",
-                    "3. Água Imprópria (Vírus): No pico da temporada, praias movimentadas (Canasvieiras/Ingleses) podem ficar impróprias. Consulte o site do IMA (Balneabilidade) antes de entrar.",
-                    "4. Choque Térmico: Não espere água quentinha do Nordeste. A água é gelada (corrente das Malvinas). Entre devagar para evitar cãibras.",
-                    "5. Preços de Jurerê: Sentar em um Beach Club sem perguntar o preço antes pode custar uma fortuna. Uma água pode custar R$ 15 e uma porção R$ 200.",
-                    "6. Trilhas de Chinelo: A trilha da Lagoinha do Leste é difícil e íngreme. Turistas de chinelo frequentemente torcem o pé e precisam de resgate.",
-                    "7. Furto em Carros: Ao estacionar nas praias (especialmente Joaquina e Mole), NUNCA deixe mochilas ou eletrônicos visíveis dentro do carro.",
-                    "8. Golpe do Aluguel: Cuidado com casas de temporada incríveis e baratas no OLX/Facebook. O golpe do aluguel falso explode no verão.",
-                    "9. Uber Cancelando: Com o trânsito parado, motoristas cancelam muito. Em dias de chuva ou horários de pico, é difícil conseguir carro.",
-                    "10. Tainha 'Falsa': Na época da tainha, alguns restaurantes vendem tainha congelada do ano passado como fresca. Pergunte se é 'pesca do dia'."
-                ],
-                // --- NOVO: ROTEIRO AUTOMÁTICO (FLORIPA) ---
-                roteiros: {
-                    "curto": {
-                        titulo: "Roteiro Express (1 a 2 Dias)",
-                        texto: [
-                            "Dia 1 (Cartões-Postais): Manhã no Centro (Mercado Público + Praça XV). Tarde na Lagoa da Conceição (mirante) e Joaquina (dunas). Pôr do sol na Ponte Hercílio Luz.",
-                            "Dia 2 (Norte ou Sul): Escolha um lado para não perder tempo no trânsito. Norte: Jurerê Internacional e Forte São José. OU Sul: Ilha do Campeche (reserve antes) e Ribeirão da Ilha."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Roteiro Essencial (3 a 5 Dias)",
-                        texto: [
-                            "Dias 1 e 2: Siga o Roteiro Express acima.",
-                            "Dia 3 (História e Gastronomia): Santo Antônio de Lisboa (caminhada e almoço). Tarde em Sambaqui (pôr do sol mais bonito).",
-                            "Dia 4 (Natureza): Trilha da Lagoinha do Leste (se tiver fôlego) ou Praia do Matadeiro + Armação.",
-                            "Dia 5 (Família/Relax): Projeto Tamar na Barra da Lagoa. Almoço na Costa da Lagoa (vá de barquinho, é lindo)."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Roteiro Completo (7+ Dias)",
-                        texto: [
-                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
-                            "Dia 6 (Bate-volta): Guarda do Embaú (rio encontrando o mar) ou Bombinhas (mergulho).",
-                            "Dia 7 (Aventura): Mergulho na Ilha do Arvoredo ou Sandboard nas dunas da Joaquina.",
-                            "Dia 8 (Despedida): Café da manhã colonial e compras de artesanato no centro."
-                        ]
-                    }
-                },
-                // SEUS LINKS DE AFILIADO (ID 304142)
-                links: {
-                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-643260&aid=304142", 
-                    passeio: "https://www.civitatis.com/br/florianopolis/", 
-                    seguro: "https://www.segurospromo.com.br" 
-                }
-            },
-            {
-                name: "Salvador",
-                // FOTO: Pelourinho (Wikimedia - Link Estável e Clássico)
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Entardecer_elevedor_lacerda.jpg/960px-Entardecer_elevedor_lacerda.jpg",
-                tags: ["História", "Axé", "Praia"],
-                mapa: "https://goo.gl/maps/salvador",
-                clima: "Tropical Quente. Sol o ano todo, com chuvas de Abril a Junho. Vento constante.",
-                // Adicione dentro do objeto de Salvador
-veredicto: {
-    melhor_epoca: "Setembro a Março (Época seca e festiva). Evite Abril e Maio (Chuvas torrenciais). O Carnaval (Fev/Mar) é uma experiência à parte.",
-    ideal_para: [
-        "Imersão profunda na cultura e história afro-brasileira (Pelourinho)",
-        "Amantes de música e festas de rua (Axé, Olodum, Ensaios de Verão)",
-        "Quem busca gastronomia com personalidade forte (Acarajé, Dendê)",
-        "Praias urbanas com água morna o ano todo (Porto da Barra)"
-    ],
-    nao_ideal_para: [
-        "Quem busca silêncio e ordem (a cidade é vibrante, barulhenta e caótica)",
-        "Pessoas com estômago sensível a temperos fortes (o dendê não perdoa)",
-        "Quem se incomoda com abordagens constantes de vendedores na rua"
-    ],
-    perfis: [
-        { icone: "ri-bank-fill", nome: "História" },
-        { icone: "ri-music-2-fill", nome: "Axé/Festa" },
-        { icone: "ri-fire-fill", nome: "Gastrô" },
-        { icone: "ri-sun-fill", nome: "Praia" }
-    ]
-},
-                // TOP 10 PONTOS TURÍSTICOS
-                pontos_turisticos: [
-                    "1. Pelourinho: O centro histórico, patrimônio da UNESCO. Casas coloridas, igrejas e o som do Olodum.",
-                    "2. Elevador Lacerda: O primeiro elevador urbano do mundo. Liga a Cidade Alta à Cidade Baixa (vista incrível).",
-                    "3. Farol da Barra: O lugar clássico para ver o pôr do sol. Abriga o Museu Náutico.",
-                    "4. Igreja do Bonfim: Onde se amarram as fitinhas. A grade colorida é a foto mais tradicional da Bahia.",
-                    "5. Mercado Modelo: Artesanato, capoeira e cultura na Cidade Baixa, em frente ao mar.",
-                    "6. Igreja de São Francisco: Conhecida como 'Igreja de Ouro'. O interior é coberto por toneladas de ouro barroco.",
-                    "7. Praia do Porto da Barra: Eleita uma das melhores do mundo. Águas calmas e cristalinas dentro da cidade.",
-                    "8. Casa do Rio Vermelho: A antiga casa onde moraram Jorge Amado e Zélia Gattai. Emocionante e linda.",
-                    "9. Ponta de Humaitá: Um visual panorâmico da Baía de Todos os Santos, perfeito para o fim de tarde.",
-                    "10. Dique do Tororó: Um lago no meio da cidade com estátuas gigantes dos Orixás flutuando na água."
-                ],
-
-                // TOP 10 GASTRONOMIA (Acarajé é Lei!)
-                gastronomia: [
-                    "1. Acarajé: Bolinho de feijão fradinho frito no dendê. Peça 'quente' (com pimenta) ou 'frio' (sem).",
-                    "2. Moqueca Baiana: Feita com azeite de dendê, leite de coco e coentro. A de camarão é a favorita.",
-                    "3. Vatapá: Creme amarelo feito de pão, camarão seco e amendoim. Acompanha o acarajé ou pratos.",
-                    "4. Cocada: Branca (tradicional) ou Preta (queimada). Vendida em tabuleiros pelas baianas.",
-                    "5. Bobó de Camarão: Creme de mandioca (aipim) com camarão e dendê. Super cremoso.",
-                    "6. Sorvete da Ribeira: Sorveteria histórica (1931) com sabores de frutas tropicais exóticas.",
-                    "7. Lambreta: Molusco típico servido em bares, geralmente cozido no vapor.",
-                    "8. Caruru: Quiabo cortadinho com camarão seco e dendê. Comida de santo e de festa.",
-                    "9. Cravinho: Bebida típica do Pelourinho (cachaça com cravo e mel). Forte e saborosa.",
-                    "10. Pãozinho Delícia: Um pão super macio com queijo, típico das festas de aniversário baianas."
-                ],
-
-                // TOP 10 CURIOSIDADES
-                curiosidades: [
-                    "1. Primeira Capital: Salvador foi a primeira capital do Brasil (de 1549 a 1763).",
-                    "2. Roma Negra: É a cidade com maior população negra fora da África, pulsando cultura afro em tudo.",
-                    "3. 365 Igrejas?: Diz a lenda que a Bahia tem uma igreja para cada dia do ano (na verdade, são quase 400).",
-                    "4. Elevador de Transporte: O Lacerda não é turístico, é transporte público real (custa centavos).",
-                    "5. Carnaval: É o maior carnaval de rua do planeta (Guinness Book), com trios elétricos gigantes.",
-                    "6. Michael Jackson: O rei do pop gravou o clipe de 'They Don't Care About Us' no Pelourinho com o Olodum.",
-                    "7. Baía Gigante: A Baía de Todos os Santos é a segunda maior do mundo (cabe o Rio de Janeiro dentro).",
-                    "8. Capoeira: A arte marcial disfarçada de dança nasceu aqui como resistência dos escravizados.",
-                    "9. Irmã Dulce: A primeira santa brasileira viveu e fez sua obra de caridade em Salvador.",
-                    "10. Axé Music: Gênero musical que nasceu aqui nos anos 80, misturando frevo, reggae e percussão."
-                ],
-
-                // TOP 10 CULTURA & RELIGIÃO
-                religiao: [
-                    "1. Sincretismo: A mistura única. Senhor do Bonfim é associado a Oxalá; Santa Bárbara a Iansã.",
-                    "2. Candomblé: A religião de matriz africana é fortíssima. Respeite os Terreiros e as roupas brancas na sexta.",
-                    "3. Lavagem do Bonfim: Uma festa religiosa onde baianas lavam as escadarias da igreja com água de cheiro.",
-                    "4. Festa de Iemanjá (02/Fev): Milhares de pessoas levam flores e presentes para o mar no Rio Vermelho.",
-                    "5. Baianas de Acarajé: O ofício das baianas é considerado Patrimônio Imaterial do Brasil.",
-                    "6. Missa do Rosário dos Pretos: Uma missa católica no Pelourinho que usa atabaques e ritmos africanos.",
-                    "7. Orixás: As estátuas no Dique do Tororó representam as divindades africanas que protegem a cidade.",
-                    "8. Fitinhas do Bonfim: Tradição de amarrar no pulso com 3 nós (3 pedidos). Só rompe quando o pedido realiza.",
-                    "9. Terça da Benção: Festa tradicional no Pelourinho às terças-feiras, após a missa.",
-                    "10. Santa Dulce dos Pobres: O santuário da santa brasileira é local de muita peregrinação e fé."
-                ],
-
-                // TOP 10 EVENTOS E ESTAÇÕES
-                eventos_estacoes: [
-                    "1. Carnaval (Fev/Mar): A cidade para. Circuitos Barra-Ondina e Campo Grande arrastam multidões.",
-                    "2. Verão (Dez-Mar): A cidade ferve. Ensaios de verão, festas de largo e muito sol.",
-                    "3. Festa de Iemanjá (2 de Fevereiro): A maior celebração pública do Candomblé.",
-                    "4. Lavagem do Bonfim (Janeiro): Cortejo de 8km com muita fé e festa profana misturadas.",
-                    "5. Festival de Verão (Janeiro): Um dos maiores festivais de música do Brasil.",
-                    "6. Santa Bárbara (4 de Dezembro): Abre o calendário de festas populares com muito caruru (comida).",
-                    "7. Ensaio do Olodum: Acontece no Pelourinho (terças e domingos). Energia surreal.",
-                    "8. São João (Junho): Embora a festa maior seja no interior, o Pelourinho fica todo decorado e com forró.",
-                    "9. Inverno (Maio-Julho): É a época chuvosa. Pode chover dias seguidos, atrapalhando a praia.",
-                    "10. Dia do Samba (2 de Dezembro): Festas gratuitas celebram o ritmo que nasceu na Bahia."
-                ],
-
-                // TOP 10 INFO GERAIS
-                info_gerais: [
-                    "1. Voltagem: 127V (110V). Diferente de outras capitais do Nordeste que são 220V. Confira sempre!",
-                    "2. DDD: 71.",
-                    "3. Soteropolitano: É quem nasce em Salvador (vem do grego 'Soteropolis' - Cidade do Salvador).",
-                    "4. Aeroporto: SSA (Deputado Luís Eduardo Magalhães). Tem metrô ligando ao centro.",
-                    "5. Metrô: Limpo e moderno, liga o Aeroporto até a Lapa (perto do centro histórico).",
-                    "6. Trânsito: Intenso nos horários de pico. Uber funciona bem, mas evite em dias de grandes festas.",
-                    "7. Segurança: Exige atenção redobrada. Não ande com celular na mão ou correntes de ouro na rua.",
-                    "8. Topografia: A cidade é dividida em Cidade Alta (histórica/residencial) e Cidade Baixa (comércio/porto).",
-                    "9. Ritmo: 'Sorria, você está na Bahia'. O ritmo aqui é mais lento e relaxado (Balanço da rede).",
-                    "10. Hospitalidade: O baiano é conhecido por ser um dos povos mais acolhedores do mundo."
-                ],
-
-                // TOP 10 DICAS ANTES DE IR
-                antes_de_ir: [
-                    "1. Assédio de Vendedores: No Pelourinho, vendedores de 'fitinha' e pintura corporal são insistentes. Diga 'não, obrigado' firme.",
-                    "2. Golpe da Fitinha: Se alguém tentar amarrar uma fita no seu braço 'de presente', recuse. Eles vão cobrar caro depois.",
-                    "3. Uber x Táxi: Uber costuma ser mais barato e seguro para turistas.",
-                    "4. Protetor Solar: O sol da Bahia é implacável. Use chapéu e hidrate-se (água de coco).",
-                    "5. Roupas Leves: O calor é úmido. Tecidos naturais (algodão/linho) são os melhores.",
-                    "6. Pimenta: Se não está acostumado, NUNCA peça acarajé 'quente'. A pimenta baiana é muito forte.",
-                    "7. Terça-Feira: É um dia agitado no Pelourinho (Terça da Benção). Ótimo dia para visitar.",
-                    "8. Elevador Lacerda: Custa centavos. Tenha moedas trocadas para facilitar.",
-                    "9. Praia no Centro: O Porto da Barra é lindo, mas lota muito no fim de semana. Vá dia de semana.",
-                    "10. Respeito: Ao entrar em igrejas ou terreiros, vista-se adequadamente (evite trajes de banho)."
-                ],
-                // --- NOVO: NÚMEROS IMPORTANTES (SALVADOR) ---
-                numeros: [
-                    "1. 190 (Polícia Militar): Emergência policial, assaltos ou situações de perigo iminente.",
-                    "2. (71) 3116-6817 (DELTUR): Delegacia de Proteção ao Turista. Fica no Pelourinho, essencial para quem visita o centro histórico.",
-                    "3. 192 (SAMU): Ambulância para urgências médicas na rua ou residência.",
-                    "4. 193 (Bombeiros): Incêndios, resgates e acidentes com vítimas presas nas ferragens.",
-                    "5. 118 (Transalvador): Emergências de trânsito, acidentes sem vítima ou denúncia de estacionamento irregular.",
-                    "6. (71) 3204-1000 (Aeroporto de Salvador): Informações sobre voos e o metrô que liga ao aeroporto.",
-                    "7. (71) 3616-8300 (Rodoviária): Informações sobre ônibus para o interior da Bahia e outros estados.",
-                    "8. (71) 3117-5600 (HGE - Hospital Geral do Estado): A maior referência pública para traumas e emergências graves.",
-                    "9. 156 (Fala Salvador): Canal da Prefeitura para reclamar de serviços, limpeza urbana ou barulho.",
-                    "10. (71) 3235-0000 (Elevador Lacerda/Transporte): Informações turísticas e de mobilidade na Cidade Alta/Baixa."
-                ],
-                // --- NOVO: RISCOS E ERROS (SALVADOR) ---
-                riscos: [
-                    "1. 'Pintura' no Pelourinho: Cuidado com rapazes que chegam pintando seu braço dizendo ser 'presente'. Eles vão cobrar R$ 50 de forma intimidada depois. Recuse firme.",
-                    "2. Fita do Bonfim 'Amarrada': Nunca deixe ninguém amarrar uma fita no seu braço 'de graça'. É a isca para pedir dinheiro ou vender algo. Pegue a fita na igreja.",
-                    "3. Celular no Carnaval/Festas: Em aglomerações (como no Porto da Barra ou festas de largo), use doleira. Furtos de celular do bolso são extremamente comuns.",
-                    "4. Corrente de Ouro: Evite ostentar joias, relógios caros ou correntes de ouro no Centro Histórico e Cidade Baixa. Chama muita atenção.",
-                    "5. Acarajé 'Quente': Se você não é baiano, NUNCA peça acarajé 'quente' (com muita pimenta). A pimenta baiana é fortíssima e pode estragar seu dia (e estômago).",
-                    "6. Ruas Desertas no Pelourinho: O Pelourinho é seguro nas ruas principais policiadas. Evite entrar em becos laterais vazios, principalmente à noite.",
-                    "7. Tabuleiros sem Higiene: Observe a limpeza da baiana de acarajé. Evite tabuleiros sujos ou em locais duvidosos para não ter infecção alimentar.",
-                    "8. Taxista no Aeroporto: Ao desembarcar, muitos taxistas abordam no saguão cobrando preço fechado caro. Use o metrô (que sai do aeroporto) ou Uber.",
-                    "9. Mar Aberto: Algumas praias (como Jaguaribe ou trechos de Stella Maris) têm ondas fortes e buracos. Se beber, não entre no mar.",
-                    "10. Elevador Lacerda à Noite: A região da Cidade Baixa (Comércio) fica muito deserta e perigosa após o horário comercial. Evite andar a pé por ali à noite."
-                ],
-                // COLE O ROTEIRO ABAIXO:
-                roteiros: {
-                    "curto": {
-                        titulo: "Roteiro Express (1 a 2 Dias)",
-                        texto: [
-                            "Dia 1 (História Viva): Pelourinho (Fundação Casa de Jorge Amado e Igreja de São Francisco). Desça o Elevador Lacerda. Mercado Modelo. Pôr do sol no Farol da Barra.",
-                            "Dia 2 (Fé e Praia): Igreja do Bonfim (amarre a fitinha). Almoço na Pedra Furada. Tarde na praia do Porto da Barra (água calma).",
-                            "Dica: Coma um Acarajé da Cira ou da Dinha no Rio Vermelho à noite."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Roteiro Essencial (3 a 5 Dias)",
-                        texto: [
-                            "Dias 1 e 2: Siga o Roteiro Express acima.",
-                            "Dia 3 (Cultura Afro): Museu Afro-Brasileiro e Casa do Carnaval. Almoço no Santo Antônio Além do Carmo (vista linda da baía).",
-                            "Dia 4 (Praias do Norte): Dia de praia em Stella Maris ou Flamengo (barracas com estrutura, como a do Lôro).",
-                            "Dia 5 (Boemia Literária): Casa do Rio Vermelho (memorial Jorge Amado). Noite no Largo da Mariquita (Rio Vermelho) para comer e beber."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Roteiro Completo (7+ Dias)",
-                        texto: [
-                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
-                            "Dia 6 (Bate-volta Tartarugas): Vá até a Praia do Forte (Litoral Norte). Visite o Projeto Tamar e o Castelo Garcia D'Ávila.",
-                            "Dia 7 (Navegar): Passeio de escuna pela Baía de Todos os Santos (Ilha dos Frades e Itaparica).",
-                            "Dia 8 (Relax): Sorveteria da Ribeira e Ponta do Humaitá para o último pôr do sol."
-                        ]
-                    }
-                },
-                
-                // SEUS LINKS DE AFILIADO
-                links: {
-                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-667953&aid=304142", 
-                    passeio: "https://www.civitatis.com/br/salvador/", 
-                    seguro: "https://www.segurospromo.com.br" 
-                }
-            },
-            {
-                name: "Brasília",
-                // FOTO: Congresso Nacional (Wikimedia - Link Estável)
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Congresso_Nacional_do_Brasil_em_noite_de_lua_cheia.jpg/960px-Congresso_Nacional_do_Brasil_em_noite_de_lua_cheia.jpg",
-                tags: ["Arquitetura", "História", "Política"],
-                mapa: "https://goo.gl/maps/brasilia",
-                clima: "Tropical de Altitude. Seca extrema no inverno (Jun-Set) e chuvas no verão.",
-                // Adicione dentro do objeto de Brasília
-veredicto: {
-    melhor_epoca: "Maio a Setembro (Época da Seca). O céu é o mais bonito e os Ipês florescem (Ago/Set), mas a umidade é de deserto. Evite o verão se quiser fugir da chuva.",
-    ideal_para: [
-        "Fãs de arquitetura modernista e design (O maior museu a céu aberto de Niemeyer)",
-        "Turismo Cívico e Histórico (Congresso, Planalto, Praça dos Três Poderes)",
-        "Quem busca pores do sol espetaculares (Pontão do Lago Sul ou Ermida)",
-        "Místicos e esotéricos (Templo da Boa Vontade, proximidade com Chapada)"
-    ],
-    nao_ideal_para: [
-        "Quem gosta de fazer tudo a pé (a cidade foi feita para carros, as escalas são monumentais)",
-        "Quem busca vida noturna de rua aglomerada estilo Lapa/Vila Madalena",
-        "Pessoas que sofrem muito com tempo seco (leve soro fisiológico)"
-    ],
-    perfis: [
-        { icone: "ri-building-2-fill", nome: "Arquit." },
-        { icone: "ri-government-fill", nome: "Cívico" },
-        { icone: "ri-camera-lens-fill", nome: "Foto" },
-        { icone: "ri-leaf-fill", nome: "Zen" }
-    ]
-},
-                // TOP 10 PONTOS TURÍSTICOS
-                pontos_turisticos: [
-                    "1. Praça dos Três Poderes: O centro das decisões do país. Veja o Congresso, o Planalto e o STF de perto.",
-                    "2. Catedral Metropolitana: Obra-prima de Niemeyer. Por fora parece pequena, por dentro é grandiosa e colorida.",
-                    "3. Pontão do Lago Sul: O 'mar' de Brasília. Calçadão na beira do lago, cheio de restaurantes e clima de praia.",
-                    "4. Ponte JK: Uma das pontes mais bonitas do mundo, premiada arquitetonicamente. Linda iluminada à noite.",
-                    "5. Torre de TV: Suba no mirante para ver o formato de 'avião' da cidade. Tem uma feira de artesanato ótima embaixo.",
-                    "6. Parque da Cidade: Um dos maiores parques urbanos do mundo (maior que o Central Park). Perfeito para bicicletas.",
-                    "7. Memorial JK: O museu onde descansa Juscelino Kubitschek. Arquitetura e história emocionantes.",
-                    "8. Palácio da Alvorada: Residência oficial do presidente. É possível ver as emas no gramado e a arquitetura flutuante.",
-                    "9. Santuário Dom Bosco: A igreja 'azul'. Composta por milhares de vitrais em 12 tons de azul. Hipnotizante.",
-                    "10. Banco Central (Museu de Valores): Veja a maior pepita de ouro do Brasil e entre numa caixa-forte gigante."
-                ],
-
-                // TOP 10 GASTRONOMIA
-                gastronomia: [
-                    "1. Pizza Dom Bosco: Patrimônio da cidade. Fatia dupla (queijo e molho) que se come dobrada no guardanapo.",
-                    "2. Pastel da Viçosa: Eleito várias vezes o melhor pastel de feira do Brasil (na Rodoviária ou feiras).",
-                    "3. Restaurantes do Pontão: Gastronomia variada com vista para o Lago Paranoá (ideal para pôr do sol).",
-                    "4. Frutas do Cerrado: Sorvetes de Cagaita, Pequi, Mangaba e Baru. Sabores que você só acha aqui.",
-                    "5. Arroz com Pequi: Prato goiano muito amado na capital (atenção: não morda o caroço do pequi!).",
-                    "6. Alta Gastronomia: A cidade tem chefs renomados e restaurantes internacionais na Asa Sul e Norte.",
-                    "7. Cachorro-Quente da 105 Sul: Os 'dogueiros' de Brasília são famosos pelas pastas de alho e molhos.",
-                    "8. Feira da Torre: Comida típica de todo o Brasil (Acarajé, Pamonha, Tacacá) num só lugar.",
-                    "9. Cafés Especiais: Brasília vive um boom de cafeterias artesanais de altíssimo nível.",
-                    "10. Pão de Queijo do Mercadinho: Tradicional nas padarias das quadras residenciais."
-                ],
-
-                // TOP 10 CURIOSIDADES
-                curiosidades: [
-                    "1. Formato de Avião: A cidade foi desenhada no formato de um avião (ou borboleta). Asa Sul e Asa Norte.",
-                    "2. Sem Esquinas: Brasília quase não tem esquinas tradicionais, e sim curvas e 'tesourinhas' (retornos).",
-                    "3. 1000 Dias: A cidade foi construída do zero no meio do cerrado em apenas 1000 dias.",
-                    "4. Lago Artificial: O Lago Paranoá foi criado para aumentar a umidade. Tem o tamanho de uma baía.",
-                    "5. Endereços Loucos: SQS 302, CLN 405... Parece código, mas é um sistema de coordenadas lógico.",
-                    "6. Misticismo: Dizem que a cidade foi construída sobre uma grande jazida de cristais, atraindo místicos.",
-                    "7. Patrimônio Cultural: É a maior área tombada do mundo pela UNESCO como Patrimônio Cultural da Humanidade.",
-                    "8. Rock Brasília: Nos anos 80, foi o berço do rock nacional (Legião Urbana, Capital Inicial).",
-                    "9. Céu de Brasília: Considerado o 'mar' do brasiliense. O horizonte é infinito e o pôr do sol, espetacular.",
-                    "10. Semáforos: Nas tesourinhas e eixões não há semáforos, o trânsito flui (ou deveria fluir) direto."
-                ],
-
-                // TOP 10 CULTURA & RELIGIÃO
-                religiao: [
-                    "1. Templo da LBV: Uma pirâmide de 7 faces aberta à visitação, com uma sala de meditação egípcia.",
-                    "2. Catedral Metropolitana: Ecumênica e aberta. A entrada é por um túnel escuro para sair na luz da nave.",
-                    "3. Vale do Amanhecer: Uma comunidade religiosa esotérica famosa mundialmente pelas roupas e rituais coloridos.",
-                    "4. Santuário Dom Bosco: Impressionante jogo de luzes azuis. Padroeiro da cidade (ele sonhou com Brasília em 1883).",
-                    "5. Igrejinha (N. Sra. de Fátima): A primeira igreja construída, desenhada por Niemeyer com azulejos de Athos Bulcão.",
-                    "6. Templo Shin Budista: Um pedaço do Japão no cerrado, com arquitetura tradicional e feiras anuais.",
-                    "7. Mesquita de Brasília: Centro Islâmico na Asa Norte, arquitetura árabe clássica.",
-                    "8. Ermida Dom Bosco: Uma capela à beira do lago com uma das vistas mais bonitas do pôr do sol.",
-                    "9. Misticismo: A cidade atrai muitos grupos espiritualistas, ufólogos e esotéricos devido à 'energia'.",
-                    "10. Diversidade: Pessoas de todo o Brasil vivem aqui, criando uma mistura religiosa única."
-                ],
-
-                // TOP 10 EVENTOS E ESTAÇÕES
-                eventos_estacoes: [
-                    "1. Seca (Jun-Set): Umidade desce a 10% (nível deserto). O céu fica azulão, mas o nariz sangra. Hidrate-se!",
-                    "2. Florada dos Ipês: Entre julho e setembro, a cidade fica colorida (Roxo, Amarelo, Branco e Rosa). É lindo.",
-                    "3. 7 de Setembro: O desfile da Independência na Esplanada é o maior evento cívico do país.",
-                    "4. Na Praia (Jul-Set): Um festival gigante que cria uma praia artificial com shows nacionais à beira do lago.",
-                    "5. Chuvas (Out-Abr): Chove forte, as áreas verdes explodem de vida e o calor diminui.",
-                    "6. Natal Monumental: A Torre de TV e a Esplanada ganham iluminação especial.",
-                    "7. Festival de Cinema: Um dos mais antigos e respeitados do cinema brasileiro.",
-                    "8. Porão do Rock: Festival de música pesado que mantém viva a tradição roqueira da cidade.",
-                    "9. Aniversário de Brasília (21 de Abril): Shows e festas na Esplanada dos Ministérios.",
-                    "10. Eixão do Lazer: Aos domingos e feriados, a avenida principal fecha para carros e vira parque."
-                ],
-
-                // TOP 10 INFO GERAIS
-                info_gerais: [
-                    "1. Voltagem: 220V. Atenção, pois a maioria do Brasil é 110V. Aparelhos podem queimar!",
-                    "2. DDD: 61.",
-                    "3. Candango: Nome dado aos pioneiros que construíram a cidade (e usado para quem nasce lá).",
-                    "4. Aeroporto: BSB (Presidente JK). Um dos maiores e mais modernos hubs do país.",
-                    "5. Transporte: Dependente de carro. O metrô é limitado (só uma linha em Y). Uber é essencial.",
-                    "6. Setores: Tudo é setorizado. Setor de Hotéis, Setor de Clubes, Setor de Embaixadas, etc.",
-                    "7. Segurança: O Plano Piloto (centro) é seguro, mas evite áreas desertas à noite.",
-                    "8. Custo de Vida: Alto. Alimentação e hospedagem costumam ser mais caros que a média.",
-                    "9. Clima: O 'Deserto' brasileiro. Traga soro fisiológico e muito hidratante labial.",
-                    "10. Fim de Semana: A cidade esvazia politicamente e os locais vão para o Lago ou parques."
-                ],
-
-                // TOP 10 DICAS ANTES DE IR
-                antes_de_ir: [
-                    "1. Beba Água: A secura não é brincadeira. Você vai sentir sede e pele seca em 1 hora.",
-                    "2. Hidratante: Traga manteiga de cacau e hidratante corporal. O ar condicionado dos hotéis piora a secura.",
-                    "3. Fim de Semana: A cidade é ótima no fim de semana (sem trânsito político e hotéis mais baratos).",
-                    "4. Roupa: De dia é quente, à noite venta frio (no inverno). Traga um casaco leve.",
-                    "5. Visita ao Congresso: É gratuita, mas precisa agendar no site deles. Vale muito a pena.",
-                    "6. Pôr do Sol: Reserve um fim de tarde para o Pontão ou Ermida Dom Bosco. É sagrado.",
-                    "7. Aluguel de Carro: Facilita muito. As distâncias são longas e as avenidas largas.",
-                    "8. Fique no Plano: Hospede-se nos Setores Hoteleiros (SHN ou SHS) para ficar perto de tudo.",
-                    "9. Tesourinhas: Se dirigir, cuidado nos retornos (tesourinhas). A preferência é de quem está na tesourinha!",
-                    "10. Documentos: Para entrar nos prédios públicos (Congresso, Planalto), bermuda e chinelo são proibidos."
-                ],
-                // --- NOVO: NÚMEROS IMPORTANTES (BRASÍLIA) ---
-                numeros: [
-                    "1. 190 (Polícia Militar): Emergência e segurança nas superquadras e pontos turísticos.",
-                    "2. (61) 3207-4856 (DEATUR): Delegacia de Atendimento ao Turista (fica no Aeroporto JK).",
-                    "3. 192 (SAMU): Urgências médicas e ambulância.",
-                    "4. 193 (Bombeiros): Incêndios, acidentes de trânsito e resgates.",
-                    "5. (61) 3364-9000 (Aeroporto JK): Informações de voos internacionais/nacionais e achados e perdidos.",
-                    "6. 156 (Governo do DF): Central de atendimento para transporte, limpeza e serviços públicos.",
-                    "7. (61) 3550-8900 (Hospital de Base): O maior hospital público de emergência e trauma do Centro-Oeste.",
-                    "8. (61) 3234-2185 (Rodoviária Interestadual): Ônibus para Goiânia e outros estados (fica na saída da cidade).",
-                    "9. (61) 3353-7373 (Metrô DF): Informações sobre as linhas Verde e Laranja.",
-                    "10. 191 (Polícia Rodoviária Federal): Emergências nas BRs que ligam o DF ao entorno (saídas da cidade)."
-                ],
-                // --- NOVO: RISCOS E ERROS (BRASÍLIA) ---
-                riscos: [
-                    "1. A Seca do Deserto: Entre agosto e setembro, a umidade cai para 10%. O nariz sangra e a pele racha. Tenha sempre soro fisiológico e hidratante na mochila.",
-                    "2. Ilusão da Esplanada: Não tente andar do Congresso até a Torre de TV a pé achando que é perto. São quilômetros de sol na cabeça sem sombra. Use Uber ou ônibus.",
-                    "3. Atravessar o Eixão: NUNCA tente atravessar as pistas largas do Eixão correndo. Os carros passam a 80km/h e não param. Use as passagens subterrâneas (mas com cuidado à noite).",
-                    "4. Setor Comercial Sul à Noite: De dia é movimentado, à noite vira local de tráfico e prostituição. Evite transitar a pé ali ou perto da Rodoviária do Plano Piloto após as 19h.",
-                    "5. As Tesourinhas: Se alugar carro, cuidado. As entradas e saídas (tesourinhas) confundem o GPS e motoristas novatos. Se errar uma, vai andar 5km para voltar.",
-                    "6. Capivaras e Carrapatos: Na orla do Lago Paranoá, não chegue muito perto das capivaras e evite sentar na grama alta devido ao risco de carrapatos (Febre Maculosa).",
-                    "7. Cidade Fantasma no Fim de Semana: Brasília setoriza tudo. Restaurantes em áreas comerciais ou bancárias podem fechar no fim de semana. Cheque o horário antes de ir.",
-                    "8. Norte x Sul: Entenda a lógica (Asa Sul e Asa Norte). Se você confundir SQS (Sul) com SQN (Norte), vai parar a 15km de distância do seu destino.",
-                    "9. Manifestações na Esplanada: Em dias de protesto político, a Esplanada dos Ministérios é fechada e o trânsito para. Fique de olho no noticiário se for visitar o Congresso.",
-                    "10. Amplitude Térmica: No inverno, faz muito calor de dia e 10ºC à noite. Se sair de manhã para voltar só à noite, leve casaco ou vai passar frio."
-                ],
-                // --- NOVO: ROTEIRO AUTOMÁTICO (BRASÍLIA) ---
-                roteiros: {
-                    "curto": {
-                        titulo: "Roteiro Express (1 a 2 Dias)",
-                        texto: [
-                            "Dia 1 (Cívico): Manhã na Catedral e Esplanada. Visita guiada ao Congresso. Almoço no Pontão do Lago Sul. Pôr do sol na Ermida Dom Bosco.",
-                            "Dia 2 (Juscelino): Memorial JK pela manhã. Subida na Torre de TV (vista). Tarde: Igrejinha da 308 Sul e Quadra Modelo (para entender como vivem os locais)."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Roteiro Essencial (3 a 5 Dias)",
-                        texto: [
-                            "Dias 1 e 2: Siga o Roteiro Express acima.",
-                            "Dia 3 (Arquitetura e Arte): Palácio do Itamaraty (agende!) e CCBB. Almoço na Asa Sul (gastronomia).",
-                            "Dia 4 (Natureza e Místico): Templo da LBV e Parque da Cidade. Tarde relax no Calçadão da Asa Norte (alugue um caiaque).",
-                            "Dia 5 (Lado B): Santuário Dom Bosco (o azul) e Feira da Torre de TV para comprar pastel e artesanato."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Roteiro Completo (7+ Dias)",
-                        texto: [
-                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
-                            "Dia 6 (Cachoeira): Bate-volta para Pirenópolis-GO (cidade colonial linda com cachoeiras) ou Salto do Itiquira (uma queda d'água gigante perto de Formosa).",
-                            "Dia 7 (Chapada): Se tiver disposição, estique até a Chapada dos Veadeiros (Alto Paraíso) e fique uma noite lá.",
-                            "Dia 8 (Despedida): Café da manhã na Torre de TV Digital (Flor do Cerrado) e últimas compras."
-                        ]
-                    }
-                },
-                // SEUS LINKS DE AFILIADO
-                links: {
-                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-631243&aid=304142", 
-                    passeio: "https://www.civitatis.com/br/brasilia/", 
-                    seguro: "https://www.segurospromo.com.br" 
-                }
-            },
-            {
-                name: "Recife",
-                // FOTO: Marco Zero e Parque das Esculturas (Wikimedia - Link Estável)
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Praia_do_Pina_-_Recife%2C_Pernambuco%2C_Brasil_%28cropped%29.jpg/1280px-Praia_do_Pina_-_Recife%2C_Pernambuco%2C_Brasil_%28cropped%29.jpg",
-                tags: ["História", "Gastronomia", "Praia"],
-                mapa: "https://goo.gl/maps/recife",
-                clima: "Tropical Úmido. Sol e calor o ano todo. Chuvas intensas entre Maio e Julho.",
-                // Adicione dentro do objeto de Recife
-veredicto: {
-    melhor_epoca: "Setembro a Fevereiro (Muito sol). Evite Maio a Julho (Chuvas fortes). O Carnaval é o maior e mais democrático de rua do mundo.",
-    ideal_para: [
-        "Mergulho cultural profundo (Frevo, Maracatu, Bonecos Gigantes)",
-        "Turismo Histórico (Recife Antigo e a vizinha Olinda)",
-        "Gulosos (Bolo de Rolo, Cartola e cozinha pernambucana de ponta)",
-        "Base para praias paradisíacas próximas (Porto de Galinhas, Carneiros)"
-    ],
-    nao_ideal_para: [
-        "Quem quer nadar despreocupado na praia urbana (risco de tubarão em Boa Viagem - respeite as placas)",
-        "Quem busca isolamento absoluto (é uma metrópole vibrante e densa)",
-        "Caminhadas noturnas em áreas desertas do centro (requer atenção)"
-    ],
-    perfis: [
-        { icone: "ri-music-fill", nome: "Cultura" },
-        { icone: "ri-goblet-fill", nome: "Gastrô" },
-        { icone: "ri-bank-fill", nome: "História" },
-        { icone: "ri-sun-fill", nome: "Sol" }
-    ]
-},
-                // TOP 10 PONTOS TURÍSTICOS
-                pontos_turisticos: [
-                    "1. Recife Antigo (Marco Zero): O coração da cidade. Tire a clássica foto na rosa dos ventos e pegue o barquinho para as esculturas.",
-                    "2. Instituto Ricardo Brennand: Eleito várias vezes o melhor museu da América do Sul. Um castelo com coleção de armas brancas e arte.",
-                    "3. Oficina Francisco Brennand: Um templo de cerâmica e arte a céu aberto, misterioso e deslumbrante.",
-                    "4. Praia de Boa Viagem: A orla urbana mais famosa. Caminhe no calçadão, tome água de coco, mas respeite as placas de tubarão.",
-                    "5. Embaixada dos Bonecos Gigantes: Fica na Rua do Bom Jesus (eleita a 3ª mais bonita do mundo). Veja os bonecos de perto.",
-                    "6. Paço do Frevo: Museu interativo dedicado ao ritmo patrimônio da humanidade. Colorido e vibrante.",
-                    "7. Capela Dourada: O auge do barroco. Do chão ao teto, tudo é coberto de ouro. Impactante.",
-                    "8. Sinagoga Kahal Zur Israel: A primeira sinagoga das Américas (séc XVII), herança dos judeus holandeses.",
-                    "9. Catamarã no Rio Capibaribe: Passeio de barco que passa por baixo das pontes e mostra a cidade de outro ângulo.",
-                    "10. Olinda (Vizinha): Basta subir a ladeira. O Centro Histórico de Olinda é Patrimônio da UNESCO e tem a vista mais linda da Sé."
-                ],
-
-                // TOP 10 GASTRONOMIA
-                gastronomia: [
-                    "1. Bolo de Rolo: Não é rocambole! É patrimônio de Pernambuco. Camadas finíssimas de massa e goiabada.",
-                    "2. Cartola: A sobremesa mais famosa. Banana frita, queijo manteiga assado, açúcar e canela.",
-                    "3. Caldinho: Na praia ou no bar, é obrigatório. De feijão, camarão ou peixe, servido no copinho.",
-                    "4. Carne de Sol com Queijo Coalho: Clássico nordestino, servido com macaxeira frita ou cozida.",
-                    "5. Bolo Souza Leão: Um bolo cremoso (parece pudim) feito de massa de mandioca e ovos, receita de engenho.",
-                    "6. Tapioca: No Alto da Sé (em Olinda) é a melhor do mundo, feita na hora pelas tapioqueiras tradicionais.",
-                    "7. Arrumadinho: Prato com feijão verde, farofa, vinagrete e carne de sol (ou charque) picadinha.",
-                    "8. Peixada Pernambucana: Cozido de peixe com leite de coco e legumes, servido com pirão.",
-                    "9. Buchada de Bode: Para os fortes. Prato típico do sertão, mas muito encontrado nos mercados da capital.",
-                    "10. Cerveja Artesanal: O Recife Antigo é um polo de cervejarias locais premiadas (ex: Ekäut, Babylon)."
-                ],
-
-                // TOP 10 CURIOSIDADES
-                curiosidades: [
-                    "1. Veneza Brasileira: A cidade é cortada por rios e dezenas de pontes que ligam as ilhas do centro.",
-                    "2. Tubarões: Devido a um desequilíbrio ambiental e correntes, a praia de Boa Viagem tem risco real de ataque. Respeite as placas!",
-                    "3. Holandeses: Recife foi capital do 'Brasil Holandês' (1630-1654), governada por Maurício de Nassau.",
-                    "4. Galo da Madrugada: É o maior bloco de carnaval do mundo, arrastando 2 milhões de pessoas no sábado de Zé Pereira.",
-                    "5. Manguebeat: Movimento cultural dos anos 90 (Chico Science) que misturou rock com maracatu.",
-                    "6. Prédio Mais Alto: O Recife tem alguns dos prédios mais altos do Brasil fora de Balneário Camboriú.",
-                    "7. Judaísmo: A cidade abrigou a primeira comunidade judaica organizada das Américas.",
-                    "8. Assombrações: Dizem que Recife é a cidade mais mal-assombrada do Brasil (lendas da Emparedada, Perna Cabeluda).",
-                    "9. Frevo: É o único ritmo que se dança com uma sombrinha (usada antigamente como arma de defesa e ataque).",
-                    "10. Rivalidade: Pernambucano tem um orgulho imenso. Dizem que lá tudo é 'o maior do mundo em linha reta'."
-                ],
-
-                // TOP 10 CULTURA & RELIGIÃO
-                religiao: [
-                    "1. Sinagoga Kahal Zur Israel: Marco zero do judaísmo no continente, hoje é um museu emocionante.",
-                    "2. Pátio de São Pedro: Cercado de casas coloniais e a imponente Catedral de São Pedro dos Clérigos.",
-                    "3. Maracatu: Cortejo real de origem afro-brasileira. O som dos tambores (alfaias) treme o chão.",
-                    "4. Capela Dourada: Pertence à Ordem Terceira de São Francisco. É o maior exemplo de arte sacra da cidade.",
-                    "5. Festa do Morro (N. Sra. da Conceição): Em dezembro, multidões sobem o Morro da Conceição vestidas de azul e branco.",
-                    "6. Frevo: Mais que dança, é a alma do carnaval pernambucano. Patrimônio Imaterial da Humanidade.",
-                    "7. Bonecos Gigantes: Tradição que veio da Europa, mas ganhou cara própria em Olinda (o 'Homem da Meia-Noite' é sagrado).",
-                    "8. Basílica da Penha: No centro comercial, uma igreja belíssima onde as pessoas pedem bençãos rápidas.",
-                    "9. Terreiros: A presença do Xangô do Recife (religião afro) é fortíssima e respeitada.",
-                    "10. Paixão de Cristo: A maior encenação ao ar livre do mundo acontece em Nova Jerusalém (brejo), perto de Recife."
-                ],
-
-                // TOP 10 EVENTOS E ESTAÇÕES
-                eventos_estacoes: [
-                    "1. Carnaval (Fev/Mar): Multicultural. Frevo no Recife Antigo e ladeiras de Olinda. Não tem cordão, é tudo misturado.",
-                    "2. São João (Junho): A capital tem festa, mas o foco vai para o interior (Caruaru). Muita comida de milho.",
-                    "3. Inverno (Maio-Julho): É a estação da chuva. Chove pesado e pode alagar ruas. O calor diminui um pouco.",
-                    "4. Abril Pro Rock: Festival de música independente que mantém viva a cena rock/manguebeat.",
-                    "5. Fenearte (Julho): A maior feira de artesanato da América Latina. Imperdível para comprar arte popular.",
-                    "6. Rec-Beat: Festival alternativo que acontece durante o carnaval no Cais da Alfândega.",
-                    "7. Regata Recife-Noronha (Setembro): Evento náutico tradicional que parte rumo ao paraíso de Noronha.",
-                    "8. Verão (Dez-Mar): Sol forte, mar azul (na maré baixa) e cidade cheia de turistas.",
-                    "9. Aniversário do Recife (12 de Março): Shows e bolo gigante (literalmente) na praça.",
-                    "10. O Maior Cozido do Mundo: Festas de bairro que tentam quebrar recordes de comida gigante são comuns."
-                ],
-
-                // TOP 10 INFO GERAIS
-                info_gerais: [
-                    "1. Voltagem: 220V. Cuidado, pois Salvador é 110V, mas Recife é 220V!",
-                    "2. DDD: 81.",
-                    "3. Aeroporto: REC (Guararapes/Gilberto Freyre). Moderno e dentro da área urbana (perto de Boa Viagem).",
-                    "4. Maré: A praia de Boa Viagem muda muito. Na maré baixa formam-se piscinas naturais nos recifes.",
-                    "5. Tubarão: NÃO entre no mar além do joelho, especialmente na maré alta ou se a água estiver turva. É sério.",
-                    "6. Trânsito: O trânsito do Recife é considerado um dos piores do Brasil. Evite horários de pico.",
-                    "7. Metrô: Existe, mas atende mais a periferia e rodoviária. Para turismo, Uber é melhor.",
-                    "8. Rodoviária: TIP (Terminal Integrado de Passageiros). Fica muito longe do centro, vá de metrô ou Uber.",
-                    "9. Segurança: O Recife Antigo é policiado, mas evite ruas desertas no centro (Santo Antônio/São José) à noite.",
-                    "10. Táxi: Convencionais são confiáveis e usam taxímetro. No aeroporto, há táxis especiais tabelados."
-                ],
-
-                // TOP 10 DICAS ANTES DE IR
-                antes_de_ir: [
-                    "1. Tábua de Marés: Consulte todo dia. Praia só vale a pena na maré baixa (0.0 a 0.4). Na alta, a onda bate na pedra.",
-                    "2. Recife x Olinda: Hospede-se em Boa Viagem (conforto/praia) e vá passar o dia em Olinda. Ou fique em Olinda para viver a arte.",
-                    "3. Instituto Brennand: Reserve uma tarde inteira (13h às 17h). É longe e enorme. O pôr do sol lá é lindo.",
-                    "4. Domingo no Antigo: Aos domingos, o Recife Antigo fecha para carros e vira um parque com feirinha. Melhor dia.",
-                    "5. Catamarã: Faça o passeio das 16h para pegar o pôr do sol e o acender das luzes da cidade.",
-                    "6. Cuidado com Celular: No carnaval ou locais cheios, use doleira. Furtos são comuns.",
-                    "7. Uber no Aeroporto: Tem um local específico para embarque (piso superior ou sinalizado).",
-                    "8. Protetor Solar: O sol de Pernambuco 'queima com força'.",
-                    "9. Compras: A Feirinha de Boa Viagem (tarde/noite) é ótima para souvenirs e comida.",
-                    "10. Beba Água de Coco: É barata e tem em todo lugar na orla."
-                ],
-
-                // --- NOVO: NÚMEROS IMPORTANTES (RECIFE) ---
-                numeros: [
-                    "1. 190 (Polícia Militar): Emergência e segurança pública.",
-                    "2. (81) 3184-3438 (Delegacia do Turista): Atendimento especializado, fica no Recife Antigo (Praça do Arsenal).",
-                    "3. 192 (SAMU): Emergências médicas e acidentes.",
-                    "4. 193 (Bombeiros): Incêndios e resgates (inclusive em áreas de praia não supervisionadas).",
-                    "5. (81) 3322-4188 (Aeroporto dos Guararapes): Informações de voos e setor de achados e perdidos.",
-                    "6. (81) 3452-9800 (TIP - Rodoviária): Informações sobre ônibus intermunicipais e interestaduais.",
-                    "7. 0800 081 1078 (CTTU - Trânsito): Para reportar acidentes sem vítimas ou semáforos quebrados.",
-                    "8. (81) 3181-7000 (Hospital da Restauração): O maior hospital público de trauma e emergência do Norte/Nordeste.",
-                    "9. (81) 3355-0199 (Centro de Atendimento ao Turista): Informações turísticas e mapas.",
-                    "10. 190 (CIODS): Centro Integrado de Defesa Social, coordena todas as forças de segurança."
-                ],
-                // --- NOVO: RISCOS E ERROS (RECIFE) ---
-                riscos: [
-                    "1. Tubarões em Boa Viagem: NÃO é lenda urbana. Respeite as placas. Só entre no mar na maré baixa e protegido pelos arrecifes. Nunca nade em mar aberto ali.",
-                    "2. Falsos Guias em Olinda: Ao chegar no Alto da Sé, rapazes vão pular na frente do carro ou te seguir insistindo para serem guias. Seja firme no 'NÃO' e continue andando.",
-                    "3. Maré Alta nas Piscinas: Ir a Porto de Galinhas ou Carneiros na maré alta é jogar dinheiro fora. As piscinas naturais somem. Consulte a Tábua de Marés (tem que estar abaixo de 0.5).",
-                    "4. Recife Antigo Deserto: O bairro é lindo e seguro de quinta a domingo. Segunda e terça à noite costuma ficar deserto e perigoso. Evite ruas escuras.",
-                    "5. Celular no Galo: No Carnaval (Galo da Madrugada) ou em blocos cheios, celular na mão é perda certa. Use doleira por dentro da roupa.",
-                    "6. Ouriços do Mar: Ao andar nos arrecifes (pedras), use chinelo ou sapatilha de neoprene. Pisar em um ouriço dói muito e estraga a viagem.",
-                    "7. Trânsito para Porto de Galinhas: Sair do Recife para Porto de Galinhas sexta à tarde ou sábado de manhã leva horas. Saia de madrugada ou em horários alternativos.",
-                    "8. Metrô: O metrô do Recife não é muito turístico e pode ser perigoso/lotado em horários de pico. Prefira Uber ou Táxi para se deslocar entre as atrações.",
-                    "9. Sol de 'Rachar': O índice UV em Pernambuco é extremo. Protetor solar não é cosmético, é item de sobrevivência, ou você terá insolação no primeiro dia.",
-                    "10. Flanelinhas Agressivos: Em dias de festa ou no centro, guardadores de carro podem cobrar adiantado e caro. Tente estacionar em locais privados ou ruas movimentadas."
-                ],
-                // COLE O ROTEIRO ABAIXO:
-                roteiros: {
-                    "curto": {
-                        titulo: "Roteiro Express (1 a 2 Dias)",
-                        texto: [
-                            "Dia 1 (Recife Antigo): Marco Zero, Rua do Bom Jesus (Sinagoga) e Paço do Frevo. Almoço nos Armazéns do Porto. Fim de tarde: Passeio de Catamarã pelo rio (imperdível).",
-                            "Dia 2 (Olinda): Vá para a cidade vizinha. Suba o Alto da Sé (Tapioca com vista), Mosteiro de São Bento e caminhe pelas ladeiras coloridas."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Roteiro Essencial (3 a 5 Dias)",
-                        texto: [
-                            "Dias 1 e 2: Siga o Roteiro Express acima.",
-                            "Dia 3 (Os Brennand): Manhã no Instituto Ricardo Brennand (Castelo de armas incrível). Tarde na Oficina Francisco Brennand (esculturas misteriosas). Vá de Uber.",
-                            "Dia 4 (Praia Urbana): Manhã na Praia de Boa Viagem (fique nas piscinas naturais protegidas, nada de fundo!). Tarde no Shopping RioMar (vista do terraço).",
-                            "Dia 5 (Litoral Norte): Bate-volta para a Ilha de Itamaracá. Visite o Forte Orange e atravesse de barquinho para a Coroa do Avião."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Roteiro Completo (7+ Dias)",
-                        texto: [
-                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
-                            "Dia 6 (Litoral Sul): Bate-volta para o Cabo de Santo Agostinho (Praia de Calhetas e Banho de Argila).",
-                            "Dia 7 (Paraíso Vizinho): Bate-volta para a Praia dos Carneiros (Igrejinha verde).",
-                            "Dia 8 (Raiz): Mercado de São José (artesanato barato) e Casa da Cultura (antiga prisão que virou centro comercial)."
-                        ]
-                    }
-                },
-                // SEUS LINKS DE AFILIADO
-                links: {
-                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-665565&aid=304142", 
-                    passeio: "https://www.civitatis.com/br/recife/", 
-                    seguro: "https://www.segurospromo.com.br" 
-                }
-            },
-            {
-                name: "Porto Alegre",
-                // FOTO: Usina do Gasômetro no Pôr do Sol (Wikimedia - Link Estável)
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/IBPA_17398_-_Vista_a%C3%A9rea_da_Orla_Moacyr_Scliar%2C_na_capital._O_-_2018-10-02_-_Luciano_Lanes-PMPA_%28cropped%29.jpg/1280px-IBPA_17398_-_Vista_a%C3%A9rea_da_Orla_Moacyr_Scliar%2C_na_capital._O_-_2018-10-02_-_Luciano_Lanes-PMPA_%28cropped%29.jpg",
-                tags: ["Cultura Gaúcha", "Churrasco", "Parques"],
-                mapa: "https://goo.gl/maps/portoalegre",
-                clima: "Subtropical. Verão muito quente (abafado) e Inverno rigoroso e úmido.",
-                // Adicione dentro do objeto de Porto Alegre
-veredicto: {
-    melhor_epoca: "Março a Maio (Outono) ou Outubro/Novembro (Primavera). O inverno é úmido e frio. Setembro é especial pelo Acampamento Farroupilha (cultura gaúcha).",
-    ideal_para: [
-        "Carnívoros e amantes de churrasco (as melhores churrascarias do país)",
-        "Apreciadores de um pôr do sol inesquecível (na revitalizada Orla do Guaíba)",
-        "Roteiro cultural urbano (Casa de Cultura Mario Quintana, Fundação Iberê)",
-        "Passeios tranquilos em parques (Redenção aos domingos é obrigatório)"
-    ],
-    nao_ideal_para: [
-        "Quem busca praias de mar azul (a cidade é banhada pelo Lago Guaíba)",
-        "Quem detesta oscilação térmica (é comum fazer as 4 estações no mesmo dia)",
-        "Quem espera uma cidade turística pequena (é uma metrópole de negócios e serviços)"
-    ],
-    perfis: [
-        { icone: "ri-fire-fill", nome: "Churrasco" },
-        { icone: "ri-sun-fill", nome: "Pôr do Sol" },
-        { icone: "ri-museum-fill", nome: "Cultura" },
-        { icone: "ri-tree-fill", nome: "Parques" }
-    ]
-},
-                // TOP 10 PONTOS TURÍSTICOS
-                pontos_turisticos: [
-                    "1. Orla do Guaíba: O ponto de encontro oficial. Calçadão revitalizado, perfeito para ver o pôr do sol (o mais bonito do mundo).",
-                    "2. Parque da Redenção (Farroupilha): Aos domingos, o Brique da Redenção (feira de antiguidades e artesanato) é obrigatório.",
-                    "3. Mercado Público: O coração gastronômico. Compre erva-mate, charque e almoce no Gambrinus ou Naval.",
-                    "4. Casa de Cultura Mario Quintana: O antigo Hotel Majestic onde viveu o poeta. O jardim no terraço tem uma vista linda.",
-                    "5. Fundação Iberê Camargo: Um prédio arquitetônico premiado (Álvaro Siza) na beira do rio, focado em arte moderna.",
-                    "6. Estátua do Laçador: O símbolo do gaúcho pilchado, fica na entrada da cidade (perto do aeroporto).",
-                    "7. Arena do Grêmio / Beira-Rio (Inter): Visitar os estádios da dupla Grenal é sagrado para quem ama futebol.",
-                    "8. Rua Gonçalo de Carvalho: Apelidada de 'A Rua Mais Bonita do Mundo', formou um túnel verde incrível com as árvores.",
-                    "9. Moinhos de Vento (Parcão): O bairro nobre e seu parque, cercado de cafés chiques e gente bonita.",
-                    "10. Santander Cultural: Um cofre antigo que virou centro cultural no Centro Histórico, arquitetura deslumbrante."
-                ],
-
-                // TOP 10 GASTRONOMIA
-                gastronomia: [
-                    "1. Churrasco Gaúcho: O verdadeiro. Costela na vala ou rodízio de espeto corrido. É religião.",
-                    "2. Xis Gaúcho: Não é hambúrguer! É um sanduíche prensado gigante (tamanho de um prato). Prove o Xis Coração ou Xis Tudo.",
-                    "3. Chimarrão: Não é comida, mas é o 'alimento' social. Compartilhar a cuia é sinal de amizade.",
-                    "4. Arroz Carreteiro: Feito com charque (carne seca) e tempero verde. Simples e delicioso.",
-                    "5. Tainha na Taquara: Peixe assado no bambu, muito comum na época da Festa do Peixe.",
-                    "6. Sagu com Creme: A sobremesa clássica da casa de vó. Bolinhas de vinho tinto com creme de baunilha.",
-                    "7. Cachorro-Quente do Rosário: Pão cacetinho (francês), salsicha, molho vermelho e muito tempero verde.",
-                    "8. Costelão 12 Horas: Assado lentamente até a carne desmanchar do osso.",
-                    "9. Cuca: Um bolo de origem alemã com farofa doce em cima, herança da colonização.",
-                    "10. Café Colonial: Mesas fartas com pães, frios e bolos, muito comum nos arredores da capital."
-                ],
-
-                // TOP 10 CURIOSIDADES
-                curiosidades: [
-                    "1. Voltagem Traiçoeira: Porto Alegre é 110V (127V), mas o resto do Rio Grande do Sul é 220V. Cuidado!",
-                    "2. Pôr do Sol: Os porto-alegrenses aplaudem o pôr do sol no Guaíba. É um ritual local.",
-                    "3. Gre-Nal: A rivalidade entre Grêmio e Internacional divide a cidade (e as famílias) ao meio.",
-                    "4. Vocabulário Próprio: Cacetinho (pão francês), Sinaleira (semáforo), Lomba (ladeira), Bergamota (mexerica).",
-                    "5. Feira do Livro: A maior a céu aberto da América Latina, acontece na Praça da Alfândega.",
-                    "6. Capital mais fria: É a capital estadual mais fria do Brasil (em sensação térmica e umidade).",
-                    "7. Mais Árvores: É uma das cidades mais arborizadas do país (túneis verdes).",
-                    "8. Ronaldinho Gaúcho: O craque nasceu e começou a carreira aqui (no Grêmio).",
-                    "9. Revolução Farroupilha: A guerra contra o Império (1835-1845) é celebrada com orgulho todo 20 de setembro.",
-                    "10. Usina: O prédio da Usina do Gasômetro gerava energia a carvão, hoje é centro cultural."
-                ],
-
-                // TOP 10 CULTURA & RELIGIÃO
-                religiao: [
-                    "1. Catedral Metropolitana: Inspirada na Renascença italiana, com uma cúpula gigante no centro.",
-                    "2. Nossa Senhora dos Navegantes: A maior festa religiosa da cidade (2 de fevereiro), sincretizada com Iemanjá.",
-                    "3. Batuque e Umbanda: O RS tem a maior proporção de terreiros e praticantes de religiões afro do Brasil.",
-                    "4. Lutheranismo: Forte presença de igrejas luteranas devido à colonização alemã.",
-                    "5. Igreja das Dores: A mais antiga da cidade, com uma escadaria famosa e lendas de maldição.",
-                    "6. Tradicionalismo (CTG): O 'culto' às tradições gaúchas é quase uma religião cívica (bombacha, cavalo, lenço).",
-                    "7. Santuário Santa Rita: Local de peregrinação na zona sul.",
-                    "8. Templo Positivista: Raro no mundo, reflete a filosofia que influenciou a bandeira do Brasil ('Ordem e Progresso').",
-                    "9. Elis Regina: A maior cantora do Brasil nasceu aqui e é venerada culturalmente.",
-                    "10. Laçador: A estátua representa Paixão Côrtes, folclorista que serviu de modelo para o gaúcho ideal."
-                ],
-
-                // TOP 10 EVENTOS E ESTAÇÕES
-                eventos_estacoes: [
-                    "1. Semana Farroupilha (Setembro): O Acampamento Farroupilha monta uma 'cidade' de madeira no parque. Churrasco 24h por dia.",
-                    "2. Feira do Livro (Out/Nov): A praça enche de bancas. É tradição comprar livro e comer 'Xis' depois.",
-                    "3. Porto Verão Alegre (Janeiro): Festival de teatro e comédia para animar o verão vazio.",
-                    "4. Festa de Navegantes (Fevereiro): Procissão fluvial e terrestre que para a cidade.",
-                    "5. Inverno (Jun-Ago): Frio de verdade. Use casaco pesado, cachecol e botas. A cidade fica elegante (e cinza).",
-                    "6. Expointer (Agosto/Setembro): A maior feira agropecuária da América Latina (acontece na vizinha Esteio).",
-                    "7. Verão (Dez-Mar): A cidade esvazia (todos vão para o litoral). O calor é sufocante.",
-                    "8. South Summit (Março): Um dos maiores eventos de inovação e startups do mundo acontece no Cais Mauá.",
-                    "9. Bienal do Mercosul: Grande evento de arte contemporânea que usa vários espaços da cidade.",
-                    "10. Clássico Gre-Nal: Quando tem jogo, a cidade para. Evite andar perto do estádio com a cor do time rival."
-                ],
-
-                // TOP 10 INFO GERAIS
-                info_gerais: [
-                    "1. Voltagem: 110V/127V. (Atenção: Gramado e Canela são 220V. Porto Alegre é 110V).",
-                    "2. DDD: 51.",
-                    "3. Aeroporto: Salgado Filho (POA). O principal do estado.",
-                    "4. Transporte: Uber funciona bem. Ônibus (Carris) cobre tudo, e tem os Lotação (micro-ônibus vermelhos mais caros e rápidos).",
-                    "5. Segurança: O Centro Histórico à noite é perigoso. Evite andar a pé com celular exposto.",
-                    "6. Clima: 'De forno a freezer'. Pode fazer 30ºC e 10ºC no mesmo dia. Traga roupas para tudo.",
-                    "7. Moeda: Real (BRL).",
-                    "8. Gentileza: O gaúcho pode parecer grosso pelo jeito de falar direto, mas é muito hospitaleiro.",
-                    "9. Água: Potável, mas muitos preferem mineral. A água do Guaíba não é para banho!",
-                    "10. Rodoviária: Fica na entrada da cidade, fácil acesso para ir a Gramado ou litoral."
-                ],
-
-                // TOP 10 DICAS ANTES DE IR
-                antes_de_ir: [
-                    "1. Roupas: Se for no inverno, traga casaco pesado MESMO. A umidade faz o frio doer nos ossos.",
-                    "2. Chimarrão: Se te oferecerem, aceite. Não mexa na bomba (canudo) e beba até fazer o ronco no final.",
-                    "3. Voltagem: Verifique a chave do seu secador. POA é 110V, mas hotéis podem ter tomadas 220V identificadas.",
-                    "4. Domingo: O porto-alegrense vai para a Orla ou Redenção. O trânsito nessas áreas fica lento.",
-                    "5. Xis: Um Xis alimenta duas pessoas com fome moderada. É gigante.",
-                    "6. Mosquito: No verão, perto do rio, tem muito mosquito. Repelente ajuda.",
-                    "7. Centro: Visite o Mercado Público e museus de dia. À noite, prefira a Cidade Baixa ou Moinhos.",
-                    "8. Cidade Baixa (CB): É o bairro boêmio, dos bares e baladas alternativos.",
-                    "9. Moinhos de Vento: É o bairro chique, dos restaurantes caros e lojas de grife.",
-                    "10. Uber no Aeroporto: Tem andar específico para chamar (siga as placas)."
-                ],
-
-                // --- NOVO: NÚMEROS IMPORTANTES (PORTO ALEGRE) ---
-                numeros: [
-                    "1. 190 (Brigada Militar): Emergência policial. No RS, a PM chama-se Brigada.",
-                    "2. (51) 3288-2668 (Delegacia do Turista): Atendimento especializado para quem visita a cidade.",
-                    "3. 192 (SAMU): Urgências médicas e acidentes na rua.",
-                    "4. 193 (Bombeiros): Incêndios e resgates.",
-                    "5. (51) 3289-8000 (HPS - Pronto Socorro): O Hospital de Pronto Socorro (municipal) é referência em traumas.",
-                    "6. 118 (EPTC): Para emergências de trânsito, acidentes sem vítima ou bloqueios.",
-                    "7. 156 (Fala Porto Alegre): Informações da prefeitura, linhas de ônibus e serviços.",
-                    "8. (51) 3358-2000 (Aeroporto Salgado Filho): Informações de voos e terminal.",
-                    "9. (51) 3210-0101 (Rodoviária de POA): Informações sobre ônibus para interior e Mercosul.",
-                    "10. 199 (Defesa Civil): Em caso de cheias do Guaíba ou temporais severos."
-                ],
-                // --- NOVO: RISCOS E ERROS (PORTO ALEGRE) ---
-                riscos: [
-                    "1. Centro Histórico à Noite: De dia é o coração da cultura, mas após as 19h e aos domingos fica deserto e perigoso. Evite andar a pé sozinho perto do Mercado Público à noite.",
-                    "2. Camisa de Time (Gre-Nal): A rivalidade é séria. Evite usar camisa do Grêmio perto do Beira-Rio ou do Inter perto da Arena em dias de jogo. Na dúvida, não use cores de times.",
-                    "3. Voltagem 110V: Porto Alegre é 110V (127V), mas Gramado e o interior são 220V. Se você levar seu secador de POA para a Serra, vai queimar. Fique atento!",
-                    "4. Banho no Guaíba: A Orla é linda para ver o pôr do sol, mas a água em muitos pontos é imprópria para banho. Não entre, a menos que haja sinalização explícita de balneabilidade.",
-                    "5. Achar que Gramado é Perto: Gramado fica a 2h de carro (com trânsito bom). Não planeje 'jantar em Gramado' e voltar para dormir em POA na mesma noite, é cansativo e perigoso com neblina.",
-                    "6. Parque da Redenção à Noite: O parque é maravilhoso de dia, mas evite atravessá-lo após o pôr do sol. A iluminação é precária em alguns pontos e há risco de assaltos.",
-                    "7. Mosquitos na Orla: No verão, o final da tarde na beira do rio tem muito mosquito. Leve repelente se for assistir ao pôr do sol.",
-                    "8. Lotação x Ônibus: O transporte 'Lotação' (micro-ônibus vermelho) é excelente e tem ar-condicionado, mas custa bem mais que o ônibus comum. Não entre achando que é o mesmo preço.",
-                    "9. Pardais (Radares): A fiscalização eletrônica é rigorosa (geralmente 60km/h). Cuidado nas Avenidas Ipiranga e Beira-Rio, a multa chega mesmo.",
-                    "10. 'Friagem' e Rinite: A mudança de temperatura é brutal (pode variar 15ºC no mesmo dia). Quem tem rinite ou asma sofre muito. Traga sempre um casaco e remédios de alergia."
-                ],
-                // COLE O ROTEIRO ABAIXO:
-                roteiros: {
-                    "curto": {
-                        titulo: "Roteiro Express (1 a 2 Dias)",
-                        texto: [
-                            "Dia 1 (Centro e Orla): Manhã no Centro Histórico (Mercado Público, Santander Cultural e MARGS). Almoço no Mercado. Fim de tarde: Pôr do sol na Orla do Guaíba (Usina do Gasômetro).",
-                            "Dia 2 (Cultura): Manhã no Parque da Redenção (se for domingo, tem o Brique). Tarde: Casa de Cultura Mario Quintana (tome um café no jardim do terraço)."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Roteiro Essencial (3 a 5 Dias)",
-                        texto: [
-                            "Dias 1 e 2: Siga o Roteiro Express acima.",
-                            "Dia 3 (Arte e Rio): Fundação Iberê Camargo (arquitetura incrível). Tarde: Passeio de barco (Cisne Branco ou Noiva do Caí) pelas ilhas do Guaíba.",
-                            "Dia 4 (Sofisticação): Bairro Moinhos de Vento. Caminhada no Parcão e almoço na Rua Padre Chagas. Noite: Churrascaria tradicional (Barranco ou Giovanaz).",
-                            "Dia 5 (Paixão Nacional): Tour no estádio da Arena do Grêmio ou Beira-Rio (Inter). Tarde na orla de Ipanema (Zona Sul) para um clima de praia de rio."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Roteiro Completo (7+ Dias)",
-                        texto: [
-                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
-                            "Dia 6 (Ciência ou Fé): Museu da PUCRS (interativo e incrível para crianças) OU Bate-volta ao Templo Budista de Três Coroas.",
-                            "Dia 7 (Raiz): Almoço em um CTG (Centro de Tradições Gaúchas) e noite boêmia na Cidade Baixa (bares alternativos). Despedida com um Xis Gaúcho."
-                        ]
-                    }
-                },
-                // SEUS LINKS DE AFILIADO (ID 304142)
-                links: {
-                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-663673&aid=304142", 
-                    passeio: "https://www.civitatis.com/br/porto-alegre/", 
-                    seguro: "https://www.segurospromo.com.br" 
-                }
-            },
-            {
-                name: "Curitiba",
-                // FOTO: Jardim Botânico (Estufa) - Clássica (Wikimedia)
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Estufa_principal_do_Jardim_Bot%C3%A2nico_de_Curitiba_02_%28cropped%29.jpg/500px-Estufa_principal_do_Jardim_Bot%C3%A2nico_de_Curitiba_02_%28cropped%29.jpg",
-                tags: ["Parques", "Frio", "Organização"],
-                mapa: "https://goo.gl/maps/curitiba",
-                clima: "Subtropical Úmido. O tempo muda rápido: pode fazer sol, chover e gear no mesmo dia. Traga casaco sempre.",
-                // Adicione dentro do objeto de Curitiba
-veredicto: {
-    melhor_epoca: "Março a Maio (Outono agradável) ou Setembro a Novembro (Primavera florida). O inverno é rigoroso para os padrões brasileiros e o verão costuma ser chuvoso.",
-    ideal_para: [
-        "Amantes de parques e áreas verdes impecáveis (Jardim Botânico, Tanguá)",
-        "Quem busca organização urbana, limpeza e transporte eficiente",
-        "Turismo cultural e arquitetônico (Museu Oscar Niemeyer, Ópera de Arame)",
-        "Gulosos por culinária italiana e cafés coloniais (Bairro Santa Felicidade)"
-    ],
-    nao_ideal_para: [
-        "Quem detesta dias nublados, cinzas e chuva (o apelido 'Churitiba' é real)",
-        "Quem busca calor tropical constante e praias (a cidade é fria e fica no planalto)",
-        "Quem espera agito de rua desordenado (a cidade é mais contida que Rio/Salvador)"
-    ],
-    perfis: [
-        { icone: "ri-leaf-fill", nome: "Ecológico" },
-        { icone: "ri-building-2-fill", nome: "Urbano" },
-        { icone: "ri-cup-fill", nome: "Frio/Café" },
-        { icone: "ri-camera-lens-fill", nome: "Fotos" }
-    ]
-},
-                // TOP 10 PONTOS TURÍSTICOS
-                pontos_turisticos: [
-                    "1. Jardim Botânico: O cartão-postal. A estufa de vidro estilo Art Nouveau e os jardins franceses são lindos.",
-                    "2. Ópera de Arame: Um teatro construído em estrutura tubular e vidro sobre um lago. Visual único.",
-                    "3. Parque Tanguá: Antiga pedreira desativada que virou um parque deslumbrante. O pôr do sol no mirante é obrigatório.",
-                    "4. Museu Oscar Niemeyer (MON): Conhecido como 'Museu do Olho'. Arquitetura futurista e grandes exposições de arte.",
-                    "5. Feira do Largo da Ordem: Aos domingos de manhã. Gigantesca, tem artesanato, antiguidades e o famoso pastel de feira.",
-                    "6. Torre Panorâmica: Vista 360º da cidade. Dá para entender o planejamento urbano lá de cima.",
-                    "7. Bosque do Alemão: Tem a trilha de João e Maria e uma vista linda da cidade. Ótimo para crianças.",
-                    "8. Santa Felicidade: O bairro italiano gastronômico. Restaurantes gigantes (como o Madalosso) servem rodízio de massas e frango.",
-                    "9. Parque Barigui: A 'praia' do curitibano. Capivaras vivem livres no lago e as pessoas fazem churrasco nos quiosques.",
-                    "10. Unilivre (Universidade Livre do Meio Ambiente): Uma rampa de madeira em espiral no meio da mata. Lugar de paz e arquitetura sustentável."
-                ],
-
-                // TOP 10 GASTRONOMIA
-                gastronomia: [
-                    "1. Carne de Onça: Patrimônio da cidade. Não é onça! É carne bovina crua super temperada sobre broa preta (tipo um steak tartare rústico).",
-                    "2. Pinhão: No inverno (maio-julho), come-se pinhão cozido em todo lugar. É a semente da araucária.",
-                    "3. Barreado: Prato típico do litoral (Morretes), mas muito consumido na capital. Carne cozida por horas até desmanchar, comida com farinha e banana.",
-                    "4. Pierogi: Pastel cozido de origem polonesa, geralmente recheado de batata e requeijão com molho de nata.",
-                    "5. Frango com Polenta: Clássico de Santa Felicidade. A polenta frita e o frango a passarinho são servidos à vontade.",
-                    "6. Quentão de Vinho: No inverno, é a bebida oficial das feiras. Feito com vinho tinto, gengibre e especiarias (e às vezes marshmallow).",
-                    "7. Submarino: Famoso no 'Bar do Alemão'. Um chopp com uma canequinha de Steinhäger mergulhada dentro. Você pode levar a canequinha de brinde.",
-                    "8. Café Colonial: Herança dos imigrantes. Mesas fartas com tortas, pães, geléias e frios à tarde.",
-                    "9. Chucrute e Eisbein: Joelho de porco com repolho fermentado, influência forte da colonização alemã.",
-                    "10. Pastel de Feira: Na feira do Largo da Ordem, o pastel é gigante e super recheado."
-                ],
-
-                // TOP 10 CURIOSIDADES
-                curiosidades: [
-                    "1. É Vina, não Salsicha: Se pedir cachorro-quente com 'salsicha', vão te corrigir. Em Curitiba chama-se Vina (do alemão Wiener).",
-                    "2. Penal: Estojo escolar aqui chama-se 'Penal'.",
-                    "3. Capivaras: Elas são as donas dos parques. São fofas, mas são animais selvagens. Não tente fazer carinho!",
-                    "4. Capital Mais Fria: É considerada a capital mais fria do Brasil. Geada é comum no inverno.",
-                    "5. Oil Man: Uma lenda urbana real. Um homem que anda de sunga e coberto de óleo pela cidade, mesmo no frio.",
-                    "6. Tubos de Ônibus: As estações de ônibus parecem tubos futuristas. Você paga antes de entrar para agilizar o embarque.",
-                    "7. Cidade Sorriso?: Curitibano tem fama de fechado. Dizem que não falam com estranhos no elevador, mas são educados se você pedir ajuda.",
-                    "8. Reciclagem: A cultura de separar o lixo ('Lixo que não é Lixo') é muito forte e antiga na cidade.",
-                    "9. Rua 24 Horas: Foi a primeira rua coberta a funcionar 24h no Brasil (hoje não é mais 100% 24h, mas a arquitetura segue linda).",
-                    "10. Palácio Avenida: No Natal, crianças cantam nas janelas desse prédio histórico. É um espetáculo emocionante."
-                ],
-
-                // TOP 10 CULTURA & RELIGIÃO
-                religiao: [
-                    "1. Bosque do Papa: Memorial da imigração polonesa, com casas de madeira originais montadas sem pregos. O Papa João Paulo II visitou.",
-                    "2. Catedral Basílica Menor: Na Praça Tiradentes (marco zero). Estilo neogótico imponente.",
-                    "3. Mesquita Imam Ali: Uma bela mesquita com cúpula e minaretes no centro cívico, aberta à visitação guiada.",
-                    "4. Memorial Ucraniano: Fica no Parque Tingui. Tem uma réplica de uma igreja ortodoxa de madeira com cúpula dourada lindíssima.",
-                    "5. Ordem Rosacruz: O Templo das Musas e o portal egípcio são impressionantes e misteriosos.",
-                    "6. Santuário Nossa Senhora do Perpétuo Socorro: As novenas de quarta-feira reúnem multidões o dia todo.",
-                    "7. Praça do Japão: Homenagem à imigração japonesa, com lago de carpas, cerejeiras e casa de chá.",
-                    "8. Museu do Holocausto: O primeiro do Brasil. Pequeno, mas extremamente tocante e educativo.",
-                    "9. Igrejas Luteranas: Muitas igrejas de estilo gótico alemão espalhadas pela cidade.",
-                    "10. Solar do Rosário: Centro cultural no coração histórico, focado em artes plásticas."
-                ],
-
-                // TOP 10 EVENTOS E ESTAÇÕES
-                eventos_estacoes: [
-                    "1. Natal de Curitiba (Dezembro): A cidade vira luz pura. O coral do Palácio Avenida e as decorações nos parques são famosos no país.",
-                    "2. Festival de Teatro (Março): Um dos maiores festivais de teatro da América Latina. A cidade respira arte, com peças na rua e nos palcos.",
-                    "3. Inverno (Jun-Ago): É frio de verdade (pode chegar a 0ºC ou menos). É a época charmosa de comer pinhão e usar casaco de lã.",
-                    "4. Feira de Inverno (Praças): Barraquinhas vendendo artesanato de lã e quentão nas praças Santos Andrade e Osório.",
-                    "5. Oficina de Música (Janeiro): Cursos e shows de música erudita e popular (MPB) pela cidade toda.",
-                    "6. Florada das Cerejeiras (Julho): Na Praça do Japão e Jardim Botânico, as árvores ficam rosas. Dura poucos dias.",
-                    "7. Primavera (Set-Nov): Os parques ficam floridos, mas o tempo é instável (chuva e sol no mesmo dia).",
-                    "8. Carnaval Zombie Walk: No carnaval, o destaque não é o samba, mas a marcha de zumbis que reúne milhares de pessoas.",
-                    "9. Verão (Dez-Mar): Dias quentes, mas noites frescas. Chove bastante no final da tarde.",
-                    "10. Restaurant Week: Acontece duas vezes ao ano, ótimo para comer em restaurantes caros por preço fixo."
-                ],
-
-                // TOP 10 INFO GERAIS
-                info_gerais: [
-                    "1. Voltagem: 110V (127V). Atenção, pois o litoral e o interior costumam ser 220V, mas Curitiba é 110V.",
-                    "2. DDD: 41.",
-                    "3. Aeroporto: Afonso Pena (CWB). Fica na cidade vizinha (São José dos Pinhais), a 30min do centro.",
-                    "4. Linha Turismo: O ônibus de dois andares que passa em 26 pontos turísticos. Paga-se um valor e pode descer e subir 4 vezes.",
-                    "5. Rodoferroviária: Moderna e organizada. Tem ônibus para todo o Brasil e o trem para Morretes.",
-                    "6. Uber/99: Funciona muito bem e é mais barato que a Linha Turismo se você estiver em 3 ou 4 pessoas.",
-                    "7. Clima: 'Cebola'. Você sai de casaco, tira ao meio-dia, põe de novo à tarde e põe um mais pesado à noite.",
-                    "8. Segurança: O Centro Histórico à noite exige cuidado. Batel e Água Verde são mais tranquilos.",
-                    "9. Trânsito: A 'Faixa Exclusiva' de ônibus é sagrada. Se dirigir, nunca invada a canaleta, a multa é certa.",
-                    "10. Água: Potável e de boa qualidade."
-                ],
-
-                // TOP 10 DICAS ANTES DE IR
-                antes_de_ir: [
-                    "1. Mala Inteligente: Traga camiseta, casaco leve E casaco pesado. Você vai usar os três no mesmo dia.",
-                    "2. Linha Turismo: Se tiver só 1 dia, é a melhor opção. Sente no andar de cima (lado direito) para as melhores vistas.",
-                    "3. Domingo de Manhã: Reserve para a Feira do Largo da Ordem. Vá cedo (9h) para evitar a multidão das 11h.",
-                    "4. Segunda-Feira: Quase todos os museus e parques (como o Tanguá e o MON) fecham ou abrem mais tarde para manutenção. Confira antes.",
-                    "5. Trem de Morretes: O passeio de trem pela Serra do Mar é lindo. Compre o bilhete com antecedência e sente do lado esquerdo na ida.",
-                    "6. Pôr do Sol: O melhor é no Parque Tanguá ou na Praça das Nações (alto da XV).",
-                    "7. Batel: É o bairro da vida noturna chique e dos restaurantes caros.",
-                    "8. Rua 24h: Boa para uma passada rápida ou almoço, mas não tem mais o agito da madrugada de antigamente.",
-                    "9. Hotel: Ficar no Centro é prático, mas o Batel é mais bonito e seguro à noite.",
-                    "10. Respeite a Fila: O curitibano respeita muito a fila do ônibus. Não tente furar."
-                ],
-
-                // --- NOVO: NÚMEROS IMPORTANTES (CURITIBA) ---
-                numeros: [
-                    "1. 190 (Polícia Militar): Emergência e segurança.",
-                    "2. (41) 3326-3600 (DPTUR): Delegacia de Proteção ao Turista (atendimento especializado).",
-                    "3. 192 (SAMU): Urgências médicas de saúde.",
-                    "4. 193 (Bombeiros/SIATE): Resgate de trauma e acidentes de trânsito.",
-                    "5. 156 (Central da Prefeitura): Informações sobre ônibus, turismo e serviços municipais (funciona muito bem).",
-                    "6. (41) 3381-1515 (Aeroporto Afonso Pena): Informações de voos e achados e perdidos.",
-                    "7. (41) 3320-3000 (Rodoferroviária): Informações sobre ônibus estaduais e interestaduais.",
-                    "8. (41) 3240-1103 (Hospital do Trabalhador): Referência em trauma e emergências.",
-                    "9. 118 (Trânsito): Para reportar acidentes sem vítima ou semáforos estragados.",
-                    "10. 0800 41 1512 (Copel): Emergência de energia elétrica (queda de luz ou fios soltos)."
-                ],
-
-                // --- NOVO: RISCOS E ERROS (CURITIBA) ---
-                riscos: [
-                    "1. As 4 Estações: O maior erro é sair do hotel de manhã só de camiseta porque está sol. Às 16h vai esfriar bruscamente. Leve sempre um agasalho na mochila.",
-                    "2. Centro à Noite: A região da Praça Tiradentes, Rua XV e Paço da Liberdade fica deserta e perigosa após as 20h. Há muitos moradores de rua e risco de assalto. Use Uber.",
-                    "3. Radares de Trânsito: Curitiba tem fiscalização eletrônica rigorosa (50km/h ou 60km/h). Os radares muitas vezes não são visíveis. Respeite o limite ou a multa chega.",
-                    "4. Canaleta de Ônibus: Se estiver dirigindo, NUNCA entre na pista exclusiva dos ônibus expressos (canaleta). É infração gravíssima e risco de acidente fatal.",
-                    "5. Furtos na Feira do Largo: A feira de domingo é lotada. Mochilas para frente e cuidado com o celular no bolso de trás. Batedores de carteira aproveitam o 'empurra-empurra'.",
-                    "6. Capivaras com Carrapatos: Elas são lindas, mas transmitem o carrapato-estrela (Febre Maculosa). Admire de longe e evite sentar na grama onde elas pastam.",
-                    "7. Vento Encanado: O centro da cidade tem 'corredores de vento' entre os prédios que deixam a sensação térmica muito baixa. Cachecol ajuda muito.",
-                    "8. Uber no Aeroporto: O Aeroporto fica em São José dos Pinhais. O Uber para Curitiba é tranquilo, mas em horários de pico pode ficar caro (dinâmico).",
-                    "9. Horário de Ônibus: O sistema é bom, mas domingo os ônibus demoram muito. Use o app 'Curitiba 156' para ver o horário real e não ficar 40 min no tubo.",
-                    "10. Ciclovias: Cuidado ao caminhar nas calçadas compartilhadas (vermelhas). Ciclistas passam rápido. Pedestre na calçada, bicicleta na ciclovia."
-                ],
-                // COLE O ROTEIRO ABAIXO:
-                roteiros: {
-                    "curto": {
-                        titulo: "Roteiro Express (1 a 2 Dias)",
-                        texto: [
-                            "Dia 1 (Cartões-Postais): Comece no Jardim Botânico (Estufa de vidro). Almoço em Santa Felicidade (Madalosso). Tarde na Ópera de Arame e pôr do sol no Parque Tanguá.",
-                            "Dia 2 (Cultura e Vista): Manhã no Museu Oscar Niemeyer (Museu do Olho). Suba na Torre Panorâmica. Fim de tarde no Largo da Ordem (Centro Histórico)."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Roteiro Essencial (3 a 5 Dias)",
-                        texto: [
-                            "Dias 1 e 2: Siga o Roteiro Express acima.",
-                            "Dia 3 (Serra do Mar): O passeio mais famoso. Desça de Trem para Morretes pela Serra Verde Express (paisagem linda). Coma Barreado lá e volte de van/ônibus pela Estrada da Graciosa.",
-                            "Dia 4 (Parques): Pegue a Linha Turismo (ônibus de 2 andares) e pare no Parque Barigui (capivaras!) e Bosque do Papa.",
-                            "Dia 5 (Lado B): Mercado Municipal (café da manhã). Tarde no Unilivre (Universidade Livre do Meio Ambiente) - arquitetura incrível na mata."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Roteiro Completo (7+ Dias)",
-                        texto: [
-                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
-                            "Dia 6 (Arenitos): Bate-volta para o Parque Estadual de Vila Velha (Ponta Grossa). Veja as formações rochosas milenares.",
-                            "Dia 7 (Praia e Trem): Se for verão, estique até a Ilha do Mel (pegue o trem até Paranaguá e depois o barco).",
-                            "Dia 8 (Relax): Brunch no Batel (bairro chique) e compras no Shopping Pátio Batel ou Feirinha do Largo (se for domingo)."
-                        ]
-                    }
-                },
-
-                // SEUS LINKS DE AFILIADO
-                links: {
-                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-639714&aid=304142", 
-                    passeio: "https://www.civitatis.com/br/curitiba/", 
-                    seguro: "https://www.segurospromo.com.br" 
-                }
-            },
-            {
-                name: "Fortaleza",
-                // FOTO: Beira Mar e Espigão (Wikimedia)
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/7/73/Fortaleza%2C_Brazil_%284%29_%28cropped%29.jpg",
-                tags: ["Sol", "Praias", "Humor"],
-                mapa: "https://goo.gl/maps/fortaleza",
-                clima: "Tropical. Calor o ano todo (28ºC a 32ºC) e vento constante. Chuvas rápidas entre fev-mai.",
-                // Adicione dentro do objeto de Fortaleza
-veredicto: {
-    melhor_epoca: "Julho a Dezembro (Sol garantido e ventos fortes). Evite Março a Maio se não quiser pegar a estação chuvosa. Agosto a Novembro é o paraíso do Kitesurf.",
-    ideal_para: [
-        "Famílias e adictos em adrenalina (Beach Park é parada obrigatória)",
-        "Amantes de caranguejo (a tradição da 'Quinta do Caranguejo' é sagrada)",
-        "Praticantes de Kitesurf e Windsurf (os ventos são perfeitos)",
-        "Quem busca base para explorar praias vizinhas (Cumbuco, Canoa Quebrada)"
-    ],
-    nao_ideal_para: [
-        "Quem espera nadar em qualquer praia urbana (alguns trechos podem ser impróprios)",
-        "Quem se incomoda com vento constante (na orla venta muito o tempo todo)",
-        "Caminhadas despreocupadas em áreas desertas à noite (segurança requer atenção)"
-    ],
-    perfis: [
-        { icone: "ri-sun-fill", nome: "Sol/Vento" },
-        { icone: "ri-bear-smile-fill", nome: "Diversão" },
-        { icone: "ri-restaurant-line", nome: "Caranguejo" },
-        { icone: "ri-water-flash-fill", nome: "Kitesurf" }
-    ]
-},
-                // TOP 10 PONTOS TURÍSTICOS
-                pontos_turisticos: [
-                    "1. Praia do Futuro: A melhor praia urbana para banho, famosa pelas megabarracas (Crocobeach, Chico do Caranguejo) com piscinas e shows.",
-                    "2. Avenida Beira Mar: O calçadão clássico. Ótimo para caminhar no fim da tarde, ver a Feirinha de Artesanato e o pôr do sol.",
-                    "3. Beach Park: Fica na vizinha Aquiraz (20km). O maior parque aquático da América Latina. O toboágua 'Insano' (41m) é para os corajosos.",
-                    "4. Mercado Central: Um paraíso de 4 andares para comprar redes, bordados, castanhas e cachaça. Pechinche!",
-                    "5. Dragão do Mar: Centro cultural com arquitetura moderna, museus, cinema e o Planetário. A noite ao redor é agitada.",
-                    "6. Theatro José de Alencar: Uma joia da arquitetura Art Nouveau com vitrais coloridos. Faça a visita guiada.",
-                    "7. Ponte dos Ingleses (Metálica): Lugar clássico para ver o pôr do sol e os golfinhos (se der sorte). (Verifique se a reforma acabou).",
-                    "8. Praia de Iracema: Onde fica a Estátua de Iracema. A praia não é boa para banho, mas é o coração boêmio e histórico.",
-                    "9. Museu da Cachaça (iPark): Fica em Maranguape (perto). Passeio histórico pela Ypióca com arvorismo e pedalinho.",
-                    "10. Catedral Metropolitana: Uma igreja imensa em estilo gótico-romano, a terceira maior do Brasil."
-                ],
-
-                // TOP 10 GASTRONOMIA
-                gastronomia: [
-                    "1. Caranguejo (Quinta-feira): É lei. Quinta à noite é dia de comer caranguejo (toc-toc) nas barracas da Praia do Futuro.",
-                    "2. Baião de Dois: Arroz e feijão de corda misturados, com queijo coalho e cheiro verde. Acompanha carne de sol.",
-                    "3. Carne de Sol com Macaxeira: A carne seca ao sol (super macia) servida com mandioca frita ou cozida.",
-                    "4. Peixada Cearense: Cozido de peixe com legumes, ovos cozidos e pirão. Leve e saboroso.",
-                    "5. Tapioca: No Centro das Tapioqueiras (Messejana) tem os melhores recheios (carne de sol com nata é o clássico).",
-                    "6. Panelada: Prato forte (bucho e tripas de boi) consumido tradicionalmente no Mercado São Sebastião para curar ressaca.",
-                    "7. Camarão no Alho e Óleo: Nas praias, os vendedores passam com baldes de camarão frito na hora. (Cuidado com a higiene).",
-                    "8. Castanha de Caju: O Ceará é o maior produtor. Compre no Mercado Central (a torrada com sal é viciante).",
-                    "9. Paçoca de Carne Seca: Carne de sol desfiada e socada no pilão com farinha e cebola roxa.",
-                    "10. Sorvete de Rapadura: Ou de frutas regionais (cajá, graviola, sapoti). A sorveteria 50 Sabores é a mais famosa."
-                ],
-
-                // TOP 10 CURIOSIDADES
-                curiosidades: [
-                    "1. Terra do Humor: O Ceará exporta humoristas (Tom Cavalcante, Renato Aragão). Shows de humor acontecem toda noite nos restaurantes.",
-                    "2. Cabeça Chata?: O cearense brinca com a própria 'cabeça chata'. É um povo extremamente hospitaleiro e resiliente.",
-                    "3. Vento Forte: Fortaleza é um dos melhores lugares do mundo para Kitesurf e Windsurf devido aos ventos alísios constantes.",
-                    "4. Não tem Horário de Verão: O sol nasce às 5h30 e se põe às 17h30 o ano todo. Aproveite o dia cedo!",
-                    "5. 'Aí Dentu': Expressão multiuso cearense. Pode ser negação, xingamento ou brincadeira, dependendo da entonação.",
-                    "6. Rendeiras: A renda de bilro é uma arte passada de mãe para filha. Em Aquiraz, há o Centro das Rendeiras.",
-                    "7. Verde Mares: O mar de Fortaleza é conhecido pelo tom verde esmeralda único.",
-                    "8. Padaria Espiritual: Foi um movimento literário (e não uma padaria) que agitou a cultura da cidade no século XIX.",
-                    "9. O Ceará aboliu a escravidão antes: Foi a primeira província a libertar os escravos (1884), 4 anos antes da Lei Áurea.",
-                    "10. Internet do Brasil: Fortaleza é onde chegam os cabos de fibra óptica submarinos que conectam o Brasil à Europa e África."
-                ],
-
-                // TOP 10 CULTURA & RELIGIÃO
-                religiao: [
-                    "1. Estátua de Padre Cícero: Fica em Juazeiro do Norte (interior), mas a devoção ao 'Padim Ciço' está em todo lugar em Fortaleza.",
-                    "2. Procissão de São Pedro: Em junho, os pescadores saem com seus barcos enfeitados no mar do Mucuripe.",
-                    "3. Maracatu Cearense: Diferente do pernambucano, o ritmo é mais cadenciado e usam o 'negrume' (pintura preta) no rosto.",
-                    "4. Forró Pé de Serra: A cultura do forró é sagrada. Casas como o 'Kukukaya' tocam o ritmo autêntico.",
-                    "5. Artesanato de Barro: As garrafinhas de areia colorida (ciclogravura) são a lembrancinha número 1.",
-                    "6. Catedral Metropolitana: Tem capacidade para 5.000 pessoas e lembra a Catedral de Colônia (Alemanha).",
-                    "7. Iemanjá: A festa de 15 de agosto na Praia do Futuro reúne milhares de fiéis de umbanda e candomblé.",
-                    "8. São José: O padroeiro do Ceará. Diz a lenda que se chover no dia dele (19 de março), a colheita do ano será boa.",
-                    "9. Museu da Cultura Cearense: No Dragão do Mar, explica a vida do vaqueiro e a seca.",
-                    "10. Literatura de Cordel: Folhetos com rimas e xilogravuras vendidos nas feiras e mercados."
-                ],
-
-                // TOP 10 EVENTOS E ESTAÇÕES
-                eventos_estacoes: [
-                    "1. Fortal (Julho): O maior carnaval fora de época do Brasil. A cidade para e os hotéis lotam.",
-                    "2. São João (Junho): Festas juninas gigantescas, com quadrilhas profissionais que parecem escolas de samba.",
-                    "3. Réveillon: A festa no Aterro da Praia de Iracema é a segunda maior do Brasil (só perde para Copacabana).",
-                    "4. Alta Temporada (Dez-Jan/Jul): Muito sol, cidade cheia, preços altos e muito vento.",
-                    "5. Estação das Chuvas (Fev-Mai): Chove rápido e forte, depois abre sol. É a época mais barata.",
-                    "6. Temporada dos Ventos (Ago-Nov): O auge para quem pratica Kitesurf e Windsurf.",
-                    "7. Festival de Jazz e Blues (Carnaval): Acontece em Guaramiranga (serra), mas movimenta músicos em Fortaleza também.",
-                    "8. Ceará Music (Varia): Festival de pop rock que costuma atrair grandes bandas nacionais.",
-                    "9. Canoa Quebrada (Bate-volta): Passeio obrigatório para ver as falésias vermelhas (melhor na maré baixa).",
-                    "10. Quinta do Caranguejo (Semanal): Toda quinta-feira o evento é gastronômico e musical nas barracas."
-                ],
-
-                // TOP 10 INFO GERAIS
-                info_gerais: [
-                    "1. Voltagem: 220V. Cuidado, pois a maioria do Brasil é 110V ou misto, mas lá é tudo 220V.",
-                    "2. DDD: 85.",
-                    "3. Aeroporto: Pinto Martins (FOR). Moderno e ampliado recentemente.",
-                    "4. Uber/99: Funciona muito bem e é barato. Evite táxis na porta de hotéis sem taxímetro.",
-                    "5. Água: Beba apenas água mineral. O calor exige hidratação constante.",
-                    "6. Sol: O índice UV é extremo (perto da linha do Equador). Protetor solar fator 50 é o mínimo.",
-                    "7. Roupas: Leves, de algodão ou linho. Jeans é tortura. À noite venta, mas não faz frio.",
-                    "8. Trânsito: O trânsito no final da tarde na Beira Mar e na saída para as praias pode ser pesado.",
-                    "9. Segurança: Evite andar com correntes de ouro ou celular na mão no calçadão.",
-                    "10. Gorjeta: 10% é padrão. Músicos nos restaurantes cobram 'couvert artístico' (R$ 10 a R$ 20)."
-                ],
-
-                // TOP 10 DICAS ANTES DE IR
-                antes_de_ir: [
-                    "1. Reserve Beach Park: Compre o ingresso online antecipado, é mais barato que na bilheteria.",
-                    "2. Tábua de Marés: Para visitar piscinas naturais ou Canoa Quebrada, a maré precisa estar BAIXA. Consulte antes de ir.",
-                    "3. Não alugue carro só para ficar na cidade: Uber resolve tudo. Alugue só se for para Jericoacoara ou praias distantes.",
-                    "4. Jericoacoara é Longe: São 4h a 5h de viagem (300km). Não tente fazer bate-volta de 1 dia, é cansativo demais.",
-                    "5. Feirinha da Beira Mar: Começa às 17h. É o melhor lugar para comprar lembrancinhas, mas pesquise preços.",
-                    "6. Barracas da Praia do Futuro: Algumas cobram entrada ou consumação mínima nas áreas VIP (lounges). Pergunte antes.",
-                    "7. Hidratação: Compre água no supermercado (garrafas de 1,5L) para deixar no hotel. No frigobar é caro.",
-                    "8. Show de Humor: Reserve mesa. O 'Lupus Bier' e o 'Beira Mar Grill' são os mais tradicionais.",
-                    "9. Segunda-Feira: O Dragão do Mar e muitos museus fecham. Use a segunda para praia ou compras.",
-                    "10. Vento: O vento levanta saias e vestidos leves. Mulheres preferem shortinhos por baixo."
-                ],
-
-                // --- NOVO: NÚMEROS IMPORTANTES (FORTALEZA) ---
-                numeros: [
-                    "1. 190 (Polícia Militar): Emergência e assaltos.",
-                    "2. (85) 3101-2488 (DEPROTUR): Delegacia de Proteção ao Turista (Fica na Rua Costa Barros).",
-                    "3. 192 (SAMU): Ambulância e emergência médica.",
-                    "4. 193 (Bombeiros): Afogamentos e resgate.",
-                    "5. (85) 3392-1030 (Aeroporto): Informações de voos.",
-                    "6. 191 (Polícia Rodoviária): Para emergências nas estradas (BR-116, acesso às praias).",
-                    "7. (85) 3101-5353 (Hospital Geral - HGF): Grande hospital público de referência.",
-                    "8. (85) 3452-6900 (Rodoviária): Terminal São Tomé.",
-                    "9. 156 (AMC - Trânsito): Para reportar acidentes de trânsito sem vítimas.",
-                    "10. 0800 285 0196 (Enel): Emergência de falta de luz."
-                ],
-
-                // --- NOVO: RISCOS E ERROS (FORTALEZA) ---
-                riscos: [
-                    "1. Praia do Futuro (Correnteza): O mar é violento e tem muitos buracos. Só entre onde houver salva-vidas e bandeira verde/amarela. Afogamentos são comuns.",
-                    "2. Assaltos na Beira Mar: Embora policiada, a orla tem furtos rápidos (bicicleta/corrida) de celulares e correntes. Não dê bobeira tirando selfies na borda da calçada.",
-                    "3. Centro e Iracema à Noite: O Centro histórico e o entorno do Dragão do Mar podem ficar desertos e perigosos de madrugada. Use Uber de porta a porta.",
-                    "4. Golpe do Camarão: Na praia, vendedores oferecem 'prova grátis' e depois cobram o prato inteiro. Pergunte o preço antes de tocar na comida.",
-                    "5. Jeri de Carro Comum: Não tente ir até a vila de Jericoacoara com seu carro alugado (sedan/hatch). Você vai atolar na areia. Precisa de 4x4 ou Jardineira.",
-                    "6. Insolação: O sol do Ceará não perdoa. Turistas desavisados vão parar no hospital com queimaduras de 2º grau no primeiro dia. Reaplique protetor a cada 2h.",
-                    "7. Águas Vivas (Caravelas): Em certas épocas, aparecem caravelas na areia (parecem balões roxos). Não toque, a queimadura é química e grave.",
-                    "8. Trânsito de Quinta: Na quinta-feira do caranguejo, a Av. Santos Dumont e acessos à Praia do Futuro travam. Saia cedo (19h) ou vá de Uber.",
-                    "9. Flanelinhas: Em locais de show ou praias lotadas, guardadores cobram caro adiantado. Tente parar em estacionamento fechado ou oficial.",
-                    "10. Guia Credenciado: Em passeios de buggy (Cumbuco/Canoa), exija bugueiro credenciado ('com emoção ou sem emoção'). Bugueiros piratas causam acidentes."
-                ],
-                // COLE O ROTEIRO ABAIXO:
-                roteiros: {
-                    "curto": {
-                        titulo: "Roteiro Express (1 a 2 Dias)",
-                        texto: [
-                            "Dia 1 (Clássico): Manhã no Mercado Central (artesanato). Almoço na Praia do Futuro (barracas gigantes como Crocobeach). Fim de tarde na Feirinha da Beira-Mar.",
-                            "Dia 2 (Cultura e História): Centro Dragão do Mar. Caminhada no Espigão do Náutico para ver o pôr do sol. Noite: Show de Humor (tradição local)."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Roteiro Essencial (3 a 5 Dias)",
-                        texto: [
-                            "Dias 1 e 2: Siga o Roteiro Express acima.",
-                            "Dia 3 (Adrenalina): Dia inteiro no Beach Park (Aquiraz). É caro, mas é o melhor parque aquático da América Latina.",
-                            "Dia 4 (Falésias): Bate-volta para Morro Branco e Praia das Fontes. O Labirinto das Falésias (areias coloridas) é cenário de novela.",
-                            "Dia 5 (Dunas): Bate-volta para Cumbuco. Passeio de Buggy 'com emoção' e esquibunda nas dunas. Almoço na beira da lagoa."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Roteiro Completo (7+ Dias)",
-                        texto: [
-                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
-                            "Dia 6 (Litoral Leste): Canoa Quebrada. Veja o símbolo da Lua e Estrela nas falésias e almoce na rua Broadway.",
-                            "Dia 7 (Litoral Oeste): Lagoinha. Uma das praias mais bonitas do estado, formato de meia-lua e coqueiros a perder de vista.",
-                            "Dia 8 (Despedida): Compras na Av. Monsenhor Tabosa e última caranguejada à noite."
-                        ]
-                    }
-                },
-
-                // SEUS LINKS DE AFILIADO
-                links: {
-                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-643662&aid=304142", 
-                    passeio: "https://www.civitatis.com/br/fortaleza/", 
-                    seguro: "https://www.segurospromo.com.br" 
-                }
-            },
-            {
-                name: "Campos do Jordão",
-                // FOTO: Vila Capivari (Wikimedia)
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Rua_Djalma_Forjaz%2C_Campos_do_Jord%C3%A3o%2C_SP.jpg/960px-Rua_Djalma_Forjaz%2C_Campos_do_Jord%C3%A3o%2C_SP.jpg",
-                tags: ["Inverno", "Romance", "Montanha"],
-                mapa: "https://goo.gl/maps/camposdojordao",
-                clima: "Tropical de Altitude. É a cidade mais alta do Brasil. Inverno gela (pode chegar a -2ºC) e verão é fresco.",
-                // Adicione dentro do objeto de Campos do Jordão
-veredicto: {
-    melhor_epoca: "Junho a Agosto (Inverno/Festival). É o auge do glamour e do frio, mas prepare o bolso. Abril e Maio são ótimos para pegar frio sem pagar preços de alta temporada.",
-    ideal_para: [
-        "Casais em busca de romance (lareira, vinho e fondue)",
-        "Famílias com crianças (Tarundu, Parque da Floresta Encantada)",
-        "Apreciadores de cervejas artesanais (Baden Baden) e chocolate",
-        "Quem curte o clima de serra e arquitetura europeia ('Suíça Brasileira')"
-    ],
-    nao_ideal_para: [
-        "Viajantes com orçamento muito apertado (hospedagem e alimentação são caros)",
-        "Quem odeia trânsito parado (no inverno, o bairro Capivari trava)",
-        "Quem busca calor ou agito de rua despojado (o foco é ver e ser visto)"
-    ],
-    perfis: [
-        { icone: "ri-hearts-fill", nome: "Romance" },
-        { icone: "ri-cup-fill", nome: "Frio/Choc" },
-        { icone: "ri-vip-diamond-fill", nome: "Luxo" },
-        { icone: "ri-beer-fill", nome: "Cerveja" }
-    ]
-},
-                // TOP 10 PONTOS TURÍSTICOS
-                pontos_turisticos: [
-                    "1. Vila Capivari: O centrinho turístico. Arquitetura europeia, restaurantes, lojas de grife e a famosa Cervejaria Baden Baden.",
-                    "2. Parque Amantikir: Jardins que falam. Um paisagismo incrível com labirintos de arbustos e flores do mundo todo.",
-                    "3. Horto Florestal: Natureza pura. Trilhas, lagos, tirolesa e muito ar puro longe do agito da cidade.",
-                    "4. Morro do Elefante: Suba de teleférico (o antigo de cadeirinha ou o novo fechado) para ver a vista clássica da cidade.",
-                    "5. Palácio Boa Vista: A residência de inverno do governador. Tem um acervo de arte incrível (Tarsila do Amaral) e visita guiada.",
-                    "6. Museu Felícia Leirner: Esculturas gigantes de bronze a céu aberto num jardim lindo. O pôr do sol aqui é emocionante.",
-                    "7. Pico do Itapeva: Fica tecnicamente em Pindamonhangaba, mas o acesso é por Campos. Dá para ver 15 cidades do Vale do Paraíba lá de cima.",
-                    "8. Ducha de Prata: Uma canalização de cachoeiras artificiais com decks de madeira. Clássico para fotos (e compras de malhas).",
-                    "9. Tarundu: Centro de lazer com patinação no gelo, hipismo e atividades radicais. Ótimo para crianças.",
-                    "10. Portal da Cidade: A entrada clássica estilo 'Alpes Suíços'. Parada obrigatória para a foto de chegada."
-                ],
-
-                // TOP 10 GASTRONOMIA
-                gastronomia: [
-                    "1. Fondue: O rei da cidade. Queijo, Carne e Chocolate. No Capivari tem rodízios (sequência) em cada esquina.",
-                    "2. Truta: O peixe da região. Servida grelhada com molho de alcaparras ou amêndoas. Fresquíssima.",
-                    "3. Pinhão: Símbolo da cidade. Come-se cozido, em farofas, em pratos sofisticados ou até em sorvete.",
-                    "4. Chocolate Artesanal: Existem dezenas de fábricas (Araucária, Spinassi). O chocolate quente cremoso é lei.",
-                    "5. Cerveja Baden Baden: A cervejaria nasceu aqui. Visite a fábrica ou tome um chopp no bar oficial do Capivari.",
-                    "6. Comida Alemã: Joelho de porco (Eisbein) e salsichões (Wurst) são muito comuns nos restaurantes.",
-                    "7. Pastelão do Maluf: Um pastel gigante (quase uma refeição) muito famoso no centro turístico.",
-                    "8. Café Colonial: Mesas fartas à tarde com pães, geleias, bolos e frios.",
-                    "9. Fondue de Coxinha: Invenção recente que virou febre. Um balde de queijo derretido para mergulhar coxinhas.",
-                    "10. Raclette: Queijo derretido na hora sobre batatas e frios. Prato suíço muito servido no inverno."
-                ],
-
-                // TOP 10 CURIOSIDADES
-                curiosidades: [
-                    "1. Cidade Mais Alta: É o núcleo urbano mais alto do Brasil, a 1.628 metros de altitude.",
-                    "2. Suíça Brasileira: Ganhou o apelido pelo clima e arquitetura (embora o estilo enxaimel seja muitas vezes 'fake' decorativo).",
-                    "3. Cura da Tuberculose: Antes do turismo, a cidade era um sanatório gigante devido ao ar puro que ajudava na cura.",
-                    "4. Festival de Inverno: É o maior evento de música erudita da América Latina (acontece em julho).",
-                    "5. Plátanos: As árvores que perdem as folhas no outono (ficam laranjas) são plátanos importados para dar ar europeu.",
-                    "6. Trânsito de SP: Em feriados, o trânsito no Capivari é tão intenso que parece a Av. Paulista na hora do rush.",
-                    "7. Bondinho: Existe um trem turístico que cruza a cidade (e vai até Santo Antônio do Pinhal).",
-                    "8. Araucárias: A árvore símbolo está ameaçada, mas Campos ainda preserva grandes matas dela.",
-                    "9. Preços: É considerada uma das cidades mais caras do Brasil para turismo na alta temporada.",
-                    "10. Estrada de Ferro: A ferrovia foi construída para subir os doentes de tuberculose, não para turistas."
-                ],
-
-                // TOP 10 CULTURA & RELIGIÃO
-                religiao: [
-                    "1. Mosteiro de São João: Lar das monjas beneditinas. Elas cantam Canto Gregoriano todos os dias às 17h45 (lindo demais).",
-                    "2. Igreja de São Benedito: A igreja do Capivari. Pequena, charmosa e disputadíssima para casamentos.",
-                    "3. Auditório Cláudio Santoro: A casa do Festival de Inverno. Acústica perfeita no meio da mata.",
-                    "4. Casa da Xilogravura: O único museu do Brasil dedicado apenas a essa arte (gravura em madeira).",
-                    "5. Palácio Boa Vista: Além de sede do governo, é um museu de arte sacra e modernista (tem quadros valiosos).",
-                    "6. Capela de São Pedro Apóstolo: Fica dentro do Palácio, projetada por Paulo Mendes da Rocha.",
-                    "7. Comunidade Espiritual: A cidade atrai muitos retiros de yoga e meditação devido à altitude e silêncio.",
-                    "8. Lendas da Mantiqueira: Histórias de luzes misteriosas e povos antigos da serra.",
-                    "9. Artesanato em Lã: As malharias são parte da cultura local (e da economia).",
-                    "10. Festa da Cerejeira: A colônia japonesa celebra a florada das Sakuras (julho/agosto) com muita cultura nipônica."
-                ],
-
-                // TOP 10 EVENTOS E ESTAÇÕES
-                eventos_estacoes: [
-                    "1. Festival de Inverno (Julho): A cidade lota. Concertos gratuitos na praça e pagos no auditório. Preços triplicam.",
-                    "2. Festa da Cerejeira (Jul/Ago): No Parque das Cerejeiras. Comida japonesa e árvores rosas floridas.",
-                    "3. Natal dos Sonhos (Dez): A decoração de Natal de Campos é famosa, com desfiles e Papai Noel. A cidade fica mágica.",
-                    "4. Outono (Abr-Jun): Para muitos, a melhor época. Frio, folhas caindo, céu azul e preços médios.",
-                    "5. Temporada do Pinhão (Maio): Os restaurantes criam pratos especiais com pinhão.",
-                    "6. Verão (Dez-Mar): Chove bastante à tarde, mas é quando as hortênsias estão floridas e lindas.",
-                    "7. Feriados Prolongados: A cidade sempre enche. Se quiser paz, evite Corpus Christi e Carnaval.",
-                    "8. Primavera (Set-Nov): O Parque Amantikir fica no auge das flores.",
-                    "9. Temporada de Malhas (Maio-Jul): As feiras de malha ficam lotadas de gente comprando roupa de frio.",
-                    "10. Reveillon: Tranquilo, focado em ceias em família e hotéis. Não tem grandes festas de rua como na praia."
-                ],
-
-                // TOP 10 INFO GERAIS
-                info_gerais: [
-                    "1. Voltagem: 127V (110V). Diferente de outras cidades de serra que podem ser 220V. Confira sempre.",
-                    "2. DDD: 12.",
-                    "3. Acesso: Pela Rodovia Floriano Rodrigues Pinheiro (SP-123). Estrada sinuosa, mas excelente e linda.",
-                    "4. Pedágio: Tem pedágio na subida da serra e é caro.",
-                    "5. Uber: Funciona bem, mas em alta temporada o preço dispara (dinâmico) e o trânsito trava.",
-                    "6. Estacionamento: No Capivari, estacionar na rua é Zona Azul digital (caro) e estacionamentos privados custam uma fortuna.",
-                    "7. Clima: À noite sempre esfria, mesmo no verão. Traga casaco leve sempre.",
-                    "8. Moeda: Real (BRL). Cartão aceito em 100% dos lugares.",
-                    "9. Hospedagem: Ficar no Capivari é prático (faz tudo a pé) mas caro. Ficar longe é barato, mas depende de carro.",
-                    "10. Neblina: Comum na serra ao cair da tarde. Redobre a atenção dirigindo."
-                ],
-
-                // TOP 10 DICAS ANTES DE IR
-                antes_de_ir: [
-                    "1. Mala de Frio: Traga botas, cachecol e casaco pesado se vier entre maio e agosto. O frio dói.",
-                    "2. Reserve Restaurantes: No jantar de sexta e sábado, filas de espera passam de 2 horas no Capivari. Reserve.",
-                    "3. Não suba a serra sexta à noite: O trânsito na SP-123 para. Tente subir sexta de manhã ou sábado de madrugada.",
-                    "4. Economize na Comida: Restaurantes no Capivari são caros. Em Abernéssia (bairro comercial) come-se bem pela metade do preço.",
-                    "5. Amantikir Cedo: Vá assim que abrir (9h). Depois das 11h, vira fila para tirar foto.",
-                    "6. Malhas: Compre malhas no bairro 'Abernéssia' ou na entrada da cidade. No Capivari é preço de grife.",
-                    "7. Lareira: Se o hotel tem lareira, pergunte se a lenha é cobrada à parte (geralmente é).",
-                    "8. Hidratação: A altitude e o frio ressecam a pele e lábios. Leve manteiga de cacau.",
-                    "9. Chocolate Quente: O do 'Montanhês' é o mais famoso (e denso). Vale a caloria.",
-                    "10. Pôr do Sol: O Museu Felícia Leirner tem o pôr do sol mais bonito, com música clássica de fundo às vezes."
-                ],
-
-                // --- NOVO: NÚMEROS IMPORTANTES (CAMPOS DO JORDÃO) ---
-                numeros: [
-                    "1. 190 (Polícia Militar): Emergência e segurança.",
-                    "2. 193 (Bombeiros): Resgate em trilhas, acidentes e incêndios (comum em mata seca no inverno).",
-                    "3. 192 (SAMU): Urgência médica e ambulância.",
-                    "4. (12) 3662-1904 (Hospital Municipal): O Complexo Municipal de Saúde é o atendimento público.",
-                    "5. (12) 3664-3524 (Rodoviária): Informações sobre ônibus (Pássaro Marron) para SP e Vale.",
-                    "6. 153 (Guarda Civil): Apoio ao turista e trânsito municipal.",
-                    "7. (12) 3663-1235 (Portal de Entrada): Centro de Informações Turísticas.",
-                    "8. 199 (Defesa Civil): Para deslizamentos em época de chuva de verão.",
-                    "9. (12) 3662-5400 (Delegacia de Polícia): Para registrar furtos ou perda de documentos.",
-                    "10. 0800 055 5510 (DER): Emergência nas rodovias estaduais de acesso (SP-123)."
-                ],
-
-                // --- NOVO: RISCOS E ERROS (CAMPOS DO JORDÃO) ---
-                riscos: [
-                    "1. Preços 'Suíços': Em Julho, tudo custa o triplo. Um fondue para dois pode passar de R$ 400. Pesquise o cardápio na porta antes de entrar.",
-                    "2. Trânsito no Capivari: Entrar de carro no centrinho sábado à noite é pedir para ficar preso 1h em 500 metros. Estacione longe e vá a pé.",
-                    "3. Neblina na Serra: A neblina desce rápido e a visibilidade zera na rodovia. Não pare no acostamento (é perigoso). Reduza e siga as faixas.",
-                    "4. 'Couvert' Artístico: Quase todo restaurante tem música ao vivo e cobra caro por pessoa. Pergunte se é obrigatório ou se tem área sem música.",
-                    "5. Golpe do Aluguel: Casas de temporada falsas ou muito diferentes da foto são comuns no inverno. Use plataformas confiáveis (Airbnb/Booking) e desconfie de PIX direto.",
-                    "6. Calçadas Escorregadias: No inverno, o orvalho congela ou cria limo. Cuidado ao andar nas calçadas de pedra, escorrega muito.",
-                    "7. Quatis no Horto: Eles são fofos, mas roubam comida e mordem. Não tente alimentar nem fazer carinho.",
-                    "8. Frio na Sombra: Ao sol é agradável, na sombra é gelado. O erro é sair sem casaco porque viu sol. Você vai passar frio.",
-                    "9. Compras por Impulso: O chocolate e a malha no centro turístico são muito mais caros. Pesquise no bairro Abernéssia ou Portal.",
-                    "10. Hospedagem sem Aquecedor: Erro fatal. Verifique se o hotel tem aquecedor ou lençol térmico. O isolamento das casas no Brasil é ruim e faz muito frio dentro do quarto."
-                ],
-                // COLE O ROTEIRO ABAIXO:
-                roteiros: {
-                    "curto": {
-                        titulo: "Roteiro Express (1 a 2 Dias)",
-                        texto: [
-                            "Dia 1 (O Clássico): Manhã no Parque Amantikir (chegue cedo). Almoço no Capivari (Baden Baden). Tarde: Teleférico e Morro do Elefante. Noite: Fondue.",
-                            "Dia 2 (Vista e Chocolate): Pico do Itapeva (vista do vale). Visita a uma fábrica de chocolate (Araucária ou Spinassi). Tarde: Ducha de Prata e fotos no Portal."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Roteiro Essencial (3 a 5 Dias)",
-                        texto: [
-                            "Dias 1 e 2: Siga o Roteiro Express acima.",
-                            "Dia 3 (Natureza e Arte): Manhã no Horto Florestal (trilhas leves). Almoço no restaurante do parque. Fim de tarde: Museu Felícia Leirner (esculturas e o pôr do sol mais bonito).",
-                            "Dia 4 (Cultura): Palácio Boa Vista (residência de inverno). Café no Sans Souci. Noite: Pizza ou truta no bairro Jaguaribe (mais barato que Capivari).",
-                            "Dia 5 (Diversão): Dia no Tarundu (patinação, tirolesa) se tiver crianças, ou Parque das Cerejeiras (se for época) + Cervejaria local."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Roteiro Completo (7+ Dias)",
-                        texto: [
-                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
-                            "Dia 6 (Bate-volta Vizinho): Santo Antônio do Pinhal. Visite o Pico Agudo e a estação de trem Eugênio Lefèvre. Almoço rural.",
-                            "Dia 7 (Compras e Malhas): Dia de compras no bairro Abernéssia (muito mais barato que o centro turístico) e Galeria das Malhas.",
-                            "Dia 8 (Slow Travel): Café colonial demorado pela manhã e tarde livre para curtir a lareira do hotel ou o Bondinho Urbano."
-                        ]
-                    }
-                },
-
-                // SEUS LINKS DE AFILIADO
-                links: {
-                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-634788&aid=304142", 
-                    passeio: "https://www.civitatis.com/br/campos-do-jordao/", 
-                    seguro: "https://www.segurospromo.com.br" 
-                }
-            },
-            {
-                name: "Porto de Galinhas",
-                // FOTO: Piscinas Naturais e Jangadas (Wikimedia)
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Piscinas_Naturais.tif/lossy-page1-1800px-Piscinas_Naturais.tif.jpg",
-                tags: ["Piscinas Naturais", "Mergulho", "Romance"],
-                mapa: "https://goo.gl/maps/portodegalinhas",
-                clima: "Tropical. Sol o ano todo. Chuvas concentradas entre maio e julho. A água é sempre morna (28ºC).",
-                // Adicione dentro do objeto de Porto de Galinhas
-veredicto: {
-    melhor_epoca: "Setembro a Março (Sol firme). Dica Vital: Consulte a Tábua de Marés! Vá na Lua Cheia ou Nova para pegar a maré baixa (piscinas naturais). Evite Abril a Julho (Chuva).",
-    ideal_para: [
-        "Famílias com crianças (águas mornas, sem ondas e piscinas naturais)",
-        "Amantes de snorkeling e vida marinha (os peixes comem na mão)",
-        "Quem busca resorts pé na areia com estrutura completa",
-        "Passeios de Buggy 'Ponta a Ponta' (de Muro Alto a Maracaípe)"
-    ],
-    nao_ideal_para: [
-        "Surfistas na praia principal da vila (vá para Maracaípe, ao lado, para ondas)",
-        "Quem busca praias desertas e selvagens no centrinho (é muito lotado)",
-        "Quem se irrita com abordagem constante de vendedores e jangadeiros"
-    ],
-    perfis: [
-        { icone: "ri-sun-fill", nome: "Praia" },
-        { icone: "ri-star-smile-fill", nome: "Família" },
-        { icone: "ri-drop-fill", nome: "Mergulho" },
-        { icone: "ri-hotel-fill", nome: "Resort" }
-    ]
-},
-                // TOP 10 PONTOS TURÍSTICOS
-                pontos_turisticos: [
-                    "1. Piscinas Naturais: O cartão-postal. Vá de jangada na maré baixa para nadar com os peixinhos coloridos.",
-                    "2. Pontal de Maracaípe: O encontro do rio com o mar. O pôr do sol aqui é o mais famoso da região.",
-                    "3. Praia de Muro Alto: Um 'piscinão' gigante protegido por uma barreira de corais. Águas paradas, perfeitas para crianças e caiaque.",
-                    "4. Passeio de Buggy (Ponta a Ponta): Percorre todas as praias, de Muro Alto até Maracaípe. Obrigatório para entender a geografia.",
-                    "5. Projeto Hippocampus: Um centro de preservação de cavalos-marinhos. Você vê eles de pertinho nos aquários.",
-                    "6. Vila de Porto: O centrinho cheio de lojas de artesanato, as famosas estátuas de galinhas e restaurantes.",
-                    "7. Praia de Maracaípe: O point do surf. Ondas fortes e campeonatos mundiais. Ótimo para sentar num bar e ver o mar.",
-                    "8. Praia de Calhetas: Fica no município vizinho (Cabo), mas é passeio clássico. Praia pequena em formato de coração com tirolesa.",
-                    "9. Ilha de Santo Aleixo: Passeio de barco imperdível. Uma ilha vulcânica paradisíaca que parece cenário de filme.",
-                    "10. Voo de Paramotor: Sobrevoar as piscinas naturais dá uma dimensão real da beleza dos recifes de corais."
-                ],
-
-                // TOP 10 GASTRONOMIA
-                gastronomia: [
-                    "1. Beijupirá: O restaurante mais famoso (e caro) da vila. Peixes com molhos de frutas locais. Experiência gastronômica.",
-                    "2. Peixe na Telha: Filé de peixe com molho servido borbulhando dentro de uma telha de barro.",
-                    "3. Bolo de Rolo: Patrimônio de Pernambuco. Camadas finíssimas de massa e goiabada derretida. Leve de lembrança.",
-                    "4. Cartola: Banana frita, queijo manteiga (ou coalho), açúcar e canela. A sobremesa oficial.",
-                    "5. Camarão no Abacaxi: Clássico servido nos restaurantes à beira-mar (como o Barcaxeira).",
-                    "6. Agulhinha Frita: Peixinho pequeno frito inteiro, crocante como batata frita. Petisco perfeito na praia.",
-                    "7. Tapioca da Vila: Nas ruas do centro, as tapioqueiras fazem na hora com muito coco fresco.",
-                    "8. Caldinho de Feijão/Peixe: Na areia da praia, os vendedores passam com garrafas térmicas. É viciante.",
-                    "9. Lagosta: Por ser vila de pescadores, é possível comer lagosta fresca por preços melhores que nas capitais.",
-                    "10. Arrumadinho: Carne de sol, feijão verde, farofa e vinagrete. Almoço forte para dar sustância."
-                ],
-
-                // TOP 10 CURIOSIDADES
-                curiosidades: [
-                    "1. Nome Sombrio: O nome 'Porto de Galinhas' era um código do tráfico de escravos. 'Tem galinha nova no porto' significava que chegaram escravos ilegalmente.",
-                    "2. Galinhas Esculpidas: As galinhas espalhadas pela cidade são obra do artista Gilberto Carcará. Elas usam óculos, biquíni e fantasias.",
-                    "3. Piscinas Temporárias: As piscinas naturais só existem na maré baixa. Na maré alta, elas somem e o mar bate nas pedras.",
-                    "4. Muro Alto: Tem esse nome por causa do paredão de areia e coqueiros de 3 metros que cerca a praia.",
-                    "5. Cavalos-Marinhos: O manguezal de Maracaípe é um berçário natural. O passeio de jangada lá leva para vê-los no habitat (sem tocar!).",
-                    "6. Maracaípe: Significa 'Rio dos Maracás' (chocalhos indígenas) em Tupi.",
-                    "7. Destino de Mel: É um dos destinos mais procurados por casais em lua de mel no Brasil.",
-                    "8. Proibido Alimentar: É estritamente proibido dar comida aos peixes nas piscinas (eles adoecem).",
-                    "9. Ipojuca: Porto de Galinhas não é cidade, é um distrito do município de Ipojuca.",
-                    "10. Coqueirais: A região já foi dominada por engenhos de açúcar, mas hoje os coqueiros reinam na paisagem."
-                ],
-
-                // TOP 10 CULTURA & RELIGIÃO
-                religiao: [
-                    "1. Convento de Santo Cristo: Fica no centro de Ipojuca (cidade). Uma relíquia histórica com uma imagem sagrada que veio de Portugal.",
-                    "2. Artesanato de Galinhas: As galinhas de cabaça ou cerâmica são a identidade cultural local.",
-                    "3. Gilberto Carcará: O ateliê do artista que criou a identidade visual da vila é visitável.",
-                    "4. Capela de São Benedito: A igrejinha famosa na Praia dos Carneiros (vizinha) é cartão postal religioso da região.",
-                    "5. Forró Pé de Serra: A cultura nordestina é forte. À noite, bares no centro tocam forró autêntico.",
-                    "6. Xilogravura: A arte de J. Borges (famoso xilogravurista pernambucano) é vendida nas lojas de souvenirs.",
-                    "7. Pesca Artesanal: A cultura da jangada é passada de pai para filho e sustenta muitas famílias.",
-                    "8. Maracatu: Grupos locais se apresentam na vila em épocas festivas.",
-                    "9. Festa de Nossa Senhora do Desterro: Padroeira da região, com procissões tradicionais.",
-                    "10. Renda Renascença: Trabalho manual delicadíssimo típico de Pernambuco, encontrado nas lojas chiques."
-                ],
-
-                // TOP 10 EVENTOS E ESTAÇÕES
-                eventos_estacoes: [
-                    "1. Verão (Dez-Mar): A vila ferve. Sol forte, água clara, preços altos e filas para a jangada.",
-                    "2. Inverno (Maio-Jul): Chove. E quando chove, a água das piscinas turva e perde a beleza. Evite se possível.",
-                    "3. Festival Gastronômico (Novembro): Os restaurantes criam pratos exclusivos com desconto (Porto Gastrô).",
-                    "4. Festa da Galinha (Outubro/Novembro): Shows populares e trio elétrico em Ipojuca.",
-                    "5. Ano Novo: A vila fica intransitável de tanta gente. As festas nos hotéis são luxuosas.",
-                    "6. Maré Baixa (Lua Cheia/Nova): As melhores épocas do mês. Nas luas Crescente/Minguante a maré não baixa tanto (maré morta).",
-                    "7. Nordeste Surf (Varia): Campeonatos de surf em Maracaípe atraem gente bonita e festas na praia.",
-                    "8. Jazz Porto (Setembro): Festival de Jazz e Blues que traz música de qualidade para a vila.",
-                    "9. Tartarugas (Set-Mar): Época de desova. Às vezes o projeto Ecoassociados libera filhotes ao mar (lindo de ver).",
-                    "10. Baixa Temporada (Abril/Agosto): Preços despencam. Se pegar dias de sol, é o melhor custo-benefício."
-                ],
-
-                // TOP 10 INFO GERAIS
-                info_gerais: [
-                    "1. Voltagem: 220V. Cuidado com eletrônicos de 110V.",
-                    "2. DDD: 81.",
-                    "3. Aeroporto: O mais próximo é Recife (REC), a 60km (cerca de 1h a 1h30 de carro).",
-                    "4. Transfer: É a melhor forma de chegar. Uber pode sair caro ou cancelar. Ônibus (Vera Cruz) é barato mas demora.",
-                    "5. Tábua de Marés: É a Bíblia de Porto de Galinhas. Baixe o app ou consulte o Google. Passeios só na maré baixa (0.0 a 0.5).",
-                    "6. Pulseira: Para descer nas piscinas naturais, precisa pegar uma pulseira gratuita na praça (controle de fluxo).",
-                    "7. Moeda: Real (BRL). Leve dinheiro vivo para jangadeiros e vendedores de praia.",
-                    "8. Caminhar: No centro (Vila), carro é proibido. Faz-se tudo a pé.",
-                    "9. Segurança: Tranquilo para turistas, mas evite ruas escuras fora da vila tarde da noite.",
-                    "10. Internet: 4G funciona bem na vila, mas falha em praias mais afastadas como Muro Alto."
-                ],
-
-                // TOP 10 DICAS ANTES DE IR
-                antes_de_ir: [
-                    "1. Chinelo nas Pedras: NUNCA ande nos arrecifes descalço. Os ouriços do mar estão escondidos e pisar neles acaba com a viagem.",
-                    "2. Consulte a Maré: Se a maré baixa for às 9h da manhã, chegue às 8h. A piscina natural só dura umas 2 horas.",
-                    "3. Lua Cheia ou Nova: São as semanas de 'Maré Viva', quando a água seca mais e as piscinas ficam mais bonitas.",
-                    "4. Buggy Ponta a Ponta: Faça no primeiro dia para conhecer tudo e escolher sua praia favorita para voltar depois.",
-                    "5. Muro Alto com Criança: É a melhor praia para quem tem filhos. Sem ondas, parece uma lagoa.",
-                    "6. Pôr do Sol no Pontal: Vá ver o pôr do sol em Maracaípe, mas leve repelente. O mangue tem maruim.",
-                    "7. Não compre coral: É crime ambiental e incentiva a destruição dos recifes.",
-                    "8. Fotos Subaquáticas: Os jangadeiros oferecem fotos com peixes (pagas à parte). Negocie o preço antes.",
-                    "9. Carneiros: Vale o bate-volta (1h de viagem). É uma das praias mais lindas do Brasil.",
-                    "10. Evite Finais de Semana: O pessoal de Recife desce em peso. As praias ficam lotadas. Dia de semana é o paraíso."
-                ],
-
-                // --- NOVO: NÚMEROS IMPORTANTES (PORTO DE GALINHAS) ---
-                numeros: [
-                    "1. 190 (Polícia Militar): Emergência e segurança na vila.",
-                    "2. (81) 3552-1480 (Delegacia de Ipojuca): Para ocorrências policiais.",
-                    "3. (81) 3561-1937 (UPA Ipojuca): Unidade de Pronto Atendimento 24h mais próxima.",
-                    "4. 193 (Bombeiros/Salva-Vidas): Afogamentos (atenção às correntes) e resgates.",
-                    "5. (81) 3552-1476 (Posto de Saúde de Porto): Para atendimentos simples na própria vila.",
-                    "6. (81) 3322-4188 (Aeroporto Recife): Informações de voos.",
-                    "7. (81) 3552-1262 (Associação dos Jangadeiros): Informações oficiais sobre os passeios de jangada.",
-                    "8. 192 (SAMU): Ambulância de emergência.",
-                    "9. (81) 3552-2274 (Centro de Informações Turísticas): Apoio ao visitante na entrada da vila.",
-                    "10. (81) 3452-9800 (Rodoviária de Recife): Para quem vai de ônibus de linha."
-                ],
-
-                // --- NOVO: RISCOS E ERROS (PORTO DE GALINHAS) ---
-                riscos: [
-                    "1. Maré Errada: O ERRO Nº 1. Ir às piscinas na maré alta (acima de 0.6) é jogar dinheiro fora. A água fica turva e as piscinas somem. Consulte a Tábua de Marés.",
-                    "2. Pisar em Ouriços: Os arrecifes estão cheios de ouriços pretos nos buracos. Se pisar, o espinho entra, infecciona e dói muito. Use chinelo ou sapatilha de neoprene (aquashoes).",
-                    "3. Guias Falsos na Estrada: Na rodovia chegando em Porto, homens de bicicleta pulam na frente do carro oferecendo 'atalho' ou 'estacionamento'. IGNORE. Eles te levam para lugares caros e longe.",
-                    "4. Consumação em Muro Alto: As barracas em Muro Alto cobram consumação mínima alta ou aluguel de mesa caro. Pergunte o preço antes de sentar.",
-                    "5. Jangada Pirata: Compre o ingresso da jangada no guichê oficial da Associação (na praça). Não pague direto a estranhos na areia.",
-                    "6. Correntes de Retorno: Em praias de tombo (como Cupe ou Maracaípe), a corrente puxa forte. Se não sabe nadar, não passe da cintura.",
-                    "7. Protetor Solar na Piscina: Passar protetor e entrar na água logo em seguida solta óleo e mata os corais. Passe 30 min antes ou use roupas UV.",
-                    "8. Bugueiro Credenciado: Só faça passeios com bugueiros credenciados (placa vermelha/cadastro). Buggy pirata não tem seguro em caso de acidente.",
-                    "9. Trânsito de Retorno: Voltar para Recife no domingo à tarde pode levar 3 horas engarrafado. Saia cedo ou bem tarde.",
-                    "10. Vendedores Insistentes: Na praia principal, o assédio de vendedores é intenso. Um 'não, obrigado' firme resolve, mas eles cansam."
-                ],
-                // COLE O ROTEIRO ABAIXO:
-                roteiros: {
-                    "curto": {
-                        titulo: "Roteiro Express (1 a 2 Dias)",
-                        texto: [
-                            "Dia 1 (O Básico Perfeito): Manhã nas Piscinas Naturais (consulte a maré!). Tarde: Passeio de Buggy 'Ponta a Ponta' (conhece Muro Alto, Cupe e Maracaípe). Pôr do sol no Pontal de Maracaípe.",
-                            "Dia 2 (Relax): Manhã na Praia de Muro Alto (o piscinão sem ondas). Tarde: Caminhada na Vila, compras de artesanato (galinhas) e jantar no Beijupirá ou Barcaxeira."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Roteiro Essencial (3 a 5 Dias)",
-                        texto: [
-                            "Dias 1 e 2: Siga o Roteiro Express acima.",
-                            "Dia 3 (Carneiros): Bate-volta para a Praia dos Carneiros (é perto). Faça o passeio de catamarã, banho de argila e veja a igrejinha verde.",
-                            "Dia 4 (Natureza): Passeio de Jangada no Manguezal (ver cavalos-marinhos) e tarde na praia do Cupe (no bar do Pontal do Cupe que é tranquilo).",
-                            "Dia 5 (Aventura): Mergulho de cilindro nas piscinas (batismo) ou passeio para a Ilha de Santo Aleixo (cenário de filme)."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Roteiro Completo (7+ Dias)",
-                        texto: [
-                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
-                            "Dia 6 (História): Bate-volta para Recife e Olinda (Recife Antigo + Ladeiras de Olinda). É cansativo, mas vale a pena.",
-                            "Dia 7 (Litoral Sul): Calhetas e Cabo de Santo Agostinho. A praia de Calhetas é pequena e linda, com tirolesa.",
-                            "Dia 8 (Despedida): Dia livre para repetir sua praia favorita (provavelmente Muro Alto ou a piscininha da Vila) e últimas compras."
-                        ]
-                    }
-                },
-
-                // SEUS LINKS DE AFILIADO
-                links: {
-                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-662973&aid=304142", 
-                    passeio: "https://www.civitatis.com/br/porto-de-galinhas/", 
-                    seguro: "https://www.segurospromo.com.br" 
-                }
-            },
-            {
-                name: "Porto Seguro",
-                // FOTO: Centro Histórico ou Praia (Wikimedia)
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Porto_Seguro.1.jpg/960px-Porto_Seguro.1.jpg",
-                tags: ["Praias", "História", "Festas"],
-                mapa: "https://goo.gl/maps/portoseguro",
-                clima: "Tropical quente. Sol o ano todo. Chuvas rápidas podem ocorrer, mas o 'verão eterno' é real.",
-                // Adicione dentro do objeto de Porto Seguro
-veredicto: {
-    melhor_epoca: "Agosto a Março (Sol firme). Evite Abril e Maio (Chuvas). Atenção: Julho e Outubro a cidade é invadida por excursões de formatura. O Carnaval é gigante.",
-    ideal_para: [
-        "Quem ama agito, axé e megabarracas de praia (Axé Moi, Toa Toa)",
-        "Viajantes com orçamento controlado (é mais barato que Trancoso e Arraial)",
-        "Turismo Histórico (Rota do Descobrimento e o charmoso Centro Histórico)",
-        "Solteiros e grupos de amigos em busca de paquera"
-    ],
-    nao_ideal_para: [
-        "Quem busca praias silenciosas e desertas (as praias centrais têm som alto e lambaeróbica)",
-        "Quem procura luxo e sofisticação exclusiva (neste caso, siga para a vizinha Trancoso)",
-        "Quem se irrita com vendedores e multidões na Passarela do Álcool"
-    ],
-    perfis: [
-        { icone: "ri-music-2-fill", nome: "Festa/Axé" },
-        { icone: "ri-history-line", nome: "História" },
-        { icone: "ri-wallet-3-fill", nome: "Econômico" },
-        { icone: "ri-group-fill", nome: "Jovens" }
-    ]
-},
-                // TOP 10 PONTOS TURÍSTICOS
-                pontos_turisticos: [
-                    "1. Centro Histórico (Cidade Alta): Onde o Brasil começou. Visite o Marco do Descobrimento, a Igreja N.S. da Pena e o Farol. Vista linda do mar.",
-                    "2. Praia de Taperapuã: O agito. Onde ficam as mega barracas (Axé Moi, Toa Toa) com shows de dança e lambaeróbica o dia todo.",
-                    "3. Passarela do Descobrimento (Álcool): À noite, é o point. Barracas de drinks ('Capeta'), artesanato e restaurantes. Jantar e comprinhas.",
-                    "4. Arraial d'Ajuda: Atravesse a balsa. O centrinho (Rua do Mucugê) é charmoso e as praias (Pitinga, Parracho) são lindas.",
-                    "5. Trancoso: A vila chique e rústica. O 'Quadrado' (gramado com a igrejinha e casinhas coloridas) é cartão-postal mundial.",
-                    "6. Praia do Espelho (Curuipe): Eleita uma das mais bonitas do Brasil. Falésias, corais e piscinas naturais. Vá na maré baixa.",
-                    "7. Coroa Vermelha: Onde foi rezada a primeira missa. Mar calmo (sem ondas), ideal para crianças e idosos. Tem uma feira indígena grande.",
-                    "8. Recife de Fora: Parque Marinho em alto mar. Vai de escuna na maré baixa para mergulhar com peixes nos corais.",
-                    "9. Caraíva: Vila de pescadores onde não entra carro (chão de areia) e o rio encontra o mar. Um paraíso isolado (bate-volta cansativo, melhor dormir lá).",
-                    "10. Eco Parque Arraial d'Ajuda: Parque aquático integrado à natureza em Arraial. Ótimo para família."
-                ],
-
-                // TOP 10 GASTRONOMIA
-                gastronomia: [
-                    "1. Moqueca Baiana: Com dendê, leite de coco e coentro. Acompanha pirão e farofa. Obrigatória.",
-                    "2. Capeta: O drink símbolo da Passarela. Leva vodka, guaraná em pó, leite condensado e frutas. Cuidado, é doce mas derruba!",
-                    "3. Acarajé: Bolinho de feijão frito no dendê. Tem em toda esquina. Peça 'frio' (sem pimenta) se não for acostumado.",
-                    "4. Tapioca da Passarela: Recheios generosos doces e salgados. Jantar barato e clássico.",
-                    "5. Peixe na Telha: Peixe assado servido na telha de barro, mantém o calor e o sabor.",
-                    "6. Bobó de Camarão: Creme de mandioca com camarão e dendê. Cremoso e forte.",
-                    "7. Lambreta: Um molusco (parece marisco) servido cozido no caldo. Dizem que cura ressaca.",
-                    "8. Cocada: As baianas vendem no tabuleiro. Branca, queimada, com maracujá... todas boas.",
-                    "9. Chocolate de Origem: A região produz muito cacau. Prove os chocolates artesanais locais.",
-                    "10. Sorvete de Coquinho: Feito da fruta local, muito refrescante no calor."
-                ],
-
-                // TOP 10 CURIOSIDADES
-                curiosidades: [
-                    "1. 1500: Cabral chegou aqui, mas a primeira missa foi em Coroa Vermelha (cidade vizinha Santa Cruz Cabrália), embora tudo seja 'Porto Seguro' para o turista.",
-                    "2. Lambada: O ritmo explodiu aqui nos anos 80/90 antes de ganhar o mundo. A dança ainda é forte nas barracas.",
-                    "3. Tombado: O Centro Histórico é Patrimônio Histórico Nacional desde 1968. Não pode mudar as fachadas.",
-                    "4. Monte Pascoal: É possível ver o monte (que os portugueses avistaram) em dias claros a partir de alguns pontos da costa.",
-                    "5. Pataxós: A presença indígena é forte. Muitos vendem artesanato e têm reservas que podem ser visitadas (Reserva da Jaqueira).",
-                    "6. Pau-Brasil: Ainda existem árvores de Pau-Brasil preservadas na Estação Veracel.",
-                    "7. Trancoso 'Hipster': Era uma vila de pescadores desconhecida até os anos 70, descoberta pelos 'biribandos' (hippies). Hoje recebe celebridades internacionais.",
-                    "8. Buraco da Veia: Apelido carinhoso de uma praia em Arraial d'Ajuda, protegida por arrecifes.",
-                    "9. Axé Music: Porto Seguro foi o berço que popularizou o Axé para o resto do Brasil nos anos 90.",
-                    "10. Balsa: A balsa Porto-Arraial funciona 24h e cruza o Rio Buranhém. A vista do pôr do sol nela é linda."
-                ],
-
-                // TOP 10 CULTURA & RELIGIÃO
-                religiao: [
-                    "1. Igreja Nossa Senhora da Pena: Padroeira da cidade (pena de caneta/escrita, e não de dó). Fica no Centro Histórico (1535).",
-                    "2. Igreja do Quadrado (Trancoso): São João Batista. Pequena, branca, de costas para o mar. Cenário de casamentos famosos.",
-                    "3. Primeira Missa: A cruz simbólica em Coroa Vermelha marca o local da celebração de 1500.",
-                    "4. Sincretismo: O Candomblé é forte. Respeite as oferendas que vir nas praias ou encruzilhadas.",
-                    "5. Igreja Nossa Senhora d'Ajuda: Em Arraial. Tem uma fonte de 'água milagrosa' nos fundos e a sala dos milagres.",
-                    "6. Festas Juninas: O São João elétrico em Porto Seguro é gigante.",
-                    "7. Festa de Iemanjá (2 de Fev): Procissão marítima linda em Arraial e Trancoso.",
-                    "8. Capela de São Benedito: Ao lado das ruínas da primeira escola jesuíta do Brasil.",
-                    "9. Rituais Pataxós: Na Reserva da Jaqueira, é possível participar de rituais de purificação e danças sagradas.",
-                    "10. Cemitério Bizantino: No pé da ladeira do Centro Histórico, tem túmulos antigos e curiosos."
-                ],
-
-                // TOP 10 EVENTOS E ESTAÇÕES
-                eventos_estacoes: [
-                    "1. Verão (Dez-Mar): Cidade lotada, trânsito na balsa, festas todo dia. Preços altos.",
-                    "2. Carnaval: Um dos maiores do Brasil. Trios elétricos na Passarela.",
-                    "3. Carnaporto: Começa na Quarta-feira de Cinzas (quando o resto do Brasil para). A festa continua na Arena Axé Moi.",
-                    "4. Julho (Férias): Lota de famílias e grupos de formatura de colégio. Clima bom, chove pouco.",
-                    "5. Baleias Jubarte (Jul-Out): Elas vêm para o mar da Bahia procriar. Tem passeio de barco para avistamento.",
-                    "6. Baixa Temporada (Mai-Jun/Ago-Nov): Preços ótimos, cidade tranquila, mas risco de chuvas passageiras.",
-                    "7. São João (Junho): Festa junina com forró pé de serra e elétrico.",
-                    "8. Réveillon: Festas pagas caríssimas (principalmente em Trancoso) e festa popular na Passarela.",
-                    "9. Semana do Saco Cheio (Out): Outubro lota de estudantes universitários.",
-                    "10. Maré Baixa (Lua Cheia/Nova): As melhores semanas para visitar, pois formam as piscinas naturais."
-                ],
-
-                // TOP 10 INFO GERAIS
-                info_gerais: [
-                    "1. Aeroporto: BPS (Porto Seguro). Fica perto do centro (5 min de Uber).",
-                    "2. Balsa: Para ir a Arraial/Trancoso. Pedestres pagam barato, carros pagam mais e pegam fila. De madrugada é mais caro.",
-                    "3. Voltagem: 220V. Cuidado com secadores e chapinhas.",
-                    "4. Transporte: Uber funciona bem em Porto e Arraial. Em Trancoso é mais difícil. Em Caraíva, só carroça ou a pé.",
-                    "5. Tábua de Marés: O guia da sua viagem. Maré 0.0 a 0.5 = Piscinas Naturais. Maré acima de 0.8 = Praia normal.",
-                    "6. Estradas: Para Trancoso/Caraíva tem trechos de terra. Se chover, atola carro comum. Vá de transfer ou 4x4.",
-                    "7. Segurança: Zonas turísticas são policiadas. Evite ruas escuras fora do centro à noite.",
-                    "8. Dinheiro: Leve espécie para Trancoso, Caraíva e feirinhas. O sinal de máquina de cartão falha nas praias afastadas.",
-                    "9. Água: Muito calor = desidratação. Água de coco é barata e tem em todo lugar.",
-                    "10. Consumação: Barracas de praia famosas não cobram entrada, mas exigem consumação mínima ou cobram aluguel de cadeira."
-                ],
-
-                // TOP 10 DICAS ANTES DE IR
-                antes_de_ir: [
-                    "1. Golpes de Rua: Não aceite 'presentes' na rua (fitinhas, degustação). É isca para te venderem time-sharing (cotas de resort) ou cobrar caro depois.",
-                    "2. Hospedagem: Se quer agito, fique em Taperapuã. Se quer charme, Arraial. Se quer luxo rústico, Trancoso. Se quer economia e história, Centro.",
-                    "3. Protetor Solar: O sol da Bahia queima diferente. O vento fresco engana.",
-                    "4. Transfer x Carro: Se for ficar só em Porto/Arraial, Uber resolve. Se for para Trancoso/Espelho, melhor alugar carro ou fechar passeio.",
-                    "5. Maré: Baixe um app de 'Tábua de Marés' e programe os passeios de piscina natural (Recife de Fora/Espelho) no horário mais baixo do dia.",
-                    "6. Balsa a pé: Se estiver hospedado em Porto e quiser jantar em Arraial, atravesse a balsa a pé e pegue uma van do outro lado. Economiza tempo e dinheiro.",
-                    "7. Repelente: Tem mosquito, principalmente nas praias com muito verde (Espelho/Caraíva).",
-                    "8. Cuidado com o Coco: Em praias desertas, não fique debaixo de coqueiros carregados. Um coco na cabeça é acidente grave.",
-                    "9. Lixo: Muitas praias são áreas de preservação. Traga seu lixo de volta.",
-                    "10. Ritmo Baiano: O serviço pode ser mais lento que no Sul/Sudeste. Relaxe, você está na Bahia. Não tenha pressa."
-                ],
-
-                // --- NOVO: NÚMEROS IMPORTANTES (PORTO SEGURO) ---
-                numeros: [
-                    "1. 190 (Polícia Militar): Emergência.",
-                    "2. 192 (SAMU): Ambulância.",
-                    "3. 193 (Bombeiros): Resgate.",
-                    "4. (73) 3288-1880 (Aeroporto): Informações de voos.",
-                    "5. (73) 3288-3907 (Delegacia do Turista - DELTUR): Apoio ao visitante.",
-                    "6. (73) 3288-2516 (Balsa): Informações sobre travessia.",
-                    "7. (73) 3288-4665 (Rodoviária): Ônibus intermunicipais.",
-                    "8. (73) 3288-5183 (Hospital Luís Eduardo Magalhães): Hospital público de referência.",
-                    "9. 199 (Defesa Civil): Chuvas fortes.",
-                    "10. (73) 3012-4217 (UPA): Unidade de Pronto Atendimento."
-                ],
-
-                // --- NOVO: RISCOS E ERROS (PORTO SEGURO) ---
-                riscos: [
-                    "1. O Golpe da 'Fitinha Grátis': O ERRO Nº 1. Vendedores colocam a fitinha no seu braço ou dão uma 'amostra grátis' de algo e depois exigem dinheiro ou te seguram por 1 hora tentando vender cota de hotel. Diga NÃO firme e não pare.",
-                    "2. Maré Alta no Espelho: Ir para a Praia do Espelho na maré alta é jogar dinheiro fora. As piscinas somem e a praia fica comum. Consulte a tábua!",
-                    "3. Bebida Batizada: Na balada ou passarela, cuidado com copos abertos. O 'Boa Noite Cinderela' existe.",
-                    "4. Beber e Nadar: O mar de Taperapuã é fundo logo no começo (praia de tombo em alguns pontos). Álcool e mar não combinam.",
-                    "5. Estrada de Trancoso: Tentar ir de carro baixo (Gol/Onix) para Trancoso em dia de chuva. Você VAI atolar. Vá pelo asfalto (volta maior) ou use transfer 4x4.",
-                    "6. Preços em Trancoso: Comer no Quadrado custa preço de restaurante de luxo em SP. Olhe o cardápio antes de sentar.",
-                    "7. Ouriço do Mar: Nos recifes (piscinas naturais), cuidado onde pisa. Espinho de ouriço dói muito e infecciona. Use sapatilha aquática (Crocs/Papete).",
-                    "8. Balsa na Volta: Domingo à tarde, a fila da balsa para voltar de Arraial para Porto pode levar 2 horas.",
-                    "9. Sol da Ressaca: Dormir na praia depois de beber. A insolação é garantida e severa.",
-                    "10. Van Clandestina: Use as vans oficiais que saem da balsa. Cuidado com transporte pirata."
-                ],
-
-                // --- NOVO: ROTEIRO AUTOMÁTICO (PORTO SEGURO) ---
-                roteiros: {
-                    "curto": {
-                        titulo: "Roteiro Express (1 a 2 Dias)",
-                        texto: [
-                            "Dia 1 (Agito e Clássico): Manhã na Praia de Taperapuã (Barracas Axé Moi ou Toa Toa). Tarde: Centro Histórico (Cidade Alta) para ver o Marco do Descobrimento e o farol. Noite: Passarela do Álcool.",
-                            "Dia 2 (Relax): Coroa Vermelha (onde foi a 1ª missa). Águas calmas e feirinha indígena. Almoço por lá (barraca do Macuco)."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Roteiro Essencial (3 a 5 Dias)",
-                        texto: [
-                            "Dias 1 e 2: Siga o Roteiro Express acima.",
-                            "Dia 3 (Arraial d'Ajuda): Pegue a balsa. Vá para a Praia do Mucugê ou Pitinga. Fim de tarde na Rua do Mucugê (a rua mais charmosa do Brasil).",
-                            "Dia 4 (Natureza): Recife de Fora (piscinas naturais). Consulte a tábua de marés! Tarde livre em Taperapuã.",
-                            "Dia 5 (Trancoso): Bate-volta OBRIGATÓRIO. Conheça o Quadrado de Trancoso (igrejinha) e desça para a Praia dos Nativos ou Coqueiros."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Roteiro Completo (7+ Dias)",
-                        texto: [
-                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
-                            "Dia 6 (A Praia Perfeita): Bate-volta para a Praia do Espelho (Curuipe). É eleita frequentemente uma das mais bonitas do Brasil. Vá na maré baixa.",
-                            "Dia 7 (Raiz): Caraíva. É longe (estrada de terra), mas o encontro do rio com o mar e as ruas de areia são mágicos.",
-                            "Dia 8 (Diversão): Arraial d'Ajuda Eco Parque (toboáguas) ou Parque Marinho da Coroa Alta."
-                        ]
-                    }
-                },
-
-                // SEUS LINKS DE AFILIADO
-                links: {
-                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-663243&aid=304142", 
-                    passeio: "https://www.civitatis.com/br/porto-seguro/", 
-                    seguro: "https://www.segurospromo.com.br" 
-                }
-            },
-            {
-                name: "Búzios",
-                // FOTO: Orla Bardot ou Rua das Pedras (Wikimedia)
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Buzios_11_2006_03.JPG/960px-Buzios_11_2006_03.JPG",
-                tags: ["Praias", "Luxo", "Gastronomia"],
-                mapa: "https://goo.gl/maps/buzios",
-                clima: "Tropical Seco. Chove menos que no Rio de Janeiro. Venta bastante. A água do mar é fria o ano todo.",
-                // Adicione dentro do objeto de Búzios
-veredicto: {
-    melhor_epoca: "Abril e Maio ou Setembro a Novembro (Clima ótimo e cidade mais vazia). O verão (Dez-Fev) é lotado, caro e o trânsito para. Setembro costuma ventar bastante.",
-    ideal_para: [
-        "Quem busca charme e sofisticação (o estilo 'Saint-Tropez brasileira')",
-        "Casais (pousadas boutique e jantares românticos na Rua das Pedras)",
-        "Amantes de praias variadas (tem de surf em Geribá a piscina na Ferradura)",
-        "Vida noturna de alto nível (beach clubs e baladas famosas)"
-    ],
-    nao_ideal_para: [
-        "Quem tem dificuldade de locomoção (a Rua das Pedras é terrível para cadeirantes, saltos ou carrinhos de bebê)",
-        "Viajantes com orçamento muito curto (alimentação e hospedagem são valorizadas)",
-        "Quem não tem paciência para trânsito (na alta temporada, cruzar a cidade pode levar horas)"
-    ],
-    perfis: [
-        { icone: "ri-hearts-fill", nome: "Charme" },
-        { icone: "ri-sun-fill", nome: "Praia" },
-        { icone: "ri-goblet-fill", nome: "Night" },
-        { icone: "ri-vip-diamond-fill", nome: "Sofisticado" }
-    ]
-},
-                // TOP 10 PONTOS TURÍSTICOS
-                pontos_turisticos: [
-                    "1. Rua das Pedras: O coração da cidade. Lojas de grife, restaurantes e bares badalados. O charme acontece à noite.",
-                    "2. Orla Bardot: A continuação da Rua das Pedras na beira do mar. Tem a estátua da Brigitte Bardot e os barcos de pesca.",
-                    "3. Praia de Geribá: A praia dos jovens e do surf. Extensa, areia branca e muita gente bonita. O Fishbone é o point do fim de tarde.",
-                    "4. Praia da Ferradura: Formato de 'U', mar sem ondas, parece uma lagoa. Perfeita para famílias, caiaque e stand-up paddle.",
-                    "5. Azeda e Azedinha: Acesso por uma escadaria de madeira ou táxi-boat. Pequenas, charmosas e com água cristalina.",
-                    "6. Praia de João Fernandes: A preferida dos argentinos. Água transparente, peixinhos visíveis e muitos hotéis/restaurantes na encosta.",
-                    "7. Praia Brava: Mar agitado e visual selvagem. É onde ficam os Beach Clubs mais luxuosos (Silk, Rocka).",
-                    "8. Porto da Barra (Manguinhos): O melhor lugar para ver o pôr do sol. Um complexo gastronômico na beira do cais com restaurantes incríveis.",
-                    "9. Praia da Tartaruga: Água mais quente (ou menos fria) e verde. Ótima para mergulho livre e ver tartarugas.",
-                    "10. Mirante do Forno: Uma vista panorâmica espetacular da região. Pouca gente vai, mas rende a melhor foto."
-                ],
-
-                // TOP 10 GASTRONOMIA
-                gastronomia: [
-                    "1. Crepe do Chez Michou: Um clássico da Rua das Pedras há décadas. O ambiente é barulhento e divertido.",
-                    "2. Gastronomia do Porto da Barra: Jantar no cais de Manguinhos vendo o pôr do sol é obrigatório. Restaurantes de frutos do mar e italianos.",
-                    "3. Rocka Beach Lounge: Na Praia Brava. Comida sofisticada com pé na areia e colchões para deitar.",
-                    "4. Pizza Quadrada: Vários locais vendem pizza por metro ou quadrada, típica da região.",
-                    "5. Peixe com Banana: Prato caiçara muito comum nos restaurantes locais.",
-                    "6. O Barco: Restaurante tradicional na Orla Bardot, especializado em moquecas e peixes frescos.",
-                    "7. Sorvete na Rua das Pedras: Caminhar tomando um gelato italiano (Sorvete Mil Frutas ou Itália) é tradição.",
-                    "8. Empanadas Argentinas: Devido à enorme comunidade argentina em Búzios, as empanadas são autênticas.",
-                    "9. Frutos do Mar na Telha: Servido em muitos quiosques de João Fernandes.",
-                    "10. Caipirinha de Frutas Tropicais: Kiwi, Maracujá e Frutas Vermelhas são as mais pedidas nos quiosques."
-                ],
-
-                // TOP 10 CURIOSIDADES
-                curiosidades: [
-                    "1. Brigitte Bardot: A atriz francesa 'descobriu' Búzios nos anos 60 quando era só uma vila de pescadores. Ela colocou a cidade no mapa mundial.",
-                    "2. 23 Praias: A península é pequena, mas tem 23 praias com características totalmente diferentes (umas com onda, outras piscinas).",
-                    "3. Vento Constante: Búzios venta muito, o que atrai praticantes de Kitesurf e Windsurf (principalmente na Rasa e Manguinhos).",
-                    "4. Invasão Argentina: É chamada de 'Búzios Aires'. Muitos argentinos moram e têm negócios lá. O espanhol é a segunda língua.",
-                    "5. Ressurgência: Fenômeno oceanográfico que faz as águas profundas e geladas da Antártida subirem aqui. Por isso a água é trincando de fria.",
-                    "6. Sem Prédios: Uma lei proíbe construções altas. Isso mantém o charme de vila com telhados coloniais.",
-                    "7. Rua das Pedras: As pedras 'pés-de-moleque' são originais e irregulares. Salto alto aqui é impossível (e perigoso).",
-                    "8. Três Castelos: A formação rochosa da Ponta da Lagoinha parece ruínas de castelos e tem piscinas naturais secretas.",
-                    "9. Nudismo: A praia Olho de Boi é naturista. O acesso é por trilha saindo da Praia Brava.",
-                    "10. Mick Jagger: O vocalista dos Stones também passou por lá nos anos 70 e tem uma música supostamente inspirada na cidade."
-                ],
-
-                // TOP 10 CULTURA & RELIGIÃO
-                religiao: [
-                    "1. Igreja de Sant'Ana: Padroeira da cidade. A igrejinha fica num morro entre a Armação e os Ossos. Vista linda.",
-                    "2. Capela de Santa Rita de Cássia: No cais de Manguinhos. Pequena e histórica.",
-                    "3. Festa de Sant'Ana (Julho): Procissão marítima onde os barcos dos pescadores são decorados.",
-                    "4. Quilombo da Rasa: Uma comunidade remanescente de quilombo que preserva a cultura afro-brasileira na entrada da cidade.",
-                    "5. Arte na Rua: A Orla Bardot é cheia de esculturas de bronze (Brigitte, Os Pescadores, Juscelino Kubitschek).",
-                    "6. Cine Bardot: Um cinema pequeno e charmoso que exibe filmes cult e sedia o Festival de Cinema de Búzios.",
-                    "7. Artesanato Local: Na Praça Santos Dumont tem uma feirinha de artesanato diária à noite.",
-                    "8. Galerias de Arte: A Rua das Pedras tem várias galerias com obras de artistas plásticos renomados.",
-                    "9. Pesca Artesanal: Ainda é possível ver os pescadores chegando com as redes na Praia da Armação pela manhã.",
-                    "10. Festival de Jazz e Blues: Evento anual que espalha palcos pela cidade com música de graça."
-                ],
-
-                // TOP 10 EVENTOS E ESTAÇÕES
-                eventos_estacoes: [
-                    "1. Verão (Dez-Mar): Cidade lotada, trânsito parado, vida noturna intensa. Água fria refresca o calor.",
-                    "2. Inverno (Jun-Set): Melhor época gastronômica (Festival Gastronômico). Água muito gelada, mas dias de céu azul.",
-                    "3. Reveillon: Um dos mais caros do Brasil. Festas privadas custam R$ 3.000+ o ingresso.",
-                    "4. Búzios Jazz Festival (Julho): Shows de jazz nas ruas e praças.",
-                    "5. Degusta Búzios (Agosto/Out): Festival onde os restaurantes montam barracas na rua com pratos pequenos a preços populares.",
-                    "6. Feriadões: A entrada da cidade trava. O trajeto de 10km pode levar 2 horas.",
-                    "7. Vento Sudoeste: Quando entra esse vento, o mar fica mexido e a temperatura cai. Atenção à previsão.",
-                    "8. Março/Abril: O 'segredo'. Água mais clara, cidade vazia e preços de baixa temporada.",
-                    "9. XC Búzios: Prova de maratona aquática e corrida que movimenta a cidade.",
-                    "10. Pride Búzios: Parada LGBTQIA+ que acontece geralmente em setembro/outubro."
-                ],
-
-                // TOP 10 INFO GERAIS
-                info_gerais: [
-                    "1. Transporte: Carro é útil para ir de uma praia a outra, mas estacionar é caro e difícil (Zona Azul 'Búzios Digital'). Uber funciona bem.",
-                    "2. Trolley: Um caminhão aberto turístico que percorre 12 praias. Ótimo para o primeiro dia para conhecer tudo.",
-                    "3. Táxi-Boat: O meio mais divertido de se locomover. Barquinhos que levam de uma praia a outra (ex: Ossos -> Azeda).",
-                    "4. Preços: Búzios é caro. Comida e bebida têm preços de Rio de Janeiro ou mais altos.",
-                    "5. Água Fria: Esteja avisado. A água varia de 18ºC a 21ºC. É revigorante, mas choca na primeira entrada.",
-                    "6. Voltagem: 110V. A maioria dos hotéis oferece secador.",
-                    "7. Pôr do Sol: O espetáculo diário. O sol se põe no mar na Orla Bardot e Porto da Barra.",
-                    "8. Caminhada: As distâncias enganam. De Geribá até a Rua das Pedras são 4km (longe para ir a pé).",
-                    "9. Segurança: Considerada segura para caminhar à noite no centro e orlas. Cuidado com pertences na areia.",
-                    "10. Aeroporto: O de Búzios (BZC) recebe poucos voos privados. O turista comum chega pelo Galeão (Rio) e pega transfer (2h30 de viagem)."
-                ],
-
-                // TOP 10 DICAS ANTES DE IR
-                antes_de_ir: [
-                    "1. Calçado: Leve rasteirinha ou tênis. Esqueça salto alto para a Rua das Pedras ou vai torcer o pé.",
-                    "2. Trânsito na Chegada: Se for feriado, saia do Rio de madrugada. Se sair às 10h da manhã, vai pegar 5 horas de engarrafamento.",
-                    "3. Zona Azul: Baixe o app 'Búzios Digital' para pagar estacionamento na rua. Os fiscais multam rápido.",
-                    "4. Vento: Leve um casaco corta-vento ou pashmina. À noite venta frio, mesmo no verão.",
-                    "5. Praias com Sombra: Azeda e João Fernandes têm pouca areia e enchem rápido. Chegue cedo.",
-                    "6. Cadeira de Praia: Em Geribá e João Fernandes, se sentar na cadeira da barraca, prepare-se para consumação mínima ou aluguel caro.",
-                    "7. Arraial do Cabo: Reserve um dia para ir a Arraial. Fica a 40min e a água é azul caribe (mas ainda mais gelada).",
-                    "8. Tartaruga no Fim de Tarde: O pôr do sol na Praia da Tartaruga é lindo e a água é a menos fria da cidade.",
-                    "9. Dinheiro: Leve um pouco de espécie para os táxi-boats e vendedores de mate/milho.",
-                    "10. Mergulho: Se gosta, faça o 'Batismo' em João Fernandes. A vida marinha é rica."
-                ],
-
-                // --- NOVO: NÚMEROS IMPORTANTES (BÚZIOS) ---
-                numeros: [
-                    "1. 190 (Polícia Militar): Emergência.",
-                    "2. 199 (Guarda Municipal): Muito atuante no trânsito e centro.",
-                    "3. 193 (Bombeiros): Resgate no mar.",
-                    "4. (22) 2623-1000 (Hospital Municipal Rodolpho Perissé): Principal emergência pública.",
-                    "5. (22) 2623-2093 (Delegacia de Turismo): Atendimento especializado.",
-                    "6. (22) 2620-8080 (Rodoviária de Búzios): Ônibus 1001 para o Rio.",
-                    "7. 192 (SAMU): Ambulância.",
-                    "8. (22) 2623-6447 (Informações Turísticas): Pórtico de entrada.",
-                    "9. (22) 2623-1300 (Prefeitura): Geral.",
-                    "10. Táxi Boat (Associação): Geralmente ficam nos píeres dos Ossos e Centro."
-                ],
-
-                // --- NOVO: RISCOS E ERROS (BÚZIOS) ---
-                riscos: [
-                    "1. O Choque Térmico: O ERRO Nº 1. Achar que a água é 'quentinha' como no Nordeste. É gelada! Entre devagar para não ter cãibra.",
-                    "2. Salto Alto nas Pedras: Você vai ver turistas tropeçando na Rua das Pedras. Não seja essa pessoa. Use rasteirinha.",
-                    "3. Trânsito da Estrada da Usina: Em feriados, o trecho entre a entrada da cidade e o centro para totalmente. Tenha paciência ou alugue bicicleta.",
-                    "4. Consumação Mínima Abusiva: Algumas barracas (principalmente em João Fernandes) exigem consumação altíssima para sentar. Pergunte ANTES.",
-                    "5. Ouriços: Nas pedras laterais das praias (Ferradura/Tartaruga) têm muitos ouriços. Cuidado ao pisar.",
-                    "6. Bebida e Direção: A Lei Seca na saída de Búzios é frequente e rigorosa. Se beber, vá de Uber.",
-                    "7. Preço do Uber Dinâmico: Na saída de festas (Privilège/Silk), o Uber pode custar R$ 100 por trechos curtos. Combine táxi antes se possível.",
-                    "8. Insolação com Vento: O vento constante mascara o calor do sol. Você queima sem sentir. O índice UV é alto.",
-                    "9. Água Viva: Às vezes aparecem correntes de água viva (mães d'água). Se ver bandeira roxa ou avisos, não entre.",
-                    "10. Furtos na Areia: Em Geribá lotada, não deixe celular na canga e vá para o mar. Ocorrem furtos de oportunidade."
-                ],
-
-                // --- NOVO: ROTEIRO AUTOMÁTICO (BÚZIOS) ---
-                roteiros: {
-                    "curto": {
-                        titulo: "Roteiro Express (1 a 2 Dias)",
-                        texto: [
-                            "Dia 1 (O Clássico): Manhã nas praias Azeda e Azedinha (vá de táxi-boat saindo do centro). Almoço na Orla Bardot. Fim de tarde: Estátua da Brigitte Bardot e Rua das Pedras à noite.",
-                            "Dia 2 (Escolha seu Vibe): Se quer agito/surf: Praia de Geribá. Se quer calmaria/família: Praia da Ferradura. Pôr do sol no Porto da Barra (Manguinhos)."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Roteiro Essencial (3 a 5 Dias)",
-                        texto: [
-                            "Dias 1 e 2: Siga o Roteiro Express acima.",
-                            "Dia 3 (Águas Cristalinas): Praia de João Fernandes e João Fernandinho. Ótimo para snorkel. Almoço nos restaurantes com vista para o mar ali mesmo.",
-                            "Dia 4 (Passeio Geral): Passeio de Trolley (caminhão aberto) que passa por 12 praias e mirantes ou passeio de Escuna/Catamarã.",
-                            "Dia 5 (Chic & Wild): Praia Brava. É mais selvagem, mas tem os Beach Clubs mais chiques (Silk, Rocka). Se sobrar tempo, Olho de Boi (nudismo) fica ali perto."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Roteiro Completo (7+ Dias)",
-                        texto: [
-                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
-                            "Dia 6 (Caribe Vizinho): Bate-volta OBRIGATÓRIO para Arraial do Cabo (40 min de carro). As praias lá são ainda mais azuis (Pontal do Atalaia).",
-                            "Dia 7 (Natureza): Praia da Tartaruga (água quente e verde). Alugue um caiaque.",
-                            "Dia 8 (Despedida): Café da manhã no Chez Michou (crepe) e últimas compras nas butiques da Rua das Pedras."
-                        ]
-                    }
-                },
-
-                // SEUS LINKS DE AFILIADO
-                links: {
-                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-626938&aid=304142", 
-                    passeio: "https://www.civitatis.com/br/buzios/", 
-                    seguro: "https://www.segurospromo.com.br" 
-                }
-            },
-            {
-                name: "Natal",
-                // FOTO: Ponta Negra e Morro do Careca
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Alex_Regis_Morro_do_Careca_Ponta_Negra_Natal_RN_%2840261556354%29.jpg/960px-Alex_Regis_Morro_do_Careca_Ponta_Negra_Natal_RN_%2840261556354%29.jpg",
-                tags: ["Dunas", "Praias", "Sol"],
-                mapa: "https://goo.gl/maps/natal",
-                clima: "Tropical. Sol 300 dias por ano. Venta bastante (a 'Noiva do Sol'). Chuvas concentradas entre Abril e Julho.",
-                // Adicione dentro do objeto de Natal
-veredicto: {
-    melhor_epoca: "Setembro a Fevereiro (Sol garantido). A 'Cidade do Sol' tem luz o ano todo, mas de Abril a Julho é a estação chuvosa. Março é quente e úmido.",
-    ideal_para: [
-        "Aventureiros (o passeio de Buggy 'com emoção' em Genipabu é obrigatório)",
-        "Quem busca base para paraísos vizinhos (Pipa e São Miguel do Gostoso)",
-        "Famílias com crianças (águas mornas e atrações como o Maior Cajueiro)",
-        "Quem ama sol intenso e vento constante (ótimo para respirar ar puro)"
-    ],
-    nao_ideal_para: [
-        "Quem detesta areia e vento (venta muito o tempo todo)",
-        "Quem busca vida cultural urbana agitada (o foco total é praia e natureza)",
-        "Quem tem medo de altura ou velocidade (as dunas podem ser intimidantes para alguns)"
-    ],
-    perfis: [
-        { icone: "ri-sun-fill", nome: "Sol" },
-        { icone: "ri-roadster-fill", nome: "Buggy" },
-        { icone: "ri-windy-fill", nome: "Natureza" },
-        { icone: "ri-star-smile-fill", nome: "Família" }
-    ]
-},
-                // TOP 10 PONTOS TURÍSTICOS
-                pontos_turisticos: [
-                    "1. Praia de Ponta Negra e Morro do Careca: O cartão-postal. A praia urbana mais famosa. O Morro é área de preservação (não pode subir), mas a foto é obrigatória.",
-                    "2. Dunas de Genipabu: O passeio de Buggy mais famoso do Brasil. Escolha 'com emoção'. Inclui skibunda, aerobunda e os dromedários.",
-                    "3. O Maior Cajueiro do Mundo: Fica em Pirangi. É uma árvore única que cobre uma área de 8.500m². Impressionante.",
-                    "4. Parrachos de Maracajaú: As 'Maldivas' brasileiras. Piscinas naturais (corais) a 7km da costa. Mergulho com peixinhos (consulte a tábua de marés!).",
-                    "5. Forte dos Reis Magos: Onde a cidade começou. Uma fortaleza em formato de estrela no encontro do rio com o mar.",
-                    "6. Praia da Pipa (Bate-volta): A 80km de Natal. Falésias, golfinhos e uma vila charmosa. O ideal é dormir lá, mas o bate-volta é muito comum.",
-                    "7. Barreira do Inferno: Centro de Lançamento de Foguetes. Tem um museu aeroespacial muito legal para visitar na rota do Litoral Sul.",
-                    "8. Lagoa de Arituba: Águas calmas e doces, ideal para relaxar, andar de pedalinho e comer peixe frito.",
-                    "9. Centro de Turismo (Antiga Casa de Detenção): Ótimo para comprar artesanato, renda de bilro e ver o Forró com Turista (às quintas).",
-                    "10. Aquário Natal: Na Redinha. Tem tubarões, pinguins e você pode até tocar em alguns animais (tanque de toque)."
-                ],
-
-                // TOP 10 GASTRONOMIA
-                gastronomia: [
-                    "1. Ginga com Tapioca: Patrimônio imaterial. Um peixinho pequeno frito servido dentro da tapioca. Clássico do Mercado da Redinha.",
-                    "2. Camarão Potiguar: Natal é a terra do camarão. Prove o 'Camarão Internacional' (cremoso com arroz e batata palha) no restaurante Camarões.",
-                    "3. Carne de Sol com Macaxeira: A carne de sol do Nordeste é diferente (mais úmida). Acompanha pirão de queijo ou macaxeira frita.",
-                    "4. Cartola: Sobremesa de banana frita, queijo coalho derretido, açúcar e canela. Divina.",
-                    "5. Paçoca de Pilão: Carne de sol desfiada e socada no pilão com farinha e cebola. Não é doce!",
-                    "6. Baião de Dois: Arroz, feijão verde, queijo coalho e nata. Cremoso e forte.",
-                    "7. Caranguejo: Nos quiosques da praia, o 'Chico' (caranguejo) é muito pedido.",
-                    "8. Suco de Mangaba: Fruta típica da região, leitosa e azedinha. Muito refrescante.",
-                    "9. Peixe na Telha: Peixe cozido ou assado servido na telha de barro.",
-                    "10. Bolo de Rolo: Embora seja pernambucano, é muito comum e delicioso em Natal (camadas finíssimas de bolo e goiabada)."
-                ],
-
-                // TOP 10 CURIOSIDADES
-                curiosidades: [
-                    "1. Esquina do Continente: É um dos pontos das Américas mais próximos da África e Europa. Por isso foi base estratégica dos EUA na 2ª Guerra Mundial.",
-                    "2. Forró For All?: Uma lenda diz que o nome 'Forró' veio das festas americanas na base aérea que eram 'For All' (para todos). Historiadores debatem, mas a lenda ficou.",
-                    "3. Ar Mais Puro: A NASA já considerou o ar de Natal como o mais puro das Américas, graças aos ventos alísios que vêm do mar.",
-                    "4. Potiguar: Quem nasce no RN é Potiguar, que em tupi significa 'Comedor de Camarão'.",
-                    "5. Cidade Espacial: A Barreira do Inferno foi a primeira base de lançamento de foguetes da América do Sul (1965).",
-                    "6. Noiva do Sol: O sol nasce muito cedo (as 4h30 - 5h da manhã já está claro) e se põe cedo (17h30). Aproveite o dia!",
-                    "7. Dunas Móveis: As dunas de Genipabu mudam de lugar e formato com o vento. A paisagem nunca é a mesma.",
-                    "8. Chiclete com Banana: A banda famosa começou a fazer sucesso nos carnavais fora de época de Natal (Carnatal).",
-                    "9. Cajueiro Mutante: O Maior Cajueiro cresce devido a uma anomalia genética; os galhos tocam o chão, criam raízes e sobem de novo.",
-                    "10. Ponte Newton Navarro: Uma ponte estaiada gigante que liga a Zona Norte. A vista do pôr do sol lá de cima (ou debaixo dela) é linda."
-                ],
-
-                // TOP 10 CULTURA & RELIGIÃO
-                religiao: [
-                    "1. Reis Magos: A cidade se chama Natal porque foi fundada em 25 de dezembro. A relação com os Reis Magos (Santos Reis) é forte.",
-                    "2. Catedral Metropolitana: Uma arquitetura moderna e diferente, em formato trapezoidal.",
-                    "3. Estátua dos Reis Magos: Um pórtico enorme na entrada da cidade (BR-101) com as estátuas dos três reis.",
-                    "4. Festa de Santos Reis (Janeiro): É o feriado municipal mais importante depois do Natal.",
-                    "5. Igreja do Galo: No centro histórico (Cidade Alta), uma das mais antigas, barroca.",
-                    "6. Mártires de Cunhaú e Uruaçu: Santos brasileiros canonizados pelo Papa, vítimas de invasões holandesas. O santuário é muito visitado.",
-                    "7. Artesanato de Bilro: As rendeiras fazem trabalhos incríveis na praia ou centros de artesanato.",
-                    "8. Boi de Reis: Folclore local colorido, parecido com o Bumba-meu-boi.",
-                    "9. Candomblé: Presença forte de terreiros e festas de Iemanjá nas praias.",
-                    "10. Capela de São Pedro: Frequentada pelos pescadores na Redinha."
-                ],
-
-                // TOP 10 EVENTOS E ESTAÇÕES
-                eventos_estacoes: [
-                    "1. Carnatal (Dezembro): O maior carnaval fora de época do Brasil. Trios elétricos ao redor do estádio Arena das Dunas.",
-                    "2. Verão (Dez-Mar): Alta temporada. Sol forte, ventos constantes. Reserve buggy com antecedência.",
-                    "3. Inverno (Abr-Jul): É a estação das chuvas ('Inverno' no Nordeste é chuva, não frio). Preços caem pela metade.",
-                    "4. Agosto a Novembro: Melhor época! Venta muito (bom para Kitesurf), chove pouco e preços são médios.",
-                    "5. Festa Junina (São João): Natal tem o 'São João de Natal' com shows grandes na Arena das Dunas.",
-                    "6. Natal em Natal (Dezembro): Festival de música e luzes que celebra o aniversário da cidade.",
-                    "7. FENACAM: Feira Nacional do Camarão. Evento de negócios, mas movimenta a gastronomia.",
-                    "8. Réveillon: Queima de fogos na Ponte Newton Navarro e em Ponta Negra.",
-                    "9. Maré Baixa: Essencial consultar para ir aos Parrachos (Maracajaú/Perobas). Se a maré for alta, não tem passeio.",
-                    "10. Temporada de Buggy: O ano todo, mas no verão as dunas ficam lotadas de turistas."
-                ],
-
-                // TOP 10 INFO GERAIS
-                info_gerais: [
-                    "1. Aeroporto (NAT): Fica em São Gonçalo do Amarante, longe pra caramba (40km / 1h do centro). O Uber dá uns R$ 80-100.",
-                    "2. 220V: A voltagem é 220V. Cuidado com eletrônicos.",
-                    "3. Buggy Credenciado: Só ande com bugueiros credenciados (placa vermelha ou adesivo da SETUR). É questão de vida ou morte nas dunas.",
-                    "4. Tábua de Marés: Baixe um app. Piscinas naturais só aparecem na maré baixa (0.0 a 0.5 é o ideal).",
-                    "5. Sol: O sol é cruel. Use protetor fator 50+. O vento fresco mascara a queimadura.",
-                    "6. Água: Evite beber da torneira. O índice de salinidade pode ser alto em algumas áreas.",
-                    "7. Uber: Funciona muito bem em Ponta Negra e Centro. Para Litoral Norte/Sul, melhor fechar passeio ou alugar carro.",
-                    "8. Via Costeira: A avenida dos hotéis resorts. É linda, mas não tem nada para fazer a pé (só mar e hotel). Precisa de carro para ir jantar.",
-                    "9. DDD: 84.",
-                    "10. Gorjeta: Os garçons esperam os 10%. Em barracas de praia, verifique se já está incluído."
-                ],
-
-                // TOP 10 DICAS ANTES DE IR
-                antes_de_ir: [
-                    "1. Maracajaú vs Perobas: Maracajaú é mais fundo (mergulho), Perobas é mais raso (água na cintura, caribe). Escolha seu perfil.",
-                    "2. Não suba o Morro: Subir o Morro do Careca é proibido e dá multa ambiental. Respeite.",
-                    "3. Buggy 'Com Emoção': Se você não tem problemas de coluna, peça 'com emoção'. Sem emoção é só um passeio de táxi na areia.",
-                    "4. Restaurante Camarões: É turístico? Sim. Vale a pena? Muito. A fila é grande, chegue cedo (11h30 ou 18h30).",
-                    "5. Pipa: Tente passar pelo menos uma noite em Pipa. O bate-volta é cansativo e você perde a noite na vila, que é o melhor.",
-                    "6. Óculos Escuros no Buggy: A areia voa muito no rosto. Óculos são proteção, não só estilo.",
-                    "7. Litoral Norte vs Sul: Norte = Dunas e Buggy (Genipabu). Sul = Falésias e Golfinhos (Pipa/Tabatinga). Faça os dois em dias diferentes.",
-                    "8. Vento: Mulheres, evitem vestidos muito soltos nos passeios de falésia. O vento levanta tudo.",
-                    "9. Cajueiro: Paga-se uma entrada barata. Leve dinheiro trocado.",
-                    "10. Protetor Solar nas Costas: No buggy, você fica exposto o tempo todo. Passe muito protetor nas costas e orelhas."
-                ],
-
-                // --- NÚMEROS IMPORTANTES (NATAL) ---
-                numeros: [
-                    "1. 190 (Polícia Militar): Emergência.",
-                    "2. 192 (SAMU): Ambulância.",
-                    "3. (84) 3232-7404 (Delegacia do Turista - DEATUR): Fica na Praia do Meio.",
-                    "4. (84) 3343-4177 (Aeroporto Internacional): Informações de voos.",
-                    "5. 193 (Bombeiros): Resgate e busca.",
-                    "6. (84) 3232-2525 (Rodoviária): Ônibus para Pipa/Recife.",
-                    "7. (84) 3232-6000 (Hospital Walfredo Gurgel): Maior hospital público.",
-                    "8. (84) 98138-0676 (Sindicato dos Bugueiros): Para checar credenciais.",
-                    "9. 199 (Defesa Civil): Chuvas e deslizamentos.",
-                    "10. (84) 3211-0000 (Rádio Táxi): Opção além do Uber."
-                ],
-
-                // --- RISCOS E ERROS (NATAL) ---
-                riscos: [
-                    "1. Bugueiro Pirata: O MAIOR RISCO. Bugueiros não credenciados não sabem as rotas seguras nas dunas. Já ocorreram acidentes fatais. Exija a credencial.",
-                    "2. Maré nos Parrachos: Comprar o passeio para Maracajaú sem olhar a maré. Se estiver alta (acima de 0.6), você vai ver água turva e não vai dar pé. Dinheiro jogado fora.",
-                    "3. Andar na Areia à Noite: Ponta Negra é segura no calçadão movimentado. Não vá para as partes escuras ou areia deserta à noite (assaltos).",
-                    "4. 'Amostra Grátis' de Castanha: No mercado, prove, mas pergunte o preço antes de pedir o pacote. Às vezes cobram preços abusivos na hora de pesar.",
-                    "5. Correnteza: O mar de Natal (exceto onde tem arrecifes) é forte. Respeite as bandeiras vermelhas dos salva-vidas.",
-                    "6. Insolação no Buggy: O vento engana e você não sente que está queimando. No fim do dia, vem a febre. Hidrate-se e cubra-se.",
-                    "7. Falésias Instáveis: Na praia de Pipa e litoral sul, mantenha distância das falésias. Deslizamentos acontecem. Respeite as placas de perigo.",
-                    "8. Táxi no Aeroporto: Os táxis comuns cobram tarifa de outra cidade (São Gonçalo). Uber ou Transfer compartilhado costumam ser mais baratos.",
-                    "9. Lagosta Barata Demais: Na praia, desconfie de lagosta muito barata. Pode ser fora de época (congelada velha) ou nem ser lagosta.",
-                    "10. Esquecer a CNH: Se for alugar carro para ir a Pipa, as blitze na estrada são frequentes (Lei Seca rigorosa)."
-                ],
-
-                // --- ROTEIROS AUTOMÁTICOS (NATAL) ---
-                roteiros: {
-                    "curto": {
-                        titulo: "Roteiro Express (1 a 2 Dias)",
-                        texto: [
-                            "Dia 1 (O Clássico): Manhã: Passeio de Buggy Litoral Norte (Genipabu) 'com emoção'. Tarde: Visita ao Forte dos Reis Magos e pôr do sol no Potengi. Noite: Jantar em Ponta Negra.",
-                            "Dia 2 (Litoral Sul): Manhã: Maior Cajueiro do Mundo e banho na Praia de Cotovelo. Tarde: Relaxe em Ponta Negra olhando o Morro do Careca. Noite: Ginga com Tapioca."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Roteiro Essencial (3 a 5 Dias)",
-                        texto: [
-                            "Dias 1 e 2: Siga o Roteiro Express acima.",
-                            "Dia 3 (Caribe Potiguar): Bate-volta aos Parrachos de Maracajaú ou Perobas (depende da maré). Mergulho nos corais.",
-                            "Dia 4 (Pipa): Passe o dia na Praia da Pipa. Veja os golfinhos na Baía dos Golfinhos e almoce na vila. (Se puder, durma lá).",
-                            "Dia 5 (Relax e Compras): Manhã na Lagoa de Arituba ou Carcará. Tarde: Compras no Centro de Turismo (artesanato)."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Roteiro Completo (7+ Dias)",
-                        texto: [
-                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
-                            "Dia 6 (Mergulho Profundo): Galinhos. É longe (170km), mas é um paraíso de salinas e dunas intocadas. Um dos lugares mais bonitos do estado.",
-                            "Dia 7 (Cultura e História): Centro Histórico (Igrejas), Barreira do Inferno e Aquário Natal.",
-                            "Dia 8 (Despedida): Repita sua praia favorita ou vá ao restaurante Camarões para o almoço de despedida."
-                        ]
-                    }
-                },
-
-                // SEUS LINKS DE AFILIADO
-                links: {
-                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-656860&aid=304142", 
-                    passeio: "https://www.civitatis.com/br/natal/", 
-                    seguro: "https://www.segurospromo.com.br" 
-                }
-            },
-            {
-                name: "Maceió",
-                // FOTO: Ponta Verde ou Pajuçara (Wikimedia/Unsplash)
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Ponta_Verde_Lighthouse_landscape_-_Macei%C3%B3%2C_Brazil_%28edited%29.jpg/960px-Ponta_Verde_Lighthouse_landscape_-_Macei%C3%B3%2C_Brazil_%28edited%29.jpg",
-                tags: ["Caribe Brasileiro", "Piscinas Naturais", "Praias"],
-                mapa: "https://goo.gl/maps/maceio",
-                clima: "Tropical Quente. A cor do mar é mais bonita entre Setembro e Março. Abril a Julho chove mais e a água pode turvar.",
-                // Adicione dentro do objeto de Maceió
-veredicto: {
-    melhor_epoca: "Setembro a Março (Época seca). É quando o mar fica 'azul Caribe'. Evite Maio a Julho: chove muito e a água pode ficar turva (marrom) devido aos rios.",
-    ideal_para: [
-        "Quem busca a cor de mar mais bonita do Brasil (o apelido 'Caribe Brasileiro' é real)",
-        "Famílias e casais (águas mornas, sem ondas e piscinas naturais na cidade)",
-        "Gulosos (a orla tem as melhores tapioqueiras e restaurantes de frutos do mar)",
-        "Base estratégica para 'Bate-Volta' (Maragogi, Gunga, Francês e Milagres)"
-    ],
-    nao_ideal_para: [
-        "Quem busca vida noturna frenética até o amanhecer (a orla é animada, mas a cidade dorme relativamente cedo)",
-        "Quem visita no auge do inverno esperando mar azul (se chover, a cor muda drasticamente)",
-        "Quem se irrita com abordagem de vendedores (nas praias urbanas é intenso)"
-    ],
-    perfis: [
-        { icone: "ri-drop-fill", nome: "Caribe BR" },
-        { icone: "ri-hearts-fill", nome: "Romance" },
-        { icone: "ri-restaurant-2-fill", nome: "Gastrô" },
-        { icone: "ri-anchor-fill", nome: "Passeios" }
-    ]
-},
-                // TOP 10 PONTOS TURÍSTICOS
-                pontos_turisticos: [
-                    "1. Praia de Pajuçara: Onde saem as jangadas para as piscinas naturais. Água morna, sem ondas e feirinha de artesanato.",
-                    "2. Ponta Verde: A orla mais bonita do Brasil. Tem o letreiro 'Eu Amo Maceió' e o Farol da Ponta Verde (dá para ir a pé na maré seca).",
-                    "3. Praia do Gunga: Fica no município vizinho (Roteiro). Tem o famoso mirante de coqueiros sem fim e as falésias coloridas (passeio de buggy).",
-                    "4. Praia do Francês: Em Marechal Deodoro. Um lado tem barreira de corais (piscina), o outro tem ondas fortes (surf).",
-                    "5. Maragogi (Bate-volta): O 'Caribe Brasileiro' oficial. Fica a 2h de Maceió. O passeio às Galés (piscinas) é imperdível, mas só na maré baixa.",
-                    "6. Ipioca (Hibiscus Beach Club): Uma praia deserta e paradisíaca com um clube de praia de luxo (day-use). Ideal para relaxar.",
-                    "7. Barra de São Miguel: Praia protegida por arrecifes, parece uma lagoa gigante. Ótima para andar de lancha ou kayak.",
-                    "8. Mirante de São Gonçalo: No centro da cidade, oferece uma vista panorâmica do porto e do mar.",
-                    "9. Pavilhão do Artesanato: Na Pajuçara. O melhor lugar para comprar renda filé (típica) e lembrancinhas.",
-                    "10. Catedral Metropolitana: No centro. Arquitetura neoclássica bonita, com vitrais e altares preservados."
-                ],
-
-                // TOP 10 GASTRONOMIA
-                gastronomia: [
-                    "1. Chiclete de Camarão: Prato inventado aqui (Restaurante Imperador dos Camarões). Camarão ao molho de queijos que 'estica' como chiclete.",
-                    "2. Sururu: Um molusco (parece marisco) típico das lagoas de Alagoas. O caldinho de sururu com leite de coco é afrodisíaco (dizem).",
-                    "3. Tapioca da Orla: As tapioqueiras de Maceió são patrimônio. A massa é fina e crocante. Recheio de carne de sol com queijo coalho é o clássico.",
-                    "4. Carne de Sol com Nata: Muito comum no café da manhã ou almoço.",
-                    "5. Bolo de Rolo (versão alagoana): Embora seja de PE, aqui é muito forte e servido com queijo do reino.",
-                    "6. Peixada Alagoana: Cozido de peixe com legumes, ovos cozidos e pirão. Leve e saboroso.",
-                    "7. Arroz de Polvo: O polvo do litoral alagoano é muito macio.",
-                    "8. Cocada de Massagueira: Na volta do Francês, pare em Massagueira. É o maior pólo gastronômico de doces caseiros.",
-                    "9. Passaporte: O 'cachorro-quente' de Maceió. Leva carne moída temperada, salsicha, queijo e maionese caseira. O 'Passaporte do Gaúcho' é famoso.",
-                    "10. Suco de Mangaba ou Cajá: As frutas da estação são deliciosas."
-                ],
-
-                // TOP 10 CURIOSIDADES
-                curiosidades: [
-                    "1. A Orla Mais Bonita: A orla urbana de Maceió é considerada a mais bonita e bem cuidada do Brasil, com coqueiros e calçadão largo.",
-                    "2. Ma-çay-ó: O nome vem do tupi e significa 'O que tapa o alagadiço', referindo-se aos rios e lagoas da região.",
-                    "3. Paraíso das Águas: Alagoas tem a segunda maior barreira de corais do mundo (só perde para a Austrália e a barreira da Mesoamérica?), o que garante o mar calmo.",
-                    "4. Marechal Deodoro: A primeira capital de Alagoas e terra onde nasceu o proclamador da República fica colada em Maceió.",
-                    "5. Gogó da Ema: Um coqueiro torto lendário que parecia um pescoço de ema. Ele caiu, mas virou símbolo da cidade.",
-                    "6. Renda Filé: Um tipo de bordado colorido e vazado que só existe em Alagoas. É Patrimônio Imaterial.",
-                    "7. Zumbi dos Palmares: O maior quilombo das Américas (Quilombo dos Palmares) ficava em Alagoas, na Serra da Barriga.",
-                    "8. Farol no Mar: O Farol da Ponta Verde fica literalmente dentro da água. Na maré baixa (0.0), você caminha até a base dele.",
-                    "9. Braskem: Uma curiosidade triste. Bairros inteiros (Pinheiro/Mutange) afundaram devido à mineração de sal-gema e hoje são bairros fantasmas.",
-                    "10. Caribe?: A cor da água (azul turquesa/verde esmeralda) se deve ao fundo de areia branca e calcário, igual ao Caribe."
-                ],
-
-                // TOP 10 CULTURA & RELIGIÃO
-                religiao: [
-                    "1. Iemanjá: A festa de 8 de Dezembro (N.S. da Conceição) e Iemanjá lota a orla de Pajuçara com oferendas.",
-                    "2. Igreja de Nossa Senhora do Rosário dos Pretos: Construída no século 19 por irmandades negras.",
-                    "3. Igreja dos Martírios: Tem uma fachada de azulejos portugueses belíssima no centro.",
-                    "4. Guerreiro: Uma dança folclórica típica de Alagoas, colorida e cheia de fitas (mistura de Reisado com Caboclinho).",
-                    "5. Mirante de São Gonçalo: Tem uma capela histórica lá em cima.",
-                    "6. Artesanato do Pontal da Barra: O bairro onde as rendeiras ficam sentadas na porta de casa fazendo o Filé.",
-                    "7. São João: Maceió tem um dos maiores festejos juninos do litoral.",
-                    "8. Pastoral: A religiosidade católica é forte no interior e reflete na capital.",
-                    "9. Xangô de Alagoas: O estado foi palco de uma perseguição histórica aos terreiros em 1912 (Quebra de Xangô), hoje lembrada com respeito e retomada.",
-                    "10. Capelinha de Jaraguá: Uma igreja histórica no bairro boêmio de Jaraguá."
-                ],
-
-                // TOP 10 EVENTOS E ESTAÇÕES
-                eventos_estacoes: [
-                    "1. Verão (Dez-Mar): A água fica num azul neon inacreditável. Cidade cheia, preços altos.",
-                    "2. Inverno (Abr-Ago): Chove bastante ('Inverno' no Nordeste é chuva). A água pode ficar 'barrenta' perto dos rios.",
-                    "3. São João (Junho): Festas gigantes no bairro de Jaraguá e Benedito Bentes.",
-                    "4. Maceió Fest: O carnaval fora de época (se ocorrer no ano).",
-                    "5. Réveillon: As festas privadas de Réveillon (Mil Sorrisos, Celebration) são as maiores e mais caras do Brasil.",
-                    "6. Festival do Bumba Meu Boi: Acontece anualmente celebrando a cultura popular.",
-                    "7. Agosto: Mês das ventanias, bom para Kitesurf.",
-                    "8. Setembro a Novembro: A melhor época 'Custo-Benefício'. Sol, mar azul e preços médios.",
-                    "9. Maré Baixa (Lua Cheia/Nova): É quando os passeios para as piscinas (Pajuçara/Maragogi) valem a pena.",
-                    "10. Feriados: A cidade lota de turistas regionais (PE, BA, SE)."
-                ],
-
-                // TOP 10 INFO GERAIS
-                info_gerais: [
-                    "1. Aeroporto (MCZ): Fica em Rio Largo, bem longe da orla (45-60 min). Uber custa uns R$ 70-90.",
-                    "2. Tábua de Marés: É a bíblia de Maceió. Passeio de piscina natural na maré alta (acima de 0.6) é dinheiro jogado fora.",
-                    "3. Uber: Funciona muito bem e é barato para circular entre as praias urbanas (Pajuçara-Ponta Verde-Jatiúca).",
-                    "4. Segurança: A orla turística é bem policiada. Evite o centro à noite e bairros periféricos.",
-                    "5. Voltagem: 220V.",
-                    "6. Sol: Nasce às 5h e se põe às 17h30. Acorde cedo para aproveitar.",
-                    "7. Algas (Sargaço): Em algumas épocas, a maré traz algas para a areia. Cheira forte, mas é natural.",
-                    "8. Jangadas: O passeio de Pajuçara é tabelado e feito pela associação. Seguro e organizado.",
-                    "9. Day-Use: Muitos beach clubs (Hibiscus, Lopana, Kanoa) cobram entrada ou consumação mínima alta.",
-                    "10. Água da Torneira: Não beba. Compre mineral."
-                ],
-
-                // TOP 10 DICAS ANTES DE IR
-                antes_de_ir: [
-                    "1. Maragogi ou Milagres?: Maragogi é mais lotada e turística. São Miguel dos Milagres é mais rústica, vazia e chique. Escolha seu estilo.",
-                    "2. Língua Suja: Após chuvas fortes, verifique a balneabilidade. Algumas 'línguas' (canais de drenagem) na orla podem sujar a praia urbana.",
-                    "3. Caminho de Moisés: Em Maragogi (Barra Grande), na maré seca, abre um caminho de areia mar adentro. Cuidado para a maré não subir e te ilhar.",
-                    "4. Francês: O lado esquerdo é piscina (família), o direito é surf (perigoso). Fique no esquerdo se não sabe nadar bem.",
-                    "5. Cadeira de Praia: Na orla, se sentar, paga (ou consome). Pergunte o valor da cadeira ANTES de sentar.",
-                    "6. Protetor Solar: O reflexo do sol na areia branca queima em dobro.",
-                    "7. Bate-volta Maragogi: É cansativo (2h30 pra ir, 2h30 pra voltar). Se puder, durma lá 1 noite.",
-                    "8. Domingo na Orla: A avenida da orla fecha para carros no domingo (Rua de Lazer). Ótimo para caminhar.",
-                    "9. Restaurantes: Jatiúca é o bairro gastronômico. Ponta Verde é o bairro dos hotéis.",
-                    "10. Cânions do São Francisco: Fica a 4h de Maceió (Piranhas/Xingó). É lindo, mas precisa de 2 dias (pernoite) para valer a pena."
-                ],
-
-                // --- NÚMEROS IMPORTANTES (MACEIÓ) ---
-                numeros: [
-                    "1. 190 (Polícia Militar): Emergência.",
-                    "2. 192 (SAMU): Ambulância.",
-                    "3. (82) 3315-3000 (Aeroporto Zumbi dos Palmares): Informações.",
-                    "4. (82) 3312-5850 (Delegacia do Turista): Na orla de Pajuçara (ou perto).",
-                    "5. 193 (Bombeiros): Resgate no mar.",
-                    "6. (82) 3221-4615 (Rodoviária): Ônibus interestaduais.",
-                    "7. (82) 3315-6700 (HGE - Hospital Geral): Emergência pública.",
-                    "8. (82) 3336-2300 (Associação dos Jangadeiros): Pajuçara.",
-                    "9. 199 (Defesa Civil): Chuvas.",
-                    "10. SMTT (Trânsito): 118."
-                ],
-
-                // --- RISCOS E ERROS (MACEIÓ) ---
-                riscos: [
-                    "1. Maré Alta em Maragogi: O ERRO CLÁSSICO. Ir para Maragogi na maré alta ou lua 'morta'. A água não fica tão clara e não dá pé nas piscinas. Consulte a tábua!",
-                    "2. 'Línguas Negras': Em dias de muita chuva, os canais de água pluvial podem levar sujeira para o mar das praias urbanas (Pajuçara/Ponta Verde). Evite tomar banho logo na saída desses canais.",
-                    "3. Assédio de Vendedores: Na orla, a abordagem para vender passeio, óculos e comida é intensa. Diga 'não, obrigado' e não dê papo se não quiser comprar.",
-                    "4. Ouriços: Nas piscinas naturais e recifes (Francês/Ipioca), cuidado onde pisa. Tem ouriços pretos que furam o pé. Use sapatilha aquática.",
-                    "5. Bairro do Pinheiro: Evite alugar Airbnb nos bairros afetados pelo afundamento (Pinheiro, Mutange, Bom Parto). São áreas de risco interditadas.",
-                    "6. Estrada para Maragogi: A AL-101 Norte é linda, mas tem trechos sinuosos e às vezes esburacados. Cuidado ao dirigir à noite.",
-                    "7. Insolação: O vento constante faz você esquecer o sol. Use chapéu.",
-                    "8. Golpe da Lagosta: Na praia, vendem 'lagosta' que na verdade é lagostim ou está estragada. Coma em restaurante.",
-                    "9. Correnteza no Francês: O lado direito da Praia do Francês (o das ondas) tem correnteza forte. Não se arrisque se não for surfista.",
-                    "10. Preço do Táxi: Táxi do aeroporto é tabelado e caro. Uber costuma ser metade do preço."
-                ],
-
-                // --- ROTEIROS AUTOMÁTICOS (MACEIÓ) ---
-                roteiros: {
-                    "curto": {
-                        titulo: "Roteiro Express (1 a 2 Dias)",
-                        texto: [
-                            "Dia 1 (O Cartão Postal): Manhã: Passeio de Jangada em Pajuçara (na maré baixa!). Tarde: Caminhada na orla de Ponta Verde até o Farol. Foto no letreiro. Noite: Chiclete de Camarão.",
-                            "Dia 2 (Litoral Sul): Dia de praia no Francês (lado esquerdo) ou Barra de São Miguel. Almoço em Massagueira na volta."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Roteiro Essencial (3 a 5 Dias)",
-                        texto: [
-                            "Dias 1 e 2: Siga o Roteiro Express acima.",
-                            "Dia 3 (O Caribe): Bate-volta para Maragogi ou São Miguel dos Milagres (saia às 5h da manhã!). Passeio de lancha nas piscinas.",
-                            "Dia 4 (Falésias): Praia do Gunga. Vá de buggy até as falésias coloridas e tome banho na lagoa.",
-                            "Dia 5 (Relax VIP): Day-use no Hibiscus Beach Club em Ipioca ou Capitão Nikolas. Praia deserta e estrutura de luxo."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Roteiro Completo (7+ Dias)",
-                        texto: [
-                            "Dias 1 a 5: Siga o Roteiro Essencial acima.",
-                            "Dia 6 (Sertão - Opcional): Bate-volta (cansativo) ou pernoite nos Cânions do Xingó (Rio São Francisco). Passeio de catamarã inesquecível.",
-                            "Dia 7 (História e Renda): Visite o centro histórico de Marechal Deodoro e o bairro das rendeiras no Pontal da Barra.",
-                            "Dia 8 (Despedida): Compre castanhas e bolo de rolo no Mercado e despeça-se do mar em Ponta Verde."
-                        ]
-                    }
-                },
-
-                // SEUS LINKS DE AFILIADO
-                links: {
-                    hotel: "https://www.booking.com/searchresults.pt-br.html?city=-653066&aid=304142", 
-                    passeio: "https://www.civitatis.com/br/maceio/", 
-                    seguro: "https://www.segurospromo.com.br" 
-                }
-            },
-            {
-    name: "Belo Horizonte",
-    imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Panorama_Mineir%C3%A3o_Pampulha_%28cropped%29.jpg/1280px-Panorama_Mineir%C3%A3o_Pampulha_%28cropped%29.jpg",
-    tags: ["Gastronomia", "Cultura", "Arquitetura"],
-    mapa: "https://goo.gl/maps/bhz",
-    clima: "Tropical de Altitude. Clima ameno e agradável na maior parte do ano.",
-    // Adicione dentro do objeto de Belo Horizonte
-veredicto: {
-    melhor_epoca: "Abril a Setembro (Outono/Inverno). É a época seca e agradável, ideal para os botecos ao ar livre. O verão (Dez-Mar) costuma ser quente e chuvoso.",
-    ideal_para: [
-        "Amantes da gastronomia raiz (é a Capital Mundial dos Botecos)",
-        "Quem busca turismo cultural (Circuito Liberdade e a genial Pampulha)",
-        "Base para visitar Inhotim (o maior museu a céu aberto do mundo, em Brumadinho)",
-        "Gulosos por queijos, doces e cachaças (Mercado Central é o paraíso)"
-    ],
-    nao_ideal_para: [
-        "Quem busca praia e mar (mas tem cachoeiras próximas e o 'mar de morros')",
-        "Quem odeia ladeiras e caminhar subindo morro (a topografia é acidentada)",
-        "Quem prefere silêncio total à noite (a vida boêmia nas calçadas é intensa)"
-    ],
-    perfis: [
-        { icone: "ri-goblet-fill", nome: "Boteco/Gastrô" },
-        { icone: "ri-artboard-fill", nome: "Cultura/Arte" },
-        { icone: "ri-group-fill", nome: "Social" },
-        { icone: "ri-shopping-basket-fill", nome: "Mercado" }
-    ]
-},
-    pontos_turisticos: [
-        "1. Praça da Liberdade: O coração cultural, cercada por museus em prédios históricos e arquitetura neoclássica e moderna.",
-        "2. Conjunto Moderno da Pampulha: Patrimônio da UNESCO. Inclui a Igreja de São Francisco de Assis (Niemeyer) e a Casa do Baile.",
-        "3. Mercado Central: Eleito um dos melhores do mundo. Ótimo para provar queijos, doces e o famoso fígado com jiló.",
-        "4. Estádio Mineirão: O Gigante da Pampulha. Visite o Museu Brasileiro do Futebol e faça o tour pelos bastidores.",
-        "5. Mirante das Mangabeiras: Uma das vistas mais completas da cidade, no pé da Serra do Curral.",
-        "6. Parque Municipal Américo Renné Giannetti: Um oásis verde no hipercentro, com lagos e muita sombra.",
-        "7. Centro de Arte Contemporânea Inhotim: Embora fique em Brumadinho (60km), é parada obrigatória para quem visita BH.",
-        "8. Savassi: Bairro famoso pelos bares, livrarias e vida noturna agitada.",
-        "9. Museu de Artes e Ofícios: Localizado na Praça da Estação, conta a história do trabalho no Brasil.",
-        "10. Memorial Minas Gerais Vale: Um museu interativo na Praça da Liberdade que revive a história mineira."
-    ],
-
-    gastronomia: [
-        "1. Pão de Queijo: O melhor do mundo está aqui. Prove recheado ou tradicional.",
-        "2. Feijão Tropeiro: O prato clássico, especialmente o servido no Mineirão.",
-        "3. Frango com Quiabo: Um ícone da comida mineira caseira.",
-        "4. Fígado com Jiló: O petisco mais famoso do Mercado Central.",
-        "5. Doce de Leite e Queijo Minas: A dupla perfeita ('Romeu e Julieta' mineiro).",
-        "6. Cervejas Artesanais: BH é um dos maiores polos produtores do Brasil (bairro Jardim Canadá).",
-        "7. Leitão à Pururuca: Carne de porco suculenta e pele crocante.",
-        "8. Vaca Atolada: Costela bovina cozida com mandioca até derreter.",
-        "9. Ora-pro-nóbis: Planta nutritiva muito usada em refogados e pratos regionais.",
-        "10. Café Mineiro: Cafeterias de especialidade dominam a região com grãos do Sul de Minas."
-    ],
-
-    religiao: [
-        "1. Igreja de São Francisco de Assis (Pampulha): Obra de Niemeyer com painéis de Portinari, ícone da arquitetura moderna.",
-        "2. Catedral Nossa Senhora da Boa Viagem: Padroeira da cidade, em estilo neogótico.",
-        "3. Santuário Estadual da Piedade: Localizado em Caeté (perto de BH), no topo da serra, com vista deslumbrante.",
-        "4. Basílica de Lourdes: Uma das igrejas mais imponentes e tradicionais do bairro de Lourdes.",
-        "5. Sincretismo Cultural: As festas de congado e as guardas de Moçambique são expressões fortes da fé afro-mineira.",
-        "6. Igreja de São José: No centro da cidade, com belíssimos murais interiores.",
-        "7. Mosteiro de Macaúbas: Mosteiro histórico de clausura feminina localizado em Santa Luzia.",
-        "8. Centro Espírita: Minas Gerais tem uma tradição espírita muito forte (berço de Chico Xavier).",
-        "9. Comunidade Evangélica: Grande presença de igrejas históricas e contemporâneas em toda a capital.",
-        "10. Caminho religioso da Estrada Real: BH integra diversas rotas de peregrinação histórica."
-    ],
-
-    curiosidades: [
-        "1. Capital dos Botecos: BH tem a maior quantidade de bares por habitante no Brasil.",
-        "2. Cidade Planejada: Foi a primeira cidade brasileira moderna planejada (inaugurada em 1897).",
-        "3. Horizonte Sem Mar: A Serra do Curral é o 'mar' dos mineiros e o símbolo da cidade.",
-        "4. Sotaque Mineiro: Conhecido por 'comer' sílabas e usar o 'uai' e 'trem' para quase tudo.",
-        "5. Niemeyer: Antes de Brasília, Oscar Niemeyer deixou sua marca na Pampulha, a convite de JK.",
-        "6. Sem Semáforos no Centro?: O traçado original visava fluidez, mas o crescimento superou o plano.",
-        "7. Mercado Global: O Mercado Central é frequentemente listado entre os melhores mercados do planeta.",
-        "8. Clima: BH está a 852m de altitude, o que garante noites frescas mesmo no verão.",
-        "9. Berço do Rock/Metal: Bandas como Sepultura e Skank nasceram no cenário musical de BH.",
-        "10. Uai: A origem da expressão é incerta, mas é o DNA da comunicação mineira."
-    ],
-
-    eventos_estacoes: [
-        "1. Carnaval de BH: Cresceu meteoricamente e hoje é um dos melhores carnavais de rua do país.",
-        "2. Comida di Buteco: Festival gastronômico que elege os melhores petiscos da cidade (Abril/Maio).",
-        "3. Inverno (Jun-Ago): Época seca e fria, ideal para caldos e festivais de jazz na serra.",
-        "4. Natal: A Praça da Liberdade ganha iluminação espetacular e apresentações de corais.",
-        "5. Festival Internacional de Teatro (FIT): Bienal que traz grupos do mundo todo para a capital.",
-        "6. Arraial de Belo Horizonte (Junho): Uma das maiores festas juninas da capital.",
-        "7. Festival Sarará: Grande evento de música brasileira que acontece na Esplanada do Mineirão.",
-        "8. Primavera: A cidade fica colorida com os ipês amarelos e roxos espalhados pelas avenidas.",
-        "9. BH Stock Car: Evento de corrida que utiliza as vias ao redor do Mineirão.",
-        "10. Verão (Dez-Mar): Estação chuvosa com calor moderado."
-    ],
-
-    info_gerais: [
-        "1. Moeda: Real Brasileiro (BRL).",
-        "2. Voltagem: 127v (110v).",
-        "3. Tomada: Tipo N (3 pinos).",
-        "4. DDD: 31.",
-        "5. População: Aprox. 2.3 milhões (cidade) e 6 milhões (região metropolitana).",
-        "6. Gentílico: Belo-horizontino.",
-        "7. Aeroportos: Confins (CNF - Internacional) e Pampulha (PLU - Regional).",
-        "8. Água: Beba mineral. A água da torneira não é recomendada para consumo direto.",
-        "9. Uber/99: Funcionam perfeitamente e são a melhor forma de se deslocar.",
-        "10. Gorjeta: 10% a 13% inclusos na conta (opcional)."
-    ],
-
-    antes_de_ir: [
-        "1. Ladeiras: BH é muito morrada. Use calçados confortáveis se pretender caminhar.",
-        "2. Aeroporto de Confins: Fica a 40km do centro. Calcule pelo menos 1h de trajeto.",
-        "3. Inhotim: Reserve pelo menos um dia inteiro. Compre o ingresso online.",
-        "4. Mercado Central no Domingo: Fecha cedo (13h). Vá de manhã para aproveitar.",
-        "5. Segurança no Hipercentro: Atenção redobrada com pertences perto da Rodoviária.",
-        "6. Transporte Público: O metrô é limitado. O sistema de ônibus MOVE é eficiente.",
-        "7. Roupas: Traga um agasalho mesmo no verão, as noites podem ser frescas.",
-        "8. Reservas: Restaurantes famosos na Savassi costumam ter fila no fim de semana.",
-        "9. Estacionamento: Usa o sistema digital Faixa Azul.",
-        "10. Hospitalidade: O mineiro é gentil. Peça dicas de botecos aos locais."
-    ],
-
-    numeros: [
-        "1. 190 (Polícia Militar): Emergências e segurança.",
-        "2. (31) 3270-4500 (Delegacia do Turista): Próxima à Rodoviária.",
-        "3. 192 (SAMU): Emergência médica.",
-        "4. 193 (Bombeiros): Incêndios e resgates.",
-        "5. (31) 3277-4102 (Rodoviária de BH): Informações sobre ônibus.",
-        "6. (31) 3689-2000 (Aeroporto de Confins): Informações sobre voos.",
-        "7. 156 (Prefeitura de BH): Serviços municipais.",
-        "8. (31) 3224-4633 (Hospital João XXIII): Referência em urgência.",
-        "9. 118 (BHTrans): Trânsito e ônibus.",
-        "10. (31) 3236-7400 (Belotur): Informações turísticas oficiais."
-    ],
-
-    riscos: [
-        "1. Alagamentos: No verão, algumas avenidas (como Vilarinho) sofrem com enchentes rápidas. Evite em temporais.",
-        "2. Celular no Centro: Furtos por descuido ocorrem no centro comercial.",
-        "3. GPS em Vias Rápidas: Atenção ao entrar em bairros desconhecidos.",
-        "4. Balada na Savassi: Fique atento ao esperar transporte de madrugada na calçada.",
-        "5. Golpes de Taxi: Use aplicativos ou táxis oficiais identificados.",
-        "6. Pão de Queijo Frio: Procure locais com fornadas constantes.",
-        "7. Inhotim na Segunda: O museu não abre às segundas (exceto feriados).",
-        "8. Anel Rodoviário: Via perigosa com tráfego intenso de caminhões.",
-        "9. Moradores de Rua: Presença marcante no hipercentro; mantenha a atenção.",
-        "10. Bebida no Sol: O sol de BH queima muito. Hidrate-se bem."
-    ],
-
-    roteiros: {
-        "curto": {
-            titulo: "Roteiro Express (1 a 2 Dias)",
-            texto: [
-                "Dia 1 (Cultura e Centro): Mercado Central, Circuito Praça da Liberdade e jantar na Savassi.",
-                "Dia 2 (Pampulha): Igrejinha, Museu de Arte e pôr do sol no Mirante das Mangabeiras."
-            ]
-        },
-        "medio": {
-            titulo: "Roteiro Essencial (3 a 5 Dias)",
-            texto: [
-                "Dias 1 e 2: Siga o Roteiro Express acima.",
-                "Dia 3 (Inhotim): Dia inteiro no maior museu a céu aberto do mundo em Brumadinho.",
-                "Dia 4 (História): Praça da Estação, Museu de Artes e Ofícios e Parque Municipal.",
-                "Dia 5 (Boemia): Estádio Mineirão e happy hour no Bairro Santa Tereza."
-            ]
-        },
-        "longo": {
-            titulo: "Roteiro Completo (7+ Dias)",
-            texto: [
-                "Dias 1 a 5: Siga o Roteiro Essencial acima.",
-                "Dia 6 (Cidades Históricas): Bate-volta para Ouro Preto e Mariana.",
-                "Dia 7 (Natureza): Cachoeiras na Serra do Cipó.",
-                "Dia 8 (Despedida): Compras finais no Mercado Central."
-            ]
-        }
-    },
-
-    links: {
-        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-629471&aid=304142",
-        passeio: "https://www.civitatis.com/br/belo-horizonte/",
-        seguro: "https://www.segurospromo.com.br"
-    }
-},
-{
-    name: "Manaus",
-    imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Praia_da_Ponta_Negra_%28Manaus%29.jpg/960px-Praia_da_Ponta_Negra_%28Manaus%29.jpg",
-    tags: ["Natureza", "Gastronomia", "Aventura"],
-    mapa: "https://goo.gl/maps/manaus",
-    clima: "Equatorial. Quente e úmido o ano todo, com chuvas frequentes.",
-    // Adicione dentro do objeto de Manaus
-veredicto: {
-    melhor_epoca: "Junho a Novembro (Verão Amazônico/Seca). Junho/Julho é o auge para ver a floresta alagada (Igapós). Setembro/Outubro surgem as praias de rio. O calor é intenso e úmido o ano todo.",
-    ideal_para: [
-        "Aventureiros e amantes da natureza (Selva, Encontro das Águas, Botos)",
-        "Exploradores gastronômicos (Tambaqui, Pirarucu, Tacacá e frutas exóticas)",
-        "Turismo Cultural e Histórico (Teatro Amazonas e Ciclo da Borracha)",
-        "Experiências imersivas em hotéis de selva ou cruzeiros fluviais"
-    ],
-    nao_ideal_para: [
-        "Quem não suporta calor extremo e umidade alta (é uma sauna a céu aberto)",
-        "Pessoas com fobia intensa de insetos (na selva, eles são os donos)",
-        "Quem espera encontrar praias de água azul turquesa (os rios são negros ou barrentos)"
-    ],
-    perfis: [
-        { icone: "ri-plant-fill", nome: "Selva/Eco" },
-        { icone: "ri-restaurant-2-fill", nome: "Sabores" },
-        { icone: "ri-ship-fill", nome: "Fluvial" },
-        { icone: "ri-history-line", nome: "História" }
-    ]
-},
-    pontos_turisticos: [
-        "1. Teatro Amazonas: Ícone do Ciclo da Borracha, com sua cúpula colorida e interior luxuoso.",
-        "2. Encontro das Águas: Onde o Rio Negro e o Rio Solimões correm lado a lado sem se misturar.",
-        "3. Mercado Municipal Adolpho Lisboa: Inspirado no Les Halles de Paris, ótimo para artesanato e peixes.",
-        "4. MUSA (Museu da Amazônia): Inclui uma torre de observação de 42m acima da copa das árvores.",
-        "5. Praia da Ponta Negra: Principal orla da cidade, com calçadão, anfiteatro e pôr do sol no Rio Negro.",
-        "6. INPA (Bosque da Ciência): Pesquisa científica onde é possível ver peixes-boi e ariranhas.",
-        "7. Palacete Provincial: Conjunto de museus que contam a história militar e artística do Amazonas.",
-        "8. Porto de Manaus: Movimentado e vital, mostra a dinâmica da vida ribeirinha amazônica.",
-        "9. Arquipélago de Anavilhanas: Um dos maiores arquipélagos fluviais do mundo (acesso via Novo Airão).",
-        "10. Centro Cultural Palácio Rio Negro: Antiga sede do governo com arquitetura imponente e jardins."
-    ],
-
-    gastronomia: [
-        "1. Tambaqui Assado: O peixe mais famoso, geralmente servido com farinha de Uarini.",
-        "2. Tacacá: Caldo quente feito com tucupi, jambu (que treme a boca) e camarão.",
-        "3. X-Caboquinho: Sanduíche tradicional com tucumã, queijo coalho e banana frita.",
-        "4. Pirarucu de Casaca: Peixe desfiado com farinha, banana, passas e temperos.",
-        "5. Caldeirada de Peixe: Sopa rica de peixes da região como o Tucunaré.",
-        "6. Frutas Exóticas: Prove o Cupuaçu, Buriti, Bacuri e o verdadeiro Açaí amazônico.",
-        "7. Brigadeiro de Cupuaçu: Uma variação regional deliciosa do doce brasileiro.",
-        "8. Farinha de Uarini: Conhecida como 'farinha ovada', é crocante e única.",
-        "9. Matrinxã na Brasa: Peixe muito saboroso e gorduroso, clássico dos almoços locais.",
-        "10. Suco de Guaraná: O guaraná natural batido com amendoim e castanha."
-    ],
-
-    religiao: [
-        "1. Catedral Metropolitana de Manaus: Localizada no alto de uma colina no centro histórico.",
-        "2. Igreja de São Sebastião: Situada em frente ao Teatro Amazonas, com pinturas italianas.",
-        "3. Igreja de Nossa Senhora da Conceição: Padroeira da cidade, centro das festividades de dezembro.",
-        "4. Sinagoga Beit Yaacov: Importante marco da forte imigração judaica marroquina na região.",
-        "5. Celebrações Ribeirinhas: Procissões fluviais que levam santos padroeiros pelos rios.",
-        "6. Centros de Umbanda e Candomblé: Muito presentes, com forte influência das águas.",
-        "7. Igrejas Evangélicas: Grande presença em bairros periféricos e no centro.",
-        "8. Mesquita de Manaus: Ponto de encontro da comunidade islâmica local.",
-        "9. Festa de Iemanjá: Tradicionalmente celebrada nas margens da Ponta Negra.",
-        "10. Influência Indígena: Espiritualidade ancestral que permeia a cultura local."
-    ],
-
-    curiosidades: [
-        "1. Paris dos Trópicos: Apelido dado durante a riqueza do Ciclo da Borracha.",
-        "2. Rio Negro: É o maior rio de água negra do mundo.",
-        "3. Teatro em Peças: O Teatro Amazonas foi construído com materiais vindos quase todos da Europa.",
-        "4. Fuso Horário: Manaus está 1 hora atrás do horário de Brasília (GMT-4).",
-        "5. Zona Franca: É um importante polo industrial, isento de muitos impostos.",
-        "6. Cidade Flutuante: Existem comunidades inteiras que vivem em casas sobre balsas nos arredores.",
-        "7. Porto Flutuante: O Roadway é projetado para subir e descer conforme o nível do rio.",
-        "8. Biodiversidade Urbana: Não é raro ver preguiças e iguanas em parques no meio da cidade.",
-        "9. Boi-Bumbá: Embora o festival seja em Parintins, Manaus respira a cultura dos Bois Garantido e Caprichoso.",
-        "10. Águas que não se misturam: Fenômeno causado pela diferença de densidade, temperatura e velocidade."
-    ],
-
-    eventos_estacoes: [
-        "1. Festival Amazonas de Ópera (Abril/Maio): Espetáculos mundiais no Teatro Amazonas.",
-        "2. Manaus Passo a Paço (Setembro): Grande festival de artes, música e gastronomia no Centro.",
-        "3. Festival de Parintins (Junho): Embora a 360km, Manaus é a principal porta de saída de barcos.",
-        "4. Festival de Ciranda de Manacapuru (Agosto): Outra festa folclórica vibrante na região metropolitana.",
-        "5. Boi Manaus (Outubro): Celebra o aniversário da cidade com ritmos de toadas.",
-        "6. Réveillon na Ponta Negra: Queima de fogos e shows na beira do Rio Negro.",
-        "7. Época da Cheia (Maio-Julho): Melhor época para ver os igapós (florestas inundadas).",
-        "8. Época da Seca (Setembro-Novembro): Quando surgem as praias de rio de areia branca.",
-        "9. Festival de Cinema do Amazonas: Evento que atrai produtores e diretores para a capital.",
-        "10. Carnaval de Manaus: Famoso pelos desfiles de escolas de samba e blocos de rua."
-    ],
-
-    info_gerais: [
-        "1. Moeda: Real Brasileiro (BRL).",
-        "2. Voltagem: 127v.",
-        "3. Tomada: Tipo N (3 pinos).",
-        "4. DDD: 92.",
-        "5. População: Aprox. 2.1 milhões de habitantes.",
-        "6. Gentílico: Manauara.",
-        "7. Aeroporto: Eduardo Gomes (MAO).",
-        "8. Vacina: Recomendada vacina contra Febre Amarela e uso de repelente.",
-        "9. Transporte: Aplicativos funcionam bem; barcos são o transporte 'rodoviário' da região.",
-        "10. Sol: Use protetor solar fator alto, o sol amazônico é muito forte."
-    ],
-
-    antes_de_ir: [
-        "1. Repelente: Item obrigatório, especialmente para passeios de selva.",
-        "2. Hidratação: O calor é úmido e constante, beba muita água mineral.",
-        "3. Logística: O aeroporto é longe do centro; use Uber ou táxis credenciados.",
-        "4. Passeios de Rio: Sempre verifique se a agência de turismo é credenciada pela EMBRATUR.",
-        "5. Dinheiro em espécie: Leve algum para passeios em comunidades ribeirinhas.",
-        "6. Roupas: Tecidos leves e claros; calça e manga comprida para trilhas na mata.",
-        "7. Ingressos Teatro: Verifique horários de visitação guiada, costumam fechar cedo.",
-        "8. Cheia vs Seca: A paisagem muda drasticamente entre as estações. Escolha o que quer ver.",
-        "9. Malária: Em áreas urbanas o risco é baixo, mas informe-se se for para áreas remotas.",
-        "10. Hospitalidade: O manauara é acolhedor, mas o ritmo da cidade é mais tranquilo que o do Sudeste."
-    ],
-
-    numeros: [
-        "1. 190 (Polícia Militar): Emergências.",
-        "2. (92) 3652-1210 (Aeroporto de Manaus): Informações.",
-        "3. 192 (SAMU): Emergência médica.",
-        "4. 193 (Bombeiros): Resgates.",
-        "5. (92) 3231-1500 (Amazonastur): Informações turísticas.",
-        "6. (92) 2123-5000 (Hospital 28 de Agosto): Urgência e emergência.",
-        "7. (92) 3215-2800 (Delegacia do Turista): Próxima ao Teatro Amazonas.",
-        "8. 118 (IMMU): Trânsito e transporte urbano.",
-        "9. (92) 3622-1330 (Rodoviária de Manaus): Informações de ônibus.",
-        "10. (92) 3232-1768 (Porto de Manaus): Viagens de barco."
-    ],
-
-    riscos: [
-        "1. Insolação: O calor excessivo pode causar mal-estar rápido; use chapéu.",
-        "2. Animais Silvestres: Nunca tente alimentar macacos ou jacarés em passeios.",
-        "3. Segurança no Centro: Evite andar com objetos de valor à mostra em ruas desertas à noite.",
-        "4. Correntes Fluviais: Os rios são profundos e têm correntes fortes; nade apenas em áreas permitidas.",
-        "5. Insetos: Use repelente constantemente para evitar picadas incômodas.",
-        "6. Comida de Rua: Cuidado com a higiene de barracas informais para evitar piriri.",
-        "7. GPS: No rio o sinal falha; sempre tenha um guia ou mapas offline.",
-        "8. Voo de Conexão: O aeroporto de Manaus costuma ter neblina matinal que pode atrasar voos.",
-        "9. Pirataria: Em rotas de barco muito longas e isoladas, há relatos raros; prefira empresas grandes.",
-        "10. Chuvas Súbitas: As 'pancadas' de chuva são fortes e podem alagar vias rapidamente."
-    ],
-
-    roteiros: {
-        "curto": {
-            titulo: "Roteiro Manaus City (2 Dias)",
-            texto: [
-                "Dia 1: Teatro Amazonas, Mercado Adolpho Lisboa e pôr do sol na Ponta Negra.",
-                "Dia 2: Passeio de barco para o Encontro das Águas, Vila de Janauari (Vitória-Régia) e almoço flutuante."
-            ]
-        },
-        "medio": {
-            titulo: "Selva e Cultura (4 Dias)",
-            texto: [
-                "Dias 1 e 2: Siga o roteiro de 2 dias.",
-                "Dia 3: Visita ao MUSA (torre de observação) e INPA (peixes-boi).",
-                "Dia 4: Experiência em uma aldeia indígena e interação (responsável) com botos cor-de-rosa."
-            ]
-        },
-        "longo": {
-            titulo: "Imersão Amazônica (7+ Dias)",
-            texto: [
-                "Dias 1 a 4: Siga o roteiro de 4 dias.",
-                "Dias 5 a 7: Hospedagem em um Jungle Lodge (hotel de selva) para focagem noturna, trilhas e pesca de piranha.",
-                "Bônus: Se for época, estenda a Novo Airão para o Parque Nacional de Anavilhanas."
-            ]
-        }
-    },
-
-    links: {
-        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-634547&aid=304142",
-        passeio: "https://www.civitatis.com/br/manaus/",
-        seguro: "https://www.segurospromo.com.br"
-    }
-},
-{
-    name: "João Pessoa",
-    imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Waterfront_panoramic_of_Jo%C3%A3o_Pessoa_%28PB%29.jpg/2560px-Waterfront_panoramic_of_Jo%C3%A3o_Pessoa_%28PB%29.jpg",
-    tags: ["Praias", "Tranquilidade", "História"],
-    mapa: "https://goo.gl/maps/joaopessoa",
-    clima: "Tropical Úmido. Sol constante e brisa agradável, com chuvas entre abril e julho.",
-    // Adicione dentro do objeto de João Pessoa
-veredicto: {
-    melhor_epoca: "Setembro a Março (Mar esmeralda e muito sol). Janeiro é movimentado. Evite Abril a Julho se quiser fugir da chuva. Dica: A cidade acorda com as galinhas (o sol nasce às 4h30)!",
-    ideal_para: [
-        "Quem busca a capital mais tranquila, verde e segura do Nordeste",
-        "Famílias e terceira idade (orla organizada, plana e sem prédios altos na areia)",
-        "Viajantes que querem economizar (ótimo custo-benefício em comida/hospedagem)",
-        "Madrugadores (o dia começa antes das 5h da manhã e rende muito)"
-    ],
-    nao_ideal_para: [
-        "Quem busca vida noturna frenética até o amanhecer (a orla fica vazia cedo)",
-        "Quem gosta de dormir até tarde (o sol nasce muito cedo e o comércio fecha cedo)",
-        "Quem espera mar agitado nas praias urbanas (a maioria é protegida por recifes)"
-    ],
-    perfis: [
-        { icone: "ri-leaf-fill", nome: "Zen/Paz" },
-        { icone: "ri-home-heart-fill", nome: "Família" },
-        { icone: "ri-wallet-3-fill", nome: "Econômico" },
-        { icone: "ri-sun-fill", nome: "Sol/Mar" }
-    ]
-},
-    pontos_turisticos: [
-        "1. Farol do Cabo Branco: Simboliza o ponto mais oriental das Américas (Ponta do Seixas).",
-        "2. Pôr do Sol na Praia do Jacaré: Onde o Bolero de Ravel é tocado diariamente ao saxofone no rio.",
-        "3. Centro Cultural São Francisco: Um dos mais importantes complexos barrocos do Brasil.",
-        "4. Piscinas Naturais de Picãozinho: Recifes de corais acessíveis por catamarã na maré baixa.",
-        "5. Estação Cabo Branco: Obra de Oscar Niemeyer dedicada à ciência, cultura e artes.",
-        "6. Praia de Tambaú e Cabo Branco: As principais orlas urbanas, excelentes para caminhadas.",
-        "7. Ilha de Areia Vermelha: Banco de areia avermelhada que surge no meio do mar na maré baixa.",
-        "8. Parque Solon de Lucena: Lagoa central cercada por palmeiras imperiais, ícone da cidade.",
-        "9. Mercado de Artesanato Paraibano: Melhor lugar para comprar redes, rendas e arte local.",
-        "10. Praia do Coqueirinho: Localizada no litoral sul, considerada uma das mais bonitas do estado."
-    ],
-
-    gastronomia: [
-        "1. Rubacão: Prato típico com arroz, feijão, queijo coalho e carne de sol cremosa.",
-        "2. Carne de Sol com Nata: Carne macia servida com creme de leite fresco e macaxeira.",
-        "3. Peixe à Belle Meunière: Comum nos restaurantes da orla com frutos do mar frescos.",
-        "4. Buchada de Bode: Iguaria tradicional do sertão muito apreciada na capital.",
-        "5. Arroz de Leite: Acompanhamento clássico para carnes assadas.",
-        "6. Tapioca de Tambaú: Visite as barracas de tapioca com recheios variados.",
-        "7. Bolo de Rolo: Embora de origem vizinha, é muito tradicional e consumido na Paraíba.",
-        "8. Queijo Coalho na Brasa: Petisco indispensável nas praias e feiras.",
-        "9. Cuscuz Nordestino: Base da alimentação local, servido do café à janta.",
-        "10. Frutos do Mar: Lagostas, camarões e caranguejos com preços muito acessíveis."
-    ],
-
-    religiao: [
-        "1. Igreja de Nossa Senhora da Guia: Famosa por sua fachada em pedra calcária trabalhada.",
-        "2. Mosteiro de São Bento: Um dos monumentos mais antigos, com arquitetura sóbria e bela.",
-        "3. Catedral Basílica de Nossa Senhora das Neves: Sede da arquidiocese da Paraíba.",
-        "4. Romaria da Penha: Milhares de fiéis caminham 14km anualmente em devoção à santa.",
-        "5. Igreja da Misericórdia: Local histórico de grande importância para a caridade na colônia.",
-        "6. Capela de Nossa Senhora da Penha: Construção à beira-mar que atrai peregrinos.",
-        "7. Festas Juninas: O caráter religioso de São João é fortíssimo em toda a cidade.",
-        "8. Centros Espíritas: A cidade possui uma comunidade atuante com foco em caridade.",
-        "9. Terreiros de Umbanda e Jurema: A Jurema Sagrada é uma tradição espiritual nativa da região.",
-        "10. Igrejas Evangélicas: Presença marcante com templos históricos e modernos."
-    ],
-
-    curiosidades: [
-        "1. Porta do Sol: É aqui que o sol nasce primeiro em todas as Américas.",
-        "2. Terceira Mais Antiga: João Pessoa foi fundada em 1585.",
-        "3. Cidade Verde: Frequentemente citada como uma das cidades mais arborizadas do mundo.",
-        "4. Sem Prédios Altos: Na orla, leis ambientais proíbem prédios com mais de 3 ou 4 andares.",
-        "5. Nome da Cidade: Homenagem a um político paraibano assassinado em 1930; o nome original era Filipeia.",
-        "6. Rio Sanhauá: Foi às margens deste rio que a cidade nasceu, e não no mar.",
-        "7. Ciclovias: A orla de Cabo Branco é fechada para carros todas as manhãs para lazer.",
-        "8. Maré: A vida na cidade gira em torno da tábua de marés; passeios dependem da maré baixa.",
-        "9. Tranquilidade: É conhecida como a capital mais calma e barata do Nordeste.",
-        "10. Sotaque Paraibano: Marcado pelo uso do 'vixe' e uma musicalidade única."
-    ],
-
-    eventos_estacoes: [
-        "1. São João de João Pessoa (Junho): Grandes shows e quadrilhas na Lagoa.",
-        "2. Extremo Cultural (Janeiro): Shows gratuitos de grandes artistas nacionais na praia.",
-        "3. Folia de Rua (Pré-Carnaval): Blocos tradicionais como o 'Muriçocas do Miramar'.",
-        "4. Aniversário da Cidade (5 de Agosto): Festas religiosas e culturais por toda a capital.",
-        "5. Verão (Dez-Março): Época de águas mais cristalinas e cidade cheia de turistas.",
-        "6. Festival de Música Clássica (Novembro): Concertos gratuitos em igrejas históricas.",
-        "7. Inverno (Maio-Julho): Período de chuvas; a temperatura cai levemente mas continua morna.",
-        "8. Natal na Lagoa: Decoração especial e espetáculos de luzes no centro.",
-        "9. Virada de Ano: Queima de fogos e shows nas areias de Tambaú.",
-        "10. Paixão de Cristo: Encenada no adro do Centro Cultural São Francisco."
-    ],
-
-    info_gerais: [
-        "1. Moeda: Real (BRL).",
-        "2. Voltagem: 220v.",
-        "3. Tomada: Tipo N (3 pinos).",
-        "4. DDD: 83.",
-        "5. População: Aprox. 830 mil habitantes.",
-        "6. Gentílico: Pessoense.",
-        "7. Aeroporto: Castro Pinto (JPA).",
-        "8. Água: Beba mineral; a da torneira é tratada mas não recomendada para consumo direto.",
-        "9. Transporte: Aplicativos (Uber/99) funcionam muito bem; a cidade é compacta.",
-        "10. Segurança: Uma das capitais mais seguras do Nordeste, mas evite o centro à noite."
-    ],
-
-    antes_de_ir: [
-        "1. Tábua de Marés: Verifique SEMPRE antes de agendar passeios como Picãozinho ou Areia Vermelha.",
-        "2. Localização: O aeroporto fica na cidade vizinha (Bayeux), cerca de 25-30 min de Tambaú.",
-        "3. Sol: O sol nasce por volta das 5h da manhã e se põe às 17h. Aproveite o dia cedo.",
-        "4. Litoral Sul: Reserve um dia para alugar um carro ou buggy e conhecer as praias do sul (Conde).",
-        "5. Horários do Centro: O centro histórico é mais movimentado durante o dia; à noite prefira a orla.",
-        "6. Roupas: Leves e frescas o ano todo; traga apenas um casaco fino para locais com ar condicionado.",
-        "7. Arroz de Leite: Não estranhe o arroz 'papa', é uma delícia regional.",
-        "8. Hospedagem: Ficar em Tambaú ou Cabo Branco garante que você faça quase tudo a pé.",
-        "9. Banhos de Mar: Verifique a balneabilidade, mas a maioria das praias urbanas é própria.",
-        "10. Silêncio: A cidade dorme cedo em comparação com Recife ou Natal."
-    ],
-
-    numeros: [
-        "1. 190 (Polícia Militar): Emergências.",
-        "2. (83) 3232-1205 (Aeroporto): Informações.",
-        "3. 192 (SAMU): Emergência médica.",
-        "4. 193 (Bombeiros): Resgates.",
-        "5. (83) 3214-8000 (Hospital de Trauma): Referência em urgência.",
-        "6. (83) 3218-4615 (Delegacia do Turista): Localizada em Tambaú.",
-        "7. 118 (Semob): Trânsito e transporte.",
-        "8. (83) 3218-1105 (Terminal Rodoviário): Ônibus interestaduais.",
-        "9. 156 (Prefeitura): Serviços municipais.",
-        "10. (83) 3214-8300 (PBTur): Órgão oficial de turismo."
-    ],
-
-    riscos: [
-        "1. Correntes de Retorno: Algumas áreas de Cabo Branco têm buracos; nade onde houver salva-vidas.",
-        "2. Sol Forte: O índice UV é altíssimo; reaplique protetor solar a cada 2 horas.",
-        "3. Centro à Noite: Ruas desertas fora da área turística podem ser perigosas para caminhadas.",
-        "4. Caranguejo: Se não tiver costume, peça ajuda para abrir para evitar pequenos cortes.",
-        "5. Maré Alta Súbita: Não se distancie muito da costa em bancos de areia sem monitorar a subida da maré.",
-        "6. Chuvas de Inverno: Podem causar alagamentos pontuais em avenidas principais.",
-        "7. Vendedores de Passeio: Procure empresas credenciadas na orla para garantir segurança.",
-        "8. Ouriços: Comuns em áreas de recifes; use sapatilhas de neoprene se for caminhar nos corais.",
-        "9. Trânsito na Epitácio Pessoa: Principal avenida da cidade, pode ficar lenta nos horários de pico.",
-        "10. Hidratação: O calor constante exige beber muita água mineral."
-    ],
-
-    roteiros: {
-        "curto": {
-            titulo: "Jampa Express (2 Dias)",
-            texto: [
-                "Dia 1: Orla de Tambaú/Cabo Branco, Farol do Cabo Branco e Pôr do Sol no Jacaré.",
-                "Dia 2: Piscinas Naturais de Picãozinho (maré baixa) e Centro Histórico à tarde."
-            ]
-        },
-        "medio": {
-            titulo: "Paraíba Essencial (4 Dias)",
-            texto: [
-                "Dias 1 e 2: Siga o roteiro de 2 dias.",
-                "Dia 3: Litoral Sul (Praia de Coqueirinho e Tambaba - opção de nudismo ou não).",
-                "Dia 4: Ilha de Areia Vermelha e final de tarde na Lagoa Solon de Lucena."
-            ]
-        },
-        "longo": {
-            titulo: "Experiência Paraibana (7+ Dias)",
-            texto: [
-                "Dias 1 a 4: Siga o roteiro de 4 dias.",
-                "Dia 5: Litoral Norte (Cabedelo e Fortaleza de Santa Catarina).",
-                "Dia 6: Bate-volta para Campina Grande ou Lajedo de Pai Mateus (Sertão).",
-                "Dia 7: Compras no Mercado de Artesanato e descanso na Praia do Bessa."
-            ]
-        }
-    },
-
-                 links: {
-                      hotel: "https://www.booking.com/searchresults.pt-br.html?city=-649321&aid=304142",
-                      passeio: "https://www.civitatis.com/br/joao-pessoa/",
-                       seguro: "https://www.segurospromo.com.br"
-                }
-            },
-            {
-    name: "Ubatuba",
-    imagem: "https://upload.wikimedia.org/wikipedia/commons/c/ca/Praia_do_Estaleiro_-_Ubatuba.png",
-    tags: ["Surfe", "Natureza", "Praias"],
-    mapa: "https://goo.gl/maps/ubatuba",
-    clima: "Tropical Litorâneo. Quente e úmido, conhecida carinhosamente como 'Ubatuba-chuva' pela frequência das precipitações.",
-    // Adicione dentro do objeto de Ubatuba
-veredicto: {
-    melhor_epoca: "Maio a Agosto (Inverno seco). O apelido 'Ubachuva' é real: no verão chove quase todo dia. Se quer sol garantido e céu azul, vá no inverno (mas a água é gelada).",
-    ideal_para: [
-        "Surfistas (é a capital do Surf em SP, com ondas lendárias em Itamambuca)",
-        "Amantes de natureza intocada (Mata Atlântica densa, trilhas e cachoeiras)",
-        "Quem busca variedade (são mais de 100 praias, da calmaria ao mar bravo)",
-        "Passeios de barco para ilhas paradisíacas (Ilha Anchieta e Prumirim)"
-    ],
-    nao_ideal_para: [
-        "Quem tem alergia a insetos (os 'borrachudos' são vorazes, repelente é lei)",
-        "Quem não tem paciência para trânsito (na temporada, a Rio-Santos trava totalmente)",
-        "Quem desanima com previsão de chuva (aqui o tempo vira em minutos)"
-    ],
-    perfis: [
-        { icone: "ri-surfboard-fill", nome: "Surf" },
-        { icone: "ri-tree-fill", nome: "Ecoturismo" },
-        { icone: "ri-drop-fill", nome: "Natureza" },
-        { icone: "ri-group-fill", nome: "Família" }
-    ]
-},
-    pontos_turisticos: [
-        "1. Ilha das Couves: Águas cristalinas ideais para snorkel; acesso controlado por barcos partindo de Picinguaba.",
-        "2. Projeto TAMAR: Centro de conservação de tartarugas marinhas, parada educativa obrigatória no centro.",
-        "3. Aquário de Ubatuba: Um dos melhores do país, com tanque de toque e pinguinário.",
-        "4. Praia de Itamambuca: Palco de campeonatos internacionais de surfe e natureza preservada.",
-        "5. Trilha das Sete Praias: Caminhada clássica que passa por praias desertas como a do Cedro e Bonete.",
-        "6. Ilha Anchieta: Parque Estadual com ruínas de um antigo presídio e trilhas ecológicas.",
-        "7. Praia do Português: Pequena enseada paradisíaca escondida ao lado da Praia de Felix.",
-        "8. Cachoeira do Prumirim: Quedas d'água que deságuam próximas à praia, formando um cenário único.",
-        "9. Rua Guarani: O centro gastronômico e comercial da cidade, perfeita para caminhar à noite.",
-        "10. Praia da Lagoinha: Mar calmo, ideal para famílias e ponto de partida para a Trilha das Sete Praias."
-    ],
-
-    gastronomia: [
-        "1. Azul Marinho: Peixe cozido com banana verde, prato caiçara mais tradicional da região.",
-        "2. Casquinha de Siri: Entrada clássica servida na maioria dos quiosques e restaurantes.",
-        "3. Frutos do Mar na Brasa: Peixes frescos como tainha e sororoca grelhados na hora.",
-        "4. Arroz com Mariscos: Prato rico em sabores do oceano, comum em restaurantes da orla.",
-        "5. Sorvetes de Frutas Nativas: Procure por sabores como cambuci e cupuaçu.",
-        "6. Peixe na Telha: Preparado lentamente com molho de camarão e temperos locais.",
-        "7. Lula à Dorê: Petisco crocante indispensável para quem curte a praia.",
-        "8. Pastel de Camarão: Famoso nas feirinhas e barracas de rua no centro.",
-        "9. Café Caiçara: Geralmente servido com bolo de milho ou paçoca de pinhão nas comunidades.",
-        "10. Cervejas Artesanais: Ubatuba possui microcervejarias locais com rótulos inspirados no mar."
-    ],
-
-    religiao: [
-        "1. Igreja Exaltação da Santa Cruz: Matriz histórica no centro, marco da fundação da cidade.",
-        "2. Festa de São Pedro Pescador: Grande evento em junho com a tradicional benção das embarcações.",
-        "3. Capela de São Francisco: Localizada na Praia da Almada, cenário de festas comunitárias.",
-        "4. Comunidades Quilombolas e Indígenas: Mantêm ritos ancestrais e sincretismo religioso forte.",
-        "5. Procissões Marítimas: Comuns em datas festivas católicas, com barcos decorados.",
-        "6. Centros Espíritas: Presença de grupos dedicados ao estudo e caridade na região central.",
-        "7. Templos Evangélicos: Diversas denominações espalhadas por todos os bairros da cidade.",
-        "8. Presença de Comunidades de Yoga: Muitas focadas em espiritualidade oriental e meditação na natureza.",
-        "9. Gruta que Chora: Local na Praia da Sununga envolto em lendas religiosas e místicas locais.",
-        "10. Folia de Reis: Tradição folclórica e religiosa mantida por grupos da zona norte."
-    ],
-
-    curiosidades: [
-        "1. Capital do Surfe: Oficialmente reconhecida como a capital do surfe no estado de São Paulo.",
-        "2. Ubatuba-Chuva: Apelido carinhoso devido à alta pluviosidade da Serra do Mar.",
-        "3. Trópico de Capricórnio: A linha imaginária atravessa a cidade, marcada por um monumento na BR-101.",
-        "4. 102 Praias: A cidade se orgulha de ter mais de uma centena de praias catalogadas.",
-        "5. Presídio da Ilha Anchieta: Local de uma das maiores rebeliões prisionais da história do Brasil.",
-        "6. Fauna e Flora: Localizada no coração de uma das áreas mais preservadas de Mata Atlântica.",
-        "7. Canoa Caiçara: Ubatuba ainda preserva a fabricação de canoas de um só tronco (voga).",
-        "8. Proximidade com Paraty: Fica a apenas 70km da cidade histórica fluminense.",
-        "9. Observação de Baleias: Entre junho e agosto, é possível avistar baleias jubarte passando pela costa.",
-        "10. Morro do Corcovado: Um dos picos mais altos da região, com trilha desafiadora e vista 360º."
-    ],
-
-    eventos_estacoes: [
-        "1. Verão (Dez-Mar): Alta temporada, águas quentes e cidade extremamente badalada.",
-        "2. Festival do Camarão (Junho/Julho): Grande evento gastronômico no centro da cidade.",
-        "3. Inverno (Jun-Ago): Época de ondas grandes para o surfe e céu limpo (menos chuva).",
-        "4. Ubatuba Jazz Festival: Evento cultural que atrai músicos de renome no outono.",
-        "5. Provas de Natação em Águas Abertas: Travessias famosas que ocorrem em várias praias.",
-        "6. Primavera: Ideal para trilhas e observação de aves (birdwatching).",
-        "7. Corrida de Canoa Caiçara: Competição tradicional que mantém viva a cultura local.",
-        "8. Natal Iluminado: O centro histórico ganha luzes e apresentações de corais.",
-        "9. Outono: Considerada a melhor época para visitar (menos lotação e clima firme).",
-        "10. Etapas de Campeonatos de Surfe: Ocorrem principalmente em Itamambuca e Praia Grande."
-    ],
-
-    info_gerais: [
-        "1. Moeda: Real (BRL).",
-        "2. Voltagem: 127v (maioria).",
-        "3. Tomada: Tipo N (3 pinos).",
-        "4. DDD: 12.",
-        "5. População: Aprox. 93 mil habitantes (triplica na temporada).",
-        "6. Acesso: Rodovias Oswaldo Cruz ou Tamoios.",
-        "7. Pedágio: Não há pedágios dentro da cidade, apenas nas rodovias de acesso.",
-        "8. Estacionamento: Zona Azul digital obrigatória na maioria das praias.",
-        "9. Saúde: Santa Casa de Ubatuba é a principal unidade de urgência.",
-        "10. Transporte: Ônibus circulares ligam as praias do Norte ao Sul."
-    ],
-
-    antes_de_ir: [
-        "1. Borrachudos: Leve repelente (de preferência à base de citronela ou óleo mineral) para trilhas e praias do norte.",
-        "2. Previsão do Tempo: Sempre confira a chuva; o tempo em Ubatuba muda muito rápido.",
-        "3. Lotação: Em feriados, o trânsito na BR-101 (Rio-Santos) pode ser crítico.",
-        "4. Abastecimento: Postos de gasolina são raros nas extremidades (Norte e Sul); abasteça no centro.",
-        "5. Taxa Ambiental: Verifique se a TPA (Taxa de Preservação Ambiental) está ativa para veículos.",
-        "6. Respeite as Correntes: Algumas praias como a Praia Grande e Tombo são perigosas para banho.",
-        "7. Compras: O centro é o melhor lugar para itens de praia e artesanato.",
-        "8. Ilha das Couves: Reserve com antecedência, pois há limite diário de visitantes.",
-        "9. Calçados: Para as trilhas das 7 praias, use tênis com boa aderência.",
-        "10. Dinheiro: Leve um pouco em espécie; alguns quiosques em praias isoladas podem ter sinal de cartão instável."
-    ],
-
-    numeros: [
-        "1. 190 (Polícia Militar): Emergências.",
-        "2. (12) 3834-1000 (Prefeitura): Informações gerais.",
-        "3. 192 (SAMU): Emergência médica.",
-        "4. 193 (Bombeiros): Resgates e salvamento marítimo.",
-        "5. (12) 3832-1333 (Rodoviária): Informações de passagens.",
-        "6. (12) 3833-2050 (Santa Casa): Hospital.",
-        "7. (12) 3832-1150 (CIT - Centro de Informações Turísticas).",
-        "8. 153 (Guarda Civil Municipal).",
-        "9. (12) 3832-6202 (Delegacia de Polícia).",
-        "10. (12) 3832-7043 (Capitania dos Portos)."
-    ],
-
-    riscos: [
-        "1. Afogamentos: Atenção redobrada em praias de tombo e mar aberto.",
-        "2. Animais Peçonhentos: Em trilhas fechadas, atenção a cobras e aranhas.",
-        "3. Alagamentos: Chuvas intensas podem causar queda de barreiras na Rio-Santos.",
-        "4. Carros na Areia: É proibido e passível de multa pesada.",
-        "5. Correntezas: Não nade em canais de rios que deságuam no mar.",
-        "6. Furto em Veículos: Evite deixar objetos de valor à mostra em carros estacionados perto de trilhas.",
-        "7. Rochas Escorregadias: Muito cuidado ao caminhar em costões rochosos.",
-        "8. Sol: O mormaço de Ubatuba queima tanto quanto o sol forte; use proteção.",
-        "9. Maré: Fique atento à subida da maré ao atravessar rios em trilhas.",
-        "10. Ingestão de Água: Evite engolir água do mar ou rios próximos à zona urbana."
-    ],
-
-    roteiros: {
-        "curto": {
-            titulo: "Ubatuba Express (2 Dias)",
-            texto: [
-                "Dia 1: Projeto TAMAR, Aquário e pôr do sol na Praia do Itaguá.",
-                "Dia 2: Praia do Felix e Praia do Português (Norte) ou Ilha das Couves."
-            ]
-        },
-        "medio": {
-            titulo: "O Melhor de Uba (4 Dias)",
-            texto: [
-                "Dias 1 e 2: Siga o roteiro de 2 dias.",
-                "Dia 3: Trilha das Sete Praias (partindo da Lagoinha) até a Praia da Fortaleza.",
-                "Dia 4: Litoral Sul: Praia do Lázaro e Gruta que Chora na Sununga."
-            ]
-        },
-        "longo": {
-            titulo: "Paraíso Caiçara (7+ Dias)",
-            texto: [
-                "Dias 1 a 4: Siga o roteiro de 4 dias.",
-                "Dia 5: Passeio de escuna para a Ilha Anchieta.",
-                "Dia 6: Cachoeira e Praia do Prumirim.",
-                "Dia 7: Dia de surfe ou relax na Praia de Itamambuca."
-            ]
-        }
-    },
-
-    links: {
-        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-639014&aid=304142",
-        passeio: "https://www.civitatis.com/br/ubatuba/",
-        seguro: "https://www.segurospromo.com.br"
-    }
-},
-{
-    name: "Vitória",
-    imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/-2016-11-05_ao_13-_Vit%C3%B3ria_94_Romerito_Pontes_%2830875449812%29_%28cropped%29.jpg/1280px--2016-11-05_ao_13-_Vit%C3%B3ria_94_Romerito_Pontes_%2830875449812%29_%28cropped%29.jpg",
-    tags: ["Praias", "Gastronomia", "Ilha"],
-    mapa: "https://goo.gl/maps/vitoria",
-    clima: "Tropical Litorâneo. Quente e úmido no verão, ameno no inverno. Venta bastante (Nordeste).",
-    // Adicione dentro do objeto de Vitória
-veredicto: {
-    melhor_epoca: "Abril a Setembro (Menos chuva e clima ameno). O verão é quente e úmido. No inverno, aproveite para combinar com as Montanhas Capixabas (Domingos Martins) que ficam perto.",
-    ideal_para: [
-        "Amantes de frutos do mar (a regra é clara: 'Moqueca é capixaba, o resto é peixada')",
-        "Quem busca qualidade de vida e uma capital organizada, limpa e segura",
-        "Famílias com crianças (Praça da Ciência, Projeto Tamar e calçadão de Camburi)",
-        "Turismo Religioso (o Convento da Penha, na vizinha Vila Velha, é imperdível)"
-    ],
-    nao_ideal_para: [
-        "Quem busca mar azul turquesa na cidade (a água é mais escura; para praias cristalinas, suba para o Norte do estado)",
-        "Quem espera vida noturna caótica e interminável (o ritmo aqui é mais tranquilo)",
-        "Quem não tem paciência para pontes (o trânsito na Terceira Ponte nos horários de pico é intenso)"
-    ],
-    perfis: [
-        { icone: "ri-restaurant-2-fill", nome: "Moqueca" },
-        { icone: "ri-building-4-fill", nome: "Urbano/Zen" },
-        { icone: "ri-star-smile-fill", nome: "Família" },
-        { icone: "ri-anchor-fill", nome: "Náutico" }
-    ]
-},
-    pontos_turisticos: [
-        "1. Convento da Penha: O cartão-postal do ES. Fica na vizinha Vila Velha, mas a vista de (e para) Vitória é obrigatória.",
-        "2. Ilha das Caieiras: Bairro histórico de pescadores, polo gastronômico famoso pelas desfiadeiras de siri.",
-        "3. Parque da Pedra da Cebola: Parque urbano com uma formação rochosa curiosa que lembra uma cebola.",
-        "4. Praia de Camburi: A principal orla da cidade, ótima para esportes, caminhadas e quiosques.",
-        "5. Galpão das Paneleiras de Goiabeiras: Onde são feitas as autênticas panelas de barro (Patrimônio Cultural).",
-        "6. Praça do Papa: Área nobre com vista para a baía, cruz comemorativa e o Projeto Tamar.",
-        "7. Curva da Jurema: Praia de águas calmas e visual bonito, ao lado do Shopping Vitória.",
-        "8. Palácio Anchieta: Sede do governo estadual, construção jesuítica histórica aberta a visitação.",
-        "9. Catedral Metropolitana de Vitória: Imponente construção neogótica no centro da cidade.",
-        "10. Centro Histórico: Inclui a Escadaria Maria Ortiz, o Theatro Carlos Gomes e casarões antigos."
-    ],
-
-    gastronomia: [
-        "1. Moqueca Capixaba: A estrela local. Diferente da baiana, não leva dendê nem leite de coco. O sabor vem do coentro, urucum e da panela de barro.",
-        "2. Torta Capixaba: Prato tradicional da Semana Santa, mistura bacalhau, palmito, siri, camarão e sururu.",
-        "3. Caranguejo: Ir aos 'caranguejais' (bares especializados) é um ritual de fim de semana.",
-        "4. Muma de Siri: Um pirão ou ensopado delicioso feito com a carne do siri.",
-        "5. Peroá Frito: Peixe típico servido inteiro e frito nos quiosques, geralmente com aipim e vinagrete.",
-        "6. Panela de Barro: Não se come a panela, mas a comida TEM que ser feita nela para ser autêntica.",
-        "7. Casquinha de Siri: Entrada clássica servida em conchas.",
-        "8. Doces de Banana: A região produz muitos derivados da fruta.",
-        "9. Café Arábica: O Espírito Santo é um grande produtor de cafés especiais (região serrana próxima).",
-        "10. Bobó de Camarão: Versão capixaba, mais leve que a nordestina."
-    ],
-
-    religiao: [
-        "1. Festa da Penha: O terceiro maior evento religioso mariano do Brasil, reunindo milhões de fiéis.",
-        "2. Convento da Penha: Santuário histórico fundado em 1558 no topo de um penhasco de 154 metros.",
-        "3. Catedral Metropolitana: Dedicada a Nossa Senhora da Vitória.",
-        "4. Igreja do Rosário: Uma das mais antigas, localizada na Prainha (Vila Velha) e centro histórico.",
-        "5. Santuário de Santo Antônio: Basílica imponente dedicada ao santo casamenteiro.",
-        "6. Igrejas Históricas do Centro: Capela de Santa Luzia (a construção mais antiga da cidade).",
-        "7. Caminhos da Fé: Rotas de peregrinação que ligam Vitória ao santuário de Anchieta (sul do estado).",
-        "8. Comunidades Evangélicas: Grande presença de igrejas batistas e presbiterianas históricas.",
-        "9. Centros Espíritas: Movimento forte e organizado na capital.",
-        "10. Sincretismo: Presença de religiões de matriz africana, com festas para Iemanjá nas praias."
-    ],
-
-    curiosidades: [
-        "1. Moqueca é Capixaba...: O resto é peixada. Esse é o lema oficial (e orgulhoso) do estado.",
-        "2. Capital Ilha: Vitória é uma ilha (Ilha do Mel), ligada ao continente por várias pontes.",
-        "3. Terceira Ponte: A principal ligação com Vila Velha é uma das pontes mais altas do Brasil.",
-        "4. Paneleiras: O ofício das paneleiras de Goiabeiras foi o primeiro bem cultural registrado como Patrimônio Imaterial pelo IPHAN.",
-        "5. Qualidade de Vida: Frequentemente listada entre as melhores capitais para se viver no Brasil (alto IDH).",
-        "6. Cidade Limpa: Conhecida por ter ruas muito limpas e bem cuidadas.",
-        "7. Manguezal Urbano: Possui a maior área de manguezal urbano da América Latina (Estação Ecológica Ilha do Lameirão).",
-        "8. Terceira Mais Antiga: Fundada em 1551, é a terceira capital mais antiga do Brasil (atrás de Recife e Salvador).",
-        "9. Marlin Azul: O Espírito Santo é capital mundial da pesca do Marlin Azul.",
-        "10. Aeroporto: O antigo aeroporto era famoso por ser minúsculo; o novo é moderno e funcional."
-    ],
-
-    eventos_estacoes: [
-        "1. Verão (Dez-Mar): Praias lotadas, shows na areia e muito calor.",
-        "2. Festa da Penha (Abril): O maior evento do estado, com romarias gigantescas.",
-        "3. Festival de Torta Capixaba (Semana Santa): Feira gastronômica na Ilha das Caieiras.",
-        "4. Inverno (Jun-Ago): Clima ameno, ideal para subir a serra (Domingos Martins fica a 40min).",
-        "5. Vitória Jazz e Blues: Festival de música instrumental.",
-        "6. Vital (Carnaval fora de época): Já foi um dos maiores do país e está retornando.",
-        "7. Festival de Cinema de Vitória: Importante evento audiovisual.",
-        "8. Temporada das Baleias (Jun-Nov): É possível avistar Jubartes na costa capixaba.",
-        "9. Aniversário de Vitória (Setembro): Shows e eventos comemorativos.",
-        "10. Réveillon: Queima de fogos na Praia de Camburi."
-    ],
-
-    info_gerais: [
-        "1. Moeda: Real (BRL).",
-        "2. Voltagem: 127v.",
-        "3. Tomada: Tipo N (3 pinos).",
-        "4. DDD: 27.",
-        "5. População: Aprox. 370 mil habitantes (mas a Grande Vitória tem quase 2 milhões).",
-        "6. Aeroporto: Eurico de Aguiar Salles (VIX).",
-        "7. Transporte: Sistema Transcol (ônibus) integra Vitória, Vila Velha, Serra e Cariacica.",
-        "8. Segurança: Zonas turísticas são tranquilas, mas evite o centro velho à noite.",
-        "9. Uber/99: Funcionam muito bem em toda a região metropolitana.",
-        "10. Distâncias: Tudo é muito perto. Você cruza a cidade em 20 minutos fora do pico."
-    ],
-
-    antes_de_ir: [
-        "1. Vila Velha: Considere visitar. O Convento e a Praia da Costa ficam lá, basta cruzar a ponte.",
-        "2. Vento Sul: Quando venta sul, a temperatura cai e o mar fica agitado.",
-        "3. Panela de Barro: Se for comprar, vá à Associação das Paneleiras em Goiabeiras. É mais barato e autêntico.",
-        "4. Serra Capixaba: Se tiver tempo, visite a Pedra Azul (frio europeu) a apenas 1h30 da capital.",
-        "5. Trânsito na Ponte: Evite a Terceira Ponte nos horários de pico (7h-9h e 17h-19h).",
-        "6. Praias Próprias: Verifique a balneabilidade das praias de Vitória; às vezes Camburi tem trechos impróprios.",
-        "7. Trem da Vale: É de Vitória que sai o trem de passageiros para Minas Gerais (Belo Horizonte).",
-        "8. Roupas: Leves e casuais. O capixaba é bem despojado.",
-        "9. Domingo no Centro: O centro fica deserto aos domingos; prefira as praias ou parques.",
-        "10. Culinária: Não saia sem provar a Moqueca. É uma ofensa local."
-    ],
-
-    numeros: [
-        "1. 190 (Polícia Militar).",
-        "2. (27) 3235-6300 (Aeroporto de Vitória).",
-        "3. 192 (SAMU).",
-        "4. 193 (Bombeiros).",
-        "5. (27) 3322-1836 (Rodoviária de Vitória).",
-        "6. 156 (Fala Vitória - Prefeitura).",
-        "7. (27) 3324-1549 (Delegacia de Turismo).",
-        "8. (27) 3636-1033 (Hospital Estadual de Urgência).",
-        "9. 0800 039 0318 (Disque-Silêncio).",
-        "10. (27) 3235-2900 (Projeto Tamar)."
-    ],
-
-    riscos: [
-        "1. Insolação: O sol é forte mesmo com vento; proteja-se.",
-        "2. Centro à Noite: Ruas vazias e mal iluminadas podem ser perigosas.",
-        "3. Pedras nos Costões: Cuidado ao tirar fotos nas pedras, elas escorregam.",
-        "4. Correnteza: Praias de tombo (como algumas partes da Costa em Vila Velha) são perigosas.",
-        "5. Ciclovia: Respeite a faixa de pedestre na orla; bicicletas passam rápido.",
-        "6. Raios: No verão, tempestades elétricas são comuns no fim da tarde.",
-        "7. Furto de Celular: Atenção na areia da praia em dias muito cheios.",
-        "8. Água Viva: Ocorrências ocasionais no verão.",
-        "9. Trânsito: Motoristas capixabas às vezes correm; atenção ao atravessar.",
-        "10. Golpes de Aluguel: Cuidado com aluguéis de temporada muito baratos na internet."
-    ],
-
-    roteiros: {
-        "curto": {
-            titulo: "Vitória Express (2 Dias)",
-            texto: [
-                "Dia 1: Convento da Penha (manhã) e moqueca na Ilha das Caieiras (almoço). Pôr do sol na Curva da Jurema.",
-                "Dia 2: Praia de Camburi, Galpão das Paneleiras e Triângulo das Bermudas (noite)."
-            ]
-        },
-        "medio": {
-            titulo: "Capixaba da Gema (4 Dias)",
-            texto: [
-                "Dias 1 e 2: Siga o roteiro de 2 dias.",
-                "Dia 3: Centro Histórico (Palácio Anchieta e Catedral) e Parque da Pedra da Cebola.",
-                "Dia 4: Dia de praia na Ilha do Boi ou passeio de escuna pela baía."
-            ]
-        },
-        "longo": {
-            titulo: "Mar e Montanha (7+ Dias)",
-            texto: [
-                "Dias 1 a 4: Siga o roteiro de 4 dias.",
-                "Dia 5: Bate-volta para Guarapari (Praias famosas).",
-                "Dia 6: Subida para a região serrana (Domingos Martins/Pedra Azul).",
-                "Dia 7: Visita ao Museu da Vale e compras na Praia do Canto."
-            ]
-        },
-    },
-
-    links: {
-        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-679230&aid=304142",
-        passeio: "https://www.civitatis.com/br/vitoria/",
-        seguro: "https://www.segurospromo.com.br"
-    }
-},
-{
-    name: "Aracaju",
-    imagem: "https://upload.wikimedia.org/wikipedia/commons/d/db/Avenida_Hermes_Fontes_Aracaju_SE.jpg",
-    tags: ["Praias", "Cultura", "Tranquilidade"],
-    mapa: "https://goo.gl/maps/aracaju",
-    clima: "Tropical Litorâneo. Quente o ano todo, com brisa constante. Chuvas mais frequentes entre abril e julho.",
-    // Adicione dentro do objeto de Aracaju
-veredicto: {
-    melhor_epoca: "Setembro a Março (Sol e Vento). Junho é imperdível para quem ama São João (o 'Forró Caju' é gigante). Evite Abril a Julho (Chuva).",
-    ideal_para: [
-        "Quem busca a orla urbana mais bonita, segura e estruturada do Brasil (Atalaia)",
-        "Amantes de Caranguejo (a Passarela do Caranguejo é um templo gastronômico)",
-        "Famílias com crianças (Mundo Maravilhoso da Criança, Oceanário, Lagos)",
-        "Quem quer fugir do turismo de massa e preços altos das vizinhas famosas"
-    ],
-    nao_ideal_para: [
-        "Quem busca mar azul turquesa (as águas são turvas/marrons devido aos rios, embora limpas)",
-        "Quem procura agito cosmopolita 24h (é uma capital com ritmo acolhedor de interior)",
-        "Surfistas radicais (o mar na maioria da orla urbana é mais calmo/plano)"
-    ],
-    perfis: [
-        { icone: "ri-restaurant-line", nome: "Caranguejo" },
-        { icone: "ri-home-smile-fill", nome: "Família" },
-        { icone: "ri-music-2-fill", nome: "Forró" },
-        { icone: "ri-wallet-3-fill", nome: "Custo/Ben." }
-    ]
-},
-    pontos_turisticos: [
-        "1. Orla de Atalaia: Considerada a orla mais bonita e estruturada do Brasil, com lagos, quadras e a Passarela do Caranguejo.",
-        "2. Croa do Goré: Um banco de areia no meio do rio Vaza-Barris acessível apenas na maré baixa. Um paraíso.",
-        "3. Museu da Gente Sergipana: Um dos museus mais interativos e tecnológicos do país, celebrando a cultura nordestina.",
-        "4. Oceanário de Aracaju: Mantido pelo Projeto Tamar, tem formato de tartaruga gigante e mostra a vida marinha local.",
-        "5. Ilha dos Namorados: Geralmente visitada no mesmo passeio da Croa do Goré, com redes flutuantes.",
-        "6. Mercados Centrais (Thales Ferraz e Antônio Franco): Artesanato, literatura de cordel e castanhas.",
-        "7. Colina de Santo Antônio: O ponto onde a cidade nasceu, com uma igreja histórica e vista panorâmica.",
-        "8. Parque da Sementeira: Grande área verde no meio da cidade, ideal para piqueniques e caminhadas.",
-        "9. Praia de Aruana: Mais tranquila que Atalaia, com barracas de praia excelentes e boa comida.",
-        "10. Ponte do Imperador: Um marco histórico no centro, construído para receber Dom Pedro II."
-    ],
-
-    gastronomia: [
-        "1. Caranguejo: O ícone da cidade. Quebrar caranguejo na Passarela é obrigatório.",
-        "2. Moqueca de Camarão: Diferente da baiana, é mais leve, valorizando o sabor do fruto do mar.",
-        "3. Mangaba: Fruta nativa de Sergipe. O sorvete e o suco de mangaba são divinos.",
-        "4. Aratu: Um crustáceo pequeno e saboroso, geralmente servido na palha de bananeira ou em moquecas.",
-        "5. Caju: A fruta é aproveitada integralmente, desde o suco até doces e castanhas frescas.",
-        "6. Pirão de Leite: Acompanhamento comum para carnes de sol e peixes.",
-        "7. Carne de Sol com Pirão de Aipim: Um clássico do sertão que desceu para o litoral.",
-        "8. Amendoim Cozido: Vendido em toda esquina e nas praias, é o petisco oficial.",
-        "9. Beiju (Tapioca): Feito com coco fresco, queijo coalho e manteiga de garrafa.",
-        "10. Suco de Umbu: Fruta azedinha típica da caatinga, muito refrescante."
-    ],
-
-    religiao: [
-        "1. Igreja de Santo Antônio: No alto da colina, marco zero da cidade.",
-        "2. Catedral Metropolitana: Localizada no centro, com arquitetura imponente.",
-        "3. Festa de São João: Sergipe se intitula o 'País do Forró'. A festa religiosa e cultural é massiva em junho.",
-        "4. Lavagem das Escadarias: Sincretismo religioso forte nas festas de Nosso Senhor do Bonfim.",
-        "5. Procissão de Bom Jesus dos Navegantes: Tradicional cortejo fluvial no estuário do Rio Sergipe.",
-        "6. Religiões de Matriz Africana: O Candomblé e a Umbanda têm forte presença e respeito na cultura local.",
-        "7. Igreja de São Judas Tadeu: Conhecida como a igreja dos estudantes e causas impossíveis.",
-        "8. Santuário Nossa Senhora Aparecida: No bairro Bugio, atrai multidões em outubro.",
-        "9. Peregrinação a Divina Pastora: Embora fora da capital (40km), mobiliza muitos aracajuanos.",
-        "10. Tolerância: A cidade é conhecida pelo convívio pacífico entre diversas crenças."
-    ],
-
-    curiosidades: [
-        "1. Cidade Planejada: Aracaju foi uma das primeiras cidades planejadas do Brasil (tabuleiro de xadrez).",
-        "2. Nome Tupi: Significa 'Cajueiro dos Papagaios' (Ará = Papagaio, Caju = Cajueiro).",
-        "3. Orla Perfeita: A Orla de Atalaia tem 6km de extensão e infraestrutura impecável.",
-        "4. Qualidade de Vida: Famosa pelos hábitos saudáveis da população e ciclovias planas.",
-        "5. Projeto Tamar: O primeiro oceanário do Nordeste fica aqui.",
-        "6. Limpeza: Frequentemente elogiada como uma das capitais mais limpas do Nordeste.",
-        "7. Cajus Gigantes: Existem réplicas gigantes de cajus espalhadas pela cidade para fotos.",
-        "8. Rio e Mar: A cidade é cortada por rios (Sergipe, Vaza-Barris) e pelo mar.",
-        "9. Forró Caju: Um dos maiores eventos juninos do Brasil, com shows gratuitos gigantescos.",
-        "10. Preços: É considerada uma das capitais mais baratas para o turista no Brasil."
-    ],
-
-    eventos_estacoes: [
-        "1. Forró Caju (Junho): O auge da cidade. A praça de eventos dos mercados fica lotada.",
-        "2. Pré-Caju (Novembro): Uma das maiores prévias carnavalescas do país.",
-        "3. Verão (Dez-Mar): Sol forte, mar morno e barracas de praia movimentadas.",
-        "4. Vila do Natal Iluminado: O centro e os parques ganham decorações de luzes premiadas nacionalmente.",
-        "5. Festival do Caranguejo: Evento gastronômico que celebra o prato típico.",
-        "6. Aniversário da Cidade (17 de Março): Shows e eventos cívicos.",
-        "7. Inverno (Maio-Julho): É a estação chuvosa, mas o forró esquenta a cidade.",
-        "8. Motociclismo: Encontros de motociclistas são comuns na orla.",
-        "9. Réveillon: Queima de fogos tranquila e familiar na Orla de Atalaia.",
-        "10. Festas de Padroeiros: Ocorrem em vários bairros ao longo do ano."
-    ],
-
-    info_gerais: [
-        "1. Moeda: Real (BRL).",
-        "2. Voltagem: 127v (maioria), mas hotéis podem ter 220v. Cheque sempre.",
-        "3. Tomada: Tipo N (3 pinos).",
-        "4. DDD: 79.",
-        "5. População: Aprox. 670 mil habitantes.",
-        "6. Gentílico: Aracajuano.",
-        "7. Aeroporto: Santa Maria (AJU) - Pequeno e muito próximo da zona hoteleira.",
-        "8. Transporte: Uber e táxi são baratos devido às curtas distâncias.",
-        "9. Água: Consuma água mineral.",
-        "10. Segurança: A zona turística (Atalaia) é bem policiada e segura."
-    ],
-
-    antes_de_ir: [
-        "1. Tábua de Marés: Essencial para visitar a Croa do Goré. Vá na maré baixa.",
-        "2. Vento: Venta muito em Aracaju, o que ameniza o calor, mas cuidado com o guarda-sol voando.",
-        "3. Segunda-feira: Museus (incluindo o da Gente Sergipana) fecham às segundas.",
-        "4. Aluguel de Carro: Não é estritamente necessário se ficar na Orla, Uber atende bem.",
-        "5. Cânion do Xingó: Fica no sertão (3h a 4h de viagem). Reserve um dia inteiro ou pernoite lá (Canindé de São Francisco).",
-        "6. Caranguejo: Comer caranguejo é um ritual lento (toc-toc). Não vá com pressa.",
-        "7. Protetor Solar: O sol de Sergipe é intenso.",
-        "8. Hospedagem: Ficar na Orla de Atalaia é a melhor opção para turismo.",
-        "9. Trânsito: Muito tranquilo comparado a outras capitais.",
-        "10. Hospitalidade: O sergipano é muito acolhedor e gosta de conversar."
-    ],
-
-    numeros: [
-        "1. 190 (Polícia Militar).",
-        "2. (79) 3212-8500 (Aeroporto).",
-        "3. 192 (SAMU).",
-        "4. 193 (Bombeiros).",
-        "5. (79) 3259-2848 (Rodoviária Nova).",
-        "6. (79) 3214-5487 (Delegacia do Turista).",
-        "7. 118 (SMTT - Trânsito).",
-        "8. (79) 3216-2600 (Hospital de Urgência de Sergipe - HUSE).",
-        "9. (79) 3179-1915 (Museu da Gente Sergipana).",
-        "10. (79) 3226-8300 (Centro de Turismo)."
-    ],
-
-    riscos: [
-        "1. Mar Agitado: Algumas partes da praia de Atalaia têm ondas fortes; prefira Aruana para banho.",
-        "2. Águas Vivas: Ocorrem sazonalmente (verão); observe as bandeiras roxas se houver.",
-        "3. Sol: Queimaduras solares são o problema nº 1 dos turistas.",
-        "4. Centro à Noite: Evite circular a pé no centro comercial após o fechamento das lojas.",
-        "5. Rodovias para o Sertão: Se for dirigir até Xingó, atenção aos animais na pista.",
-        "6. Golpes de Passeio: Contrate catamarãs para Croa do Goré em locais oficiais (Orla Pôr do Sol).",
-        "7. Hidratação: O vento mascara a desidratação; beba água.",
-        "8. Ouriços: Cuidado ao caminhar em áreas de pedras na maré baixa.",
-        "9. Cuidado com Crianças: A Orla é enorme, mantenha as crianças por perto.",
-        "10. Preços na Areia: Pergunte o preço antes de consumir, embora abusos sejam raros."
-    ],
-
-    roteiros: {
-        "curto": {
-            titulo: "Aracaju Express (2 Dias)",
-            texto: [
-                "Dia 1: Orla de Atalaia, Oceanário e Passarela do Caranguejo à noite.",
-                "Dia 2: Manhã na Croa do Goré (Catamarã) e tarde no Museu da Gente Sergipana."
-            ]
-        },
-        "medio": {
-            titulo: "Belezas Sergipanas (4 Dias)",
-            texto: [
-                "Dias 1 e 2: Siga o roteiro de 2 dias.",
-                "Dia 3: Praia de Aruana (barracas de praia) e Pôr do Sol na Orla do Mosqueiro.",
-                "Dia 4: Mercados Centrais, Colina de Santo Antônio e compras de artesanato."
-            ]
-        },
-        "longo": {
-            titulo: "Sergipe Completo (7+ Dias)",
-            texto: [
-                "Dias 1 a 4: Siga o roteiro de 4 dias.",
-                "Dia 5: Bate-volta para a cidade histórica de São Cristóvão (4ª mais antiga do Brasil).",
-                "Dia 6: Bate-volta (longo) para os Cânions do Xingó no Rio São Francisco.",
-                "Dia 7: Praia do Saco (Litoral Sul) e Lagoa dos Tambaquis."
-            ]
-        },
-    },
-
-    links: {
-        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-625487&aid=304142",
-        passeio: "https://www.civitatis.com/br/aracaju/",
-        seguro: "https://www.segurospromo.com.br"
-    }
-},
-{
-    name: "Cabo Frio",
-    imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Cabo_Frio_-_vista_a%C3%A9rea.jpg/960px-Cabo_Frio_-_vista_a%C3%A9rea.jpg",
-    tags: ["Praia", "Família", "Mergulho"],
-    mapa: "https://goo.gl/maps/cabofrio",
-    clima: "Tropical Litorâneo. Vento constante e sol forte. Água gelada.",
-
-    // === DADOS DO VEREDICTO ===
-    veredicto: {
-        melhor_epoca: "Março a Maio (Outono) ou Setembro a Novembro (Primavera). Evite Janeiro e Carnaval (Cidade lotada e trânsito parado).",
-        ideal_para: [
-            "Famílias com crianças (Praia do Forte tem boa estrutura)",
-            "Mergulhadores (devido à visibilidade da água)",
-            "Compradores de Moda Praia (preços de fábrica)",
-            "Quem busca praias de areia branca e fina como talco"
-        ],
-        nao_ideal_para: [
-            "Quem odeia água gelada (fenômeno da ressurgência)",
-            "Quem não gosta de vento (venta muito o ano todo)",
-            "Quem busca sossego absoluto na alta temporada"
-        ],
-        perfis: [
-            { icone: "ri-group-fill", nome: "Família" },
-            { icone: "ri-drop-fill", nome: "Mergulho" },
-            { icone: "ri-t-shirt-air-fill", nome: "Compras" },
-            { icone: "ri-sun-fill", nome: "Praia" }
-        ]
-    },
-    // =================================
-
-    pontos_turisticos: [
-        "1. Praia do Forte: O cartão postal. Areia branca, águas cristalinas e calçadão movimentado.",
-        "2. Forte São Mateus: Construção histórica do séc. XVII na ponta da praia, com vista incrível.",
-        "3. Ilha do Japonês: Um santuário de águas rasas e calmas dentro da lagoa. Acesso de barco ou a pé (maré baixa).",
-        "4. Bairro da Passagem: O centro histórico, com ruas de paralelepípedo, casarões coloniais e ótimos restaurantes.",
-        "5. Rua dos Biquínis: O maior shopping a céu aberto de moda praia da América Latina.",
-        "6. Praia das Conchas: Praia em formato de concha, ótima para famílias e com quiosques rústicos.",
-        "7. Praia do Peró: Vizinha das Conchas, extensa, limpa e com selo Bandeira Azul de qualidade.",
-        "8. Morro da Guia: Mirante com uma capela no topo e vista 360º da cidade e da lagoa.",
-        "9. Praia das Dunas: Continuação da Praia do Forte, mas com ondas mais fortes e cercada por dunas brancas.",
-        "10. Canal do Itajuru: Onde ficam os barcos turísticos e um calçadão agradável para caminhar."
-    ],
-
-    gastronomia: [
-        "1. Peixe com Banana: Prato típico da região caiçara, servido em quase todos os quiosques.",
-        "2. Camarão na Moranga: Clássico dos restaurantes mais sofisticados do Bairro da Passagem.",
-        "3. Bolinho de Bacalhau: Petisco obrigatório no Boulevard Canal.",
-        "4. Açaí: Muito consumido nas praias e lanchonetes após o sol.",
-        "5. Pastel de Camarão: Gigante e bem recheado, encontrado na orla da Praia do Forte.",
-        "6. Lula à Dorê: Aperitivo perfeito para acompanhar uma cerveja gelada à beira-mar.",
-        "7. Restaurantes da Passagem: Gastronomia internacional (italiana, portuguesa) em ambiente charmoso.",
-        "8. Picolé de Frutas: Vendedores ambulantes na areia são tradição.",
-        "9. Moqueca Capixaba: Devido à proximidade com ES, muitos lugares servem a versão sem dendê.",
-        "10. Frutos do Mar Frescos: Compre direto no Mercado de Peixe para fazer em casa se estiver em aluguel."
-    ],
-
-    religiao: [
-        "1. Igreja de São Benedito: No Bairro da Passagem, construída em 1761 para os escravos.",
-        "2. Matriz de Nossa Senhora da Assunção: A igreja principal no centro, de 1666, estilo jesuítico.",
-        "3. Convento de Nossa Senhora dos Anjos: Um marco da arquitetura franciscana, hoje museu de arte sacra.",
-        "4. Capela do Morro da Guia: Pequena capela dedicada a N.S. da Guia no ponto mais alto da cidade.",
-        "5. Festas de Padroeira: Agosto é o mês de Nossa Senhora da Assunção, com procissões e quermesses.",
-        "6. Diversidade: Forte presença de igrejas evangélicas e centros espíritas na região urbana.",
-        "7. Iemanjá: No Ano Novo, oferendas são entregues na Praia do Forte.",
-        "8. Capela de São Mateus: Dentro do Forte, uma das mais antigas do Brasil.",
-        "9. Procissão Marítima: Evento tradicional onde barcos enfeitados percorrem o Canal do Itajuru.",
-        "10. Turismo Religioso: A cidade faz parte de rotas de peregrinação histórica da Região dos Lagos."
-    ],
-
-    curiosidades: [
-        "1. Ressurgência: Fenômeno que traz águas profundas do oceano para a superfície, tornando o mar rico em nutrientes e muito gelado.",
-        "2. Areia Fria: A areia de Cabo Frio não esquenta muito, mesmo sob sol forte, devido à composição de corais.",
-        "3. 7ª Cidade Mais Antiga: Fundada em 1615, tem muita história colonial.",
-        "4. Pau-Brasil: A região foi alvo de contrabandistas franceses no início da colonização pela madeira.",
-        "5. Capital da Moda Praia: Produz milhões de peças por ano distribuídas para todo o Brasil.",
-        "6. Salinas: Já foi um dos maiores produtores de sal do país (ainda existem as Salinas Perinas).",
-        "7. Ventos Alísios: A cidade é uma das melhores do mundo para a prática de Iatismo e Kitesurf.",
-        "8. Bandeira Azul: A Praia do Peró possui certificação internacional de qualidade ambiental.",
-        "9. Ponte Feliciano Sodré: Inaugurada em 1926, liga o centro à Gamboa.",
-        "10. Vizinha Famosa: Fica a apenas 25 min de Arraial do Cabo e 40 min de Búzios."
-    ],
-
-    eventos_estacoes: [
-        "1. Verão (Dez-Mar): Cidade lotada, trânsito intenso, sol forte e águas geladas refrescantes.",
-        "2. Réveillon: A segunda maior queima de fogos do estado (Praia do Forte), só perde para Copacabana.",
-        "3. Cabo Frio Folia: Carnaval fora de época (micareta) que costuma ocorrer na cidade.",
-        "4. Carnaval: Blocos de rua arrastam multidões e a orla fica intransitável de carro.",
-        "5. Inverno (Jun-Set): Melhor época para quem gosta de sossego e preços baixos. Água continua fria.",
-        "6. Festival Sabores de Cabo Frio: Evento gastronômico anual (geralmente Setembro) com pratos exclusivos.",
-        "7. Semana Santa: Movimento intenso, mas mais familiar que o Carnaval.",
-        "8. Festival de Surf: Competições nas Dunas e Praia do Forte devido às ondas.",
-        "9. Corpus Christi: Tapetes de sal coloridos são confeccionados nas ruas principais.",
-        "10. Primavera: Ventos fortes, ideal para campeonatos de vela e kitesurf."
-    ],
-
-    info_gerais: [
-        "1. Moeda: Real Brasileiro (BRL).",
-        "2. Voltagem: 110V é o padrão, mas verifique sempre (alguns hotéis têm 220V).",
-        "3. Tomada: Tipo N (3 pinos).",
-        "4. DDD: 22.",
-        "5. Distância do Rio: Aprox. 150km (2h30 sem trânsito).",
-        "6. Aeroporto: Cabo Frio (CFB) recebe voos diretos de BH e conexões, mas a maioria usa o do Rio.",
-        "7. Uber/Táxi: Funcionam bem, mas no verão o Uber pode demorar e ficar caro (dinâmico).",
-        "8. Água: Imprópria para beber da torneira. Use mineral.",
-        "9. Estradas: Acesso pela Via Lagos (pedágio caro, mas estrada boa).",
-        "10. Saúde: Hospital Central de Emergência e UPA no Parque Burle."
-    ],
-
-    antes_de_ir: [
-        "1. Água Gelada: Esteja preparado. A água pode chegar a 12ºC em dias de ressurgência forte.",
-        "2. Vento: Leve um casaco corta-vento mesmo no verão para a noite, pois a brisa é constante.",
-        "3. Sol Engana: O vento disfarça o calor, mas o sol queima muito. Use protetor solar sempre.",
-        "4. Trânsito na Chegada: Sextas-feiras e vésperas de feriado a entrada da cidade engarrafa.",
-        "5. Roupas: Estilo praiano total. Chinelo e bermuda em qualquer lugar.",
-        "6. Dinheiro: A maioria aceita cartão/PIX, mas leve dinheiro para vendedores de praia e passeios de barco.",
-        "7. Hospedagem: Se não tiver carro, fique no Centro ou perto da Praia do Forte para fazer tudo a pé.",
-        "8. Segurança: Evite andar com correntes e celulares caros à mostra no calçadão à noite em dias vazios.",
-        "9. Reserva: Restaurantes na Passagem lotam cedo no jantar em alta temporada.",
-        "10. Arraial do Cabo: Se for visitar a vizinha, saia muito cedo (7h da manhã) para conseguir estacionar."
-    ],
-
-    numeros: [
-        "1. 190 (Polícia Militar): Emergências e segurança.",
-        "2. 193 (Bombeiros): Resgate e afogamentos.",
-        "3. 199 (Defesa Civil): Em caso de tempestades fortes.",
-        "4. (22) 2645-5666 (Hospital Central): Emergências médicas.",
-        "5. 192 (SAMU): Ambulância.",
-        "6. (22) 2647-2121 (Rodoviária): Informações sobre ônibus.",
-        "7. 153 (Guarda Municipal): Trânsito e ordem urbana.",
-        "8. (22) 2643-0145 (Aeroporto): Informações de voos.",
-        "9. (22) 2647-6228 (Turismo): Centro de informações turísticas.",
-        "10. 191 (Polícia Rodoviária): Para quem vem pela estrada."
-    ],
-
-    riscos: [
-        "1. Correnteza: Respeite as bandeiras vermelhas. O mar na Praia do Forte tem cavas perigosas.",
-        "2. Insolação: O vento fresco faz você esquecer de repassar o protetor.",
-        "3. Furto na Areia: Em dias lotados, não deixe bolsas sozinhas na areia ao entrar na água.",
-        "4. Trânsito: Atravessar a ponte para a Gamboa/Rua dos Biquínis pode levar horas no verão.",
-        "5. Ouriços: Cuidado ao pisar nas pedras perto do Forte e na Ilha do Japonês.",
-        "6. Preços de Temporada: Alguns quiosques cobram valores abusivos no verão. Pergunte antes.",
-        "7. Golpes de Aluguel: Cuidado com casas de temporada falsas na internet. Verifique reviews.",
-        "8. Vendedores Insistentes: Na praia, a abordagem é constante. Diga 'não, obrigado' com firmeza.",
-        "9. Água Viva: Ocorrem ocasionalmente. Se for queimado, use vinagre (postos de salva-vidas costumam ter).",
-        "10. Bebida e Mar: A combinação não dá certo, o mar de Cabo Frio exige atenção física."
-    ],
-
-    roteiros: {
-        "curto": {
-            titulo: "Fim de Semana (2 Dias)",
-            texto: [
-                "Dia 1: Manhã na Praia do Forte + Visita ao Forte São Mateus. Almoço na orla. Tarde de compras na Rua dos Biquínis.",
-                "Dia 1 (Noite): Jantar e música ao vivo no Bairro da Passagem.",
-                "Dia 2: Manhã na Ilha do Japonês (vá cedo na maré baixa). Tarde na Praia das Conchas."
-            ]
-        },
-        "medio": {
-            titulo: "Férias Curtas (4 Dias)",
-            texto: [
-                "Dias 1 e 2: Siga o roteiro curto acima.",
-                "Dia 3: Passeio de barco pelo Canal, passando pela Ilha do Farol e Gruta Azul (muitos saem de Arraial, mas há saídas de Cabo Frio também).",
-                "Dia 4: Dia relaxante na Praia do Peró (menos cheia). Final de tarde vendo o pôr do sol no Morro da Guia."
-            ]
-        },
-        "longo": {
-            titulo: "Imersão Região dos Lagos (7 Dias)",
-            texto: [
-                "Dias 1 a 4: Siga o roteiro médio acima.",
-                "Dia 5: Bate-volta em Arraial do Cabo (Pontal do Atalaia e Praia do Forno).",
-                "Dia 6: Bate-volta em Búzios (Rua das Pedras e Praia da Ferradura).",
-                "Dia 7: Despedida com caminhada nas Dunas e almoço de frutos do mar no Mercado de Peixe."
-            ]
-        },
-    },
-
-    links: {
-        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-632942", 
-        passeio: "https://www.civitatis.com/br/cabo-frio/", 
-        seguro: "https://www.segurospromo.com.br" 
-    },
-},
-{
-    name: "Bonito",
-    imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Abismo_Anhumas%2C_Bonito%2C_MS.JPG/960px-Abismo_Anhumas%2C_Bonito%2C_MS.JPG",
-    tags: ["Ecoturismo", "Flutuação", "Aventura"],
-    mapa: "https://goo.gl/maps/bonito",
-    clima: "Tropical. Verão chuvoso (cachoeiras cheias) e Inverno seco (águas cristalinas).",
-
-    // === DADOS DO VEREDICTO ===
-    veredicto: {
-        melhor_epoca: "Maio a Agosto (Inverno/Seca). É quando as águas estão mais cristalinas e os peixes mais visíveis. Dezembro a Março chove e a água pode turvar, mas as cachoeiras estão cheias.",
-        ideal_para: [
-            "Amantes de Ecoturismo (é o melhor destino organizado do Brasil)",
-            "Famílias com crianças (as flutuações são calmas e seguras)",
-            "Mergulhadores (Abismo Anhumas e Lagoa Misteriosa são lendários)",
-            "Quem busca conexão profunda com a natureza e animais"
-        ],
-        nao_ideal_para: [
-            "Quem viaja sem planejamento (é OBRIGATÓRIO reservar passeios com antecedência pelo sistema de Voucher Único)",
-            "Orçamentos muito apertados (os passeios são tabelados e caros)",
-            "Quem busca vida noturna agitada (a cidade dorme cedo para acordar cedo)"
-        ],
-        perfis: [
-            { icone: "ri-drop-fill", nome: "Flutuação" },
-            { icone: "ri-plant-fill", nome: "Natureza" },
-            { icone: "ri-bear-smile-fill", nome: "Animais" },
-            { icone: "ri-flashlight-fill", nome: "Cavernas" }
-        ]
-    },
-    // =================================
-
-    pontos_turisticos: [
-        "1. Gruta do Lago Azul: O cartão-postal. Uma caverna imensa com um lago azul profundo surreal.",
-        "2. Rio da Prata: Uma das melhores flutuações. Parece que você está dentro de um aquário gigante.",
-        "3. Rio Sucuri: Considerado uma das águas mais cristalinas do planeta. Flutuação leve e relaxante.",
-        "4. Buraco das Araras: Uma dolina gigantesca onde dezenas de araras vermelhas vivem e voam. Espetáculo visual.",
-        "5. Abismo Anhumas: Aventura radical. Rapel de 72m para entrar numa caverna com lago subterrâneo.",
-        "6. Boca da Onça: A cachoeira mais alta do estado (156m) e trilhas incríveis.",
-        "7. Balneário Municipal: O 'piscinão' natural da cidade. Cheio de peixes e entrada mais acessível.",
-        "8. Lagoa Misteriosa: Uma caverna inundada de profundidade desconhecida. Água azul turquesa impressionante.",
-        "9. Estância Mimosa: Trilha de cachoeiras com almoço de fazenda típico.",
-        "10. Projeto Jiboia: Palestra educativa e interativa para perder o medo e tirar foto com as cobras."
-    ],
-
-    gastronomia: [
-        "1. Carne de Jacaré: O prato exótico mais famoso. Tem gosto de frango com textura de peixe.",
-        "2. Pacu Assado: Peixe local delicioso, geralmente servido com farofa de banana.",
-        "3. Pintado a Urucum: Filé de peixe com molho de urucum, tomate e creme de leite.",
-        "4. Caldo de Piranha: Dizem ser afrodisíaco e dá muita energia.",
-        "5. Guavira: Fruta símbolo do MS. Prove em sucos, sorvetes ou na caipirinha.",
-        "6. Tereré: A bebida oficial. Mate gelado servido na guampa (chifre).",
-        "7. Chico Balanceado: Doce de banana caramelizada com creme e merengue.",
-        "8. Palmito de Guariroba: Um palmito mais amargo, típico do cerrado.",
-        "9. Arroz Carreteiro: Herança das comitivas pantaneiras.",
-        "10. Pastel de Jacaré: Ótimo petisco para provar a carne sem gastar muito num prato principal."
-    ],
-
-    religiao: [
-        "1. Capela da Sagrada Família: Pequena e charmosa, no centro da cidade.",
-        "2. Natureza Sagrada: A espiritualidade em Bonito é muito ligada à preservação e conexão com a Terra.",
-        "3. Gruta de São Miguel: Embora turística, tem uma energia mística forte nas formações geológicas.",
-        "4. Festa de São Pedro: Padroeiro da cidade (29 de Junho), com a tradicional Cavalgada.",
-        "5. Sincretismo: Presença de tradições indígenas misturadas com o cristianismo rural.",
-        "6. Igrejas Evangélicas: Diversas denominações presentes no centro urbano.",
-        "7. Rituais de Benção: Algumas fazendas antigas ainda mantêm rituais de benção das águas.",
-        "8. Turismo Contemplativo: Muitos visitantes relatam experiências espirituais ao flutuar nos rios silenciosos.",
-        "9. Lendas Locais: Histórias sobre os guardiões das cavernas e rios (folclore).",
-        "10. Cruz do Peão: Monumentos simples em estradas rurais lembrando a fé do homem do campo."
-    ],
-
-    curiosidades: [
-        "1. Voucher Único: O sistema pioneiro no mundo que controla o número de visitantes. Você não entra em nada sem agência.",
-        "2. Calcário: O solo rico em calcário age como um filtro natural, deixando a água transparente.",
-        "3. Proibido Protetor: Em passeios como Rio da Prata e Sucuri, é proibido usar filtro solar e repelente para não contaminar a água.",
-        "4. Capital do Ecoturismo: Já foi eleito inúmeras vezes o melhor destino de ecoturismo do Brasil.",
-        "5. Sem Cloro: As piscinas dos hotéis muitas vezes usam água natural, sem produtos químicos.",
-        "6. Cobras: Sim, existem sucuris nos rios. Elas são tímidas e raramente atacam humanos (respeite a distância).",
-        "7. Gruta Fechada: O Lago Azul já foi aberto para mergulho, hoje é só contemplação para preservação.",
-        "8. Fuso Horário: MS tem 1 hora a menos que Brasília (fique atento!).",
-        "9. Pantanal Vizinho: Muita gente combina Bonito com Pantanal (ficam próximos).",
-        "10. Água da Torneira: É muito calcária (pesada). Evite beber muito se não estiver acostumado."
-    ],
-
-    eventos_estacoes: [
-        "1. Festival de Inverno (Julho): O maior evento cultural, com shows nacionais, teatro e arte na praça.",
-        "2. Verão (Dez-Mar): Chuvas frequentes. Cachoeiras caudalosas, mas rios podem turvar.",
-        "3. Inverno (Mai-Ago): Seca. Melhor visibilidade subaquática e noites frias.",
-        "4. Piracema (Out-Fev): Época de reprodução dos peixes. A pesca é proibida, mas vê-los nos rios é incrível.",
-        "5. Semana Santa: Cidade lotada, preços sobem.",
-        "6. Primavera: Início da floração dos Ipês (amarelos, brancos e roxos).",
-        "7. Festa de São Pedro: Desfiles a cavalo e quermesses em Junho.",
-        "8. Bonito Blues & Jazz: Festival de música que ocorre esporadicamente.",
-        "9. Lobo Guará Bike Adventure: Evento de ciclismo de aventura.",
-        "10. Observação de Aves: Setembro é ótimo para birdwatching."
-    ],
-
-    info_gerais: [
-        "1. Moeda: Real Brasileiro (BRL).",
-        "2. Voltagem: 110V/127V na maioria, mas alguns hotéis usam 220V. Leve adaptador universal.",
-        "3. Tomada: Tipo N (3 pinos).",
-        "4. DDD: 67.",
-        "5. Fuso Horário: -1 hora em relação a Brasília (GMT-4).",
-        "6. Aeroporto: Aeroporto Regional de Bonito (BYO) - voos limitados. Ou Campo Grande (CGR) + 4h de van.",
-        "7. Transporte Local: Não tem Uber (tem apps locais instáveis). Melhor alugar carro ou usar vans compartilhadas.",
-        "8. Internet: 4G funciona bem no centro, mas cai nas fazendas e passeios.",
-        "9. Bancos: Tem Banco do Brasil, Bradesco, Caixa e Sicredi no centro.",
-        "10. Voucher: É lei municipal. Preços são tabelados, não adianta pechinchar na agência."
-    ],
-
-    antes_de_ir: [
-        "1. Reserve Antes: Se não reservar os passeios com semanas de antecedência, você vai ficar sem ir. É sério.",
-        "2. Aeroporto: Decida se vai pagar mais caro pra descer em Bonito ou economizar descendo em Campo Grande (+4h de estrada).",
-        "3. Câmera Subaquática: Leve GoPro ou compre capinha estanque para o celular. As fotos na água são essenciais.",
-        "4. Tênis Obrigatório: Para a Gruta do Lago Azul e trilhas, é proibido ir de chinelo.",
-        "5. Dinheiro Vivo: Leve um pouco. Algumas fazendas afastadas podem ter problema com máquina de cartão.",
-        "6. Não use Protetor: Nas flutuações é proibido. Use camisa UV de manga longa.",
-        "7. Carro Alugado: Dá muito mais liberdade, pois os passeios ficam distantes uns dos outros.",
-        "8. Frio na Água: A água é gelada (20ºC-22ºC) o ano todo. As roupas de neoprene (inclusas) ajudam, mas se prepare.",
-        "9. Vacina: Febre Amarela é recomendada para áreas rurais do Brasil.",
-        "10. Tempo de Deslocamento: Os passeios demoram. Geralmente só dá pra fazer 1 ou 2 por dia."
-    ],
-
-    numeros: [
-        "1. 190 (Polícia Militar).",
-        "2. 193 (Bombeiros).",
-        "3. (67) 3255-1115 (Hospital Darci João Bigaton).",
-        "4. (67) 3255-1850 (Secretaria de Turismo).",
-        "5. 192 (SAMU).",
-        "6. (67) 3255-3000 (Aeroporto de Bonito).",
-        "7. 153 (Guarda Municipal).",
-        "8. (67) 3255-1351 (Delegacia de Polícia Civil).",
-        "9. 0800 647 0911 (Ouvidoria Turismo).",
-        "10. 191 (Polícia Rodoviária Federal)."
-    ],
-
-    riscos: [
-        "1. Preço Alto: Se não planejar, a conta final assusta. É um dos destinos mais caros do Brasil.",
-        "2. Mosquitos: Borrachudos e pernilongos são vorazes nas fazendas. Repelente (onde permitido) é lei.",
-        "3. Chuva x Visibilidade: Se chover muito na noite anterior, alguns passeios de flutuação são cancelados ou a água fica turva.",
-        "4. Animais Silvestres: Não alimente quatis ou macacos. Eles podem morder e transmitir doenças.",
-        "5. Escadaria da Gruta: A descida da Gruta do Lago Azul é íngreme e escorregadia. Não recomendada para idosos com dificuldade.",
-        "6. Hipotermia Leve: Crianças muito magras podem sentir muito frio na água, mesmo com neoprene.",
-        "7. Estradas de Terra: Se alugar carro 1.0, cuidado. Quando chove, o barro é liso.",
-        "8. Desidratação: O calor de MS é seco e intenso. Beba muita água.",
-        "9. Venda de Vagas: Cuidado com gente vendendo 'vaga' na rua. Só agências credenciadas emitem voucher.",
-        "10. Fuso Horário: Perder o horário do passeio porque esqueceu de atrasar o relógio em 1 hora."
-    ],
-
-    roteiros: {
-        "curto": {
-            titulo: "Essencial (3 Dias)",
-            texto: [
-                "Dia 1: Gruta do Lago Azul (manhã) + Balneário Municipal (tarde para relaxar). Noite no centro.",
-                "Dia 2: Flutuação no Rio Sucuri ou Prata (toma o dia quase todo com almoço).",
-                "Dia 3: Bote no Rio Formoso (aventura leve) e compras de lembrancinhas antes de partir."
-            ]
-        },
-        "medio": {
-            titulo: "Aventura Completa (5 Dias)",
-            texto: [
-                "Dias 1 a 3: Siga o roteiro essencial.",
-                "Dia 4: Buraco das Araras (cedinho ou fim de tarde) + Flutuação na Lagoa Misteriosa (se estiver aberta).",
-                "Dia 5: Cachoeiras da Boca da Onça ou Estância Mimosa (dia de trilha e banho)."
-            ]
-        },
-        "longo": {
-            titulo: "Imersão Total (7 Dias)",
-            texto: [
-                "Dias 1 a 5: Siga o roteiro médio.",
-                "Dia 6: Abismo Anhumas (para corajosos) ou Ceita Corê (fazenda com cachoeiras).",
-                "Dia 7: Projeto Jiboia (noite anterior) e manhã livre para curtir a praça e gastronomia local com calma."
-            ]
-        },
-    },
-
-    links: {
-        hotel: "https://www.booking.com/searchresults.pt-br.html?city=-630656", 
-        passeio: "https://www.civitatis.com/br/bonito/", 
-        seguro: "https://www.segurospromo.com.br" 
-    },
-},
-// --- CALDAS NOVAS (BRASIL) ---
-            {
-                name: "Caldas Novas",
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Piscinas_de_ondas.jpg",
-                tags: ["Águas Termais", "Parques Aquáticos", "Família"],
-                mapa: "https://goo.gl/maps/caldasnovas",
-                clima: "Tropical Semiúmido. Quente o ano todo, mas no inverno as noites são frescas (ideal para banho quente).",
-                
-                // === DADOS DO VEREDICTO ===
-                veredicto: {
-                    melhor_epoca: "Maio a Julho (Inverno). A água quente fica deliciosa com o ventinho frio fora. Janeiro e Julho são lotados (férias escolares).",
-                    ideal_para: [
-                        "Famílias com crianças (o paraíso dos toboáguas)",
-                        "Idosos (as águas têm propriedades terapêuticas relaxantes)",
-                        "Quem quer relaxar na piscina o dia todo (vida de resort)",
-                        "Grupos grandes (é muito comum alugar flats para famílias inteiras)"
-                    ],
-                    nao_ideal_para: [
-                        "Quem odeia calor excessivo (no verão a água quente + sol forte pode baixar a pressão)",
-                        "Quem busca vida noturna agitada (o foco aqui é o dia)",
-                        "Quem prefere praias desertas e silêncio (os parques têm som alto e agito)"
-                    ],
-                    perfis: [
-                        { icone: "ri-drop-fill", nome: "Águas Quentes" },
-                        { icone: "ri-group-fill", nome: "Família" },
-                        { icone: "ri-sun-fill", nome: "Verão" },
-                        { icone: "ri-hotel-bed-fill", nome: "Resorts" }
-                    ]
-                },
-                // =================================
-
-                pontos_turisticos: [
-                    "1. Hot Park (Rio Quente): Fica na cidade vizinha (20min), é o maior e melhor parque, com a 'Praia do Cerrado'.",
-                    "2. Water Park: Parque aquático bem no centro da cidade, ótimo para quem não quer pegar estrada.",
-                    "3. DiRoma Acqua Park: Outro gigante, famoso pelos toboáguas radicais e piscina de ondas.",
-                    "4. Jardim Japonês: Um lugar de paz e história, com construções típicas e natureza preservada.",
-                    "5. Parque Estadual da Serra de Caldas: Trilhas e cachoeiras de água FRIA para refrescar e ver a natureza do cerrado.",
-                    "6. Lagoa Quente de Pirapitinga: Onde as águas nascem com temperaturas de até 50ºC (cozinha-se ovo lá!).",
-                    "7. Monumento das Águas: Cartão-postal na entrada da cidade, rende ótimas fotos.",
-                    "8. Feira do Luar: Tradicional feira noturna com comidas típicas e artesanato.",
-                    "9. Náutico Praia Clube: Fica na beira do Lago Corumbá, oferece passeios de escuna e jet-ski.",
-                    "10. Cachaçaria Vale das Águas: Para conhecer a produção local de cachaça de alambique."
-                ],
-
-                gastronomia: [
-                    "1. Empadão Goiano: A estrela local. Massa podre recheada com tudo (frango, linguiça, guariroba, pequi).",
-                    "2. Pamonha: Salgada (de sal) ou Doce. Em Goiás é sagrada.",
-                    "3. Pequi: O fruto do cerrado. Ame ou odeie, mas tem que provar (cuidado com os espinhos!).",
-                    "4. Peixe na Telha: Filé de peixe com molho, servido borbulhando.",
-                    "5. Galinhada: Arroz com frango caipira, açafrão (cúrcuma) e temperos.",
-                    "6. Sorvete ao Forno: Sobremesa curiosa servida em alguns restaurantes tradicionais.",
-                    "7. Doces em Compota: Figo, mamão, laranja. Vendidos em potes nas feiras.",
-                    "8. Guariroba: Um palmito amargo típico da região, usado em recheios.",
-                    "9. Espetinho com Mandioca: A jantinha clássica de rua.",
-                    "10. Licor de Pequi: Uma forma mais suave de provar o sabor do fruto."
-                ],
-
-                religiao: [
-                    "1. Santuário Nossa Senhora da Salette: Um local lindo, com vista para a cidade e muita paz.",
-                    "2. Igreja Matriz: No centro, construção antiga e simples, coração da fé local.",
-                    "3. Fé nas Águas: Historicamente, muitos visitavam a cidade em busca de cura para reumatismo nas águas.",
-                    "4. Procissões: Na Semana Santa, a cidade para com as tradições católicas.",
-                    "5. Capela do Rio Quente: Pequena capela histórica dentro do complexo do resort.",
-                    "6. Folia de Reis: Tradição muito forte no interior de Goiás em janeiro.",
-                    "7. Estátuas: Há várias estátuas religiosas espalhadas pelas praças.",
-                    "8. Turismo Religioso: A cidade vizinha, Trindade (Pai Eterno), atrai muitos fiéis que esticam até Caldas.",
-                    "9. Casamentos: Muitos casais escolhem os jardins japoneses ou resorts para casar.",
-                    "10. Benzimento: Ainda é comum encontrar benzedeiras tradicionais nos bairros mais antigos."
-                ],
-
-                curiosidades: [
-                    "1. Maior do Mundo: É considerado o maior manancial hidrotermal do mundo.",
-                    "2. Não é Vulcão: Muita gente acha, mas a água esquenta pela geotermia (profundidade), não por vulcão.",
-                    "3. 57 Graus: A água pode sair do solo a temperaturas que queimam a pele.",
-                    "4. Culinária de Rua: Em Goiás, come-se 'Jantinha' (espetinho + feijão tropeiro + mandioca).",
-                    "5. Praia do Cerrado: O Hot Park tem a maior praia artificial de águas quentes correntes do mundo.",
-                    "6. Descoberta: As fontes foram descobertas em 1722 por Bartolomeu Bueno da Silva (filho do Anhanguera).",
-                    "7. Lago Corumbá: Um lago gigante formado por hidrelétrica, usado para esportes náuticos.",
-                    "8. População Flutuante: A cidade tem 90 mil habitantes, mas recebe 4 milhões de turistas por ano.",
-                    "9. Ovos Cozidos: No Poço do Ovo (Lagoa Quente), a água é tão quente que cozinha ovos em minutos.",
-                    "10. Shopping de Biquínis: A cidade tem uma indústria forte de moda praia."
-                ],
-
-                eventos_estacoes: [
-                    "1. Caldas Country (Novembro): Um dos maiores festivais de música sertaneja do Brasil.",
-                    "2. Férias de Julho: A cidade lota, preços sobem e há shows diários nos hotéis.",
-                    "3. Verão Sertanejo (Janeiro): Outro festival gigante de música.",
-                    "4. Carnaval: Voltado para família, mas com blocos de rua e shows.",
-                    "5. Inverno (Jun-Ago): A melhor época. Dias de sol (25ºC) e noites frescas (15ºC).",
-                    "6. Semana Santa: Lotada, reserve com meses de antecedência.",
-                    "7. Festival Gastronômico: Ocorre esporadicamente, celebrando o pequi e milho.",
-                    "8. Natal/Réveillon: Ceias fartas nos resorts e queima de fogos.",
-                    "9. Baixa Temporada (Mai/Jun/Ago/Set): Preços caem pela metade.",
-                    "10. Chuvas (Dez-Mar): Chove forte, mas geralmente são pancadas de verão que passam logo."
-                ],
-
-                info_gerais: [
-                    "1. Voltagem: 220V (Atenção! Diferente de SP/RJ/MG).",
-                    "2. Aeroporto: Tem aeroporto próprio (CLV), mas com poucos voos. Muita gente desce em Goiânia (GYN) e pega transfer (2h).",
-                    "3. Transporte: Carro é bom para ir aos parques afastados. Uber funciona.",
-                    "4. Água da Torneira: Não beba. É termal em muitos lugares e tem minerais em excesso (laxante natural).",
-                    "5. Entrada nos Parques: Hóspedes da rede Rio Quente e DiRoma costumam ter acesso gratuito aos parques da rede.",
-                    "6. Protetor Solar: O sol do cerrado queima mesmo nublado.",
-                    "7. Hidratação: A água quente desidrata o corpo sem você perceber. Beba água.",
-                    "8. DDD: 64.",
-                    "9. Bancos: Tem agências dos principais bancos no centro.",
-                    "10. Cuidado com Piso: O limo (algas) cresce rápido na água quente, deixando o chão liso."
-                ],
-
-                antes_de_ir: [
-                    "1. 220V: Cuidado para não queimar secadores e chapinhas.",
-                    "2. Roupas de Banho: Leve várias. Devido à umidade, elas demoram a secar no quarto.",
-                    "3. Capinha de Celular: Compre aquelas capinhas à prova d'água para tirar foto na piscina.",
-                    "4. Repelente: O cerrado tem mosquitos, principalmente perto do lago e matas.",
-                    "5. Ingressos Online: Comprar antecipado no site dos parques é mais barato que na bilheteria.",
-                    "6. Pressão Baixa: Se você tem pressão baixa, alterne banhos quentes com frios e não fique horas de molho.",
-                    "7. Almoço: Se for ao Hot Park, saiba que não pode entrar com comida. O almoço lá dentro é caro.",
-                    "8. Transfer: Se for de avião para Goiânia, reserve o transfer/ônibus antes.",
-                    "9. Creme de Cabelo: A água termal resseca muito o cabelo (muitos minerais). Hidrate.",
-                    "10. Carteirinha de Estudante: Funciona nos parques para meia entrada."
-                ],
-
-                numeros: [
-                    "1. 190 (Polícia Militar).",
-                    "2. 193 (Bombeiros).",
-                    "3. 192 (SAMU).",
-                    "4. (64) 3454-3500 (Rodoviária).",
-                    "5. (64) 3454-5500 (Aeroporto de Caldas).",
-                    "6. (64) 3453-3091 (Secretaria de Turismo).",
-                    "7. UPA Caldas Novas: Atendimento 24h.",
-                    "8. Hospital Municipal: (64) 3454-3536.",
-                    "9. Táxi/Mototáxi: Pontos na Praça Mestre Orlando.",
-                    "10. Centro de Atendimento ao Turista (entrada da cidade)."
-                ],
-
-                riscos: [
-                    "1. Quedas: Piso molhado e liso é o acidente nº 1.",
-                    "2. Insolação: Ficar na água quente sob o sol engana.",
-                    "3. Preços Abusivos: Em alta temporada, tudo triplica o preço.",
-                    "4. Afogamento: Cuidado com crianças, mesmo em piscinas rasas.",
-                    "5. Roubo em Carros: Não deixe pertences à vista no carro estacionado na rua.",
-                    "6. Venda de Cotas: Vendedores de multipropriedade (cotas de resort) abordam na rua oferecendo brindes. É uma palestra de 2h para tentar te vender algo caro. Cuidado.",
-                    "7. Choque Térmico: Sair da água 40ºC para o ar condicionado forte.",
-                    "8. Otite: Dor de ouvido por ficar muito tempo mergulhado.",
-                    "9. Ressaca: A água quente potencializa o efeito do álcool.",
-                    "10. Estradas: A GO-213 pode ter buracos, dirija com atenção."
-                ],
-
-                roteiros: {
-                    "curto": {
-                        titulo: "Fim de Semana (Relax)",
-                        texto: [
-                            "Dia 1: Chegada e dia inteiro no parque aquático do hotel.",
-                            "Noite 1: Feira do Luar para comer empadão.",
-                            "Dia 2: Manhã no Jardim Japonês e comprinhas de doces antes de ir."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Clássico (4 Dias)",
-                        texto: [
-                            "Dia 1: Water Park ou DiRoma.",
-                            "Dia 2: Dia inteiro no Hot Park/Praia do Cerrado (bate-volta Rio Quente).",
-                            "Dia 3: Manhã no Parque da Serra (trilha leve) e tarde no Náutico Clube.",
-                            "Dia 4: Relax nas piscinas do hotel e retorno."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Férias Completas (7 Dias)",
-                        texto: [
-                            "Dias 1-4: Roteiro Clássico.",
-                            "Dia 5: Lagoa Quente de Pirapitinga e Cachaçaria.",
-                            "Dia 6: Dia livre para repetir o parque favorito ou descansar.",
-                            "Dia 7: Compras de moda praia e check-out."
-                        ]
-                    },
-                },
-
-                links: {
-                    hotel: "https://www.booking.com/city/br/caldas-novas.pt-br.html", 
-                    passeio: "https://www.hotpark.com/", 
-                    seguro: "https://www.segurospromo.com.br" 
-                },
-            },
-            // --- BALNEÁRIO CAMBORIÚ (BRASIL) ---
-            {
-                name: "Balneário Camboriú",
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Balne%C3%A1rio_Cambori%C3%BA_from_Unipraias_Park_2023-04-02.jpg/960px-Balne%C3%A1rio_Cambori%C3%BA_from_Unipraias_Park_2023-04-02.jpg",
-                tags: ["Arranha-céus", "Vida Noturna", "Luxo"],
-                mapa: "https://goo.gl/maps/balneariocamboriu",
-                clima: "Subtropical. Verões quentes e agitados, Invernos amenos e ventosos.",
-                
-                // === DADOS DO VEREDICTO ===
-                veredicto: {
-                    melhor_epoca: "Março e Abril (Ainda faz calor, mas a cidade não está entupida). O Réveillon é incrível, mas o trânsito para.",
-                    ideal_para: [
-                        "Jovens e Baladeiros (algumas das melhores baladas do mundo estão aqui)",
-                        "Fãs de Arquitetura (os prédios mais altos do Brasil)",
-                        "Famílias (muitas atrações pagas como aquário e roda gigante)",
-                        "Quem gosta de agito urbano na praia"
-                    ],
-                    nao_ideal_para: [
-                        "Quem busca praias desertas e selvagens (a Praia Central é urbana)",
-                        "Quem odeia sombra na areia (os prédios fazem sombra à tarde)",
-                        "Orçamento apertado em Janeiro (tudo fica muito caro)"
-                    ],
-                    perfis: [
-                        { icone: "ri-building-2-fill", nome: "Dubai BR" },
-                        { icone: "ri-music-2-fill", nome: "Festas" },
-                        { icone: "ri-shopping-bag-fill", nome: "Compras" },
-                        { icone: "ri-car-fill", nome: "Supercarros" }
-                    ]
-                },
-                // =================================
-
-                pontos_turisticos: [
-                    "1. Parque Unipraias: Bondinho aéreo que liga a praia central à praia de Laranjeiras, passando pela mata.",
-                    "2. FG Big Wheel: A roda-gigante estaiada com vista incrível do skyline e do mar.",
-                    "3. Oceanic Aquarium: Um aquário moderno com túnel de vidro e muitas espécies.",
-                    "4. Praia de Laranjeiras: Águas calmas e muitos restaurantes, acessível por barco ou bondinho.",
-                    "5. Molhe da Barra Sul: O lugar clássico para tirar foto com os arranha-céus ao fundo.",
-                    "6. Cristo Luz: Um monumento similar ao Redentor, mas segura um canhão de luz que muda de cor.",
-                    "7. Avenida Atlântica: O calçadão para caminhar, ver carros de luxo e gente bonita.",
-                    "8. Praia Brava: Na divisa com Itajaí, é o point do surf, gente descolada e beach clubs chiques.",
-                    "9. Classic Car Show: Museu de carros antigos e bar temático americano.",
-                    "10. Morro do Careca: Vista panorâmica incrível e ponto de salto de parapente."
-                ],
-
-                gastronomia: [
-                    "1. Sequência de Camarão: Prato típico da região, servido em Laranjeiras.",
-                    "2. Churrasco: Grandes churrascarias de alto padrão na beira-mar.",
-                    "3. Passeio San Miguel: Um boulevard gastronômico charmoso com várias opções (pizza, sushi, vinhos).",
-                    "4. Churros da Praia: Clássico de fim de tarde na areia.",
-                    "5. Frutos do Mar: Frescos e sofisticados nos restaurantes da Barra Sul.",
-                    "6. Cozinha Internacional: A cidade tem ótimos italianos e japoneses.",
-                    "7. Café Colonial: Herança alemã da região, mesas fartas de bolos e pães.",
-                    "8. Milho Verde: Com manteiga, nas barracas numeradas da orla.",
-                    "9. Drinks Elaborados: Os bares da orla competem nos coquetéis.",
-                    "10. Hambúrguer Gourmet: A cena de burgers na cidade é fortíssima."
-                ],
-
-                religiao: [
-                    "1. Igreja Matriz Santa Inês: Tem um formato curioso que lembra um chapéu de palha ou barco.",
-                    "2. Capela de Santo Amaro: Uma construção histórica simples e preservada no Bairro da Barra.",
-                    "3. Cristo Luz: Embora turístico, é um símbolo de proteção sobre a cidade.",
-                    "4. Diversidade: Igrejas evangélicas grandes e modernas estão presentes.",
-                    "5. Iemanjá: Na virada do ano, muitas oferendas são feitas no mar.",
-                    "6. Igrejinha da Barra: A primeira igreja da cidade, patrimônio histórico.",
-                    "7. Paz no Alto: O Morro do Careca é usado por muitos para meditação.",
-                    "8. Procissão de Navegantes: Tradição na região vizinha que influencia a cidade.",
-                    "9. Eventos Gospel: A cidade sedia grandes congressos religiosos.",
-                    "10. Cruz: O complexo do Cristo Luz tem símbolos católicos."
-                ],
-
-                curiosidades: [
-                    "1. A Sombra: Devido à altura dos prédios, a Praia Central fica com sombra a partir das 15h/16h.",
-                    "2. Alargamento: A faixa de areia foi triplicada recentemente para tentar diminuir o problema da sombra.",
-                    "3. Prédios Mais Altos: BC abriga 7 dos 10 prédios mais altos do Brasil (incluindo o One Tower).",
-                    "4. Neymar: O jogador tem uma cobertura quadriplex num dos prédios da orla.",
-                    "5. Dubai Brasileira: Apelido dado pela arquitetura e ostentação.",
-                    "6. Supercarros: É comum ver Ferraris e Lamborghinis desfilando na Atlântica.",
-                    "7. Menor Município: É um dos menores de SC em área territorial, tudo é vertical.",
-                    "8. Bondindinho: O transporte coletivo é feito por caminhões adaptados abertos.",
-                    "9. Segurança: Apesar de urbana, é considerada uma das cidades mais seguras do Brasil.",
-                    "10. 1 milhão: A população salta de 150 mil para mais de 1 milhão no verão."
-                ],
-
-                eventos_estacoes: [
-                    "1. Réveillon: O show de fogos é um dos maiores do país, perdendo apenas para Copacabana.",
-                    "2. Carnaval: Blocos de rua e festas privadas gigantes nos clubes (Green Valley).",
-                    "3. Temporada de Verão (Dez-Fev): A cidade não dorme, trânsito intenso 24h.",
-                    "4. Páscoa: Decoração temática linda nas praças.",
-                    "5. Festival da Canção: Evento cultural tradicional.",
-                    "6. Maratonas: A orla plana atrai muitas corridas de rua no outono/inverno.",
-                    "7. Inverno (Jun-Ago): A cidade acalma, bom para gastronomia e vinho.",
-                    "8. Balneário Fashion Show: Eventos de moda nos shoppings.",
-                    "9. Flower Power: Festa hippie chic que ocorre na região.",
-                    "10. Oktoberfest: Muita gente fica em BC e vai para Blumenau (1h de carro) em Outubro."
-                ],
-
-                info_gerais: [
-                    "1. Voltagem: 220V (Cuidado!).",
-                    "2. Aeroporto: Navegantes (NVT) é o mais próximo, você pega uma balsa ou Uber para chegar em BC.",
-                    "3. Trânsito: A cidade tem poucas avenidas principais. No verão, tudo trava.",
-                    "4. Estacionamento: Caríssimo e difícil de achar. Vá de Uber.",
-                    "5. Praia Imprópria: Às vezes, pontos da Praia Central ficam impróprios para banho. Confira as placas.",
-                    "6. Segurança: Monitorada por câmeras, policiamento ostensivo.",
-                    "7. Comércio: Lojas de rua ficam abertas até tarde na temporada.",
-                    "8. Beto Carrero: Fica na cidade vizinha (Penha), a 40 min de carro.",
-                    "9. Baladas: A região da Barra Sul e Praia Brava concentra a vida noturna.",
-                    "10. Uber: Funciona muito bem, mas tem preço dinâmico alto no verão."
-                ],
-
-                antes_de_ir: [
-                    "1. Reserve Hotel: Se for no verão, reserve com 6 meses de antecedência ou pagará uma fortuna.",
-                    "2. Aeroporto de Navegantes: É melhor que descer em Florianópolis (que fica a 1h30 sem trânsito).",
-                    "3. Sombra na Areia: Se gosta de sol até tarde, vá para a praia de manhã cedo ou vá para Laranjeiras/Brava.",
-                    "4. Trânsito na Osvaldo Reis: A estrada para a Praia Brava/Itajaí engarrafa muito às 18h.",
-                    "5. Roupa de Balada: O dress code das festas aqui é alto nível. Capriche no look.",
-                    "6. Dinheiro: Aceitam cartão em tudo, até ambulantes.",
-                    "7. Balsa: Se vier do aeroporto de Navegantes, a travessia de balsa é rápida e prática.",
-                    "8. Crianças: O Oceanic Aquarium e a Aventura Jurássica são paradas obrigatórias.",
-                    "9. Alargamento: A areia da praia central é mais grossa e de tombo (afunda rápido) após a obra. Cuidado.",
-                    "10. Luxo: Não se assuste com os preços de garrafas de água ou cerveja em beach clubs."
-                ],
-
-                numeros: [
-                    "1. 190 (Polícia Militar).",
-                    "2. 193 (Bombeiros).",
-                    "3. 192 (SAMU).",
-                    "4. (47) 3267-7011 (Secretaria de Turismo).",
-                    "5. Guarda Municipal: 153 (Muito ativa na cidade).",
-                    "6. Rodoviária de BC: (47) 3367-2901.",
-                    "7. Hospital Ruth Cardoso: (47) 3169-3700.",
-                    "8. Aeroporto de Navegantes: (47) 3342-9200.",
-                    "9. Bondindinho (Transporte): Circula pela Atlântica e Av. Brasil.",
-                    "10. Ponto de Táxi Central: (47) 3367-0245."
-                ],
-
-                riscos: [
-                    "1. Trânsito Travado: No Réveillon, você pode levar 4 horas para andar 5km.",
-                    "2. Preços de Temporada: Restaurantes aumentam preços no verão.",
-                    "3. Mar Agitado: A praia de tombo pode ser perigosa para crianças desatentas.",
-                    "4. Furto de Celular: Em grandes aglomerações (Réveillon/Carnaval), cuide do bolso.",
-                    "5. Bebida Batizada: Cuidado aceitar bebidas de estranhos nas baladas.",
-                    "6. Insolação: O mormaço queima muito.",
-                    "7. Golpes de Aluguel: Cuidado ao alugar apê por redes sociais sem verificar.",
-                    "8. Multas de Trânsito: A fiscalização é rigorosa com estacionamento proibido.",
-                    "9. Ressaca do Mar: Às vezes o mar sobe e invade a avenida (raro, mas acontece).",
-                    "10. Barulho: Se seu hotel for na Av. Atlântica, o barulho dos carros vai até de madrugada."
-                ],
-
-                roteiros: {
-                    "curto": {
-                        titulo: "Luxo e Altura (2 Dias)",
-                        texto: [
-                            "Dia 1: Parque Unipraias + Praia de Laranjeiras + Noite na Barra Sul.",
-                            "Dia 2: Big Wheel (Roda Gigante) + Caminhada no Molhe + Jantar no Passeio San Miguel."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Diversão Total (4 Dias)",
-                        texto: [
-                            "Dias 1-2: Roteiro Curto.",
-                            "Dia 3: Bate-volta ao Beto Carrero World (Penha).",
-                            "Dia 4: Oceanic Aquarium + Tarde na Praia Brava (Beach Club)."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Vida de Patrão (6 Dias)",
-                        texto: [
-                            "Dias 1-4: Roteiro Médio.",
-                            "Dia 5: Aluguel de Lancha ou Passeio de Barco Pirata.",
-                            "Dia 6: Compras e dia relax no Cristo Luz para ver o pôr do sol."
-                        ]
-                    },
-                },
-
-                links: {
-                    hotel: "https://www.booking.com/city/br/balneario-camboriu.pt-br.html", 
-                    passeio: "https://www.unipraias.com.br/", 
-                    seguro: "https://www.segurospromo.com.br" 
-                },
-            },
-            {
-                name: "Ilhabela",
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Sunset_View_-_Ilhabela.jpg/1280px-Sunset_View_-_Ilhabela.jpg",
-                tags: ["Praia", "Natureza", "Vela"],
-                mapa: "https://goo.gl/maps/ilhabela",
-                clima: "Tropical Litorâneo. Quente e úmido. Chuvas frequentes no verão.",
-                
-                // === DADOS DO VEREDICTO ===
-                veredicto: {
-                    melhor_epoca: "Abril e Maio (Menos chuva e temperatura agradável). O verão chove muito e a fila da balsa é longa.",
-                    ideal_para: [
-                        "Amantes de natureza selvagem (85% da ilha é parque preservado)",
-                        "Velejadores e praticantes de Kitesurf (Capital da Vela)",
-                        "Casais (pousadas charmosas e restaurantes românticos)",
-                        "Aventureiros (trilhas para praias isoladas como Bonete)"
-                    ],
-                    nao_ideal_para: [
-                        "Quem tem alergia grave a picadas de insetos (os borrachudos não perdoam)",
-                        "Quem busca agito urbano intenso (o foco aqui é praia e natureza)",
-                        "Quem não tem paciência com trânsito (a fila da balsa pode levar horas)"
-                    ],
-                    perfis: [
-                        { icone: "ri-sailboat-fill", nome: "Vela" },
-                        { icone: "ri-leaf-fill", nome: "Natureza" },
-                        { icone: "ri-bug-fill", nome: "Aventura" }, // Ícone alusivo à mata/insetos
-                        { icone: "ri-hearts-fill", nome: "Romance" }
-                    ]
-                },
-                // =================================
-
-                pontos_turisticos: [
-                    "1. Praia de Castelhanos: Acessível apenas por 4x4, barco ou trilha. Uma das mais selvagens e bonitas.",
-                    "2. Centro Histórico (Vila): Charme colonial, lojinhas, píer e ótimos restaurantes.",
-                    "3. Praia do Bonete: Uma comunidade caiçara isolada. O acesso é por uma trilha de 12km ou barco (maré permitindo).",
-                    "4. Praia do Curral: A mais badalada. Areia cheia, música alta, bares de luxo e pôr do sol incrível.",
-                    "5. Cachoeira do Gato: Uma queda d'água impressionante acessível pela trilha de Castelhanos.",
-                    "6. Praia do Jabaquara: Uma das mais preservadas do norte, acessível de carro (estrada de terra).",
-                    "7. Ilha das Cabras: Santuário ecológico marinho, o melhor ponto para mergulho e snorkel.",
-                    "8. Praia da Feiticeira: Tranquila, familiar e com um antigo engenho de cana.",
-                    "9. Pico do Baepi: Para quem aguenta subir, a vista lá de cima abrange todo o canal de São Sebastião.",
-                    "10. Praia do Perequê: Central, ótima para esportes, ciclovia e ver o movimento."
-                ],
-
-                gastronomia: [
-                    "1. Camarão na Moranga: Prato clássico servido em quase todos os restaurantes da ilha.",
-                    "2. Peixe com Banana: A mistura do doce da banana da terra com o peixe fresco local.",
-                    "3. Casquinha de Siri: A entrada obrigatória nos quiosques à beira-mar.",
-                    "4. Lula Recheada: Muito comum devido à pesca local.",
-                    "5. Caipirinha de Folha de Mexerica: Uma variação aromática e deliciosa da bebida nacional.",
-                    "6. Sorvetes Artesanais: Na Vila, há sorveterias famosas com sabores de frutas locais.",
-                    "7. Frutos do Mar: Polvo, mariscos e ostras são sempre frescos.",
-                    "8. Bistrôs da Vila: A gastronomia internacional é forte no centro histórico.",
-                    "9. Açaí: Para repor as energias depois da praia.",
-                    "10. Borrachudo (Drink): Alguns bares servem drinks vermelhos brincando com o nome do mosquito."
-                ],
-
-                religiao: [
-                    "1. Igreja Nossa Senhora D'Ajuda: Padroeira da cidade, uma construção colonial linda no topo da escadaria da Vila.",
-                    "2. Lendas Caiçaras: A espiritualidade local é misturada com lendas de piratas e tesouros escondidos.",
-                    "3. Capela de São Pedro: Nas comunidades isoladas (como Bonete), a fé no santo pescador é vital.",
-                    "4. Festas de Padroeiros: As comunidades tradicionais fazem festas com procissões marítimas.",
-                    "5. Natureza Mística: Muitos buscam a ilha para retiros de yoga e conexão espiritual na mata.",
-                    "6. Cruz do Pico do Baepi: Um marco de fé no ponto alto da ilha.",
-                    "7. Congada de Ilhabela: Manifestação cultural e religiosa de herança africana, muito forte na festa de São Benedito.",
-                    "8. Igrejas Evangélicas: Presentes nos bairros residenciais.",
-                    "9. Benzideiras: Em bairros mais antigos, a tradição das rezadeiras ainda resiste.",
-                    "10. Naufrágios: Existe um respeito quase religioso pelos mortos nos centenas de navios afundados ao redor da ilha."
-                ],
-
-                curiosidades: [
-                    "1. Capital da Vela: Sedia a 'Semana Internacional de Vela', maior evento do tipo na América Latina.",
-                    "2. Borrachudos: A ilha tem o mosquito 'Simulídeo'. Ele não pica, ele morde (e coça por dias).",
-                    "3. Lendas de Piratas: Dizem que o pirata Thomas Cavendish escondeu tesouros aqui no século XVI.",
-                    "4. Cemitério de Navios: A costa de Ilhabela tem mais de 100 naufrágios registrados (o 'Triângulo das Bermudas' brasileiro).",
-                    "5. 85% Preservada: A maior parte da ilha é Parque Estadual, onde não se pode construir.",
-                    "6. Cachoeiras: Dizem que a ilha tem 365 cachoeiras (uma para cada dia do ano), mas é exagero (são cerca de 30 visitáveis).",
-                    "7. Toca do Polvo: Um abrigo natural em Castelhanos que teria sido usado por piratas.",
-                    "8. Balsa: É o único acesso para carros. Em feriados, a fila pode chegar a 4 ou 5 horas.",
-                    "9. Engenhos: No passado, a ilha foi uma grande produtora de cana-de-açúcar e cachaça.",
-                    "10. Trilha do Bonete: Eleita pelo jornal The Guardian como uma das 10 praias mais bonitas do Brasil."
-                ],
-
-                eventos_estacoes: [
-                    "1. Semana de Vela (Julho): A cidade lota de velejadores, festas e gente bonita. Preços sobem.",
-                    "2. Festival do Camarão (Agosto): Ocorre na Vila, com pratos especiais a preços promocionais.",
-                    "3. X-Terra (Maio): Etapa do circuito de Triathlon cross-country e corridas de trilha.",
-                    "4. Verão (Dez-Mar): Calor, chuva, trânsito e praias lotadas. A balsa é um teste de paciência.",
-                    "5. Inverno (Jun-Ago): Clima seco, dias lindos e noites frias. Ótimo para trilhas e comer bem.",
-                    "6. Réveillon: Festas famosas em beach clubs (DPNY, Sea Club) com ingressos caríssimos.",
-                    "7. Festival de Jazz (Outubro): Shows de música instrumental na praça da Vila.",
-                    "8. Kitesurf (Set-Nov): Temporada dos ventos fortes no canal, céu colorido de pipas.",
-                    "9. Carnaval: Blocos de rua na Vila e desfiles.",
-                    "10. Birdwatching (Primavera): Observadores de aves vêm ver espécies endêmicas da Mata Atlântica."
-                ],
-
-                info_gerais: [
-                    "1. Voltagem: 220V (Cuidado! A maioria das cidades de SP é 110V, mas Ilhabela é 220V).",
-                    "2. DDD: 12.",
-                    "3. Balsa: Paga-se apenas na ida (São Sebastião -> Ilhabela). Pedestres não pagam.",
-                    "4. Hora Marcada: Vale muito a pena agendar a balsa pelo site (é mais caro, mas fura a fila).",
-                    "5. Transporte: Existe ônibus que percorre a avenida principal (norte-sul) e 'aquabus'.",
-                    "6. Carro 4x4: Essencial se quiser ir para Castelhanos por conta própria (carros baixos atolam ou são proibidos).",
-                    "7. Bancos: Tem agências na Vila e no Perequê, mas leve dinheiro para praias isoladas.",
-                    "8. Sinal de Celular: Vivo pega bem. Outras operadoras falham no lado sul e leste (Castelhanos).",
-                    "9. Água: Beba mineral. A água da ilha é captada na serra, mas o tratamento varia.",
-                    "10. Taxa Ambiental: Cobra-se uma TPA (Taxa de Preservação) para entrar na ilha (placa do carro)."
-                ],
-
-                antes_de_ir: [
-                    "1. Repelente Citronela: O repelente comum NÃO funciona contra borrachudos. Compre o 'Citroilha' ou similar lá mesmo. Passe a cada 2h.",
-                    "2. Complexo B: Começar a tomar vitamina B12 dias antes ajuda a diminuir a atração dos mosquitos (dica local).",
-                    "3. Agende a Balsa: Se for feriado ou sexta à tarde, agende a 'Hora Marcada' no site do DH (Departamento Hidroviário).",
-                    "4. Óleo de Bebê: Moradores usam óleo corporal (tipo Johnson's) nas pernas. O borrachudo escorrega e não pica (mas mela).",
-                    "5. Dinheiro em Espécie: Em praias como Bonete ou Castelhanos, a maquininha de cartão pode não ter sinal.",
-                    "6. Abasteça Antes: O combustível na ilha é mais caro que no continente (São Sebastião). Encha o tanque antes da balsa.",
-                    "7. Trânsito na Ilha: Só existe uma avenida principal. Se engarrafar, não tem rota de fuga. Tenha paciência.",
-                    "8. Tênis Velho: Se for fazer trilhas, leve um tênis que possa sujar de lama vermelha.",
-                    "9. Kit Praia: Muitas praias não têm quiosque ou cobram caro. Levar cooler e cadeira ajuda a economizar.",
-                    "10. Cuidado com Waze: Não confie cegamente. Ele pode te mandar para trilhas de 4x4 achando que é rua."
-                ],
-
-                numeros: [
-                    "1. 190 (Polícia Militar).",
-                    "2. 193 (Bombeiros e Resgate).",
-                    "3. 192 (SAMU).",
-                    "4. (12) 3896-9200 (Hospital Mário Covas): O único hospital público da ilha.",
-                    "5. 0800 77 33 711 (DERSA/Balsa): Informações sobre a fila e operação da balsa.",
-                    "6. (12) 3896-9400 (Prefeitura/Turismo).",
-                    "7. 199 (Defesa Civil): Para deslizamentos em chuvas fortes.",
-                    "8. (12) 3896-1266 (Delegacia de Polícia).",
-                    "9. Ponto de Táxi da Balsa: (12) 3895-8334.",
-                    "10. Parque Estadual de Ilhabela: (12) 3896-2585."
-                ],
-
-                riscos: [
-                    "1. Picadas de Borrachudo: Se você é alérgico, a perna pode inchar muito. Leve antialérgico (consulte médico). Eles atacam no nascer e pôr do sol.",
-                    "2. Fila da Balsa: O maior estresse. Pode levar 30 minutos ou 5 horas. Monitore as câmeras online antes de descer a serra.",
-                    "3. Pedras Escorregadias: Nas cachoeiras, o limo é traiçoeiro. Cuidado redobrado ao andar nas pedras molhadas.",
-                    "4. Marés: Em trilhas costeiras (como a do Bonete), a maré alta pode bloquear trechos.",
-                    "5. Estrada de Castelhanos: Se chover, a estrada de terra vira sabão. Carros sem 4x4 ficam atolados e o resgate é caríssimo.",
-                    "6. Correnteza: Praias de tombo (como Bonete e Castelhanos) têm correntes fortes. Respeite o mar aberto.",
-                    "7. Preços: Ilhabela é um destino caro (padrão 'Ilha da Fantasia'). Pergunte o preço antes de consumir.",
-                    "8. Ouriços: Nas áreas de pedra (Ilha das Cabras), use sapatilha para não pisar em espinhos.",
-                    "9. Ventos Súbitos: O canal canaliza vento. Se estiver de caiaque ou SUP, cuidado para não ser empurrado para o meio do mar.",
-                    "10. Roubos em Carros: Não deixe mochilas visíveis no carro estacionado em trilhas isoladas."
-                ],
-
-                roteiros: {
-                    "curto": {
-                        titulo: "Fim de Semana (2 Dias)",
-                        texto: [
-                            "Dia 1: Chegada e Centro Histórico (Vila). Almoço e tarde na Praia do Curral (pôr do sol).",
-                            "Dia 2: Passeio de escuna ou lancha para Praia da Fome e Jabaquara. Noite na pizzaria no Perequê."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Aventura 4x4 (4 Dias)",
-                        texto: [
-                            "Dias 1 e 2: Siga o roteiro curto.",
-                            "Dia 3: Passeio de Jipe (4x4) para a Praia de Castelhanos (atravessando o parque). Volta de barco parando nas praias.",
-                            "Dia 4: Ilha das Cabras (mergulho) e tarde tranquila na Praia da Feiticeira."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Ilha Completa (7 Dias)",
-                        texto: [
-                            "Dias 1 a 4: Siga o roteiro médio.",
-                            "Dia 5: Trilha ou barco para o Bonete (passe o dia ou durma lá uma noite).",
-                            "Dia 6: Cachoeiras (Toca, Gato ou Três Tombos).",
-                            "Dia 7: Ciclovia da orla (alugue uma bike) e despedida no Saco da Capela."
-                        ]
-                    },
-                },
-
-                links: {
-                    hotel: "https://www.booking.com/city/br/ilhabela.pt-br.html", 
-                    passeio: "https://www.civitatis.com/br/ilhabela/", 
-                    seguro: "https://www.segurospromo.com.br" 
-                },
-            },
-            {
-                name: "Itacaré",
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/MARCIO_FILHO_ITACARE_CIDADE_ITACARE_BAHIA_%2840933336562%29.jpg/960px-MARCIO_FILHO_ITACARE_CIDADE_ITACARE_BAHIA_%2840933336562%29.jpg",
-                tags: ["Surf", "Praia", "Cacau"],
-                mapa: "https://goo.gl/maps/itacare",
-                clima: "Tropical Úmido. Sol e chuva se alternam o ano todo. Verão é quente e agitado.",
-                
-                // === DADOS DO VEREDICTO ===
-                veredicto: {
-                    melhor_epoca: "Setembro a Novembro (Menos chuva e cidade mais tranquila). O verão é lotado e animado.",
-                    ideal_para: [
-                        "Surfistas (ondas famosas internacionalmente)",
-                        "Jovens e Solteiros (a vida noturna na Rua da Pituba é intensa)",
-                        "Amantes de Ecoturismo (trilhas na mata e cachoeiras)",
-                        "Apreciadores de Chocolate (região cacaueira)"
-                    ],
-                    nao_ideal_para: [
-                        "Quem tem dificuldade de locomoção (muitas ladeiras e trilhas)",
-                        "Quem odeia insetos (é uma cidade cercada de mata fechada)",
-                        "Quem busca resorts 'pé na areia' estilo Caribe (aqui o estilo é rústico-chique)"
-                    ],
-                    perfis: [
-                        { icone: "ri-surf-line", nome: "Surf" },
-                        { icone: "ri-plant-fill", nome: "Natureza" },
-                        { icone: "ri-beer-fill", nome: "Agito" }, 
-                        { icone: "ri-sun-fill", nome: "Praia" }
-                    ]
-                },
-                // =================================
-
-                pontos_turisticos: [
-                    "1. Prainha: Cartão-postal da cidade. Acesso por trilha de 40min ou guia. Visual selvagem inesquecível.",
-                    "2. Praia da Tiririca: O point do surf. Ondas fortes, gente jovem e campeonatos frequentes.",
-                    "3. Rua da Pituba: Onde tudo acontece à noite. Restaurantes, bares, música ao vivo e artesanato.",
-                    "4. Itacarezinho: Praia longa (3.5km), com estrutura de restaurante e coqueirais a perder de vista.",
-                    "5. Praia de Jeribucaçu: Acesso por trilha passando por mangue. O encontro do rio com o mar é lindo.",
-                    "6. Cachoeira do Tijuípe: Acesso fácil, ótima para banho e ideal para famílias.",
-                    "7. Praia do Resende: Pequena, charmosa e com gramado e coqueiros. Ótima para relaxar perto do centro.",
-                    "8. Mirante do Xaréu: O local clássico para assistir ao pôr do sol no mar.",
-                    "9. Praia da Engenhoca: A preferida dos surfistas de longboard e iniciantes. Trilha fácil.",
-                    "10. Rio de Contas: Passeios de canoa ou lancha para ver o manguezal e cachoeira do Cleandro."
-                ],
-
-                gastronomia: [
-                    "1. Moqueca Baiana: Com dendê e leite de coco fresco, imperdível em qualquer restaurante local.",
-                    "2. Chocolate de Origem: Itacaré está na Costa do Cacau. Prove o chocolate produzido nas fazendas vizinhas.",
-                    "3. Suco de Cacau: Refrescante, doce e muito diferente do chocolate. Vende-se a polpa ou o cacau in natura.",
-                    "4. Tapioca: No café da manhã ou jantar, recheada com queijo coalho e banana.",
-                    "5. Acarajé: Nas barracas de rua no final da tarde, tradição baiana.",
-                    "6. Peixe na Folha de Bananeira: Preparo indígena/caiçara comum na região.",
-                    "7. Bobó de Camarão: Cremoso e intenso.",
-                    "8. Pizza na Pituba: A rua principal tem ótimas pizzarias rústicas.",
-                    "9. Caipirinha de Cacau ou Biribiri: Frutas locais que dão drinks exóticos.",
-                    "10. Bares de Praia: Petiscos como isca de peixe e macaxeira frita."
-                ],
-
-                religiao: [
-                    "1. Igreja de São Miguel Arcanjo: Construção jesuíta de 1723, a mais antiga e importante da cidade.",
-                    "2. Candomblé: Forte presença na Bahia, com terreiros e festas tradicionais na região.",
-                    "3. Lavagem da Escadaria: Festividade sincrética que une catolicismo e religiões de matriz africana.",
-                    "4. Festas Juninas: São João é celebrado com muita fé e forró na cidade.",
-                    "5. Lendas do Rio de Contas: Histórias de pescadores sobre espíritos das águas.",
-                    "6. Capoeira: Mais que esporte, é uma filosofia espiritual e cultural muito forte em Itacaré.",
-                    "7. Igrejas Evangélicas: Presentes nos bairros residenciais.",
-                    "8. Misticismo e Yoga: Muitos retiros espirituais se instalam aqui pela energia da natureza.",
-                    "9. Benzedeiras: Tradição antiga ainda viva entre os nativos mais velhos.",
-                    "10. Festa de São Miguel (Setembro): Padroeiro da cidade, com procissão e festa profana."
-                ],
-
-                curiosidades: [
-                    "1. Coronéis do Cacau: A cidade foi porto de escoamento de cacau e já foi muito rica. Entrou em decadência com a 'vassoura-de-bruxa' (praga) e renasceu com o turismo.",
-                    "2. Cenário de Novela: Foi cenário de 'Renascer' (versão antiga e trechos da nova) e filmes.",
-                    "3. Surf Town: É considerada o Havaí Baiano pela constância das ondas.",
-                    "4. Mata Atlântica: É uma das poucas áreas do Nordeste onde a mata atlântica chega quase até o mar.",
-                    "5. Acesso Difícil: Até 1998, a estrada era de terra batida muito ruim, o que preservou a cidade do turismo de massa por anos.",
-                    "6. Capoeira: Tem uma das rodas de capoeira mais respeitadas da Bahia.",
-                    "7. Taboquinhas: Um distrito de Itacaré onde se faz rafting, famoso por ser mais 'raiz'.",
-                    "8. Chocolates Premiados: O cacau da região hoje é 'fino', usado em chocolates gourmet mundialmente.",
-                    "9. Forró: Não importa se é Bahia, o forró pé-de-serra toca alto quase toda noite.",
-                    "10. Arquitetura: Os casarões do centro são herança da era de ouro do cacau."
-                ],
-
-                eventos_estacoes: [
-                    "1. Réveillon: Um dos mais famosos (e caros) do Brasil. Festas privadas gigantescas.",
-                    "2. Carnaval: Blocos de rua tradicionais e 'caretas' (mascarados que assustam as crianças).",
-                    "3. Festival de Surf (Outubro): Etapas do mundial ou nacional costumam ocorrer na Tiririca.",
-                    "4. Festival Gastronômico (Julho/Agosto): Pratos especiais usando ingredientes locais como cacau e dendê.",
-                    "5. São João (Junho): A cidade se enfeita e tem muito forró na praça.",
-                    "6. Verão (Dez-Fev): Cidade lotada, trânsito lento, preços altos e muito sol.",
-                    "7. Inverno (Jun-Ago): Chuvas frequentes ('Inverno Baiano'), mas o mar continua morno.",
-                    "8. Temporada das Baleias (Jul-Out): Baleias Jubarte podem ser vistas na costa em passeios de barco.",
-                    "9. Dia de Iemanjá (2 de Fevereiro): Oferendas no mar, partindo da Praia da Concha.",
-                    "10. Baixa Temporada (Maio/Setembro): Melhor época para quem quer paz e preços baixos."
-                ],
-
-                info_gerais: [
-                    "1. Voltagem: 127V (Cuidado, boa parte do Nordeste é 220V, mas Itacaré costuma ser 127V).",
-                    "2. DDD: 73.",
-                    "3. Bancos: Tem Banco do Brasil, Bradesco e Lotérica. Caixas 24h às vezes faltam dinheiro em feriados.",
-                    "4. Internet: Boa no centro e pousadas, mas falha nas praias mais afastadas (Prainha, Jeribucaçu).",
-                    "5. Água: Não beba da torneira em hipótese alguma.",
-                    "6. Transporte: Não precisa de carro para as praias urbanas (Resende, Tiririca, Concha). Para as rurais, precisa.",
-                    "7. Mototáxi: É o meio de transporte oficial e mais rápido da cidade.",
-                    "8. Estradas: A BA-001 (que vem de Ilhéus) é asfaltada e bonita, mas sinuosa.",
-                    "9. Aeroporto: O mais próximo é Ilhéus (IOS), a 70km de distância.",
-                    "10. Taxas: Algumas praias (Itacarezinho) cobram estacionamento caro se entrar de carro."
-                ],
-
-                antes_de_ir: [
-                    "1. Dinheiro Vivo: Leve sempre um pouco. Algumas barracas de trilha e guias não aceitam cartão.",
-                    "2. Tênis ou Papete: Para as trilhas (Prainha e Jeribucaçu). Chinelo escorrega e arrebenta.",
-                    "3. Repelente: Essencial. Tem mosquito, maruim e mutuca nas áreas de mata.",
-                    "4. Protetor Solar: O sol da Bahia queima mesmo nublado.",
-                    "5. Marés: Verifique a tábua de marés. Na maré baixa, praias como a Concha ficam piscinas; na alta, somem.",
-                    "6. Guias: Para Prainha, se for a primeira vez, contrate um guia ou vá com grupos. A trilha tem bifurcações.",
-                    "7. Transfer: Agende seu transfer de Ilhéus com antecedência se não for alugar carro.",
-                    "8. Roupas Leves: Faz calor o ano todo. Esqueça casacos pesados, traga no máximo um corta-vento para chuva.",
-                    "9. Mochila Estanque: Se for fazer passeios de barco ou cachoeira, protege o celular.",
-                    "10. Respeite os Nativos: A cultura local é forte. Peça licença ao entrar e tirar fotos de pessoas."
-                ],
-
-                numeros: [
-                    "1. 190 (Polícia Militar).",
-                    "2. 192 (SAMU).",
-                    "3. (73) 3251-2195 (Delegacia).",
-                    "4. Fundação Hospitalar de Itacaré: Atendimento básico de emergência.",
-                    "5. (73) 3251-3108 (Secretaria de Turismo).",
-                    "6. Ponto de Táxi Rodoviária: Pergunte no local, varia muito.",
-                    "7. Aeroporto de Ilhéus: (73) 3234-4000 (Base para informações de voo).",
-                    "8. Associação de Guias: Geralmente tem quiosque no centro.",
-                    "9. Farmácias: Várias na Rua Pituba e arredores.",
-                    "10. Bombeiros: A base mais próxima costuma ser Ilhéus, cuidado redobrado."
-                ],
-
-                riscos: [
-                    "1. Correnteza: Praias como Tiririca e Itacarezinho têm correntes de retorno fortes. Se não surfa, cuidado.",
-                    "2. Trilhas Escorregadias: Depois de chuva, o barro fica liso. Risco de torção.",
-                    "3. Furtos na Praia: Não deixe coisas sozinhas na areia enquanto entra no mar, especialmente em praias cheias.",
-                    "4. Coco: Não fique deitado bem embaixo de coqueiros carregados.",
-                    "5. Estradas à Noite: A estrada Ilhéus-Itacaré é escura e tem animais na pista. Evite dirigir de madrugada.",
-                    "6. Assédio: Vendedores ambulantes e guias podem ser insistentes. Um 'não, obrigado' firme resolve.",
-                    "7. Águas Vivas: Ocorrem em certas épocas. Se ver na areia, não toque.",
-                    "8. Pedras: Na Praia da Concha e costões, as pedras têm cracas que cortam o pé.",
-                    "9. Bebida Adulterada: Em festas muito cheias, cuide do seu copo.",
-                    "10. Golpe do Passeio Barato: Desconfie de preços muito abaixo da tabela. O barato sai caro (barco ruim, sem colete)."
-                ],
-
-                roteiros: {
-                    "curto": {
-                        titulo: "Essencial (3 Dias)",
-                        texto: [
-                            "Dia 1: Praias Urbanas (Resende, Tiririca, Costa) e pôr do sol na Ponta do Xaréu. Noite na Pituba.",
-                            "Dia 2: Trilha da Prainha (manhã) e tarde na Praia da Ribeira (arborismo opcional).",
-                            "Dia 3: Praia da Concha (mar calmo, stand-up paddle) e compras de cacau no centro."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Explorador (5 Dias)",
-                        texto: [
-                            "Dias 1 a 3: Siga o roteiro curto.",
-                            "Dia 4: Passeio '4 Praias' (Itacarezinho, Engenhoca, Havaizinho, Camboinha) - trilha leve.",
-                            "Dia 5: Cachoeira do Tijuípe e tarde relaxando em algum Beach Club."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Imersão Total (7 Dias)",
-                        texto: [
-                            "Dias 1 a 5: Siga o roteiro médio.",
-                            "Dia 6: Passeio de barco/canoa pelo Rio de Contas até a Cachoeira do Cleandro.",
-                            "Dia 7: Trilha de Jeribucaçu (passa por mangue e praia linda) e despedida com moqueca."
-                        ]
-                    },
-                },
-
-                links: {
-                    hotel: "https://www.booking.com/city/br/itacare.pt-br.html", 
-                    passeio: "https://www.tripadvisor.com.br/Attractions-g303270-Activities-Itacare_State_of_Bahia.html", 
-                    seguro: "https://www.segurospromo.com.br" 
-                },
-            },
-            {
-                name: "Olímpia",
-                // Trocamos a foto para uma de Parque Aquático/Piscina para não parecer litoral
-                imagem: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=2070&auto=format&fit=crop",
-                tags: ["Parques Aquáticos", "Interior SP", "Termas"],
-                mapa: "https://goo.gl/maps/olimpia",
-                clima: "Tropical de Interior. Verão quente e chuvoso. Inverno seco e agradável (água quente).",
-                
-                // === DADOS DO VEREDICTO ===
-                veredicto: {
-                    melhor_epoca: "Abril a Junho e Agosto a Novembro (Foge da chuva de verão e da lotação de férias).",
-                    ideal_para: [
-                        "Famílias com crianças (A 'Disney' brasileira das águas)",
-                        "Idosos (Piscinas termais relaxantes)",
-                        "Grupos de amigos (Diversão nos brinquedos radicais)",
-                        "Quem gosta de calor e piscina"
-                    ],
-                    nao_ideal_para: [
-                        "Quem busca praia de verdade (É interior, só tem praia artificial)",
-                        "Quem odeia filas (Na alta temporada, são inevitáveis)",
-                        "Quem procura turismo cultural profundo (O foco aqui é 100% lazer aquático)"
-                    ],
-                    perfis: [
-                        { icone: "ri-drop-fill", nome: "Água Termal" },
-                        { icone: "ri-emotion-happy-fill", nome: "Diversão" },
-                        { icone: "ri-sun-fill", nome: "Sol Caipira" },
-                        { icone: "ri-group-fill", nome: "Família" }
-                    ]
-                },
-                // =================================
-
-                pontos_turisticos: [
-                    "1. Thermas dos Laranjais: O principal atrativo. Um dos maiores parques aquáticos do mundo, com montanha-russa de água e praia artificial.",
-                    "2. Hot Beach: O segundo grande parque da cidade. Mais moderno, 'pé na areia' (artificial) e focado em relaxamento.",
-                    "3. Vale dos Dinossauros: Parque temático com réplicas gigantes de dinossauros que se movem.",
-                    "4. Museu do Folclore: Olímpia é a Capital Nacional do Folclore. O museu preserva essa história rica.",
-                    "5. Dreamland Museu de Cera: Estátuas de famosos e personagens para fotos.",
-                    "6. Praia do Mirante: Uma praia artificial pública (checar se está em funcionamento).",
-                    "7. Orionverso: Parque de realidade virtual imersiva recém-inaugurado.",
-                    "8. Iquegami Supermercados: Famoso entre turistas pelas promoções, virou ponto de parada.",
-                    "9. Avenida Aurora Forti Neves: Onde fica o agito noturno, bares e restaurantes da cidade.",
-                    "10. Pit Stop da Neve: Bar de gelo para experimentar temperaturas negativas no calor do interior."
-                ],
-
-                gastronomia: [
-                    "1. Pamonha: A região é forte produtora de milho e as pamonhas de estrada são clássicas.",
-                    "2. Buffet de Resort: A maioria dos turistas come nos hotéis (pensão completa) que oferecem buffets variados.",
-                    "3. Comida Caipira: Restaurantes rurais com fogão a lenha (leitoa, feijão gordo, polenta).",
-                    "4. Pizza: Ótimas pizzarias na avenida principal atendem os turistas à noite.",
-                    "5. Pastel de Feira: Tradição local de domingo de manhã.",
-                    "6. Suco de Laranja: A região é o cinturão da laranja em SP.",
-                    "7. Churrasco: Churrascarias de estrada são comuns na rodovia Assis Chateaubriand.",
-                    "8. Sorvetes Artesanais: Essenciais para aguentar o calor da cidade.",
-                    "9. Lanches de Trailer: O 'podrão' do interior é caprichado e barato.",
-                    "10. Empadão: Salgado típico nas lanchonetes locais."
-                ],
-
-                religiao: [
-                    "1. Igreja Matriz de São João Batista: O centro da fé católica na praça principal.",
-                    "2. Folclore Religioso: Festas de Santos Reis e Congadas são manifestações de fé muito fortes e tradicionais.",
-                    "3. Igrejas Evangélicas: Diversas denominações presentes nos bairros.",
-                    "4. Turismo Religioso: Rota de passagem para quem vai a Aparecida ou Barretos.",
-                    "5. Benzedeiras: Cultura tradicional do interior ainda presente.",
-                    "6. Festas de Padroeiros: Quermesses movimentam a comunidade local.",
-                    "7. Santuário N. Sra. Aparecida: Local de devoção na cidade.",
-                    "8. Renovação Carismática: Eventos frequentes.",
-                    "9. Capelas Rurais: Charme e fé nas estradas de terra ao redor da cidade.",
-                    "10. Sincretismo: O folclore local mistura elementos católicos, africanos e indígenas."
-                ],
-
-                curiosidades: [
-                    "1. Petróleo que virou Água: Nos anos 50, a Petrobras furou o chão buscando petróleo e achou o Aquífero Guarani (água quente).",
-                    "2. Capital do Folclore: Sedia o FEFOL todo mês de agosto, o maior festival do gênero no país.",
-                    "3. Água Quente Natural: A água não é aquecida artificialmente, ela já sai quente da terra.",
-                    "4. Recordista: O Thermas dos Laranjais frequentemente aparece no Top 5 parques aquáticos do mundo.",
-                    "5. População Flutuante: A cidade tem ~55 mil habitantes, mas recebe milhões de turistas/ano.",
-                    "6. 'Orlando Brasileira': Apelido dado pela quantidade de hotéis e atrações temáticas surgindo.",
-                    "7. Surf no Interior: Tem piscina de surf profissional dentro do parque.",
-                    "8. Dinheiro de Plástico: Nos parques, usa-se cartão pré-pago à prova d'água para consumo.",
-                    "9. Expansão Imobiliária: A cidade virou um canteiro de obras de resorts gigantes.",
-                    "10. Trânsito: Em feriados, a cidadezinha trava com o fluxo de carros."
-                ],
-
-                eventos_estacoes: [
-                    "1. FEFOL (Festival do Folclore - Agosto): O evento cultural mais importante, com grupos do país todo e entrada franca.",
-                    "2. Alta Temporada (Jan/Jul): Férias escolares = Lotação máxima e preços altos.",
-                    "3. Verão (Dez-Mar): Calor intenso e pancadas de chuva diárias.",
-                    "4. Inverno (Jun-Ago): Seco e dias bonitos. Melhor época para aproveitar a água quente sem o sol queimar tanto.",
-                    "5. Réveillon: Festas nos resorts e parques.",
-                    "6. Carnaval: Voltado para família, com marchinhas e shows.",
-                    "7. Corpus Christi: Feriado que costuma lotar a cidade.",
-                    "8. Thermas Rock: Eventos musicais ocasionais dentro do parque.",
-                    "9. Black Friday: Promoções de hospedagem e ingressos.",
-                    "10. Baixa Temporada: Maio, Junho (exceto Corpus Christi), Setembro."
-                ],
-
-                info_gerais: [
-                    "1. Ingressos: Compre online ou em agências na cidade (na portaria é mais caro).",
-                    "2. Voltagem: 127V (Cuidado se você for de cidades 220V).",
-                    "3. Sapatilha Náutica: O chão quente queima o pé e escorrega. Item essencial.",
-                    "4. Armários: Pagos à parte nos parques. Leve pouca coisa.",
-                    "5. Aeroporto: O mais próximo é São José do Rio Preto (50km).",
-                    "6. Uber: Funciona bem, mas tem alta demanda na saída dos parques.",
-                    "7. Regras de Comida: Não entra comida/bebida nos parques (revistam bolsas).",
-                    "8. Protetor Solar: O sol do interior é forte, use mesmo nublado.",
-                    "9. Hidratação: A água quente desidrata sem você perceber. Beba água.",
-                    "10. Crianças: Use a pulseira de identificação fornecida na entrada."
-                ],
-
-                antes_de_ir: [
-                    "1. Planeje os Parques: O Thermas é enorme e cansativo (muita caminhada). O Hot Beach é relax.",
-                    "2. Capa de Celular: Compre a impermeável para tirar fotos na água.",
-                    "3. Toalhas: A maioria dos hotéis cobra taxa para toalha de piscina. Leve a sua de casa.",
-                    "4. Documentos Kids: Leve RG/Certidão para o hotel (obrigatório).",
-                    "5. Farmacinha: Leve remédio para dor de ouvido (comum em crianças na água) e dor muscular.",
-                    "6. Roupas UV: Camisetas de lycra protegem do sol e evitam assaduras nos tobogãs.",
-                    "7. Dinheiro: Leve um pouco, mas os parques usam sistema de cartão pré-pago.",
-                    "8. Jantar: Se não tiver janta no hotel, saia cedo (19h30) para evitar filas na avenida.",
-                    "9. Carro: Ar-condicionado revisado é vital na estrada.",
-                    "10. Paciência: As filas nos brinquedos fazem parte da experiência."
-                ],
-
-                numeros: [
-                    "1. (17) 3279-3500 (Thermas dos Laranjais).",
-                    "2. (17) 3279-1009 (Hot Beach).",
-                    "3. 192 (SAMU).",
-                    "4. (17) 3279-8752 (UPA Olímpia).",
-                    "5. (17) 3281-6420 (Rodoviária).",
-                    "6. 190 (Polícia Militar).",
-                    "7. (17) 3281-2222 (Táxi).",
-                    "8. (17) 3211-1000 (Aeroporto Rio Preto).",
-                    "9. 193 (Bombeiros).",
-                    "10. (17) 3280-6294 (Secretaria de Turismo)."
-                ],
-
-                riscos: [
-                    "1. Insolação: O erro nº 1 dos turistas. O sol queima muito.",
-                    "2. Acidentes em Brinquedos: Não desrespeite as regras de segurança dos tobogãs.",
-                    "3. Furtos: Não deixe celulares e carteiras sozinhos nas espreguiçadeiras.",
-                    "4. Piso Molhado: Crianças correndo em volta da piscina escorregam e se machucam.",
-                    "5. Crianças Perdidas: Marque ponto de encontro, os parques são labirintos.",
-                    "6. Otite: Dor de ouvido por entrada de água.",
-                    "7. Golpes de Aluguel: Cuidado com casas muito baratas na internet.",
-                    "8. Venda de Cotas: Vendedores de resort abordam na rua insistentemente.",
-                    "9. Trânsito na Estrada: Rodovias de pista simples requerem atenção.",
-                    "10. Intoxicação Alimentar: Cuidado com o que come fora dos estabelecimentos confiáveis."
-                ],
-
-                roteiros: {
-                    "curto": {
-                        titulo: "Fim de Semana (2 Dias)",
-                        texto: [
-                            "Sábado: Thermas dos Laranjais (foque nos brinquedos principais).",
-                            "Domingo: Hot Beach (manhã relaxante) e retorno após o almoço."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Feriadão (3-4 Dias)",
-                        texto: [
-                            "Dia 1: Chegada e piscina do hotel.",
-                            "Dia 2: Thermas dos Laranjais (Dia Radical).",
-                            "Dia 3: Thermas (Dia Família/Praia) ou Vale dos Dinossauros.",
-                            "Dia 4: Compras no centrinho e retorno."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Férias de Verão (5 Dias)",
-                        texto: [
-                            "Dias 1-3: Alternar parques aquáticos.",
-                            "Dia 4: Atrações Secas (Museu de Cera, Dinos, Realidade Virtual).",
-                            "Dia 5: Descanso no resort e Museu do Folclore."
-                        ]
-                    },
-                },
-
-                links: {
-                    hotel: "https://www.booking.com/city/br/olimpia.pt-br.html", 
-                    passeio: "https://www.termas.com.br/", 
-                    seguro: "https://www.segurospromo.com.br" 
-                },
-            },
-            {
-                name: "Maragogi",
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Praia_de_Barra_Grande.jpg/960px-Praia_de_Barra_Grande.jpg",
-                tags: ["Praia", "Caribe Brasileiro", "Mergulho"],
-                mapa: "https://goo.gl/maps/maragogi",
-                clima: "Tropical. Sol o ano todo. Chuvas concentradas entre Abril e Julho (água pode turvar).",
-                
-                // === DADOS DO VEREDICTO ===
-                veredicto: {
-                    melhor_epoca: "Outubro a Janeiro (Mar mais transparente e menos chuva). Evite o inverno se quiser o 'azul caribe'.",
-                    ideal_para: [
-                        "Amantes de Praia (Água morna, calma e azul-turquesa)",
-                        "Famílias com crianças (Mar sem ondas na maré baixa)",
-                        "Casais (Pousadas charmosas e clima romântico)",
-                        "Fotógrafos (O Caminho de Moisés e os corais são surreais)"
-                    ],
-                    nao_ideal_para: [
-                        "Quem busca agito noturno (A cidade dorme cedo, é bem parada à noite)",
-                        "Surfistas (O mar é uma piscina)",
-                        "Quem não gosta de acordar cedo (Os passeios dependem da maré, às vezes às 5h da manhã)"
-                    ],
-                    perfis: [
-                        { icone: "ri-anchor-fill", nome: "Mar" },
-                        { icone: "ri-sun-fill", nome: "Sol" },
-                        { icone: "ri-camera-lens-fill", nome: "Paisagem" },
-                        { icone: "ri-user-heart-fill", nome: "Relax" }
-                    ]
-                },
-                // =================================
-
-                pontos_turisticos: [
-                    "1. Galés de Maragogi: As piscinas naturais principais. Só vá na maré baixa (0.0 a 0.6).",
-                    "2. Caminho de Moisés (Barra Grande): Um banco de areia que abre mar adentro na maré baixa. Imperdível.",
-                    "3. Praia de Antunes: A mais famosa e bonita. Água azul neon e coqueiros inclinados.",
-                    "4. Passeio de Buggy: Percorre o litoral norte (Burgalhau, Barra Grande, Antunes, Xaréu).",
-                    "5. Praia de Xaréu: Ótima para banho, menos lotada que Antunes.",
-                    "6. Ponta de Mangue: Praia de águas mornas e esverdeadas, quase na divisa com PE.",
-                    "7. Piscinas de Taocas e Barra Grande: Alternativas às Galés principais (menos cheias e mais preservadas).",
-                    "8. Mirante do Cruzeiro: A vista panorâmica da cidade e do mar.",
-                    "9. Ruínas de São Bento: No litoral sul, história e bolo de goma.",
-                    "10. Japaratinga: Cidade vizinha (ao sul) que vale o bate-volta ou esticada."
-                ],
-
-                gastronomia: [
-                    "1. Bolo de Goma: O 'sequilho' de Maragogi. Feito de manteiga e coco, derrete na boca. Compre na fábrica da Tia Marlene.",
-                    "2. Lagosta: Prato típico e farto na região.",
-                    "3. Peixada: Com leite de coco e dendê.",
-                    "4. Tapioca: Clássico nordestino no café da manhã ou jantar.",
-                    "5. Sururu: Molusco pequeno servido ao coco ou no caldo.",
-                    "6. Camarão no Coco: Servido dentro do coco verde.",
-                    "7. Carne de Sol com Macaxeira: Para quem cansar de frutos do mar.",
-                    "8. Sorvete de Graviola: Fruta comum na região.",
-                    "9. Água de Coco: Barata e fresca em qualquer quiosque.",
-                    "10. Caipifruta: De cajá, seriguela ou pitanga."
-                ],
-
-                religiao: [
-                    "1. Igreja de Santo Antônio: Padroeiro da cidade. A igreja fica na orla principal.",
-                    "2. Ruínas da Igreja de São Bento: Um mosteiro antigo inacabado à beira-mar.",
-                    "3. Festas de Padroeiro: Junho tem procissões e quermesses.",
-                    "4. Iemanjá: Oferendas no mar são comuns no Réveillon e 2 de Fevereiro.",
-                    "5. Fé dos Pescadores: As jangadas costumam ter nomes de santos para proteção no mar.",
-                    "6. Capelinhas de Praia: Comuns em propriedades privadas e pousadas.",
-                    "7. Igrejas Evangélicas: Presentes nos bairros residenciais.",
-                    "8. Cruzeiro: O alto do morro tem uma cruz que protege a cidade.",
-                    "9. Benzimentos: Tradição antiga contra 'mau-olhado' ainda existe.",
-                    "10. Misticismo das Marés: O povo local vive regido pela lua e pela maré."
-                ],
-
-                curiosidades: [
-                    "1. Tábua de Marés: É a Bíblia de Maragogi. Se a maré estiver alta (acima de 0.6), NÃO tem piscina natural. Planeje a viagem pela lua (Lua Cheia e Nova = Maré Baixa).",
-                    "2. APA Costa dos Corais: É a maior área de proteção ambiental marinha do Brasil.",
-                    "3. Caribe Brasileiro: O apelido pegou por causa da cor da água, que lembra muito Cancun.",
-                    "4. Gatos de Praia: Na praia de Antunes, muitos gatos vivem nos coqueirais e interagem com turistas.",
-                    "5. Salinas Maragogi: Um dos resorts all-inclusive mais premiados da América do Sul fica aqui.",
-                    "6. Bolacha Maragogi: O bolo de goma é tão famoso que é exportado para outros estados.",
-                    "7. Sem Ondas: A barreira de corais segura o mar, formando uma lagoa gigante.",
-                    "8. Buggy Credenciado: Só bugueiros credenciados (colete colorido) podem rodar nas praias.",
-                    "9. Divisa: Fica exatamente no meio do caminho entre Maceió e Recife (130km para cada lado).",
-                    "10. Peixinhos: Eles vêm comer na mão (mas evite alimentar com pão, faz mal)."
-                ],
-
-                eventos_estacoes: [
-                    "1. Festival da Lagosta (Setembro): Pratos especiais com desconto nos restaurantes.",
-                    "2. Réveillon: A cidade lota. Algumas festas privadas famosas (como Réveillon Mil Sorrisos) acontecem perto.",
-                    "3. Carnaval: Blocos de rua tradicionais e muita gente na praia.",
-                    "4. Verão (Dez-Mar): Água quente, sol forte e cidade cheia.",
-                    "5. Inverno (Mai-Ago): Chove. Se chover muito, a água fica turva ('barrenta') por causa dos rios.",
-                    "6. São João: Comemorado com forró e milho, mas menos intenso que no interior.",
-                    "7. Maré Viva (Luas Cheia/Nova): Quinzenalmente, a maré seca muito e formam-se as piscinas.",
-                    "8. Maré Morta (Luas Crescente/Minguante): A maré não seca tanto, ruim para passeios.",
-                    "9. Feriados: A cidade sempre lota de turistas de Maceió e Recife.",
-                    "10. Baixa Temporada: Abril, Maio, Agosto (preços bons, mas risco de chuva)."
-                ],
-
-                info_gerais: [
-                    "1. Tábua de Marés (DE NOVO): Consulte antes de ir. Maré 0.0 a 0.5 é excelente. 0.6 é aceitável. Acima de 0.7, não vá às Galés.",
-                    "2. Voltagem: 220V. Se levar secador 110V, vai queimar.",
-                    "3. Dinheiro: Leve espécie para pagar a travessia de barco menor ou comprar coco na areia.",
-                    "4. Aeroporto: Você pode descer em Maceió (MCZ) ou Recife (REC). A distância é quase a mesma (~2h30 de carro).",
-                    "5. Protetor Solar: O sol reflete na areia branca e na água. Queima muito.",
-                    "6. Sapatilha de Neoprene: Essencial para não cortar o pé nos corais ou pisar em ouriços.",
-                    "7. Transfer: O Uber é difícil para longas distâncias. Contrate transfer ou alugue carro.",
-                    "8. Centro x Praias: O centro de Maragogi é feio e tem praia urbana comum. As praias bonitas (Antunes, Barra Grande) ficam ao norte (5-10km). Fique hospedado lá se puder.",
-                    "9. Água: Beba mineral.",
-                    "10. Internet: 4G funciona bem, mas falha em praias isoladas."
-                ],
-
-                antes_de_ir: [
-                    "1. OLHE A LUA: Marque a viagem na Lua Cheia ou Lua Nova (maré baixa de manhã).",
-                    "2. Reserve o Passeio: As Galés têm limite de visitantes por dia (cota ambiental). Reserve antes.",
-                    "3. Snorkel: Se tiver o seu, leve. Os alugados são muito usados.",
-                    "4. Câmera Subaquática: GoPro ou capinha de celular é obrigatório.",
-                    "5. Carro: Vale a pena alugar para ir nas praias vizinhas (Japaratinga, São Miguel dos Milagres).",
-                    "6. Repelente: Tem pernilongo à noite.",
-                    "7. Roupas UV: Proteção solar é vital.",
-                    "8. Dinheiro Trocado: Para gorjetas e ambulantes.",
-                    "9. Horário dos Passeios: Muda todo dia conforme a maré. Esteja disposto a acordar 4h da manhã se necessário.",
-                    "10. Paciência com o Atendimento: O ritmo do litoral é 'devagar'. Relaxe."
-                ],
-
-              numeros: [
-                    "1. 190 (Polícia Militar).",
-                    "2. 192 (SAMU).",
-                    "3. (82) 3296-1657 (Delegacia Civil - 92º DP).",
-                    "4. (82) 3296-1406 (UPA 24h Maragogi - Santo Antônio).",
-                    "5. (82) 98164-3813 (Secretaria de Turismo / Prefeitura - Zap).",
-                    "6. (82) 3036-5200 (Aeroporto Maceió) / (81) 3464-4188 (Aeroporto Recife).",
-                    "7. 0800 009 7325 (Real Alagoas - Ônibus).",
-                    "8. (82) 3296-1206 (Prefeitura Geral).",
-                    "9. Associação de Bugueiros: Não tem telefone fixo, agende na recepção da sua pousada (é mais seguro).",
-                    "10. Bancos: BB, Caixa e Bradesco (Centro de Maragogi)."
-                ],
-
-                riscos: [
-                    "1. Ouriços do Mar: Eles ficam nas pedras. Se pisar, dói muito e infecciona. Olhe onde pisa.",
-                    "2. Corais Cortantes: Não suba nos corais (é proibido e corta).",
-                    "3. Queimadura Solar: O índice UV é extremo.",
-                    "4. Maré Enchendo: No Caminho de Moisés, a maré sobe rápido. Se você for muito longe, pode ter que voltar nadando. Cuidado!",
-                    "5. Águas Vivas: Ocorrem em certas épocas.",
-                    "6. Passeios Piratas: Barqueiros sem licença que levam a lugares sem peixe. Exija credencial.",
-                    "7. Preços de Praia: Barracas famosas cobram caro. Pergunte o preço antes.",
-                    "8. Trânsito na AL-101: Estrada pista simples, sinuosa e às vezes esburacada.",
-                    "9. Furto na Areia: Não deixe coisas sozinhas no Caminho de Moisés.",
-                    "10. Desidratação: Beba água de coco constante."
-                ],
-
-                roteiros: {
-                    "curto": {
-                        titulo: "Bate-volta ou 2 Dias",
-                        texto: [
-                            "Dia 1: Passeio às Galés (na hora da maré baixa) + Tarde na Praia de Antunes.",
-                            "Dia 2: Passeio de Buggy pelo litoral Norte (Barra Grande/Caminho de Moisés)."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Relax Caribe (4 Dias)",
-                        texto: [
-                            "Dias 1-2: Siga o roteiro curto.",
-                            "Dia 3: Bate-volta a Japaratinga (balsa) e Mirante do Aruanã.",
-                            "Dia 4: Dia livre em um Beach Club (como o Barra Mar ou Pontal) ou Praia de Xaréu."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Costa dos Corais (6-7 Dias)",
-                        texto: [
-                            "Dias 1-4: Roteiro médio.",
-                            "Dia 5: Bate-volta a São Miguel dos Milagres (Praia do Patacho).",
-                            "Dia 6: Praia de Carneiros (PE) - fica a 1h de distância.",
-                            "Dia 7: Compras de artesanato e bolo de goma no centro."
-                        ]
-                    },
-                },
-
-                links: {
-                    hotel: "https://www.booking.com/city/br/maragogi.pt-br.html", 
-                    passeio: "https://www.tripadvisor.com.br/Attractions-g303340-Activities-Maragogi_State_of_Alagoas.html", 
-                    seguro: "https://www.segurospromo.com.br" 
-                },
-            },
-            {
-                name: "Jericoacoara",
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Anderps_067.JPG/960px-Anderps_067.JPG",
-                tags: ["Praia", "Dunas", "Kitesurf"],
-                mapa: "https://goo.gl/maps/jericoacoara",
-                clima: "Tropical Semiárido. Venta MUITO (bom para kite) de Agosto a Dezembro. Chuvas de Março a Maio.",
-                
-                // === DADOS DO VEREDICTO ===
-                veredicto: {
-                    melhor_epoca: "Julho a Janeiro (Sol garantido e ventos fortes). Fevereiro a Maio chove e as lagoas enchem.",
-                    ideal_para: [
-                        "Kitesurfistas e Windsurfistas (É a meca mundial dos ventos)",
-                        "Casais (Pousadas charmosas e jantar à luz de velas)",
-                        "Jovens (A vida noturna nas ruas de areia é agitada)",
-                        "Amantes de Natureza (Dunas, lagoas e mangues)"
-                    ],
-                    nao_ideal_para: [
-                        "Quem tem dificuldade de locomoção (NÃO existe asfalto, é tudo areia fofa)",
-                        "Quem odeia vento na cara (O vento é constante e leva areia)",
-                        "Quem busca acesso fácil (A viagem de Fortaleza até lá é longa e balança)"
-                    ],
-                    perfis: [
-                        { icone: "ri-windy-fill", nome: "Vento/Kite" },
-                        { icone: "ri-sun-fill", nome: "Sol" },
-                        { icone: "ri-cactus-fill", nome: "Rústico" },
-                        { icone: "ri-moon-clear-fill", nome: "Vida Noturna" }
-                    ]
-                },
-                // =================================
-
-                pontos_turisticos: [
-                    "1. Pedra Furada: O cartão-postal. Uma rocha com um buraco no meio esculpido pelo mar. Vá na maré baixa.",
-                    "2. Lagoa do Paraíso: Aquela das redes dentro da água azul-turquesa. Tem beach clubs famosos (Alchymist).",
-                    "3. Duna do Pôr do Sol: O ritual diário de subir a duna gigante ao lado da vila para ver o sol cair no mar.",
-                    "4. Buraco Azul: Uma lagoa artificial (de escavação) que encheu de água azul neon devido ao calcário. Virou febre.",
-                    "5. Árvore da Preguiça: Uma árvore deitada devido à força do vento constante.",
-                    "6. Passeio Lado Leste: Passa pela Árvore da Preguiça, Praia do Preá e Lagoa do Paraíso.",
-                    "7. Passeio Lado Oeste: Passa pelo Mangue Seco, Guriú (cavalos marinhos) e Tatajuba (dunas e tirolesa).",
-                    "8. Praia da Malhada: Praia preferida dos surfistas e mais tranquila, ao lado da vila.",
-                    "9. Centrinho de Jeri: Ruas de areia sem postes de luz (só a luz das lojas), charme total.",
-                    "10. Tatajuba: Um vilarejo soterrado pela areia e reconstruído. As lagoas lá são ótimas."
-                ],
-
-                gastronomia: [
-                    "1. Torta de Banana: Doce típico vendido por ambulantes na praia e nas ruas.",
-                    "2. Peixe na Telha: Pargo ou Robalo fresco assado.",
-                    "3. Camarão no Abacaxi: Clássico tropical servido nos restaurantes da praia.",
-                    "4. Tapioca: Recheada com carne de sol ou queijo coalho.",
-                    "5. Dadinho de Tapioca: Petisco onipresente.",
-                    "6. Lagosta: Em épocas permitidas, é mais barata que no sudeste.",
-                    "7. Caipirinha de Seriguela: Fruta local deliciosa.",
-                    "8. Sorvete de Rapadura: Sabor exótico e regional.",
-                    "9. Crepioca: Mistura de crepe com tapioca.",
-                    "10. Pastel de Arraia: Comum nas barracas de praia."
-                ],
-
-                religiao: [
-                    "1. Igreja Nossa Senhora do Rosário de Fátima: Uma igrejinha de pedra linda, construída pelos moradores.",
-                    "2. Misticismo: Jeri atrai muita gente ligada a energias, yoga e meditação.",
-                    "3. Natureza Sagrada: O respeito pelas dunas e pelo mar é quase religioso para os locais.",
-                    "4. Festas de Santo: Procissões simples acontecem nas datas litúrgicas.",
-                    "5. Iemanjá: O Réveillon na praia tem muitas oferendas.",
-                    "6. Capoeira: Rodas de capoeira na praia ao pôr do sol misturam esporte e espiritualidade.",
-                    "7. Benzedeiras: Cultura do sertão cearense.",
-                    "8. Lendas: Histórias de cidades encantadas soterradas pelas dunas.",
-                    "9. Ecumenismo: A vila recebe o mundo todo, há muita tolerância.",
-                    "10. Pôr do Sol: O momento em que todos param e aplaudem o sol é um ritual diário."
-                ],
-
-                curiosidades: [
-                    "1. Sem Iluminação Pública: As ruas não têm postes de luz para não ofuscar a luz da lua e das estrelas. A fiação é subterrânea.",
-                    "2. Areia em Tudo: Não leve salto alto ou sapato fechado. Você vai andar na areia fofa 100% do tempo, inclusive dentro das lojas.",
-                    "3. Parque Nacional: Jeri fica dentro de um parque protegido, por isso não pode construir prédios altos.",
-                    "4. Taxa de Turismo: Paga-se uma taxa diária por pessoa para entrar na vila (sustentabilidade).",
-                    "5. Acesso: Carro comum não chega. Tem que deixar em Jijoca e pegar uma 'Jardineira' (caminhonete 4x4) ou ter um 4x4 próprio.",
-                    "6. Washington Post: O jornal americano elegeu Jeri uma das praias mais bonitas do mundo nos anos 90, o que explodiu o turismo.",
-                    "7. Cavalos Marinhos: No passeio do Guriú, barqueiros levam para ver cavalos marinhos no mangue.",
-                    "8. Ventos Alísios: A posição geográfica faz ventar o ano todo, perfeito para Kite.",
-                    "9. Enterrada: A antiga vila de Tatajuba foi engolida pelas dunas móveis.",
-                    "10. Aeroporto Próprio: Agora tem o Aeroporto de Jericoacoara (JJD) na cidade vizinha (Cruz), facilitando muito."
-                ],
-
-                eventos_estacoes: [
-                    "1. Réveillon John John: Uma das festas de virada de ano mais caras e famosas do Brasil (5 dias de festa).",
-                    "2. Carnaval: A vila lota, bloquinhos na areia.",
-                    "3. Temporada de Kite (Ago-Dez): O céu fica colorido de pipas. Campeonatos mundiais acontecem aqui.",
-                    "4. Festival de Gastronomia: Ocorre em algumas épocas, valorizando o tempero local.",
-                    "5. Inverno (Mar-Mai): É a época da chuva. As lagoas enchem, mas o sol aparece menos. Preços caem.",
-                    "6. Verão (Dez-Fev): Sol forte, vila cheia, balada todo dia.",
-                    "7. Feriados: Sempre lotado. Reserve pousada com meses de antecedência.",
-                    "8. Pôr do Sol Diário: O 'evento' gratuito que ninguém perde.",
-                    "9. Forró: Às quartas e sábados, o forró tradicional pega fogo.",
-                    "10. Luau: Festas espontâneas na praia em noites de lua cheia."
-                ],
-
-                info_gerais: [
-                    "1. Taxa de Turismo: Pague antecipado no site da Prefeitura de Jijoca para evitar fila na entrada. Guarde o comprovante!",
-                    "2. Transporte: Não tente ir de carro de passeio (fWD) até a vila. Vai atolar. Deixe no estacionamento em Jijoca.",
-                    "3. Dinheiro: Tem caixa eletrônico e lotérica, mas o sinal cai. Leve dinheiro vivo, alguns passeios de buggy preferem.",
-                    "4. Calçados: Chinelo é o único calçado necessário. Tênis só se for correr.",
-                    "5. Malas: Evite malas de rodinha. Arrastar rodinha na areia fofa por 500 metros até a pousada é um inferno. Use mochila.",
-                    "6. Internet: Wi-Fi das pousadas é ok, 4G oscila.",
-                    "7. Voltagem: 220V.",
-                    "8. Saúde: Tem uma UPA 24h (Unidade de Pronto Atendimento), mas casos graves vão para Sobral ou Fortaleza (longe).",
-                    "9. Protetor Solar: O vento engana, mas o sol queima muito.",
-                    "10. Buggy: Só contrate credenciados. Acidentes nas dunas são perigosos."
-                ],
-
-                antes_de_ir: [
-                    "1. Pague a Taxa: Gere o boleto da Taxa de Turismo Sustentável online.",
-                    "2. Transfer: Se chegar por Fortaleza, são 4h a 5h de viagem. Contrate um 4x4 compartilhado ou ônibus 'Fretcar'.",
-                    "3. Mochila: Troque a mala rígida por mochila ou mala de mão fácil de carregar.",
-                    "4. Óculos de Sol: O reflexo na areia branca incomoda.",
-                    "5. Repelente: Tem mosquito, principalmente perto do mangue.",
-                    "6. Roupas: Leve roupas leves e de secagem rápida. Nada de roupa social.",
-                    "7. Dinheiro: Saque antes de ir para garantir.",
-                    "8. Hidratação: O clima seco e vento desidratam.",
-                    "9. Lua: Tente ir na lua cheia ou nova (marés influenciam a Pedra Furada e beleza das lagoas).",
-                    "10. Baterias: Leve powerbank, os passeios duram o dia todo."
-                ],
-
-                numeros: [
-                    "1. 190 (Polícia Militar).",
-                    "2. UPA Jericoacoara: (88) 98126-7756 (Atendimento emergencial na vila).",
-                    "3. (88) 3669-1133 (Prefeitura Jijoca).",
-                    "4. 193 (Bombeiros - base mais próxima em Marco/CE).",
-                    "5. Aeroporto de Jeri (JJD): Em Cruz, a 30km da vila.",
-                    "6. Aeroporto de Fortaleza (FOR): A 300km.",
-                    "7. Fretcar (Ônibus): Empresa oficial que faz o trajeto Fortaleza-Jeri.",
-                    "8. Associação dos Bugueiros: Peça indicação na pousada.",
-                    "9. Delegacia de Polícia Civil: Em Jijoca.",
-                    "10. Farmácias: Existem várias na rua principal."
-                ],
-
-                riscos: [
-                    "1. Insolação: O vento mascara o calor. Use boné.",
-                    "2. Atolamento: Turistas que tentam entrar de carro na areia sempre atolam e pagam caro para rebocar.",
-                    "3. Acidentes de Buggy: Peça para o motorista ir 'sem emoção' se estiver inseguro. Dunas cortadas são perigosas.",
-                    "4. Afogamento: Cuidado nas lagoas fundas se não souber nadar (use colete).",
-                    "5. Arraias: Na praia da Malhada, ande arrastando o pé para não pisar em arraias na areia.",
-                    "6. Bicho de Pé: Como se anda descalço e tem animais (jumentos/cavalos), pode acontecer. Use chinelo.",
-                    "7. Furto: Na praia ou na duna do pôr do sol, cuide do celular.",
-                    "8. Kitesurf: Cuidado ao nadar em áreas de kite. As linhas cortam e a prancha machuca.",
-                    "9. Balada: Cuidado com bebidas batizadas ('Boa Noite Cinderela') em festas aglomeradas.",
-                    "10. Vidro na Areia: Atenção onde pisa na volta das festas."
-                ],
-
-                roteiros: {
-                    "curto": {
-                        titulo: "Essencial Jeri (3 Dias)",
-                        texto: [
-                            "Dia 1: Chegada, Check-in e Duna do Pôr do Sol.",
-                            "Dia 2: Passeio de Buggy Lado Leste (Pedra Furada, Árvore da Preguiça, Lagoa do Paraíso).",
-                            "Dia 3: Manhã na Praia da Malhada e retorno."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Lagoas e Dunas (5 Dias)",
-                        texto: [
-                            "Dias 1-2: Siga o roteiro curto.",
-                            "Dia 3: Passeio de Buggy Lado Oeste (Cavalos Marinhos, Mangue Seco, Tatajuba).",
-                            "Dia 4: Dia relax no Beach Club Alchymist (Lagoa do Paraíso) ou Buraco Azul.",
-                            "Dia 5: Caminhada até a Pedra Furada pela manhã (maré baixa) e compras."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Vibe Completa (7 Dias)",
-                        texto: [
-                            "Dias 1-5: Siga o roteiro médio.",
-                            "Dia 6: Aula de Kitesurf ou Windsurf no Preá.",
-                            "Dia 7: Dia livre para curtir a vila, massagem e açaí."
-                        ]
-                    },
-                },
-
-                links: {
-                    hotel: "https://www.booking.com/city/br/jericoacoara.pt-br.html", 
-                    passeio: "https://www.jijocadejericoacoara.ce.gov.br/", // Site para taxa de turismo
-                    seguro: "https://www.segurospromo.com.br" 
-                },
-            },
-            {
-                name: "Fernando de Noronha",
-                imagem: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/EDUARDO_MURUCI_-_BAIA_DOS_PORCOS-%28recorte%29.jpg/960px-EDUARDO_MURUCI_-_BAIA_DOS_PORCOS-%28recorte%29.jpg",
-                tags: ["Paraíso", "Mergulho", "Exclusivo"],
-                mapa: "https://goo.gl/maps/noronha",
-                clima: "Tropical. Calor o ano todo. Chuvas de Abril a Julho. Mar calmo (Set-Out). Ondas/Surf (Dez-Mar).",
-                
-                // === DADOS DO VEREDICTO ===
-                veredicto: {
-                    melhor_epoca: "Setembro e Outubro (Mar piscina, melhor visibilidade). Evite Abril a Junho se não gosta de chuva.",
-                    ideal_para: [
-                        "Mergulhadores (Um dos melhores pontos do mundo)",
-                        "Amantes de Natureza (Santuário de vida marinha)",
-                        "Casais em Lua de Mel (Pousadas charmosas e exclusividade)",
-                        "Surfistas (Temporada de 'Swell' no verão)"
-                    ],
-                    nao_ideal_para: [
-                        "Orçamento Apertado (É o destino mais caro do Brasil)",
-                        "Quem busca Resort All-Inclusive (O luxo aqui é rústico e pé no chão)",
-                        "Quem tem dificuldade de locomoção (Trilhas em pedra, escadarias íngremes)",
-                        "Quem não gosta de regras (A ilha tem muitas proibições ambientais)"
-                    ],
-                    perfis: [
-                        { icone: "ri-anchor-fill", nome: "Mergulho" },
-                        { icone: "ri-money-dollar-circle-fill", nome: "Luxo Caro" },
-                        { icone: "ri-leaf-fill", nome: "Ecológico" },
-                        { icone: "ri-heart-fill", nome: "Romântico" }
-                    ]
-                },
-                // =================================
-
-                pontos_turisticos: [
-                    "1. Baía do Sancho: Eleita várias vezes a praia mais bonita do mundo. Acesso por escada vertical na fenda da rocha ou barco.",
-                    "2. Baía dos Porcos: A vista clássica do Morro Dois Irmãos. Ótima para snorkel, mas não tem areia para deitar.",
-                    "3. Praia do Sueste: Onde se nada com tartarugas gigantes e tubarões no raso (obrigatório colete).",
-                    "4. Praia do Leão: A maior concentração de desova de tartarugas. Mar agitado, lindo visual.",
-                    "5. Buraco do Galego: Piscina natural nas pedras da Praia do Cachorro (famosa no Instagram).",
-                    "6. Praia da Conceição: O 'point' do pôr do sol, futevôlei e barzinhos pé na areia.",
-                    "7. Mirante do Boldró: O local clássico para ver o pôr do sol com o Morro Dois Irmãos ao fundo.",
-                    "8. Praia do Atalaia: Um berçário marinho. Acesso restrito e controlado (precisa agendar e não pode usar protetor solar).",
-                    "9. Cacimba do Padre: Praia das ondas gigantes (Hawaii brasileiro) e base do Dois Irmãos.",
-                    "10. Capela de São Pedro: Vista linda do porto e local dos casamentos famosos."
-                ],
-
-                gastronomia: [
-                    "1. Bolinho de Tubarão (Tubalhau): No Museu do Tubarão. Feito com carne de tubarão legalizada (ou cação).",
-                    "2. Peixe na Folha de Bananeira: Clássico das pousadas, geralmente peixe Meca ou Cavala.",
-                    "3. Festival Gastronômico do Zé Maria: O buffet mais famoso da ilha (e caríssimo), acontece às quartas e sábados.",
-                    "4. Mergulhão: Restaurante com a melhor vista para o Pico e comida sofisticada.",
-                    "5. Açaí e Tapioca: Lanches mais acessíveis no centrinho da Vila dos Remédios.",
-                    "6. Frutos do Mar Frescos: Tudo é pescado ali. Lagosta e polvo são excelentes.",
-                    "7. Varanda: Restaurante premiado, o 'favorito' de quem visita sempre.",
-                    "8. Cacimba Bistrô: Famoso pelo Pastel de Lagosta.",
-                    "9. Xica da Silva: Comida brasileira reconfortante e muito elogiada.",
-                    "10. Bar do Meio: O bar mais badalado para drinks no pôr do sol (entre a Conceição e o Meio)."
-                ],
-
-                religiao: [
-                    "1. Igreja de Nossa Senhora dos Remédios: Patrimônio histórico do século XVIII, domina a paisagem da vila.",
-                    "2. Capela de São Pedro dos Pescadores: Pequena, branca e azul, no alto do porto.",
-                    "3. Natureza Divina: A 'religião' local é a preservação. Desrespeitar a natureza é sacrilégio.",
-                    "4. Lendas: A lenda da 'Alamoa', uma mulher fantasma que seduzia os presos (Noronha já foi presídio).",
-                    "5. Festas de Santo: A festa de São Pedro (junho) tem procissão marítima (Barqueata).",
-                    "6. Espiritualidade: Muitos buscam a ilha para reconexão e retiros de yoga.",
-                    "7. Iemanjá: Forte culto nas viradas de ano.",
-                    "8. Cruzeiro: Cruz de madeira na frente da igreja matriz.",
-                    "9. Forte dos Remédios: Local carregado de história e sofrimento dos antigos presos, hoje ponto turístico.",
-                    "10. Simplicidade: A comunidade local é muito unida e de fé simples."
-                ],
-
-                curiosidades: [
-                    "1. DUAS Taxas: Você paga para entrar na ilha (TPA - Governo) E para entrar nas praias (PARNAMAR - EcoNoronha). Prepare o bolso.",
-                    "2. Fuso Horário: Noronha tem fuso próprio (+1h em relação a Brasília).",
-                    "3. Presídio: Foi colônia penal até 1942. O presídio explodiu misteriosamente (dizem que foi para esconder condições desumanas).",
-                    "4. Parto Proibido: Grávidas não podem dar à luz na ilha (não tem estrutura de risco). Aos 7 meses, são enviadas para Recife.",
-                    "5. Tubarões: Tem muito tubarão (Lixa e Limão). Ataques são raríssimos, mas não tente pegar neles.",
-                    "6. Água: Não tem nascente doce suficiente. A água da torneira vem de dessalinização e é cara/escassa.",
-                    "7. Carros: É proibido levar carro de fora. A frota é controlada. O Buggy é o rei.",
-                    "8. Internet: É horrível. Mesmo o 4G é lento. Wi-Fi de pousada mal carrega foto.",
-                    "9. Menor BR: A ilha abriga a BR-363, a segunda menor rodovia federal do Brasil (7km).",
-                    "10. Visitantes Limitados: Há um limite de pessoas que podem dormir na ilha por noite."
-                ],
-
-                eventos_estacoes: [
-                    "1. Réveillon: Um dos mais famosos do país (festa do Zé Maria). Ingressos custam milhares de reais.",
-                    "2. Swell (Dez-Mar): Temporada de ondas grandes, campeonatos de surf e ilha cheia de surfistas.",
-                    "3. Maratona de Noronha (Dezembro): Corrida de rua no paraíso.",
-                    "4. Baixa Temporada (Abr-Jun): Preços caem um pouco por causa da chuva.",
-                    "5. Festival Gastronômico (Agosto): Evento na Pousada Zé Maria.",
-                    "6. Tartarugas (Dez-Mai): Temporada de desova (algumas praias fecham à noite).",
-                    "7. Barqueata de São Pedro (29 Jun): Procissão de barcos.",
-                    "8. Aniversário da Ilha (Agosto): Shows na praça.",
-                    "9. Lua Cheia: Os luaus espontâneos na Praia da Conceição.",
-                    "10. Refestival: Festival de música sustentável."
-                ],
-
-                info_gerais: [
-                    "1. PAGUE ANTES: Pague a TPA (Taxa de Preservação) online antes de ir. A fila no aeroporto para quem não pagou é gigante.",
-                    "2. Ingresso do Parque: Compre o ingresso da EcoNoronha (válido por 10 dias). Sem ele, você não entra no Sancho, Sueste ou Leão.",
-                    "3. Buggy: Alugar buggy é legal, mas caro (~R$ 500/dia + gasolina a R$ 10/litro). O ônibus passa em toda a BR e custa R$ 5.",
-                    "4. Colete Salva-Vidas: Obrigatório na Praia do Sueste (pode alugar lá).",
-                    "5. Plástico Zero: É proibido entrar na ilha com plásticos descartáveis (copos, garrafinhas de água mineral < 500ml). Leve seu squeeze.",
-                    "6. Água: Compre galão de 5L no mercado e encha sua garrafa. Comprar garrafinha toda hora quebra o orçamento.",
-                    "7. Mergulho: Se nunca mergulhou, faça o 'Batismo'. A visibilidade chega a 50 metros.",
-                    "8. Trilha Atalaia: Tem que agendar no ICMBio presencialmente. As vagas somem em minutos.",
-                    "9. Taxis: Têm preço tabelado. Peça a tabela na pousada.",
-                    "10. Hospital: Só tem o Hospital São Lucas (básico). Casos graves exigem salvamento aéreo (seguro é vital)."
-                ],
-
-                antes_de_ir: [
-                    "1. TPA Online: Entre no site oficial de Noronha e pague a taxa. Imprima o boleto/QR Code.",
-                    "2. Carteirinha Parque: Compre no site da PARNAMAR/EcoNoronha. Você retira o cartão físico lá ou usa o app.",
-                    "3. Snorkel Próprio: Alugar custa R$ 20-40 por dia. Levar o seu (máscara, snorkel e nadadeira) economiza muito.",
-                    "4. Dinheiro Vivo: O sinal de cartão cai. Leve espécie para emergências.",
-                    "5. Protetor Solar: Leve muito. Lá custa o dobro.",
-                    "6. Remédios: A farmácia da ilha é cara e limitada.",
-                    "7. Tênis: Para a trilha do Sancho e Atalaia.",
-                    "8. CNH: Se for alugar buggy, é obrigatória.",
-                    "9. GoPro: O lugar mais fotogênico embaixo d'água do Brasil.",
-                    "10. Reserva de Jantar: Os restaurantes famosos (Mergulhão, Cacimba) lotam. Reserve dias antes."
-                ],
-
-                numeros: [
-                    "1. (81) 3619-1352 (Hospital São Lucas).",
-                    "2. 190 (Polícia Militar).",
-                    "3. (81) 3619-0810 (Delegacia).",
-                    "4. (81) 3619-1171 (Aeroporto).",
-                    "5. ICMBio Noronha: (81) 3619-1174.",
-                    "6. Associação de Bugueiros: (81) 3619-1142.",
-                    "7. Conselho Distrital (Administração): (81) 3619-0900.",
-                    "8. Porto de Santo Antônio: (81) 3619-1313.",
-                    "9. Taxi Noronha: (81) 3619-1314.",
-                    "10. Centro de Visitantes (ICMBio): Na Vila do Boldró."
-                ],
-
-                riscos: [
-                    "1. Afogamento: O mar muda rápido. Respeite as bandeiras vermelhas, especialmente no Leão e Cacimba.",
-                    "2. Pedras: Na Baía dos Porcos, as pedras vulcânicas cortam o pé. Use sapatilha.",
-                    "3. Multas Ambientais: Tocar em tartaruga, pisar em coral ou alimentar animais dá multa federal pesada.",
-                    "4. Mabuya: Um lagarto (tipo calango) invasor que está em todo lugar. Eles entram na bolsa e comem sua comida. Não deixe a bolsa aberta.",
-                    "5. Escadas do Sancho: Não é para quem tem vertigem ou problemas cardíacos. É uma fenda estreita.",
-                    "6. Desidratação: O sol é muito forte e venta muito.",
-                    "7. Acidente de Buggy: Muitos turistas inexperientes capotam ou batem. Dirija devagar.",
-                    "8. Preço Surpresa: Pergunte o preço antes de tudo. 'Preço de ilha' assusta.",
-                    "9. Golpes de Acomodação: Reserve em sites confiáveis. Tem gente vendendo casa que não existe.",
-                    "10. Tubarões: No Sueste e Porto é comum ver. Não tente cercar o animal para foto."
-                ],
-
-                roteiros: {
-                    "curto": {
-                        titulo: "O Essencial (3 Dias)",
-                        texto: [
-                            "Dia 1: Ilha Tour (passeio de dia inteiro de buggy para conhecer tudo). Pôr do sol no Boldró.",
-                            "Dia 2: Manhã no Sancho (a mais bonita) e Baía dos Porcos. Tarde no Sueste (snorkel).",
-                            "Dia 3: Passeio de Barco (ver golfinhos) e Praia da Conceição."
-                        ]
-                    },
-                    "medio": {
-                        titulo: "Mergulho e Trilhas (5 Dias)",
-                        texto: [
-                            "Dias 1-3: Siga o roteiro curto.",
-                            "Dia 4: Mergulho de cilindro (Porto) ou batismo. Tarde na Cacimba do Padre.",
-                            "Dia 5: Trilha do Atalaia (se conseguir vaga) ou Buraco do Galego."
-                        ]
-                    },
-                    "longo": {
-                        titulo: "Vida de Ilhéu (7 Dias)",
-                        texto: [
-                            "Dias 1-5: Siga o roteiro médio.",
-                            "Dia 6: Praia do Leão (passar o dia, levar lanche).",
-                            "Dia 7: Manhã livre para compras e almoço no Museu do Tubarão."
-                        ]
-                    },
-                },
-
-                links: {
-                    hotel: "https://www.booking.com/city/br/fernando-de-noronha.pt-br.html", 
-                    passeio: "https://www.parnanoronha.com.br/", // Site oficial dos ingressos
-                    seguro: "https://www.segurospromo.com.br" 
-                },
-            },
-            
-
-        ],
         "Argentina": [
             {
                 name: "Buenos Aires",
@@ -17166,27 +17193,17 @@ const cityCoordinates = {
     "Cartagena": [10.3910, -75.4794],
     "Bogotá": [4.7110, -74.0721],
     "Lima": [-12.0464, -77.0428],
-    "Cusco": [-13.5320, -71.9675],
     "Fernando de Noronha": [-3.8577, -32.4278],
     "Foz do Iguaçu": [-25.5469, -54.5882],
     "Florianópolis": [-27.5954, -48.5480],
     "Salvador": [-12.9777, -38.5016],
     "Jericoacoara": [-2.7933, -40.5136],
-    "Lençóis Maranhenses": [-2.4859, -43.1284],
     "Gramado": [-29.3746, -50.8764],
     "Maragogi": [-9.0122, -35.2226],
-    "Ouro Preto": [-20.3856, -43.5035],
     "Bonito": [-21.1215, -56.4819],
-    "Jalapão": [-10.5686, -46.8856],
-    "Capitólio": [-20.6148, -46.0504],
-    "Chapada dos Veadeiros": [-14.1336, -47.5216],
-    "Inhotim": [-20.1246, -44.2202],
     "Ilhabela": [-23.7781, -45.3577],
-    "Paraty": [-23.2221, -44.7190],
-    "Tulum": [20.2114, -87.4654],
     "Ushuaia": [-54.8019, -68.3030],
-    "Deserto do Atacama": [-22.9087, -68.1997],
-    "Salar de Uyuni": [-20.1338, -67.4891]
+   
 };
 
 let map; 

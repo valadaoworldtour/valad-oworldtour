@@ -1,49 +1,17 @@
 
-const countryFlags = { 
-    "Brasil": "br", 
-    "Portugal": "pt", 
-    "Marrocos": "ma", 
-    "Japão": "jp", 
-    "Austrália": "au", 
-    "Estados Unidos": "us", 
-    "Argentina": "ar", 
-    "Espanha": "es", 
-    "França": "fr", 
-    "Chile": "cl", 
-    "Inglaterra": "gb", 
-    "Itália": "it", 
-    "República Dominicana": "do", 
-    "México": "mx", 
-    "Colômbia": "co",
-    "Uruguai": "uy",
-    "Panamá": "pa",
-    "Peru": "pe",
-    "Alemanha": "de",
-    // Novos adicionados:
-    "Emirados Árabes Unidos": "ae",
-    "Canadá": "ca",
-    "República Tcheca": "cz",
-    "Holanda": "nl"
-};
+let countryFlags = {};
+let categoryEmojis = {};
 
-const categoryEmojis = {
-    "Monumento": "🗽",
-    "Sítio": "🗿",
-    "Parque": "🌲",
-    "Arquitetura": "🏛️",
-    "Ícone Urbano": "🏙️",
-    "Templo": "⛩️",
-    "Maravilha Natural": "🌊",
-    "Patrimônio Mundial": "🌍",
-    "Montanha": "🏔️",
-    
-    // Regiões do Brasil
-    "Sul": "🧉",          // Chimarrão
-    "Nordeste": "☀️",     // Sol e Calor
-    "Sudeste": "🌇",      // Grandes Cidades
-    "Norte": "🌳",        // Floresta/Amazônia
-    "Centro Oeste": "🐆"  // Pantanal/Natureza
-};
+async function loadEmojis() {
+    try {
+        const response = await fetch('emoji.json');
+        const data = await response.json();
+        countryFlags = data.countryFlags;
+        categoryEmojis = data.categoryEmojis;
+    } catch (error) {
+        console.error("Erro ao carregar emojis:", error);
+    }
+}
 // --- CONFIGURAÇÃO GLOBAL ---
 
 const defaultImage = "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop";
@@ -16376,7 +16344,8 @@ function updateVerdict(cidade) {
 
 /* LÓGICA DO SISTEMA */
 
-function init() { 
+async function init() { 
+    await loadEmojis();
     renderSidebar();
     fixSidebarLayout();
     //   initRightSidebar();

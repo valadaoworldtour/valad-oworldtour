@@ -1,0 +1,43 @@
+{
+    "countryFlags": { 
+        "Brasil": "br", 
+        "Portugal": "pt", 
+        "Marrocos": "ma", 
+        "Japão": "jp", 
+        "Austrália": "au", 
+        "Estados Unidos": "us", 
+        "Argentina": "ar", 
+        "Espanha": "es", 
+        "França": "fr", 
+        "Chile": "cl", 
+        "Inglaterra": "gb", 
+        "Itália": "it", 
+        "República Dominicana": "do", 
+        "México": "mx", 
+        "Colômbia": "co",
+        "Uruguai": "uy",
+        "Panamá": "pa",
+        "Peru": "pe",
+        "Alemanha": "de",
+        "Emirados Árabes Unidos": "ae",
+        "Canadá": "ca",
+        "República Tcheca": "cz",
+        "Holanda": "nl"
+    },
+    "categoryEmojis": {
+        "Monumento": "🗽",
+        "Sítio": "🗿",
+        "Parque": "🌲",
+        "Arquitetura": "🏛️",
+        "Ícone Urbano": "🏙️",
+        "Templo": "⛩️",
+        "Maravilha Natural": "🌊",
+        "Patrimônio Mundial": "🌍",
+        "Montanha": "🏔️",
+        "Sul": "🧉",
+        "Nordeste": "☀️",
+        "Sudeste": "🌇",
+        "Norte": "🌳",
+        "Centro Oeste": "🐆"
+    }
+}

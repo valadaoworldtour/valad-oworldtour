@@ -1,0 +1,24 @@
+{
+  "name": "valadao-tour",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/mayconjr1025/valad-oworldtour#readme",
+  "bugs": {
+    "url": "https://github.com/mayconjr1025/valad-oworldtour/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayconjr1025/valad-oworldtour.git"
+  },
+  "license": "ISC",
+  "author": "Maycon Junior",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "4.17.1"
+  }
+}

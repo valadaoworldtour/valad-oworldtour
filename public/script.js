@@ -4,9 +4,10 @@ let categoryEmojis = {};
 let realCostData = {}; // New global variable
 let worldData = {};
 
+// 1. Carregar Emojis
 async function loadEmojis() {
     try {
-        const response = await fetch('emoji.json');
+        const response = await fetch('/api/emojis'); // Rota da sua API
         const data = await response.json();
         countryFlags = data.countryFlags;
         categoryEmojis = data.categoryEmojis;
@@ -15,21 +16,23 @@ async function loadEmojis() {
     }
 }
 
+// 2. Carregar Custos
 async function loadRealCostData() {
     try {
-        const response = await fetch('cidade1.json');
+        const response = await fetch('/api/costs'); // Rota da sua API
         realCostData = await response.json();
     } catch (error) {
-        console.error("Erro ao carregar cidade1.json:", error);
+        console.error("Erro ao carregar custos:", error);
     }
 }
 
+// 3. Carregar Destinos
 async function loadWorldData() {
     try {
-        const response = await fetch('world.json');
+        const response = await fetch('/api/world'); // Rota da sua API
         worldData = await response.json();
     } catch (error) {
-        console.error("Erro ao carregar world.json:", error);
+        console.error("Erro ao carregar destinos:", error);
     }
 }
 // --- CONFIGURAÇÃO GLOBAL ---

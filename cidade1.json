@@ -464,6 +464,81 @@
             "idioma": "Português"
         }
     },
+    "Paraty": {
+    "comida": "R$ 60 – R$ 150",
+    "hospedagem": "R$ 200 – R$ 600",
+    "transporte": "R$ 20 – R$ 50",
+    "atracoes": "R$ 50 – R$ 200",
+    "checklist": {
+        "passaporte": "Nenhum (brasileiro)",
+        "visto": "Nenhum",
+        "vacinas": "Nenhuma obrigatória",
+        "seguro": "Recomendado (Trilhas/Barco)",
+        "tomada": "110V (Tipo N)",
+        "moeda": "Real (R$)",
+        "idioma": "Português"
+        }
+    },
+    "Poços de Caldas": {
+    "comida": "R$ 40 – R$ 150",
+    "hospedagem": "R$ 180 – R$ 900",
+    "transporte": "R$ 15 – R$ 40",
+    "atracoes": "R$ 0 – R$ 150",
+    "checklist": {
+      "passaporte": "Não (RG ou CNH)",
+      "visto": "Nenhum",
+      "vacinas": "Nenhuma obrigatória",
+      "seguro": "Recomendado",
+      "tomada": "127V (Atenção: Diferente de boa parte de MG)",
+      "moeda": "Real (R$)",
+      "idioma": "Português"
+    }
+  },
+  "Praia do Forte": {
+    "comida": "R$ 60 – R$ 200",
+    "hospedagem": "R$ 350 – R$ 2.000",
+    "transporte": "R$ 30 – R$ 100",
+    "atracoes": "R$ 40 – R$ 350",
+    "checklist": {
+      "passaporte": "Não (RG ou CNH)",
+      "visto": "Nenhum",
+      "vacinas": "Nenhuma obrigatória",
+      "seguro": "Recomendado",
+      "tomada": "220V (Padrão Bahia)",
+      "moeda": "Real (R$)",
+      "idioma": "Português"
+    }
+  },
+  "Bento Gonçalves": {
+    "comida": "R$ 50 – R$ 200",
+    "hospedagem": "R$ 250 – R$ 1.200",
+    "transporte": "R$ 30 – R$ 150",
+    "atracoes": "R$ 0 – R$ 250",
+    "checklist": {
+      "passaporte": "Não (RG ou CNH)",
+      "visto": "Nenhum",
+      "vacinas": "Nenhuma obrigatória",
+      "seguro": "Recomendado",
+      "tomada": "220V (Atenção: A Serra Gaúcha é 220V, diferente de Porto Alegre que é 127V)",
+      "moeda": "Real (R$)",
+      "idioma": "Português (Com forte influência do dialeto Talian)"
+    }
+  },
+  "Bombinhas": {
+    "comida": "R$ 40 – R$ 150",
+    "hospedagem": "R$ 200 – R$ 900",
+    "transporte": "R$ 20 – R$ 50",
+    "atracoes": "R$ 35 – R$ 250",
+    "checklist": {
+      "passaporte": "Não (RG ou CNH)",
+      "visto": "Nenhum",
+      "vacinas": "Nenhuma obrigatória",
+      "seguro": "Recomendado",
+      "tomada": "220V (Padrão Santa Catarina)",
+      "moeda": "Real (R$)",
+      "idioma": "Português"
+    }
+  },
     "Buenos Aires": {
         "comida": "R$ 90 – R$ 180",
         "hospedagem": "R$ 180 – R$ 450",
@@ -764,6 +839,21 @@
             "idioma": "Português"
         }
     },
+    "Porto": {
+    "comida": "€ 15 – € 50",
+    "hospedagem": "€ 60 – € 200",
+    "transporte": "€ 2 – € 10",
+    "atracoes": "€ 5 – € 25",
+    "checklist": {
+      "passaporte": "Obrigatório (Validade mín. 3 meses)",
+      "visto": "Não (Isento por até 90 dias para turismo - ETIAS em breve)",
+      "vacinas": "Nenhuma obrigatória",
+      "seguro": "Obrigatório (Tratado de Schengen, cobrindo € 30.000)",
+      "tomada": "230V (Tipo F - Dois pinos redondos, precisa de adaptador se o seu for de 3 pinos ou chato)",
+      "moeda": "Euro (€)",
+      "idioma": "Português (De Portugal)"
+    }
+  },
     "Madrid": {
         "comida": "R$ 160 – R$ 320",
         "hospedagem": "R$ 400 – R$ 900",
@@ -869,6 +959,36 @@
             "idioma": "Alemão/Inglês"
         }
     },
+    "Amsterdam": {
+    "comida": "€ 15 – € 60",
+    "hospedagem": "€ 80 – € 300",
+    "transporte": "€ 3.50 – € 18",
+    "atracoes": "€ 15 – € 35",
+    "checklist": {
+      "passaporte": "Obrigatório (Validade mín. 3 meses após a saída)",
+      "visto": "Não (Isento para turismo até 90 dias - ETIAS previsto para final de 2026)",
+      "vacinas": "Nenhuma obrigatória",
+      "seguro": "Obrigatório (Espaço Schengen, cobertura mín. € 30.000)",
+      "tomada": "230V (Tipo C e F - Dois pinos redondos, igual ao padrão antigo brasileiro ou compatível com o hexagonal)",
+      "moeda": "Euro (€)",
+      "idioma": "Holandês (Mas 90% da população fala Inglês perfeito)"
+    }
+  },
+  "Dublin": {
+    "comida": "€ 15 – € 50",
+    "hospedagem": "€ 80 – € 300",
+    "transporte": "€ 3 – € 15",
+    "atracoes": "€ 0 – € 30",
+    "checklist": {
+      "passaporte": "Obrigatório (Validade mín. 6 meses recomendada)",
+      "visto": "Não (Isento até 90 dias para turismo)",
+      "vacinas": "Nenhuma obrigatória",
+      "seguro": "Recomendado (A Irlanda não pertence ao espaço Schengen, mas a imigração pode solicitar)",
+      "tomada": "230V (Tipo G - Três pinos retangulares, padrão Reino Unido/Irlanda)",
+      "moeda": "Euro (€)",
+      "idioma": "Inglês (O Gaélico é oficial, mas todos falam inglês)"
+    }
+  },
     "Torre Eiffel": {
         "comida": "R$ 50 – R$ 1.500",
         "hospedagem": "R$ 800 – R$ 3.000",

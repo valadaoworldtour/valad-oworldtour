@@ -999,7 +999,360 @@
                     "passeio": "https://www.unipraias.com.br/",
                     "seguro": "https://www.segurospromo.com.br"
                 }
-            }
+            },
+            {
+        "name": "Bento Gonçalves",
+        "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Renato_Soares_Passeios_e_experiencias_nas_Viniculas_Bento_Goncalves_RS_%2840062059665%29.jpg/960px-Renato_Soares_Passeios_e_experiencias_nas_Viniculas_Bento_Goncalves_RS_%2840062059665%29.jpg",
+        "tags": ["Vinho", "Serra Gaúcha", "Maria Fumaça"],
+        "mapa": "https://goo.gl/maps/bentogoncalves",
+        "clima": "Subtropical. Inverno (Jun-Ago) rigoroso com geadas. Verão (Dez-Mar) quente e época da colheita (Vindima).",
+        
+        "veredicto": {
+          "melhor_epoca": "Janeiro a Março (Vindima/Colheita da Uva) ou Junho a Agosto (Inverno e Gastronomia).",
+          "ideal_para": [
+            "Amantes de Vinho (O maior destino de enoturismo do Brasil)",
+            "Casais (Clima romântico, lareira e jantar)",
+            "Famílias (Passeio de Maria Fumaça e Parque da Ovelha)",
+            "Grupos de Amigos (Degustações e festas nas vinícolas)"
+          ],
+          "nao_ideal_para": [
+            "Quem não bebe vinho (Aproveita-se 50% menos, embora tenha suco)",
+            "Quem está de dieta (A gastronomia é farta e calórica)",
+            "Quem depende de transporte público (As vinícolas são longe umas das outras, precisa de carro/transfer)"
+          ],
+          "perfis": [
+            { "icone": "ri-goblet-fill", "nome": "Enoturismo" },
+            { "icone": "ri-train-fill", "nome": "Maria Fumaça" },
+            { "icone": "ri-restaurant-2-fill", "nome": "Gastronomia" },
+            { "icone": "ri-hearts-fill", "nome": "Romântico" }
+          ]
+        },
+
+        "pontos_turisticos": [
+          "1. Vale dos Vinhedos: O coração do turismo. Estrada cercada de parreirais e vinícolas famosas (Miolo, Casa Valduga).",
+          "2. Caminhos de Pedra: Um museu a céu aberto. Casas de pedra centenárias preservadas, com restaurantes e comércio local.",
+          "3. Maria Fumaça (Trem do Vinho): Passeio nostálgico de trem a vapor com teatro, música e degustação a bordo.",
+          "4. Epopeia Italiana: Parque temático que conta a história da imigração (geralmente incluso no bilhete do trem).",
+          "5. Vinícola Aurora: Fica dentro da cidade. Visita guiada gratuita e muito didática.",
+          "6. Vale do Rio das Antas: Paisagens incríveis, mirante da ferradura e a ponte de arcos.",
+          "7. Igreja São Bento: Construída em formato de pipa (barril) de vinho. Única no Brasil.",
+          "8. Chafariz de Vinho (La Fontana): No centro, uma fonte que jorra água cor de vinho (simbólico).",
+          "9. Casa da Ovelha: No Caminhos de Pedra. Ótimo para crianças verem o pastoreio e amamentação.",
+          "10. Cave de Pedra: Vinícola em um castelo de pedra estilo medieval."
+        ],
+
+        "gastronomia": [
+          "1. Galeto al Primo Canto: Galetinho assado na brasa, servido em rodízio com massa e polenta.",
+          "2. Polenta Brustolada: Polenta chapa com queijo derretido.",
+          "3. Sopa de Capeletti: A entrada obrigatória de qualquer refeição, cura até a alma.",
+          "4. Sagu com Creme: A sobremesa oficial da Serra Gaúcha.",
+          "5. Queijo Colonial e Salame: Petisco em qualquer lugar.",
+          "6. Risoto de Pinhão: Típico no inverno.",
+          "7. Geleias Artesanais: Figo, Uva, Morango.",
+          "8. Cuca: Pão doce com cobertura (farofa doce) e recheio de frutas.",
+          "9. Vinho e Espumante: Bento é referência mundial em espumantes.",
+          "10. Biscoito Itallinni: Biscoitinho amanteigado local."
+        ],
+
+        "religiao": [
+          "1. Santuário de Santo Antônio: Padroeiro da cidade, festa grande em Junho.",
+          "2. Igreja São Bento: Famosa pelo formato de barril.",
+          "3. Capelas nos Vinhedos: Cada comunidade rural tem sua capelinha charmosa.",
+          "4. Cristo Rei: Igreja imponente no bairro Cidade Alta.",
+          "5. Religiosidade Italiana: Muito forte, presente nos 'capitéis' (pequenos altares) na beira das estradas.",
+          "6. Romarias: Comuns no interior.",
+          "7. Nossa Senhora de Caravaggio: Devoção regional muito forte.",
+          "8. Coral de Igreja: Tradição musical mantida pelos descendentes.",
+          "9. Missas em Talian: Algumas celebrações ainda usam o dialeto vêneto.",
+          "10. Cemitérios Históricos: Alguns túmulos contam a história das famílias fundadoras."
+        ],
+
+        "curiosidades": [
+          "1. O Barril Gigante: A entrada da cidade tem um pórtico em formato de pipa de vinho gigante.",
+          "2. Talian: O dialeto falado pelos nonnos é patrimônio cultural. Você vai ouvir gente falando 'estranho' na rua.",
+          "3. Móveis: Além do vinho, Bento é o maior polo moveleiro do Brasil.",
+          "4. 4 Estações: No mesmo dia pode fazer sol, chover e gear. O clima é louco.",
+          "5. Chafariz de Vinho: A água é tingida, não beba achando que é Merlot!",
+          "6. Degustação no Trem: É o único trem do Brasil onde você bebe vinho e espumante na plataforma e dentro do vagão.",
+          "7. Maior Barril do Mundo: Dizem que está na cantina da cidade, mas várias vinícolas disputam o título.",
+          "8. Sopa no Café da Manhã: Alguns hotéis servem sopa de capeletti no café da manhã (para os fortes).",
+          "9. Pisa da Uva: Na vindima (Jan-Mar), turistas pagam para pisar uvas com os pés como antigamente.",
+          "10. Fenavinho: A festa onde sai vinho de uma torneira pública na praça (às vezes)."
+        ],
+
+        "eventos_estacoes": [
+          "1. Vindima (Jan-Mar): A colheita. A cidade cheira a uva. Festas, pisa da uva e piqueniques.",
+          "2. Natal Bento (Nov-Dez): Decoração temática e shows, estilo Gramado mas menor.",
+          "3. Fenavinho: Festa Nacional do Vinho (datas variam, geralmente junto com a ExpoBento em Junho).",
+          "4. Festival de Balonismo: O céu de Bento colorido (Setembro).",
+          "5. Dia do Vinho (Junho): Promoções e eventos nas vinícolas.",
+          "6. Inverno (Jun-Ago): Alta temporada de gastronomia e lareira.",
+          "7. Primavera: Os parreirais começam a brotar, paisagem verde clara.",
+          "8. Outono: As folhas das parreiras ficam vermelhas e amarelas. Lindo para fotos.",
+          "9. Maratona do Vinho: Corrida entre os parreirais (com 'vino stop' para beber correndo).",
+          "10. Sparkling Night Run: Corrida noturna que termina com espumante."
+        ],
+
+        "info_gerais": [
+          "1. Transporte: Uber funciona, mas para o Vale dos Vinhedos é difícil conseguir a volta. Alugue carro ou contrate motorista.",
+          "2. Reservas: Vinícolas grandes (Valduga, Miolo) exigem reserva antecipada para visitas e almoços.",
+          "3. Voltagem: 220V. Cuidado com secadores de cabelo de 110V.",
+          "4. Se Beber Não Dirija: A fiscalização (Lei Seca) é rigorosa nas estradas entre vinícolas.",
+          "5. Aeroporto: O mais próximo é Caxias do Sul (CXJ) a 45km, ou Porto Alegre (POA) a 120km.",
+          "6. Horários: O comércio fecha ao meio-dia para almoço (siesta italiana) em alguns lugares.",
+          "7. Relevo: Muita subida e descida. Prepare as pernas.",
+          "8. Frio: Traga casaco mesmo no verão, à noite esfria.",
+          "9. Compras: Vinhos na vinícola nem sempre são mais baratos que no mercado, mas a experiência vale.",
+          "10. Piqueniques: Várias vinícolas oferecem edredom e cesta no jardim (Wine Garden)."
+        ],
+
+        "antes_de_ir": [
+          "1. Reserve Vinícolas: As degustações premium esgotam semanas antes.",
+          "2. Agende Maria Fumaça: O trem lota meses antes em alta temporada.",
+          "3. Roupas Confortáveis: Salto alto não combina com parreiral e pedras.",
+          "4. Espaço na Mala: Você vai trazer garrafas. Verifique a franquia de bagagem do voo.",
+          "5. Motorista da Rodada: Defina quem não bebe ou contrate transfer.",
+          "6. Remédio para Fígado: Você vai comer e beber muito.",
+          "7. Clima: Olhe a previsão, se tiver geada, traga roupa térmica.",
+          "8. Dinheiro: Algumas colônias no interior aceitam mal o sinal de cartão.",
+          "9. Mapa Offline: O sinal de celular some em alguns vales.",
+          "10. Fome: Vá com fome."
+        ],
+
+        "numeros": [
+          "1. 190 (Brigada Militar).",
+          "2. 192 (SAMU).",
+          "3. 193 (Bombeiros).",
+          "4. (54) 3055-7130 (Secretaria de Turismo).",
+          "5. UPA 24h Botafogo: Emergência.",
+          "6. Hospital Tacchini: (54) 3455-4333 (Referência).",
+          "7. Giordani Turismo (Maria Fumaça): (54) 3455-2788.",
+          "8. Rodoviária: (54) 3452-1311.",
+          "9. Ponto de Táxi Central: (54) 3452-1065.",
+          "10. Aeroporto Hugo Cantergiani (Caxias): (54) 3901-1219."
+        ],
+
+        "riscos": [
+          "1. Neblina: A estrada para Bento tem muita neblina densa à noite e de manhã cedo.",
+          "2. Curvas: As estradas da serra são sinuosas. Cuidado se enjoa fácil.",
+          "3. Excesso de Álcool: Degustar em 5 vinícolas no dia derruba qualquer um.",
+          "4. Ciclistas: Muita gente pedala nos acostamentos do Vale dos Vinhedos.",
+          "5. Animais: Na estrada à noite pode cruzar animais.",
+          "6. Frio Extremo: Hipotermia se não estiver agasalhado no inverno.",
+          "7. Preços: Restaurantes turísticos podem ser bem caros.",
+          "8. Ladeiras: Carro 1.0 sofre com ar ligado nas subidas.",
+          "9. GPS: Pode te mandar para estrada de terra (chão batido).",
+          "10. Sobremesa: O sagu mancha a roupa para sempre."
+        ],
+
+        "roteiros": {
+          "curto": {
+            "titulo": "Fim de Semana do Vinho (2 Dias)",
+            "texto": [
+              "Sáb: Vale dos Vinhedos (visita a 2 vinícolas e almoço italiano).",
+              "Dom: Passeio de Maria Fumaça e Epopeia Italiana pela manhã."
+            ]
+          },
+          "medio": {
+            "titulo": "Imersão Italiana (3 Dias)",
+            "texto": [
+              "Dias 1-2: Roteiro curto.",
+              "Dia 3: Caminhos de Pedra (Casa da Ovelha, Almoço em casa de pedra e Cantina Strapazzon)."
+            ]
+          },
+          "longo": {
+            "titulo": "Rota Completa (4-5 Dias)",
+            "texto": [
+              "Dias 1-3: Roteiro médio.",
+              "Dia 4: Vale do Rio das Antas (Salton) e Mirante da Ferradura.",
+              "Dia 5: Pinto Bandeira (região dos espumantes) e Vinícola Geisse."
+            ]
+          }
+        },
+
+        "links": {
+          "hotel": "https://www.booking.com/city/br/bento-goncalves.pt-br.html",
+          "passeio": "https://bento.tur.br/",
+          "seguro": "https://www.segurospromo.com.br"
+        }
+      },
+      {
+        "name": "Bombinhas",
+        "imagem": "https://upload.wikimedia.org/wikipedia/commons/3/37/Bombinhas.jpg",
+        "tags": ["Praia", "Mergulho", "Família"],
+        "mapa": "https://goo.gl/maps/bombinhas",
+        "clima": "Subtropical. Verão (Dez-Mar) quente e ensolarado. Inverno (Jun-Set) ameno, mas a água esfria bastante.",
+        
+        "veredicto": {
+          "melhor_epoca": "Março e Abril (Melhor época: água quente, menos trânsito e preços menores). Dezembro/Janeiro o trânsito é caótico.",
+          "ideal_para": [
+            "Mergulhadores (A 'Capital do Mergulho Ecológico' tem águas transparentes)",
+            "Famílias com crianças (Praias de mar piscininha como Sepultura e Lagoinha)",
+            "Amantes da Natureza (Trilhas e mirantes preservados)",
+            "Casais (Pousadas charmosas com vista para o mar)"
+          ],
+          "nao_ideal_para": [
+            "Quem odeia trânsito (Na alta temporada, a fila para entrar na cidade leva horas)",
+            "Quem não quer pagar taxas (Existe a TPA - Taxa de Preservação Ambiental cobrada na entrada)",
+            "Quem busca baladas gigantes (A vibe é mais diurna e familiar)"
+          ],
+          "perfis": [
+            { "icone": "ri-anchor-fill", "nome": "Mergulho" },
+            { "icone": "ri-star-smile-fill", "nome": "Família" },
+            { "icone": "ri-leaf-fill", "nome": "Natureza" },
+            { "icone": "ri-sun-fill", "nome": "Praia" }
+          ]
+        },
+
+        "pontos_turisticos": [
+          "1. Praia da Sepultura: Uma piscina natural transparente cheia de peixinhos. O melhor lugar para snorkel em família.",
+          "2. Praia de Quatro Ilhas: Mística, com uma cruz na areia e vista para as ilhas da reserva do Arvoredo.",
+          "3. Morro do Macaco: Uma trilha íngreme que compensa com a vista 360º mais bonita da região (dá para ver Florianópolis de longe).",
+          "4. Ilha do Arvoredo: Santuário marinho para mergulho de cilindro (acesso restrito e controlado).",
+          "5. Praia de Mariscal: Praia extensa, mar aberto com areias brancas e muita natureza.",
+          "6. Praia da Tainha: Um refúgio isolado na ponta da península, acesso por estrada de terra ou barco.",
+          "7. Mirante Eco 360º: Acesso de carro, com museu de biologia e vista panorâmica.",
+          "8. Praia de Zimbros: Mar calmo, cheio de barquinhos de pescadores e ótimo pôr do sol.",
+          "9. Costeira de Zimbros: Trilha que passa por praias desertas (Praia Vermelha, Praia Triste) e cachoeira.",
+          "10. Praia do Ribeiro: Um segredo escondido entre Bombas e Bombinhas, acessível por passarela."
+        ],
+
+        "gastronomia": [
+          "1. Caviar de Bombinhas: Não é de esturjão, é a ova de tainha defumada e seca. Iguaria local única.",
+          "2. Ostras de Zimbros: Cultivadas nas águas calmas da baía de Zimbros.",
+          "3. Sequência de Camarão: Prato farto e comum nos restaurantes à beira-mar.",
+          "4. Marisco ao Bafo: Fresquíssimo, colhido nas pedras da região.",
+          "5. Tainha Assada: Rainha do inverno (maio a julho).",
+          "6. Anchova Grelhada: Peixe muito comum na pesca local.",
+          "7. Lula à Dorê: Petisco clássico de praia.",
+          "8. Pastel de Berbigão: Recheio típico do litoral catarinense.",
+          "9. Caldo de Cana: Nas barracas de praia.",
+          "10. Pirão de Peixe: Acompanhamento obrigatório."
+        ],
+
+        "religiao": [
+          "1. Capela Nossa Senhora dos Navegantes: Simples e histórica, no centro.",
+          "2. Festa do Pescador: Celebração cultural e religiosa em homenagem a São Pedro.",
+          "3. Terno de Reis: Tradição folclórica mantida pelas famílias açorianas.",
+          "4. Cruz de Quatro Ilhas: Reza a lenda que dois náufragos encontraram a cruz no mar. É um local de fé.",
+          "5. Lendas Místicas: A região tem muitas histórias de luzes no céu e mistérios antigos.",
+          "6. Benzimento: Cultura forte entre os nativos mais velhos.",
+          "7. Igreja de Zimbros: Pequena comunidade pesqueira de muita fé.",
+          "8. Gruta de Nossa Senhora: Em algumas trilhas encontram-se pequenos altares.",
+          "9. Respeito ao Mar: Para o pescador local, o mar é sagrado e perigoso.",
+          "10. Procissão Marítima: Barcos decorados levam a imagem da santa."
+        ],
+
+        "curiosidades": [
+          "1. TPA (Pedágio Ambiental): Bombinhas cobra uma taxa para entrar de carro (Taxa de Preservação Ambiental). Pague online para evitar fila.",
+          "2. Menor Município de SC: É uma península pequena, mas com 39 praias.",
+          "3. Areia que Canta: Em algumas praias, os grãos de quartzo fazem um barulho de estalo quando se caminha (por isso o nome 'Bombinhas', estourinhos).",
+          "4. Capital do Mergulho: É um dos melhores lugares do sul do Brasil para ver vida marinha.",
+          "5. Trânsito Único: Só existe uma estrada principal de entrada e saída, o que causa o famoso engarrafamento de verão.",
+          "6. Caviar Brasileiro: A ova de tainha seca é tão valorizada que ganhou esse apelido.",
+          "7. Reserva Biológica: A Ilha do Arvoredo é fechada, só mergulhadores credenciados podem ir ao redor.",
+          "8. Pesca Artesanal da Tainha: Patrimônio Cultural. Quando os vigias avistam o cardume, a praia para.",
+          "9. Água Esmeralda: A cor da água lembra o Caribe.",
+          "10. Vizinha Famosa: Fica ao lado de Balneário Camboriú, mas com vibe totalmente oposta (natureza x arranha-céus)."
+        ],
+
+        "eventos_estacoes": [
+          "1. Pesca da Tainha (Mai-Jul): Os pescadores cercam cardumes na praia. Um espetáculo cultural.",
+          "2. Abertura da Temporada (Dez): Shows e fogos.",
+          "3. Festival do Marisco: Gastronomia típica.",
+          "4. Verão (Dez-Fev): Cidade lotada, água quente e clara.",
+          "5. Outono (Mar-Mai): Melhor época. Água ainda boa e cidade vazia.",
+          "6. Inverno (Jun-Set): Frio, bom para trilhas e comer tainha, mas ruim para banho.",
+          "7. Primavera: As baleias podem aparecer na costa.",
+          "8. Carnaval: Bloquinhos de rua familiares.",
+          "9. Semana Santa: Encenação da Paixão de Cristo.",
+          "10. Aniversário da Cidade (Março): Festas e shows."
+        ],
+
+        "info_gerais": [
+          "1. TPA: Pague a taxa no site oficial da prefeitura antes de ir. Tem câmeras que leem a placa.",
+          "2. Trânsito: No verão, tente não usar o carro. Vá a pé para a praia ou use bicicleta.",
+          "3. Estacionamento: Difícil e caro perto das praias centrais.",
+          "4. Água Potável: No pico do verão, pode faltar água na cidade. Economize.",
+          "5. Voltagem: 220V.",
+          "6. Supermercados: Schimitt e Koch são os maiores, bons para abastecer se alugar casa.",
+          "7. Máscara de Snorkel: Compre uma baratinha no mercado, você vai usar muito.",
+          "8. Trilhas: A maioria é bem sinalizada, mas leve água.",
+          "9. Dinheiro: Leve espécie para pagar estacionamentos improvisados.",
+          "10. Internet: 4G funciona bem na maioria das praias."
+        ],
+
+        "antes_de_ir": [
+          "1. Pagar a TPA Online: Evita multas e filas.",
+          "2. Reservar Pousada com Estacionamento: Item de luxo em Bombinhas.",
+          "3. Óculos de Natação/Snorkel: Item obrigatório.",
+          "4. Câmera à Prova D'água: GoPros são muito úteis aqui.",
+          "5. Sapatilha de Neoprene: Ótima para as pedras da Sepultura.",
+          "6. Paciência no Trânsito: Se for em Janeiro, saiba que vai parar.",
+          "7. Repelente: As trilhas têm insetos.",
+          "8. Protetor Solar: O sol reflete na água e queima em dobro.",
+          "9. Cadeira de Praia: Se for de carro, leve. Aluguel é caro.",
+          "10. Verificar Maré: Maré baixa é melhor para Sepultura e Lagoinha."
+        ],
+
+        "numeros": [
+          "1. 190 (Polícia).",
+          "2. 193 (Bombeiros).",
+          "3. UPA 24h: (47) 3393-9500 (Bairro Bombas).",
+          "4. Prefeitura (TPA): (47) 3393-9500.",
+          "5. Informações Turísticas: Portal da entrada.",
+          "6. Rodoviária de Itapema (Mais próxima): (47) 3368-2338.",
+          "7. Aeroporto Navegantes (NVT): O mais perto (60km).",
+          "8. Aeroporto Florianópolis (FLN): A 80km.",
+          "9. Táxi Bombinhas: (47) 3369-1473.",
+          "10. Farmácia de Plantão: Av. Leopoldo Zarling."
+        ],
+
+        "riscos": [
+          "1. Ouriços: Nas pedras da Sepultura e Lagoinha. Cuidado onde pisa.",
+          "2. Queimaduras de Água Viva: Ocorrem no verão. Vinagre ajuda.",
+          "3. Trânsito Travado: Risco de perder voo se não sair com MUITA antecedência na alta temporada.",
+          "4. Afogamento: Mariscal e Quatro Ilhas têm repuxo forte. Respeite a bandeira vermelha.",
+          "5. Multa da TPA: Se sair sem pagar, a multa chega em casa.",
+          "6. Insolação: Muito comum em crianças nas piscinas naturais.",
+          "7. Golpes de Aluguel: Verifique se o imóvel existe.",
+          "8. Preços de Temporada: Tudo dobra de preço no Réveillon.",
+          "9. Pedras Escorregadias: Nas trilhas costeiras.",
+          "10. Falta d'água: Pode acontecer no Ano Novo."
+        ],
+
+        "roteiros": {
+          "curto": {
+            "titulo": "Mergulho e Vista (2 Dias)",
+            "texto": [
+              "Sáb: Praia da Sepultura (Snorkel) e Pôr do Sol no Morro do Macaco.",
+              "Dom: Praia de Quatro Ilhas e retorno."
+            ]
+          },
+          "medio": {
+            "titulo": "Praias e Trilhas (3-4 Dias)",
+            "texto": [
+              "Dias 1-2: Roteiro curto.",
+              "Dia 3: Praia de Mariscal e Mirante Eco 360.",
+              "Dia 4: Trilha da Costeira de Zimbros (Praia Triste e Cachoeira)."
+            ]
+          },
+          "longo": {
+            "titulo": "Península Completa (5-6 Dias)",
+            "texto": [
+              "Dias 1-4: Roteiro médio.",
+              "Dia 5: Praia da Tainha (ponta da península) e Canto Grande.",
+              "Dia 6: Mergulho de cilindro na Ilha do Arvoredo (tour contratado)."
+            ]
+          }
+        },
+
+        "links": {
+          "hotel": "https://www.booking.com/city/br/bombinhas.pt-br.html",
+          "passeio": "https://tourismo.bombinhas.sc.gov.br/",
+          "seguro": "https://www.segurospromo.com.br"
+        }
+      }
         ],
         "Sudeste": [
             {
@@ -2686,8 +3039,362 @@
                     "passeio": "https://www.termas.com.br/",
                     "seguro": "https://www.segurospromo.com.br"
                 }
-            }
+            },
+            {
+      "name": "Paraty",
+      "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Paraty_05.JPG/960px-Paraty_05.JPG",
+      "tags": [ "História", "Praia", "Romântico"],
+      "mapa": "https://goo.gl/maps/paraty",
+      "clima": "Tropical Úmido. Chove bastante o ano todo. Verão (Dez-Mar) é quente e chuvoso. Inverno (Jun-Ago) é seco e ameno.",
+      
+      "veredicto": {
+        "melhor_epoca": "Abril a Setembro (Menos chuva). Julho/Agosto tem a FLIP (Literatura) e Festival da Cachaça.",
+        "ideal_para": [
+          "Casais (Pousadas charmosas no centro histórico)",
+          "Amantes de História (Arquitetura colonial preservada)",
+          "Praieiros (Passeios de escuna e Trindade)",
+          "Gastronômicos (Excelentes restaurantes e cachaçarias)"
         ],
+        "nao_ideal_para": [
+          "Quem tem dificuldade de locomoção (O calçamento 'pé de moleque' é terrível para andar)",
+          "Quem busca agito de cidade grande (É uma cidade pequena e relax)",
+          "Quem odeia chuva (O apelido da cidade é 'Penico do Céu')"
+        ],
+        "perfis": [
+          { "icone": "ri-ancient-pavilion-fill", "nome": "Colonial" },
+          { "icone": "ri-anchor-fill", "nome": "Barco" },
+          { "icone": "ri-cup-fill", "nome": "Cachaça" },
+          { "icone": "ri-book-open-fill", "nome": "Cultura" }
+        ]
+      },
+
+      "pontos_turisticos": [
+        "1. Centro Histórico: Ruas de pedra (pé de moleque), casarões brancos e portas coloridas. Proibido carros.",
+        "2. Passeio de Escuna: O clássico. Visita ilhas e praias acessíveis só por mar (Lagoa Azul, Praia da Lula).",
+        "3. Trindade: Vila vizinha (25km) com praias selvagens, piscina natural do Cachadaço e vibe hippie.",
+        "4. Caminho do Ouro (Estrada Real): A antiga estrada por onde o ouro de Minas escoava. Tem cachoeiras e alambiques no caminho.",
+        "5. Praia do Sono: Acesso por trilha ou barco. Um paraíso isolado sem eletricidade (apenas gerador).",
+        "6. Saco do Mamanguá: O único 'fiorde' tropical do mundo. Entrada de mar entre montanhas, visual incrível.",
+        "7. Cachoeira do Tobogã: Uma pedra lisa onde os locais escorregam de pé (perigoso, vá sentado).",
+        "8. Alambiques: Visitar a produção de cachaça (Ex: Maria Izabel, Paratiana).",
+        "9. Igreja de Santa Rita: O cartão-postal, na beira do cais.",
+        "10. Forte Defensor Perpétuo: Vista panorâmica da baía de Paraty."
+      ],
+
+      "gastronomia": [
+        "1. Peixe com Banana: O prato caiçara mais tradicional ('Azul Marinho' feito com banana verde).",
+        "2. Jorge Amado: O drink oficial da cidade (Cachaça, Maracujá e Limão).",
+        "3. Cachaça Artesanal: Paraty tem selo de indicação geográfica. As melhores do Brasil.",
+        "4. Manuê de Bacia: Bolo tradicional de melado e especiarias.",
+        "5. Camarão Casadinho: Dois camarões gigantes unidos por farofa.",
+        "6. Doce de Espécie: Doce de coco típico vendido nos tabuleiros de rua.",
+        "7. Paçoca de Carne Seca: Prato forte para dar energia.",
+        "8. Frutos do Mar: Tudo muito fresco, pescado na baía.",
+        "9. Sorvete de Tapioca: Refrescante no calor.",
+        "10. Café Caipira: Com bolo de milho nos sítios da serra."
+      ],
+
+      "religiao": [
+        "1. Festa do Divino: A maior festa religiosa, com bandeiras vermelhas e distribuição de carne.",
+        "2. Igrejas Segregadas: Antigamente havia uma igreja para brancos (Rosário), pardos (Santa Rita) e negros (Dores).",
+        "3. Maçonaria: A arquitetura da cidade é cheia de símbolos maçônicos geométricos.",
+        "4. Iemanjá: O barco no fim do ano leva oferendas ao mar.",
+        "5. Capelinhas: Existem passos da paixão espalhados pelas ruas.",
+        "6. Sincretismo: Cultura caiçara mistura catolicismo com lendas indígenas.",
+        "7. Silêncio Sagrado: As igrejas são refúgios de paz no meio do turismo.",
+        "8. Santa Rita: Padroeira dos casos impossíveis (e cartão postal).",
+        "9. Benzimento: Tradição forte entre as senhoras mais antigas.",
+        "10. Procissão Marítima: Santos são levados em barcos decorados."
+      ],
+
+      "curiosidades": [
+        "1. Pé de Moleque: O chão de pedras irregulares foi feito assim para os escravos (descalços) andarem melhor que os senhores (de salto/bota) em caso de revolta? Ou para drenar a água? Ninguém sabe ao certo.",
+        "2. Maré Alta: Na lua cheia, a maré sobe e invade as ruas do centro histórico. A cidade foi projetada para isso (limpeza natural), Veneza brasileira.",
+        "3. Maçonaria: Paraty foi projetada com geometria maçônica.",
+        "4. Ouro e Café: Já foi o porto mais importante do Brasil no ciclo do ouro e depois no café.",
+        "5. Gabriela: A novela famosa foi gravada lá.",
+        "6. Isolamento: Até os anos 70, não existia estrada (Rio-Santos). A cidade ficou 'congelada' no tempo, o que salvou a arquitetura.",
+        "7. Príncipe: A Família Real Brasileira (Orléans e Bragança) tem casa e frequenta a cidade.",
+        "8. Ilha do Araújo: Uma comunidade que vive da pesca e turismo comunitário.",
+        "9. Cobra Fumando: Dizem que a expressão vem de um canhão antigo da cidade.",
+        "10. UNESCO: É Patrimônio Mundial Misto (Cultura + Biodiversidade)."
+      ],
+
+      "eventos_estacoes": [
+        "1. FLIP (Julho/Agosto): Festa Literária Internacional. A cidade lota de intelectuais e shows.",
+        "2. Festival da Cachaça (Agosto): Degustação e festa popular.",
+        "3. Bourbon Festival (Maio): Jazz e Blues de graça nas praças.",
+        "4. Festa do Divino (Maio/Junho): Religiosa e folclórica.",
+        "5. Verão (Dez-Fev): Muita chuva no fim de tarde, cidade cheia, passeios de barco lotados.",
+        "6. Inverno (Jun-Set): Melhor época. Chove pouco, dias de céu azul.",
+        "7. Mimo Festival: Música instrumental e cinema.",
+        "8. Carnaval: O bloco 'Da Lama' é famoso (pessoas se cobrem de lama do mangue).",
+        "9. Paraty em Foco (Setembro): Festival de fotografia.",
+        "10. Réveillon: Fogos na praia do Pontal."
+      ],
+
+      "info_gerais": [
+        "1. Calçados: PROIBIDO SALTO ALTO. É sério, você vai torcer o pé. Use tênis ou chinelo.",
+        "2. Estacionamento: Não entra carro no Centro Histórico. Tem que deixar nos estacionamentos pagos em volta.",
+        "3. Dinheiro: Leve espécie para barcos e praias afastadas. O sinal de máquina falha nas ilhas.",
+        "4. Borrachudos: Em Trindade e nas cachoeiras tem muito mosquito borrachudo. Use repelente Exposis ou Citronela.",
+        "5. Chuva: Vai chover. Aceite e leve capa/guarda-chuva.",
+        "6. Rodoviária: Fica a 10min a pé do Centro Histórico.",
+        "7. Segurança: Tranquila, mas evite ruas escuras fora do centro à noite.",
+        "8. Voltagem: 110V.",
+        "9. Água: Beba mineral.",
+        "10. Taxas: Algumas ilhas e cachoeiras cobram taxa de preservação."
+      ],
+
+      "antes_de_ir": [
+        "1. Reserve Pousada: Na FLIP ou Ano Novo, reserve 6 meses antes.",
+        "2. Tênis Velho: Para usar nas cachoeiras e trilhas.",
+        "3. Repelente Potente: O borrachudo não respeita repelente comum.",
+        "4. Dinheiro Trocado: Para pagar o barqueiro.",
+        "5. Remédio Enjoo: Se for fazer passeio de escuna.",
+        "6. Mala de Rodinha: É impossível arrastar no centro histórico. Prefira mochila.",
+        "7. Câmera: O lugar é muito fotogênico.",
+        "8. Vacina Febre Amarela: Recomendada (área de mata atlântica).",
+        "9. Impermeável: Proteja o celular da chuva/mar.",
+        "10. Mapa Offline: O sinal cai na estrada para Trindade."
+      ],
+
+      "numeros": [
+        "1. 190 (Polícia).",
+        "2. 193 (Bombeiros).",
+        "3. Hospital Municipal Hugo Miranda: (24) 3371-1154.",
+        "4. Rodoviária de Paraty: (24) 3371-1224.",
+        "5. Centro de Informações Turísticas: Na entrada da cidade.",
+        "6. Associação de Barqueiros: No cais.",
+        "7. Táxi/Uber: Funciona, mas em Trindade é difícil achar volta.",
+        "8. Farmácia de Plantão: No centro comercial (Av. Roberto Silveira).",
+        "9. Delegacia (167ª DP): (24) 3371-1190.",
+        "10. Defesa Civil: 199."
+      ],
+
+      "riscos": [
+        "1. Torção de Tornozelo: O chão é o maior inimigo.",
+        "2. Escorregar no Tobogã: Muita gente se machuca gravemente na cachoeira do Tobogã. Não desça de pé se não for local.",
+        "3. Maré Cheia: Se deixar o carro na rua perto do cais na lua cheia, a água do mar entra no motor.",
+        "4. Estrada Rio-Santos: Muitas curvas e risco de deslizamento quando chove muito.",
+        "5. Golpes de Barco: Combine o preço e o roteiro ANTES de entrar no barquinho (baleeira).",
+        "6. Borrachudos: A picada coça por semanas e pode infeccionar.",
+        "7. Trilhas Sozinho: Evite (Caminho do Ouro e Praia do Sono) sem avisar ou sem guia.",
+        "8. Insolação no Barco: O vento engana, o sol queima.",
+        "9. Ouriço do Mar: Cuidado ao pisar nas pedras.",
+        "10. Preços FLIP: Tudo triplica de preço durante o festival."
+      ],
+
+      "roteiros": {
+        "curto": {
+          "titulo": "Fim de Semana Clássico (2 Dias)",
+          "texto": [
+            "Sáb: Passeio de Escuna (dia todo) e jantar no Centro Histórico.",
+            "Dom: Caminhada pelo Centro Histórico (Free Walking Tour) e compras."
+          ]
+        },
+        "medio": {
+          "titulo": "História e Natureza (3-4 Dias)",
+          "texto": [
+            "Dias 1-2: Roteiro curto.",
+            "Dia 3: Bate-volta em Trindade (Praia do Meio e Cachadaço).",
+            "Dia 4: Cachoeiras e Alambiques na serra."
+          ]
+        },
+        "longo": {
+          "titulo": "Explorador da Costa Verde (5-6 Dias)",
+          "texto": [
+            "Dias 1-4: Roteiro médio.",
+            "Dia 5: Trekking para Praia do Sono ou Saco do Mamanguá (caiaque).",
+            "Dia 6: Dia livre gastronômico."
+          ]
+        }
+      },
+
+      "links": {
+        "hotel": "https://www.booking.com/city/br/paraty.pt-br.html",
+        "passeio": "https://www.paraty.com.br/",
+        "seguro": "https://www.segurospromo.com.br"
+      }
+    },
+    {
+      "name": "Poços de Caldas",
+      "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Po%C3%A7os_de_Caldas_-_Serra.jpg/960px-Po%C3%A7os_de_Caldas_-_Serra.jpg",
+      "tags": ["Minas Gerais", "Termas", "Romântico"],
+      "mapa": "https://goo.gl/maps/pocosdecaldas",
+      "clima": "Tropical de Altitude. Verão chuvoso e Inverno seco e frio.",
+      
+      "veredicto": {
+        "melhor_epoca": "Outono (Abril/Maio) e Inverno (Junho/Julho) para curtir o frio.",
+        "ideal_para": [
+          "Casais (Romance e frio)",
+          "Idosos (Turismo de saúde e termas)",
+          "Famílias (Parques temáticos)",
+          "Amantes de Geologia (Cratera vulcânica)"
+        ],
+        "nao_ideal_para": [
+          "Quem busca agito noturno intenso",
+          "Quem não gosta de cheiro de enxofre (fontes)",
+          "Quem quer evitar ladeiras"
+        ],
+        "perfis": [
+          { "icone": "ri-drop-fill", "nome": "Termas" },
+          { "icone": "ri-hearts-fill", "nome": "Romântico" },
+          { "icone": "ri-fire-fill", "nome": "Vulcão" },
+          { "icone": "ri-shopping-bag-fill", "nome": "Cristais" }
+        ]
+      },
+
+      "pontos_turisticos": [
+        "1. Thermas Antônio Carlos: Prédio histórico com banhos termais.",
+        "2. Cristo Redentor e Teleférico: Vista panorâmica da cidade.",
+        "3. Pedra Balão: Formações rochosas curiosas.",
+        "4. Recanto Japonês: Jardim oriental com casa de chá.",
+        "5. Walter World: Parque de diversões temático.",
+        "6. Fonte dos Amores: Cachoeira e estátua romântica.",
+        "7. Palace Casino: Arquitetura histórica luxuosa.",
+        "8. Relógio Floral: Cartão-postal na praça central.",
+        "9. Fábricas de Cristais: A 'Murano' brasileira (Cá d'Oro e São Marcos).",
+        "10. Véu das Noivas: Cachoeira com trenzinho turístico."
+      ],
+
+      "gastronomia": [
+        "1. Comida Mineira: Tutu, torresmo e feijão tropeiro.",
+        "2. Doces de Leite: Tradicionais da região.",
+        "3. Queijo Minas Frescal: Obrigatório.",
+        "4. Azeites Vulcânicos: Produção premiada na região.",
+        "5. Café Especial: Sul de Minas é referência mundial.",
+        "6. Bolacha de Nata: Clássico das feirinhas.",
+        "7. Fondue: Muito comum no inverno.",
+        "8. Pão de Queijo com Linguiça: Lanche típico.",
+        "9. Cervejas Artesanais: Várias microcervejarias locais.",
+        "10. Doce de Abóbora com Coco: Cristalizado."
+      ],
+
+      "religiao": [
+        "1. Basílica Nossa Senhora da Saúde.",
+        "2. Festa de São Benedito (Congadas).",
+        "3. Santuário da Mãe Rainha.",
+        "4. Espiritismo (Forte presença).",
+        "5. Capela de Santa Cruz.",
+        "6. Misticismo e Esoterismo.",
+        "7. Igrejas Históricas.",
+        "8. Procissões de Semana Santa.",
+        "9. Fontes 'Milagrosas'.",
+        "10. Ecumenismo."
+      ],
+
+      "curiosidades": [
+        "1. Cratera de Vulcão: A cidade fica dentro de um supervulcão extinto.",
+        "2. D. Pedro II: Visitava a cidade pelas águas medicinais.",
+        "3. Água Radioativa: Algumas fontes possuem Tório (terapêutico).",
+        "4. Antiga Las Vegas: O Cassino atraía a elite nos anos 40.",
+        "5. Cristais Murano: Técnica trazida por imigrantes italianos.",
+        "6. Novelas de Época: Cenário frequente da TV Globo.",
+        "7. Sabonete de Enxofre: Cheiro característico da cidade.",
+        "8. Monotrilho: Existe, mas está abandonado há décadas.",
+        "9. Xadrez Gigante: Atração na praça central.",
+        "10. Coreto Musical: Shows de Jazz e música clássica."
+      ],
+
+      "eventos_estacoes": [
+        "1. Sinfonia das Águas (Esporádico).",
+        "2. Julho Fest (Inverno).",
+        "3. Festa Uai (Agosto).",
+        "4. Festival Blues & Jazz.",
+        "5. Flipoços (Literário).",
+        "6. Natal Poços de Luz.",
+        "7. Exposição de Orquídeas.",
+        "8. Carnaval (Familiar).",
+        "9. Encontro de Carros Antigos.",
+        "10. Festa de São Benedito (Maio)."
+      ],
+
+      "info_gerais": [
+        "1. Voltagem: 127V (Atenção!).",
+        "2. Charretes: Ainda existem, mas prefira as elétricas.",
+        "3. Cheiro de Enxofre: Normal em algumas fontes.",
+        "4. Compras: Queijos, doces e cristais.",
+        "5. Transporte: Uber funciona bem.",
+        "6. Acesso: Aeroporto limitado, melhor ir via Campinas.",
+        "7. Zona Azul: Estacionamento pago no centro.",
+        "8. Frio à noite: Leve casaco sempre.",
+        "9. Hotelaria: Muitos hotéis históricos.",
+        "10. Água da Torneira: Tratada, mas mineral é melhor."
+      ],
+
+      "antes_de_ir": [
+        "1. Reservar Hotel (Alta temporada).",
+        "2. Roupa de Banho (Thermas).",
+        "3. Tênis Confortável.",
+        "4. Espaço na Mala (Compras).",
+        "5. Checar Teleférico (Manutenção).",
+        "6. Hidratante (Pele seca).",
+        "7. Dinheiro Vivo (Pequenos comércios).",
+        "8. Remédio para Rinite.",
+        "9. Câmera Fotográfica.",
+        "10. Roteiro de passeios."
+      ],
+
+      "numeros": [
+        "1. 190 (Polícia).",
+        "2. 192 (SAMU).",
+        "3. 193 (Bombeiros).",
+        "4. (35) 3697-2300 (Turismo).",
+        "5. UPA Poços.",
+        "6. Rodoviária: (35) 3714-1729.",
+        "7. Thermas: (35) 3697-2317.",
+        "8. Teleférico: (35) 3721-7292.",
+        "9. Táxi Central: (35) 3721-2222.",
+        "10. Hospital Santa Casa."
+      ],
+
+      "riscos": [
+        "1. Neblina na Serra.",
+        "2. Água Quente (Pressão baixa).",
+        "3. Ladeiras íngremes.",
+        "4. Golpes de Aluguel.",
+        "5. Animais na pista (Quatis).",
+        "6. Pedras lisas nas cachoeiras.",
+        "7. Choque térmico.",
+        "8. Trânsito no centro.",
+        "9. Preço de Cristais (Pesquise).",
+        "10. Insetos na mata."
+      ],
+
+      "roteiros": {
+        "curto": {
+          "titulo": "Essencial (2 Dias)",
+          "texto": [
+            "Sáb: Thermas, Relógio e Cristo.",
+            "Dom: Recanto Japonês e Mercado."
+          ]
+        },
+        "medio": {
+          "titulo": "Natureza e Compras (3 Dias)",
+          "texto": [
+            "Dias 1-2: Roteiro curto.",
+            "Dia 3: Véu das Noivas e Fábricas de Cristais."
+          ]
+        },
+        "longo": {
+          "titulo": "Imersão (4 Dias)",
+          "texto": [
+            "Dias 1-3: Roteiro médio.",
+            "Dia 4: Walter World ou Fazendas de Café/Azeite."
+          ]
+        }
+      },
+
+      "links": {
+        "hotel": "https://www.booking.com/city/br/pocos-de-caldas.pt-br.html",
+        "passeio": "https://pocosdecaldas.mg.gov.br/turismo/",
+        "seguro": "https://www.segurospromo.com.br"
+      }
+    }
+        ],
+        
+
         "Nordeste": [
             {
                 "name": "Salvador",
@@ -4856,7 +5563,183 @@
                     "passeio": "https://www.parnanoronha.com.br/",
                     "seguro": "https://www.segurospromo.com.br"
                 }
-            }
+            },
+            {
+        "name": "Praia do Forte",
+        "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Praia_do_Forte-BA.jpg/960px-Praia_do_Forte-BA.jpg",
+        "tags": ["Bahia", "Tartarugas", "Eco-Luxo"],
+        "mapa": "https://goo.gl/maps/praiadoforte",
+        "clima": "Tropical. Sol o ano todo. Chuvas concentradas em Abril/Maio. Vento fresco à noite.",
+        
+        "veredicto": {
+          "melhor_epoca": "Setembro a Março (Sol). Julho a Outubro é a temporada das Baleias Jubarte.",
+          "ideal_para": [
+            "Famílias (Resorts e mar calmo nas piscinas)",
+            "Natureza (Projeto Tamar e Baleias)",
+            "Casais (Vila charmosa e pousadas boutique)",
+            "História (Primeira fortificação portuguesa)"
+          ],
+          "nao_ideal_para": [
+            "Orçamento Baixo (É um dos destinos mais caros da Bahia)",
+            "Quem busca agito de balada pesada (A vibe é barzinho com música ao vivo)",
+            "Quem não gosta de caminhar (Carros não entram na vila)"
+          ],
+          "perfis": [
+            { "icone": "ri-turtle-fill", "nome": "Tamar" },
+            { "icone": "ri-star-fill", "nome": "Resorts" },
+            { "icone": "ri-ancient-pavilion-fill", "nome": "Castelo" },
+            { "icone": "ri-ship-fill", "nome": "Baleias" }
+          ]
+        },
+
+        "pontos_turisticos": [
+          "1. Projeto Tamar: A sede nacional. Tanques com tartarugas gigantes e tubarões. Imperdível.",
+          "2. Castelo Garcia D'Ávila: A primeira grande edificação portuguesa no Brasil (ruínas medievais lindas).",
+          "3. Piscinas Naturais (Papa-Gente): Na maré baixa, formam aquários naturais para snorkel.",
+          "4. Vila da Praia do Forte: O centrinho de pedestres, cheio de lojas, luzinhas e restaurantes.",
+          "5. Observação de Baleias: Passeios de escuna (Jul-Out) para ver as Jubartes saltando.",
+          "6. Instituto Baleia Jubarte: Museu dedicado aos mamíferos gigantes.",
+          "7. Reserva Sapiranga: Mata Atlântica para trilhas, quadriciclo e banho de rio.",
+          "8. Praia do Lord: Outra opção de piscinas naturais, muito boa para crianças.",
+          "9. Capelinha de São Francisco: O cartão-postal na beira da praia.",
+          "10. Rio Pojuca: Encontro do rio com o mar, ótimo para caiaque."
+        ],
+
+        "gastronomia": [
+          "1. Moqueca Baiana: Com azeite de dendê e leite de coco. A do restaurante 'Donana' é famosa.",
+          "2. Acarajé: Tem no tabuleiro das baianas na vila.",
+          "3. Bolinho de Peixe: Petisco clássico nos bares.",
+          "4. Beiju (Tapioca): Recheada com carne seca ou queijo coalho.",
+          "5. Sorvete de Coco Verde: Refrescante.",
+          "6. Ensopado de Camarão: Mais leve que a moqueca.",
+          "7. Cocada: Vendida nas ruas.",
+          "8. Polvo: Frutos do mar são o forte da vila.",
+          "9. Lambreta: Um molusco local servido no caldo.",
+          "10. Caipirinha de Frutas Locais: Caju, Siriguela ou Umbu."
+        ],
+
+        "religiao": [
+          "1. Capela de São Francisco de Assis: Pequena e histórica, de frente pro mar.",
+          "2. Candomblé: A cultura afro-baiana é presente na alma do lugar.",
+          "3. Senhor do Bonfim: A fé nas fitinhas está em toda parte.",
+          "4. Sincretismo: A mistura de catolicismo com orixás.",
+          "5. Festas de Padroeiro: Procissões de barcos.",
+          "6. Iemanjá: Rainha do mar, muito reverenciada.",
+          "7. Natureza Divina: A preservação ambiental é tratada com respeito sagrado.",
+          "8. Ruínas da Capela do Castelo: Uma das igrejas mais antigas das Américas.",
+          "9. Benzedeiras: Tradição antiga da região.",
+          "10. Missas: Acontecem na igrejinha da vila."
+        ],
+
+        "curiosidades": [
+          "1. Polinésia Brasileira: O apelido antigo devido à cor da água e coqueiros.",
+          "2. Castelo Medieval: O Garcia D'Ávila é a única construção com características medievais na América.",
+          "3. Tuk-Tuks: O meio de transporte oficial dentro da vila (bicitáxis).",
+          "4. Proibido Carros: A vila principal é um calçadão exclusivo para pedestres.",
+          "5. Desova: É um dos principais pontos de desova de tartarugas do Brasil (Mar-Mai ver as tartaruguinhas nascendo).",
+          "6. Klaus Peters: O empresário que comprou as terras e idealizou o eco-turismo local.",
+          "7. Jubartes: Elas vêm da Antártida só para ter bebês nas águas quentes da Bahia.",
+          "8. Resorts: Abriga alguns dos resorts mais luxuosos (Iberostar/Tivoli).",
+          "9. Coco: A região era uma imensa fazenda de cocos.",
+          "10. Luz: A fiação é subterrânea na vila para não poluir o visual e proteger pássaros."
+        ],
+
+        "eventos_estacoes": [
+          "1. Festival de Jazz & Blues: Acontece geralmente no primeiro semestre.",
+          "2. Temporada das Baleias (Jul-Out): Principal atração ecológica.",
+          "3. Soltura das Tartarugas: Acontece quase todo dia no verão no Tamar.",
+          "4. Réveillon: Festas privadas nos hotéis e resorts são gigantescas.",
+          "5. Carnaval: Mais tranquilo que Salvador, com bloquinhos de mascarados (Caretas).",
+          "6. Festa de São Francisco (Outubro): Padroeiro da vila.",
+          "7. Verão (Dez-Fev): Vila lotada, fila para restaurantes.",
+          "8. Inverno (Jun-Ago): Chuvas esporádicas, mas calor agradável.",
+          "9. Primavera: Época das flores e mar mais calmo.",
+          "10. Tempero no Forte: Festival gastronômico anual (Dezembro)."
+        ],
+
+        "info_gerais": [
+          "1. Tábua de Marés: ESSENCIAL. As piscinas naturais só aparecem na maré baixa (0.0 a 0.4). Baixe o app.",
+          "2. Transfer: Do aeroporto de Salvador são 60km (1h). Uber pode sair caro/cancelar. Combine transfer.",
+          "3. Preços: Prepare o bolso. É nível 'preço de aeroporto' em tudo.",
+          "4. Bicitáxi: Negocie o preço antes de subir.",
+          "5. Protetor Solar: O sol da Bahia é forte mesmo nublado.",
+          "6. Caminhada: Do Tamar até o Lord ou Papa-Gente dá uns 20min andando pela areia.",
+          "7. Repelente: Tem pernilongo no fim de tarde.",
+          "8. Bancos: Tem caixas eletrônicos na entrada da vila.",
+          "9. Voltagem: 220V.",
+          "10. Água: Beba mineral."
+        ],
+
+        "antes_de_ir": [
+          "1. Consulte a Maré: Marque a viagem na Lua Cheia ou Nova (marés baixas extremas).",
+          "2. Reserve Restaurante: Na alta temporada, a espera é longa.",
+          "3. Chinelo: Você não vai usar outro calçado.",
+          "4. Snorkel: Leve o seu para economizar o aluguel nas piscinas.",
+          "5. Câmera Subaquática: Para as fotos com peixinhos.",
+          "6. Dinheiro para Bicitáxi: Eles preferem Pix ou cash.",
+          "7. Roupas Leves: Linho e algodão. Calor úmido.",
+          "8. Ingressos Tamar: Compre na hora, fila anda rápido.",
+          "9. Óculos Escuros: Areia muito branca reflete o sol.",
+          "10. Seguro Viagem: Atendimento médico lá é básico."
+        ],
+
+        "numeros": [
+          "1. 190 (Polícia).",
+          "2. (71) 3676-1045 (Projeto Tamar).",
+          "3. (71) 3676-1133 (Castelo Garcia D'Ávila).",
+          "4. Posto de Saúde: Na entrada da vila.",
+          "5. Farmácia: Várias na rua principal.",
+          "6. Ponto de Bicitáxi: Espalhados pela vila.",
+          "7. Aeroporto de Salvador (SSA): Mais próximo.",
+          "8. Polícia Turística (Deltur).",
+          "9. CLN (Concessionária da estrada): 0800-071-3233.",
+          "10. Prefeitura Mata de São João."
+        ],
+
+        "riscos": [
+          "1. Ouriços do Mar: Nas piscinas naturais, NÃO PISE nos recifes escuros. Espinhos dolorosos.",
+          "2. Correnteza: Fora das piscinas, o mar aberto é forte.",
+          "3. Insolação: Use chapéu.",
+          "4. Coco na Cabeça: Não fique deitado embaixo de coqueiros carregados.",
+          "5. Preços Abusivos: Pergunte antes de consumir.",
+          "6. Maré Alta: As piscinas somem e viram mar batido.",
+          "7. Pedras Escorregadias: Use sapatilha de neoprene (aquashoes).",
+          "8. Trânsito na Estrada do Coco: Sexta à tarde e domingo à noite para.",
+          "9. Água Viva: Ocorre em algumas épocas.",
+          "10. Furto na Areia: Não deixe coisas sozinhas (embora seja seguro, é Brasil)."
+        ],
+
+        "roteiros": {
+          "curto": {
+            "titulo": "Bate-Volta Salvador (1 Dia)",
+            "texto": [
+              "Manhã: Projeto Tamar e Piscinas Naturais (maré baixa).",
+              "Tarde: Almoço na vila e sorvete."
+            ]
+          },
+          "medio": {
+            "titulo": "Relax na Vila (3 Dias)",
+            "texto": [
+              "Dias 1-2: Roteiro curto + Castelo Garcia D'Ávila (pôr do sol).",
+              "Dia 3: Dia de praia no Lord ou Reserva Sapiranga (Quadriciclo)."
+            ]
+          },
+          "longo": {
+            "titulo": "Rota dos Coqueiros (5 Dias)",
+            "texto": [
+              "Dias 1-3: Roteiro médio.",
+              "Dia 4: Passeio de Baleia (na época) ou Imbassaí (rio).",
+              "Dia 5: Curtir o hotel/resort."
+            ]
+          }
+        },
+
+        "links": {
+          "hotel": "https://www.booking.com/city/br/praia-do-forte.pt-br.html",
+          "passeio": "https://www.tamar.org.br/",
+          "seguro": "https://www.segurospromo.com.br"
+        }
+      }
           ],
           
     "Centro-Oeste": [
@@ -13314,6 +14197,183 @@
           "passeio": "https://www.civitatis.com/br/lisboa/",
           "seguro": "https://www.segurospromo.com.br"
         }
+      },
+      {
+        "name": "Porto",
+        "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Puente_Don_Luis_I%2C_Oporto%2C_Portugal%2C_2012-05-09%2C_DD_13.JPG/960px-Puente_Don_Luis_I%2C_Oporto%2C_Portugal%2C_2012-05-09%2C_DD_13.JPG",
+        "tags": ["Europa", "Vinho", "História"],
+        "mapa": "https://goo.gl/maps/porto",
+        "clima": "Temperado. Invernos chuvosos e frescos. Verões quentes e secos, mas com brisa do Atlântico.",
+        
+        "veredicto": {
+          "melhor_epoca": "Maio, Junho e Setembro. (Junho tem a festa de São João, a maior da cidade).",
+          "ideal_para": [
+            "Amantes de Vinho (O berço do Vinho do Porto)",
+            "Casais (Pôr do sol no Jardim do Morro é imbatível)",
+            "Fãs de Harry Potter (A Livraria Lello e os trajes universitários inspiraram a saga)",
+            "Caminhantes (A cidade se faz a pé, mas haja perna para as ladeiras)"
+          ],
+          "nao_ideal_para": [
+            "Quem odeia ladeiras (A cidade é extremamente íngreme)",
+            "Quem busca praias de água quente (O mar é gelado mesmo no verão)",
+            "Quem tem pressa (O serviço em Portugal é mais lento, para ser apreciado)"
+          ],
+          "perfis": [
+            { "icone": "ri-goblet-fill", "nome": "Vinho" },
+            { "icone": "ri-ancient-pavilion-fill", "nome": "História" },
+            { "icone": "ri-camera-lens-fill", "nome": "Fotografia" },
+            { "icone": "ri-walk-fill", "nome": "A pé" }
+          ]
+        },
+
+        "pontos_turisticos": [
+          "1. Ponte Dom Luís I: O ícone da cidade. Atravesse a pé por cima para ver a vista e o metrô passar.",
+          "2. Ribeira: O calçadão na beira do rio Douro, cheio de restaurantes e casinhas coloridas.",
+          "3. Livraria Lello: Considerada a mais bonita do mundo (compre ingresso antecipado, a fila é enorme).",
+          "4. Torre dos Clérigos: Suba os 200 degraus para ver a cidade do alto.",
+          "5. Estação de São Bento: O hall de entrada tem 20 mil azulejos pintados à mão que contam a história de Portugal.",
+          "6. Caves de Vinho do Porto (Gaia): Atravesse a ponte para Vila Nova de Gaia e faça degustação (Graham's, Taylor's, Cálem).",
+          "7. Jardim do Morro: O melhor pôr do sol, com música ao vivo e gente sentada na grama.",
+          "8. Palácio de Cristal: Jardins lindos com pavões soltos e vista para o rio.",
+          "9. Capela das Almas: A igreja totalmente coberta de azulejos azuis na rua Santa Catarina.",
+          "10. Sé do Porto: A catedral medieval que parece uma fortaleza."
+        ],
+
+        "gastronomia": [
+          "1. Francesinha: O prato ogro local. Sanduíche de carnes, coberto de queijo e molho picante de cerveja.",
+          "2. Pastel de Nata: O clássico (embora o de Belém seja em Lisboa, os do Porto são ótimos, prove na Manteigaria).",
+          "3. Bacalhau à Gomes de Sá: Receita típica do Porto, com batatas, cebola e ovo.",
+          "4. Tripas à Moda do Porto: Dobradinha com feijão branco (deu origem ao apelido 'Tripeiros').",
+          "5. Vinho do Porto: Tinto, Branco ou Rosé. Doce e fortificado.",
+          "6. Bifana: Sanduíche de carne de porco temperada, barato e delicioso (Conga).",
+          "7. Caldo Verde: Sopa de couve com chouriço.",
+          "8. Éclair da Leitaria da Quinta do Paço: Massa choux recheada de chantilly artesanal.",
+          "9. Bolinho de Bacalhau: Com ou sem queijo da Serra da Estrela dentro.",
+          "10. Alheira: Embutido de aves e pão, frito ou assado."
+        ],
+
+        "religiao": [
+          "1. Sé do Porto: O ponto de partida do Caminho de Santiago português.",
+          "2. Igreja de São Francisco: O interior é todo folheado a ouro (dizem que tem mais de 400kg de ouro).",
+          "3. Capela das Almas: Fachada impressionante de azulejos.",
+          "4. Igreja do Carmo e Carmelitas: Duas igrejas separadas por uma casa de 1 metro de largura (Casa Escondida).",
+          "5. Procissão de São João: Mistura de sagrado e profano em junho.",
+          "6. Caminho de Santiago: Você verá muitos peregrinos com mochilas e conchas pela cidade.",
+          "7. Mosteiro da Serra do Pilar: Em Gaia, vista divina.",
+          "8. Igreja de Santo Ildefonso: No topo da rua 31 de Janeiro.",
+          "9. Sinagoga Kadoorie: A maior da Península Ibérica.",
+          "10. Fé nos Azulejos: Muitas fachadas contam vidas de santos."
+        ],
+
+        "curiosidades": [
+          "1. McDonald's Imperial: O McDonald's da Praça da Liberdade é considerado o mais bonito do mundo (fica num antigo café Art Déco).",
+          "2. Tripeiros: O povo do Porto doou toda a carne boa para os navios dos descobrimentos e ficou só com as tripas. Criaram um prato delicioso e ganharam o apelido com orgulho.",
+          "3. Matriarcado do Vinho: A Dona Antónia Ferreira (Ferreirinha) foi a mulher que salvou o vinho do Porto no século 19.",
+          "4. Harry Potter: J.K. Rowling viveu no Porto. As capas dos estudantes da universidade inspiraram os uniformes de Hogwarts.",
+          "5. Martelo de São João: Na festa de São João (23/Jun), as pessoas batem martelinhos de plástico na cabeça das outras.",
+          "6. Ponte Eiffel?: A ponte D. Maria Pia foi feita por Gustave Eiffel. A D. Luís I foi feita por um aluno dele.",
+          "7. Café Majestic: Um dos cafés mais luxuosos e antigos, parada obrigatória.",
+          "8. Francesinha: O molho é segredo de cada restaurante, mas leva cerveja e whisky.",
+          "9. Neblina: O nevoeiro que sobe do rio de manhã tem o nome de 'Fumaça do Diabo' (às vezes).",
+          "10. O Coração de D. Pedro: O coração do imperador D. Pedro I (IV de Portugal) está guardado numa igreja no Porto."
+        ],
+
+        "eventos_estacoes": [
+          "1. Festa de São João (23/Junho): A cidade para. Sardinha assada na rua, martelinhos, balões de ar quente e fogos na ponte.",
+          "2. Primavera Sound (Junho): Festival de música enorme no Parque da Cidade.",
+          "3. Fantasporto (Fev/Mar): Festival de cinema fantástico.",
+          "4. Vindima (Setembro): Colheita das uvas no vale do Douro (perto).",
+          "5. Natal e Ano Novo: A Avenida dos Aliados fica linda iluminada.",
+          "6. Queima das Fitas (Maio): A festa dos universitários, com desfiles e serenatas.",
+          "7. Essência do Vinho (Fev): Grande feira de degustação no Palácio da Bolsa.",
+          "8. Verão (Jul-Ago): Festas na praia de Matosinhos.",
+          "9. Red Bull Air Race: Às vezes acontece no rio Douro.",
+          "10. Outono: Época das castanhas assadas na rua."
+        ],
+
+        "info_gerais": [
+          "1. Andar a Pé: É a melhor forma, mas prepare a panturrilha. É muito sobe e desce.",
+          "2. Cartão Andante: Cartão recarregável para metrô e ônibus. Compre no aeroporto.",
+          "3. Metrô do Aeroporto: A linha E (Roxa) leva direto ao centro em 30min.",
+          "4. Gorjeta: Não é obrigatória, mas arredondar a conta é educado.",
+          "5. Hora do Jantar: Portugueses jantam tarde (20h-21h).",
+          "6. Couvert: Pão, azeitona e patê que colocam na mesa SÃO PAGOS. Se não quiser, não toque e peça para retirar.",
+          "7. Inglês: Quase todo mundo fala bem, mas tente o português (eles amam brasileiros, mas cuidado com gírias).",
+          "8. Sapatos: Calçada portuguesa (pedrinhas) e salto agulha não combinam.",
+          "9. Uber: É barato comparado ao resto da Europa.",
+          "10. Tax Free: Peça nas lojas para compras acima de €50-60 (varia)."
+        ],
+
+        "antes_de_ir": [
+          "1. Seguro Viagem: Imprima a apólice (Obrigatório na imigração).",
+          "2. Adaptador de Tomada: O padrão é dois pinos redondos.",
+          "3. Tênis Confortável: Item mais importante da mala.",
+          "4. Ingresso Lello: Compre online antes, na hora não entra.",
+          "5. Casaquinho: Mesmo no verão, venta à noite na beira do rio.",
+          "6. Roteiro Douro: Se tiver tempo, reserve um dia para ir ao Vale do Douro de trem ou barco.",
+          "7. Cartão Global: Wise ou Nomad funcionam super bem.",
+          "8. Power Bank: Você vai tirar muita foto e usar GPS.",
+          "9. Cuidado com o Elétrico: Os bondes antigos são lindos mas alvo de batedores de carteira (pickpockets).",
+          "10. Fome: Esqueça a dieta."
+        ],
+
+        "numeros": [
+          "1. 112 (Emergência Geral - Europa).",
+          "2. Turismo do Porto: +351 223 326 751.",
+          "3. Aeroporto Sá Carneiro: +351 229 432 400.",
+          "4. Consulado do Brasil no Porto: +351 226 084 070.",
+          "5. Táxi (Rádio Táxi): +351 225 073 900.",
+          "6. Hospital Santo António (Centro): Emergência.",
+          "7. Metro do Porto: Informações nas estações.",
+          "8. Polícia de Turismo: Tem posto na praça do município.",
+          "9. CP (Comboios de Portugal): Para trens.",
+          "10. Farmácias: Cruz verde neon piscando (abertas 24h)."
+        ],
+
+        "riscos": [
+          "1. Pickpockets (Batedores de Carteira): No elétrico 28 (ops, no Porto é o 1 ou 22) e na estação São Bento.",
+          "2. Gaivotas: Elas roubam comida da mão na Ribeira. Cuidado.",
+          "3. Escorregar: A calçada portuguesa molhada vira sabão.",
+          "4. Vendas de 'Drogas': Na baixa, rapazes oferecem 'haxixe'. É golpe, geralmente é louro prensado ou terra. Ignore.",
+          "5. Rio Douro: É fundo e frio, não pule da ponte (alguns locais pulam, mas é perigoso).",
+          "6. Turist traps na Ribeira: Restaurantes muito na beira do rio podem ser caros e ruins. Olhe o Google Maps.",
+          "7. Trânsito: Motoristas portugueses correm bastante.",
+          "8. Sol: O vento engana, use protetor.",
+          "9. Filas: Na Lello e Clérigos podem durar horas.",
+          "10. Inverno: A umidade entra nos ossos, traga roupa térmica."
+        ],
+
+        "roteiros": {
+          "curto": {
+            "titulo": "Essencial do Porto (2 Dias)",
+            "texto": [
+              "Dia 1: Sé, São Bento, Clérigos, Lello e Pôr do Sol no Jardim do Morro.",
+              "Dia 2: Ribeira, Ponte D. Luís, Degustação em Gaia e Palácio de Cristal."
+            ]
+          },
+          "medio": {
+            "titulo": "Porto e Mar (3-4 Dias)",
+            "texto": [
+              "Dias 1-2: Roteiro Essencial.",
+              "Dia 3: Foz do Douro (Elétrico até o mar) e Matosinhos (comer peixe).",
+              "Dia 4: Museus (Serralves) ou compras na Rua Santa Catarina."
+            ]
+          },
+          "longo": {
+            "titulo": "Norte de Portugal (5-6 Dias)",
+            "texto": [
+              "Dias 1-3: Roteiro Médio.",
+              "Dia 4: Bate-volta ao Vale do Douro (Trem ou Barco) - Imperdível.",
+              "Dia 5: Bate-volta a Guimarães (Berço de Portugal) e Braga."
+            ]
+          }
+        },
+
+        "links": {
+          "hotel": "https://www.booking.com/city/pt/porto.pt-br.html",
+          "passeio": "https://visitporto.travel/",
+          "seguro": "https://www.segurospromo.com.br"
+        }
       }
     ],
     "Espanha": [
@@ -14607,6 +15667,363 @@
         "seguro": "https://www.segurospromo.com.br"
       }
     }
-  ]
+  ],
+  "Holanda": [
+      {
+        "name": "Amsterdam",
+        "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/KeizersgrachtReguliersgrachtAmsterdam.jpg/960px-KeizersgrachtReguliersgrachtAmsterdam.jpg",
+        "tags": ["Canais", "Bicicleta", "Liberdade"],
+        "mapa": "https://goo.gl/maps/amsterdam",
+        "clima": "Oceânico. Clima imprevisível. Chuva frequente o ano todo. Verão ameno (20-25°C) e Inverno frio e úmido (0-5°C).",
+        
+        "veredicto": {
+          "melhor_epoca": "Abril (Tulipas e Dia do Rei) ou Setembro (Clima bom e menos cheio).",
+          "ideal_para": [
+            "Jovens (Vida noturna e liberdade)",
+            "Amantes de Arte (Van Gogh, Rembrandt e museus de classe mundial)",
+            "Casais (Passeios de barco pelos canais iluminados)",
+            "Ciclistas (A melhor infraestrutura de bike do mundo)"
+          ],
+          "nao_ideal_para": [
+            "Quem tem orçamento curto (Hospedagem é caríssima)",
+            "Quem odeia cheiro de 'ervas' (O cheiro de maconha é comum nas ruas do centro)",
+            "Quem tem medo de bicicleta (Elas são as donas da rua e não param para pedestres)"
+          ],
+          "perfis": [
+            { "icone": "ri-bike-fill", "nome": "Bike" },
+            { "icone": "ri-palette-fill", "nome": "Museus" },
+            { "icone": "ri-ship-fill", "nome": "Canais" },
+            { "icone": "ri-beer-fill", "nome": "Heineken" }
+          ]
+        },
+
+        "pontos_turisticos": [
+          "1. Rijksmuseum: O museu nacional, casa da 'Ronda Noturna' de Rembrandt. Prédio imponente.",
+          "2. Museu Van Gogh: A maior coleção do mundo obras do artista. Reserve com semanas de antecedência.",
+          "3. Casa de Anne Frank: O anexo secreto onde ela escreveu o diário. Emocionante e claustrofóbico.",
+          "4. Vondelpark: O 'Central Park' de Amsterdam. Ótimo para piqueniques e ver os locais relaxando.",
+          "5. Red Light District (De Wallen): A famosa zona da luz vermelha. Curioso de dia, agitado à noite.",
+          "6. Heineken Experience: Tour interativo na antiga cervejaria. Turístico, mas divertido.",
+          "7. Praça Dam e Palácio Real: O coração da cidade.",
+          "8. Jordaan: O bairro mais charmoso, com canais estreitos, cafés e as '9 Ruas' de comércio.",
+          "9. Bloemenmarkt: O único mercado de flores flutuante do mundo (compre bulbos de tulipa aqui).",
+          "10. A'DAM Lookout: Mirante com balanço mais alto da Europa na beira do prédio."
+        ],
+
+        "gastronomia": [
+          "1. Stroopwafel: O waffle fininho com recheio de caramelo. Coma quente na feira Albert Cuypmarkt.",
+          "2. Batata Frita (Vlaaming): Servida no cone com muita maionese (não ketchup!).",
+          "3. Bitterballen: Bolinhas de ragu de carne fritas, clássico de bar.",
+          "4. Arenque Cru (Haring): Peixe cru servido com cebola e picles. Para os fortes.",
+          "5. Torta de Maçã (Appeltaart): A da Winkel 43 é lendária, com massa grossa e muito chantilly.",
+          "6. Queijo Gouda e Edam: Prove nas lojas de queijo (Henri Willig) que dão degustação grátis.",
+          "7. Poffertjes: Mini panquecas fofinhas com manteiga e açúcar de confeiteiro.",
+          "8. Kroket: Croquete de carne, vendido até em máquinas de parede (FEBO).",
+          "9. Stamppot: Purê de batata com vegetais e salsicha defumada (prato de inverno).",
+          "10. Cerveja Artesanal: Brouwerij 't IJ (no moinho) é excelente."
+        ],
+
+        "religiao": [
+          "1. Oude Kerk (Igreja Velha): A mais antiga, fica ironicamente no meio do Red Light District.",
+          "2. Ons' Lieve Heer op Solder: Uma igreja católica clandestina escondida no sótão de uma casa normal.",
+          "3. Westerkerk: A torre mais alta, ao lado da casa de Anne Frank.",
+          "4. Sinagoga Portuguesa: Impressionante construção da comunidade judaica sefardita.",
+          "5. Nieuwe Kerk: Igreja Nova na praça Dam, usada para exibições reais.",
+          "6. Begijnhof: Um jardim secreto onde viviam mulheres religiosas (beguinas). Silêncio absoluto exigido.",
+          "7. Templo Fo Guang Shan: Templo budista em Zeedijk.",
+          "8. Tolerância: A cidade é historicamente refúgio para perseguidos religiosos.",
+          "9. Museus Bíblicos: Existem coleções históricas.",
+          "10. Ausência de Culto: Muitas igrejas viraram centros culturais ou museus."
+        ],
+
+        "curiosidades": [
+          "1. Cidade Flutuante: Construída sobre milhões de estacas de madeira enterradas na lama (o solo é pantanoso).",
+          "2. Mais Bikes que Gente: Existem mais bicicletas do que habitantes.",
+          "3. Casas Tortas: As casas na beira dos canais são inclinadas para frente para içar móveis pelos ganchos no telhado (as escadas são estreitas demais).",
+          "4. Coffee Shops: Vendem maconha, não café. Se quiser café, vá a um 'Café'.",
+          "5. Gatos nos Museus: Muitos bares e museus têm 'gatos residentes' para caçar ratos.",
+          "6. XXX: O símbolo da cidade (três xis) representa Santo André, não conteúdo adulto.",
+          "7. Abaixo do Nível do Mar: O aeroporto Schiphol fica a 4 metros abaixo do nível do mar.",
+          "8. Cortinas Abertas: Os holandeses não fecham as cortinas à noite (herança calvinista de 'não ter nada a esconder').",
+          "9. Laranja: A cor nacional vem da família real (Casa de Orange), não da bandeira.",
+          "10. Veneza do Norte: Tem mais canais e pontes que Veneza."
+        ],
+
+        "eventos_estacoes": [
+          "1. King's Day (27 de Abril): O país inteiro veste laranja e vai para a rua beber e festejar. Imperdível.",
+          "2. Keukenhof (Mar-Mai): O maior jardim de tulipas do mundo (fica na cidade vizinha, Lisse).",
+          "3. Amsterdam Dance Event (ADE - Outubro): O maior festival de música eletrônica do mundo.",
+          "4. Light Festival (Dez-Jan): Esculturas de luz nos canais durante o inverno.",
+          "5. Pride Amsterdam (Agosto): A parada gay acontece em barcos nos canais.",
+          "6. Verão: Parques lotados, gente fazendo churrasco e nadando (sim) nos canais.",
+          "7. Inverno: Patinação no gelo na Museumplein.",
+          "8. Grachtenfestival (Agosto): Concertos de música clássica nos canais.",
+          "9. Dia da Tulipa (Janeiro): Tulipas grátis na praça Dam.",
+          "10. IDFA (Novembro): Festival de documentários."
+        ],
+
+        "info_gerais": [
+          "1. Cuidado na Ciclovia: NÃO ANDE na ciclovia. Você será atropelado e xingado. Olhe para os dois lados antes de cruzar.",
+          "2. I amsterdam Card: Vale a pena se for visitar muitos museus (inclui transporte).",
+          "3. Transporte Público: Não aceita dinheiro. Use cartão de crédito por aproximação (OVpay) ou compre passe.",
+          "4. Água: A água da torneira é uma das melhores do mundo. Peça 'tap water' nos restaurantes (grátis).",
+          "5. Banheiros: Quase todos são pagos (até no shopping). Tenha moedas ou cartão.",
+          "6. Escadas: As escadas dos hotéis antigos são verticais e perigosas. Cuidado com malas grandes.",
+          "7. Segurança: Segura, mas tem batedores de carteira no centro.",
+          "8. Drogas: Maconha é tolerada nos Coffee Shops, mas proibida na rua. Drogas pesadas são ilegais e perigosas.",
+          "9. Gorjeta: Não é obrigatória, mas arredondar é comum.",
+          "10. Ingressos: Compre TUDO online. Bilheterias físicas quase não existem mais para atrações famosas."
+        ],
+
+        "antes_de_ir": [
+          "1. Reserve Van Gogh e Anne Frank: Esgotam com 1 mês de antecedência. Sério.",
+          "2. Capa de Chuva: Guarda-chuva não aguenta o vento. Traga capa.",
+          "3. Tênis Confortável: Você vai andar muito.",
+          "4. Adaptador Universal: As tomadas são fundas.",
+          "5. Cartão Global: Dinheiro vivo é recusado em muitos lugares (pin-only).",
+          "6. Seguro Viagem: Tenha a apólice impressa.",
+          "7. Mala Pequena: Se ficar em casa antiga sem elevador, mala grande é pesadelo.",
+          "8. Baixe o App 9292: O melhor para transporte na Holanda.",
+          "9. Power Bank: Essencial.",
+          "10. Roteiro de Chuva: Tenha um plano B para dias chuvosos."
+        ],
+
+        "numeros": [
+          "1. 112 (Emergência Geral).",
+          "2. Polícia (Não emergência): 0900-8844.",
+          "3. Schiphol Airport: +31 20 794 0800.",
+          "4. Consulado do Brasil: +31 20 625 2125.",
+          "5. Central de Táxi (TCA): +31 20 777 7777.",
+          "6. Perjados e Achados (GVB): Transporte público.",
+          "7. Farmácia Central (Leidsestraat): Aberta até tarde.",
+          "8. Doctor Service (Turistas): +31 20 592 3434.",
+          "9. I amsterdam Store (Estação Central).",
+          "10. Emergência Dental: 0900-821 2230."
+        ],
+
+        "riscos": [
+          "1. Atropelamento por Bike: O maior risco real. O pedestre é o último na hierarquia das ruas.",
+          "2. Dealers de Rua: Homens oferecendo drogas na rua vendem gesso, fermento ou coisas perigosas. Ignore.",
+          "3. Canais sem Grade: Cuidado ao andar distraído ou bêbado perto da água. Carros e pessoas caem todo ano.",
+          "4. Pickpockets: No Red Light e na praça Dam.",
+          "5. Taxis Ilegais: Pegue apenas nos pontos oficiais ou use Uber.",
+          "6. Potência da Erva: Se for consumir, cuidado. É muito mais forte que no Brasil. 'Space Cakes' demoram a bater, não coma dois.",
+          "7. Fotos no Red Light: PROIBIDO fotografar as vitrines com mulheres. Você pode ter o celular quebrado e ser expulso.",
+          "8. Clima: Hipotermia se beber e dormir na rua no inverno.",
+          "9. Multa no Trem: Fiscalização é frequente.",
+          "10. Pista de Tram: O bonde é silencioso. Olhe e ouça."
+        ],
+
+        "roteiros": {
+          "curto": {
+            "titulo": "Clássicos de Amsterdam (2 Dias)",
+            "texto": [
+              "Dia 1: Passeio de Barco, Mercado de Flores, Praça Dam e Red Light à noite.",
+              "Dia 2: Museus (Van Gogh e Rijks) e Vondelpark."
+            ]
+          },
+          "medio": {
+            "titulo": "Cultura e História (3 Dias)",
+            "texto": [
+              "Dias 1-2: Roteiro curto.",
+              "Dia 3: Casa de Anne Frank, Bairro Jordaan e Heineken Experience."
+            ]
+          },
+          "longo": {
+            "titulo": "Holanda Completa (5 Dias)",
+            "texto": [
+              "Dias 1-3: Roteiro médio.",
+              "Dia 4: Bate-volta a Zaanse Schans (Moinhos) e Zaandam.",
+              "Dia 5: Bate-volta a Haia e Madurodam ou Keukenhof (se for primavera)."
+            ]
+          }
+        },
+
+        "links": {
+          "hotel": "https://www.booking.com/city/nl/amsterdam.pt-br.html",
+          "passeio": "https://www.iamsterdam.com/",
+          "seguro": "https://www.segurospromo.com.br"
+        }
+      }
+    ],
+    "Irlanda": [
+      {
+        "name": "Dublin",
+        "imagem": "https://upload.wikimedia.org/wikipedia/commons/4/42/Samuel_Beckett_Bridge_At_Sunset_Dublin_Ireland_%2897037639%29_%28cropped%29.jpeg",
+        "tags": ["Pubs", "História", "Literatura"],
+        "mapa": "https://goo.gl/maps/dublin",
+        "clima": "Oceânico. Fresco e húmido o ano todo. Chuva frequente (\"liquid sunshine\"). Verões amenos e invernos frios.",
+        
+        "veredicto": {
+          "melhor_epoca": "Maio a Setembro (Dias mais longos e menos frios). Março tem o St. Patrick's Day (caos divertido).",
+          "ideal_para": [
+            "Jovens (A cultura de pubs e vida noturna é vibrante)",
+            "Amantes de Literatura (Cidade UNESCO da Literatura, terra de Joyce e Wilde)",
+            "Fãs de História (Castelos, vikings e revoluções)",
+            "Apreciadores de Cerveja e Whiskey (Guinness e Jameson)"
+          ],
+          "nao_ideal_para": [
+            "Quem procura clima tropical (Chove muito e venta)",
+            "Quem tem orçamento muito limitado (Alojamento e álcool são caros)",
+            "Quem não gosta de barulho à noite (Se ficar na zona do Temple Bar)"
+          ],
+          "perfis": [
+            { "icone": "ri-beer-fill", "nome": "Pubs" },
+            { "icone": "ri-book-open-fill", "nome": "Literatura" },
+            { "icone": "ri-ancient-pavilion-fill", "nome": "História" },
+            { "icone": "ri-music-fill", "nome": "Música" }
+          ]
+        },
+
+        "pontos_turisticos": [
+          "1. Guinness Storehouse: A atração nº 1. Conheça a história da cerveja e beba uma pint no Gravity Bar com vista 360º.",
+          "2. Trinity College e Book of Kells: Uma das universidades mais antigas e a sua biblioteca impressionante (Long Room).",
+          "3. Temple Bar: O bairro mais famoso, cheio de pubs históricos, música ao vivo e ruas de calçada portuguesa.",
+          "4. St. Patrick's Cathedral: A maior igreja da Irlanda, ligada ao santo padroeiro.",
+          "5. Dublin Castle: Antiga sede do governo britânico, mistura de palácio e fortaleza.",
+          "6. Kilmainham Gaol: Antiga prisão onde foram executados os líderes da revolução de 1916. Visita guiada emocionante.",
+          "7. Phoenix Park: O maior parque urbano murado da Europa. Tem veados soltos e o Zoo de Dublin.",
+          "8. Grafton Street: A rua de comércio principal, famosa pelos artistas de rua (buskers).",
+          "9. Jameson Distillery Bow St.: Onde nasceu o whiskey irlandês. Tour com degustação.",
+          "10. Ha'penny Bridge: A ponte pedonal mais icónica sobre o rio Liffey."
+        ],
+
+        "gastronomia": [
+          "1. Irish Stew: Estufado de borrego (cordeiro) com batatas, cebola e salsa.",
+          "2. Guinness Beef Stew: Estufado de carne de vaca cozinhada lentamente em cerveja preta.",
+          "3. Fish and Chips: Peixe frito com batatas fritas, melhor se comido na costa (Howth).",
+          "4. Coddle: Prato típico de Dublin com sobras (salsichas, bacon, batatas) cozido no vapor.",
+          "5. Boxty: Panqueca tradicional de batata irlandesa.",
+          "6. Soda Bread: Pão denso e rápido, sem fermento biológico (usa bicarbonato).",
+          "7. Full Irish Breakfast: Pequeno-almoço pesado com salsichas, bacon, ovos, feijão, cogumelos e pudding (morcela).",
+          "8. Ostras e Mexilhões: Muito frescos, especialmente com uma stout a acompanhar.",
+          "9. Chowder de Marisco: Sopa cremosa de peixe e marisco.",
+          "10. Tayto Crisp Sandwich: Sanduíche de batata frita de pacote (ícone cultural bizarro)."
+        ],
+
+        "religiao": [
+          "1. St. Patrick's Cathedral: Protestante (Church of Ireland).",
+          "2. Christ Church Cathedral: Medieval e com uma cripta fascinante.",
+          "3. Igreja Católica: A Irlanda é historicamente muito católica, embora a frequência tenha diminuído.",
+          "4. Whitefriar Street Church: Guarda as relíquias de São Valentim (sim, o dos namorados).",
+          "5. Glendalough: Ruínas monásticas nas montanhas Wicklow (bate-volta comum).",
+          "6. Cruz Céltica: Símbolo que mistura o cristianismo com o sol pagão.",
+          "7. Livro de Kells: Um evangelho manuscrito pelos monges no século IX.",
+          "8. Peregrinação: Croagh Patrick é uma montanha sagrada no oeste.",
+          "9. Lendas de Santos: São Patrício expulsou as cobras da Irlanda (alegoria para o paganismo).",
+          "10. Halloween (Samhain): Origem pagã celta que se misturou com o Dia de Todos os Santos."
+        ],
+
+        "curiosidades": [
+          "1. UNESCO City of Literature: Terra de 4 prémios Nobel (Yeats, Shaw, Beckett, Heaney).",
+          "2. As Portas Coloridas: Diz a lenda que foram pintadas para que os maridos bêbados reconhecessem a casa certa ao voltar do pub.",
+          "3. Guinness: A fábrica tem um contrato de arrendamento de 9.000 anos assinado em 1759.",
+          "4. U2: A banda formou-se em Dublin e ainda tem estúdios na cidade.",
+          "5. O Spire: Uma agulha de aço de 120 metros na O'Connell Street, chamada de 'o maior palito do mundo'.",
+          "6. Vikings: Dublin foi fundada pelos Vikings em 841 d.C. como um porto de comércio de escravos.",
+          "7. Halloween: O feriado nasceu na Irlanda como o festival celta de Samhain.",
+          "8. Múmias: A cripta da igreja St. Michan's tem múmias abertas para visitação (dizem que inspirou Drácula).",
+          "9. Pontes: A O'Connell Bridge é mais larga do que comprida.",
+          "10. O Leão da MGM: O leão que ruge na abertura dos filmes nasceu no Zoo de Dublin."
+        ],
+
+        "eventos_estacoes": [
+          "1. St. Patrick's Day (17 de Março): A cidade fica verde. Desfiles e festas de rua massivas.",
+          "2. Bloomsday (16 de Junho): Fãs de James Joyce vestem-se à moda antiga e refazem os passos de Ulysses.",
+          "3. TradFest (Janeiro): O maior festival de música tradicional irlandesa.",
+          "4. Dublin Theatre Festival (Set/Out): Teatro de classe mundial.",
+          "5. Natal: A Grafton Street iluminada e os mercados de Natal.",
+          "6. Six Nations (Fev/Mar): O Rugby é religião. Se a Irlanda joga em casa, os pubs lotam.",
+          "7. Bram Stoker Festival (Outubro): Celebra o autor de Drácula (nascido em Dublin) perto do Halloween.",
+          "8. Verão: Os locais invadem os parques e canais ao mínimo sinal de sol.",
+          "9. Liffey Swim: Corrida de natação no rio que atravessa a cidade.",
+          "10. Taste of Dublin (Junho): Festival gastronómico nos jardins Iveagh."
+        ],
+
+        "info_gerais": [
+          "1. Transporte: Use o Leap Card (cartão recarregável) para autocarros, Luas (elétrico) e DART (comboio).",
+          "2. Mão Inglesa: Conduz-se pela esquerda. OLHE PARA A DIREITA ao atravessar a rua (está escrito no chão 'Look Right').",
+          "3. Gorjeta: 10-12% em restaurantes é o padrão se o serviço for bom.",
+          "4. Pubs: Não se serve à mesa na maioria. Peça e pague ao balcão.",
+          "5. Rounds: Se sair com irlandeses, cada um paga uma rodada de bebidas para todos. Não quebre a corrente.",
+          "6. Água: Potável da torneira e gratuita nos restaurantes.",
+          "7. Tomadas: Precisa de adaptador Tipo G (o mesmo de Londres).",
+          "8. Tax Free: Disponível para turistas de fora da UE.",
+          "9. Lojas: Fecham cedo (18h-19h), exceto às quintas-feiras.",
+          "10. Clima: Vista-se em camadas ('cebola'). O tempo muda 4 vezes num dia."
+        ],
+
+        "antes_de_ir": [
+          "1. Reserve Alojamento: Dublin tem uma crise imobiliária, hotéis são caros e esgotam rápido.",
+          "2. Bilhetes Online: Book of Kells e Kilmainham Gaol esgotam semanas antes.",
+          "3. Casaco Impermeável: Guarda-chuva é inútil com o vento irlandês.",
+          "4. Calçado Confortável: Vai andar muito.",
+          "5. Adaptador de Corrente: Compre antes de ir.",
+          "6. Documentos: Tenha comprovativo de alojamento e bilhete de volta para a imigração.",
+          "7. Moedas: Úteis para autocarros se não tiver o Leap Card (só aceitam moedas, sem troco).",
+          "8. Bate-voltas: Planeie ir aos Cliffs of Moher ou Wicklow.",
+          "9. Power Bank: Essencial.",
+          "10. App de Transporte: Baixe o TFI Live ou Google Maps."
+        ],
+
+        "numeros": [
+          "1. 112 ou 999 (Emergência Geral).",
+          "2. Aeroporto de Dublin: +353 1 814 1111.",
+          "3. Turismo da Irlanda: Discover Ireland Centre.",
+          "4. Embaixada do Brasil em Dublin: +353 1 475 6000.",
+          "5. Táxis (FreeNow app é o mais usado).",
+          "6. St. James's Hospital: Emergência central.",
+          "7. Gardaí (Polícia): O nome oficial da polícia é Garda.",
+          "8. Farmácias: Boots é a rede mais comum.",
+          "9. Dublin Bus: Informações de autocarros.",
+          "10. Irish Rail: Informações de comboios."
+        ],
+
+        "riscos": [
+          "1. Pickpockets: Cuidado com telemóveis no Temple Bar e na rua comercial Henry Street.",
+          "2. Gangues de Jovens: Evite grupos de adolescentes (chamados 'knackers' ou 'scrotes') à noite, podem ser agressivos.",
+          "3. Preços Altos: O álcool e o tabaco são taxados pesadamente.",
+          "4. Atravessar a Rua: O trânsito vem do lado 'errado' (esquerda). Cuidado!",
+          "5. Gaivotas: Em Howth ou no centro, podem roubar comida.",
+          "6. Clima: Risco de hipotermia se não estiver agasalhado no inverno.",
+          "7. Ciclismo: Ciclovias nem sempre são contínuas, cuidado com os autocarros.",
+          "8. Bares Turísticos: Temple Bar cobra o dobro pela cerveja. Caminhe 5 minutos para fora da zona para preços normais.",
+          "9. Alojamento Falso: Cuidado com golpes de arrendamento no Facebook.",
+          "10. Maré: Em passeios de costa, cuidado com as falésias sem proteção."
+        ],
+
+        "roteiros": {
+          "curto": {
+            "titulo": "Essencial de Dublin (2 Dias)",
+            "texto": [
+              "Dia 1: Trinity College, Grafton Street, St. Stephen's Green e noite no Temple Bar.",
+              "Dia 2: Guinness Storehouse, St. Patrick's Cathedral e Dublin Castle."
+            ]
+          },
+          "medio": {
+            "titulo": "História e Costa (3-4 Dias)",
+            "texto": [
+              "Dias 1-2: Roteiro curto.",
+              "Dia 3: Kilmainham Gaol e Phoenix Park.",
+              "Dia 4: Bate-volta de comboio (DART) até Howth (falésias e focas) ou Bray."
+            ]
+          },
+          "longo": {
+            "titulo": "Irlanda Profunda (5 Dias)",
+            "texto": [
+              "Dias 1-3: Roteiro médio.",
+              "Dia 4: Excursão de dia inteiro aos Cliffs of Moher e Galway (costa oeste).",
+              "Dia 5: Museus Nacionais (Arqueologia) e compras."
+            ]
+          }
+        },
+
+        "links": {
+          "hotel": "https://www.booking.com/city/ie/dublin.pt-pt.html",
+          "passeio": "https://www.visitdublin.com/",
+          "seguro": "https://www.segurospromo.com.br"
+        }
+      }
+    ]
 }
 }

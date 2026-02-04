@@ -1852,3 +1852,29 @@ c:\Users\Ola\Music\valadãoworldtour\style.css
     right: 100px;
     z-index: 1400; /* Abaixo do menu FAB */
 }
+
+/* --- BOTÃO VOLTAR AO MAPA --- */
+.back-map-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    padding: 8px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--neon-cyan);
+    border-radius: 30px;
+    color: var(--text-muted);
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: 0.3s;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.back-map-btn:hover {
+    background: var(--neon-cyan);
+    color: #fff;
+    transform: translateX(-5px);
+    box-shadow: 0 5px 15px rgba(0, 196, 230, 0.2);
+}
+.back-map-btn i { font-size: 1.1rem; }

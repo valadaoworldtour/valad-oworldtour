@@ -241,83 +241,7 @@ const detailTitle = document.getElementById('detailTitle');
 const detailContent = document.getElementById('detailContent');
 let currentCity = null;
 
-function openModal(cidade, imagemUrl) {
-    currentCity = cidade; 
-    modalMenu.classList.remove('hidden');
-    modalDetails.classList.add('hidden');
 
-    // Atualiza informações básicas
-    document.getElementById('modalTitle').innerText = cidade.name;
-    document.getElementById('modalSubtitle').innerText = cidade.clima;
-    document.getElementById('modalImg').style.backgroundImage = `url('${imagemUrl}')`;
-    document.getElementById('modalMapLink').href = cidade.mapa;
-    
-    // Atualiza tags
-    let tagsHTML = '';
-    if(cidade.tags) { cidade.tags.forEach(tag => tagsHTML += `<span class="badge azul">${tag}</span>`); }
-    document.getElementById('modalBadges').innerHTML = tagsHTML;
-
-    // ========== ATUALIZA CUSTO REAL DA VIAGEM ==========
-    updateRealCost(cidade.name);
-
-    // ========== NOVO: ATUALIZA O VEREDICTO ==========
-    updateVerdict(cidade);
-
-    // ========== NOVO: ATUALIZA O CHECKLIST (ANTES DE IR) ==========
-    renderChecklist(cidade.name);
-
-    // BOTÕES DE AFILIADO
-    const affContainer = document.getElementById('affiliateContainer');
-    let affHTML = '';
-    if(cidade.links) {
-        if(cidade.links.hotel) affHTML += makeAffiliateBtn("ri-hotel-bed-fill", "Reservar Hotel", "Melhores Preços", cidade.links.hotel);
-        if(cidade.links.passeio) affHTML += makeAffiliateBtn("ri-ticket-2-fill", "Comprar Passeios", "Sem Filas", cidade.links.passeio);
-        if(cidade.links.seguro) affHTML += makeAffiliateBtn("ri-shield-check-fill", "Seguro Viagem", "Viaje Protegido", cidade.links.seguro);
-    }
-    affContainer.innerHTML = affHTML;
-    
-    // ROTEIRO AUTOMÁTICO
-    const roteiroDiv = document.getElementById('roteiroArea') || document.createElement('div');
-    roteiroDiv.id = 'roteiroArea';
-    roteiroDiv.className = 'roteiro-box';
-    
-    // Removemos se já existir para recriar limpo
-    if(document.getElementById('roteiroArea')) document.getElementById('roteiroArea').remove();
-
-    if(cidade.roteiros) {
-        roteiroDiv.innerHTML = `
-            <span class="roteiro-label"><i class="ri-calendar-check-line"></i> QUANTOS DIAS VOCÊ TEM?</span>
-            <div class="roteiro-options">
-                <button class="time-btn" onclick="showRoteiro('curto')">1 a 2 Dias</button>
-                <button class="time-btn" onclick="showRoteiro('medio')">3 a 5 Dias</button>
-                <button class="time-btn" onclick="showRoteiro('longo')">+7 Dias</button>
-            </div>
-        `;
-        // Insere DEPOIS dos afiliados e ANTES dos ícones
-        affContainer.parentNode.insertBefore(roteiroDiv, document.getElementById('categoryGrid'));
-    }
-    
-    // MENU DE CATEGORIAS (ICONES)
-    const catGrid = document.getElementById('categoryGrid');
-    catGrid.innerHTML = `
-        <div class="cat-card" onclick="showCategory('turismo')"><i class="ri-camera-3-fill"></i><h4>Pontos Turísticos</h4></div>
-        <div class="cat-card" onclick="showCategory('gastronomia')"><i class="ri-restaurant-2-fill"></i><h4>Gastronomia</h4></div>
-        <div class="cat-card" onclick="showCategory('religiao')"><i class="ri-book-open-fill"></i><h4>Cultura & Religião</h4></div>
-        <div class="cat-card" onclick="showCategory('curiosidades')"><i class="ri-lightbulb-flash-fill"></i><h4>Curiosidades</h4></div>
-        <div class="cat-card" onclick="showCategory('eventos')"><i class="ri-calendar-event-fill"></i><h4>Eventos & Estações</h4></div>
-        <div class="cat-card" onclick="showCategory('geral')"><i class="ri-coins-fill"></i><h4>Info. Gerais</h4></div>
-        <div class="cat-card" onclick="showCategory('numeros')"><i class="ri-phone-line"></i><h4>SOS & Útil</h4></div>
-        <div class="cat-card warning" onclick="showCategory('antes')"><i class="ri-alert-fill"></i><h4>Antes de Ir</h4></div>
-
-        <div class="cat-card warning" onclick="showCategory('riscos')" style="border-color: var(--neon-coral);">
-            <i class="ri-alarm-warning-fill" style="color: var(--neon-coral);"></i>
-            <h4 style="color: var(--neon-coral);">Riscos & Erros</h4>
-        </div>
-    `;
-    
-    document.querySelector('.fab-container').style.display = 'none';
-    modal.classList.add('active');
-}
 
 function makeAffiliateBtn(icon, title, sub, link) {
     return `<a href="${link}" target="_blank" class="affiliate-btn"><i class="${icon}"></i><div class="affiliate-content"><strong>${title}</strong><span>${sub}</span></div></a>`;
@@ -1106,3 +1030,171 @@ document.addEventListener('DOMContentLoaded', async () => {
     if(typeof init === 'function') await init(); 
     initMap();
 });
+
+// --- PASSPORT FUNCTIONS ---
+const passportModal = document.getElementById('passportModal');
+
+function openPassport() {
+    modal.classList.remove('active'); // Garante que o modal da cidade se feche
+    passportModal.classList.add('active');
+    renderPassport();
+}
+
+function closePassport() {
+    passportModal.classList.remove('active');
+}
+
+function renderPassport() {
+    const visitedCities = JSON.parse(localStorage.getItem('visitedCities')) || [];
+    const stampsContainer = document.getElementById('stampsContainer');
+    stampsContainer.innerHTML = '';
+
+    if (visitedCities.length === 0) {
+        stampsContainer.innerHTML = '<p>Você ainda não visitou nenhuma cidade. Explore o mapa para colecionar carimbos!</p>';
+        return;
+    }
+
+    visitedCities.forEach(cityName => {
+        const cityData = findCityData(cityName);
+        if (cityData) {
+            const stamp = document.createElement('div');
+            stamp.className = 'stamp';
+            stamp.innerHTML = `
+                <div class="stamp-icon">
+                    <img src="${cityData.imagem || defaultImage}" alt="${cityData.name}">
+                </div>
+                <div class="stamp-city">${cityData.name}</div>
+                <div class="stamp-country">${cityData.pais}</div>
+            `;
+            stampsContainer.appendChild(stamp);
+        }
+    });
+
+    checkContinentsCompletion();
+}
+
+function findCityData(cityName) {
+    for (const continent in worldData) {
+        for (const country in worldData[continent]) {
+            const city = worldData[continent][country].find(c => c.name === cityName);
+            if (city) {
+                return { ...city, pais: country };
+            }
+        }
+    }
+    return null;
+}
+
+function checkContinentsCompletion() {
+    const visitedCities = JSON.parse(localStorage.getItem('visitedCities')) || [];
+    const medalsContainer = document.getElementById('medalsContainer');
+    medalsContainer.innerHTML = '';
+
+    Object.keys(worldData).forEach(continent => {
+        const allCitiesInContinent = [];
+        Object.keys(worldData[continent]).forEach(country => {
+            worldData[continent][country].forEach(city => {
+                allCitiesInContinent.push(city.name);
+            });
+        });
+
+        const allCitiesVisited = allCitiesInContinent.every(city => visitedCities.includes(city));
+
+        if (allCitiesVisited && allCitiesInContinent.length > 0) {
+            const medal = document.createElement('div');
+            medal.className = 'medal';
+            medal.innerHTML = `
+                <div class="medal-icon"><i class="ri-award-fill"></i></div>
+                <div class="medal-name">${continent}</div>
+            `;
+            medalsContainer.appendChild(medal);
+        }
+    });
+}
+
+// Modify openModal to save visited city
+function openModal(cidade, imagemUrl) {
+    passportModal.classList.remove('active'); // Garante que o passaporte se feche
+    currentCity = cidade;
+    modalMenu.classList.remove('hidden');
+    modalDetails.classList.add('hidden');
+
+    // Save visited city to localStorage
+    const visitedCities = JSON.parse(localStorage.getItem('visitedCities')) || [];
+    if (!visitedCities.includes(cidade.name)) {
+        visitedCities.push(cidade.name);
+        localStorage.setItem('visitedCities', JSON.stringify(visitedCities));
+    }
+
+    // Atualiza informações básicas
+    document.getElementById('modalTitle').innerText = cidade.name;
+    document.getElementById('modalSubtitle').innerText = cidade.clima;
+    document.getElementById('modalImg').style.backgroundImage = `url('${imagemUrl}')`;
+    document.getElementById('modalMapLink').href = cidade.mapa;
+    
+    // Atualiza tags
+    let tagsHTML = '';
+    if(cidade.tags) { cidade.tags.forEach(tag => tagsHTML += `<span class="badge azul">${tag}</span>`); }
+    document.getElementById('modalBadges').innerHTML = tagsHTML;
+
+    // ========== ATUALIZA CUSTO REAL DA VIAGEM ==========
+    updateRealCost(cidade.name);
+
+    // ========== NOVO: ATUALIZA O VEREDICTO ==========
+    updateVerdict(cidade);
+
+    // ========== NOVO: ATUALIZA O CHECKLIST (ANTES DE IR) ==========
+    renderChecklist(cidade.name);
+
+    // BOTÕES DE AFILIADO
+    const affContainer = document.getElementById('affiliateContainer');
+    let affHTML = '';
+    if(cidade.links) {
+        if(cidade.links.hotel) affHTML += makeAffiliateBtn("ri-hotel-bed-fill", "Reservar Hotel", "Melhores Preços", cidade.links.hotel);
+        if(cidade.links.passeio) affHTML += makeAffiliateBtn("ri-ticket-2-fill", "Comprar Passeios", "Sem Filas", cidade.links.passeio);
+        if(cidade.links.seguro) affHTML += makeAffiliateBtn("ri-shield-check-fill", "Seguro Viagem", "Viaje Protegido", cidade.links.seguro);
+    }
+    affContainer.innerHTML = affHTML;
+    
+    // ROTEIRO AUTOMÁTICO
+    const roteiroDiv = document.getElementById('roteiroArea') || document.createElement('div');
+    roteiroDiv.id = 'roteiroArea';
+    roteiroDiv.className = 'roteiro-box';
+    
+    // Removemos se já existir para recriar limpo
+    if(document.getElementById('roteiroArea')) document.getElementById('roteiroArea').remove();
+
+    if(cidade.roteiros) {
+        roteiroDiv.innerHTML = `
+            <span class="roteiro-label"><i class="ri-calendar-check-line"></i> QUANTOS DIAS VOCÊ TEM?</span>
+            <div class="roteiro-options">
+                <button class="time-btn" onclick="showRoteiro('curto')">1 a 2 Dias</button>
+                <button class="time-btn" onclick="showRoteiro('medio')">3 a 5 Dias</button>
+                <button class="time-btn" onclick="showRoteiro('longo')">+7 Dias</button>
+            </div>
+        `;
+        // Insere DEPOIS dos afiliados e ANTES dos ícones
+        affContainer.parentNode.insertBefore(roteiroDiv, document.getElementById('categoryGrid'));
+    }
+    
+    // MENU DE CATEGORIAS (ICONES)
+    const catGrid = document.getElementById('categoryGrid');
+    catGrid.innerHTML = `
+        <div class="cat-card" onclick="showCategory('turismo')"><i class="ri-camera-3-fill"></i><h4>Pontos Turísticos</h4></div>
+        <div class="cat-card" onclick="showCategory('gastronomia')"><i class="ri-restaurant-2-fill"></i><h4>Gastronomia</h4></div>
+        <div class="cat-card" onclick="showCategory('religiao')"><i class="ri-book-open-fill"></i><h4>Cultura & Religião</h4></div>
+        <div class="cat-card" onclick="showCategory('curiosidades')"><i class="ri-lightbulb-flash-fill"></i><h4>Curiosidades</h4></div>
+        <div class="cat-card" onclick="showCategory('eventos')"><i class="ri-calendar-event-fill"></i><h4>Eventos & Estações</h4></div>
+        <div class="cat-card" onclick="showCategory('geral')"><i class="ri-coins-fill"></i><h4>Info. Gerais</h4></div>
+        <div class="cat-card" onclick="showCategory('numeros')"><i class="ri-phone-line"></i><h4>SOS & Útil</h4></div>
+        <div class="cat-card warning" onclick="showCategory('antes')"><i class="ri-alert-fill"></i><h4>Antes de Ir</h4></div>
+
+        <div class="cat-card warning" onclick="showCategory('riscos')" style="border-color: var(--neon-coral);">
+            <i class="ri-alarm-warning-fill" style="color: var(--neon-coral);"></i>
+            <h4 style="color: var(--neon-coral);">Riscos & Erros</h4>
+        </div>
+    `;
+    
+    document.querySelector('.fab-container').style.display = 'none';
+    modal.classList.add('active');
+}

@@ -183,6 +183,49 @@ body {
 .consultancy-btn span { font-size: 0.7rem; color: var(--text-muted); }
 .consultancy-btn:hover span { color: #222; font-weight: 700; }
 
+/* --- Botão Passaporte --- */
+.passport-box { margin-bottom: 20px; }
+.passport-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    border: 2px solid var(--neon-blue);
+    padding: 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-main);
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.15);
+    cursor: pointer;
+    font-family: var(--font-body);
+    text-align: left;
+}
+.passport-btn:hover {
+    background: var(--neon-blue);
+    color: #fff;
+    transform: translateY(-3px);
+}
+.passport-btn i {
+    font-size: 1.4rem;
+    color: var(--neon-blue);
+}
+.passport-btn:hover i { color: #fff; }
+.passport-btn strong {
+    font-family: var(--font-head);
+    font-size: 0.85rem;
+    color: var(--neon-blue);
+    display: block;
+}
+.passport-btn:hover strong { color: #fff; }
+.passport-btn span {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+.passport-btn:hover span { color: #f0f0f0; }
+
+
 /* --- BARRA DE BUSCA --- */
 .search-wrapper { position: relative; margin-bottom: 25px; }
 .search-wrapper input {
@@ -1878,3 +1921,234 @@ c:\Users\Ola\Music\valadãoworldtour\style.css
     box-shadow: 0 5px 15px rgba(0, 196, 230, 0.2);
 }
 .back-map-btn i { font-size: 1.1rem; }
+
+
+#passportModal .back-btn {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    z-index: 200;
+    background: transparent;
+    border: 1px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+#passportModal .back-btn:hover {
+    background: var(--neon-cyan);
+    color: #001e36;
+    box-shadow: 0 0 15px var(--neon-cyan);
+}
+
+#passportModal .modal-header-img {
+    height: 35vh; /* Altura reduzida */
+    background: linear-gradient(160deg, #001e36 0%, #004e92 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid var(--neon-cyan);
+    box-shadow: inset 0 -10px 20px -10px rgba(0, 196, 230, 0.4);
+}
+
+#passportModal .modal-title-overlay {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+}
+
+#passportModal #passportTitle {
+    font-size: 3.5rem;
+    color: #fff;
+    text-shadow: 0 0 15px var(--neon-cyan), 0 0 25px var(--neon-cyan);
+}
+
+#passportModal #passportSubtitle {
+    background: none;
+    box-shadow: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* --- PASSPORT STYLES (FUTURISTIC & OCEANIC) --- */
+
+
+#passportModal .modal-content {
+    /* Fundo de vidro oceânico profundo */
+    background: linear-gradient(180deg, rgba(0, 30, 54, 0.95) 0%, rgba(0, 15, 27, 0.95) 100%);
+    backdrop-filter: blur(20px) saturate(150%);
+    border: 1px solid rgba(0, 196, 230, 0.2);
+}
+
+#passportModal .modal-body {
+    padding-top: 0;
+}
+
+/* Títulos das seções (Carimbos, Medalhas) */
+.stamps-section h3, .medals-section h3 {
+    font-family: var(--font-head);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    
+    /* Linha de neon abaixo do título */
+    border-bottom: 1px solid var(--neon-cyan);
+    text-shadow: 0 0 10px var(--neon-cyan);
+    filter: drop-shadow(0 0 15px rgba(0, 196, 230, 0.5));
+}
+
+/* Grid dos Carimbos (Stamps) */
+.stamps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 25px;
+}
+
+/* Cartão de Carimbo Individual (Stamp) */
+.stamp {
+    background: rgba(0, 196, 230, 0.05); /* Fundo de vidro azulado */
+    border: 1px solid rgba(0, 196, 230, 0.2);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito de brilho holográfico no hover */
+.stamp:hover {
+    transform: translateY(-8px);
+    border-color: var(--neon-gold);
+    box-shadow: 0 10px 30px rgba(0, 196, 230, 0.2), inset 0 0 10px rgba(255, 187, 0, 0.2);
+}
+
+.stamp::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 187, 0, 0.3), transparent);
+    transform: skewX(-25deg);
+    transition: left 0.8s ease;
+}
+
+.stamp:hover::before {
+    left: 150%;
+}
+
+
+/* Ícone/Imagem do Carimbo */
+.stamp .stamp-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #001e36, #003050);
+    padding: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2), inset 0 0 10px rgba(0, 196, 230, 0.3);
+}
+
+.stamp .stamp-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: saturate(1.2);
+}
+
+/* Nome da Cidade no Carimbo */
+.stamp .stamp-city {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #fff;
+    text-shadow: 0 0 5px var(--neon-cyan);
+    margin-bottom: 5px;
+}
+
+/* Nome do País no Carimbo */
+.stamp .stamp-country {
+    font-size: 0.8rem;
+    color: var(--neon-cyan);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Seção de Medalhas */
+.medals-section {
+    margin-top: 40px;
+}
+
+/* Grid das Medalhas */
+.medals-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Medalha Individual */
+.medal {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.medal:hover {
+    transform: scale(1.1);
+}
+
+/* Ícone da Medalha (Dourado Neon) */
+.medal .medal-icon {
+    font-size: 5rem;
+    color: var(--neon-gold);
+    text-shadow: 0 0 20px var(--neon-gold);
+    filter: drop-shadow(0 0 15px rgba(255, 187, 0, 0.7));
+}
+
+/* Nome da Medalha (Continente) */
+.medal .medal-name {
+    font-family: var(--font-head);
+    font-weight: 700;
+    margin-top: 10px;
+    color: var(--neon-gold);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Mensagem de Passaporte Vazio */
+#stampsContainer p {
+    grid-column: 1 / -1; /* Ocupa toda a largura do grid */
+    text-align: center;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+    padding: 40px 20px;
+    background: rgba(0, 196, 230, 0.05);
+    border: 1px dashed rgba(0, 196, 230, 0.3);
+    border-radius: 12px;
+}
+
+

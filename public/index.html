@@ -49,6 +49,16 @@
                 </a>
             </div>
 
+            <div class="passport-box">
+                <button class="passport-btn" onclick="openPassport()">
+                    <i class="ri-passport-fill"></i>
+                    <div>
+                        <strong>Meu Passaporte</strong>
+                        <span>Seus carimbos de viagem</span>
+                    </div>
+                </button>
+            </div>
+
             <button class="assistant-btn" onclick="openAssistant()">
                 <div class="bot-icon">
                     <i class="ri-robot-2-fill"></i>
@@ -337,6 +347,34 @@
                 <button onclick="resetAssistant()" class="restart-btn">
                     <i class="ri-refresh-line"></i> Começar de Novo
                 </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="passportModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="back-btn" onclick="closePassport()">
+                <i class="ri-arrow-left-line"></i> VOLTAR
+            </button>
+
+            <div class="modal-header-img">
+                <div class="modal-gradient"></div>
+                <div class="modal-title-overlay">
+                    <h2 id="passportTitle">Meu Passaporte</h2>
+                    <span id="passportSubtitle">Sua jornada pelo mundo</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="stamps-section">
+                    <h3>Carimbos</h3>
+                    <div class="stamps-grid" id="stampsContainer">
+                        </div>
+                </div>
+                <div class="medals-section">
+                    <h3>Medalhas</h3>
+                    <div class="medals-grid" id="medalsContainer">
+                        </div>
+                </div>
             </div>
         </div>
     </div>

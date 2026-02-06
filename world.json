@@ -10512,6 +10512,184 @@
           "passeio": "https://www.civitatis.com/br/bariloche/",
           "seguro": "https://www.segurospromo.com.br"
         }
+      },
+      {
+        "name": "Mendoza",
+        "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/A_beautiful_landscape_of_a_Mendoza_City%27s_part_seen_from_the_highest_of_G%C3%B3mez_building..JPG/960px-A_beautiful_landscape_of_a_Mendoza_City%27s_part_seen_from_the_highest_of_G%C3%B3mez_building..JPG",
+        "tags": ["Vinho", "Montanha", "Gastronomia"],
+        "mapa": "https://goo.gl/maps/mendoza",
+        "clima": "Árido e Continental. Dias ensolarados (300 dias/ano) e noites frescas. Verão quente (30°C+) e Inverno frio (0-15°C).",
+        
+        "veredicto": {
+          "melhor_epoca": "Março (Festa da Vindima/Colheita) e Outubro/Novembro (Primavera). O Outono (Abril) tem as paisagens mais bonitas com as folhas douradas.",
+          "ideal_para": [
+            "Amantes de Vinho (É uma das capitais mundiais do vinho, com mais de 1.200 adegas)",
+            "Aventureiros (Alta montanha, Aconcágua e Rafting)",
+            "Casais (Jantares românticos nas vinícolas e hotéis de charme)",
+            "Gastrónomos (Restaurantes premiados com estrelas Michelin)"
+          ],
+          "nao_ideal_para": [
+            "Quem não bebe álcool (70% do turismo gira em torno do vinho, embora haja paisagens)",
+            "Quem procura vida noturna urbana agitada (O foco aqui são os almoços longos e o descanso)",
+            "Quem viaja sem planeamento (As melhores vinícolas exigem reserva com meses de antecedência)"
+          ],
+          "perfis": [
+            { "icone": "ri-goblet-fill", "nome": "Vinho" },
+            { "icone": "ri-landscape-fill", "nome": "Andes" },
+            { "icone": "ri-sun-fill", "nome": "Sol" },
+            { "icone": "ri-restaurant-2-fill", "nome": "Gourmet" }
+          ]
+        },
+
+        "pontos_turisticos": [
+          "1. Parque General San Martín: Um parque urbano gigantesco, pulmão da cidade. Tem lago, roseiral e os portões icónicos.",
+          "2. Cerro de la Gloria: No topo do parque, um monumento impressionante ao Exército dos Andes e uma vista panorâmica da cidade.",
+          "3. Aconcágua (Parque Provincial): O pico mais alto das Américas. Pode-se fazer um trekking curto até à lagoa Horcones para ver a montanha.",
+          "4. Termas de Cacheuta: Um parque de águas termais no meio das montanhas, perfeito para relaxar (tem spa e parque aquático).",
+          "5. Bodegas de Maipú: A zona mais antiga e acessível, onde se pode alugar bicicletas para ir de vinícola em vinícola.",
+          "6. Valle de Uco: A região mais prestigiada e cénica, a 1h30 do centro. Onde ficam as vinícolas arquitetónicas (Zuccardi, Salentein).",
+          "7. Luján de Cuyo: O berço do Malbec. Vinícolas clássicas como Catena Zapata e El Enemigo.",
+          "8. Potrerillos: Uma represa de água azul-turquesa entre as montanhas. Ótima para caiaque e piquenique.",
+          "9. Plaza Independencia: A praça central, enorme e com uma fonte dançante à noite.",
+          "10. Puente del Inca: Uma formação geológica natural de cores laranja e amarelo (devido ao enxofre) na estrada para o Chile."
+        ],
+
+        "gastronomia": [
+          "1. Ojo de Bife: O corte de carne favorito dos argentinos, alto e suculento. Acompanha puré ou salada.",
+          "2. Empanadas Mendocinas: Assadas no forno (não fritas), recheadas de carne cortada à faca, cebola, azeitona e ovo.",
+          "3. Malbec: O vinho tinto que colocou Mendoza no mapa. Frutado e intenso.",
+          "4. Chivo a la Llama: Cabrito assado inteiro no fogo de chão, típico da montanha.",
+          "5. Tomaticán: Um guisado tradicional de tomate, cebola, ovo e carne.",
+          "6. Azeite de Oliva: A região produz azeites de classe mundial. Visite uma 'olivícola' (ex: Laur).",
+          "7. Humita: Pasta de milho temperada e cozida na palha (semelhante à pamonha, mas salgada).",
+          "8. Tortitas Raspadas: Pãezinhos de gordura típicos para o pequeno-almoço ou lanche da tarde.",
+          "9. Alfajores Artesanais: Com muito doce de leite (Entre Dos é uma marca local famosa).",
+          "10. Doce de Alcayota: Doce feito de uma abóbora local fibrosa, geralmente servido com queijo."
+        ],
+
+        "religiao": [
+          "1. Virgem do Carmo de Cuyo: A padroeira do Exército dos Andes, venerada pelo General San Martín.",
+          "2. Calvário: Um local de peregrinação popular na zona de Godoy Cruz.",
+          "3. Santuário de Lourdes: Em El Challao, uma igreja moderna em forma de anfiteatro.",
+          "4. Difunta Correa: Uma santa popular não reconhecida pela igreja, a quem os camionistas deixam garrafas de água na estrada.",
+          "5. Capelas nas Vinhas: Muitas vinícolas têm capelas privadas lindíssimas (ex: Bodega La Capilla).",
+          "6. Festa da Vindima: A bênção dos frutos é uma cerimónia religiosa que abre o festival.",
+          "7. Natureza Sagrada: A imponência dos Andes evoca uma espiritualidade natural.",
+          "8. São Francisco Solano: Missionário que passou pela região.",
+          "9. Cristo Redentor dos Andes: Na fronteira com o Chile, a 3.800m de altura, símbolo de paz.",
+          "10. Influência Jesuíta: Ruínas e história das missões antigas na região."
+        ],
+
+        "curiosidades": [
+          "1. Acequias: A cidade é um oásis no deserto graças aos canais de irrigação (acequias) que correm ao lado de todas as ruas. Cuidado para não cair neles!",
+          "2. Siesta: Entre as 13h e as 17h, o comércio fecha e a cidade dorme. Respeite o horário sagrado.",
+          "3. Terra do Sol e do Bom Vinho: É o lema oficial. Chove muito pouco.",
+          "4. Terramotos: A cidade foi destruída em 1861 e reconstruída com praças largas para servir de refúgio em caso de sismos.",
+          "5. Árvores: Todas as árvores da cidade foram plantadas pelo homem e são numeradas/registadas.",
+          "6. San Martín: O libertador da Argentina formou o seu exército aqui para cruzar os Andes e libertar o Chile e o Peru.",
+          "7. Michelin: Mendoza ganhou o seu próprio guia Michelin recentemente, confirmando o status gastronómico.",
+          "8. El Enemigo: A vinícola de Alejandro Vigil é inspirada na Divina Comédia de Dante.",
+          "9. Vindima: A festa nacional escolhe uma 'Rainha' todos os anos, num concurso que para a província.",
+          "10. Quino: O criador da Mafalda nasceu em Mendoza."
+        ],
+
+        "eventos_estacoes": [
+          "1. Festa Nacional da Vindima (Março): O maior evento. Desfiles de carros alegóricos (Carrusel e Vía Blanca) e espetáculo final no teatro grego.",
+          "2. Música Clássica pelos Caminhos do Vinho (Semana Santa): Concertos dentro das vinícolas e igrejas.",
+          "3. Tango pelas Vinhas (Setembro): Festival de tango e vinho.",
+          "4. Maratona Internacional de Mendoza (Maio): Corrida cénica.",
+          "5. Outono: As alamedas de choupos e plátanos ficam amarelas e vermelhas. Época mais fotogénica.",
+          "6. Inverno: Temporada de esqui em Las Leñas (a 4h de distância) ou Penitentes (mais perto, mas nem sempre tem neve).",
+          "7. Primavera: As vinhas começam a brotar.",
+          "8. Dia do Amigo (20 de Julho): Os restaurantes lotam, os argentinos levam isto muito a sério.",
+          "9. Cantapueblo: Encontro de corais da América Latina.",
+          "10. Festa das Nações e do Vinho: Feira gastronómica."
+        ],
+
+        "info_gerais": [
+          "1. Câmbio Blue: Traga Dólares ou Euros em notas altas (50/100) e impecáveis para trocar no mercado paralelo (Western Union também funciona bem). O câmbio oficial é metade do valor.",
+          "2. Reserva Antecipada: Para almoçar nas melhores vinícolas (Casa Vigil, Zuccardi, Catena), reserve com 3 a 6 meses de antecedência.",
+          "3. Transporte nas Vinícolas: Se beber, não conduza. A tolerância é zero e a polícia fiscaliza. Contrate um 'remis' (motorista privado) ou tour.",
+          "4. Jantar Tarde: Restaurantes abrem às 20h30, mas enchem às 22h.",
+          "5. Gorjeta (Propina): 10% é o padrão.",
+          "6. Água: Beba água mineral. A da torneira é potável, mas muito mineralizada e pode soltar o intestino.",
+          "7. Vestuário: O estilo é casual, mas nos jantares de luxo as pessoas arranjam-se um pouco mais.",
+          "8. Tomadas: Adaptador é essencial (pino chato em V).",
+          "9. Internet: Wi-Fi disponível na maioria dos locais.",
+          "10. Lojas: Fecham à tarde (siesta) e reabrem às 17h até às 21h."
+        ],
+
+        "antes_de_ir": [
+          "1. Western Union: Baixe o app e faça o cadastro. É a melhor forma de obter pesos a uma cotação justa.",
+          "2. Agende os Almoços: A gastronomia é tão importante quanto o vinho.",
+          "3. Hidratante e Colírio: O ar é extremamente seco, a pele e os olhos sofrem.",
+          "4. Protetor Labial: Item de sobrevivência.",
+          "5. Mala de Vinho: Verifique se a sua companhia aérea permite despachar garrafas ou compre uma mala específica.",
+          "6. Remis vs Uber: Uber funciona no centro, mas para o Valle de Uco é melhor negociar um motorista fixo.",
+          "7. Roupa de Frio: Mesmo no verão, traga um casaco para a noite.",
+          "8. Dinheiro Vivo: Tenha pesos para gorjetas e pequenas compras.",
+          "9. Mapa das Zonas: Entenda a distância entre Maipú (perto), Luján (médio) e Uco (longe) para planear o dia.",
+          "10. Seguro Viagem: Não viaje sem."
+        ],
+
+        "numeros": [
+          "1. 911 (Emergência Geral).",
+          "2. 107 (Ambulância).",
+          "3. Polícia Turística: +54 261 413 2135 (Av. San Martín 1143).",
+          "4. Aeroporto El Plumerillo: +54 261 520 6000.",
+          "5. Terminal de Autocarros: +54 261 431 1299.",
+          "6. Hospital Central: Emergência pública.",
+          "7. Consulado do Brasil: +54 261 423 0939.",
+          "8. Rádio Táxi: Várias empresas, peça no hotel.",
+          "9. Informação Turística: Garibaldi e San Martín.",
+          "10. Farmácias: Abertas 24h (turno) rotativo."
+        ],
+
+        "riscos": [
+          "1. Vento Zonda: Um vento quente e seco que desce a montanha (comum em Ago/Set). Pode causar dores de cabeça e baixar a pressão.",
+          "2. Mal de Altitude: Apenas se for ao Aconcágua ou fronteira (3.000m+). Na cidade não há problema.",
+          "3. Furtos: Cuidado com telemóveis e bolsas no centro e na rua Arístides à noite.",
+          "4. Acequias: Turistas distraídos caem nos canais de irrigação abertos nas calçadas. Olhe para o chão!",
+          "5. Secura: Beba muita água para evitar desidratação.",
+          "6. Trânsito na Montanha: A estrada para o Chile tem muitos camiões e curvas perigosas.",
+          "7. Câmbio na Rua: Evite os 'arbolitos' (cambistas de rua) se não tiver indicação de confiança. Notas falsas existem.",
+          "8. Terramotos: A zona é sísmica. Mantenha a calma se sentir um tremor.",
+          "9. Intoxicação Alcoólica: As degustações são generosas. Cuspir o vinho é aceitável se for conduzir ou visitar muitas.",
+          "10. Preços para Estrangeiros: Alguns hotéis cobram em Dólar oficial, o que encarece. Pergunte sempre o câmbio usado."
+        ],
+
+        "roteiros": {
+          "curto": {
+            "titulo": "Essencial do Vinho (3 Dias)",
+            "texto": [
+              "Dia 1: Chegada e Jantar na Rua Arístides Villanueva.",
+              "Dia 2: Vinícolas de Luján de Cuyo (ex: Catena, El Enemigo) com almoço harmonizado.",
+              "Dia 3: Parque San Martín e voo de regresso."
+            ]
+          },
+          "medio": {
+            "titulo": "Montanha e Malbec (4-5 Dias)",
+            "texto": [
+              "Dias 1-2: Roteiro curto.",
+              "Dia 3: Valle de Uco (arquitetura e paisagem) - Visita à Zuccardi ou Salentein.",
+              "Dia 4: Tour de Alta Montanha (Aconcágua e Puente del Inca) ou Termas de Cacheuta."
+            ]
+          },
+          "longo": {
+            "titulo": "Experiência Completa (6-7 Dias)",
+            "texto": [
+              "Dias 1-4: Roteiro médio.",
+              "Dia 5: Passeio de bicicleta em Maipú (vinícolas e olivícolas).",
+              "Dia 6: Relaxar num spa de hotel ou aula de culinária com fogo de chão."
+            ]
+          }
+        },
+
+        "links": {
+          "hotel": "https://www.booking.com/city/ar/mendoza.pt-pt.html",
+          "passeio": "https://mendoza.tur.ar/",
+          "seguro": "https://www.segurospromo.com.br"
+        }
       }
     ],
     "Chile": [
@@ -11248,6 +11426,184 @@
           "passeio": "https://www.civitatis.com/br/san-andres/",
           "seguro": "https://www.segurospromo.com.br"
         }
+      },
+      {
+        "name": "Medellín",
+        "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Edificio_Bancolombia_-_luces.jpg/960px-Edificio_Bancolombia_-_luces.jpg",
+        "tags": ["Inovação", "Primavera", "Botero"],
+        "mapa": "https://goo.gl/maps/medellin",
+        "clima": "Eterna Primavera. Temperaturas agradáveis o ano todo (17°C a 28°C). Pode chover repentinamente, mas o sol volta logo.",
+        
+        "veredicto": {
+          "melhor_epoca": "Dezembro a Março (Seco) e Agosto (Feria de las Flores). Evite Abril/Maio e Outubro/Novembro se não gostar de chuva.",
+          "ideal_para": [
+            "Nómadas Digitais (El Poblado e Laureles são hubs mundiais de trabalho remoto)",
+            "Fãs de História Recente (A transformação social da cidade é um estudo de caso)",
+            "Party Lovers (A vida noturna em Provenza e Lleras é intensa)",
+            "Amantes da Natureza Urbana (Parques, teleféricos e montanhas integrados)"
+          ],
+          "nao_ideal_para": [
+            "Quem tem problemas respiratórios (A poluição fica presa no vale em épocas secas)",
+            "Quem procura praias (A cidade é cercada por montanhas, longe do mar)",
+            "Quem se assusta facilmente com o caos do trânsito (Motas por todo o lado)"
+          ],
+          "perfis": [
+            { "icone": "ri-sun-cloudy-fill", "nome": "Primavera" },
+            { "icone": "ri-cable-car-fill", "nome": "Metrocable" },
+            { "icone": "ri-cup-fill", "nome": "Café" },
+            { "icone": "ri-artboard-fill", "nome": "Graffiti" }
+          ]
+        },
+
+        "pontos_turisticos": [
+          "1. Comuna 13: O símbolo da resiliência. Antigamente o bairro mais perigoso, hoje é um centro de arte urbana (graffiti), hip-hop e escadas rolantes ao ar livre.",
+          "2. Plaza Botero: Uma praça no centro com 23 esculturas gordas e gigantes de bronze doadas pelo artista Fernando Botero.",
+          "3. Metrocable: O sistema de teleférico integrado ao metro. Apanhe a linha K e depois a L para ir ao Parque Arví.",
+          "4. El Poblado: O bairro moderno, cheio de árvores, hotéis de design, restaurantes e a famosa zona rosa (Parque Lleras/Provenza).",
+          "5. Guatapé e Piedra del Peñol: Bate-volta obrigatório (2h). Uma pedra monolítica gigante com 740 degraus e uma vista incrível da represa.",
+          "6. Pueblito Paisa: Uma réplica de uma vila tradicional antioquenha no topo do Cerro Nutibara. Vista 360º da cidade.",
+          "7. Museu de Antioquia: Em frente à Plaza Botero, guarda a maior coleção do artista e arte pré-colombiana.",
+          "8. Parque Arví: Um parque ecológico gigante no topo da montanha, acessível por teleférico. Ótimo para trilhas e piqueniques.",
+          "9. Jardín Botánico: Um oásis verde com o 'Orquideorama', uma estrutura de madeira espetacular.",
+          "10. Casa de la Memoria: Museu dedicado às vítimas do conflito armado na Colômbia. Tocante e necessário."
+        ],
+
+        "gastronomia": [
+          "1. Bandeja Paisa: O prato ogro local. Feijão, arroz, carne moída, chicharrón (torresmo gigante), ovo, chouriço, arepa, abacate e banana.",
+          "2. Arepas: Pão de milho que acompanha tudo. A versão 'Arepa de Choclo' (milho doce) com queijo fresco é deliciosa.",
+          "3. Mondongo: Sopa de tripas (dobradinha) muito temperada, servida com arroz e abacate.",
+          "4. Buñuelos: Bolinhas de queijo e polvilho fritas, perfeitas com café.",
+          "5. Chicharrón: Torresmo carnudo e crocante, uma religião em Antioquia.",
+          "6. Sancocho: Sopa rústica de galinha, banana-da-terra e batata.",
+          "7. Café Colombiano: Um dos melhores do mundo. Prove em cafetarias de especialidade (Ex: Pergamino).",
+          "8. Chocolate com Queijo: Sim, chocolate quente servido com um pedaço de queijo salgado dentro para derreter.",
+          "9. Empanadas Colombianas: Fritas, de massa de milho amarela e recheio de carne/batata, servidas com 'ají' (molho picante).",
+          "10. Limonada de Coco: Bebida refrescante e cremosa feita com leite de coco e limão."
+        ],
+
+        "religiao": [
+          "1. Catedral Metropolitana: Uma das maiores igrejas de tijolos do mundo, no Parque Bolívar.",
+          "2. Santuário da Virgem da Candelária: Padroeira da cidade, igreja colonial.",
+          "3. Santuário da Mãe Laura: Dedicado à única santa colombiana, Laura Montoya.",
+          "4. Cultura Paisa: Muito católica e conservadora, apesar da modernidade da cidade.",
+          "5. Feria de las Flores: Embora cultural, tem raízes nas tradições rurais e religiosas dos 'silleteros'.",
+          "6. Natal: A iluminação de Natal de Medellín (Alumbrados) é famosa mundialmente e atrai milhões.",
+          "7. Cemitério San Pedro: Museu a céu aberto com mausoléus de presidentes e artistas.",
+          "8. Peregrinações: Comuns ao Senhor Caído de Girardota (perto da cidade).",
+          "9. Virgem dos Sicários: Nos anos 90, hitmen rezavam à Virgem de Sabaneta para que as balas acertassem. Hoje é local de devoção normal.",
+          "10. Sincretismo: Menos visível que no Brasil, mas presente nas zonas rurais."
+        ],
+
+        "curiosidades": [
+          "1. Fénix: Nos anos 90, era a cidade mais violenta do mundo. Em 2013, foi eleita a Cidade Mais Inovadora do Mundo.",
+          "2. Escadas Rolantes na Favela: A Comuna 13 tem escadas rolantes públicas ao ar livre para ajudar os moradores a subir o morro.",
+          "3. Silleteros: Camponeses que carregam estruturas de flores de até 70kg nas costas durante o desfile de agosto.",
+          "4. Botero: O artista plástico mais famoso da Colômbia nasceu aqui e o seu estilo 'volumoso' está por toda a parte.",
+          "5. Metro Orgulho: É a única cidade da Colômbia com metro. É limpíssimo e os locais têm um orgulho imenso (ninguém risca ou suja).",
+          "6. Tango: Medellín é a segunda capital do tango depois de Buenos Aires. Carlos Gardel morreu aqui num acidente de avião.",
+          "7. Pablo Escobar: O nome é tabu para muitos. Evite usar camisetas com a cara dele ou glorificar a série 'Narcos' com os locais. É uma ferida aberta.",
+          "8. Cirurgia Plástica: Destino famoso para turismo médico estético.",
+          "9. Guaro: Aguardente de anis, a bebida alcoólica oficial das festas.",
+          "10. Animais no Metro: O metro tem teleféricos (Metrocable) que passam por cima de florestas."
+        ],
+
+        "eventos_estacoes": [
+          "1. Feria de las Flores (Agosto): O maior evento. Desfile de Silleteros, carros antigos e muita festa.",
+          "2. Alumbrados Navideños (Dez-Jan): As luzes de Natal no rio e parques são espetaculares.",
+          "3. Colombiamoda (Julho): A semana de moda mais importante da região.",
+          "4. Festival Internacional de Tango (Junho): Homenagem a Gardel.",
+          "5. Festival de Poesia (Julho): Um dos maiores do mundo.",
+          "6. Altavoz (Novembro): Festival de música rock e alternativa gratuito.",
+          "7. Feria de las 2 Ruedas (Maio): Grande evento de motos.",
+          "8. Dia da Independência (20 de Julho): Desfiles militares.",
+          "9. Estação Seca: Parques cheios e parapente em San Félix.",
+          "10. Estação Chuvosa: Museus e cafés em El Poblado."
+        ],
+
+        "info_gerais": [
+          "1. 'No Dar Papaya': A regra de ouro da segurança. Não dê oportunidade ao azar (ex: andar com o telemóvel na mão na rua).",
+          "2. Transporte: O sistema Metro (comboio + teleférico + elétrico + autocarro) funciona muito bem. Compre o cartão Cívica.",
+          "3. Taxis: Devem ter taxímetro. À noite, prefira Uber ou Cabify por segurança.",
+          "4. Água: A água da torneira em Medellín é potável e segura (uma exceção na Colômbia).",
+          "5. Estratos: A cidade é dividida em estratos sociais (1 a 6) que definem o custo dos serviços públicos.",
+          "6. Clima: De manhã fresco, tarde quente, noite fresca. Leve sempre um casaco leve.",
+          "7. Gorjeta (Propina): 10% é voluntária, mas esperada ('servicio incluido?').",
+          "8. Endereços: O sistema de Calles e Carreras é numérico e confuso no início. Use GPS.",
+          "9. Povo Amável: Os 'paisas' são extremamente simpáticos e prestáveis ('A la orden' é a frase que mais vai ouvir).",
+          "10. Câmbio: Casas de câmbio nos shoppings (ex: Santafé, Oviedo) costumam ser seguras."
+        ],
+
+        "antes_de_ir": [
+          "1. Seguro Viagem: Essencial.",
+          "2. Check-Mig: É OBRIGATÓRIO preencher o formulário de imigração online 'Check-Mig' 24h a 1h antes do voo (entrada e saída).",
+          "3. Vacina Febre Amarela: Tenha o certificado à mão, podem pedir.",
+          "4. Adaptador: Pino chato (EUA).",
+          "5. Roupas: Leves para o dia, calças/casaco para a noite. Sapatos confortáveis para as ladeiras.",
+          "6. Dinheiro: Tenha sempre algum 'efectivo' (notas pequenas) para comida de rua e pequenos comércios.",
+          "7. Espanhol: Aprenda o básico, inglês não é muito falado fora da bolha turística.",
+          "8. Reserve Guatapé: Se for fim de semana, reserve o tour ou vá cedo para evitar trânsito.",
+          "9. Evite Narco-Tours: Respeite a história local e prefira tours que foquem na transformação social.",
+          "10. Uber: Sente-se no banco da frente. É tecnicamente ilegal (área cinzenta) e os motoristas preferem discrição."
+        ],
+
+        "numeros": [
+          "1. 123 (Emergência Geral).",
+          "2. 165 (Gaula - Anti-sequestro).",
+          "3. Polícia de Turismo: +57 1 337 4413.",
+          "4. Aeroporto JMC (Rionegro): +57 4 402 5110 (Fica longe, a 45min-1h da cidade).",
+          "5. Terminal del Norte/Sur: Autocarros intermunicipais.",
+          "6. Metro de Medellín: Info nas estações.",
+          "7. Consulado do Brasil (Bogotá): +57 1 635 1335.",
+          "8. Taxis (Coopebombas): +57 4 444 0000.",
+          "9. Hospital Pablo Tobón Uribe: Referência médica.",
+          "10. Linha de Apoio ao Turista: Pitus."
+        ],
+
+        "riscos": [
+          "1. Escopolamina (Burundanga): Droga usada para roubar turistas. Nunca aceite bebidas, cigarros ou comida de estranhos, especialmente em bares e apps de encontros.",
+          "2. Roubo de Telemóvel: Muito comum. Não use o telemóvel na rua no centro da cidade (El Centro). Entre numa loja.",
+          "3. Bairros a Evitar: Partes do Centro à noite (Prado, Parque Berrío) e algumas periferias sem tour.",
+          "4. Turismo Sexual: Infelizmente comum, mas ilegal e perigoso (menores de idade). A polícia é rigorosa.",
+          "5. Motas: Cuidado ao atravessar e com assaltos de mota ('fleteros').",
+          "6. Trânsito para o Aeroporto: A estrada é sinuosa e pode ter trânsito. Saia com antecedência.",
+          "7. Mendicância: Comum em El Poblado.",
+          "8. Tinder: Tenha extremo cuidado com encontros de apps. Casos de 'gringos' drogados e roubados são frequentes.",
+          "9. Chuvas: Podem causar inundações repentinas nas partes baixas.",
+          "10. Vendedores Insistentes: Em Plaza Botero e Comuna 13. Diga 'No, gracias' firmemente."
+        ],
+
+        "roteiros": {
+          "curto": {
+            "titulo": "Essencial da Transformação (3 Dias)",
+            "texto": [
+              "Dia 1: Plaza Botero, Museu de Antioquia e Comuna 13 (Graffiti Tour).",
+              "Dia 2: Bate-volta a Guatapé e Piedra del Peñol.",
+              "Dia 3: Metrocable (Parque Arví) e noite em El Poblado/Provenza."
+            ]
+          },
+          "medio": {
+            "titulo": "Cultura e Natureza (5 Dias)",
+            "texto": [
+              "Dias 1-3: Roteiro curto.",
+              "Dia 4: Jardín Botánico, Parque Explora e Pueblito Paisa ao pôr do sol.",
+              "Dia 5: Museu Casa de la Memoria e compras/cafés em Laureles."
+            ]
+          },
+          "longo": {
+            "titulo": "Vida Paisa (7 Dias)",
+            "texto": [
+              "Dias 1-5: Roteiro médio.",
+              "Dia 6: Bate-volta a Santa Fe de Antioquia (cidade colonial quente).",
+              "Dia 7: Tour de Café numa quinta próxima ou Parapente em San Félix."
+            ]
+          }
+        },
+
+        "links": {
+          "hotel": "https://www.booking.com/city/co/medellin.pt-pt.html",
+          "passeio": "https://medellin.travel/",
+          "seguro": "https://www.segurospromo.com.br"
+        }
       }
     ],
     "Uruguai": [
@@ -11432,6 +11788,183 @@
           "passeio": "https://www.civitatis.com/br/montevideo/",
           "seguro": "https://www.segurospromo.com.br"
         }
+      },
+      {
+        "name": "Punta del Este",
+        "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Punta_del_Este_in_amazing_colors.jpg/960px-Punta_del_Este_in_amazing_colors.jpg",
+        "tags": ["Praia", "Luxo", "Verão"],
+        "mapa": "https://goo.gl/maps/puntadeleste",
+        "clima": "Subtropical Húmido. Verões quentes e ventosos (25-30°C). Invernos frescos e húmidos (8-15°C). O vento é constante.",
+        
+        "veredicto": {
+          "melhor_epoca": "Dezembro a Fevereiro (Verão, quando a cidade 'acorda'). Março e Novembro são bons para evitar multidões.",
+          "ideal_para": [
+            "Amantes de Praia e Luxo (Beach clubs, iates e casinos)",
+            "Famílias (Praias mansas para crianças e segurança)",
+            "Jovens (Vida noturna intensa em La Barra e no porto)",
+            "Apreciadores de Arquitetura (Casapueblo e as mansões de Beverly Hills)"
+          ],
+          "nao_ideal_para": [
+            "Quem viaja com orçamento muito limitado (É uma das cidades mais caras da América do Sul)",
+            "Quem procura calor tropical (A água do mar é fria, mesmo no verão)",
+            "Quem visita no Inverno (A cidade fica quase deserta e muitos comércios fecham)"
+          ],
+          "perfis": [
+            { "icone": "ri-sun-fill", "nome": "Sol" },
+            { "icone": "ri-money-dollar-circle-fill", "nome": "Luxo" },
+            { "icone": "ri-service-fill", "nome": "Casino" },
+            { "icone": "ri-building-2-fill", "nome": "Arte" }
+          ]
+        },
+
+        "pontos_turisticos": [
+          "1. Monumento ao Afogado (Los Dedos): A famosa escultura da mão a sair da areia na Praia Brava. Ícone da cidade.",
+          "2. Casapueblo: A 'Santorini' uruguaia. Antiga casa do artista Carlos Páez Vilaró, hoje museu e hotel. O pôr do sol aqui é um ritual com poesia.",
+          "3. Porto de Punta del Este: Onde se veem os lobos-marinhos à espera de peixe fresco e iates luxuosos.",
+          "4. La Barra: O bairro jovem e descolado, famoso pela Ponte Ondulada (Leonel Viera) que dá frio na barriga ao atravessar.",
+          "5. Praia Mansa: Banhada pelo Rio da Prata, águas calmas e pôr do sol incrível. Ideal para famílias.",
+          "6. Praia Brava: Banhada pelo Oceano Atlântico, mar agitado e onde fica a escultura 'Los Dedos'.",
+          "7. Hotel Enjoy (Antigo Conrad): O casino mais famoso da região, estilo Las Vegas.",
+          "8. Farol de Punta del Este: Construção histórica de 1860, perto da Igreja da Candelária.",
+          "9. Museu Ralli: Arte contemporânea latino-americana num bairro chique (entrada gratuita).",
+          "10. Isla de Lobos: A maior colónia de lobos-marinhos da América do Sul (passeio de barco)."
+        ],
+
+        "gastronomia": [
+          "1. Chivito: O prato nacional. Uma sanduíche gigante de carne (lombo), queijo, presunto, ovo, bacon e salada.",
+          "2. Parrilla: O churrasco uruguaio, feito na grelha (e não no espeto). Prove o 'Asado de Tira'.",
+          "3. Medialunas: Croissants doces ou salgados, perfeitos ao pequeno-almoço (as do 'Las Medialunas del Abuelo' são clássicas).",
+          "4. Doce de Leite (Dulce de Leche): O da marca Conaprole ou Lapataia (que tem uma fazenda visitável) é obrigatório.",
+          "5. Peixe Fresco e Marisco: No porto, a especialidade é a Brótola (tipo de pescada) e miniaturas de peixe.",
+          "6. Vinhos Tannat: A casta de uva emblemática do Uruguai. Encorpado e forte.",
+          "7. Clericot: Bebida refrescante de vinho branco ou espumante com frutas picadas, muito consumida na praia.",
+          "8. Buñuelos de Algas: Bolinhos fritos feitos com algas marinhas locais (comum em Cabo Polonio e arredores).",
+          "9. Volcán de Dulce de Leche: Petit gâteau, mas recheado de doce de leite.",
+          "10. Garrapiñada: Amendoim doce vendido em carrinhos de rua."
+        ],
+
+        "religiao": [
+          "1. Igreja da Candelária: A paróquia azul-celeste bonita perto do farol.",
+          "2. Secularismo: O Uruguai é o país mais laico da América Latina (o Natal é oficialmente chamado 'Dia da Família' e a Semana Santa 'Semana de Turismo').",
+          "3. Misticismo em Piriápolis: A cidade vizinha foi fundada por alquimistas e tem forte simbologia mística.",
+          "4. Iemanjá: A festa a 2 de fevereiro é celebrada nas praias, sincretismo com a cultura afro.",
+          "5. Capela de San Rafael: Num dos bairros mais elegantes.",
+          "6. Ermida da Virgem de Luján: Pequeno local de oração.",
+          "7. Sinagogas: Há uma comunidade judaica ativa que veraneia na cidade.",
+          "8. Paz e Natureza: A espiritualidade local está muito ligada ao pôr do sol e ao mar.",
+          "9. Cemitério de Maldonado: Histórico e solene.",
+          "10. Ausência de Imagens: Notará poucos crucifixos ou imagens religiosas em locais públicos."
+        ],
+
+        "curiosidades": [
+          "1. Encontro das Águas: Punta del Este é onde o Rio da Prata (o rio mais largo do mundo) encontra o Oceano Atlântico.",
+          "2. Vilaró e Picasso: O criador da Casapueblo era amigo de Picasso e Dalí, e a casa não tem linhas retas.",
+          "3. Lobos-Marinhos: Eles vivem livres no porto e são alimentados pelos peixeiros. Cuidado, podem morder se provocados.",
+          "4. Ponte Ondulada: A ponte de La Barra tem o formato de 'M' e passar de carro rápido dá sensação de montanha-russa.",
+          "5. Segurança: É considerada uma das cidades mais seguras da América do Sul, mas furtos ocorrem no verão.",
+          "6. Inverno Fantasma: Fora de temporada, a população cai de 400.000 para 20.000 pessoas. Parece uma cidade cenográfica.",
+          "7. Beverly Hills: Sim, existe um bairro com este nome, cheio de mansões sem muros (sinal de segurança).",
+          "8. Trump Tower: Existe uma torre com a marca Trump na orla da Brava.",
+          "9. Chá das Cinco: Herança inglesa, o lanche da tarde é uma refeição importante.",
+          "10. Moeda: Aceitam-se Dólares, Pesos Uruguaios, Reais e Pesos Argentinos em quase todo o lado."
+        ],
+
+        "eventos_estacoes": [
+          "1. Temporada de Verão (Jan-Fev): Festas exclusivas, DJs internacionais e praias lotadas.",
+          "2. Festival Internacional de Cinema (Fev): Traz celebridades e filmes independentes.",
+          "3. ePrix (Fórmula E): Corrida de carros elétricos que acontece nas ruas da cidade (datas variam).",
+          "4. Páscoa (Semana de Turismo): Último suspiro da temporada alta antes do inverno.",
+          "5. Inverno (Jun-Ago): Época para quem gosta de frio, lareira e vinho Tannat, mas a cidade dorme.",
+          "6. Vindima (Fevereiro/Março): Colheita das uvas nas vinícolas próximas (Garzón, Eden).",
+          "7. Festival de Jazz: Evento de qualidade em portillo ou Lapataia.",
+          "8. Heroica (Ciclismo): Evento de bicicletas clássicas.",
+          "9. Pôr do Sol na Casapueblo: Evento diário imperdível.",
+          "10. Desfile de Carnaval: Menor que o de Montevidéu, mas animado."
+        ],
+
+        "info_gerais": [
+          "1. IVA (Tax Free): Turistas estrangeiros têm devolução de IVA (cerca de 18-22%) ao pagar com cartão de crédito internacional em restaurantes. Vale muito a pena!",
+          "2. Pagamentos: Use cartão de crédito para ter o desconto do IVA. Aceitam-se cartões em quase todo o lado.",
+          "3. Transportes: A Uber funciona, mas autocarros (ônibus) locais também são bons (Codesa).",
+          "4. Horários: O jantar é tarde, a partir das 21h ou 22h.",
+          "5. Água: Potável e de boa qualidade.",
+          "6. Internet: O Wi-Fi é comum e rápido (Uruguai tem ótima conectividade).",
+          "7. Protetor Solar: O buraco na camada de ozono afeta a região, o sol queima muito mais rápido. Use fator alto.",
+          "8. Gorjeta (Propina): Geralmente 10%, não incluída na conta.",
+          "9. Condução: Respeite as passadeiras (faixas de pedestre), os carros param mesmo.",
+          "10. Adaptador: As tomadas são 'três pinos em linha' (italiano antigo), leve adaptador universal."
+        ],
+
+        "antes_de_ir": [
+          "1. Reserve Casapueblo: Vá cedo para pegar um bom lugar para o pôr do sol.",
+          "2. Verifique o Câmbio: Às vezes compensa pagar em Dólar, outras no cartão. Faça a conta.",
+          "3. Leve Agasalho: O vento é frio à noite, mesmo no verão. Um corta-vento é essencial.",
+          "4. Carta de Condução: A CNH brasileira é aceite se alugar carro.",
+          "5. Seguro Carta Verde: Obrigatório se for entrar com carro próprio.",
+          "6. Cartão de Crédito: Avise o banco para desbloquear o uso internacional.",
+          "7. Roupas: 'Casual Chic' é o estilo da cidade.",
+          "8. Reserva de Restaurantes: No Réveillon e Janeiro é impossível comer sem reserva nos lugares famosos.",
+          "9. Repelente: Necessário em áreas próximas à Lagoa del Sauce.",
+          "10. Vinho na Mala: Deixe espaço para trazer Tannat."
+        ],
+
+        "numeros": [
+          "1. 911 (Emergência Geral).",
+          "2. 104 (Bombeiros).",
+          "3. Polícia Turística: +598 4244 1968.",
+          "4. Consulado do Brasil (Montevidéu): +598 2901 2024.",
+          "5. Aeroporto Laguna del Sauce: +598 4255 9777.",
+          "6. Terminal de Autocarros: +598 4248 9005.",
+          "7. Hospital Mautone: +598 4222 5353.",
+          "8. Cantegril Country Club (Emergência Médica Privada).",
+          "9. Rádio Táxi: +598 4244 1111.",
+          "10. Informação Turística: Liga 1885."
+        ],
+
+        "riscos": [
+          "1. Preços Altos: Verifique o menu antes de entrar. O 'cubierto' (taxa de mesa) pode ser caro.",
+          "2. Furtos na Praia: Não deixe coisas de valor na areia enquanto vai à água.",
+          "3. Vento Forte: Guarda-sóis voam facilmente, cuidado.",
+          "4. Sol Extremo: Risco de insolação grave devido à camada de ozono.",
+          "5. Lobos-Marinhos: Não tente tocar neles no porto, eles mordem.",
+          "6. Aluguel de Carro: Cuidado com locadoras que cobram taxas extras escondidas.",
+          "7. Mar Agitado: A Praia Brava tem correntes fortes (repuxo). Respeite as bandeiras.",
+          "8. Câmbio no Aeroporto: Taxas muito ruins.",
+          "9. Animais na Pista: Cuidado ao dirigir nas estradas secundárias à noite.",
+          "10. Álcool e Direção: Tolerância zero (0.0) no Uruguai. Multa pesada e apreensão."
+        ],
+
+        "roteiros": {
+          "curto": {
+            "titulo": "Fim de Semana Luxo (2 Dias)",
+            "texto": [
+              "Sáb: Praia Mansa de manhã, Porto (almoço) e pôr do sol na Casapueblo.",
+              "Dom: Monumento Los Dedos, Praia Brava e passeio em La Barra."
+            ]
+          },
+          "medio": {
+            "titulo": "Clássico Punta (3-4 Dias)",
+            "texto": [
+              "Dias 1-2: Roteiro curto.",
+              "Dia 3: José Ignacio (Farol e almoço pé na areia) e Museu Ralli.",
+              "Dia 4: Vinícola Garzón ou Edén (passeio de dia inteiro)."
+            ]
+          },
+          "longo": {
+            "titulo": "Rota do Sol e Vinho (5-6 Dias)",
+            "texto": [
+              "Dias 1-4: Roteiro médio.",
+              "Dia 5: Piriápolis (cidade mística vizinha) e subida ao Cerro San Antonio.",
+              "Dia 6: Dia livre para compras na Calle 20 e Casino Enjoy."
+            ]
+          }
+        },
+
+        "links": {
+          "hotel": "https://www.booking.com/city/uy/punta-del-este.pt-br.html",
+          "passeio": "https://www.puntadeleste.com/pt",
+          "seguro": "https://www.segurospromo.com.br"
+        }
       }
     ],
     "Peru": [
@@ -11613,6 +12146,365 @@
         "links": {
           "hotel": "https://www.booking.com/searchresults.pt-br.html?city=-352608&aid=304142",
           "passeio": "https://www.civitatis.com/br/lima/",
+          "seguro": "https://www.segurospromo.com.br"
+        }
+      },
+      {
+        "name": "Cusco",
+        "imagem": "https://images.unsplash.com/photo-1587595431973-160d0d94add1?q=80&w=2076&auto=format&fit=crop",
+        "tags": ["História", "Incas", "Aventura"],
+        "mapa": "https://goo.gl/maps/cusco",
+        "clima": "Frio de Montanha. Estação Seca (Mai-Out) dias de sol e noites gélidas. Estação Chuvosa (Nov-Abr) mais quente mas molhado.",
+        
+        "veredicto": {
+          "melhor_epoca": "Maio a Setembro (Seca). Junho tem o Inti Raymi (Festa do Sol).",
+          "ideal_para": [
+            "Aventureiros (Trilhas Salkantay e Trilha Inca)",
+            "Amantes de História (O centro do mundo Inca)",
+            "Místicos (Energia espiritual dos Andes)",
+            "Fotógrafos (Lhamas, tecidos coloridos e montanhas)"
+          ],
+          "nao_ideal_para": [
+            "Quem tem problemas cardíacos/respiratórios graves (A altitude de 3.400m é pesada)",
+            "Quem odeia acordar cedo (Os passeios começam às 4h da manhã)",
+            "Quem busca luxo urbano (A cidade é rústica e antiga)"
+          ],
+          "perfis": [
+            { "icone": "ri-ancient-pavilion-fill", "nome": "Machu Picchu" },
+            { "icone": "ri-cactus-fill", "nome": "Lhamas" },
+            { "icone": "ri-landscape-fill", "nome": "Montanhas" },
+            { "icone": "ri-restaurant-fill", "nome": "Gastronomia" }
+          ]
+        },
+
+        "pontos_turisticos": [
+          "1. Machu Picchu: A cidade perdida. Precisa pegar trem + ônibus. Reserve o ingresso com MESES de antecedência.",
+          "2. Plaza de Armas: O coração da cidade, com a Catedral e a Igreja da Companhia de Jesus sobre palácios Incas.",
+          "3. Sacsayhuamán: Fortaleza com pedras gigantescas encaixadas perfeitamente (a 2km do centro).",
+          "4. Qorikancha (Templo do Sol): A base inca mais sagrada, que serviu de fundação para o convento espanhol.",
+          "5. San Blas: O bairro boêmio dos artesãos, ruas estreitas e brancas, cheio de cafés.",
+          "6. Montanha 7 Cores (Vinicunca): Um desafio físico a 5.000m de altitude, mas visual surreal.",
+          "7. Lagoa Humantay: Lagoa turquesa aos pés de um nevado. Trilha íngreme.",
+          "8. Vale Sagrado: Pisac (mercado e ruínas) e Ollantaytambo (cidade inca viva).",
+          "9. Pedra dos 12 Ângulos: Na rua Hatun Rumiyoc, mostra a perfeição da engenharia inca.",
+          "10. Mercado San Pedro: Para comer barato, ver cabeças de porco e comprar artesanato."
+        ],
+
+        "gastronomia": [
+          "1. Cuy Chactado: Porquinho-da-índia frito inteiro (com cabeça e patas). Prato de festa andina.",
+          "2. Lomo Saltado: Tiras de filé flambadas com cebola, tomate e shoyu, servido com batata frita e arroz.",
+          "3. Carne de Alpaca: Carne magra e saudável, servida grelhada ou em espetinhos (anticuchos).",
+          "4. Ceviche de Truta: A versão andina do ceviche, feita com peixe de rio.",
+          "5. Chicha Morada: Bebida doce não alcoólica feita de milho roxo (deliciosa).",
+          "6. Ají de Gallina: Frango desfiado num creme amarelo picante (de pimenta ají) com nozes.",
+          "7. Sopa de Quinoa: Muito comum e nutritiva para aguentar o frio.",
+          "8. Mate de Coca: Chá da folha de coca, sagrado e essencial para combater o mal de altitude.",
+          "9. Choclo con Queso: Milho de grãos gigantes com queijo fresco salgado.",
+          "10. Pisco Sour: O drink nacional (Cuidado: o álcool bate mais forte na altitude)."
+        ],
+
+        "religiao": [
+          "1. Sincretismo: A mistura profunda do Catolicismo com a crença andina na Pachamama (Mãe Terra).",
+          "2. Catedral de Cusco: Tem um quadro da 'Última Ceia' onde Jesus come Cuy (porquinho-da-índia).",
+          "3. Apus: Os espíritos das montanhas sagradas, ainda reverenciados hoje.",
+          "4. Qoyllur Riti: Uma peregrinação indígena extrema nas montanhas nevadas.",
+          "5. Corpus Christi: A maior festa religiosa de Cusco, com procissões de santos gigantes.",
+          "6. Oferendas: É comum ver pagamentos à terra (despachos) feitos por xamãs.",
+          "7. Templo da Lua: Local místico fora da cidade.",
+          "8. Cruz Andina (Chacana): Símbolo sagrado da cosmologia inca.",
+          "9. Conventos: Santo Domingo (sobre o Qorikancha) é o mais impressionante.",
+          "10. Senhor dos Tremores: O 'Cristo Negro' de Cusco, padroeiro da cidade."
+        ],
+
+        "curiosidades": [
+          "1. Umbigo do Mundo: 'Qosqo' significa umbigo em Quechua.",
+          "2. Bandeira Arco-Íris: A bandeira oficial de Cusco tem as 7 cores do arco-íris (bandeira do Tahuantinsuyo). Não confunda com a bandeira LGBT (que tem 6 cores).",
+          "3. Forma de Puma: A cidade original foi desenhada no formato de um Puma (animal sagrado).",
+          "4. Engenharia Anti-Sísmica: Os espanhóis construíram igrejas sobre muros incas. Nos terremotos, as igrejas caíam e os muros incas ficavam intactos.",
+          "5. Touros no Telhado: Quase todas as casas têm dois toritos de Pucará no telhado para proteção e prosperidade.",
+          "6. Coca não é Droga: A folha natural é estimulante suave (como café) e legalizada.",
+          "7. Proibido Plástico: Não se pode entrar em Machu Picchu com garrafas plásticas descartáveis.",
+          "8. Solstício: As janelas dos templos alinham-se perfeitamente com o sol.",
+          "9. Mulheres com Lhamas: Na praça, cobram para tirar foto. Negocie antes.",
+          "10. Taxi Barato: Dentro da cidade, uma corrida custa 5 a 8 soles."
+        ],
+
+        "eventos_estacoes": [
+          "1. Inti Raymi (24 de Junho): A Festa do Sol. A encenação inca mais importante da América do Sul. A cidade lota.",
+          "2. Semana Santa: O Senhor dos Tremores sai em procissão.",
+          "3. Santuranticuy (Dezembro): Feira de Natal na praça principal.",
+          "4. Virgem de Carmen (Julho): Festas folclóricas na cidade vizinha de Paucartambo.",
+          "5. Estação Seca (Inverno): Céu azul profundo, frio à noite, melhor visibilidade.",
+          "6. Estação Chuvosa (Verão): Tudo verde, mas risco de deslizamentos e trilhas fechadas.",
+          "7. Mês Jubilar (Junho): Cusco está em festa o mês todo.",
+          "8. Ano Novo: As pessoas correm em volta da praça com malas vazias (para viajar mais).",
+          "9. Pachamama Raymi (Agosto): Dia de oferendas à Mãe Terra.",
+          "10. Qoyllur Riti (Maio/Junho): Peregrinação às neves."
+        ],
+
+        "info_gerais": [
+          "1. Boleto Turístico: Você precisa comprar esse bilhete (130 soles) para entrar na maioria das ruínas e museus do Vale Sagrado e cidade.",
+          "2. Soroche (Altitude): Cusco está a 3.400m. Tome chá de coca, coma leve e descanse no primeiro dia. Sorojchi Pills na farmácia ajudam.",
+          "3. Água: NUNCA beba da torneira. Nem para escovar os dentes se tiver estômago sensível.",
+          "4. Pechincha: No mercado e artesanato, negocie sempre.",
+          "5. Papel Higiênico: Na maioria dos lugares, joga-se no lixo, não no vaso (encanamento antigo).",
+          "6. Trem para Machu Picchu: PeruRail ou IncaRail. Compre com antecedência.",
+          "7. Câmbio: Troque dólares na Av. El Sol (melhor cotação que aeroporto). Notas rasgadas de dólar não são aceitas.",
+          "8. Internet: Chips da Claro ou Movistar funcionam bem.",
+          "9. Gorjeta: Não obrigatória, mas esperada em turismo.",
+          "10. Tomadas: A maioria aceita o pino plano americano ou o redondo europeu."
+        ],
+
+        "antes_de_ir": [
+          "1. Ingresso Machu Picchu: É a prioridade zero. Esgota meses antes.",
+          "2. Aclimação: Se puder, vá direto para o Vale Sagrado (que é mais baixo) antes de dormir em Cusco.",
+          "3. Roupas em Camadas: Sol queima, sombra congela. Leve corta-vento e segunda pele.",
+          "4. Seguro Viagem: Que cubra esportes de aventura e altitude.",
+          "5. Botas de Trekking: Se for fazer trilhas, use botas amaciadas.",
+          "6. Dinheiro Vivo: Em vilarejos e mercados, cartão não passa.",
+          "7. Repelente Forte: Para Machu Picchu (mosquito da selva).",
+          "8. Protetor Labial: O ar seco racha os lábios.",
+          "9. Remédios: Para dor de cabeça e diarreia.",
+          "10. App Google Tradutor: Baixe o espanhol offline."
+        ],
+
+        "numeros": [
+          "1. 105 (Polícia Nacional).",
+          "2. Polícia de Turismo (Poltur): +51 84 235123 (Essenciais).",
+          "3. iPerú (Info Turística): +51 84 237364.",
+          "4. Aeroporto Velasco Astete: +51 84 222611.",
+          "5. PeruRail: +51 84 581414.",
+          "6. Clínica Pardo (Atendimento turista): +51 84 231520.",
+          "7. Táxi Seguro: Uber funciona, ou peça no hotel.",
+          "8. Consulado do Brasil em Cusco: +51 84 221376.",
+          "9. Bombeiros: 116.",
+          "10. Cruz Vermelha: 115."
+        ],
+
+        "riscos": [
+          "1. Soroche (Mal de Altitude): Dor de cabeça, náusea, falta de ar. Oxigênio nos hotéis ajuda.",
+          "2. Cães de Rua: Muitos cachorros soltos (a maioria inofensiva, mas cuidado à noite).",
+          "3. Golpes de Táxi: Use apps ou táxis oficiais chamados pelo hotel.",
+          "4. Comida de Rua: Cuidado com higiene (saladas cruas e maionese).",
+          "5. Pickpockets: Mercados e praças cheias.",
+          "6. Greves: Bloqueios de estradas e trens são comuns no Peru. Tenha plano B.",
+          "7. Sol: A radiação UV é extrema na altitude. Use chapéu.",
+          "8. Trilhas Ilegais: Não saia das trilhas marcadas (risco de queda).",
+          "9. Câmbio de Rua: Cuidado com notas falsas.",
+          "10. Chuva: Em Janeiro/Fevereiro, trens podem parar por deslizamentos."
+        ],
+
+        "roteiros": {
+          "curto": {
+            "titulo": "Expresso Machu Picchu (3 Dias)",
+            "texto": [
+              "Dia 1: Chegada, aclimatação e Plaza de Armas.",
+              "Dia 2: Machu Picchu (bate-volta de trem).",
+              "Dia 3: Manhã em Sacsayhuamán e voo."
+            ]
+          },
+          "medio": {
+            "titulo": "Clássico Inca (5 Dias)",
+            "texto": [
+              "Dias 1-2: Cusco e Sítios Arqueológicos próximos.",
+              "Dia 3: Vale Sagrado (Pisac e Ollantaytambo), dormir em Aguas Calientes.",
+              "Dia 4: Machu Picchu cedo e retorno.",
+              "Dia 5: San Blas e compras."
+            ]
+          },
+          "longo": {
+            "titulo": "Aventura Andina (7 Dias)",
+            "texto": [
+              "Dias 1-4: Roteiro Clássico.",
+              "Dia 5: Montanha 7 Cores ou Lagoa Humantay.",
+              "Dia 6: Maras (Salineiras) e Moray (Laboratório agrícola).",
+              "Dia 7: Museus e despedida."
+            ]
+          }
+        },
+
+        "links": {
+          "hotel": "https://www.booking.com/city/pe/cusco.pt-br.html",
+          "passeio": "https://www.machupicchu.gob.pe/",
+          "seguro": "https://www.segurospromo.com.br"
+        }
+      }
+    ],
+    "Bolívia": [
+      {
+        "name": "La Paz",
+        "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/La_Paz_a_Illimani_-_panoramio_%281%29.jpg/2560px-La_Paz_a_Illimani_-_panoramio_%281%29.jpg",
+        "tags": ["Altitude", "Cultura Andina", "Aventura"],
+        "mapa": "https://goo.gl/maps/lapaz",
+        "clima": "Frio de Montanha. O ano todo é fresco/frio. Estação seca (Mai-Out) é muito fria à noite. Estação chuvosa (Nov-Abr) é um pouco mais quente.",
+        
+        "veredicto": {
+          "melhor_epoca": "Maio a Outubro (Inverno seco). O céu é azul e não chove, mas faz muito frio à noite.",
+          "ideal_para": [
+            "Aventureiros (Descida da Estrada da Morte e montanhismo)",
+            "Mochileiros (Cidade muito barata e hub para o Salar de Uyuni)",
+            "Fotógrafos Urbanos (O contraste dos prédios vermelhos com o Illimani nevado)",
+            "Interessados em Cultura Indígena (As Cholitas e mercados de bruxas)"
+          ],
+          "nao_ideal_para": [
+            "Quem tem problemas cardíacos/respiratórios (A cidade fica a 3.600m de altitude)",
+            "Quem busca luxo e conforto extremo (A infraestrutura é simples)",
+            "Quem tem estômago sensível (A higiene da comida de rua requer cautela)"
+          ],
+          "perfis": [
+            { "icone": "ri-cloud-windy-fill", "nome": "Altitude" },
+            { "icone": "ri-seedling-fill", "nome": "Coca" },
+            { "icone": "ri-cable-car-fill", "nome": "Teleférico" },
+            { "icone": "ri-ghost-fill", "nome": "Místico" }
+          ]
+        },
+
+        "pontos_turisticos": [
+          "1. Mi Teleférico: O maior sistema de teleféricos urbanos do mundo. As linhas Vermelha e Amarela têm as melhores vistas do Illimani.",
+          "2. Mercado das Bruxas (Mercado de las Brujas): Vende fetos de lhama (para oferendas), poções, amuletos e folhas de coca.",
+          "3. Valle de la Luna: Formações rochosas que parecem solo lunar, a 10km do centro.",
+          "4. Calle Jaén: A rua colonial mais preservada, cheia de lendas de fantasmas e museus pequenos.",
+          "5. Plaza Murillo: O centro político, com o Palácio Presidencial e a Catedral (cuidado com os pombos!).",
+          "6. Estrada da Morte (Yungas): O passeio de bicicleta mais famoso (e perigoso) do mundo, descendo de 4.700m para 1.200m.",
+          "7. Mirador Killi Killi: Vista panorâmica de 360º da cidade e da montanha Illimani.",
+          "8. Cholitas Wrestling: Luta livre de mulheres indígenas vestidas com as roupas tradicionais. Divertido e bizarro.",
+          "9. Basílica de São Francisco: Igreja mestiça com fachada barroca impressionante.",
+          "10. Chacaltaya: Antiga estação de esqui a 5.400m. Dá para chegar de van e caminhar até o cume (se o pulmão aguentar)."
+        ],
+
+        "gastronomia": [
+          "1. Salteña: A empanada boliviana, suculenta e com caldo doce-picante dentro. Come-se apenas até o meio-dia.",
+          "2. Silpancho: Prato ogro com arroz, batata, bife à milanesa gigante e ovo frito.",
+          "3. Pique Macho: Montanha de carne picada, salsicha, batata frita, cebola, tomate e locoto (pimenta).",
+          "4. Sanduíche de Chola: Pernil de porco assado com escabeche e pimenta, servido em pão redondo.",
+          "5. Chá de Coca (Mate): Obrigatório para a altitude. Tem gosto de chá verde.",
+          "6. Sopa de Maní: Sopa cremosa de amendoim com macarrão ou batata (famosa por ser a última refeição de Che Guevara).",
+          "7. Anticucho: Espetinho de coração de boi grelhado com molho de amendoim picante.",
+          "8. Chuflay: Drink local com Singani (aguardente de uva) e Ginger Ale.",
+          "9. Api con Pastel: Bebida quente de milho roxo servida com um pastel de vento frito com açúcar.",
+          "10. Quinoa: A Bolívia é a terra da quinoa, servida em sopas, saladas e guisados."
+        ],
+
+        "religiao": [
+          "1. Pachamama: A Mãe Terra. A religião andina é vivida no dia a dia com oferendas (challa).",
+          "2. Sincretismo: Santos católicos são confundidos com divindades incas/aimarás.",
+          "3. Alasitas (Janeiro): Festival do Ekeko (deus da abundância). Compram-se miniaturas do que se deseja para o ano (dinheiro, casa, carro).",
+          "4. Mercado das Bruxas: O centro espiritual da cidade, onde Yatiris (xamãs) leem a sorte na folha de coca.",
+          "5. Bênção dos Carros: Em Copacabana (perto), padres benzem carros com água benta e cerveja.",
+          "6. Caveiras (Ñatitas): Em novembro, as pessoas levam crânios humanos decorados para a igreja para pedir proteção.",
+          "7. Catedral Metropolitana: Símbolo do poder católico colonial.",
+          "8. Apus: Os espíritos das montanhas (como o Illimani) protegem a cidade.",
+          "9. Oferendas: Jogar o primeiro gole de bebida no chão é 'dar de beber à Pachamama'.",
+          "10. Procissão do Gran Poder: A maior festa religiosa, com danças folclóricas."
+        ],
+
+        "curiosidades": [
+          "1. Zebras de Trânsito: Jovens vestidos de zebra organizam o trânsito e ensinam educação cívica. São amados por todos.",
+          "2. Altitude Extrema: O aeroporto de El Alto fica a 4.061m. O avião precisa de uma pista muito maior para decolar.",
+          "3. Relógio Invertido: No Congresso Nacional, o relógio gira ao contrário (para a esquerda) para representar o 'sul' e a identidade indígena.",
+          "4. Casas sem Reboco: Muitos prédios não são pintados para pagar menos imposto (imóvel 'inacabado').",
+          "5. Cholets: Em El Alto, veja os prédios coloridos e psicodélicos da nova burguesia aimará (arquitetura neo-andina).",
+          "6. Não é a única Capital: Sucre é a capital constitucional, La Paz é a sede do governo.",
+          "7. Coca Legalizada: Mascar coca (pijchar) é normal e ajuda na altitude. Não é droga.",
+          "8. Prisão Turística: Antigamente, podia-se visitar a prisão de San Pedro ilegalmente. Hoje é proibido, mas as lendas continuam.",
+          "9. Fetos de Lhama: São enterrados nas fundações das casas novas para dar sorte (oferenda à Pachamama).",
+          "10. Teleférico como Metrô: É o principal meio de transporte de massa, não apenas turístico."
+        ],
+
+        "eventos_estacoes": [
+          "1. Alasitas (24 de Janeiro): A feira das miniaturas e dos desejos. Muito tradicional.",
+          "2. Gran Poder (Maio/Junho): O 'Carnaval' de La Paz, com milhares de dançarinos e bandas.",
+          "3. Ano Novo Aimará (21 de Junho): Solstício de inverno, celebrado em Tiwanaku (perto de La Paz).",
+          "4. Dia dos Mortos (Novembro): As famílias fazem pães em forma de escada e bebês para as almas.",
+          "5. Estação Seca (Mai-Set): Dias claros, vista perfeita das montanhas, noites congelantes.",
+          "6. Estação Chuvosa (Out-Abr): Chuva frequente à tarde, mas temperatura mais amena.",
+          "7. 16 de Julho: Aniversário de La Paz, desfiles cívicos.",
+          "8. Carnaval (Fev/Mar): Guerra de água (bexigas) na rua é comum.",
+          "9. Entrada Universitária (Julho): Desfile folclórico dos estudantes.",
+          "10. Larga Noche de Museos (Maio): Museus grátis e festas na rua."
+        ],
+
+        "info_gerais": [
+          "1. Soroche (Mal de Altitude): É real. No primeiro dia, ande devagar, coma pouco e não beba álcool. Compre 'Sorojchi Pills'.",
+          "2. Água: NUNCA beba da torneira. A higiene alimentar exige cuidado (evite saladas cruas na rua).",
+          "3. Papel Higiênico: Jogue no lixo, não no vaso. Leve o seu na bolsa, banheiros públicos nem sempre têm.",
+          "4. Pechincha: Negocie tudo em mercados e táxis (não há taxímetro).",
+          "5. Protestos: Bloqueios de rua são comuns. Tenha paciência.",
+          "6. Internet: O chip da Entel tem a melhor cobertura.",
+          "7. Dinheiro: Troque dólares ou reais em casas de câmbio (Calle Sagárnaga). Notas de dólar velhas ou rasgadas não são aceitas.",
+          "8. Frio: Leve casaco corta-vento e gorro. O vento dos Andes corta.",
+          "9. Tomadas: A maioria aceita o pino plano americano (II) ou redondo (oo).",
+          "10. Gorjeta: Não é obrigatória, mas uns bolivianos extra ajudam muito."
+        ],
+
+        "antes_de_ir": [
+          "1. Vacina Febre Amarela: Tenha o certificado internacional (CIVP). Eles pedem na fronteira.",
+          "2. Aclimatação: Se possível, não chegue voando direto do nível do mar. Se chegar, descanse.",
+          "3. Remédios: Leve seu kit (dor de cabeça, enjoo, digestão).",
+          "4. Seguro Viagem: Que cubra altitude (muitos seguros básicos não cobrem acima de 3.000m).",
+          "5. Protetor Solar: O sol da altitude queima muito rápido.",
+          "6. Hidratante Labial: O ar é muito seco.",
+          "7. Dinheiro Vivo: Essencial para tudo que não for hotel ou restaurante chique.",
+          "8. Mochila: Malas de rodinha sofrem nas ladeiras de paralelepípedo.",
+          "9. Respeito: Peça permissão antes de fotografar as Cholitas (mulheres indígenas). Algumas cobram.",
+          "10. Baixe Mapas Offline: O sinal oscila nas montanhas."
+        ],
+
+        "numeros": [
+          "1. 110 (Polícia - Radiopatrulla).",
+          "2. 165 (Ambulância).",
+          "3. 119 (Bombeiros).",
+          "4. Polícia Turística: Praça do Estádio (Zona Norte).",
+          "5. Aeroporto El Alto: +591 2 2157300.",
+          "6. Rodoviária (Terminal de Buses): +591 2 2280551.",
+          "7. Consulado do Brasil: +591 2 2440202.",
+          "8. Hospital de Clínicas: Emergência pública.",
+          "9. Clínica Alemana: Atendimento particular (bom para turistas).",
+          "10. Radio Táxi: +591 2 2222222 (Mais seguro que pegar na rua)."
+        ],
+
+        "riscos": [
+          "1. Falso Policial: Golpe comum. Alguém à paisana pede seu passaporte/carteira e entra num táxi. NUNCA entregue ou entre em carro estranho.",
+          "2. Soroche: Pode estragar a viagem. Se sentir falta de ar severa, vá ao médico.",
+          "3. Batedores de Carteira: Em áreas cheias (San Francisco, Ceja de El Alto).",
+          "4. Trânsito Caótico: As vans (minibuses) param em qualquer lugar. Cuidado ao atravessar.",
+          "5. Cães de Rua: Existem muitos. Geralmente tranquilos, mas cuidado à noite.",
+          "6. Comida de Rua: O risco de intoxicação é alto (bactérias locais).",
+          "7. Boleiras (Golpe): Mancha de mostarda/sujeira na sua roupa para te distrair e roubar a mochila.",
+          "8. Taxis na Rua: À noite, peça pelo hotel ou app (Uber/Yango). Sequestros relâmpago já ocorreram no passado.",
+          "9. Bloqueios: Podem atrasar viagens de ônibus em dias.",
+          "10. Insolação: O frio engana, mas o sol é fortíssimo."
+        ],
+
+        "roteiros": {
+          "curto": {
+            "titulo": "La Paz nas Alturas (2 Dias)",
+            "texto": [
+              "Dia 1: Teleférico (Vermelho/Amarelo), Calle Jaén e Mercado das Bruxas.",
+              "Dia 2: Valle de la Luna pela manhã e Mirador Killi Killi à tarde."
+            ]
+          },
+          "medio": {
+            "titulo": "Cultura e Adrenalina (4 Dias)",
+            "texto": [
+              "Dias 1-2: Roteiro curto.",
+              "Dia 3: Estrada da Morte (Bike) ou Chacaltaya.",
+              "Dia 4: Ruínas de Tiwanaku (bate-volta)."
+            ]
+          },
+          "longo": {
+            "titulo": "Expedição Altiplano (5-6 Dias)",
+            "texto": [
+              "Dias 1-4: Roteiro médio.",
+              "Dia 5: Copacabana e Lago Titicaca (dormir lá ou bate-volta longo).",
+              "Dia 6: Cholitas Wrestling e compras em El Alto."
+            ]
+          }
+        },
+
+        "links": {
+          "hotel": "https://www.booking.com/city/bo/la-paz.pt-br.html",
+          "passeio": "https://www.miteleferico.bo/",
           "seguro": "https://www.segurospromo.com.br"
         }
       }
@@ -14011,7 +14903,186 @@
           "seguro": "https://www.segurospromo.com.br"
         }
       }
+    ],"Tailândia": [
+      {
+        "name": "Bangkok",
+        "imagem": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?q=80&w=2070&auto=format&fit=crop",
+        "tags": ["Templos", "Street Food", "Vida Noturna"],
+        "mapa": "https://goo.gl/maps/bangkok",
+        "clima": "Tropical de Monção. Quente e úmido o ano todo. Três estações: Fresca (Nov-Fev), Quente (Mar-Mai) e Chuvosa (Jun-Out).",
+        
+        "veredicto": {
+          "melhor_epoca": "Novembro a Fevereiro (Estação Fresca, menos chuva e calor suportável).",
+          "ideal_para": [
+            "Foodies (A melhor comida de rua do mundo, de Michelin a espetinhos)",
+            "Mochileiros (A Khao San Road é a 'Meca' dos viajantes budget)",
+            "Caçadores de Templos (Wat Arun e Wat Pho são obras-primas)",
+            "Shoppaholics (Desde mercados flutuantes a shoppings de luxo gigantes)"
+          ],
+          "nao_ideal_para": [
+            "Quem odeia calor extremo (Abril é sufocante)",
+            "Quem tem sensibilidade a cheiros fortes (Mistura de incenso, esgoto, durian e especiarias)",
+            "Quem procura silêncio urbano (O trânsito e a vida noturna são barulhentos)"
+          ],
+          "perfis": [
+            { "icone": "ri-store-3-fill", "nome": "Mercados" },
+            { "icone": "ri-fire-fill", "nome": "Picante" },
+            { "icone": "ri-ancient-pavilion-fill", "nome": "Templos" },
+            { "icone": "ri-moon-fill", "nome": "Noite" }
+          ]
+        },
+
+        "pontos_turisticos": [
+          "1. Wat Arun (Templo do Amanhecer): Icónico, na beira do rio, coberto de porcelana colorida.",
+          "2. Grande Palácio Real e Wat Phra Kaew: A casa do Buda de Esmeralda. O complexo mais sagrado e dourado da cidade (exige roupa composta).",
+          "3. Wat Pho: O templo do Buda Reclinado gigante (46 metros) e escola tradicional de massagem.",
+          "4. Khao San Road: A rua mais famosa do mundo para mochileiros. Festas, insetos fritos e massagens na calçada.",
+          "5. Mercado Chatuchak: O maior mercado de fim de semana do mundo (+15.000 bancas). Encontra-se de tudo.",
+          "6. Chinatown (Yaowarat): Caos delicioso, luzes neon e a melhor comida de rua chinesa à noite.",
+          "7. Asiatique The Riverfront: Mercado noturno mais organizado na beira do rio, com roda-gigante.",
+          "8. Ícone Siam: Um dos shoppings mais luxuosos, tem um mercado flutuante indoor no piso térreo.",
+          "9. Jim Thompson House: Casa-museu de teca tradicional de um espião/empresário americano que desapareceu.",
+          "10. Sky Bars: Lebua (do filme 'A Ressaca') ou King Power Mahanakhon (chão de vidro) para ver a cidade de cima."
+        ],
+
+        "gastronomia": [
+          "1. Pad Thai: O clássico macarrão de arroz frito. O do 'Thipsamai' é lendário (fila enorme).",
+          "2. Tom Yum Goong: Sopa picante de camarão com capim-limão. A alma da culinária tailandesa.",
+          "3. Som Tum: Salada de mamão verde apimentada. Refrescante e viciante.",
+          "4. Mango Sticky Rice (Khao Niew Mamuang): Sobremesa de arroz doce, leite de coco e manga fresca.",
+          "5. Green Curry (Kaeng Khiao Wan): O caril mais famoso, doce e picante.",
+          "6. Jay Fai (Omelete de Caranguejo): A única banca de rua com estrela Michelin. Caro e com fila de horas, mas icónico.",
+          "7. Boat Noodles: Mini tigelas de sopa de macarrão com sangue de porco (opcional), come-se várias de uma vez.",
+          "8. Massaman Curry: Eleito várias vezes o prato mais delicioso do mundo, influência muçulmana.",
+          "9. Chá Gelado Tailandês (Cha Yen): Doce, laranja e leitoso.",
+          "10. Insetos Fritos: Escorpião, grilo ou larva. Para os corajosos na Khao San Road (tem gosto de salgadinho)."
+        ],
+
+        "religiao": [
+          "1. Budismo Theravada: Praticado por 95% da população. Monges de túnica laranja são vistos por toda parte.",
+          "2. Respeito Máximo: Nunca aponte os pés para uma imagem de Buda (é ofensivo).",
+          "3. Santuário Erawan: Um altar hindu no meio do centro comercial onde se fazem oferendas para realizar desejos.",
+          "4. Casas dos Espíritos: Pequenas casinhas na frente de cada prédio para abrigar os espíritos do terreno.",
+          "5. Amuletos: Existe um mercado inteiro só de amuletos mágicos perto do rio.",
+          "6. Meditação: Muitos templos oferecem cursos para estrangeiros.",
+          "7. Tatuagem Sak Yant: Tatuagens sagradas feitas por monges com bambu (Angelina Jolie fez uma).",
+          "8. Flor de Lótus: Oferenda comum nos templos.",
+          "9. Wai: O cumprimento juntando as mãos em prece. Sinal de respeito religioso e social.",
+          "10. Dias de Buda: A venda de álcool é proibida em feriados religiosos."
+        ],
+
+        "curiosidades": [
+          "1. Nome Gigante: O nome real de Bangkok não é Bangkok. É 'Krung Thep Mahanakhon...' e continua por 168 letras. É o nome de cidade mais longo do mundo.",
+          "2. Veneza do Oriente: A cidade foi construída sobre canais (khlongs). Ainda existem muitos, mas vários viraram ruas.",
+          "3. Terceiro Género: A Tailândia é muito aberta à diversidade de género (Ladyboys/Kathoey são parte visível da sociedade).",
+          "4. Hino Real: Toca todos os dias às 8h e 18h em locais públicos. Todos param. No cinema, toca antes do filme e deve-se levantar.",
+          "5. Nunca Colonizada: Único país do sudeste asiático que nunca foi colónia europeia.",
+          "6. Red Bull: A bebida energética original (Krating Daeng) nasceu aqui.",
+          "7. Tuk-tuks: Símbolo da cidade, mas cuidado: cobram mais caro que táxis para turistas.",
+          "8. Cores dos Dias: Cada dia da semana tem uma cor auspiciosa (o Rei atual nasceu na segunda, cor amarela).",
+          "9. Durian: A fruta proibida em hotéis e metro por causa do cheiro forte.",
+          "10. Arma de Água: O Ano Novo (Songkran) é celebrado com uma guerra de água gigante na rua por 3 dias."
+        ],
+
+        "eventos_estacoes": [
+          "1. Songkran (Abril): O Ano Novo Tailandês. A maior guerra de água do mundo. Prepare-se para se molhar.",
+          "2. Loy Krathong (Novembro): Festival das Luzes. Barquinhos de flores e velas são lançados nos rios.",
+          "3. Ano Novo Chinês (Jan/Fev): Chinatown para com dragões e fogos.",
+          "4. Aniversário do Rei (Julho): A cidade fica toda iluminada de amarelo.",
+          "5. Vegetarian Festival (Outubro): Desfiles e comida vegana (bandeiras amarelas).",
+          "6. Estação das Chuvas: Chove forte por 1h e para. Não estraga a viagem, mas alaga ruas.",
+          "7. Makha Bucha (Fev): Procissões de velas nos templos.",
+          "8. Amazing Thailand Grand Sale (Jun-Ago): Promoções nos shoppings.",
+          "9. Maratona de Bangkok (Novembro): À noite para fugir do calor.",
+          "10. Mercado de Natal: Shoppings como Central World fazem decorações gigantes."
+        ],
+
+        "info_gerais": [
+          "1. Scams (Golpes): Se um motorista disser que o Grand Palace está 'fechado hoje' e quiser te levar noutro lugar, É GOLPE. Ignore.",
+          "2. Negocie: Em mercados e tuk-tuks, a negociação é regra. Comece com 50% do valor.",
+          "3. Grab e Bolt: Use apps de transporte. São mais seguros e baratos que táxis de rua (que recusam ligar o taxímetro).",
+          "4. Roupa de Templo: Ombros e joelhos cobertos são OBRIGATÓRIOS. Leve um lenço ou vista calças leves.",
+          "5. Cerveja com Gelo: É comum servirem cerveja com pedras de gelo por causa do calor.",
+          "6. 7-Eleven: Tem um em cada esquina. Vendem chips de internet, tostas quentes e tudo o que precisa. Salvam a vida.",
+          "7. Massagem: Uma massagem nos pés na rua custa €5-7. Faça todos os dias.",
+          "8. Cannabis: Foi legalizada (parcialmente) recentemente, há lojas por todo o lado, mas fumar na rua em público é proibido (multa).",
+          "9. Trânsito: É infernal. Use o Skytrain (BTS) e Metro (MRT) sempre que possível.",
+          "10. Água: Não beba da torneira. Compre garrafas (são baratas)."
+        ],
+
+        "antes_de_ir": [
+          "1. Vacina Febre Amarela: Brasileiros PRECISAM do certificado internacional ou não entram.",
+          "2. Seguro Viagem: A saúde privada é excelente (nível mundial), mas caríssima.",
+          "3. Baixe o Grab/Bolt: Configure o cartão antes de ir.",
+          "4. Sapatos Fáceis: Você vai tirar e pôr os sapatos 20x por dia nos templos. Chinelos ou slip-ons ajudam.",
+          "5. Power Bank: O uso de mapas e fotos drena a bateria.",
+          "6. Chip de Internet: Compre no aeroporto ou 7-Eleven (AIS ou TrueMove são ótimas).",
+          "7. Protetor Solar e Repelente: O sol queima e os mosquitos picam.",
+          "8. Cartão Wise/Revolut: Funcionam bem, mas ATMs cobram taxa de levantamento (220 baht). Levante o máximo de cada vez.",
+          "9. Papel Higiénico: Leve lenços, nem todos os banheiros públicos têm.",
+          "10. Respeito Real: Nunca fale mal da família real, é crime de lesa-majestade com pena de prisão."
+        ],
+
+        "numeros": [
+          "1. 191 (Polícia Geral).",
+          "2. 1155 (Polícia Turística - Falam inglês).",
+          "3. 1669 (Ambulância).",
+          "4. Embaixada do Brasil: +66 2 679 8567.",
+          "5. Embaixada de Portugal: +66 2 234 2123.",
+          "6. Aeroporto Suvarnabhumi (BKK): Principal internacional.",
+          "7. Aeroporto Don Mueang (DMK): Voos low-cost/domésticos.",
+          "8. Bumrungrad Hospital: Um dos melhores do mundo (privado).",
+          "9. Grab (App): Essencial para transporte.",
+          "10. Tourist Assistance Center: No aeroporto."
+        ],
+
+        "riscos": [
+          "1. Golpe do Tuk-Tuk: 'Passeio por 20 baht'. Eles te levam a lojas de fatos/joias para ganhar comissão. Não aceite.",
+          "2. Moto-táxi: Rápidos, mas perigosos. Use capacete.",
+          "3. Bebidas Batizadas: Cuidado com baldes de bebida (buckets) de estranhos.",
+          "4. Falsas Pedras Preciosas: Não compre joias na rua achando que é um negócio da China.",
+          "5. Cachorros de Rua (Soi Dogs): Geralmente calmos, mas cuidado à noite em becos.",
+          "6. Calor: Insolação é real. Hidrate-se.",
+          "7. Bolsas: Cuidado com motociclistas arrancando bolsas em ruas escuras.",
+          "8. Ping Pong Shows: Golpes clássicos em Patpong. Cobram fortunas na saída. Evite.",
+          "9. Atravessar a Rua: Ninguém para na faixa. Siga os locais.",
+          "10. Política: Evite protestos se houver (camisas amarelas vs vermelhas)."
+        ],
+
+        "roteiros": {
+          "curto": {
+            "titulo": "Bangkok Express (2 Dias)",
+            "texto": [
+              "Dia 1: Grande Palácio, Wat Pho e pôr do sol no Wat Arun. Noite na Khao San Road.",
+              "Dia 2: Shopping IconSiam e Chinatown à noite (comida de rua)."
+            ]
+          },
+          "medio": {
+            "titulo": "Templos e Mercados (4 Dias)",
+            "texto": [
+              "Dias 1-2: Roteiro curto.",
+              "Dia 3: Mercado de Chatuchak (se for fim de semana) ou Jim Thompson House e Shoppings de Siam.",
+              "Dia 4: Bate-volta ao Mercado Flutuante e Mercado do Trem (Maeklong)."
+            ]
+          },
+          "longo": {
+            "titulo": "Imersão Thai (5-6 Dias)",
+            "texto": [
+              "Dias 1-4: Roteiro médio.",
+              "Dia 5: Bate-volta a Ayutthaya (antiga capital com ruínas).",
+              "Dia 6: Relaxar no Parque Lumpini, Massagem Thai e Sky Bar à noite."
+            ]
+          }
+        },
+
+        "links": {
+          "hotel": "https://www.booking.com/city/th/bangkok.pt-pt.html",
+          "passeio": "https://www.tourismthailand.org/",
+          "seguro": "https://www.segurospromo.com.br"
+        }
+      }
     ]
+
   },
    "Europa": {
     "Portugal": [
@@ -15481,7 +16552,183 @@
         "passeio": "https://www.civitatis.com/br/milao/",
         "seguro": "https://www.segurospromo.com.br"
       }
-    }
+    },
+    {
+        "name": "Veneza",
+        "imagem": "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?q=80&w=2070&auto=format&fit=crop",
+        "tags": ["Romântico", "História", "Canais"],
+        "mapa": "https://goo.gl/maps/venezia",
+        "clima": "Subtropical Húmido. Verões muito quentes e húmidos (com cheiro forte nos canais). Invernos frios e nevoeiro. Acqua Alta (inundações) comum no Outono/Inverno.",
+        
+        "veredicto": {
+          "melhor_epoca": "Abril/Maio e Setembro/Outubro (Evite Julho/Agosto pelo calor e multidões).",
+          "ideal_para": [
+            "Casais (Passeios de gôndola e jantares à luz de velas)",
+            "Amantes de Arte (Bienal de Veneza e arquitetura gótica/renascentista)",
+            "Fãs de Fotografia (Cada esquina é um cartão-postal)",
+            "Caminhantes (Carros não entram, prepara-te para andar e subir pontes)"
+          ],
+          "nao_ideal_para": [
+            "Quem tem mobilidade reduzida (Muitas escadas nas pontes e vaporetto lotado)",
+            "Quem procura pechinchas (Tudo é mais caro que no resto da Itália)",
+            "Quem odeia pombos (A Praça de São Marcos é o reino deles, mas não os alimente!)"
+          ],
+          "perfis": [
+            { "icone": "ri-ship-fill", "nome": "Gôndola" },
+            { "icone": "ri-ancient-pavilion-fill", "nome": "Palácios" },
+            { "icone": "ri-mask-fill", "nome": "Carnaval" },
+            { "icone": "ri-glass-fill", "nome": "Murano" }
+          ]
+        },
+
+        "pontos_turisticos": [
+          "1. Praça de São Marcos: O 'salão de visitas da Europa'. Visite a Basílica (mosaicos dourados) e suba ao Campanário.",
+          "2. Palácio Ducal (Doge's Palace): Sede do poder veneziano, com salas magníficas e a travessia da Ponte dos Suspiros.",
+          "3. Ponte de Rialto: A ponte mais antiga e famosa sobre o Grande Canal. Ótima para fotos ao pôr do sol.",
+          "4. Grande Canal: A 'avenida' principal. Pegue o Vaporetto nº 1 para um tour barato vendo os palácios.",
+          "5. Burano: A ilha das casas coloridas e rendas (a 40 min de barco). Super instagramável.",
+          "6. Murano: A ilha mundialmente famosa pelo vidro soprado. Visite uma fábrica para ver a produção.",
+          "7. Coleção Peggy Guggenheim: Arte moderna num palácio inacabado à beira do canal.",
+          "8. Basílica de Santa Maria della Salute: A igreja barroca imponente na entrada do Grande Canal.",
+          "9. Ponte dos Suspiros: Diz a lenda que os prisioneiros suspiravam ao ver Veneza pela última vez aqui.",
+          "10. Teatro La Fenice: Uma ópera lendária que 'renasceu das cinzas' após incêndios."
+        ],
+
+        "gastronomia": [
+          "1. Cicchetti: As 'tapas' venezianas. Pequenos pães com bacalhau, presunto ou queijo, comidos em pé nos 'Bacari' (bares).",
+          "2. Sarde in Saor: Sardinhas marinadas em vinagre, cebola, passas e pinhões. Sabor agridoce histórico.",
+          "3. Risotto al Nero di Seppia: Risoto preto feito com a tinta da lula. Delicioso (cuidado com os dentes pretos).",
+          "4. Baccalà Mantecato: Bacalhau transformado numa mousse cremosa, servido com polenta.",
+          "5. Fegato alla Veneziana: Fígado de vitela com muita cebola e polenta branca.",
+          "6. Spritz: O aperitivo oficial. Aperol, Prosecco e água com gás. Beba antes do jantar.",
+          "7. Bigoli in Salsa: Massa grossa (tipo esparguete) com molho de anchovas e cebola.",
+          "8. Tiramisu: Dizem que nasceu na região do Vêneto (Treviso).",
+          "9. Risi e Bisi: Uma sopa grossa de arroz e ervilhas (prato dos Doges).",
+          "10. Frittelle: Bolinhos fritos doces típicos do Carnaval."
+        ],
+
+        "religiao": [
+          "1. Basílica de São Marcos: Guarda os supostos restos mortais do evangelista Marcos (roubados do Egito).",
+          "2. Santa Maria della Salute: Construída como promessa para acabar com a peste negra.",
+          "3. San Giorgio Maggiore: A ilha em frente à praça, tem a melhor vista panorâmica da cidade (suba à torre).",
+          "4. Basílica de Frari: Gótica, guarda o túmulo de Ticiano e obras de Donatello.",
+          "5. San Zaccaria: Cripta alagada permanente, muito curiosa.",
+          "6. Gueto Judaico: O primeiro gueto do mundo (a palavra nasceu aqui). Tem sinagogas históricas.",
+          "7. Relíquias: Veneza tem uma coleção absurda de relíquias roubadas durante as Cruzadas.",
+          "8. Madonna Nicopeia: Ícone bizantino venerado em São Marcos.",
+          "9. Igrejas Museus: Muitas cobram entrada (Chorus Pass) pois são cheias de Tintorettos e Veroneses.",
+          "10. Silêncio: Apesar do turismo, as igrejas exigem silêncio absoluto e ombros cobertos."
+        ],
+
+        "curiosidades": [
+          "1. Sem Carros: É a maior área urbana da Europa livre de carros. Nem bicicletas são permitidas no centro.",
+          "2. Construída em Madeira: Os palácios de pedra estão apoiados em milhões de estacas de madeira cravadas na lama.",
+          "3. Acqua Alta: No outono, a maré sobe e inunda a praça. As passarelas são montadas e as sirenes tocam.",
+          "4. Gôndolas Pretas: Uma lei de 1562 obrigou todas a serem pretas para evitar a ostentação dos nobres.",
+          "5. Carnaval Sombrio: As máscaras serviam para esconder a identidade e permitir pecados anonimamente no século 18.",
+          "6. Ponte dos Punhos: A Ponte dei Pugni tem marcas no chão onde rivais lutavam para derrubar o inimigo no canal.",
+          "7. Ciao: A palavra italiana mais famosa vem do veneziano 's-ciavo vostro' (vosso escravo/servo).",
+          "8. Leão Alado: Símbolo de São Marcos e da cidade. Se o livro do leão está aberto, é tempo de paz; fechado, guerra.",
+          "9. População em Queda: O turismo expulsou os locais. Restam menos de 50.000 residentes no centro.",
+          "10. MOSE: O sistema de barreiras móveis construído para salvar a cidade das inundações."
+        ],
+
+        "eventos_estacoes": [
+          "1. Carnaval de Veneza (Fev): Máscaras luxuosas, bailes e desfiles aquáticos.",
+          "2. Bienal de Veneza (Maio-Nov): Alterna entre Arte e Arquitetura. O maior evento cultural do mundo.",
+          "3. Regata Storica (Setembro): Desfile de barcos históricos e competições de remo.",
+          "4. Festival de Cinema de Veneza (Ago/Set): O mais antigo do mundo, no Lido. Tapete vermelho com estrelas.",
+          "5. Festa do Redentor (Julho): Jantar em barcos e fogos de artifício incríveis.",
+          "6. Vogalonga (Maio/Jun): Maratona de remo não competitiva, milhares de barcos.",
+          "7. Maratona de Veneza (Outubro): A corrida termina cruzando pontes (com rampas).",
+          "8. Verão: Calor húmido e mosquitos. Jantares ao ar livre.",
+          "9. Inverno: Nevoeiro místico e praça alagada. Romântico e melancólico.",
+          "10. Festa de São Marcos (25 Abril): Dia do padroeiro e da libertação."
+        ],
+
+        "info_gerais": [
+          "1. Taxa de Entrada (Contributo di Accesso): Em datas específicas (fins de semana de Abril a Julho), turistas de um dia pagam €5 para entrar. Reserve online.",
+          "2. Vaporetto: O 'ônibus' aquático. O bilhete avulso custa €9,50 (caro!). Compre o passe de 24h ou 48h.",
+          "3. Multas: NÃO se sente nas escadas das pontes ou na Praça de São Marcos (multa de €100-200). Não alimente pombos.",
+          "4. Gôndola: Preço tabelado (€90 dia / €110 noite por 30min, barco inteiro). Negocie antes se quiser mais tempo.",
+          "5. Malas: Arrastar malas nas pontes é um pesadelo e faz barulho (proibido rodas de plástico rígido? Mito, mas evite por educação).",
+          "6. Água Potável: Existem fontes públicas (fontanelle) com água boa e fresca. Leve garrafa.",
+          "7. Banheiros: Escassos e pagos (€1,50). Use museus ou cafés (compre um café no balcão).",
+          "8. Coperto: Taxa de serviço/mesa nos restaurantes é comum (€2-4 por pessoa).",
+          "9. GPS falha: As ruas estreitas confundem o Google Maps. Olhe as placas 'Per San Marco' ou 'Per Rialto' nas paredes.",
+          "10. Traghetto: Gôndola coletiva para atravessar o canal em pontos sem ponte. Custa apenas €2 (viaje em pé como um local)."
+        ],
+
+        "antes_de_ir": [
+          "1. Reserve São Marcos: A fila é brutal. Reserve a entrada na Basílica e no Palácio Ducal online.",
+          "2. Verifique a Taxa de Entrada: Veja se o seu dia de visita exige o pagamento da taxa de acesso.",
+          "3. Malas Leves: Sério, você vai ter que levantar a mala em dezenas de degraus de pontes.",
+          "4. App CheBateo: Ótimo para horários de Vaporetto.",
+          "5. Calçado Confortável: Esqueça saltos ou chinelos.",
+          "6. Seguro Viagem: Obrigatório.",
+          "7. Hotel em Mestre?: Mais barato, mas perde a magia de acordar em Veneza. Se puder, fique na ilha.",
+          "8. Power Bank: O GPS consome muita bateria no labirinto.",
+          "9. Filme 'Summertime' ou 'O Turista': Para entrar no clima.",
+          "10. Validação: Encoste o bilhete do vaporetto na máquina ANTES de embarcar. Fiscais não perdoam."
+        ],
+
+        "numeros": [
+          "1. 112 (Emergência Geral).",
+          "2. 113 (Polícia).",
+          "3. 118 (Ambulância - Suem).",
+          "4. Hospital Civil (SS. Giovanni e Paolo): Com entrada para ambulância-barco.",
+          "5. Aeroporto Marco Polo: +39 041 260 9260.",
+          "6. ACTV (Transporte): HelloVenezia +39 041 2424.",
+          "7. Achados e Perdidos ACTV.",
+          "8. Táxi Aquático (Consorzio Motoscafi): +39 041 522 2303.",
+          "9. Farmácias de Turno: Afixado na porta de qualquer farmácia.",
+          "10. Polícia Local: +39 041 274 7070."
+        ],
+
+        "riscos": [
+          "1. Pickpockets: Muito comum nos vaporettos lotados e em Rialto. Mochila para a frente!",
+          "2. Turist Traps (Comida): Restaurantes com fotos de comida na porta e garçons chamando costumam ser ruins e caros.",
+          "3. Cair no Canal: Acontece, principalmente com selfies e álcool. A água é suja e fria.",
+          "4. Acqua Alta: Se a sirene tocar, a maré vai subir. Compre botas de plástico descartáveis dos vendedores.",
+          "5. Multas de Comportamento: Não nade nos canais (multa €350+ e expulsão). Não faça piquenique no chão.",
+          "6. Golpes de Troco: Confira o troco em lojas de souvenirs.",
+          "7. Vidro Falso: Muito vidro vendido como Murano é 'Made in China'. Procure o selo de certificação.",
+          "8. Gaivotas Agressivas: Elas roubam sanduíches da mão na Praça de São Marcos.",
+          "9. Calor: Insolação no verão é comum, as ruas estreitas abafam o calor.",
+          "10. Preço do Café: Café no balcão custa €1.50. Sentado na Praça de São Marcos (com música) custa €12. Olhe o menu antes."
+        ],
+
+        "roteiros": {
+          "curto": {
+            "titulo": "Clássico Veneziano (2 Dias)",
+            "texto": [
+              "Dia 1: Praça de São Marcos, Basílica, Palácio Ducal e Ponte dos Suspiros. Pôr do sol em Rialto.",
+              "Dia 2: Passeio de Vaporetto pelo Grande Canal, Mercado de Rialto e um passeio a pé por Dorsoduro."
+            ]
+          },
+          "medio": {
+            "titulo": "Ilhas e Arte (3 Dias)",
+            "texto": [
+              "Dias 1-2: Roteiro curto.",
+              "Dia 3: Manhã em Murano (vidro) e Burano (casas coloridas). Tarde na Coleção Peggy Guggenheim."
+            ]
+          },
+          "longo": {
+            "titulo": "Veneza Profunda (4-5 Dias)",
+            "texto": [
+              "Dias 1-3: Roteiro médio.",
+              "Dia 4: Ilha de San Giorgio Maggiore (vista), Giudecca e passeio de gôndola fora do centro.",
+              "Dia 5: Cannaregio (Gueto Judaico) e igrejas escondidas (Frari e Scuola Grande di San Rocco)."
+            ]
+          }
+        },
+
+        "links": {
+          "hotel": "https://www.booking.com/city/it/venice.pt-pt.html",
+          "passeio": "https://www.veneziaunica.it/",
+          "seguro": "https://www.segurospromo.com.br"
+        }
+      }
   ],
   "Alemanha": [
     {
@@ -15666,7 +16913,183 @@
         "passeio": "https://www.civitatis.com/br/frankfurt/",
         "seguro": "https://www.segurospromo.com.br"
       }
-    }
+    },
+    {
+        "name": "Berlim",
+        "imagem": "https://images.unsplash.com/photo-1599946347371-68eb71b16afc?q=80&w=2070&auto=format&fit=crop",
+        "tags": ["História", "Tecno", "Cultura"],
+        "mapa": "https://goo.gl/maps/berlin",
+        "clima": "Continental Temperado. Invernos longos, cinzentos e frios (-2°C a 4°C). Verões agradáveis e dias longos (20°C a 25°C).",
+        
+        "veredicto": {
+          "melhor_epoca": "Maio a Setembro (A cidade ganha vida, cafés na rua e parques cheios).",
+          "ideal_para": [
+            "Fãs de História (Segunda Guerra e Guerra Fria em cada esquina)",
+            "Clubbers (A melhor vida noturna e tecno do mundo)",
+            "Artistas e Hipsters (Atmosfera alternativa, graffiti e galerias)",
+            "Orçamento Médio (É mais barata que Paris ou Londres)"
+          ],
+          "nao_ideal_para": [
+            "Quem busca luxo clássico (Berlim é 'pobre, mas sexy', crua e grafitada)",
+            "Quem odeia regras (Não atravesse fora da passadeira, você será repreendido)",
+            "Quem espera a Alemanha da Oktoberfest (Isso é em Munique, Berlim é multicultural e moderna)"
+          ],
+          "perfis": [
+            { "icone": "ri-ancient-pavilion-fill", "nome": "Muro" },
+            { "icone": "ri-music-2-fill", "nome": "Tecno" },
+            { "icone": "ri-beer-fill", "nome": "Cerveja" },
+            { "icone": "ri-artboard-fill", "nome": "Arte" }
+          ]
+        },
+
+        "pontos_turisticos": [
+          "1. Portão de Brandemburgo: O símbolo da reunificação alemã. Imperdível de dia e iluminado à noite.",
+          "2. Memorial do Holocausto: Um labirinto de 2.711 blocos de betão. Emocionante e solene.",
+          "3. Muro de Berlim (East Side Gallery): O maior pedaço do muro que restou, coberto de arte urbana (incluindo o 'Beijo').",
+          "4. Reichstag (Parlamento): Suba à cúpula de vidro (grátis, mas requer reserva antecipada) para ver a cidade 360º.",
+          "5. Ilha dos Museus: Património UNESCO com 5 museus, incluindo o Pérgamo e o Neus Museum (busto de Nefertiti).",
+          "6. Checkpoint Charlie: A antiga fronteira entre o setor americano e soviético (turístico, mas histórico).",
+          "7. Torre de TV (Fernsehturm): A esfera icónica na Alexanderplatz, visível de toda a cidade.",
+          "8. Topografia do Terror: Museu gratuito (ao ar livre e interior) no local da antiga sede da Gestapo e SS.",
+          "9. Tiergarten: O pulmão verde da cidade, gigante e perfeito para bicicletas.",
+          "10. Catedral de Berlim (Berliner Dom): Imponente igreja protestante na Ilha dos Museus."
+        ],
+
+        "gastronomia": [
+          "1. Currywurst: A comida de rua nº 1. Salsicha cortada com ketchup e pó de caril.",
+          "2. Döner Kebab: Dizem que foi inventado em Berlim, não na Turquia. Prove o do Mustafa's Gemüse Kebap.",
+          "3. Schnitzel: Bife de porco ou vitela panado e frito (origem austríaca, mas onipresente).",
+          "4. Cerveja (Bier): Berliner Kindl ou qualquer Pilsner. Pode beber na rua.",
+          "5. Pretzel (Brezel): Pão salgado em forma de nó.",
+          "6. Berliner (Pfannkuchen): Bola de Berlim (donut recheado com doce).",
+          "7. Comida Vietnamita: Enorme comunidade em Berlim, é barato e delicioso (Ex: Monsieur Vuong).",
+          "8. Kartoffelsalat: Salada de batata, o acompanhamento padrão.",
+          "9. Spätzle: Massa de ovo típica do sul, mas comum em restaurantes alemães.",
+          "10. Club Mate: Bebida de mate com cafeína, o combustível dos clubbers."
+        ],
+
+        "religiao": [
+          "1. Catedral de Berlim (Dom): A maior e mais bela, suba ao topo da cúpula.",
+          "2. Kaiser Wilhelm Gedächtniskirche: A igreja 'quebrada' no oeste, mantida em ruínas como lembrança da guerra.",
+          "3. Nova Sinagoga: Com a sua cúpula dourada, centro da vida judaica antes da guerra.",
+          "4. Catedral Francesa e Alemã: As duas igrejas gémeas na Gendarmenmarkt.",
+          "5. Secularismo: Berlim é uma das cidades mais ateias da Europa.",
+          "6. Islão: Forte presença devido à comunidade turca (bairro Kreuzberg).",
+          "7. Cemitério Judaico de Weissensee: O maior da Europa, atmosfera única.",
+          "8. St. Hedwig's Cathedral: Catedral católica com cúpula peculiar.",
+          "9. Igrejas Transformadas: Muitas viraram museus ou salas de concerto.",
+          "10. Budismo: Tem um templo tailandês bonito em Wilmersdorf."
+        ],
+
+        "curiosidades": [
+          "1. Mais pontes que Veneza: Berlim tem cerca de 1.700 pontes (Veneza tem 400).",
+          "2. Ampelmännchen: O bonequinho do semáforo da Alemanha Oriental (com chapéu) sobreviveu e virou ícone cult.",
+          "3. Tubos Rosas: Você verá tubos grandes rosas e azuis pela cidade. Servem para drenar água do subsolo pantanoso nas obras.",
+          "4. Berghain: A discoteca mais famosa (e difícil de entrar) do mundo. A política de porta é lendária.",
+          "5. O Muro no Chão: Uma linha dupla de paralelepípedos marca por onde o muro passava na cidade toda.",
+          "6. Pobres mas Sexy: Frase do ex-prefeito Klaus Wowereit que definiu a identidade da cidade.",
+          "7. Döner Capital: Consomem-se 60 toneladas de carne Döner por dia em Berlim.",
+          "8. Ursos: O urso é o símbolo da cidade (Berlin soa como 'Bär' - urso). Estátuas coloridas estão por toda a parte.",
+          "9. Teufelsberg: Uma antiga estação de espionagem americana numa colina artificial feita de escombros da guerra.",
+          "10. Aeroporto Tempelhof: O antigo aeroporto nazista virou um parque público gigante onde as pessoas andam de skate na pista de pouso."
+        ],
+
+        "eventos_estacoes": [
+          "1. Berlinale (Fevereiro): Um dos maiores festivais de cinema do mundo.",
+          "2. Mercados de Natal (Weihnachtsmärkte): Em Dezembro, a cidade enche-se de luzes, Glühwein (vinho quente) e artesanato.",
+          "3. Carnaval das Culturas (Pentecostes): Desfile multicultural gigante em Kreuzberg.",
+          "4. Christopher Street Day (Julho): A Parada do Orgulho LGBT de Berlim, uma festa imensa.",
+          "5. Festival das Luzes (Outubro): Projeções artísticas nos monumentos.",
+          "6. Maratona de Berlim (Setembro): Uma das 'Majors', famosa por ser plana e rápida.",
+          "7. Fête de la Musique (21 Junho): Música grátis em todas as ruas.",
+          "8. Verão: A cidade vai para os lagos (Wannsee, Müggelsee) ou para os 'Beach Bars' na beira do rio Spree.",
+          "9. 1º de Maio: Protestos e festas de rua lendárias em Kreuzberg (Myfest).",
+          "10. Silvester (Ano Novo): Fogos de artifício caóticos no Portão de Brandemburgo."
+        ],
+
+        "info_gerais": [
+          "1. Dinheiro Vivo (Nur Bar): O maior choque cultural. Muitos restaurantes e bares NÃO aceitam cartão. Tenha sempre euros na carteira.",
+          "2. Pfand (Depósito): Garrafas de plástico e vidro custam €0.08 a €0.25 extra. Devolva nas máquinas dos supermercados para receber o dinheiro de volta.",
+          "3. Transporte (Zonas): A maioria das atrações está na zona AB. O aeroporto está na zona ABC. Valide o bilhete ANTES de entrar no trem (caixas amarelas/vermelhas).",
+          "4. Ciclovias: Não ande nelas. Os ciclistas berlinenses são rápidos e agressivos.",
+          "5. Gorjeta (Trinkgeld): 5-10%. Diga o valor total que quer pagar ao garçom quando entregar o dinheiro, não deixe na mesa.",
+          "6. Domingo: Supermercados e lojas fecham. Só abrem restaurantes e museus (e 'Spätis' - lojas de conveniência).",
+          "7. Água: Peça 'Mineralwasser' se quiser com gás (padrão). Sem gás é 'Stilles Wasser'. Água da torneira é potável.",
+          "8. Segurança: Segura, mas tem furto de bicicletas e carteiras em zonas turísticas.",
+          "9. Pontualidade: Trens (U-Bahn/S-Bahn) geralmente são pontuais, mas obras são frequentes.",
+          "10. Inglês: Falado em todo lugar, às vezes melhor que o alemão em bairros hipster como Neukölln."
+        ],
+
+        "antes_de_ir": [
+          "1. Reserve o Reichstag: É grátis, mas precisa reservar online com semanas de antecedência para subir na cúpula.",
+          "2. Baixe o App BVG: Para comprar bilhetes de transporte e ver rotas.",
+          "3. Tenha Dinheiro (Cash): Saque euros assim que chegar.",
+          "4. Sapatos Confortáveis: A cidade é espalhada, anda-se muito.",
+          "5. Agasalho: Mesmo no verão, traga uma jaqueta leve.",
+          "6. Museum Pass: Vale a pena se for visitar a Ilha dos Museus (3 dias consecutivos).",
+          "7. Validação: Entenda como validar o bilhete de metrô para evitar multa de €60.",
+          "8. Domingo Morto: Planeje museus ou parques para domingo, pois não há compras.",
+          "9. Tomada: Adaptador tipo F.",
+          "10. História: Ler/ver algo sobre o Muro antes de ir enriquece muito a visita."
+        ],
+
+        "numeros": [
+          "1. 112 (Bombeiros e Ambulância).",
+          "2. 110 (Polícia).",
+          "3. Aeroporto BER: +49 30 6091 1150.",
+          "4. Embaixada do Brasil: +49 30 7262 80.",
+          "5. Taxi Berlin: +49 30 202020.",
+          "6. Charité (Hospital famoso): Emergência.",
+          "7. BVG (Transporte): Informações nas estações principais (Alexanderplatz/Zoo).",
+          "8. VisitBerlin (Turismo): No Portão de Brandemburgo.",
+          "9. Farmácias (Apotheke): Sinalizadas com um 'A' vermelho gótico.",
+          "10. Achados e Perdidos (Fundbüro)."
+        ],
+
+        "riscos": [
+          "1. Multa no Transporte: Fiscais à paisana ('Schwarzfahren' é andar sem bilhete). Multa imediata de €60.",
+          "2. Golpes de Rua: O 'jogo dos copos' na Alexanderplatz ou 'petição para surdos'. Ignore.",
+          "3. Ciclistas: Atravessar a ciclovia sem olhar é perigoso.",
+          "4. Vidro Quebrado: Comum em parques após o fim de semana (Berlim é a capital da festa).",
+          "5. Drogas em Parques: Görlitzer Park é famoso pela venda de drogas. Evite à noite se não quiser ser abordado (embora geralmente não seja violento).",
+          "6. Fila do Berghain: Risco de ficar 3h na fila e ser rejeitado pelo segurança Sven Marquardt.",
+          "7. Inverno Depressivo: Dias muito curtos e cinzentos em Jan/Fev afetam o humor.",
+          "8. Fogos no Ano Novo: É uma zona de guerra. As pessoas soltam fogos na multidão. Cuidado.",
+          "9. Pickpockets: Mercados de Natal e transporte.",
+          "10. Fumar: Fuma-se muito em bares fechados (ainda permitido em alguns lugares)."
+        ],
+
+        "roteiros": {
+          "curto": {
+            "titulo": "Berlim Histórica (2 Dias)",
+            "texto": [
+              "Dia 1: Portão de Brandemburgo, Memorial do Holocausto, Reichstag e Tiergarten.",
+              "Dia 2: Muro de Berlim (East Side Gallery), Alexanderplatz e Ilha dos Museus."
+            ]
+          },
+          "medio": {
+            "titulo": "Cultura e Guerra Fria (3-4 Dias)",
+            "texto": [
+              "Dias 1-2: Roteiro curto.",
+              "Dia 3: Checkpoint Charlie, Topografia do Terror e Potsdamer Platz.",
+              "Dia 4: Bairro Kreuzberg (arte urbana e comida) e Aeroporto Tempelhof."
+            ]
+          },
+          "longo": {
+            "titulo": "Berlim Completa e Potsdam (5 Dias)",
+            "texto": [
+              "Dias 1-4: Roteiro médio + Compras na Kurfürstendamm.",
+              "Dia 5: Bate-volta a Potsdam (Palácio Sanssouci) - Versalhes alemã."
+            ]
+          }
+        },
+
+        "links": {
+          "hotel": "https://www.booking.com/city/de/berlin.pt-br.html",
+          "passeio": "https://www.visitberlin.de/en",
+          "seguro": "https://www.segurospromo.com.br"
+        }
+      }
   ],
   "Holanda": [
       {

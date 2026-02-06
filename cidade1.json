@@ -614,6 +614,21 @@
             "idioma": "Espanhol"
         }
     },
+    "Punta del Este": {
+    "comida": "$U 600 – $U 2.000 (aprox. € 15 – € 50)",
+    "hospedagem": "$U 3.000 – $U 12.000 (aprox. € 70 – € 300)",
+    "transporte": "$U 100 – $U 500",
+    "atracoes": "$U 0 – $U 500",
+    "checklist": {
+      "passaporte": "Obrigatório (ou Cartão de Cidadão/RG para nacionais do Mercosul)",
+      "visto": "Não (Isento para turistas até 90 dias)",
+      "vacinas": "Nenhuma obrigatória",
+      "seguro": "Recomendado (Assistência médica privada no Uruguai é cara)",
+      "tomada": "220V (Tipo L - Três pinos em linha, ou Tipo F 'Schuko'. Leve adaptador universal)",
+      "moeda": "Peso Uruguaio ($U) e Dólar Americano (muito aceite)",
+      "idioma": "Espanhol (Portunhol é muito comum na fronteira e serviços)"
+    }
+  },
     "Lima": {
         "comida": "R$ 50 – R$ 120",
         "hospedagem": "R$ 130 – R$ 350",
@@ -628,7 +643,38 @@
             "moeda": "Sol Peruano (S/)",
             "idioma": "Espanhol"
         }
+        
     },
+    "Cusco": {
+    "comida": "S/ 20 – S/ 100",
+    "hospedagem": "S/ 80 – S/ 400",
+    "transporte": "S/ 5 – S/ 30",
+    "atracoes": "S/ 70 – S/ 300",
+    "checklist": {
+      "passaporte": "Obrigatório (RG brasileiro recente também é aceito, mas passaporte é melhor)",
+      "visto": "Não (Isento para turistas brasileiros e europeus)",
+      "vacinas": "Febre Amarela (Recomendada, obrigatória se for esticar para a Amazônia)",
+      "seguro": "Altamente Recomendado (Cobrir resgate e mal de altitude)",
+      "tomada": "220V (Tipo A, B e C - Mistura de pinos chatos e redondos, leve adaptador universal)",
+      "moeda": "Novo Sol (PEN - S/)",
+      "idioma": "Espanhol (Quechua é muito falado pelos locais)"
+    }
+  },
+  "La Paz": {
+    "comida": "BOB 20 – BOB 80 (aprox. R$ 15 – R$ 60)",
+    "hospedagem": "BOB 80 – BOB 400 (aprox. R$ 60 – R$ 300)",
+    "transporte": "BOB 2 – BOB 20 (Teleférico é barato)",
+    "atracoes": "BOB 10 – BOB 150",
+    "checklist": {
+      "passaporte": "Obrigatório (ou RG brasileiro em bom estado e com menos de 10 anos)",
+      "visto": "Não (Isento para turistas brasileiros até 90 dias)",
+      "vacinas": "Febre Amarela (Obrigatória, exigem o Certificado Internacional na fronteira/aeroporto)",
+      "seguro": "Recomendado (Principalmente para cobrir Mal de Altitude)",
+      "tomada": "220V (Tipo A e C - Dois pinos chatos ou redondos. Leve adaptador universal)",
+      "moeda": "Boliviano (BOB)",
+      "idioma": "Espanhol, Aimará e Quíchua"
+    }
+  },
     "Punta Cana": {
         "comida": "R$ 180 – R$ 350",
         "hospedagem": "R$ 450 – R$ 1300",
@@ -824,6 +870,21 @@
             "idioma": "Árabe (oficial), mas Inglês é falado por 100% dos turistas"
         }
     },
+    "Bangkok": {
+    "comida": "฿ 60 – ฿ 350 (aprox. € 1,50 – € 9)",
+    "hospedagem": "฿ 800 – ฿ 4.000 (aprox. € 20 – € 110)",
+    "transporte": "฿ 30 – ฿ 150 (Metrô/Skytrain é barato, Grab/Táxi acessível)",
+    "atracoes": "฿ 50 – ฿ 500 (O Grande Palácio é o mais caro, ~฿ 500)",
+    "checklist": {
+      "passaporte": "Obrigatório (Validade mín. 6 meses)",
+      "visto": "Não (Isento para turistas brasileiros e portugueses até 60 dias - Regra 2024/25)",
+      "vacinas": "Febre Amarela (Obrigatória para brasileiros: leve o Certificado Internacional CIVP)",
+      "seguro": "Altamente Recomendado (Assistência médica para turistas é paga)",
+      "tomada": "220V (Tipos A, B, C e O - Aceita pino chato e redondo, mas o adaptador universal é útil)",
+      "moeda": "Baht Tailandês (THB - ฿)",
+      "idioma": "Tailandês (Inglês é amplamente falado no turismo)"
+    }
+  },
     "Lisboa": {
         "comida": "R$ 140 – R$ 280",
         "hospedagem": "R$ 350 – R$ 800",
@@ -944,6 +1005,21 @@
             "idioma": "Italiano"
         }
     },
+    "Veneza": {
+    "comida": "€ 15 – € 60",
+    "hospedagem": "€ 100 – € 400",
+    "transporte": "€ 9.50 – € 25",
+    "atracoes": "€ 0 – € 35",
+    "checklist": {
+      "passaporte": "Obrigatório (Validade mín. 3 meses após a saída do Espaço Schengen)",
+      "visto": "Não (Isento para turismo até 90 dias - ETIAS previsto para final de 2026)",
+      "vacinas": "Nenhuma obrigatória",
+      "seguro": "Obrigatório (Espaço Schengen, cobertura mín. € 30.000)",
+      "tomada": "230V (Tipo F e L - O padrão italiano antigo são 3 pinos alinhados, mas o tipo F europeu é comum)",
+      "moeda": "Euro (€)",
+      "idioma": "Italiano (Inglês é falado em toda a zona turística)"
+    }
+  },
     "Frankfurt": {
         "comida": "R$ 80 – R$ 150",
         "hospedagem": "R$ 250 – R$ 600",
@@ -959,6 +1035,21 @@
             "idioma": "Alemão/Inglês"
         }
     },
+    "Berlim": {
+    "comida": "€ 8 – € 40",
+    "hospedagem": "€ 60 – € 250",
+    "transporte": "€ 3.50 – € 10",
+    "atracoes": "€ 0 – € 25",
+    "checklist": {
+      "passaporte": "Obrigatório (Validade mín. 3 meses após a saída)",
+      "visto": "Não (Isento para turismo até 90 dias - ETIAS previsto para final de 2026)",
+      "vacinas": "Nenhuma obrigatória",
+      "seguro": "Obrigatório (Espaço Schengen, cobertura mín. € 30.000)",
+      "tomada": "230V (Tipo F - Dois pinos redondos, igual ao padrão antigo brasileiro ou compatível com o hexagonal)",
+      "moeda": "Euro (€)",
+      "idioma": "Alemão (Inglês é falado por quase todos)"
+    }
+  },
     "Amsterdam": {
     "comida": "€ 15 – € 60",
     "hospedagem": "€ 80 – € 300",
@@ -1169,6 +1260,21 @@
             "idioma": "Espanhol, Inglês e Creole"
         }
     },
+    "Medellín": {
+    "comida": "COP 20.000 – COP 80.000 (aprox. € 5 – € 20)",
+    "hospedagem": "COP 80.000 – COP 400.000 (aprox. € 20 – € 100)",
+    "transporte": "COP 3.000 – COP 15.000 (O Metro e Uber são baratos)",
+    "atracoes": "COP 0 – COP 100.000 (Muitas atrações são gratuitas)",
+    "checklist": {
+      "passaporte": "Obrigatório (ou Cartão de Cidadão/RG para nacionais do Mercosul)",
+      "visto": "Não (Isento para turistas até 90 dias)",
+      "vacinas": "Febre Amarela (Altamente recomendada, por vezes exigida em parques naturais)",
+      "seguro": "Recomendado (Assistência médica privada)",
+      "tomada": "110V (Tipo A e B - Dois pinos chatos, padrão Americano. Leve adaptador)",
+      "moeda": "Peso Colombiano (COP) - Atenção aos muitos zeros nas notas",
+      "idioma": "Espanhol (O sotaque 'paisa' é cantado e rápido)"
+    }
+  },
     "Bariloche": {
         "comida": "R$ 60 – R$ 180",
         "hospedagem": "R$ 300 – R$ 900",
@@ -1184,6 +1290,21 @@
             "idioma": "Espanhol"
         }
     },
+    "Mendoza": {
+    "comida": "ARS 8.000 – ARS 35.000 (aprox. € 8 – € 35)",
+    "hospedagem": "ARS 40.000 – ARS 150.000 (aprox. € 40 – € 150)",
+    "transporte": "ARS 300 – ARS 1.500 (Autocarro/Bus é barato; Translas para vinícolas são caros)",
+    "atracoes": "ARS 0 – ARS 50.000 (Vinícolas de luxo cobram caro pelas degustações)",
+    "checklist": {
+      "passaporte": "Obrigatório (ou Documento de Identificação Nacional para cidadãos do Mercosul)",
+      "visto": "Não (Isento para turistas até 90 dias)",
+      "vacinas": "Nenhuma obrigatória",
+      "seguro": "Recomendado (O sistema público existe, mas para turistas o ideal é seguro privado)",
+      "tomada": "220V (Tipo I - Três pinos planos em ângulo, padrão Argentina/Austrália. Leve adaptador)",
+      "moeda": "Peso Argentino (ARS) - O 'Câmbio Blue' (paralelo) é muito mais vantajoso que o oficial",
+      "idioma": "Espanhol"
+    }
+  },
     "Stonehenge": {
         "comida": "R$ 80 – R$ 180",
         "hospedagem": "R$ 500 – R$ 1.200",

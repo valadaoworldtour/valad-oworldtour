@@ -5,6 +5,7 @@
                 "imagem": "https://www.melhoresdestinos.com.br/wp-content/uploads/2019/02/passagens-aereas-gramado-capa2019-01.jpg",
                 "tags": ["Romance", "Frio", "Chocolate"],
                 "mapa": "https://goo.gl/maps/gramado",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Gramado+Brasil",
                 "clima": "Temperado. Invernos rigorosos (pode gear) e verões amenos.",
                 "veredicto": {
                     "melhor_epoca": "Junho a Agosto (Inverno/Fondue) ou Novembro a Janeiro (Natal Luz). Março é mais tranquilo.",
@@ -173,6 +174,7 @@
                 "tags": ["Natureza", "Aventura", "Fronteira"],
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Sunset_over_Iguazu2.jpg/960px-Sunset_over_Iguazu2.jpg",
                 "mapa": "https://goo.gl/maps/foz",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Foz+do+Iguaçu+Brasil",
                 "clima": "Subtropical. Verões quentes e invernos amenos (mas pode fazer frio!).",
                 "veredicto": {
                     "melhor_epoca": "Abril a Junho ou Setembro a Novembro (Clima agradável). Verão é muito quente, mas as quedas estão com volume máximo.",
@@ -340,6 +342,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Morro_da_Cruz%2C_Florian%C3%B3polis_-_SC%2C_Brazil_-_panoramio_%28cropped%29.jpg/1280px-Morro_da_Cruz%2C_Florian%C3%B3polis_-_SC%2C_Brazil_-_panoramio_%28cropped%29.jpg",
                 "tags": ["Praia", "Ilha da Magia", "Surf"],
                 "mapa": "https://goo.gl/maps/floripa",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Florianópolis+Brasil",
                 "clima": "Subtropical Úmido. Verões quentes (e chuvosos) e invernos amenos com vento sul gelado.",
                 "veredicto": {
                     "melhor_epoca": "Março e Abril (O 'Veranico' tem sol, água agradável e menos trânsito). Dezembro/Janeiro é o auge do agito, mas o trânsito é intenso.",
@@ -507,6 +510,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/IBPA_17398_-_Vista_a%C3%A9rea_da_Orla_Moacyr_Scliar%2C_na_capital._O_-_2018-10-02_-_Luciano_Lanes-PMPA_%28cropped%29.jpg/1280px-IBPA_17398_-_Vista_a%C3%A9rea_da_Orla_Moacyr_Scliar%2C_na_capital._O_-_2018-10-02_-_Luciano_Lanes-PMPA_%28cropped%29.jpg",
                 "tags": ["Cultura Gaúcha", "Churrasco", "Parques"],
                 "mapa": "https://goo.gl/maps/portoalegre",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Porto+Alegre+Brasil",
                 "clima": "Subtropical. Verão muito quente (abafado) e Inverno rigoroso e úmido.",
                 "veredicto": {
                     "melhor_epoca": "Março a Maio (Outono) ou Outubro/Novembro (Primavera). O inverno é úmido e frio. Setembro é especial pelo Acampamento Farroupilha (cultura gaúcha).",
@@ -673,6 +677,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Estufa_principal_do_Jardim_Bot%C3%A2nico_de_Curitiba_02_%28cropped%29.jpg/500px-Estufa_principal_do_Jardim_Bot%C3%A2nico_de_Curitiba_02_%28cropped%29.jpg",
                 "tags": ["Parques", "Frio", "Organização"],
                 "mapa": "https://goo.gl/maps/curitiba",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Curitiba+Brasil",
                 "clima": "Subtropical Úmido. O tempo muda rápido: pode fazer sol, chover e gear no mesmo dia. Traga casaco sempre.",
                 "veredicto": {
                     "melhor_epoca": "Março a Maio (Outono agradável) ou Setembro a Novembro (Primavera florida). O inverno é rigoroso para os padrões brasileiros e o verão costuma ser chuvoso.",
@@ -840,6 +845,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Balne%C3%A1rio_Cambori%C3%BA_from_Unipraias_Park_2023-04-02.jpg/960px-Balne%C3%A1rio_Cambori%C3%BA_from_Unipraias_Park_2023-04-02.jpg",
                 "tags": ["Arranha-céus", "Vida Noturna", "Luxo"],
                 "mapa": "https://goo.gl/maps/balneariocamboriu",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Balneário+Camboriú+Brasil",
                 "clima": "Subtropical. Verões quentes e agitados, Invernos amenos e ventosos.",
                 "veredicto": {
                     "melhor_epoca": "Março e Abril (Ainda faz calor, mas a cidade não está entupida). O Réveillon é incrível, mas o trânsito para.",
@@ -1005,6 +1011,7 @@
         "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Renato_Soares_Passeios_e_experiencias_nas_Viniculas_Bento_Goncalves_RS_%2840062059665%29.jpg/960px-Renato_Soares_Passeios_e_experiencias_nas_Viniculas_Bento_Goncalves_RS_%2840062059665%29.jpg",
         "tags": ["Vinho", "Serra Gaúcha", "Maria Fumaça"],
         "mapa": "https://goo.gl/maps/bentogoncalves",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Bento+Gonçalves+Brasil",
         "clima": "Subtropical. Inverno (Jun-Ago) rigoroso com geadas. Verão (Dez-Mar) quente e época da colheita (Vindima).",
         
         "veredicto": {
@@ -1181,6 +1188,7 @@
         "imagem": "https://upload.wikimedia.org/wikipedia/commons/3/37/Bombinhas.jpg",
         "tags": ["Praia", "Mergulho", "Família"],
         "mapa": "https://goo.gl/maps/bombinhas",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Bombinhas+Brasil",
         "clima": "Subtropical. Verão (Dez-Mar) quente e ensolarado. Inverno (Jun-Set) ameno, mas a água esfria bastante.",
         
         "veredicto": {
@@ -1360,6 +1368,7 @@
                 "imagem": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=2070&auto=format&fit=crop",
                 "tags": ["Praia", "Cartão Postal", "Agito"],
                 "mapa": "https://goo.gl/maps/rio",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Rio+de+Janeiro+Brasil",
                 "clima": "Tropical Atlântico. Verão 40ºC e Inverno ameno.",
                 "veredicto": {
                     "melhor_epoca": "Abril a Junho (Outono) ou Setembro a Novembro (Primavera). Evite Janeiro (Calor extremo).",
@@ -1528,6 +1537,7 @@
                 "imagem": "https://images.unsplash.com/photo-1543059080-f9b1272213d5?q=80&w=2069&auto=format&fit=crop",
                 "tags": ["Urbano", "Gastronomia", "Cultura"],
                 "mapa": "https://goo.gl/maps/saopaulo",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=São+Paulo+Brasil",
                 "clima": "Subtropical. Conhecida como 'Terra da Garoa', mas o tempo muda rápido.",
                 "veredicto": {
                     "melhor_epoca": "Abril a Agosto (Outono/Inverno). Menos chuva, clima mais ameno. Evite o verão (enchentes).",
@@ -1696,6 +1706,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Rua_Djalma_Forjaz%2C_Campos_do_Jord%C3%A3o%2C_SP.jpg/960px-Rua_Djalma_Forjaz%2C_Campos_do_Jord%C3%A3o%2C_SP.jpg",
                 "tags": ["Inverno", "Romance", "Montanha"],
                 "mapa": "https://goo.gl/maps/camposdojordao",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Campos+do+Jordão+Brasil",
                 "clima": "Tropical de Altitude. É a cidade mais alta do Brasil. Inverno gela (pode chegar a -2ºC) e verão é fresco.",
                 "veredicto": {
                     "melhor_epoca": "Junho a Agosto (Inverno/Festival). É o auge do glamour e do frio, mas prepare o bolso. Abril e Maio são ótimos para pegar frio sem pagar preços de alta temporada.",
@@ -1863,6 +1874,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Buzios_11_2006_03.JPG/960px-Buzios_11_2006_03.JPG",
                 "tags": ["Praias", "Luxo", "Gastronomia"],
                 "mapa": "https://goo.gl/maps/buzios",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Armação+dos+Búzios+Brasil",
                 "clima": "Tropical Seco. Chove menos que no Rio de Janeiro. Venta bastante. A água do mar é fria o ano todo.",
                 "veredicto": {
                     "melhor_epoca": "Abril e Maio ou Setembro a Novembro (Clima ótimo e cidade mais vazia). O verão (Dez-Fev) é lotado, caro e o trânsito para. Setembro costuma ventar bastante.",
@@ -2030,6 +2042,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Panorama_Mineir%C3%A3o_Pampulha_%28cropped%29.jpg/1280px-Panorama_Mineir%C3%A3o_Pampulha_%28cropped%29.jpg",
                 "tags": ["Gastronomia", "Cultura", "Arquitetura"],
                 "mapa": "https://goo.gl/maps/bhz",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Belo+Horizonte+Brasil",
                 "clima": "Tropical de Altitude. Clima ameno e agradável na maior parte do ano.",
                 "veredicto": {
                     "melhor_epoca": "Abril a Setembro (Outono/Inverno). É a época seca e agradável, ideal para os botecos ao ar livre. O verão (Dez-Mar) costuma ser quente e chuvoso.",
@@ -2197,6 +2210,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Praia_do_Estaleiro_-_Ubatuba.png",
                 "tags": ["Surfe", "Natureza", "Praias"],
                 "mapa": "https://goo.gl/maps/ubatuba",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Ubatuba+Brasil",
                 "clima": "Tropical Litorâneo. Quente e úmido, conhecida carinhosamente como 'Ubatuba-chuva' pela frequência das precipitações.",
                 "veredicto": {
                     "melhor_epoca": "Maio a Agosto (Inverno seco). O apelido 'Ubachuva' é real: no verão chove quase todo dia. Se quer sol garantido e céu azul, vá no inverno (mas a água é gelada).",
@@ -2363,6 +2377,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/-2016-11-05_ao_13-_Vit%C3%B3ria_94_Romerito_Pontes_%2830875449812%29_%28cropped%29.jpg/1280px--2016-11-05_ao_13-_Vit%C3%B3ria_94_Romerito_Pontes_%2830875449812%29_%28cropped%29.jpg",
                 "tags": ["Praias", "Gastronomia", "Ilha"],
                 "mapa": "https://goo.gl/maps/vitoria",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Vitória+Brasil",
                 "clima": "Tropical Litorâneo. Quente e úmido no verão, ameno no inverno. Venta bastante (Nordeste).",
                 "veredicto": {
                     "melhor_epoca": "Abril a Setembro (Menos chuva e clima ameno). O verão é quente e úmido. No inverno, aproveite para combinar com as Montanhas Capixabas (Domingos Martins) que ficam perto.",
@@ -2529,6 +2544,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Cabo_Frio_-_vista_a%C3%A9rea.jpg/960px-Cabo_Frio_-_vista_a%C3%A9rea.jpg",
                 "tags": ["Praia", "Família", "Mergulho"],
                 "mapa": "https://goo.gl/maps/cabofrio",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Cabo+Frio+Brasil",
                 "clima": "Tropical Litorâneo. Vento constante e sol forte. Água gelada.",
                 "veredicto": {
                     "melhor_epoca": "Março a Maio (Outono) ou Setembro a Novembro (Primavera). Evite Janeiro e Carnaval (Cidade lotada e trânsito parado).",
@@ -2701,6 +2717,7 @@
     "Vela"
   ],
   "mapa": "https://goo.gl/maps/ilhabela",
+  "mapa": "https://www.google.com/maps/search/?api=1&query=Ilhabela+Brasil",
   "clima": "Tropical Litorâneo. Quente e úmido. Chuvas frequentes no verão.",
   "veredicto": {
     "melhor_epoca": "Abril e Maio (Menos chuva e temperatura agradável). O verão chove muito e a fila da balsa é longa.",
@@ -2879,6 +2896,7 @@
                 "imagem": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=2070&auto=format&fit=crop",
                 "tags": ["Parques Aquáticos", "Interior SP", "Termas"],
                 "mapa": "https://goo.gl/maps/olimpia",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Olímpia+Brasil",
                 "clima": "Tropical de Interior. Verão quente e chuvoso. Inverno seco e agradável (água quente).",
                 "veredicto": {
                     "melhor_epoca": "Abril a Junho e Agosto a Novembro (Foge da chuva de verão e da lotação de férias).",
@@ -3045,6 +3063,7 @@
       "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Paraty_05.JPG/960px-Paraty_05.JPG",
       "tags": [ "História", "Praia", "Romântico"],
       "mapa": "https://goo.gl/maps/paraty",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Paraty+Brasil",
       "clima": "Tropical Úmido. Chove bastante o ano todo. Verão (Dez-Mar) é quente e chuvoso. Inverno (Jun-Ago) é seco e ameno.",
       
       "veredicto": {
@@ -3222,6 +3241,7 @@
       "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Po%C3%A7os_de_Caldas_-_Serra.jpg/960px-Po%C3%A7os_de_Caldas_-_Serra.jpg",
       "tags": ["Minas Gerais", "Termas", "Romântico"],
       "mapa": "https://goo.gl/maps/pocosdecaldas",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Poços+de+Caldas+Brasil",
       "clima": "Tropical de Altitude. Verão chuvoso e Inverno seco e frio.",
       
       "veredicto": {
@@ -3401,6 +3421,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Entardecer_elevedor_lacerda.jpg/960px-Entardecer_elevedor_lacerda.jpg",
                 "tags": ["História", "Axé", "Praia"],
                 "mapa": "https://goo.gl/maps/salvador",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Salvador+Brasil",
                 "clima": "Tropical Quente. Sol o ano todo, com chuvas de Abril a Junho. Vento constante.",
                 "veredicto": {
                     "melhor_epoca": "Setembro a Março (Época seca e festiva). Evite Abril e Maio (Chuvas torrenciais). O Carnaval (Fev/Mar) é uma experiência à parte.",
@@ -3569,6 +3590,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Praia_do_Pina_-_Recife%2C_Pernambuco%2C_Brasil_%28cropped%29.jpg/1280px-Praia_do_Pina_-_Recife%2C_Pernambuco%2C_Brasil_%28cropped%29.jpg",
                 "tags": ["História", "Gastronomia", "Praia"],
                 "mapa": "https://goo.gl/maps/recife",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Recife+Brasil",
                 "clima": "Tropical Úmido. Sol e calor o ano todo. Chuvas intensas entre Maio e Julho.",
                 "veredicto": {
                     "melhor_epoca": "Setembro a Fevereiro (Muito sol). Evite Maio a Julho (Chuvas fortes). O Carnaval é o maior e mais democrático de rua do mundo.",
@@ -3736,6 +3758,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/7/73/Fortaleza%2C_Brazil_%284%29_%28cropped%29.jpg",
                 "tags": ["Sol", "Praias", "Humor"],
                 "mapa": "https://goo.gl/maps/fortaleza",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Fortaleza+Brasil",
                 "clima": "Tropical. Calor o ano todo (28ºC a 32ºC) e vento constante. Chuvas rápidas entre fev-mai.",
                 "veredicto": {
                     "melhor_epoca": "Julho a Dezembro (Sol garantido e ventos fortes). Evite Março a Maio se não quiser pegar a estação chuvosa. Agosto a Novembro é o paraíso do Kitesurf.",
@@ -3903,6 +3926,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Piscinas_Naturais.tif/lossy-page1-1800px-Piscinas_Naturais.tif.jpg",
                 "tags": ["Piscinas Naturais", "Mergulho", "Romance"],
                 "mapa": "https://goo.gl/maps/portodegalinhas",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Porto+de+Galinhas+Brasil",
                 "clima": "Tropical. Sol o ano todo. Chuvas concentradas entre maio e julho. A água é sempre morna (28ºC).",
                 "veredicto": {
                     "melhor_epoca": "Setembro a Março (Sol firme). Dica Vital: Consulte a Tábua de Marés! Vá na Lua Cheia ou Nova para pegar a maré baixa (piscinas naturais). Evite Abril a Julho (Chuva).",
@@ -4070,6 +4094,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Porto_Seguro.1.jpg/960px-Porto_Seguro.1.jpg",
                 "tags": ["Praias", "História", "Festas"],
                 "mapa": "https://goo.gl/maps/portoseguro",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Porto+Seguro+Brasil",
                 "clima": "Tropical quente. Sol o ano todo. Chuvas rápidas podem ocorrer, mas o 'verão eterno' é real.",
                 "veredicto": {
                     "melhor_epoca": "Agosto a Março (Sol firme). Evite Abril e Maio (Chuvas). Atenção: Julho e Outubro a cidade é invadida por excursões de formatura. O Carnaval é gigante.",
@@ -4237,6 +4262,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Alex_Regis_Morro_do_Careca_Ponta_Negra_Natal_RN_%2840261556354%29.jpg/960px-Alex_Regis_Morro_do_Careca_Ponta_Negra_Natal_RN_%2840261556354%29.jpg",
                 "tags": ["Dunas", "Praias", "Sol"],
                 "mapa": "https://goo.gl/maps/natal",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Natal+Brasil",
                 "clima": "Tropical. Sol 300 dias por ano. Venta bastante (a 'Noiva do Sol'). Chuvas concentradas entre Abril e Julho.",
                 "veredicto": {
                     "melhor_epoca": "Setembro a Fevereiro (Sol garantido). A 'Cidade do Sol' tem luz o ano todo, mas de Abril a Julho é a estação chuvosa. Março é quente e úmido.",
@@ -4404,6 +4430,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Ponta_Verde_Lighthouse_landscape_-_Macei%C3%B3%2C_Brazil_%28edited%29.jpg/960px-Ponta_Verde_Lighthouse_landscape_-_Macei%C3%B3%2C_Brazil_%28edited%29.jpg",
                 "tags": ["Caribe Brasileiro", "Piscinas Naturais", "Praias"],
                 "mapa": "https://goo.gl/maps/maceio",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Maceió+Brasil",
                 "clima": "Tropical Quente. A cor do mar é mais bonita entre Setembro e Março. Abril a Julho chove mais e a água pode turvar.",
                 "veredicto": {
                     "melhor_epoca": "Setembro a Março (Época seca). É quando o mar fica 'azul Caribe'. Evite Maio a Julho: chove muito e a água pode ficar turva (marrom) devido aos rios.",
@@ -4571,6 +4598,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Waterfront_panoramic_of_Jo%C3%A3o_Pessoa_%28PB%29.jpg/2560px-Waterfront_panoramic_of_Jo%C3%A3o_Pessoa_%28PB%29.jpg",
                 "tags": ["Praias", "Tranquilidade", "História"],
                 "mapa": "https://goo.gl/maps/joaopessoa",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=João+Pessoa+Brasil",
                 "clima": "Tropical Úmido. Sol constante e brisa agradável, com chuvas entre abril e julho.",
                 "veredicto": {
                     "melhor_epoca": "Setembro a Março (Mar esmeralda e muito sol). Janeiro é movimentado. Evite Abril a Julho se quiser fugir da chuva. Dica: A cidade acorda com as galinhas (o sol nasce às 4h30)!",
@@ -4737,6 +4765,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/d/db/Avenida_Hermes_Fontes_Aracaju_SE.jpg",
                 "tags": ["Praias", "Cultura", "Tranquilidade"],
                 "mapa": "https://goo.gl/maps/aracaju",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Aracaju+Brasil",
                 "clima": "Tropical Litorâneo. Quente o ano todo, com brisa constante. Chuvas mais frequentes entre abril e julho.",
                 "veredicto": {
                     "melhor_epoca": "Setembro a Março (Sol e Vento). Junho é imperdível para quem ama São João (o 'Forró Caju' é gigante). Evite Abril a Julho (Chuva).",
@@ -4903,6 +4932,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/MARCIO_FILHO_ITACARE_CIDADE_ITACARE_BAHIA_%2840933336562%29.jpg/960px-MARCIO_FILHO_ITACARE_CIDADE_ITACARE_BAHIA_%2840933336562%29.jpg",
                 "tags": ["Surf", "Praia", "Cacau"],
                 "mapa": "https://goo.gl/maps/itacare",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Itacaré+Brasil",
                 "clima": "Tropical Úmido. Sol e chuva se alternam o ano todo. Verão é quente e agitado.",
                 "veredicto": {
                     "melhor_epoca": "Setembro a Novembro (Menos chuva e cidade mais tranquila). O verão é lotado e animado.",
@@ -5069,6 +5099,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Praia_de_Barra_Grande.jpg/960px-Praia_de_Barra_Grande.jpg",
                 "tags": ["Praia", "Caribe Brasileiro", "Mergulho"],
                 "mapa": "https://goo.gl/maps/maragogi",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Maragogi+Brasil",
                 "clima": "Tropical. Sol o ano todo. Chuvas concentradas entre Abril e Julho (água pode turvar).",
                 "veredicto": {
                     "melhor_epoca": "Outubro a Janeiro (Mar mais transparente e menos chuva). Evite o inverno se quiser o 'azul caribe'.",
@@ -5235,6 +5266,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Anderps_067.JPG/960px-Anderps_067.JPG",
                 "tags": ["Praia", "Dunas", "Kitesurf"],
                 "mapa": "https://goo.gl/maps/jericoacoara",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Jericoacoara+Brasil",
                 "clima": "Tropical Semiárido. Venta MUITO (bom para kite) de Agosto a Dezembro. Chuvas de Março a Maio.",
                 "veredicto": {
                     "melhor_epoca": "Julho a Janeiro (Sol garantido e ventos fortes). Fevereiro a Maio chove e as lagoas enchem.",
@@ -5402,6 +5434,7 @@
                 "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/EDUARDO_MURUCI_-_BAIA_DOS_PORCOS-%28recorte%29.jpg/960px-EDUARDO_MURUCI_-_BAIA_DOS_PORCOS-%28recorte%29.jpg",
                 "tags": ["Paraíso", "Mergulho", "Exclusivo"],
                 "mapa": "https://goo.gl/maps/noronha",
+                "mapa": "https://www.google.com/maps/search/?api=1&query=Fernando+de+Noronha+Brasil",
                 "clima": "Tropical. Calor o ano todo. Chuvas de Abril a Julho. Mar calmo (Set-Out). Ondas/Surf (Dez-Mar).",
                 "veredicto": {
                     "melhor_epoca": "Setembro e Outubro (Mar piscina, melhor visibilidade). Evite Abril a Junho se não gosta de chuva.",
@@ -5569,6 +5602,7 @@
         "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Praia_do_Forte-BA.jpg/960px-Praia_do_Forte-BA.jpg",
         "tags": ["Bahia", "Tartarugas", "Eco-Luxo"],
         "mapa": "https://goo.gl/maps/praiadoforte",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Praia+do+Forte+Bahia+Brasil",
         "clima": "Tropical. Sol o ano todo. Chuvas concentradas em Abril/Maio. Vento fresco à noite.",
         
         "veredicto": {
@@ -5752,6 +5786,7 @@
           "Política"
         ],
         "mapa": "https://goo.gl/maps/brasilia",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Brasília+Brasil",
         "clima": "Tropical de Altitude. Seca extrema no inverno (Jun-Set) e chuvas no verão.",
         "veredicto": {
           "melhor_epoca": "Maio a Setembro (Época da Seca). O céu é o mais bonito e os Ipês florescem (Ago/Set), mas a umidade é de deserto. Evite o verão se quiser fugir da chuva.",
@@ -5935,6 +5970,7 @@
           "Aventura"
         ],
         "mapa": "https://goo.gl/maps/bonito",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Bonito+MS+Brasil",
         "clima": "Tropical. Verão chuvoso (cachoeiras cheias) e Inverno seco (águas cristalinas).",
         "veredicto": {
           "melhor_epoca": "Maio a Agosto (Inverno/Seca). É quando as águas estão mais cristalinas e os peixes mais visíveis. Dezembro a Março chove e a água pode turvar, mas as cachoeiras estão cheias.",
@@ -6117,6 +6153,7 @@
           "Família"
         ],
         "mapa": "https://goo.gl/maps/caldasnovas",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Caldas+Novas+Brasil",
         "clima": "Tropical Semiúmido. Quente o ano todo, mas no inverno as noites são frescas (ideal para banho quente).",
         "veredicto": {
           "melhor_epoca": "Maio a Julho (Inverno). A água quente fica deliciosa com o ventinho frio fora. Janeiro e Julho são lotados (férias escolares).",
@@ -6303,6 +6340,7 @@
           "Aventura"
         ],
         "mapa": "https://goo.gl/maps/manaus",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Manaus+Brasil",
         "clima": "Equatorial. Quente e úmido o ano todo, com chuvas frequentes.",
         "veredicto": {
           "melhor_epoca": "Junho a Novembro (Verão Amazônico/Seca). Junho/Julho é o auge para ver a floresta alagada (Igapós). Setembro/Outubro surgem as praias de rio. O calor é intenso e úmido o ano todo.",
@@ -6488,6 +6526,7 @@
           "Vista Panorâmica"
         ],
         "mapa": "https://goo.gl/maps/eiffel",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Eiffel+Tower+Paris",
         "clima": "Vento forte no topo. Leve casaco mesmo no verão.",
         "veredicto": {
           "melhor_epoca": "Ao pôr do sol (para ver a cidade acender). Evite fins de semana e o horário das 11h às 15h (filas gigantes).",
@@ -6673,6 +6712,7 @@
           "Vista Panorâmica"
         ],
         "mapa": "https://goo.gl/maps/cristoredentor",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Christ+the+Redeemer+Rio",
         "clima": "Tropical de Altitude. Lá em cima venta e o tempo muda rápido (nuvens passam dentro do monumento).",
         "veredicto": {
           "melhor_epoca": "Manhã cedo (8h) para ver o sol iluminar o rosto do Cristo. À tarde o sol se põe nas costas dele (bom para silhuetas, ruim para selfies de rosto). Evite dias nublados a todo custo.",
@@ -6855,6 +6895,7 @@
           "Gladiadores"
         ],
         "mapa": "https://goo.gl/maps/coliseu",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Colosseum+Rome",
         "clima": "Mediterrânico. Verão muito quente e húmido. Primavera/Outono ideais.",
         "veredicto": {
           "melhor_epoca": "Abril/Maio ou Outubro (Clima ameno). Evite Julho/Agosto (Calor infernal e filas).",
@@ -7039,6 +7080,7 @@
         "História"
       ],
       "mapa": "https://goo.gl/maps/statueofliberty",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Statue+of+Liberty+NY",
       "clima": "Temperado. Verões úmidos e quentes, invernos congelantes com vento forte na ilha.",
       "veredicto": {
         "melhor_epoca": "Outono (Set-Nov) ou Primavera (Abr-Mai). O inverno é muito frio para ficar no barco/ilha.",
@@ -7222,6 +7264,7 @@
         "Mármore"
       ],
       "mapa": "https://goo.gl/maps/tajmahal",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Taj+Mahal+Agra",
       "clima": "Tropical. Evite Maio/Junho (Calor insuportável de 45ºC). Inverno (Nov-Fev) tem neblina de manhã.",
       "veredicto": {
         "melhor_epoca": "Outubro a Março. O melhor horário é o nascer do sol (menos gente e luz mágica). EVITE SEXTAS-FEIRAS (Fechado).",
@@ -7404,6 +7447,7 @@
         "Maravilha do Mundo"
       ],
       "mapa": "https://goo.gl/maps/machupicchu",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Machu+Picchu+Peru",
       "clima": "Subtropical de altitude. Húmido e quente de dia, fresco à noite.",
       "veredicto": {
         "melhor_epoca": "Maio a Setembro (Época Seca). Junho e Julho são o auge, com céu azul garantido. Evite Fevereiro (Trilha Inca fecha e chove torrencialmente).",
@@ -7585,6 +7629,7 @@
         "Arqueologia"
       ],
       "mapa": "https://goo.gl/maps/stonehenge",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Stonehenge+UK",
       "clima": "Temperado Oceânico. Venta MUITO na planície. Chuva fina é constante o ano todo. Leve capa.",
       "veredicto": {
         "melhor_epoca": "Junho (Solstício de Verão) para ver o sol alinhar. Maio e Setembro para menos chuva.",
@@ -7768,6 +7813,7 @@
         "Deserto"
       ],
       "mapa": "https://goo.gl/maps/giza",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Pyramids+of+Giza+Egypt",
       "clima": "Desértico. Verão (Jun-Ago) é escaldante (+40ºC). Inverno (Dez-Fev) é ameno de dia e frio à noite.",
       "veredicto": {
         "melhor_epoca": "Outubro a Abril (Inverno ou Meia-estação). Evite o verão a todo custo, o calor é perigoso.",
@@ -7950,6 +7996,7 @@
         "Deserto"
       ],
       "mapa": "https://goo.gl/maps/petra",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Petra+Jordan",
       "clima": "Desértico. Verão (Jun-Ago) escaldante. Inverno (Dez-Fev) muito frio (pode nevar!). Primavera/Outono ideais.",
       "veredicto": {
         "melhor_epoca": "Março a Maio (Primavera) ou Setembro a Novembro (Outono). Temperaturas agradáveis para caminhar 15km.",
@@ -8132,6 +8179,7 @@
         "Arqueologia"
       ],
       "mapa": "https://goo.gl/maps/chichenitza",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Chichen+Itza+Mexico",
       "clima": "Tropical. Quente e úmido o ano todo. O calor é EXTREMO no meio do dia, com pouca sombra.",
       "veredicto": {
         "melhor_epoca": "Novembro a Março (Menos chuva e calor 'suportável'). Evite os Equinócios (21 Mar/Set) se não gostar de multidões insanas.",
@@ -8317,6 +8365,7 @@
         "Aventura"
       ],
       "mapa": "https://goo.gl/maps/greatwall",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Great+Wall+of+China",
       "clima": "Continental. Invernos congelantes (neve) e Verões muito quentes. Primavera e Outono são perfeitos.",
       "veredicto": {
         "melhor_epoca": "Abril/Maio ou Setembro/Outubro. Evite a 'Golden Week' (1 a 7 de Outubro) a todo custo (lotado).",
@@ -8499,6 +8548,7 @@
         "Pequim"
       ],
       "mapa": "https://goo.gl/maps/forbidden-city",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Forbidden+City+Beijing",
       "clima": "Continental. Verão muito quente e úmido. Inverno seco e congelante. Primavera tem tempestades de areia.",
       "veredicto": {
         "melhor_epoca": "Outubro (Outono é dourado e fresco). Abril também é bom, mas venta.",
@@ -8683,6 +8733,7 @@
         "Vida Selvagem"
       ],
       "mapa": "https://goo.gl/maps/yellowstone",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Yellowstone+National+Park",
       "clima": "Montanhoso. Verão agradável, Inverno brutal com muita neve.",
       "veredicto": {
         "melhor_epoca": "Junho a Setembro. Setembro é ótimo para ver animais.",
@@ -8865,6 +8916,7 @@
         "Natureza"
       ],
       "mapa": "https://goo.gl/maps/torresdelpaine",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Torres+del+Paine+Chile",
       "clima": "Patagônico. Imprevisível. Você pode ter as 4 estações no mesmo dia. Vento fortíssimo é constante. Verão é fresco (15ºC).",
       "veredicto": {
         "melhor_epoca": "Dezembro a Março (Verão). Dias longos (escurece às 22h) e menos frio, mas venta muito. Inverno muitas trilhas fecham.",
@@ -9050,6 +9102,7 @@
         "Arte"
       ],
       "mapa": "https://goo.gl/maps/sagradafamilia",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Sagrada+Familia+Barcelona",
       "clima": "Mediterrâneo. Verão quente e úmido. Inverno ameno. Melhor luz para fotos: Primavera/Outono.",
       "veredicto": {
         "melhor_epoca": "Manhã cedo (luz azul/fria na fachada da Paixão) ou Fim de tarde (luz laranja/quente na Natividade).",
@@ -9234,6 +9287,7 @@
         "Porto"
       ],
       "mapa": "https://goo.gl/maps/sydneyoperahouse",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Sydney+Opera+House",
       "clima": "Temperado Oceânico. Verão (Dez-Fev) quente e úmido. Inverno (Jun-Ago) ameno. O sol é MUITO forte (buraco na camada de ozônio).",
       "veredicto": {
         "melhor_epoca": "Setembro a Novembro (Primavera) ou Março a Maio (Outono). Clima perfeito e menos chuvas.",
@@ -9417,6 +9471,7 @@
         "Broadway"
       ],
       "mapa": "https://goo.gl/maps/timessquare",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Times+Square+New+York",
       "clima": "Temperado. Verão muito quente e úmido (o concreto esquenta). Inverno gélido e com neve/vento encanado.",
       "veredicto": {
         "melhor_epoca": "Maio/Junho (Primavera) ou Setembro/Outubro (Outono). Dezembro é lindo (Natal), mas insuportavelmente cheio.",
@@ -9602,6 +9657,7 @@
         "Camboja"
       ],
       "mapa": "https://goo.gl/maps/angkorwat",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Angkor+Wat+Cambodia",
       "clima": "Tropical de Monção. Quente e úmido o ano todo. Seco: Nov-Abr. Chuva: Mai-Out.",
       "veredicto": {
         "melhor_epoca": "Novembro a Fevereiro (Menos calor e pouca chuva). Março e Abril são insuportavelmente quentes.",
@@ -9786,6 +9842,7 @@
         "Fronteira"
       ],
       "mapa": "https://goo.gl/maps/niagarafalls",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Niagara+Falls",
       "clima": "Continental Úmido. Verão (Jun-Set) agradável e úmido. Inverno (Dez-Mar) congelante, com muita neve e vento.",
       "veredicto": {
         "melhor_epoca": "Junho a Setembro (Verão). O fluxo de água é máximo e o passeio de barco opera (no inverno fecha por causa do gelo).",
@@ -9968,6 +10025,7 @@
         "Trilha"
       ],
       "mapa": "https://goo.gl/maps/fuji",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Mount+Fuji+Japan",
       "clima": "Alpino. No pé (lagos) é temperado. No cume é GÉLIDO o ano todo (abaixo de zero mesmo no verão).",
       "veredicto": {
         "melhor_epoca": "Julho a Setembro (Única época permitida para escalar até o topo). Para apenas VER a montanha de longe: Inverno (visibilidade melhor).",
@@ -10154,6 +10212,7 @@
           "Romance"
         ],
         "mapa": "https://goo.gl/maps/buenosaires",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Buenos+Aires+Argentina",
         "clima": "Temperado. Verões quentes e úmidos, invernos frios (mas sem neve na capital).",
         "veredicto": {
           "melhor_epoca": "Março a Maio (Outono) ou Setembro a Novembro (Primavera - Jacarandás em flor). O verão (Dez-Fev) é muito quente e úmido. O inverno é charmoso, mas frio.",
@@ -10337,6 +10396,7 @@
           "Chocolate"
         ],
         "mapa": "https://goo.gl/maps/bariloche",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=San+Carlos+de+Bariloche+Argentina",
         "clima": "Frio de Montanha. Inverno (Jun-Set) com neve e gelo. Verão (Dez-Mar) agradável e seco, dias longos.",
         "veredicto": {
           "melhor_epoca": "Inverno (Julho/Agosto) para esquiar. Verão (Janeiro) para lagos e trilhas.",
@@ -10518,6 +10578,7 @@
         "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/A_beautiful_landscape_of_a_Mendoza_City%27s_part_seen_from_the_highest_of_G%C3%B3mez_building..JPG/960px-A_beautiful_landscape_of_a_Mendoza_City%27s_part_seen_from_the_highest_of_G%C3%B3mez_building..JPG",
         "tags": ["Vinho", "Montanha", "Gastronomia"],
         "mapa": "https://goo.gl/maps/mendoza",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Mendoza+Argentina",
         "clima": "Árido e Continental. Dias ensolarados (300 dias/ano) e noites frescas. Verão quente (30°C+) e Inverno frio (0-15°C).",
         
         "veredicto": {
@@ -10702,6 +10763,7 @@
           "Montanha"
         ],
         "mapa": "https://goo.gl/maps/santiago",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Santiago+Chile",
         "clima": "Mediterrâneo. Verão seco e quente (30ºC). Inverno frio e chuvoso na cidade, com neve nas montanhas vizinhas.",
         "veredicto": {
           "melhor_epoca": "Setembro a Novembro (Primavera) ou Março a Maio (Outono). Se o foco for NEVE/ESQUI, vá de Junho a Agosto (mas prepare-se para o ar mais poluído).",
@@ -10887,6 +10949,7 @@
           "Romântica"
         ],
         "mapa": "https://goo.gl/maps/cartagena",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Cartagena+Colombia",
         "clima": "Tropical. Quente e úmido o ano todo, com brisa do mar constante.",
         "veredicto": {
           "melhor_epoca": "Dezembro a Abril (Estação Seca e Ventosa). Evite Outubro e Novembro, que costumam ser muito chuvosos. O calor é intenso e úmido o ano todo.",
@@ -11069,6 +11132,7 @@
           "Altitude"
         ],
         "mapa": "https://goo.gl/maps/bogota",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Bogota+Colombia",
         "clima": "Temperado de Montanha. Fresco durante o dia e frio à noite devido à altitude (2.640m).",
         "veredicto": {
           "melhor_epoca": "Dezembro a Março ou Julho e Agosto (Meses secos). Atenção: Bogotá é alta e fria o ano todo (média de 14ºC). Leve casaco e guarda-chuva sempre.",
@@ -11251,6 +11315,7 @@
           "Compras"
         ],
         "mapa": "https://goo.gl/maps/sanandres",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=San+Andres+Island+Colombia",
         "clima": "Tropical Caribenho. Quente o ano todo. Temporada de furacões (raros, mas possíveis) entre Set-Nov.",
         "veredicto": {
           "melhor_epoca": "Janeiro a Abril (Época seca e mar mais azul). Setembro a Novembro chove mais.",
@@ -11432,6 +11497,7 @@
         "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Edificio_Bancolombia_-_luces.jpg/960px-Edificio_Bancolombia_-_luces.jpg",
         "tags": ["Inovação", "Primavera", "Botero"],
         "mapa": "https://goo.gl/maps/medellin",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Medellin+Colombia",
         "clima": "Eterna Primavera. Temperaturas agradáveis o ano todo (17°C a 28°C). Pode chover repentinamente, mas o sol volta logo.",
         
         "veredicto": {
@@ -11616,6 +11682,7 @@
           "Gastronomia"
         ],
         "mapa": "https://goo.gl/maps/montevideo",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Montevideo+Uruguay",
         "clima": "Temperado. Verões quentes e invernos frios e úmidos, com ventos frequentes do Rio da Prata.",
         "veredicto": {
           "melhor_epoca": "Outubro a Março (Clima mais quente). Janeiro e Fevereiro a cidade esvazia (os locais vão para as praias do leste). O inverno é úmido, cinza e ventoso.",
@@ -11794,6 +11861,7 @@
         "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Punta_del_Este_in_amazing_colors.jpg/960px-Punta_del_Este_in_amazing_colors.jpg",
         "tags": ["Praia", "Luxo", "Verão"],
         "mapa": "https://goo.gl/maps/puntadeleste",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Punta+del+Este+Uruguay",
         "clima": "Subtropical Húmido. Verões quentes e ventosos (25-30°C). Invernos frescos e húmidos (8-15°C). O vento é constante.",
         
         "veredicto": {
@@ -11977,6 +12045,7 @@
           "Costeira"
         ],
         "mapa": "https://goo.gl/maps/lima",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Lima+Peru",
         "clima": "Desértico Subtropical. Húmido e nublado na maior parte do ano ('La Gris'), mas quase nunca chove forte.",
         "veredicto": {
           "melhor_epoca": "Dezembro a Abril (Verão). É a única época com sol garantido. De Maio a Novembro reina a 'Garúa': uma névoa que deixa o céu permanentemente branco/cinza ('Lima la Gris'), embora raramente chova forte.",
@@ -12154,6 +12223,7 @@
         "imagem": "https://images.unsplash.com/photo-1587595431973-160d0d94add1?q=80&w=2076&auto=format&fit=crop",
         "tags": ["História", "Incas", "Aventura"],
         "mapa": "https://goo.gl/maps/cusco",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Cusco+Peru",
         "clima": "Frio de Montanha. Estação Seca (Mai-Out) dias de sol e noites gélidas. Estação Chuvosa (Nov-Abr) mais quente mas molhado.",
         
         "veredicto": {
@@ -12336,6 +12406,7 @@
         "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/La_Paz_a_Illimani_-_panoramio_%281%29.jpg/2560px-La_Paz_a_Illimani_-_panoramio_%281%29.jpg",
         "tags": ["Altitude", "Cultura Andina", "Aventura"],
         "mapa": "https://goo.gl/maps/lapaz",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=La+Paz+Bolivia",
         "clima": "Frio de Montanha. O ano todo é fresco/frio. Estação seca (Mai-Out) é muito fria à noite. Estação chuvosa (Nov-Abr) é um pouco mais quente.",
         
         "veredicto": {
@@ -12522,6 +12593,7 @@
           "Lua de Mel"
         ],
         "mapa": "https://goo.gl/maps/puntacana",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Punta+Cana+Dominican+Republic",
         "clima": "Tropical Úmido. Calor o ano todo (28ºC-30ºC). Agosto a Outubro é época de furacões (risco baixo, mas existe) e sargaço (algas).",
         "veredicto": {
           "melhor_epoca": "Dezembro a Abril (Tempo seco e sol garantido). Evite Setembro e Outubro (Auge da época de furacões e tempestades). Maio a Julho é mais quente e húmido, mas com preços atrativos.",
@@ -12707,6 +12779,7 @@
           "História"
         ],
         "mapa": "https://goo.gl/maps/panamacity",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Panama+City+Panama",
         "clima": "Tropical Úmido. Quente e úmido o ano todo. Estação chuvosa de maio a dezembro.",
         "veredicto": {
           "melhor_epoca": "Dezembro a Abril (Estação Seca). É a melhor época para bater perna sem se molhar. De Maio a Novembro chove praticamente todo dia (tempestades tropicais rápidas).",
@@ -12893,6 +12966,7 @@
           "Compras"
         ],
         "mapa": "https://goo.gl/maps/orlando",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Orlando+Florida",
         "clima": "Subtropical. Verão muito quente e chuvoso (Jun-Set). Inverno seco e ameno.",
         "veredicto": {
           "melhor_epoca": "Abril, Maio, Setembro e Outubro (Menos filas e clima mais ameno). Evite Julho e Agosto (Calor intenso e parques lotados). Dezembro é mágico, mas muito cheio.",
@@ -13078,6 +13152,7 @@
           "Compras"
         ],
         "mapa": "https://goo.gl/maps/miami",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Miami+Florida",
         "clima": "Tropical. Verão quente e úmido. Inverno seco e muito agradável (Alta Temporada).",
         "veredicto": {
           "melhor_epoca": "Novembro a Abril (Seco e agradável). O auge é o inverno. Evite Agosto a Outubro: calor úmido sufocante e risco de furacões. Cuidado com Março (Spring Break) se quiser fugir da bagunça.",
@@ -13261,6 +13336,7 @@
           "Cultura"
         ],
         "mapa": "https://goo.gl/maps/novayork",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=New+York+City",
         "clima": "Temperado. Verão muito quente e úmido (sauna). Inverno com neve e vento cortante. Outono é perfeito.",
         "veredicto": {
           "melhor_epoca": "Abril a Junho (Primavera florida) ou Setembro a Novembro (Outono laranja no Central Park). Dezembro é mágico, mas caríssimo. Evite Julho e Agosto (Calor úmido e cheiro forte nas ruas).",
@@ -13444,6 +13520,7 @@
           "Aquário"
         ],
         "mapa": "https://goo.gl/maps/atlanta",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Atlanta+Georgia",
         "clima": "Subtropical Úmido. Verões quentes e abafados (Hotlanta), Invernos amenos, raramente neva.",
         "veredicto": {
           "melhor_epoca": "Março a Maio (Primavera) ou Outubro/Novembro. O verão (Jun-Ago) é insuportavelmente quente e úmido.",
@@ -13626,6 +13703,7 @@
           "Ladeiras"
         ],
         "mapa": "https://goo.gl/maps/sanfrancisco",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=San+Francisco+California",
         "clima": "Mediterrâneo com neblina fria. NUNCA faz calor tropical. O verão é frio e ventoso. Melhor clima: Setembro/Outubro.",
         "veredicto": {
           "melhor_epoca": "Setembro e Outubro (O famoso 'Indian Summer', quando a neblina some e esquenta). Julho é gelado.",
@@ -13807,6 +13885,7 @@
           "Vento"
         ],
         "mapa": "https://goo.gl/maps/chicago",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Chicago+Illinois",
         "clima": "Continental. Verão quente e úmido. Inverno BRUTAL, com vento gélido e muita neve.",
         "veredicto": {
           "melhor_epoca": "Maio a Setembro (Quando a cidade 'descongela' e os festivais de rua acontecem).",
@@ -13990,6 +14069,7 @@
           "CN Tower"
         ],
         "mapa": "https://goo.gl/maps/toronto",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Toronto+Canada",
         "clima": "Continental Úmido. Verão (Jun-Ago) quente e úmido. Inverno (Dez-Mar) muito frio (-10ºC a -20ºC) com neve e vento.",
         "veredicto": {
           "melhor_epoca": "Maio a Outubro. O verão é vibrante com muitos festivais de rua. O inverno é só para quem gosta de frio extremo.",
@@ -14173,6 +14253,7 @@
           "Vida Noturna"
         ],
         "mapa": "https://goo.gl/maps/cancun",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Cancun+Mexico",
         "clima": "Tropical. Calor o ano todo, com brisa caribenha e chuvas ocasionais (principalmente de agosto a outubro).",
         "veredicto": {
           "melhor_epoca": "Dezembro a Abril (Tempo seco e sol). Evite Setembro e Outubro (Risco alto de furacões e chuva). Atenção em Março: é o 'Spring Break' (estudantes americanos), a cidade vira uma festa gigante.",
@@ -14356,6 +14437,7 @@
           "Cultura Vibrante"
         ],
         "mapa": "https://goo.gl/maps/cdmx",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Mexico+City",
         "clima": "Temperado de Altitude. Dias quentes, noites frescas. Chuvas de Maio a Outubro.",
         "veredicto": {
           "melhor_epoca": "Novembro a Abril (Estação Seca). Março e Abril são lindos com os Jacarandás roxos. Evite o verão (Junho-Setembro) se não gostar de chuva diária.",
@@ -14542,6 +14624,7 @@
           "Gastronomia"
         ],
         "mapa": "https://goo.gl/maps/tokyo",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Tokyo+Japan",
         "clima": "Temperado. Verão (Jun-Ago) é muito quente e úmido. Inverno (Dez-Fev) é frio e seco (raramente neva). A melhor época é a Primavera (Sakura) ou Outono.",
         "veredicto": {
           "melhor_epoca": "Março e Abril (Sakura/Cerejeiras) ou Outubro e Novembro (Outono/Folhas Vermelhas). Evite o Verão (Junho a Agosto): o calor é úmido, sufocante e chove bastante.",
@@ -14730,6 +14813,7 @@
           "Deserto"
         ],
         "mapa": "https://goo.gl/maps/dubai",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Dubai+UAE",
         "clima": "Desértico. Verão (Mai-Set) é INSUPORTÁVEL (40ºC-50ºC). Inverno (Nov-Mar) é delicioso (20ºC-25ºC).",
         "veredicto": {
           "melhor_epoca": "Novembro a Março (Inverno). É a única época que dá para andar na rua.",
@@ -14909,6 +14993,7 @@
         "imagem": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?q=80&w=2070&auto=format&fit=crop",
         "tags": ["Templos", "Street Food", "Vida Noturna"],
         "mapa": "https://goo.gl/maps/bangkok",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Bangkok+Thailand",
         "clima": "Tropical de Monção. Quente e úmido o ano todo. Três estações: Fresca (Nov-Fev), Quente (Mar-Mai) e Chuvosa (Jun-Out).",
         
         "veredicto": {
@@ -15095,6 +15180,7 @@
           "Fado"
         ],
         "mapa": "https://goo.gl/maps/lisboa",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Lisbon+Portugal",
         "clima": "Mediterrânico. Verões quentes e secos, invernos chuvosos mas amenos (raramente gela).",
         "veredicto": {
           "melhor_epoca": "Março a Maio ou Setembro e Outubro (Clima ameno e luz incrível). Julho e Agosto são muito quentes e as filas são grandes. O inverno é chuvoso, mas não gela.",
@@ -15274,6 +15360,7 @@
         "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Puente_Don_Luis_I%2C_Oporto%2C_Portugal%2C_2012-05-09%2C_DD_13.JPG/960px-Puente_Don_Luis_I%2C_Oporto%2C_Portugal%2C_2012-05-09%2C_DD_13.JPG",
         "tags": ["Europa", "Vinho", "História"],
         "mapa": "https://goo.gl/maps/porto",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Porto+Portugal",
         "clima": "Temperado. Invernos chuvosos e frescos. Verões quentes e secos, mas com brisa do Atlântico.",
         
         "veredicto": {
@@ -15457,6 +15544,7 @@
           "História"
         ],
         "mapa": "https://goo.gl/maps/madrid",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Madrid+Spain",
         "clima": "Continental Mediterrânico. Verão muito quente e seco (Jul/Ago). Inverno frio, mas ensolarado.",
         "veredicto": {
           "melhor_epoca": "Maio, Junho, Setembro e Outubro (Clima perfeito). Evite Julho e Agosto a todo custo: o calor seco passa dos 40ºC e a cidade esvazia. O inverno é frio, mas geralmente ensolarado.",
@@ -15641,6 +15729,7 @@
           "Tapas"
         ],
         "mapa": "https://goo.gl/maps/barcelona",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Barcelona+Spain",
         "clima": "Mediterrânico. Verões quentes e úmidos, invernos amenos. Sol quase o ano todo.",
         "veredicto": {
           "melhor_epoca": "Maio/Junho ou Setembro/Outubro. Julho e Agosto são insuportavelmente quentes e lotados.",
@@ -15824,6 +15913,7 @@
         "Gastronomia"
       ],
       "mapa": "https://goo.gl/maps/paris",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Paris+France",
       "clima": "Temperado. Verão agradável (dias longos). Inverno cinza, chuvoso e frio (mas raramente neva muito).",
       "veredicto": {
         "melhor_epoca": "Abril a Junho (Primavera florida) ou Setembro e Outubro (Outono charmoso). Evite Agosto: muitos estabelecimentos locais fecham para férias e faz calor. O inverno é cinza e chuvoso, mas os museus ficam mais vazios.",
@@ -16010,6 +16100,7 @@
         "Pubs"
       ],
       "mapa": "https://goo.gl/maps/londres",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=London+UK",
       "clima": "Oceânico Temperado. Cinza e úmido, mas chove menos do que dizem. Inverno frio (4ºC) e Verão agradável (22ºC).",
       "veredicto": {
         "melhor_epoca": "Maio a Setembro (Dias longos e parques verdes). Prepare-se: o clima é instável e você pode viver as 4 estações no mesmo dia. Dezembro é mágico (luzes de Natal), mas escurece às 16h.",
@@ -16195,6 +16286,7 @@
         "Gastronomia"
       ],
       "mapa": "https://goo.gl/maps/roma",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Rome+Italy",
       "clima": "Mediterrâneo. Verões quentes e secos (Agosto é sufocante). Invernos amenos e úmidos.",
       "veredicto": {
         "melhor_epoca": "Abril a Junho (Primavera) ou Setembro e Outubro (Outono). Evite Julho e Agosto: calor africano, multidões insuportáveis e muitos restaurantes locais fecham para férias. O inverno é ameno, mas pode chover.",
@@ -16378,6 +16470,7 @@
         "Gastronomia"
       ],
       "mapa": "https://goo.gl/maps/milao",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Milan+Italy",
       "clima": "Continental. Verão muito quente e úmido. Inverno frio e cinzento (neblina é comum). Primavera/Outono são ideais.",
       "veredicto": {
         "melhor_epoca": "Abril a Junho (Primavera) ou Setembro e Outubro (Outono). Abril é sagrado para o Design (Salone del Mobile). Evite Agosto: a cidade vira um deserto, muitos restaurantes fecham e o calor é sufocante.",
@@ -16558,6 +16651,7 @@
         "imagem": "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?q=80&w=2070&auto=format&fit=crop",
         "tags": ["Romântico", "História", "Canais"],
         "mapa": "https://goo.gl/maps/venezia",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Venice+Italy",
         "clima": "Subtropical Húmido. Verões muito quentes e húmidos (com cheiro forte nos canais). Invernos frios e nevoeiro. Acqua Alta (inundações) comum no Outono/Inverno.",
         
         "veredicto": {
@@ -16740,6 +16834,7 @@
         "História"
       ],
       "mapa": "https://goo.gl/maps/frankfurt",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Frankfurt+Germany",
       "clima": "Temperado. Verões agradáveis e Invernos frios e cinzentos (neve ocasional).",
       "veredicto": {
         "melhor_epoca": "Maio a Setembro (Dias longos e cafés ao ar livre) ou Dezembro (Mercados de Natal). Evite datas de grandes feiras comerciais (Messe) se não quiser pagar o triplo no hotel.",
@@ -16919,6 +17014,7 @@
         "imagem": "https://images.unsplash.com/photo-1599946347371-68eb71b16afc?q=80&w=2070&auto=format&fit=crop",
         "tags": ["História", "Tecno", "Cultura"],
         "mapa": "https://goo.gl/maps/berlin",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Berlin+Germany",
         "clima": "Continental Temperado. Invernos longos, cinzentos e frios (-2°C a 4°C). Verões agradáveis e dias longos (20°C a 25°C).",
         
         "veredicto": {
@@ -17097,6 +17193,7 @@
         "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/KeizersgrachtReguliersgrachtAmsterdam.jpg/960px-KeizersgrachtReguliersgrachtAmsterdam.jpg",
         "tags": ["Canais", "Bicicleta", "Liberdade"],
         "mapa": "https://goo.gl/maps/amsterdam",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Amsterdam+Netherlands",
         "clima": "Oceânico. Clima imprevisível. Chuva frequente o ano todo. Verão ameno (20-25°C) e Inverno frio e úmido (0-5°C).",
         
         "veredicto": {
@@ -17275,6 +17372,7 @@
         "imagem": "https://upload.wikimedia.org/wikipedia/commons/4/42/Samuel_Beckett_Bridge_At_Sunset_Dublin_Ireland_%2897037639%29_%28cropped%29.jpeg",
         "tags": ["Pubs", "História", "Literatura"],
         "mapa": "https://goo.gl/maps/dublin",
+        "mapa": "https://www.google.com/maps/search/?api=1&query=Dublin+Ireland",
         "clima": "Oceânico. Fresco e húmido o ano todo. Chuva frequente (\"liquid sunshine\"). Verões amenos e invernos frios.",
         
         "veredicto": {

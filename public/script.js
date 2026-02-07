@@ -189,6 +189,16 @@ function resetToMap() {
     
     const backBtn = document.getElementById('btn-voltar-mapa');
     if (backBtn) backBtn.style.display = 'none';
+
+    // MOSTRAR O MAPA NOVAMENTE
+    const mapBox = document.querySelector('.map-box');
+    if (mapBox) mapBox.style.display = 'block';
+
+    // REMOVER A IMAGEM DE FUNDO
+    const mainContent = document.querySelector('.main-content');
+    if (mainContent) {
+        mainContent.style.backgroundImage = '';
+    }
 }
 
 function loadCities(nomePais, listaCidades) {
@@ -196,6 +206,21 @@ function loadCities(nomePais, listaCidades) {
     document.getElementById('pageSubtitle').innerHTML = `${listaCidades.length} Destinos encontrados`;
     const grid = document.getElementById('mainDisplay');
     grid.innerHTML = '';
+
+    // ESCONDER O MAPA
+    const mapBox = document.querySelector('.map-box');
+    if (mapBox) mapBox.style.display = 'none';
+
+    // COLOCAR A FOTO DE FUNDO (Renomeie sua foto para fundo.jpg na pasta IMG)
+    const mainContent = document.querySelector('.main-content');
+    if (mainContent) {
+        mainContent.style.backgroundImage = "url('IMG/fundo.jpg')";
+        mainContent.style.backgroundImage = "url('/IMG/fundo.jpg')";
+        mainContent.style.backgroundSize = "cover";
+        mainContent.style.backgroundPosition = "center";
+        mainContent.style.backgroundRepeat = "no-repeat";
+        mainContent.style.backgroundAttachment = "fixed"; // Fundo fixo ao rolar
+    }
 
     // FECHA O MENU SE ESTIVER NO CELULAR
     if(window.innerWidth <= 768) {
@@ -337,6 +362,21 @@ function searchSystem() {
     const grid = document.getElementById('mainDisplay');
     
     if(term.length === 0) return;
+
+    // ESCONDER O MAPA NA BUSCA TAMBÉM
+    const mapBox = document.querySelector('.map-box');
+    if (mapBox) mapBox.style.display = 'none';
+
+    // COLOCAR A FOTO DE FUNDO NA BUSCA
+    const mainContent = document.querySelector('.main-content');
+    if (mainContent) {
+        mainContent.style.backgroundImage = "url('IMG/fundo.jpg')";
+        mainContent.style.backgroundImage = "url('/IMG/fundo.jpg')";
+        mainContent.style.backgroundSize = "cover";
+        mainContent.style.backgroundPosition = "center";
+        mainContent.style.backgroundRepeat = "no-repeat";
+        mainContent.style.backgroundAttachment = "fixed";
+    }
 
     document.getElementById('pageTitle').innerText = "Resultados da Busca";
     document.getElementById('pageSubtitle').innerText = `Procurando por: "${term}"`;
